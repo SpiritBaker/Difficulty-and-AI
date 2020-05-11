@@ -1,0 +1,76 @@
+edict_protect_trade = {
+	potential = {
+		always = yes		#we support "potential" if modders want to have lots and just show some.
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		province_trade_power_modifier = 0.50
+		local_monthly_devastation = -0.05
+	}
+	
+	color = {  113 11 43 }
+	
+	
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0
+			all_province_in_state = {
+				AND = {
+					NOT = { province_has_center_of_trade_of_level = 1 }
+					NOT = { province_trade_power = 15 }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			any_province_in_state = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		modifier = {
+			factor = 2
+			any_province_in_state = {
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+		modifier = {
+			factor = 2
+			any_province_in_state = {
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			AND = {
+				any_province_in_state = {
+					province_trade_power = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			AND = {
+				any_province_in_state = {
+					province_trade_power = 30
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			AND = {
+				any_province_in_state = {
+					province_trade_power = 50
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			is_in_capital_area = yes
+		}
+	}
+}
