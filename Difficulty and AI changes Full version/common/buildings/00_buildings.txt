@@ -260,7 +260,7 @@ workshop = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.1
 			AND = {
 				NOT = { num_free_building_slots = 2 }
 				NOT = {
@@ -416,7 +416,7 @@ barracks = {
 			NOT = { is_state = yes }
 		}
 		modifier = {
-			factor = 0
+			factor = 0.2
 			NOT = { base_manpower = 3 }
 		}
 		modifier = {
@@ -721,21 +721,7 @@ fort_15th = {
 		modifier = {
 			factor = 0
 			any_neighbor_province = {
-				owned_by = ROOT
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
-			}
-			NOT = { is_capital = yes }			
-		}
-		modifier = {
-			factor = 0.7
-			any_neighbor_province = {
-				owned_by = ROOT
-				any_neighbor_province = {
+				AND = {
 					owned_by = ROOT
 					OR = {
 						has_building = fort_15th
@@ -743,6 +729,18 @@ fort_15th = {
 						has_building = fort_17th
 						has_building = fort_18th
 					}
+				}
+			}
+			NOT = { is_capital = yes }			
+		}
+		modifier = {
+			factor = 0.6
+			any_neighbor_province = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
 				}
 			}
 			NOT = { is_capital = yes }
@@ -1022,21 +1020,7 @@ fort_16th = {
 		modifier = {
 			factor = 0
 			any_neighbor_province = {
-				owned_by = ROOT
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
-			}
-			NOT = { is_capital = yes }			
-		}
-		modifier = {
-			factor = 0.7
-			any_neighbor_province = {
-				owned_by = ROOT
-				any_neighbor_province = {
+				AND = {
 					owned_by = ROOT
 					OR = {
 						has_building = fort_15th
@@ -1044,6 +1028,18 @@ fort_16th = {
 						has_building = fort_17th
 						has_building = fort_18th
 					}
+				}
+			}
+			NOT = { is_capital = yes }			
+		}
+		modifier = {
+			factor = 0.6
+			any_neighbor_province = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
 				}
 			}
 			NOT = { is_capital = yes }
@@ -1535,7 +1531,7 @@ training_fields = {
 			NOT = { is_state = yes }
 		}
 		modifier = {
-			factor = 0
+			factor = 0.2
 			NOT = { base_manpower = 3 }
 		}
 		modifier = {
@@ -1700,21 +1696,7 @@ fort_17th = {
 		modifier = {
 			factor = 0
 			any_neighbor_province = {
-				owned_by = ROOT
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
-			}
-			NOT = { is_capital = yes }			
-		}
-		modifier = {
-			factor = 0.7
-			any_neighbor_province = {
-				owned_by = ROOT
-				any_neighbor_province = {
+				AND = {
 					owned_by = ROOT
 					OR = {
 						has_building = fort_15th
@@ -1722,6 +1704,18 @@ fort_17th = {
 						has_building = fort_17th
 						has_building = fort_18th
 					}
+				}
+			}
+			NOT = { is_capital = yes }			
+		}
+		modifier = {
+			factor = 0.6
+			any_neighbor_province = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
 				}
 			}
 			NOT = { is_capital = yes }
@@ -1978,7 +1972,7 @@ counting_house = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.1
 			AND = {
 				NOT = { num_free_building_slots = 2 }
 				NOT = { has_building = workshop }
@@ -2257,21 +2251,7 @@ fort_18th = {
 		modifier = {
 			factor = 0
 			any_neighbor_province = {
-				owned_by = ROOT
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
-			}
-			NOT = { is_capital = yes }			
-		}
-		modifier = {
-			factor = 0.7
-			any_neighbor_province = {
-				owned_by = ROOT
-				any_neighbor_province = {
+				AND = {
 					owned_by = ROOT
 					OR = {
 						has_building = fort_15th
@@ -2279,6 +2259,18 @@ fort_18th = {
 						has_building = fort_17th
 						has_building = fort_18th
 					}
+				}
+			}
+			NOT = { is_capital = yes }			
+		}
+		modifier = {
+			factor = 0.6
+			any_neighbor_province = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
 				}
 			}
 			NOT = { is_capital = yes }

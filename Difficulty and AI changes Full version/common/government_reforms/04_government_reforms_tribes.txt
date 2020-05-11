@@ -44,6 +44,8 @@ steppe_horde = {
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
 		allow_banners = yes
+		country = { has_banners = 1}
+		province = { local_has_banners = 1}
 	}
 	ai = {
 		factor = 1000
@@ -78,6 +80,8 @@ great_mongol_state_reform = {
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
 		allow_banners = yes
+		country = { has_banners = 1}
+		province = { local_has_banners = 1}
 	}
 }
 
