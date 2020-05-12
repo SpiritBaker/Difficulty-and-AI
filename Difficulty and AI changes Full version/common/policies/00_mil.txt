@@ -136,13 +136,14 @@ horse_artillery = {
 	artillery_power = 0.1
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 		modifier = {
-			factor = 0
-			NOT = { artillery_fraction = 0.2 }
+			factor = 0.2
+			NOT = { artillery_fraction = 0.1 }
+			NOT = { is_year = 1600 }
 		}			
 		modifier = {
-			factor = 1.5
+			factor = 2
 			artillery_fraction = 0.28
 		}
 		modifier = {
@@ -258,10 +259,9 @@ modern_firearm_techniques = {
 			factor = 1.5
 			infantry_fraction = 0.45
 		}
-		
 		modifier = {
 			factor = 1000
-			is_at_war = yes
+			is_in_important_war = yes
 		}
 	}
 }
@@ -304,7 +304,7 @@ military_zeal_act = {
 	siege_ability = 0.1
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -330,10 +330,13 @@ field_priests = {
 	
 	ai_will_do = {
 		factor = 5
-		
 		modifier = {
 			factor = 10
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 1000
+			is_in_important_war = yes
 		}
 	}
 }
@@ -395,10 +398,14 @@ local_army_organisation = {
 	land_maintenance_modifier = -0.1
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 2
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 5
+			is_in_important_war = yes
 		}
 	}
 }
@@ -419,7 +426,7 @@ underhanded_diplomacy_act = {
 	diplomatic_reputation = 1
 
 	ai_will_do = {
-		factor = 0.6
+		factor = 1
 	}
 }
 
@@ -545,6 +552,10 @@ the_nautic_education_act = {
 		modifier = {
 			factor = 5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 1000
+			is_in_important_war = yes
 		}
 	}
 }
@@ -795,8 +806,12 @@ weapon_quality_standards = {
 	ai_will_do = {
 		factor = 10
 		modifier = {
-			factor = 10
+			factor = 5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 1000
+			is_in_important_war = yes
 		}
 	}
 }
@@ -817,7 +832,7 @@ noble_loyalty_act = {
 	cavalry_power = 0.20
 	
 	ai_will_do = {
-		factor = 5
+		factor = 10
 		modifier = {
 			factor = 0
 			NOT = { cavalry_fraction = 0.1 }

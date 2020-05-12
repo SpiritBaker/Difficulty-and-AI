@@ -40,12 +40,8 @@ steppe_horde = {
 		cav_to_inf_ratio = 0.25
 		movement_speed = 0.2
 		years_of_nationalism = -5
-	}
-	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
-		allow_banners = yes
-		country = { has_banners = 1}
-		province = { local_has_banners = 1}
+		global_autonomy = 0.05
+		reform_progress_growth = -0.1
 	}
 	ai = {
 		factor = 1000
@@ -77,12 +73,10 @@ great_mongol_state_reform = {
 		movement_speed = 0.2
 		years_of_nationalism = -5
 	}
-	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
-		allow_banners = yes
-		country = { has_banners = 1}
-		province = { local_has_banners = 1}
-	}
+	#conditional = {
+	#	allow = { has_dlc = "Mandate of Heaven" }
+	#	allow_banners = yes
+	#}
 }
 
 tribal_federation = {
@@ -100,6 +94,8 @@ tribal_federation = {
 
 	modifiers = {
 		years_of_nationalism = -5
+		global_autonomy = 0.05
+		reform_progress_growth = -0.1
 	}
 
 	conditional = {
@@ -117,6 +113,8 @@ tribal_despotism = {
 	nation_designer_cost = 0
 	modifiers = {
 		core_creation = -0.1
+		global_autonomy = 0.05
+		reform_progress_growth = -0.1
 	}
 	legacy_equivalent = tribal_despotism_legacy
 }
@@ -128,6 +126,8 @@ tribal_kingdom = {
 	legacy_equivalent = tribal_kingdom_legacy
 	modifiers = {
 		vassal_income = 0.2
+		global_autonomy = 0.05
+		reform_progress_growth = -0.1
 	}
 }
 
@@ -147,6 +147,8 @@ siberian_tribe = {
 	modifiers = {
 		stability_cost_modifier = -0.33
 		global_institution_spread = -0.2
+		global_autonomy = 0.025
+		reform_progress_growth = -0.1
 	}
 }
 

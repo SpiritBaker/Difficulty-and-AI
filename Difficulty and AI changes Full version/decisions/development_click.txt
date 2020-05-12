@@ -118,6 +118,16 @@ country_decisions = {
 						NOT = { development = 30 }
 						NOT = { base_production = 15 }
 					}
+					AND = { 
+						development = 30
+						NOT = { development = 32 }
+						NOT = { base_production = 16 }
+					}
+					AND = { 
+						development = 32
+						NOT = { development = 34 }
+						NOT = { base_production = 17 }
+					}
 				}
 			}
 		}
@@ -190,6 +200,16 @@ country_decisions = {
 							development = 28
 							NOT = { development = 30 }
 							NOT = { base_production = 15 }
+						}
+						AND = { 
+							development = 30
+							NOT = { development = 32 }
+							NOT = { base_production = 16 }
+						}
+						AND = { 
+							development = 32
+							NOT = { development = 34 }
+							NOT = { base_production = 17 }
 						}
 					}
 				}
@@ -358,6 +378,16 @@ country_decisions = {
 						NOT = { development = 30 }
 						NOT = { base_manpower = 15 }
 					}
+					AND = { 
+						development = 30
+						NOT = { development = 32 }
+						NOT = { base_manpower = 16 }
+					}
+					AND = { 
+						development = 32
+						NOT = { development = 34 }
+						NOT = { base_manpower = 17 }
+					}
 				}
 			}
 		}
@@ -430,6 +460,16 @@ country_decisions = {
 							development = 28
 							NOT = { development = 30 }
 							NOT = { base_manpower = 15 }
+						}
+						AND = { 
+							development = 30
+							NOT = { development = 32 }
+							NOT = { base_manpower = 16 }
+						}
+						AND = { 
+							development = 32
+							NOT = { development = 34 }
+							NOT = { base_manpower = 17 }
 						}
 					}
 				}
@@ -598,6 +638,16 @@ country_decisions = {
 						NOT = { development = 30 }
 						NOT = { base_tax = 15 }
 					}
+					AND = { 
+						development = 30
+						NOT = { development = 32 }
+						NOT = { base_tax  = 16 }
+					}
+					AND = { 
+						development = 32
+						NOT = { development = 34 }
+						NOT = { base_tax  = 17 }
+					}
 				}
 			}
 		}
@@ -670,6 +720,16 @@ country_decisions = {
 							development = 28
 							NOT = { development = 30 }
 							NOT = { base_tax = 15 }
+						}
+						AND = { 
+							development = 30
+							NOT = { development = 32 }
+							NOT = { base_tax  = 16 }
+						}
+						AND = { 
+							development = 32
+							NOT = { development = 34 }
+							NOT = { base_tax  = 17 }
 						}
 					}
 				}

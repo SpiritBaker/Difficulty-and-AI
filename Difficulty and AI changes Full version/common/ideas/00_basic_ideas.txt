@@ -68,12 +68,21 @@ aristocracy_ideas = {
 		}
 
 		modifier = {
+			factor = 2
+			has_idea_group = offensive_ideas
+		}
+
+		modifier = {
 			factor = 3
 			cavalry_power = 0.20
 		}
 		modifier = {
-			factor = 0.5
-			NOT = { cavalry_power = 0.20 }
+			factor = 0.33
+			AND = {
+				NOT = { cavalry_power = 0.20 }
+				NOT = { tag = MOS }
+				NOT = { tag = TIM }
+			}
 		}
 		modifier = {
 			factor = 2
@@ -477,6 +486,10 @@ offensive_ideas = {
 		modifier = {
 			factor = 2
 			adm_tech = 16
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = aristocracy_ideas
 		}
 
 		modifier = {

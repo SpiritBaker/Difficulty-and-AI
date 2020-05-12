@@ -748,7 +748,7 @@ muslim = {
 			picture = "GFX_icon_muslim_school_hanafi"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			adm_tech_cost_modifier = -0.05
+			adm_tech_cost_modifier = -0.1
 		}
 		hanbali_school = {
 			potential_invite_scholar = {
@@ -1001,7 +1001,7 @@ muslim = {
 		color = { 0 153 0 }
 		icon = 5
 		country = {
-			cav_to_inf_ratio = 0.10
+			cavalry_power = 0.1
 			heir_chance = 1.0
 		}
 		country_as_secondary = {

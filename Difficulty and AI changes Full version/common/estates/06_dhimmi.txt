@@ -698,7 +698,7 @@ estate_dhimmi = {
 				factor = 0
 				estate_influence = {
 					estate = estate_dhimmi
-					influence = 70
+					influence = 80
 				}
 			}			
 			modifier = {

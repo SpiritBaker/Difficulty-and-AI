@@ -17,8 +17,8 @@ philosopher = {
 	monarch_power = ADM
 	
 	# Bonus
-	prestige = 1
-	#global_institution_spread = 0.15
+	reform_progress_growth = 0.1
+	global_institution_spread = 0.15
 
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -27,11 +27,7 @@ philosopher = {
 	}
 	
 	ai_will_do = {
-		factor = 0.1
-		modifier = {
-			factor = 2
-			NOT = {prestige = 0}
-		}
+		factor = 1
 	}
 }
 
@@ -70,6 +66,7 @@ artist = {
 	monarch_power = ADM
 	
 	# Bonus
+	prestige = 1
 	stability_cost_modifier = -0.10
 
 
@@ -77,16 +74,18 @@ artist = {
 
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 0
-			owner = {
-				NOT = { ai = yes }
-			}
-		}
 	}
 	
 	ai_will_do = {
-		factor = 0
+		factor = 0.5
+		modifier = {
+			factor = 2
+			NOT = {prestige = 0}
+		}
+		modifier = {
+			factor = 4
+			NOT = { stability = 1 }
+		}
 	}
 }
 
@@ -126,7 +125,7 @@ theologian = {
 	
 	# Bonus
 	global_unrest = -2
-	#religious_unity = 0.1
+	religious_unity = 0.1
 
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -156,6 +155,7 @@ master_of_mint = {
 	monarch_power = ADM
 	
 	# Bonus
+	global_own_trade_power = 0.10
 	inflation_reduction = 0.10
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
@@ -179,7 +179,7 @@ inquisitor = {
 	
 	# Bonus
 	global_missionary_strength = 0.02
-	#tolerance_own = 0.5
+	tolerance_own = 0.5
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -219,7 +219,7 @@ statesman = {
 	
 	# Bonus
 	diplomatic_reputation = 1
-	#yearly_corruption = -0.05
+	yearly_corruption = -0.05
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -239,7 +239,7 @@ naval_reformer = {
 	# Bonus
 	
 	naval_morale = 0.1
-	#naval_maintenance_modifier = -0.05 
+	naval_maintenance_modifier = -0.05 
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -314,7 +314,7 @@ spymaster = {
 	
 	# Bonus
 	spy_offence = 0.25
-	#siege_ability = 0.05
+	siege_ability = 0.10
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -333,7 +333,7 @@ colonial_governor = {
 	
 	# Bonus
 	global_colonial_growth = 10
-	#global_tariffs = 0.10
+	global_tariffs = 0.10
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -359,7 +359,8 @@ diplomat = {
 	monarch_power = DIP
 	
 	# Bonus
-	improve_relation_modifier = 0.2
+	improve_relation_modifier = 0.25
+	envoy_travel_time = -0.2
 
 	skill_scaled_modifier = { meritocracy = 0.25 }	
 
@@ -377,6 +378,7 @@ navigator = {
 	monarch_power = DIP
 	
 	# Bonus
+	naval_forcelimit_modifier = 0.10
 	range = 0.20
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
@@ -438,7 +440,7 @@ army_organiser = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			owner = {
 				is_at_war = yes
 			}
@@ -486,7 +488,7 @@ quartermaster = {
 	
 	# Bonus
 	reinforce_speed = 0.33
-	#recover_army_morale_speed = 0.05
+	recover_army_morale_speed = 0.05
 
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -509,13 +511,14 @@ recruitmaster = {
 	
 	# Bonus
 	global_manpower_modifier = 0.15
+	global_regiment_cost = -0.10
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			owner = {
 				is_at_war = yes
 			}
@@ -541,7 +544,7 @@ fortification_expert = {
 	
 	# Bonus
 	defensiveness = 0.2
-	#fort_maintenance_modifier = -0.1
+	fort_maintenance_modifier = -0.1
 	
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
@@ -564,14 +567,14 @@ grand_captain = {
 	
 	# Bonus
 	land_maintenance_modifier = -0.10
-	#army_tradition = 0.25
+	army_tradition = 0.25
 
 	skill_scaled_modifier = { meritocracy = 0.25 }
 
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			owner = {
 				is_at_war = yes
 			}
