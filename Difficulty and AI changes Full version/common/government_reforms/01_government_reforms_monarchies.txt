@@ -88,6 +88,7 @@ grand_duchy_reform = {
 	nation_designer_cost = 10
 	modifiers = {
 		max_states = 2
+		cavalry_cost = -0.1
 	}
 }
 

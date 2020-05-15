@@ -5,6 +5,6 @@ tags={
 	"Gameplay"
 }
 name="Difficulty & AI changes Full version"
-picture="thumbnail.jpg"
 supported_version="1.29.6"
+picture="thumbnail.jpg"
 remote_file_id="2053238435"

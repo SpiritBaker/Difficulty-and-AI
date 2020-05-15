@@ -1001,7 +1001,7 @@ muslim = {
 		color = { 0 153 0 }
 		icon = 5
 		country = {
-			cavalry_power = 0.1
+			cavalry_flanking = 0.25
 			heir_chance = 1.0
 		}
 		country_as_secondary = {

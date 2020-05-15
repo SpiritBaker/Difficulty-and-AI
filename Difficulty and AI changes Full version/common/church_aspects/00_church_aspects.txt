@@ -4,7 +4,7 @@ organised_through_bishops_aspect = {
 		development_cost = -0.05
 	}
 	ai_will_do = {
-		factor = 15
+		factor = 10
 		modifier = {
 			factor = 1
 			is_at_war = no
@@ -18,7 +18,7 @@ priests_may_marry_aspect = {
 		stability_cost_modifier = -0.10
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
 			factor = 2
 			NOT = { religious_unity = 0.8 }
@@ -37,9 +37,9 @@ adult_baptism_aspect = {
 		global_missionary_strength = 0.01
 	}
 	ai_will_do = {
-		factor = 12
+		factor = 5
 		modifier = {
-			factor = 2
+			factor = 2.2
 			NOT = { religious_unity = 0.8 }
 		}
 		modifier = {
@@ -59,7 +59,7 @@ holy_sacraments_aspect = {
 		discipline = 0.025
 	}
 	ai_will_do = {
-		factor = 12
+		factor = 10
 		modifier = {
 			factor = 2
 			is_at_war = yes
@@ -74,7 +74,7 @@ saints_accept_prayers_aspect = {
 		naval_morale = 0.05
 	}
 	ai_will_do = {
-		factor = 12
+		factor = 10
 		modifier = {
 			factor = 2
 			is_at_war = yes
@@ -88,9 +88,9 @@ icons_images_aspect = {
 		prestige = 0.5
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 2
 		modifier = {
-			factor = 2
+			factor = 5.1
 			NOT = { prestige = -40 }
 		}
 	}
@@ -105,7 +105,7 @@ legalised_divorces_aspect = {
 		republican_tradition = 0.1
 	}
 	ai_will_do = {
-		factor = 6
+		factor = 1
 		modifier = {
 			factor = 2
 			NOT = { legitimacy_equivalent = 80 }
@@ -132,6 +132,10 @@ heretics_deported_aspect = {
 	}
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { num_of_colonists = 1 }
+		}
 		modifier = {
 			factor = 2
 			num_of_colonies = 1
@@ -178,15 +182,7 @@ allow_usury_aspect = {
 		production_efficiency = 0.1
 	}
 	ai_will_do = {
-		factor = 17
-		modifier = {
-			factor = 0.5
-			treasury = 500
-		}
-		modifier = {
-			factor = 0
-			treasury = 2500
-		}
+		factor = 12
 	}
 }
 
@@ -196,7 +192,7 @@ translated_bibles_aspect = {
 		global_unrest = -1
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
 			factor = 2
 			unrest = 2
