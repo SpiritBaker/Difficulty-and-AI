@@ -45,7 +45,7 @@ aristocracy_ideas = {
 		free_leader_pool = 1
 	}
 	noble_resilience = {
-		cavalry_shock = 0.5
+		cavalry_shock = 0.2
 	}
 	
 
@@ -79,9 +79,17 @@ aristocracy_ideas = {
 		modifier = {
 			factor = 0.33
 			AND = {
-				NOT = { cavalry_power = 0.20 }
-				NOT = { tag = MOS }
-				NOT = { tag = TIM }
+				NOT = { technology_group = nomad_group }
+				NOT = { cavalry_power = 0.15 }
+				OR = {
+					NOT = { tag = MOS }
+					NOT = { tag = TIM }
+					NOT = { tag = MAM }
+					NOT = { tag = POL }
+					NOT = { tag = LIT }
+					NOT = { tag = MAM }
+					NOT = { tag = TUR }
+				}
 			}
 		}
 		modifier = {
@@ -1625,6 +1633,7 @@ naval_ideas = {
 				tag = ZAN
 				tag = MOR
 				tag = NOR
+				tag = SPA
 			}
 		}
 

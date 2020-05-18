@@ -1,0 +1,3 @@
+policy_reset = {
+    free_policy = -3
+}

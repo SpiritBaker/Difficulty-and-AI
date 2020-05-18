@@ -554,6 +554,10 @@ the_nautic_education_act = {
 			is_at_war = yes
 		}
 		modifier = {
+			factor = 5
+			tag = SPA
+		}
+		modifier = {
 			factor = 1000
 			is_in_important_war = yes
 		}
