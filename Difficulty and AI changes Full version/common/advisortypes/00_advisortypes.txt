@@ -250,7 +250,7 @@ naval_reformer = {
 			has_port = no
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.8
 			owner = { 
 				NOT = { num_of_ports = 5 } 
 			}
@@ -440,7 +440,7 @@ army_organiser = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			owner = {
 				is_at_war = yes
 			}
@@ -518,7 +518,7 @@ recruitmaster = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			owner = {
 				is_at_war = yes
 			}
@@ -553,11 +553,7 @@ fortification_expert = {
 	}
 	
 	ai_will_do = {
-		factor = 0.5
-		modifier = {
-			factor = 0
-			is_at_war = yes
-		}
+		factor = 1
 	}
 }
 
@@ -574,7 +570,7 @@ grand_captain = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			owner = {
 				is_at_war = yes
 			}

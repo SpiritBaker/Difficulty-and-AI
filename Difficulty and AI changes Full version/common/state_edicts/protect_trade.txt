@@ -9,7 +9,7 @@ edict_protect_trade = {
 	
 	modifier = {
 		province_trade_power_modifier = 0.50
-		local_monthly_devastation = -0.05
+		local_monthly_devastation = -0.02
 	}
 	
 	color = {  113 11 43 }

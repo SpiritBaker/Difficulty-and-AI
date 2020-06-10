@@ -87,9 +87,9 @@ technology = { #Naval Ambitions
 	# Tech 7
 	year = 1492
 	
-	naval_morale			=	0.3
-	range					= 	115
-	
+	naval_morale			= 0.3
+	range					= 115
+	impressment_offices 	= yes
 }
 
 technology  = { #Docks
@@ -101,6 +101,7 @@ technology  = { #Docks
 
 	trade_range				=	10
 	naval_morale			=	0.2
+	coastal_defence = yes
 
 }
 
@@ -187,7 +188,7 @@ technology = { #Development of Maritime Law
 	
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
-
+	naval_battery = yes
 }
 
 technology = { #Merchantman

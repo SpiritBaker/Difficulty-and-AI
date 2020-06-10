@@ -98,30 +98,36 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SPA
-			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { 
+						AND = {
+							has_dlc = "Golden Century" 
+							OR = {
+								tag = ARA
+								tag = CAT
+								tag = VAL
+							}
+						}
+					}
+				}
+				swap_non_generic_missions = yes
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			#if = {
-			#	limit = {
-			#		has_custom_ideas = no
-			#		OR = {
-			#			ai = no
-			#			AND = {
-			#				ai = yes
-			#				has_idea_group = default_ideas
-			#			}
-			#		}
-			#	}
-			country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			custom_tooltip = spanish_unification_effect.tooltip
 			hidden_effect = {
 				iberia_region = {
 					limit = {
-						NOT = { area = macaronesia_area }
 						NOT = { area = alentejo_area }
 						NOT = { area = beieras_area }
 					}
@@ -175,19 +181,19 @@ country_decisions = {
 					}
 				}
 			}
-			#OR = {
-			#	ai = no
-			#	AND = {
-			#		ai = yes
-			#		tag = CAS
-			#		ARA = { NOT = { num_of_cities = 32 } } #Keep this number the same as below
-			#	}
-			#	AND = {
-			#		ai = yes
-			#		tag = ARA
-			#		CAS = { NOT = { num_of_cities = 37 } } #Keep this number the same as below
-			#	}
-			#}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					tag = CAS
+					ARA = { NOT = { num_of_cities = 40 } } #Keep this number the same as below
+				}
+				AND = {
+					ai = yes
+					tag = ARA
+					CAS = { NOT = { num_of_cities = 47 } } #Keep this number the same as below
+				}
+			}
 		}
 		allow = {
 			adm_tech = 10
@@ -213,17 +219,16 @@ country_decisions = {
 				}
 			}
 			OR = {
-				ai = yes
 				AND = {
 					tag = CAS
 					ARA = {
-						NOT = { num_of_cities = 32 } #Keep this number the same as above. Original 17 +15
+						NOT = { num_of_cities = 40 } #Keep this number the same as above. Original 17 +15, +5 with Spain update, +3 with Emperor update
 					}
 				}
 				AND = {
 					tag = ARA
 					CAS = {
-						NOT = { num_of_cities = 40 } #Keep this number the same as above. Original 25 +15
+						NOT = { num_of_cities = 47 } #Keep this number the same as above. Original 25 +15, +5 with Spain update, +2 with Emperor update
 					}
 				}
 			}
@@ -253,25 +258,27 @@ country_decisions = {
 				inherit = CAS
 			}
 			change_tag = SPA
-			swap_non_generic_missions = yes
-			#if = {
-			#	limit = {
-			#		has_custom_ideas = no
-			#		OR = {
-			#			ai = no
-			#			AND = {
-			#				ai = yes
-			#				has_idea_group = default_ideas
-			#			}
-			#		}
-			#	}
-			country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
+			if = {
+				limit = {
+					NOT = { 
+						AND = {
+							has_dlc = "Golden Century"
+							tag = ARA
+						}
+					}
+				}
+				swap_non_generic_missions = yes
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			custom_tooltip = spanish_unification_effect.tooltip
 			hidden_effect = {
 				iberia_region = {
 					limit = {
-						NOT = { area = macaronesia_area }
 						NOT = { area = alentejo_area }
 						NOT = { area = beieras_area }
 					}
@@ -287,4 +294,5 @@ country_decisions = {
 		do_not_integrate = ARA
 		do_not_integrate = CAS
 	}	
+	
 }

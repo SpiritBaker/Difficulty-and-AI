@@ -116,7 +116,11 @@ country_decisions = {
 			add_prestige = 25
 			if = {
 				limit = {
-					ai =  yes
+					has_custom_ideas = no
+					OR = {
+						NOT = { has_idea_group = YEM_ideas }
+						NOT = { has_idea_group = RAS_ideas }
+					}
 				}
 			country_event = { id = ideagroups.1 } #Swap Ideas
 			}

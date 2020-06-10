@@ -19,19 +19,35 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_government_upgrade_strip"
 		texturefile = "gfx/interface/government_upgrade_strip.dds"
-		noOfFrames = 6
+		noOfFrames = 3	
 	}
 
 	spriteType = {
-		name = "GFX_monarchism_icon"
+		name = "GFX_monarchists"
 		texturefile = "gfx/interface/monarchism_icon_strip.dds"
-		noOfFrames = 2
+		noOfFrames = 2	
 	}
 
 	spriteType = {
-		name = "GFX_republic_icon"
+		name = "GFX_orangists"
+		texturefile = "gfx/interface/monarchism_icon_strip.dds"
+		noOfFrames = 2	
+	}
+
+	spriteType = {
+		name = "GFX_statists"
 		texturefile = "gfx/interface/republic_icon_strip.dds"
-		noOfFrames = 2
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_militarists"
+		texturefile = "gfx/interface/militarists.dds"
+	}
+
+	spriteType = {
+		name = "GFX_theocrats"
+		texturefile = "gfx/interface/theocrats.dds"
 	}
 
 	spriteType = {
@@ -77,7 +93,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_disinherit_button"
 		texturefile = "gfx/interface/abdicate_button.dds"
-	}
+	}	
+	
+	spriteType = {
+		name = "GFX_assign_heir_button"
+		texturefile = "gfx/interface/support_heir_button.dds"
+	}	
 	
 	spriteType = {
 		name = "GFX_court_banner_green"
@@ -101,9 +122,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_tech_group_strip"
 		texturefile = "gfx//interface//tech_group_strip.dds"
-		transparencecheck = yes
-		noOfFrames = 27
-	}
+		transparencecheck = yes	
+		noOfFrames = 16
+	}	
 
 	spriteType = {
 		name = "GFX_monarch_cultures_icon"
@@ -213,12 +234,6 @@ spriteTypes = {
 		texturefile = "gfx//interface//demote_culture_button.dds"
 		noOfFrames = 2
 	}
-	
-	# used nowhere
-	# spriteType = {
-		# name = "GFX_demote_bronze_button"
-		# texturefile = "gfx//interface//demote_bronze_culture_button.dds"
-	# }
 
 	spriteType = {
 		name = "GFX_select_button"
@@ -298,11 +313,6 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_revolution_target"
-		texturefile = "gfx//interface//revolution_target.dds"
-	}
-
-	spriteType = {
 		name = "GFX_gender_icon"
 		texturefile = "gfx//interface//gender_icon.dds"
 		noOfFrames = 2
@@ -323,7 +333,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/icon_powers_military_tech.dds"
 	}
 	
-
+	spriteType = {
+		name = "GFX_assign_heir"
+		texturefile = "gfx/interface/assign_heir.dds"
+	}
 	
 		
 }

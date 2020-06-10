@@ -118,8 +118,8 @@ country_event = {
 		name = "west_african.3.a"
 		if = {
 			limit = { government = tribal }
-			change_government = monarchy
-			set_legacy_government = despotic_monarchy
+			change_government_to_monarchy = yes
+			#set_legacy_government = despotic_monarchy
 		}
 		if = {
 			limit = {
@@ -403,6 +403,7 @@ province_event = {
 		has_missionary = yes
 		religion = shamanism
 		owner = { religion_group = christian }
+		owner = { NOT = { has_country_modifier = animist_syncretism } }
 	}
 
 	mean_time_to_happen = {
@@ -495,6 +496,7 @@ province_event = {
 		has_missionary = yes
 		religion = shamanism
 		owner = { religion_group = muslim }
+		owner = { NOT = { has_country_modifier = animist_syncretism } }
 	}
 
 	mean_time_to_happen = {
@@ -1004,18 +1006,18 @@ country_event = {
 	option = {
 		name = "west_african.21.a"
 		ai_chance = { factor = 75 }
-		declare_war_with_cb = {
-			who = FROM
-			casus_belli = cb_insult
+		
+		add_casus_belli = {
+			target = FROM
+			type = cb_insult
+			months = 24
 		}
 	}
-
 	# Give up the Golden Stool
 	option = {
 		name = "west_african.21.b"
 		ai_chance = { factor = 25 }
 		add_prestige = -10
-		add_stability = -1
 	}
 }
 
@@ -1125,56 +1127,88 @@ country_event = {
 }
 
 # Into the Unknown
-#country_event = {
-#	id = west_african.24
-#	title = "west_african.24.t"
-#	desc = "west_african.24.d"
-#	picture = AFRICAN_EXPLORING_JUNGLE_eventPicture
+country_event = {
+	id = west_african.24
+	title = "west_african.24.t"
+	desc = "west_african.24.d"
+	picture = AFRICAN_EXPLORING_JUNGLE_eventPicture
 
-#	trigger = {
-#		has_dlc = "Art of War"
-#		capital_scope = { has_climate = tropical }
-#		is_tribal = yes
-#		NOT = { num_of_colonies = 1 }
-#		any_owned_province = {
-#			any_empty_neighbor_province = {
-#				has_climate = tropical
-#			}
-#		}
-#	}
+	trigger = {
+		has_dlc = "Art of War"
+		OR = { 
+			technology_group = sub_saharan
+			technology_group = central_african
+			technology_group = east_african
+		}
+		any_owned_province = {
+			NOT = { has_province_modifier = used_to_tropical }
+			any_empty_neighbor_province = {
+				NOT = { has_province_modifier = used_to_tropical }
+				OR = { 
+					has_climate = tropical
+					has_climate = arid
+				}	
+			}
+		}
+		manpower = 3
+	}
 
-#	mean_time_to_happen = {
-#		months = 1
-#	}
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 1.5
+			NOT = { has_institution = feudalism }
+		}
+
+		modifier = {
+			factor = 0.8
+			has_institution = renaissance
+		}
+
+		modifier = {
+			factor = 0.8
+			has_institution = new_world_i
+		}
+
+
+	}
 
 	# Send a party to explore
-#	option = {
-#		name = "west_african.24.a"
-#		add_manpower = -3
-#		random_owned_province = {
-#			limit = {
-#				any_empty_neighbor_province = {
-#					has_climate = tropical
-#				}
-#			}
-#			random_empty_neighbor_province = {
-#				limit = { has_climate = tropical }
-#				create_colony = 200
-#				add_province_modifier = {
-#					name = "used_to_tropical"
-#					duration = -1
-#				}
-#			}
-#		}
-#	}
+	option = {
+		name = "west_african.24.a"
+		add_manpower = -3
+		random_owned_province = {
+			limit = {
+				any_empty_neighbor_province = {
+					OR = {
+						has_climate = tropical
+						has_climate = arid
+					}
+				}
+			}
+			random_empty_neighbor_province = {
+				limit = { 
+					OR = {
+						has_climate = tropical 
+						has_climate = arid 
+					}
+				}				
+				add_siberian_construction = 0
+				add_province_modifier = {
+					name = "used_to_tropical"
+					duration = 120
+				}
+			}
+		}
+	}
 
 	# Tell them to stay here
-#	option = {
-#		name = "west_african.24.b"
-#		add_prestige = -10
-#		add_adm_power = 20
-#	}
-#}
+	option = {
+		name = "west_african.24.b"
+		add_prestige = -10
+		add_adm_power = 20
+	}
+}
 
 # New Dyes
 country_event = {
