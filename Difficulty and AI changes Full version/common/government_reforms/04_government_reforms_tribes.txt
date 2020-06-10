@@ -257,7 +257,7 @@ horde_barbaric_despoilers_reform = {
 		
 	}
 	ai = {
-		factor = 2
+		factor = 1
 	}
 }
 

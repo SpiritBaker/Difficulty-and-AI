@@ -681,7 +681,7 @@ christian = {
 						is_at_war = yes
 					}
 					modifier = {
-						factor = 5
+						factor = 3
 						is_in_important_war = yes
 					}
 				}
@@ -724,10 +724,10 @@ christian = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 0.15
+					factor = 0.1
 					modifier = {
 						factor = 0
-						is_at_war = no
+						is_at_war = yes
 					}
 				}
 			}
@@ -739,10 +739,10 @@ christian = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 0.1
+					factor = 0
 					modifier = {
 						factor = 0
-						is_at_war = no
+						is_at_war = yes
 					}
 				}
 			}
@@ -772,7 +772,7 @@ christian = {
 						}
 					}
 					modifier = {
-						factor = 1.5
+						factor = 2
 						calc_true_if = {
 							all_owned_province = {
 								current_institution = 1

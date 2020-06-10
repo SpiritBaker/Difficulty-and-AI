@@ -53,6 +53,7 @@ NDefines.NAI.DIPLOMATIC_ACTION_MILITARY_ACCESS_ENEMY_REGIMENTS_FACTOR = 25.0	--A
 NDefines.NAI.OVER_FORCELIMIT_AVOIDANCE_FACTOR = 1 --The higher this number is the less willing the AI will be to exceed forcelimits.
 NDefines.NAI.CHARTER_COMPANY_BASE_RELUCTANCE = -5
 --NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 3
+NDefines.NAI.DEBASE_THRESHOLD = -1000 -- AI will not debase if it has more gold than this.
 NDefines.NAI.INVADING_BRAVERY =	1.0	--If (defender strength) / (invader strength) >
 NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.6
 NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.3
@@ -78,6 +79,15 @@ NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.5
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.75	--Max AI desire mult for releasing countries.
 NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 1	--AI desire for war reparations through peace.
 NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.25  --AI desire for a province is multiplied by this if it is not on their conquest list.
+
+NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
+NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5
+NDefines.NAI.ESTATE_INTERACTION_THRESHOLD = 49.9
+NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 85.0
+NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
+NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
+
+NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.2 -- How many times the cost of the investment must be in the treasury to consider buying it
 
 NDefines.NGovernment.RUSSIAN_ABILITY_STRELTSY_SPAWN_SIZE = 0.1
 --NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_CORRUPTION = 5.0

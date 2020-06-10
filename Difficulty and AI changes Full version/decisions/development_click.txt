@@ -1,0 +1,782 @@
+country_decisions = { 
+
+	dip_development = {
+		major = yes
+		potential = {
+			ai = yes
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_year = 1500 }
+						NOT = { has_institution = feudalism }
+					}
+				}
+				dip_power = 1490
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1500
+						NOT = { has_institution = renaissance }
+						NOT = { has_institution = feudalism }
+					}
+				}
+				dip_power = 1900
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1600
+						NOT = { has_institution = renaissance }
+						NOT = { has_institution = feudalism }
+						NOT = { has_institution = new_world_i }
+					}
+				}
+				dip_power = 3000
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1500
+						NOT = { has_institution = renaissance }
+						has_institution = feudalism
+					}
+				}
+				dip_power = 1200
+			}
+			else_if = {
+				limit = { has_institution = feudalism }
+				dip_power = 990
+			}
+		}
+		allow = {
+			any_owned_province = {
+				is_state = yes
+				OR = {
+					AND = {
+						development = 3
+						NOT = { development = 6 }
+						NOT = { base_production = 3 }
+					}
+					AND = {
+						development = 6
+						NOT = { development = 8 }
+						NOT = { base_production = 4 }
+					}
+					AND = {
+						development = 8
+						NOT = { development = 10 }
+						NOT = { base_production = 5 }
+					}
+					AND = {
+						development = 10
+						NOT = { development = 12 }
+						NOT = { base_production = 6 }
+					}
+					AND = { 
+						development = 12
+						NOT = { development = 14 }
+						NOT = { base_production = 7 }
+					}
+					AND = { 
+						development = 14
+						NOT = { development = 16 }
+						NOT = { base_production = 8 }
+					}
+					AND = { 
+						development = 16
+						NOT = { development = 18 }
+						NOT = { base_production = 9 }
+					}
+					AND = { 
+						development = 18
+						NOT = { development = 20 }
+						NOT = { base_production = 10 }
+					}
+					AND = { 
+						development = 20
+						NOT = { development = 22 }
+						NOT = { base_production = 11 }
+					}
+					AND = { 
+						development = 22
+						NOT = { development = 24 }
+						NOT = { base_production = 12 }
+					}
+					AND = { 
+						development = 24
+						NOT = { development = 26 }
+						NOT = { base_production = 13 }
+					}
+					AND = { 
+						development = 26
+						NOT = { development = 28 }
+						NOT = { base_production = 14 }
+					}
+					AND = { 
+						development = 28
+						NOT = { development = 30 }
+						NOT = { base_production = 15 }
+					}
+					AND = { 
+						development = 30
+						NOT = { development = 32 }
+						NOT = { base_production = 16 }
+					}
+					AND = { 
+						development = 32
+						NOT = { development = 34 }
+						NOT = { base_production = 17 }
+					}
+				}
+			}
+		}
+		effect = {
+			random_owned_province = { 
+				limit = {
+					is_state = yes
+					OR = {
+						AND = {
+							development = 3
+							NOT = { development = 6 }
+							NOT = { base_production = 3 }
+						}
+						AND = {
+							development = 6
+							NOT = { development = 8 }
+							NOT = { base_production = 4 }
+						}
+						AND = {
+							development = 8
+							NOT = { development = 10 }
+							NOT = { base_production = 5 }
+						}
+						AND = {
+							development = 10
+							NOT = { development = 12 }
+							NOT = { base_production = 6 }
+						}
+						AND = { 
+							development = 12
+							NOT = { development = 14 }
+							NOT = { base_production = 7 }
+						}
+						AND = { 
+							development = 14
+							NOT = { development = 16 }
+							NOT = { base_production = 8 }
+						}
+						AND = { 
+							development = 16
+							NOT = { development = 18 }
+							NOT = { base_production = 9 }
+						}
+						AND = { 
+							development = 18
+							NOT = { development = 20 }
+							NOT = { base_production = 10 }
+						}
+						AND = { 
+							development = 20
+							NOT = { development = 22 }
+							NOT = { base_production = 11 }
+						}
+						AND = { 
+							development = 22
+							NOT = { development = 24 }
+							NOT = { base_production = 12 }
+						}
+						AND = { 
+							development = 24
+							NOT = { development = 26 }
+							NOT = { base_production = 13 }
+						}
+						AND = { 
+							development = 26
+							NOT = { development = 28 }
+							NOT = { base_production = 14 }
+						}
+						AND = { 
+							development = 28
+							NOT = { development = 30 }
+							NOT = { base_production = 15 }
+						}
+						AND = { 
+							development = 30
+							NOT = { development = 32 }
+							NOT = { base_production = 16 }
+						}
+						AND = { 
+							development = 32
+							NOT = { development = 34 }
+							NOT = { base_production = 17 }
+						}
+					}
+				}
+				save_event_target_as = ptpFlag1
+				add_base_production = 1
+			}
+			event_target:ptpFlag1 = {
+				if = {
+					limit = { 
+						AND = {	
+							NOT = { development = 20 } 
+							owner = { NOT = { has_idea = smithian_economics } }
+						}
+					}
+				owner = { add_dip_power = -55 }
+				}
+				else_if = {
+					limit = { 
+						AND= {
+							NOT = { development = 20 } 
+							owner = { has_idea = smithian_economics }
+						}
+					}
+					owner = { add_dip_power = -44 }
+				}
+				else_if = {
+					limit = { 
+						AND = {
+							development = 20
+							owner = { has_idea = smithian_economics }
+						}
+					}
+					owner = { add_dip_power = -72 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = { NOT = { has_idea = smithian_economics } }
+						}
+					}
+					owner = { add_dip_power = -90 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mil_development = {
+		major = yes
+		potential = {
+			ai = yes
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_year = 1500 }
+						NOT = { has_institution = feudalism }
+					}
+				}
+				mil_power = 1490
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1500
+						NOT = { has_institution = renaissance }
+						NOT = { has_institution = feudalism }
+					}
+				}
+				mil_power = 1900
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1600
+						NOT = { has_institution = renaissance }
+						NOT = { has_institution = feudalism }
+						NOT = { has_institution = new_world_i }
+					}
+				}
+				mil_power = 3000
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1500
+						NOT = { has_institution = renaissance }
+						has_institution = feudalism
+					}
+				}
+				mil_power = 1200
+			}
+			else_if = {
+				limit = { has_institution = feudalism }
+				mil_power = 990
+			}
+		}
+		allow = {
+			any_owned_province = {
+				is_state = yes
+				OR = {
+					AND = {
+						development = 3
+						NOT = { development = 6 }
+						NOT = { base_manpower = 3 }
+					}
+					AND = {
+						development = 6
+						NOT = { development = 8 }
+						NOT = { base_manpower = 4 }
+					}
+					AND = {
+						development = 8
+						NOT = { development = 10 }
+						NOT = { base_manpower = 5 }
+					}
+					AND = {
+						development = 10
+						NOT = { development = 12 }
+						NOT = { base_manpower = 6 }
+					}
+					AND = { 
+						development = 12
+						NOT = { development = 14 }
+						NOT = { base_manpower = 7 }
+					}
+					AND = { 
+						development = 14
+						NOT = { development = 16 }
+						NOT = { base_manpower = 8 }
+					}
+					AND = { 
+						development = 16
+						NOT = { development = 18 }
+						NOT = { base_manpower = 9 }
+					}
+					AND = { 
+						development = 18
+						NOT = { development = 20 }
+						NOT = { base_manpower = 10 }
+					}
+					AND = { 
+						development = 20
+						NOT = { development = 22 }
+						NOT = { base_manpower = 11 }
+					}
+					AND = { 
+						development = 22
+						NOT = { development = 24 }
+						NOT = { base_manpower = 12 }
+					}
+					AND = { 
+						development = 24
+						NOT = { development = 26 }
+						NOT = { base_manpower = 13 }
+					}
+					AND = { 
+						development = 26
+						NOT = { development = 28 }
+						NOT = { base_manpower = 14 }
+					}
+					AND = { 
+						development = 28
+						NOT = { development = 30 }
+						NOT = { base_manpower = 15 }
+					}
+					AND = { 
+						development = 30
+						NOT = { development = 32 }
+						NOT = { base_manpower = 16 }
+					}
+					AND = { 
+						development = 32
+						NOT = { development = 34 }
+						NOT = { base_manpower = 17 }
+					}
+				}
+			}
+		}
+		effect = {
+			random_owned_province = { 
+				limit = {
+					is_state = yes
+					OR = {
+						AND = {
+							development = 3
+							NOT = { development = 6 }
+							NOT = { base_manpower = 3 }
+						}
+						AND = {
+							development = 6
+							NOT = { development = 8 }
+							NOT = { base_manpower = 4 }
+						}
+						AND = {
+							development = 8
+							NOT = { development = 10 }
+							NOT = { base_manpower = 5 }
+						}
+						AND = {
+							development = 10
+							NOT = { development = 12 }
+							NOT = { base_manpower = 6 }
+						}
+						AND = { 
+							development = 12
+							NOT = { development = 14 }
+							NOT = { base_manpower = 7 }
+						}
+						AND = { 
+							development = 14
+							NOT = { development = 16 }
+							NOT = { base_manpower = 8 }
+						}
+						AND = { 
+							development = 16
+							NOT = { development = 18 }
+							NOT = { base_manpower = 9 }
+						}
+						AND = { 
+							development = 18
+							NOT = { development = 20 }
+							NOT = { base_manpower = 10 }
+						}
+						AND = { 
+							development = 20
+							NOT = { development = 22 }
+							NOT = { base_manpower = 11 }
+						}
+						AND = { 
+							development = 22
+							NOT = { development = 24 }
+							NOT = { base_manpower = 12 }
+						}
+						AND = { 
+							development = 24
+							NOT = { development = 26 }
+							NOT = { base_manpower = 13 }
+						}
+						AND = { 
+							development = 26
+							NOT = { development = 28 }
+							NOT = { base_manpower = 14 }
+						}
+						AND = { 
+							development = 28
+							NOT = { development = 30 }
+							NOT = { base_manpower = 15 }
+						}
+						AND = { 
+							development = 30
+							NOT = { development = 32 }
+							NOT = { base_manpower = 16 }
+						}
+						AND = { 
+							development = 32
+							NOT = { development = 34 }
+							NOT = { base_manpower = 17 }
+						}
+					}
+				}
+				save_event_target_as = ptpFlag2
+				add_base_manpower = 1
+			}
+			event_target:ptpFlag2 = {
+				if = {
+					limit = { 
+						AND = {	
+							NOT = { development = 20 } 
+							owner = { NOT = { has_idea = smithian_economics } }
+						}
+					}
+				owner = { add_mil_power = -55 }
+				}
+				else_if = {
+					limit = { 
+						AND= {
+							NOT = { development = 20 } 
+							owner = { has_idea = smithian_economics }
+						}
+					}
+					owner = { add_mil_power = -44 }
+				}
+				else_if = {
+					limit = { 
+						AND = {
+							development = 20
+							owner = { has_idea = smithian_economics }
+						}
+					}
+					owner = { add_mil_power = -72 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = { NOT = { has_idea = smithian_economics } }
+						}
+					}
+					owner = { add_mil_power = -90 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	adm_development = {
+		major = yes
+		potential = {
+			ai = yes
+			if = {
+				limit = {
+					AND = {
+						NOT = { is_year = 1500 }
+						NOT = { has_institution = feudalism }
+					}
+				}
+				adm_power = 1490
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1500
+						NOT = { has_institution = renaissance }
+						NOT = { has_institution = feudalism }
+					}
+				}
+				adm_power = 1900
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1600
+						NOT = { has_institution = renaissance }
+						NOT = { has_institution = feudalism }
+						NOT = { has_institution = new_world_i }
+					}
+				}
+				adm_power = 3000
+			}
+			else_if = {
+				limit = {
+					AND = { 
+						is_year = 1500
+						NOT = { has_institution = renaissance }
+						has_institution = feudalism
+					}
+				}
+				adm_power = 1200
+			}
+			else_if = {
+				limit = { has_institution = feudalism }
+				adm_power = 990
+			}
+		}
+		allow = {
+			any_owned_province = {
+				is_state = yes
+				OR = {
+					AND = {
+						development = 3
+						NOT = { development = 6 }
+						NOT = { base_tax = 3 }
+					}
+					AND = {
+						development = 6
+						NOT = { development = 8 }
+						NOT = { base_tax = 4 }
+					}
+					AND = {
+						development = 8
+						NOT = { development = 10 }
+						NOT = { base_tax = 5 }
+					}
+					AND = {
+						development = 10
+						NOT = { development = 12 }
+						NOT = { base_tax = 6 }
+					}
+					AND = { 
+						development = 12
+						NOT = { development = 14 }
+						NOT = { base_tax = 7 }
+					}
+					AND = { 
+						development = 14
+						NOT = { development = 16 }
+						NOT = { base_tax = 8 }
+					}
+					AND = { 
+						development = 16
+						NOT = { development = 18 }
+						NOT = { base_tax = 9 }
+					}
+					AND = { 
+						development = 18
+						NOT = { development = 20 }
+						NOT = { base_tax = 10 }
+					}
+					AND = { 
+						development = 20
+						NOT = { development = 22 }
+						NOT = { base_tax = 11 }
+					}
+					AND = { 
+						development = 22
+						NOT = { development = 24 }
+						NOT = { base_tax = 12 }
+					}
+					AND = { 
+						development = 24
+						NOT = { development = 26 }
+						NOT = { base_tax = 13 }
+					}
+					AND = { 
+						development = 26
+						NOT = { development = 28 }
+						NOT = { base_tax = 14 }
+					}
+					AND = { 
+						development = 28
+						NOT = { development = 30 }
+						NOT = { base_tax = 15 }
+					}
+					AND = { 
+						development = 30
+						NOT = { development = 32 }
+						NOT = { base_tax  = 16 }
+					}
+					AND = { 
+						development = 32
+						NOT = { development = 34 }
+						NOT = { base_tax  = 17 }
+					}
+				}
+			}
+		}
+		effect = {
+			random_owned_province = { 
+				limit = {
+					is_state = yes
+					OR = {
+						AND = {
+							development = 3
+							NOT = { development = 6 }
+							NOT = { base_tax = 3 }
+						}
+						AND = {
+							development = 6
+							NOT = { development = 8 }
+							NOT = { base_tax = 4 }
+						}
+						AND = {
+							development = 8
+							NOT = { development = 10 }
+							NOT = { base_tax = 5 }
+						}
+						AND = {
+							development = 10
+							NOT = { development = 12 }
+							NOT = { base_tax = 6 }
+						}
+						AND = { 
+							development = 12
+							NOT = { development = 14 }
+							NOT = { base_tax = 7 }
+						}
+						AND = { 
+							development = 14
+							NOT = { development = 16 }
+							NOT = { base_tax = 8 }
+						}
+						AND = { 
+							development = 16
+							NOT = { development = 18 }
+							NOT = { base_tax = 9 }
+						}
+						AND = { 
+							development = 18
+							NOT = { development = 20 }
+							NOT = { base_tax = 10 }
+						}
+						AND = { 
+							development = 20
+							NOT = { development = 22 }
+							NOT = { base_tax = 11 }
+						}
+						AND = { 
+							development = 22
+							NOT = { development = 24 }
+							NOT = { base_tax = 12 }
+						}
+						AND = { 
+							development = 24
+							NOT = { development = 26 }
+							NOT = { base_tax = 13 }
+						}
+						AND = { 
+							development = 26
+							NOT = { development = 28 }
+							NOT = { base_tax = 14 }
+						}
+						AND = { 
+							development = 28
+							NOT = { development = 30 }
+							NOT = { base_tax = 15 }
+						}
+						AND = { 
+							development = 30
+							NOT = { development = 32 }
+							NOT = { base_tax  = 16 }
+						}
+						AND = { 
+							development = 32
+							NOT = { development = 34 }
+							NOT = { base_tax  = 17 }
+						}
+					}
+				}
+				save_event_target_as = ptpFlag3
+				add_base_tax = 1
+			}
+			event_target:ptpFlag3 = {
+				if = {
+					limit = { 
+						AND = {	
+							NOT = { development = 20 } 
+							owner = { NOT = { has_idea = smithian_economics } }
+						}
+					}
+				owner = { add_adm_power = -55 }
+				}
+				else_if = {
+					limit = { 
+						AND= {
+							NOT = { development = 20 } 
+							owner = { has_idea = smithian_economics }
+						}
+					}
+					owner = { add_adm_power = -44 }
+				}
+				else_if = {
+					limit = { 
+						AND = {
+							development = 20
+							owner = { has_idea = smithian_economics }
+						}
+					}
+					owner = { add_adm_power = -72 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = { NOT = { has_idea = smithian_economics } }
+						}
+					}
+					owner = { add_adm_power = -90 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

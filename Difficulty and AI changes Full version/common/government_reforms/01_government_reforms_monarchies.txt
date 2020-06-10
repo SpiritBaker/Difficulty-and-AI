@@ -41,7 +41,7 @@ autocracy_reform = {
 	nation_designer_cost = 0
 	modifiers = {
 		unjustified_demands = -0.1
-		war_taxes_cost_modifier = -0.25
+		war_taxes_cost_modifier = -0.5
 	}
 	ai = {
 		factor = 0.5 #generic
