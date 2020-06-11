@@ -495,47 +495,17 @@ barracks = {
 ##########################
 
 shipyard = {
-	cost = 250
+	cost = 100
 	time = 12
 
 	build_trigger = {
 		has_port = yes
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = shipyard
-					has_construction = shipyard
-					has_building = grand_shipyard
-					has_construction = grand_shipyard
-				}
-			}
-		}
-	}
-	
-	keep_trigger = {
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = shipyard
-					has_construction = shipyard
-					has_building = grand_shipyard
-					has_construction = grand_shipyard
-				}
-			}
-		}
 	}
 
 	modifier = {
-		naval_forcelimit = 3
-		ship_recruit_speed = -0.3
-		local_ship_repair = 0.3
+		naval_forcelimit = 2
+		ship_recruit_speed = -0.25
+		local_ship_repair = 0.25
 	}
 
 	ai_will_do = {
@@ -660,6 +630,7 @@ fort_15th = {
 	time = 30
 	modifier = {
 		fort_level = 2
+		allowed_num_of_buildings = 1
 	}
 	
 	onmap = yes
@@ -920,45 +891,11 @@ dock = {
 ##########################
 
 regimental_camp = {
-	cost = 250
+	cost = 200
 	time = 12
 
-	build_trigger = {
-		has_port = yes
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = regimental_camp
-					has_construction = regimental_camp
-					has_building = conscription_center
-					has_construction = conscription_center
-				}
-			}
-		}
-	}
-	
-	keep_trigger = {
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = regimental_camp
-					has_construction = regimental_camp
-					has_building = conscription_center
-					has_construction = conscription_center
-				}
-			}
-		}
-	}
-
 	modifier = {
-		land_forcelimit = 2
+		land_forcelimit = 1
 	}
 	
 	ai_will_do = {
@@ -1025,6 +962,7 @@ fort_16th = {
 	make_obsolete = fort_15th
 	modifier = {
 		fort_level = 4
+		allowed_num_of_buildings = 1
 	}
 
 	onmap = yes
@@ -1434,47 +1372,18 @@ trade_depot = {
 ##########################
 
 grand_shipyard = {
-	cost = 400
+	cost = 300
 	time = 12
 	make_obsolete = shipyard
 
 	build_trigger = {
 		has_port = yes
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = shipyard
-					has_construction = shipyard
-					has_building = grand_shipyard
-					has_construction = grand_shipyard
-				}
-			}
-		}
 	}
-	
-	keep_trigger = {
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = shipyard
-					has_construction = shipyard
-					has_building = grand_shipyard
-					has_construction = grand_shipyard
-				}
-			}
-		}
-	}
+
 	modifier = {
-		naval_forcelimit = 6
-		ship_recruit_speed = -0.6
-		local_ship_repair = 0.6
+		naval_forcelimit = 4
+		ship_recruit_speed = -0.5
+		local_ship_repair = 0.5
 	}
 	
 	ai_will_do = {
@@ -1718,6 +1627,7 @@ fort_17th = {
 	make_obsolete = fort_16th
 	modifier = {
 		fort_level = 6
+		allowed_num_of_buildings = 1
 	}
 
 	onmap = yes
@@ -2181,45 +2091,12 @@ drydock = {
 ##########################
 
 conscription_center = {
-	cost = 500
+	cost = 400
 	time = 12
 	make_obsolete = regimental_camp
 
-	build_trigger = {
-		has_port = yes
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = regimental_camp
-					has_construction = regimental_camp
-					has_building = conscription_center
-					has_construction = conscription_center
-				}
-			}
-		}
-	}
-	keep_trigger = {
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = regimental_camp
-					has_construction = regimental_camp
-					has_building = conscription_center
-					has_construction = conscription_center
-				}
-			}
-		}
-	}
-
 	modifier = {
-		land_forcelimit = 4
+		land_forcelimit = 2
 	}
 	
 	ai_will_do = {
@@ -2287,6 +2164,7 @@ fort_18th = {
 	make_obsolete = fort_17th
 	modifier = {
 		fort_level = 8
+		allowed_num_of_buildings = 1
 	}
 
 	onmap = yes
@@ -2386,7 +2264,7 @@ wharf = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 4
+		factor = 3
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
@@ -2403,15 +2281,23 @@ wharf = {
 			}
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
 			base_production = 5
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
+			base_production = 7
+		}
+		modifier = { 
+			factor = 1.5
 			base_production = 10
 		}
+		modifier = { 
+			factor = 1.5
+			base_production = 12
+		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			base_production = 15
 		}
 		modifier = { 
@@ -2446,17 +2332,25 @@ weapons = {
 	onmap = yes	
 	
 	ai_will_do = {
-		factor = 5
+		factor = 4
 		modifier = { 
-			factor = 2
+			factor = 1.5
 			base_production = 5
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
+			base_production = 7
+		}
+		modifier = { 
+			factor = 1.5
 			base_production = 10
 		}
+		modifier = { 
+			factor = 1.5
+			base_production = 12
+		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			base_production = 15
 		}
 		modifier = {
@@ -2489,7 +2383,7 @@ textile = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 5
+		factor = 4
 		modifier = {
 			factor = 0.8
 			NOT = { development = 3 }
@@ -2502,15 +2396,23 @@ textile = {
 			}
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
 			base_production = 5
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
+			base_production = 7
+		}
+		modifier = { 
+			factor = 1.5
 			base_production = 10
 		}
+		modifier = { 
+			factor = 1.5
+			base_production = 12
+		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			base_production = 15
 		}
 		modifier = {
@@ -2545,17 +2447,25 @@ plantations = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 5
+		factor = 4
 		modifier = { 
-			factor = 2
+			factor = 1.5
 			base_production = 5
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
+			base_production = 7
+		}
+		modifier = { 
+			factor = 1.5
 			base_production = 10
 		}
+		modifier = { 
+			factor = 1.5
+			base_production = 12
+		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			base_production = 15
 		}
 		modifier = {
@@ -2589,21 +2499,29 @@ tradecompany = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 5
+		factor = 4
 		modifier = {
 			factor = 0.75
 			trade_goods = incense
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
 			base_production = 5
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
+			base_production = 7
+		}
+		modifier = { 
+			factor = 1.5
 			base_production = 10
 		}
+		modifier = { 
+			factor = 1.5
+			base_production = 12
+		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			base_production = 15
 		}
 		modifier = {
@@ -2635,7 +2553,7 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 3
+		factor = 2.5
 
 
 		modifier = { 
@@ -2647,19 +2565,27 @@ farm_estate = {
 			NOT = { base_production = 4 }
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
 			base_production = 5
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
+			base_production = 7
+		}
+		modifier = { 
+			factor = 1.5
 			base_production = 10
 		}
+		modifier = { 
+			factor = 1.5
+			base_production = 12
+		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			base_production = 15
 		}
 		modifier = {
-			factor = 6
+			factor = 4
 			OR = {
 				has_building = workshop
 				has_building = counting_house
@@ -2689,7 +2615,7 @@ mills = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 5
+		factor = 4
 		modifier = {
 			factor = 0.8
 			NOT = { base_production = 3 }
@@ -2702,15 +2628,23 @@ mills = {
 			}
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
 			base_production = 5
 		}
 		modifier = { 
-			factor = 2
+			factor = 1.5
+			base_production = 7
+		}
+		modifier = { 
+			factor = 1.5
 			base_production = 10
 		}
+		modifier = { 
+			factor = 1.5
+			base_production = 12
+		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			base_production = 15
 		}
 		modifier = {
@@ -2749,7 +2683,7 @@ furnace = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 	
 	ai_will_do = {
-		factor = 100
+		factor = 25
 		modifier = {
 			factor = 0.1
 			NOT = { is_state = yes }
@@ -2770,7 +2704,7 @@ ramparts = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.5
 		modifier = {
 			factor = 0
 			NOT = {
@@ -2963,7 +2897,7 @@ impressment_offices = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.5
 		modifier = {
 			factor = 0.1
 			NOT = {

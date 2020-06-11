@@ -1463,7 +1463,57 @@ estate_burghers_enforced_interfaith_dialogue = {
 		tolerance_heretic = 2
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.5
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				religious_unity = 0.65
+			}
+		}
+		modifier = {
+			factor = 0.75
+			religious_unity = 0.8
+		}
+		modifier = {
+			factor = 0.75
+			religious_unity = 0.9
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					NOT = { religion = root }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 30 # Estate is basically disloyal
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 35 # Estate is basically disloyal
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_absolutism_active = yes
+		}
 	}
 }
 
@@ -1930,7 +1980,41 @@ estate_dhimmi_dhimmi_nobles = {
 		free_leader_pool = 1
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 35
+					}
+				}
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 35
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 30
+					}
+				}
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 30
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -3124,12 +3208,21 @@ estate_vaisyas_wartaxes = {
 	ai_will_do = {
 		factor = 10
 		modifier = {
-			factor = 0
+			factor = 0.75
 			current_age = age_of_discovery
 		}
 		modifier = {
-			factor = 0
+			factor = 0.75
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				estate_loyalty = {
+					estate = estate_vaisyas
+					loyalty = 35 # Estate is basically disloyal
+				}
+			}
 		}
 	}
 }
@@ -3379,7 +3472,19 @@ estate_burghers_monopoly_of_textiles = {
 		country_event = { id = monopoly_privileges.1 }
 	}
 	ai_will_do = { #having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -3466,7 +3571,19 @@ estate_burghers_monopoly_of_dyes = {
 		country_event = { id = monopoly_privileges.2 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -3553,7 +3670,19 @@ estate_burghers_monopoly_of_glass = {
 		country_event = { id = monopoly_privileges.3 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -3640,7 +3769,19 @@ estate_burghers_monopoly_of_paper = {
 		country_event = { id = monopoly_privileges.4 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -3736,7 +3877,19 @@ estate_vaisyas_monopoly_of_textiles = {
 		country_event = { id = monopoly_privileges.1 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -3823,7 +3976,19 @@ estate_vaisyas_monopoly_of_dyes = {
 		country_event = { id = monopoly_privileges.2 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -3910,7 +4075,19 @@ estate_vaisyas_monopoly_of_glass = {
 		country_event = { id = monopoly_privileges.3 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -3997,7 +4174,19 @@ estate_vaisyas_monopoly_of_paper = {
 		country_event = { id = monopoly_privileges.4 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4095,7 +4284,19 @@ estate_jains_monopoly_of_textiles = {
 		country_event = { id = monopoly_privileges.1 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4184,7 +4385,19 @@ estate_jains_monopoly_of_dyes = {
 		country_event = { id = monopoly_privileges.2 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4273,7 +4486,19 @@ estate_jains_monopoly_of_glass = {
 		country_event = { id = monopoly_privileges.3 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4362,7 +4587,19 @@ estate_jains_monopoly_of_paper = {
 		country_event = { id = monopoly_privileges.4 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4458,7 +4695,19 @@ estate_nobles_monopoly_of_metals = {
 		country_event = { id = monopoly_privileges.5 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4544,7 +4793,19 @@ estate_nobles_monopoly_of_livestock = {
 		country_event = { id = monopoly_privileges.6 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4631,7 +4892,19 @@ estate_nobles_monopoly_of_gems = {
 		country_event = { id = monopoly_privileges.7 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4728,7 +5001,19 @@ estate_rajput_monopoly_of_metals = {
 		country_event = { id = monopoly_privileges.5 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4816,7 +5101,19 @@ estate_rajput_monopoly_of_livestock = {
 		country_event = { id = monopoly_privileges.6 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -4904,7 +5201,19 @@ estate_rajput_monopoly_of_gems = {
 		country_event = { id = monopoly_privileges.7 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5000,7 +5309,19 @@ estate_maratha_monopoly_of_metals = {
 		country_event = { id = monopoly_privileges.5 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5087,7 +5408,19 @@ estate_maratha_monopoly_of_livestock = {
 		country_event = { id = monopoly_privileges.6 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5174,7 +5507,19 @@ estate_maratha_monopoly_of_gems = {
 		country_event = { id = monopoly_privileges.7 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5260,7 +5605,19 @@ estate_church_monopoly_of_incense = {
 		country_event = { id = monopoly_privileges.8 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5346,7 +5703,19 @@ estate_church_monopoly_of_wool = {
 		country_event = { id = monopoly_privileges.9 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5433,7 +5802,19 @@ estate_church_monopoly_of_wine = {
 		country_event = { id = monopoly_privileges.10 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5520,7 +5901,19 @@ estate_church_monopoly_of_slaves = {
 		country_event = { id = monopoly_privileges.11 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5607,7 +6000,19 @@ estate_brahmins_monopoly_of_incense = {
 		country_event = { id = monopoly_privileges.8 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -5694,7 +6099,19 @@ estate_brahmins_monopoly_of_wool = {
 		country_event = { id = monopoly_privileges.9 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -6156,7 +6573,7 @@ estate_burghers_exclusive_trade_rights = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 0
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -6235,7 +6652,7 @@ estate_vaisyas_exclusive_trade_rights = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 0
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -6315,7 +6732,7 @@ estate_jains_exclusive_trade_rights = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 0
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
