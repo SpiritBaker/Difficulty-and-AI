@@ -1419,7 +1419,7 @@ estate_church_inwards_perfection = {
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
-		development_cost = -0.15
+		development_cost = -0.25
 	}
 	penalties = {
 		stability_cost_to_declare_war = 1
@@ -2096,25 +2096,27 @@ estate_dhimmi_tolerance = {
 		tolerance_heathen = 2
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 5
 		modifier = {
-			factor = 10
+			factor = 2.5
 			num_of_owned_provinces_with = {
 				NOT = { religion_group = root }
 				is_state_core = root
-				value = 15
+				value = 5
 			}
+		}
+		modifier = {
+			factor = 0.75
+			is_absolutism_active = yes
 		}
 		modifier = {
 			factor = 0.5
-			estate_influence = {
-				estate = estate_church
-				influence = 75
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 35
+				}
 			}
-		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
 		}
 	}
 }

@@ -67,18 +67,22 @@ NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	10	--Border <-> province distance im
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
 NDefines.NAI.PURSUE_DISTANCE = 100
 --NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.025
-NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 2.0 --Max AI desire for humiliating its enemy.
-NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 2.0
-NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 2.0 -- Max AI desire for humiliating its' enemy
+
 NDefines.NAI.PEACE_OTHER_WAR_FORCE_BALANCE_MULT = 0.33 -- Multiplies the force balance of other countries who are involved in a different war with either side
+
+NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 3.0 --Max AI desire for humiliating its enemy.
+NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 2.0
 NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 0.5	
 NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.5	
 NDefines.NAI.PEACE_TERMS_ANNUL_TREATIES_BASE_MULT =	1	
-NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.5
-NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.75	--Max AI desire mult for releasing countries.
+NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.75
+NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for releasing countries.
 NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 1	--AI desire for war reparations through peace.
+NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 0.2 -- AI only wants war reparations if other country has at least this % of their income
 NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.25  --AI desire for a province is multiplied by this if it is not on their conquest list.
+NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 5.0 -- AI desire for a province is multiplied by this if it has a core on it
+NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5
