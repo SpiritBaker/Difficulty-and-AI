@@ -1085,8 +1085,7 @@ quality_ideas = {
 	category = MIL
 
 	bonus = {
-		drill_decay_modifier = -0.5
-		drill_gain_modifier = 0.2
+		drill_gain_modifier = 0.25
 	}
 
 	private_to_marshal = {
