@@ -49,51 +49,61 @@ interaction = {
 				NOT = { crown_land_share = 25 }
 				AND = {
 					is_absolutism_active = yes
-					NOT = { crown_land_share = 40 }
-				}
-			}
-		}
-		modifier = {
-			factor = 0.8
-			OR = {
-				NOT = { crown_land_share = 35 }
-				AND = {
-					is_absolutism_active = yes
 					NOT = { crown_land_share = 50 }
 				}
 			}
 		}
 		modifier = {
-			factor = 0
-			NOT = { num_of_loans = 1 }
+			factor = 0.4
+			current_age = age_of_reformation
+			NOT = { crown_land_share = 30 }
 		}
 		modifier = {
-			factor = 0.5
-			is_in_deficit = no
+			factor = 0.8
+			current_age = age_of_reformation
+			NOT = { crown_land_share = 50 }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.6
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 75 }
+				}
+			}
+		}
+		#modifier = {
+		#	factor = 0
+		#	NOT = { num_of_loans = 1 }
+		#}
+		#modifier = {
+		#	factor = 0.5
+		#	is_in_deficit = no
+		#}
+		modifier = {
+			factor = 1.2
 			has_any_disaster = yes
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.4
 			num_of_loans = 2
 			is_in_deficit = yes
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_loans = 5
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_loans = 15
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_loans = 20
 		}
 		modifier = {
@@ -101,16 +111,17 @@ interaction = {
 			NOT = {
 				estate_loyalty = {
 					estate = all
-					loyalty = 25
+					loyalty = 30
 				}
 			}
 		}
 		modifier = {
-			factor = 1.1
-			crown_land_share = 80
+			factor = 4
+			crown_land_share = 85
+			NOT = { num_of_powerful_estates = 4 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.8
 			num_of_powerful_estates = 1
 		}
 		modifier = {
@@ -131,7 +142,7 @@ interaction = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.4
 			has_country_flag = recent_land_seizure
 			NOT = {
 				had_country_flag = {
@@ -407,15 +418,15 @@ interaction = {
 			NOT = { num_of_rebel_armies = 1 }
 		}
 		modifier = {
-			factor = 10
+			factor = 1.8
 			NOT = { crown_land_share = 20 }
 		}
-		#modifier = {
-		#	factor = 10
-		#	NOT = { crown_land_share = 30 }
-		#}
 		modifier = {
-			factor = 1.1
+			factor = 1.6
+			NOT = { crown_land_share = 30 }
+		}
+		modifier = {
+			factor = 1.2
 			NOT = { crown_land_share = 35 }
 		}
 		modifier = {
@@ -461,6 +472,24 @@ interaction = {
 				had_country_flag = {
 					flag = recent_land_distribution
 					days = 5475
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				estate_loyalty = {
+					estate = all
+					loyalty = 50
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				estate_loyalty = {
+					estate = all
+					loyalty = 40
 				}
 			}
 		}

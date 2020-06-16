@@ -191,6 +191,7 @@ technology = {
 	year = 1518
 	
 	#Ditch
+	ramparts = yes
 	
 	enable = south_indian_musketeer	
 	enable = mughal_musketeer		

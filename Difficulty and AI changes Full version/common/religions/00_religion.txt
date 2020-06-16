@@ -761,18 +761,22 @@ christian = {
 					}
 					modifier = {
 						factor = 0
-						NOT = {
-							calc_true_if = {
-								all_owned_province = {
-									current_institution = 1
-									NOT = { current_institution = 95 }
+						OR = {
+							is_lacking_institutions = no
+							NOT = {
+								calc_true_if = {
+									all_owned_province = {
+										current_institution = 1
+										NOT = { current_institution = 95 }
+									}
+									amount = 1
 								}
-								amount = 1
 							}
 						}
 					}
 					modifier = {
 						factor = 2
+						is_lacking_institutions = yes
 						calc_true_if = {
 							all_owned_province = {
 								current_institution = 1

@@ -1153,7 +1153,7 @@ quantity_ideas = {
 	category = MIL
 
 	bonus = {
-		land_forcelimit_modifier  = 0.50
+		land_forcelimit_modifier  = 0.33
 	}
 	mass_army = {
 		global_manpower_modifier = 0.50

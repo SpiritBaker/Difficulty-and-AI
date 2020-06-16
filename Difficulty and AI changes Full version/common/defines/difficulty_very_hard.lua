@@ -17,4 +17,4 @@ NDefines.NAI.PEACE_MILITARY_STRENGTH_FACTOR = 15
 NDefines.NAI.PEACE_ALLY_MILITARY_STRENGTH_MULT = 1.0 -- Multiplies PEACE_MILITARY_STRENGTH_FACTOR for allies in a war
 NDefines.NAI.PEACE_ALLY_FORCE_BALANCE_MULT = 1.0 -- Multiplies PEACE_FORCE_BALANCE_FACTOR for allies in a war
 NDefines.NAI.PEACE_ALLY_WAR_DIRECTION_MULT = 1.0 -- Multiplies PEACE_WAR_DIRECTION_FACTOR for allies in a war
-NDefines.NAI.PEACE_FORCE_BALANCE_FACTOR = 0.4 -- AI willingness to peace based on strength estimation of both sides
+NDefines.NAI.PEACE_FORCE_BALANCE_FACTOR = 0.25 -- AI willingness to peace based on strength estimation of both sides

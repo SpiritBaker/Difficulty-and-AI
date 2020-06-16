@@ -67,7 +67,7 @@ technology = { #Temples
 technology = { #National Ideas
 	# Tech 5
 	year = 1466
-
+	governing_capacity = 50
 	production_efficiency	 =	0.02
 }
 
@@ -78,7 +78,6 @@ technology = { #Workshop
 	allowed_idea_groups = 2	
 	#Workshop
 	workshop = yes
-	ramparts = yes
 }
 
 technology = { #Renaissance Thought
@@ -94,7 +93,7 @@ technology = { #Courthouse
 
 	year = 1505
 	courthouse = yes
-	governing_capacity = 100
+	governing_capacity = 50
 
 }
 

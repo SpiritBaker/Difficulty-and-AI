@@ -80,7 +80,7 @@ NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.75
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for releasing countries.
 NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 1	--AI desire for war reparations through peace.
 NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 0.2 -- AI only wants war reparations if other country has at least this % of their income
-NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.25  --AI desire for a province is multiplied by this if it is not on their conquest list.
+NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.15  --AI desire for a province is multiplied by this if it is not on their conquest list.
 NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 5.0 -- AI desire for a province is multiplied by this if it has a core on it
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 
@@ -92,6 +92,27 @@ NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.2 -- How many times the cost of the investment must be in the treasury to consider buying it
+
+NDefines.NAI.EconomyLOAN_REPAYMENT_SAVINGS_PRIORITY = 1.25
+
+--NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1				-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
+--NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.8					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
+--MILITARY_FOCUS_DEFAULT = 1.0
+--MILITARY_FOCUS_LOWER_BOUND = 0.0
+--MILITARY_FOCUS_UPPER_BOUND = 2.0
+NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.25
+NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.75
+NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.15
+--NAVY_FRACTION_PEACEFUL = 1.25
+--NAVY_FRACTION_CAPITALIST = 1.25
+NDefines.NAIEconomy.FORT_FRACTION_MILITARIZE = 1.25
+NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.15
+NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 1.0
+--MISSIONARY_FRACTION = 0.15
+--STATE_MAINTENANCE_FRACTION = 0.1
+NDefines.NAIEconomy.EconomyLOAN_REPAYMENT_SAVINGS_PRIORITY = 1.5
+--SUBSIDY_PRIORITY_CONSIDERATION_THRESHOLD = 50.0
+--SUBSIDY_DESIRE_TO_PRIORITY_RATIO = 0.05
 
 NDefines.NGovernment.RUSSIAN_ABILITY_STRELTSY_SPAWN_SIZE = 0.1
 --NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_CORRUPTION = 5.0

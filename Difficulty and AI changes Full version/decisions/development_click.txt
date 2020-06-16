@@ -1,5 +1,169 @@
 country_decisions = { 
-
+	gold_devlopment = {
+		potential = {
+			ai = yes
+			dip_power = 400
+			has_institution = feudalism
+			any_owned_province = {
+				trade_goods = gold
+			}
+		}
+		allow = {
+			any_owned_province = {
+				is_state = yes
+				trade_goods = gold 
+				OR = {
+					AND = {
+						NOT = { development = 6 }
+						NOT = { base_production = 3 }
+					}
+					AND = {
+						development = 6
+						NOT = { development = 8 }
+						NOT = { base_production = 4 }
+					}
+					AND = {
+						development = 8
+						NOT = { development = 10 }
+						NOT = { base_production = 5 }
+					}
+					AND = {
+						development = 10
+						NOT = { development = 12 }
+						NOT = { base_production = 6 }
+					}
+					AND = {
+						development = 12
+						NOT = { development = 14 }
+						NOT = { base_production = 7 }
+					}
+					AND = {
+						development = 14
+						NOT = { development = 16 }
+						NOT = { base_production = 8 }
+					}
+					AND = { 
+						development = 16
+						NOT = { base_production = 9 }
+					}
+				}
+			}
+		}
+		effect = {
+			random_owned_province = { 
+				limit = {
+					is_state = yes
+					trade_goods = gold 
+					OR = {
+						AND = {
+							NOT = { development = 6 }
+							NOT = { base_production = 3 }
+						}
+						AND = {
+							development = 6
+							NOT = { development = 8 }
+							NOT = { base_production = 4 }
+						}
+						AND = {
+							development = 8
+							NOT = { development = 10 }
+							NOT = { base_production = 5 }
+						}
+						AND = {
+							development = 10
+							NOT = { development = 12 }
+							NOT = { base_production = 6 }
+						}
+						AND = {
+							development = 12
+							NOT = { development = 14 }
+							NOT = { base_production = 7 }
+						}
+						AND = {
+							development = 14
+							NOT = { development = 16 }
+							NOT = { base_production = 8 }
+						}
+						AND = { 
+							development = 16
+							NOT = { base_production = 9 }
+						}
+					}
+				}
+				save_event_target_as = ptpFlag4
+				add_base_production = 1
+			}
+			event_target:ptpFlag4 = {
+				if = {
+					limit = { 
+						AND = {	
+							NOT = { development = 20 } 
+							owner = {
+								OR = { 
+									is_march = yes
+									is_vassal = yes
+								}
+							}
+						}
+					}
+					owner = { add_dip_power = -80 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = {
+								OR = { 
+									is_march = yes
+									is_vassal = yes
+								}
+							}
+						}
+					}
+					owner = { add_dip_power = -120 }
+				}
+				else_if = {
+					limit = { 
+						AND = {	
+							NOT = { development = 20 } 
+							owner = { NOT = { has_idea = smithian_economics } }
+						}
+					}
+					owner = { add_dip_power = -55 }
+				}
+				else_if = {
+					limit = { 
+						AND= {
+							NOT = { development = 20 } 
+							owner = { has_idea = smithian_economics }
+						}
+					}
+					owner = { add_dip_power = -50 }
+				}
+				else_if = {
+					limit = { 
+						AND = {
+							development = 20
+							owner = { has_idea = smithian_economics }
+						}
+					}
+					owner = { add_dip_power = -81 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = { NOT = { has_idea = smithian_economics } }
+						}
+					}
+					owner = { add_dip_power = -90 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	dip_development = {
 		major = yes
 		potential = {
@@ -46,7 +210,7 @@ country_decisions = {
 			}
 			else_if = {
 				limit = { has_institution = feudalism }
-				dip_power = 990
+				dip_power = 980
 			}
 		}
 		allow = {
@@ -221,10 +385,38 @@ country_decisions = {
 					limit = { 
 						AND = {	
 							NOT = { development = 20 } 
+							owner = {
+								OR = { 
+									is_march = yes
+									is_vassal = yes
+								}
+							}
+						}
+					}
+					owner = { add_dip_power = -80 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = {
+								OR = { 
+									is_march = yes
+									is_vassal = yes
+								}
+							}
+						}
+					}
+					owner = { add_dip_power = -120 }
+				}
+				else_if = {
+					limit = { 
+						AND = {	
+							NOT = { development = 20 } 
 							owner = { NOT = { has_idea = smithian_economics } }
 						}
 					}
-				owner = { add_dip_power = -55 }
+					owner = { add_dip_power = -55 }
 				}
 				else_if = {
 					limit = { 
@@ -233,7 +425,7 @@ country_decisions = {
 							owner = { has_idea = smithian_economics }
 						}
 					}
-					owner = { add_dip_power = -44 }
+					owner = { add_dip_power = -50 }
 				}
 				else_if = {
 					limit = { 
@@ -242,7 +434,7 @@ country_decisions = {
 							owner = { has_idea = smithian_economics }
 						}
 					}
-					owner = { add_dip_power = -72 }
+					owner = { add_dip_power = -81 }
 				}
 				else_if = {
 					limit = {
@@ -306,7 +498,7 @@ country_decisions = {
 			}
 			else_if = {
 				limit = { has_institution = feudalism }
-				mil_power = 990
+				mil_power = 980
 			}
 		}
 		allow = {
@@ -481,10 +673,38 @@ country_decisions = {
 					limit = { 
 						AND = {	
 							NOT = { development = 20 } 
+							owner = {
+								OR = { 
+									is_march = yes
+									is_vassal = yes
+								}
+							}
+						}
+					}
+				owner = { add_mil_power = -80 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = {
+								OR = { 
+									is_march = yes
+									is_vassal = yes
+								}
+							}
+						}
+					}
+					owner = { add_mil_power = -120 }
+				}
+				else_if = {
+					limit = { 
+						AND = {	
+							NOT = { development = 20 } 
 							owner = { NOT = { has_idea = smithian_economics } }
 						}
 					}
-				owner = { add_mil_power = -55 }
+					owner = { add_mil_power = -55 }
 				}
 				else_if = {
 					limit = { 
@@ -493,7 +713,7 @@ country_decisions = {
 							owner = { has_idea = smithian_economics }
 						}
 					}
-					owner = { add_mil_power = -44 }
+					owner = { add_mil_power = -50 }
 				}
 				else_if = {
 					limit = { 
@@ -502,7 +722,22 @@ country_decisions = {
 							owner = { has_idea = smithian_economics }
 						}
 					}
-					owner = { add_mil_power = -72 }
+					owner = { add_mil_power = -81 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = { 
+								AND = { 
+									is_subject = yes
+									NOT = { is_subject_of_type = tributary_state }
+									NOT = { is_subject_of_type = colony }
+								}
+							}
+						}
+					}
+					owner = { add_dip_power = -120 }
 				}
 				else_if = {
 					limit = {
@@ -566,7 +801,7 @@ country_decisions = {
 			}
 			else_if = {
 				limit = { has_institution = feudalism }
-				adm_power = 990
+				adm_power = 980
 			}
 		}
 		allow = {
@@ -741,10 +976,38 @@ country_decisions = {
 					limit = { 
 						AND = {	
 							NOT = { development = 20 } 
+							owner = {
+								OR = { 
+									is_march = yes
+									is_vassal = yes
+								}
+							}
+						}
+					}
+					owner = { add_adm_power = -80 }
+				}
+				else_if = {
+					limit = {
+						AND = {
+							development = 20
+							owner = {
+								OR = { 
+									is_march = yes
+									is_vassal = yes
+								}
+							}
+						}
+					}
+					owner = { add_adm_power = -120 }
+				}
+				else_if = {
+					limit = { 
+						AND = {	
+							NOT = { development = 20 } 
 							owner = { NOT = { has_idea = smithian_economics } }
 						}
 					}
-				owner = { add_adm_power = -55 }
+					owner = { add_adm_power = -55 }
 				}
 				else_if = {
 					limit = { 
@@ -753,7 +1016,7 @@ country_decisions = {
 							owner = { has_idea = smithian_economics }
 						}
 					}
-					owner = { add_adm_power = -44 }
+					owner = { add_adm_power = -50 }
 				}
 				else_if = {
 					limit = { 
@@ -762,7 +1025,7 @@ country_decisions = {
 							owner = { has_idea = smithian_economics }
 						}
 					}
-					owner = { add_adm_power = -72 }
+					owner = { add_adm_power = -81 }
 				}
 				else_if = {
 					limit = {
