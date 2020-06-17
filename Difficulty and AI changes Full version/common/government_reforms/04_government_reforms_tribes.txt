@@ -40,6 +40,7 @@ steppe_horde = {
 		cav_to_inf_ratio = 0.25
 		movement_speed = 0.2
 		years_of_nationalism = -5
+		reform_progress_growth = -0.1
 	}
 	ai = {
 		factor = 1000
@@ -109,6 +110,7 @@ tribal_despotism = {
 	nation_designer_cost = 0
 	modifiers = {
 		core_creation = -0.1
+		reform_progress_growth = -0.1
 	}
 	legacy_equivalent = tribal_despotism_legacy
 }
@@ -120,6 +122,7 @@ tribal_kingdom = {
 	legacy_equivalent = tribal_kingdom_legacy
 	modifiers = {
 		vassal_income = 0.2
+		reform_progress_growth = -0.1
 	}
 }
 
@@ -139,6 +142,7 @@ siberian_tribe = {
 	modifiers = {
 		stability_cost_modifier = -0.33
 		global_institution_spread = -0.2
+		reform_progress_growth = -0.1
 	}
 }
 
@@ -257,7 +261,7 @@ horde_barbaric_despoilers_reform = {
 		
 	}
 	ai = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -275,7 +279,7 @@ horde_tribal_unity_reform = {
 		horde_unity = 2
 	}
 	ai = {
-		factor = 2
+		factor = 1
 	}
 }
 
@@ -322,6 +326,14 @@ tribe_becomes_monarchy_reform = {
 	}
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 2
+			has_reform = steppe_horde
+			OR = {
+				religion_group = muslim
+				religion_group = eastern
+			} 
+		}
 	}
 }
 

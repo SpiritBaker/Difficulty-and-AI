@@ -849,7 +849,7 @@ exploration_ideas = {
 		}
 		modifier = {
 			factor = 0
-			is_year = 1600
+			is_year = 1630
 		}
 		modifier = {
 			factor = 0
@@ -924,6 +924,15 @@ exploration_ideas = {
 				tag = MAM
 				tag = RUS
 			}
+		}
+		modifier = {
+			factor = 0.5
+			tag = FRA
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 0.8
+			is_in_deficit = yes
 		}
 		modifier = {
 			factor = 0.1

@@ -54,7 +54,11 @@ interaction = {
 			}
 		}
 		modifier = {
-			factor = 0.4
+			factor = 0.8
+			NOT = { crown_land_share = 30 }
+		}
+		modifier = {
+			factor = 0.8
 			current_age = age_of_reformation
 			NOT = { crown_land_share = 30 }
 		}
@@ -86,25 +90,28 @@ interaction = {
 			has_any_disaster = yes
 		}
 		modifier = {
-			factor = 1.4
-			num_of_loans = 2
+			factor = 2
 			is_in_deficit = yes
 		}
 		modifier = {
-			factor = 1.2
+			factor = 2
 			num_of_loans = 5
+			crown_land_share = 30 
 		}
 		modifier = {
-			factor = 1.2
+			factor = 2
 			num_of_loans = 10
+			crown_land_share = 30 
 		}
 		modifier = {
-			factor = 1.2
+			factor = 2
 			num_of_loans = 15
+			crown_land_share = 30 
 		}
 		modifier = {
-			factor = 1.2
+			factor = 2
 			num_of_loans = 20
+			crown_land_share = 30 
 		}
 		modifier = {
 			factor = 1.2

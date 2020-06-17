@@ -1016,6 +1016,14 @@ estate_nobles_advisors = {
 		}
 		modifier = {
 			factor = 1.25
+			government = monarchy
+		}
+		modifier = {
+			factor = 1.25
+			has_idea_group = aristocracy_ideas
+		}
+		modifier = {
+			factor = 1.25
 			NOT = { mil = 2 }
 		}
 		modifier = {
@@ -1821,7 +1829,7 @@ estate_cossacks_exploration_expedition = {
 	penalties = {
 	}
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 2
 			OR = {
@@ -1832,6 +1840,7 @@ estate_cossacks_exploration_expedition = {
 		modifier = {
 			factor = 0
 			NOT = { crown_land_share = 25 }
+			NOT = { has_estate_privilege = estate_cossacks_exploration_expedition }
 			NOT = { has_estate_privilege = estate_cossacks_exploration_expedition }
 		}
 		modifier = {
@@ -2600,6 +2609,10 @@ estate_jains_clerical_class = {
 	}
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 0.75
+			is_absolutism_active = yes
+		}
 	}
 }
 
@@ -3320,6 +3333,16 @@ estate_burghers_patronage_of_the_arts = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.75
+			is_in_deficit = yes
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 0.5
+			is_in_deficit = yes
+			num_of_loans = 10
+		}
 	}
 }
 
@@ -3559,6 +3582,10 @@ estate_burghers_monopoly_of_textiles = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -3656,6 +3683,10 @@ estate_burghers_monopoly_of_dyes = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
 		}
 		modifier = {
 			factor = 0.5
@@ -3757,6 +3788,10 @@ estate_burghers_monopoly_of_glass = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 16
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -3854,6 +3889,10 @@ estate_burghers_monopoly_of_paper = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
 		}
 		modifier = {
 			factor = 0.5
@@ -3964,6 +4003,10 @@ estate_vaisyas_monopoly_of_textiles = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -4061,6 +4104,10 @@ estate_vaisyas_monopoly_of_dyes = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
 		}
 		modifier = {
 			factor = 0.5
@@ -4162,6 +4209,10 @@ estate_vaisyas_monopoly_of_glass = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 16
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -4259,6 +4310,10 @@ estate_vaisyas_monopoly_of_paper = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
 		}
 		modifier = {
 			factor = 0.5
@@ -4371,6 +4426,10 @@ estate_jains_monopoly_of_textiles = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -4470,6 +4529,10 @@ estate_jains_monopoly_of_dyes = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
 		}
 		modifier = {
 			factor = 0.5
@@ -4573,6 +4636,10 @@ estate_jains_monopoly_of_glass = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 16
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -4672,6 +4739,10 @@ estate_jains_monopoly_of_paper = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
 		}
 		modifier = {
 			factor = 0.5
@@ -4782,6 +4853,10 @@ estate_nobles_monopoly_of_metals = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -4880,7 +4955,11 @@ estate_nobles_monopoly_of_livestock = {
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.5
+			factor = 1.5
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 0.75
 			production_income_percentage = 0.25
 		} 
 	}
@@ -4977,6 +5056,10 @@ estate_nobles_monopoly_of_gems = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
 		}
 		modifier = {
 			factor = 0.5
@@ -5088,6 +5171,10 @@ estate_rajput_monopoly_of_metals = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -5188,7 +5275,7 @@ estate_rajput_monopoly_of_livestock = {
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			production_income_percentage = 0.25
 		} 
 	}
@@ -5286,6 +5373,10 @@ estate_rajput_monopoly_of_gems = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
 		}
 		modifier = {
 			factor = 0.5
@@ -5396,6 +5487,10 @@ estate_maratha_monopoly_of_metals = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -5495,7 +5590,7 @@ estate_maratha_monopoly_of_livestock = {
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			production_income_percentage = 0.25
 		} 
 	}
@@ -5592,6 +5687,10 @@ estate_maratha_monopoly_of_gems = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
 		}
 		modifier = {
 			factor = 0.5
@@ -5692,6 +5791,10 @@ estate_church_monopoly_of_incense = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 14
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -5790,7 +5893,11 @@ estate_church_monopoly_of_wool = {
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
+			factor = 0.75
 			production_income_percentage = 0.25
 		} 
 	}
@@ -5889,7 +5996,7 @@ estate_church_monopoly_of_wine = {
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			production_income_percentage = 0.25
 		} 
 	}
@@ -5986,6 +6093,10 @@ estate_church_monopoly_of_slaves = {
 		modifier = {
 			factor = 1.5
 			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 14
 		}
 		modifier = {
 			factor = 0.5
@@ -6087,6 +6198,10 @@ estate_brahmins_monopoly_of_incense = {
 			num_of_loans = 1
 		}
 		modifier = {
+			factor = 0.75
+			adm_tech = 14
+		}
+		modifier = {
 			factor = 0.5
 			production_income_percentage = 0.25
 		} 
@@ -6186,7 +6301,11 @@ estate_brahmins_monopoly_of_wool = {
 			num_of_loans = 1
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
+			factor = 0.75
 			production_income_percentage = 0.25
 		} 
 	}
