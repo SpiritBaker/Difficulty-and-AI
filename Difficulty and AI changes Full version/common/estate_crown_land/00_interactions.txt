@@ -441,6 +441,14 @@ interaction = {
 			NOT = { crown_land_share = 50 }
 		}
 		modifier = {
+			factor = 0.5
+			crown_land_share = 50
+		}
+		modifier = {
+			factor = 0.25
+			crown_land_share = 75
+		}
+		modifier = {
 			factor = 1.1
 			stability = 2
 		}
