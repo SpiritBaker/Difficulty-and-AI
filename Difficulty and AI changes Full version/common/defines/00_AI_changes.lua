@@ -37,7 +37,7 @@ NDefines.NAI.ARMY_BUDGET_FRACTION = 0.7
 NDefines.NAI.ARTILLERY_FRACTION = 0.25
 NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16
 NDefines.NAI.TRANSPORT_FRACTION = 0.3
-NDefines.NAI.BIGSHIP_FRACTION = 0.35
+NDefines.NAI.BIGSHIP_FRACTION = 0.4
 NDefines.NAI.COLONY_BUDGET_FRACTION = 0.4
 NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
 NDefines.NAI.REGIMENTS_PER_GENERAL = 20
@@ -64,7 +64,7 @@ NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.6
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 25
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1.0	--Army <-> province distance impact on province evaluation
-NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	10	--Border <-> province distance impact on province evaluation
+NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	8.0	--Border <-> province distance impact on province evaluation
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
 NDefines.NAI.PURSUE_DISTANCE = 100
 --NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.025
@@ -91,6 +91,9 @@ NDefines.NAI.ESTATE_INTERACTION_THRESHOLD = 49.9
 NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 85.0
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
+
+NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 100.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
+NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.0				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.2 -- How many times the cost of the investment must be in the treasury to consider buying it
 

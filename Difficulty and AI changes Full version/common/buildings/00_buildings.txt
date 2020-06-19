@@ -405,12 +405,12 @@ barracks = {
 		modifier = {
 			factor = 0.2
 			NOT = { base_manpower = 3 }
+			NOT = { has_building = soldier_households }
 		}
 		modifier = {
 			factor = 0.4
-			AND = {
-				NOT = { base_manpower = 4 }
-			}
+			NOT = { base_manpower = 4 }
+			NOT = { has_building = soldier_households }
 		}
 		modifier = {
 			factor = 2
@@ -442,10 +442,6 @@ barracks = {
 		}
 		modifier = {
 			factor = 1.25
-			trade_goods = grain
-		}
-		modifier = {
-			factor = 1.25
 			FROM = {
 				has_idea_group = offensive_ideas
 			}
@@ -470,7 +466,10 @@ barracks = {
 		}
 		modifier = {
 			factor = 1.5
-			province_has_center_of_trade_of_level = 3
+			area_for_scope_province = {
+				owner = { tag = ROOT }
+				province_has_center_of_trade_of_level = 3
+			}
 		}
 		modifier = {
 			factor = 2.5
@@ -655,9 +654,9 @@ fort_15th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 8
+		factor = 10
 		modifier = {
-			factor = 10
+			factor = 100
 			is_capital = yes
 		}
 		modifier = {
@@ -676,14 +675,12 @@ fort_15th = {
 		modifier = {
 			factor = 0
 			any_neighbor_province = {
-				AND = {
-					owned_by = FROM
-					OR = {
-						has_building = fort_15th
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
+				owned_by = FROM
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
 				}
 			}
 			NOT = { is_capital = yes }			
@@ -740,7 +737,7 @@ coastal_defence = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.5
 		modifier = {
 			factor = 0
 			NOT = {
@@ -995,7 +992,7 @@ fort_16th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 8
+		factor = 10000
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -1016,14 +1013,12 @@ fort_16th = {
 		modifier = {
 			factor = 0
 			any_neighbor_province = {
-				AND = {
-					owned_by = FROM
-					OR = {
-						has_building = fort_15th
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
+				owned_by = FROM
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
 				}
 			}
 			NOT = { is_capital = yes }			
@@ -1080,7 +1075,7 @@ naval_battery = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.5
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1555,12 +1550,12 @@ training_fields = {
 		modifier = {
 			factor = 0.2
 			NOT = { base_manpower = 3 }
+			NOT = { has_building = soldier_households }
 		}
 		modifier = {
 			factor = 0.4
-			AND = {
-				NOT = { base_manpower = 4 }
-			}
+			NOT = { base_manpower = 4 }
+			NOT = { has_building = soldier_households }
 		}
 		modifier = {
 			factor = 2
@@ -1592,10 +1587,6 @@ training_fields = {
 		}
 		modifier = {
 			factor = 1.25
-			trade_goods = grain
-		}
-		modifier = {
-			factor = 1.25
 			FROM = {
 				has_idea_group = offensive_ideas
 			}
@@ -1619,8 +1610,11 @@ training_fields = {
 			}
 		}
 		modifier = {
-			factor = 2
-			province_has_center_of_trade_of_level = 3
+			factor = 1.5
+			area_for_scope_province = {
+				owner = { tag = ROOT }
+				province_has_center_of_trade_of_level = 3
+			}
 		}
 		modifier = {
 			factor = 2.5
@@ -1674,7 +1668,7 @@ fort_17th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 8
+		factor = 10000
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -1695,14 +1689,12 @@ fort_17th = {
 		modifier = {
 			factor = 0
 			any_neighbor_province = {
-				AND = {
-					owned_by = FROM
-					OR = {
-						has_building = fort_15th
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
+				owned_by = FROM
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
 				}
 			}
 			NOT = { is_capital = yes }			
@@ -2224,7 +2216,7 @@ fort_18th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 8
+		factor = 10000
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -2245,14 +2237,12 @@ fort_18th = {
 		modifier = {
 			factor = 0
 			any_neighbor_province = {
-				AND = {
-					owned_by = FROM
-					OR = {
-						has_building = fort_15th
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
+				owned_by = FROM
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
 				}
 			}
 			NOT = { is_capital = yes }			
@@ -2655,12 +2645,30 @@ farm_estate = {
 
 
 		modifier = { 
-			factor = 0.6
+			factor = 0.4
 			NOT = { base_production = 3 }
 		}
 		modifier = { 
-			factor = 0.8
+			factor = 0.6
 			NOT = { base_production = 4 }
+		}
+		modifier = {
+			factor = 0.75
+			FROM = {
+				has_idea_group = quantity_ideas
+			}
+		}
+		modifier = {
+			factor = 0.75
+			FROM = {
+				has_idea_group = aristocracy_ideas
+			}
+		}
+		modifier = {
+			factor = 0.75
+			FROM = {
+				religion = orthodox
+			}
 		}
 		modifier = { 
 			factor = 1.5
@@ -2844,7 +2852,7 @@ ramparts = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 2
 		modifier = {
 			factor = 0
 			NOT = {
@@ -2933,7 +2941,7 @@ soldier_households = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 6
+		factor = 15
 		modifier = {
 			factor = 0
 			NOT = {
@@ -2944,6 +2952,15 @@ soldier_households = {
 					trade_goods = livestock
 					trade_goods = wine
 				}
+			}
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				trade_goods = grain
+				trade_goods = fish
+				trade_goods = livestock
+				trade_goods = wine
 			}
 		}
 		modifier = {
@@ -2960,46 +2977,6 @@ soldier_households = {
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 5
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 6
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 7
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 8
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 9
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 11
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 12
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 13
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 14
-		}
-		modifier = {
-			factor = 1.5
-			base_manpower = 15
 		}
 		modifier = {
 			factor = 1.5
@@ -3021,7 +2998,10 @@ soldier_households = {
 		}
 		modifier = {
 			factor = 1.5
-			province_has_center_of_trade_of_level = 3
+			area_for_scope_province = {
+				owner = { tag = ROOT }
+				province_has_center_of_trade_of_level = 3
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -3139,8 +3119,16 @@ state_house = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 0.5
-			NOT = { development = 20 }
+			factor = 2
+			num_of_territories = 5
+		}
+		modifier = {
+			factor = 2
+			num_of_territories = 10
+		}
+		modifier = {
+			factor = 2
+			num_of_territories = 15
 		}
 		modifier = {
 			factor = 0.1

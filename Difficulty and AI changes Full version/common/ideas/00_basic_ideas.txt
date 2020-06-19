@@ -76,20 +76,23 @@ aristocracy_ideas = {
 		#	cavalry_power = 0.20
 		#}
 		modifier = {
-			factor = 0.33
+			factor = 0.4
 			AND = {
 				NOT = { technology_group = nomad_group }
 				OR = {
 					NOT = { tag = MOS }
+					NOT = { tag = RUS }
 					NOT = { tag = TIM }
 					NOT = { tag = MAM }
 					NOT = { tag = POL }
+					NOT = { tag = PLC }
 					NOT = { tag = LIT }
-					NOT = { tag = MAM }
+					NOT = { tag = MUG }
 					NOT = { tag = TUR }
 					NOT = { tag = HUN }
 					NOT = { tag = QAR }
 					NOT = { tag = AKK }
+					NOT = { tag = PER }
 				}
 			}
 		}
@@ -97,12 +100,17 @@ aristocracy_ideas = {
 			factor = 2
 			OR = {
 				tag = POL
+				tag = PLC
 				tag = HUN
 				tag = AKK
 				tag = QAR
 				tag = LIT
 				tag = MAM
 				tag = TUR
+				tag = MUG
+				tag = PER
+				tag = RUS
+				tag = MOS
 			}
 		}
 		modifier = {

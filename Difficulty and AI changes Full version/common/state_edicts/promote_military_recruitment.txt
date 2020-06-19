@@ -32,6 +32,12 @@ edict_promote_military_recruitment = {
 		modifier = {
 			factor = 3
 			any_province_in_state = {
+				has_building = soldier_households
+			}
+		}
+		modifier = {
+			factor = 3
+			any_province_in_state = {
 				OR = {
 					has_building = barracks
 					has_building = training_fields
