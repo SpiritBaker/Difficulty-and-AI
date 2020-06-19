@@ -11199,7 +11199,7 @@ estate_cossacks_prime_herding_rights_mod = {
 }
 
 estate_cossacks_exploration_expedition_mod = {
-	local_development_cost = -0.3
+	local_development_cost = -0.15
 }
 
 shortage_of_officers = {

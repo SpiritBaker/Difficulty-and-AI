@@ -48,13 +48,14 @@ NDefines.NAI.EDICT_VALUE_THRESHOLD = 100
 NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5
 NDefines.NAI.DIPLOMATIC_ACTION_GUARANTEE_POWERBALANCE_FACTOR = 25
 NDefines.NAI.POWERFUL_ALLY_PENALTY = 60	--Penalty on alliance for them already having a powerful ally if much stronger.
+NDefines.NAI.DIPLOMATIC_ACTION_VASSALIZE_DEVELOPMENT_FACTOR	= 50	--AI scoring for vassalize is increased by this for each development in target's provinces.
 NDefines.NAI.DIPLOMATIC_INTEREST_DISTANCE = 100
 NDefines.NAI.DIPLOMATIC_ACTION_MILITARY_ACCESS_EXISTING_RELATION_MULT = 5.0	--AI scoring for military access is multiplied by this if it has an existing power cost relation.
 NDefines.NAI.DIPLOMATIC_ACTION_MILITARY_ACCESS_ENEMY_REGIMENTS_FACTOR = 25.0	--AI scoring for military access is increased by this for each enemy regiment they are sheltering.
 NDefines.NAI.OVER_FORCELIMIT_AVOIDANCE_FACTOR = 2 --The higher this number is the less willing the AI will be to exceed forcelimits.
 NDefines.NAI.CHARTER_COMPANY_BASE_RELUCTANCE = -5
 --NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 3
-NDefines.NAI.DEBASE_THRESHOLD = -1000 -- AI will not debase if it has more gold than this.
+NDefines.NAI.DEBASE_THRESHOLD = -5000 -- AI will not debase if it has more gold than this.
 NDefines.NAI.INVADING_BRAVERY =	1.0	--If (defender strength) / (invader strength) >
 NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.6
 NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.3
@@ -79,7 +80,7 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.5
 NDefines.NAI.PEACE_TERMS_ANNUL_TREATIES_BASE_MULT =	1	
 NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.75
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for releasing countries.
-NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 1	--AI desire for war reparations through peace.
+NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 0.75	--AI desire for war reparations through peace.
 NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 0.2 -- AI only wants war reparations if other country has at least this % of their income
 NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.15  --AI desire for a province is multiplied by this if it is not on their conquest list.
 NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 5.0 -- AI desire for a province is multiplied by this if it has a core on it
@@ -96,6 +97,8 @@ NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 100.0				-- AI scoring for
 NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.0				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.2 -- How many times the cost of the investment must be in the treasury to consider buying it
+NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 50.0	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
+
 
 NDefines.NAI.EconomyLOAN_REPAYMENT_SAVINGS_PRIORITY = 1.25
 

@@ -2327,7 +2327,7 @@ wharf = {
 			}
 		}
 		modifier = { 
-			factor = 0.6
+			factor = 0.33
 			trade_goods = fish
 		}
 		modifier = { 
@@ -2641,7 +2641,7 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 2
+		factor = 1
 
 
 		modifier = { 
@@ -2852,7 +2852,7 @@ ramparts = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 0
 			NOT = {

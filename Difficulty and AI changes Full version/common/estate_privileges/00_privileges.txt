@@ -884,6 +884,14 @@ estate_nobles_officer_corp = {
 			factor = 0.75
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 1.25
+			has_idea_group = aristocracy_ideas
+		}
+		modifier = {
+			factor = 1.25
+			government = monarchy
+		}
 	}
 }
 
@@ -1754,8 +1762,15 @@ estate_burghers_indebted_to_burghers = {
 		factor = 5
 		modifier = {
 			factor = 0
-			is_in_deficit = no
 			NOT = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 10
 		}
 		modifier = {
 			factor = 1.25
@@ -2663,8 +2678,15 @@ estate_jains_indebted_to_jains = {
 		factor = 5
 		modifier = {
 			factor = 0
-			is_in_deficit = no
 			NOT = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 10
 		}
 		modifier = {
 			factor = 1.25
@@ -3143,7 +3165,7 @@ estate_rajput_officer_corp = {
 		modifier = {
 			factor = 0
 			NOT = { has_estate_privilege = estate_rajput_officer_corp }
-			NOT = { army_tradition = 75 }
+			NOT = { army_tradition = 80 }
 		}
 		modifier = {
 			factor = 0
