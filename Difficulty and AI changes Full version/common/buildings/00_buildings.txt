@@ -472,7 +472,7 @@ barracks = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_building = soldier_households
 		}
 		modifier = {
@@ -1617,7 +1617,7 @@ training_fields = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			has_building = soldier_households
 		}
 		modifier = {
