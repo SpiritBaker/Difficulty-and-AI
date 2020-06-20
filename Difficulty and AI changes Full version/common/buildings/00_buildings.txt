@@ -737,7 +737,7 @@ coastal_defence = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 3
 		modifier = {
 			factor = 0
 			NOT = {
@@ -920,7 +920,7 @@ regimental_camp = {
 	}
 	
 	ai_will_do = {
-		factor = 0.4
+		factor = 0.45
 		modifier = {
 			factor = 0.8
 			has_port = yes
@@ -1075,7 +1075,7 @@ naval_battery = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 3
 		modifier = {
 			factor = 0
 			NOT = {
@@ -2143,7 +2143,7 @@ conscription_center = {
 	}
 	
 	ai_will_do = {
-		factor = 0.4
+		factor = 0.45
 		modifier = {
 			factor = 0.8
 			has_port = yes
@@ -2456,10 +2456,7 @@ textile = {
 		}
 		modifier = {
 			factor = 0.6
-			AND = {
-				trade_goods = wool
-				NOT = { development = 4 }
-			}
+			trade_goods = wool
 		}
 		modifier = { 
 			factor = 1.5
@@ -2852,7 +2849,7 @@ ramparts = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 3
+		factor = 5
 		modifier = {
 			factor = 0
 			NOT = {
