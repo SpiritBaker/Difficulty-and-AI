@@ -151,7 +151,7 @@ workshop = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.66
 			OR = {
 					trade_goods = grain
 					trade_goods = naval_supplies
@@ -1853,7 +1853,7 @@ counting_house = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.66
 			OR = {
 					trade_goods = grain
 					trade_goods = naval_supplies
@@ -2843,7 +2843,6 @@ ramparts = {
 	modifier = {
 		local_hostile_attrition = 1
 		local_defensiveness = 0.25
-		garrison_size = 0.25
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -3103,7 +3102,7 @@ state_house = {
 	}
 
 	modifier = {
-		statewide_governing_cost = -0.2
+		statewide_governing_cost = -0.25
 		min_local_autonomy = -5
 	}
 	#bonus_modifier = {
@@ -3114,21 +3113,21 @@ state_house = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 5
+		factor = 400
 		modifier = {
-			factor = 2
-			num_of_territories = 5
+			factor = 1.2
+			num_of_states = 10
 		}
 		modifier = {
-			factor = 2
-			num_of_territories = 10
+			factor = 1.2
+			num_of_states = 15
 		}
 		modifier = {
-			factor = 2
-			num_of_territories = 15
+			factor = 1.2
+			num_of_states = 20
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			AND = {
 				NOT = { num_free_building_slots = 2 }
 				NOT = { trade_goods = gold }
