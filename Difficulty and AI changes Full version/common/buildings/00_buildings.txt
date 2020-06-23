@@ -3116,15 +3116,15 @@ state_house = {
 		factor = 400
 		modifier = {
 			factor = 1.2
-			num_of_states = 10
+			FROM = { num_of_states = 10 }
 		}
 		modifier = {
 			factor = 1.2
-			num_of_states = 15
+			FROM = { num_of_states = 15 }
 		}
 		modifier = {
 			factor = 1.2
-			num_of_states = 20
+			FROM = { num_of_states = 25 }
 		}
 		modifier = {
 			factor = 0
