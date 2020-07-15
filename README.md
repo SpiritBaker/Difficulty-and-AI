@@ -34,41 +34,39 @@ Other changes:
 Light and more compatible version of this mod. Only slightly improves AI as result.
 https://steamcommunity.com/sharedfiles/filedetails/?id=1813320386
 
-Updated many things...
-
-AI is less willing to use debase currency.
-AI should use knowledge sharing more often.
-More fixes to AI build order.
-Increased AI budget fraction for missionary maintenance.
-Lowering early game cannons ratio for AI.
-Lowering AI transport ship ratio.
-AI should use guarantee less often.
-Better AI army assignment logic.
-Fixes to AI dev click.
-Changed AI reasons for giving subsidies, AI will prioritize sending it to Allies in debt.
-
+Known issues;
+- AI is not upgrading forts.
+- AI is constantly trying to merge merc stacks with regular stacks.
+- AI keeps giant merc stacks in a peacetime.
+- AI is hiring and disbanding regiments in a circle, prob merc related.
 
 Update for 1.3:
+- Slight buff to new Rampart building.
+-	Ramparts and State House no longer considered as manufactries. Both have limit per state and no special bonus from trade goods.
+-	AI Logic for new buildings.
+-	Getting Coal in a province should automatically delete existing manufactory.
+-	Reverted increase in monarch points cap.
+-	Light reform growth penalties for Tribes and Nomads.
+-	Added Trade Center to Paris, moved fort from Chartres to Paris. ( Should be save game compatible )
+-	Nerfed Land limit from quantity to 33%, for performance and balance reasons.
+-	More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.
+-	More AI logic for new Estates
+-	Fixes to existing code, to make everything compatible.
+-	Expanded AI dev click to prioritize gold provinces in the beginning of the game. Limited to 9 production.
+-	Major Fix to AI economy.
+-	Various small AI fixes.
+-	Adjusting climate&terrain in siberia and manchuria. ( I was really bored )
+-	Increased priority for Soldiers Household significantly.
 
-Slight buff to new Rampart building.
-Ramparts and State House no longer considered as manufactries. Both have limit per state and no special bonus from trade goods.
-AI Logic for new buildings.
-Getting Coal in a province should automatically delete existing manufactory.
-Reverted increase in monarch points cap.
-Light reform growth penalties for Tribes and Nomads.
-Added Trade Center to Paris, moved fort from Chartres to Paris. ( Should be save game compatible )
-Nerfed Land limit from quantity to 33%, for performance and balance reasons.
-More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.
-More AI logic for new Estates
-Fixes to existing code, to make everything compatible.
-Expanded AI dev click to prioritize gold provinces in the beginning of the game. Limited to 9 production.
-Major Fix to AI economy.
-Various small AI fixes.
-Adjusting climate&terrain in siberia and manchuria. ( I was really bored )
-Increased priority for Soldiers Household significantly.
+Update for 1.29
 
-Known issues;
-AI is not upgrading forts.
-AI is constantly trying to merge merc stacks with regular stacks.
-AI keeps giant merc stacks in a peacetime.
-AI is hiring and disbanding regiments in a circle, prob merc related.
+- AI is less willing to use debase currency.
+- AI should use knowledge sharing more often.
+- More fixes to AI build order.
+- Increased AI budget fraction for missionary maintenance.
+- Lowering early game cannons ratio for AI.
+- Lowering AI transport ship ratio.
+- AI should use guarantee less often.
+- Better AI army assignment logic.
+- Fixes to AI dev click.
+- Changed AI reasons for giving subsidies, AI will prioritize sending it to Allies in debt.
