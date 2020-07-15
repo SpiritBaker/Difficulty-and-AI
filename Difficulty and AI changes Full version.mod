@@ -5,6 +5,6 @@ tags={
 	"Gameplay"
 }
 name="Difficulty & AI changes Full version"
-picture="thumbnail.jpg"
+picture="thumbnail.png"
 supported_version="1.30.*"
 path="mod/Difficulty and AI changes Full version"
