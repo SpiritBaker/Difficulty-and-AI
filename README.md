@@ -3,6 +3,7 @@ EU4 mod. https://steamcommunity.com/sharedfiles/filedetails/?id=2053238435
 
 This mod changes Difficulty bonuses AI gets on Hard and Very Hard. Generally bonuses are halved, instead AI is more aggressive on higher difficulty.
 AI logic is improved. AI is better at building Economy, picking Advisers, Policies and Ideas. Using Multiplayer meta as reference point.
+
 Because the difference with base game AI is so substantial at this point, it inevitable started affecting balance. So I'm trying to keep the game as fun as possible, without compromising original goal to make AI better.
 
 AI Dept spiral is fixed, at least everything I can spot that is not merc related. Keep in mind that AI can take 5 loans with 1 interest interaction via estates.
