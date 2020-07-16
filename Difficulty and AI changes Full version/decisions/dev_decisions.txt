@@ -66,20 +66,30 @@ country_decisions = {
 		}
 		effect = {
 			hidden_effect = {
-				set_country_flag = dip_flag
 				set_base_target = {
 					which = base_target
 					base = dip
 				}
-				clr_country_flag = dip_flag
-				
-				event_target:base_target = {
-					add_power = {
-						power = dip
+				if = {
+					limit = {
+						check_variable = {
+							which = baseCost
+							value = 999
+						}
 					}
-					add_next_institution_embracement_scaled = 5
-					add_base_production = 1
-					log = dev_info.2
+					add_dip_power = -100
+					add_mercantilism = 1
+					log = "[This.GetName] promotes mercantilism"
+				}
+				else = {
+					event_target:base_target = {
+						add_power = {
+							power = dip
+						}
+						add_next_institution_embracement_scaled = 5
+						add_base_production = 1
+						log = dev_info.2
+					}
 				}
 			}
 		}
