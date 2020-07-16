@@ -1741,16 +1741,16 @@ estate_burghers_indebted_to_burghers = {
 				duration = 60
 				estate_loan = yes
 			}
-			add_loan = {
-				fixed_interest = 1
-				duration = 60
-				estate_loan = yes
-			}
-			add_loan = {
-				fixed_interest = 1
-				duration = 60
-				estate_loan = yes
-			}
+			#add_loan = {
+			#	fixed_interest = 1
+			#	duration = 60
+			#	estate_loan = yes
+			#}
+			#add_loan = {
+			#	fixed_interest = 1
+			#	duration = 60
+			#	estate_loan = yes
+			#}
 		}
 	}
 	penalties = {
@@ -2657,16 +2657,16 @@ estate_jains_indebted_to_jains = {
 				duration = 60
 				estate_loan = yes
 			}
-			add_loan = {
-				fixed_interest = 1
-				duration = 60
-				estate_loan = yes
-			}
-			add_loan = {
-				fixed_interest = 1
-				duration = 60
-				estate_loan = yes
-			}
+			#add_loan = {
+			#	fixed_interest = 1
+			#	duration = 60
+			#	estate_loan = yes
+			#}
+			#add_loan = {
+			#	fixed_interest = 1
+			#	duration = 60
+			#	estate_loan = yes
+			#}
 		}
 	}
 	penalties = {
