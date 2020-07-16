@@ -39,3 +39,44 @@ country_event = {
 		#hidden
 	}
 }
+
+country_event = {
+	id = disband_mercs.2
+	title = disband_mercs.2.t
+	desc = disband_mercs.2.d
+	picture = SCOTTISH_MERCENARIES_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		ai = yes
+		is_at_war = yes
+		army_size_percentage = 1.25
+		any_hired_mercenary_company = {
+			hired_for_months = 12
+		}
+	}
+	
+	immediate = {
+		while = {
+			limit = {
+				any_hired_mercenary_company = {
+					hired_for_months = 12
+				}
+			}
+			hidden_effect = {
+				random_hired_mercenary_company = {
+					limit = {
+						hired_for_months = 12
+					}
+					disband_mercenary_company = THIS
+				}
+				log = "[This.GetName] disband_mercs.2"
+			}
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}

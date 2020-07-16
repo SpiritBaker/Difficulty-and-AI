@@ -789,11 +789,39 @@ courthouse = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 5
-			AND = {
-				num_free_building_slots = 1
-				development = 40
-			}
+			factor = 2
+			num_free_building_slots = 1
+			development = 40
+		}
+		modifier = {
+			factor = 2
+			num_free_building_slots = 1
+			development = 30
+		}
+		modifier = {
+			factor = 2
+			num_free_building_slots = 1
+			development = 20
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 15 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 30 }
 		}
 		modifier = {
 			factor = 0
@@ -2008,11 +2036,39 @@ town_hall = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 5
-			AND = {
-				num_free_building_slots = 1
-				development = 40
-			}
+			factor = 2
+			num_free_building_slots = 1
+			development = 40
+		}
+		modifier = {
+			factor = 2
+			num_free_building_slots = 1
+			development = 30
+		}
+		modifier = {
+			factor = 2
+			num_free_building_slots = 1
+			development = 20
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 15 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 20 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 30 }
 		}
 		modifier = {
 			factor = 0
@@ -3159,7 +3215,27 @@ state_house = {
 		}
 		modifier = {
 			factor = 1.2
+			FROM = { num_of_states = 20 }
+		}
+		modifier = {
+			factor = 1.2
 			FROM = { num_of_states = 25 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 30 }
+		}
+		modifier = {
+			factor = 2
+			development = 40
+		}
+		modifier = {
+			factor = 2
+			development = 30
+		}
+		modifier = {
+			factor = 2
+			development = 20
 		}
 		modifier = {
 			factor = 0
