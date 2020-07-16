@@ -1763,6 +1763,11 @@ estate_burghers_indebted_to_burghers = {
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
+			NOT = { has_estate_privilege = estate_burghers_indebted_to_burghers }
+		}
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_burghers_indebted_to_burghers
 		}
 		modifier = {
 			factor = 1.25
@@ -2679,6 +2684,11 @@ estate_jains_indebted_to_jains = {
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
+			NOT = { has_estate_privilege = estate_jains_indebted_to_jains }
+		}
+		modifier = {
+			factor = 2
+			has_estate_privilege = estate_jains_indebted_to_jains
 		}
 		modifier = {
 			factor = 1.25
