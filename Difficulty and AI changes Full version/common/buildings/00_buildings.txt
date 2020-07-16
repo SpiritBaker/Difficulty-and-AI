@@ -824,6 +824,20 @@ courthouse = {
 			FROM = { num_of_states = 30 }
 		}
 		modifier = {
+			factor = 5
+			FROM = { 
+				development_in_provinces = {
+					value = 1
+					
+					owned_by = FROM 
+					NOT = { is_state_core = FROM  }
+					is_territorial_core = FROM 
+					is_owned_by_trade_company = no
+					is_overseas = no
+				}
+			}
+		}
+		modifier = {
 			factor = 0
 			AND = {
 				NOT = { num_free_building_slots = 2 }
@@ -2071,6 +2085,20 @@ town_hall = {
 			FROM = { num_of_states = 30 }
 		}
 		modifier = {
+			factor = 5
+			FROM = { 
+				development_in_provinces = {
+					value = 1
+					
+					owned_by = FROM 
+					NOT = { is_state_core = FROM  }
+					is_territorial_core = FROM 
+					is_owned_by_trade_company = no
+					is_overseas = no
+				}
+			}
+		}
+		modifier = {
 			factor = 0
 			AND = {
 				NOT = { num_free_building_slots = 2 }
@@ -3226,6 +3254,18 @@ state_house = {
 			FROM = { num_of_states = 30 }
 		}
 		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 35 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 40 }
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { num_of_states = 50 }
+		}
+		modifier = {
 			factor = 2
 			development = 40
 		}
@@ -3236,6 +3276,20 @@ state_house = {
 		modifier = {
 			factor = 2
 			development = 20
+		}
+		modifier = {
+			factor = 5
+			FROM = { 
+				development_in_provinces = {
+					value = 1
+					
+					owned_by = FROM 
+					NOT = { is_state_core = FROM  }
+					is_territorial_core = FROM 
+					is_owned_by_trade_company = no
+					is_overseas = no
+				}
+			}
 		}
 		modifier = {
 			factor = 0
