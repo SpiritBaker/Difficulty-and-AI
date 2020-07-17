@@ -17,16 +17,20 @@ estate_brahmins_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -90,16 +94,20 @@ estate_nobles_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -163,16 +171,20 @@ estate_church_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -236,16 +248,20 @@ estate_maratha_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -309,16 +325,20 @@ estate_burghers_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -382,16 +402,20 @@ estate_vaisyas_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -455,16 +479,20 @@ estate_cossacks_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -528,16 +556,20 @@ estate_nomadic_tribes_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -601,16 +633,20 @@ estate_dhimmi_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -674,16 +710,20 @@ estate_jains_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0
@@ -747,16 +787,20 @@ estate_rajput_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.4
-			num_of_territories = 5
+			factor = 1.5
+			num_of_states = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 10
+			num_of_states = 25
 		}
 		modifier = {
 			factor = 1.5
-			num_of_territories = 15
+			num_of_states = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_states = 35
 		}
 		modifier = {
 			factor = 0

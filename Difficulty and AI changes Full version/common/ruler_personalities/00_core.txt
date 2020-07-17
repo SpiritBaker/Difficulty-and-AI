@@ -1151,7 +1151,7 @@ architectural_visionary_personality = {
 	chance = {
 	}
 	
-	building_budget_multiplier = 1.8
+	building_budget_multiplier = 1.1
 	#wants_avoid_debase = yes
 	knowledge_sharing = yes
 
@@ -1260,7 +1260,7 @@ entrepreneur_personality = {
 		}
 	}
 	
-	building_budget_multiplier = 1.5
+	building_budget_multiplier = 1.05
 	#wants_avoid_debase = yes
 	knowledge_sharing = yes
 	
@@ -1306,7 +1306,7 @@ industrious_personality = {
 		}
 	}
 	
-	building_budget_multiplier = 1.2
+	building_budget_multiplier = 1.05
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	#wants_avoid_debase = yes
 	knowledge_sharing = yes
@@ -1588,7 +1588,7 @@ conqueror_personality = {
 
 	easy_war_chance_multiplier = 2
 	war_chance_multiplier = 1.75
-	building_budget_multiplier = 0.2
+	building_budget_multiplier = 0.75
 	gift_chance = -50
 	wants_land = yes
 	

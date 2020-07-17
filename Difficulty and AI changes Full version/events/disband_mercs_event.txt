@@ -12,7 +12,7 @@ country_event = {
 		ai = yes
 		is_at_war = no
 		any_hired_mercenary_company = {
-			hired_for_months = 12
+			hired_for_months = 18
 		}
 	}
 	
@@ -20,13 +20,13 @@ country_event = {
 		while = {
 			limit = {
 				any_hired_mercenary_company = {
-					hired_for_months = 12
+					hired_for_months = 18
 				}
 			}
 			hidden_effect = {
 				random_hired_mercenary_company = {
 					limit = {
-						hired_for_months = 12
+						hired_for_months = 18
 					}
 					disband_mercenary_company = THIS
 				}
@@ -53,27 +53,27 @@ country_event = {
 		is_at_war = yes
 		army_size_percentage = 1.25
 		any_hired_mercenary_company = {
-			hired_for_months = 12
+			hired_for_months = 1
 		}
 	}
 	
 	immediate = {
-		while = {
-			limit = {
-				any_hired_mercenary_company = {
-					hired_for_months = 12
-				}
-			}
+		#while = {
+		#	limit = {
+		#		any_hired_mercenary_company = {
+		#			hired_for_months = 12
+		#		}
+		#	}
 			hidden_effect = {
 				random_hired_mercenary_company = {
 					limit = {
-						hired_for_months = 12
+						hired_for_months = 1
 					}
 					disband_mercenary_company = THIS
 				}
 				log = "[This.GetName] disband_mercs.2"
 			}
-		}
+		#}
 	}
 	
 	option = {

@@ -39,7 +39,7 @@ NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16
 NDefines.NAI.TRANSPORT_FRACTION = 0.35
 NDefines.NAI.BIGSHIP_FRACTION = 0.4
 NDefines.NAI.COLONY_BUDGET_FRACTION = 0.4
-NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
+--NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
 NDefines.NAI.REGIMENTS_PER_GENERAL = 20
 NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 25
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 100 -- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
@@ -71,6 +71,10 @@ NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign arm
 --NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.025
 
 NDefines.NAI.PEACE_OTHER_WAR_FORCE_BALANCE_MULT = 0.33 -- Multiplies the force balance of other countries who are involved in a different war with either side
+NDefines.NAI.PEACE_ALLY_MILITARY_STRENGTH_MULT = 1.0 -- Multiplies PEACE_MILITARY_STRENGTH_FACTOR for allies in a war
+NDefines.NAI.PEACE_ALLY_FORCE_BALANCE_MULT = 1.0 -- Multiplies PEACE_FORCE_BALANCE_FACTOR for allies in a war
+NDefines.NAI.PEACE_ALLY_WAR_DIRECTION_MULT = 1.0 -- Multiplies PEACE_WAR_DIRECTION_FACTOR for allies in a war
+NDefines.NAI.PEACE_FORCE_BALANCE_FACTOR = 0.25 -- AI willingness to peace based on strength estimation of both sides
 
 NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 3.0 --Max AI desire for humiliating its enemy.
 NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 2.0
@@ -98,7 +102,7 @@ NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 100.0				-- AI scoring for
 NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.0				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.1 -- How many times the cost of the investment must be in the treasury to consider buying it
-NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 50.0	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
+NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 1000	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1				-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
@@ -106,17 +110,17 @@ NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 50.0	-- AI scoring for repaying loans, 
 --MILITARY_FOCUS_DEFAULT = 1.0
 --MILITARY_FOCUS_LOWER_BOUND = 0.0
 --MILITARY_FOCUS_UPPER_BOUND = 2.0
-NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.33
-NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.8
-NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.25
+NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.30
+NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.75
+NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.15
 --NAVY_FRACTION_PEACEFUL = 1.25
 --NAVY_FRACTION_CAPITALIST = 1.25
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIZE = 1.33
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25
-NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 1.0
+NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.5
 --MISSIONARY_FRACTION = 0.15
 --STATE_MAINTENANCE_FRACTION = 0.1
-NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 1.5
+NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 5
 --SUBSIDY_PRIORITY_CONSIDERATION_THRESHOLD = 50.0
 --SUBSIDY_DESIRE_TO_PRIORITY_RATIO = 0.05
 
