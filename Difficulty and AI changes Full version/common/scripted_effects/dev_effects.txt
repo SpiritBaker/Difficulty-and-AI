@@ -243,9 +243,11 @@ set_base_target = {
 				owner = {
 					has_country_flag = adm_flag
 				}
-				check_variable = {
-					which = bTax
-					which = notTax
+				NOT = {
+					check_variable = {
+						which = notTax
+						which = bTax
+					}
 				}
 			}
 		}
@@ -254,9 +256,11 @@ set_base_target = {
 				owner = {
 					has_country_flag = dip_flag
 				}
-				check_variable = {
-					which = bPro
-					which = notPro
+				NOT = {
+					check_variable = {
+						which = notPro
+						which = bPro
+					}
 				}
 			}
 		}
@@ -265,9 +269,11 @@ set_base_target = {
 				owner = {
 					has_country_flag = mil_flag
 				}
-				check_variable = {
-					which = bMan
-					which = notMan
+				NOT = {
+					check_variable = {
+						which = notMan
+						which = bMan
+					}
 				}
 			}
 		}
@@ -460,4 +466,57 @@ spawn_institution = {
 			value = 0
 		}
 	}
+}
+
+binary_ad2 = {
+	if = {
+		limit = {
+			check_variable = {
+				which = $variable$
+				value = $valueAdd$
+			}
+		}
+		add_$addcommand$_power = $valueSub$
+		
+		subtract_variable = {
+			which = $variable$
+			value = $valueAdd$
+		}
+	}
+}
+
+stab_cost = {
+	export_to_variable = {
+		which = powerCost
+		value = modifier:all_power_cost
+	}
+	export_to_variable = {
+		which = stabCost
+		value = modifier:stability_cost_modifier
+	}
+	change_variable = {
+		which = stabCost
+		which = powerCost
+	}
+	change_variable = {
+		which = stabCost
+		value = 1
+	}
+	multiply_variable = {
+		which = stabCost
+		value = 100
+	}
+	log = dev_info.5
+	
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 1024 	valueSub = -1024 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 512		valueSub = -512 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 256		valueSub = -256 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 128		valueSub = -128 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 64		valueSub = -64 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 32		valueSub = -32 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 16		valueSub = -16 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 8		valueSub = -8 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 4		valueSub = -4 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 2		valueSub = -2 }
+	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 1		valueSub = -1 }
 }
