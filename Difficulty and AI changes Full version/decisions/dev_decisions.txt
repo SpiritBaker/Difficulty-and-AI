@@ -40,13 +40,36 @@ country_decisions = {
 					which = base_target
 					base = adm
 				}
-				event_target:base_target = {
-					add_power = {
-						power = adm
+				if = {
+					limit = {
+						check_variable = {
+							which = baseCost
+							value = 999
+						}
 					}
-					add_next_institution_embracement_scaled = 5
-					add_base_tax = 1
-					log = dev_info.1
+					if = {
+						limit = {
+							NOT = { stability = 3 }
+						}
+						stab_cost = yes
+						add_stability = 1
+						log = "[This.GetName] raises stability"
+					}
+					else = {
+						mil_power_cost = 75
+						add_inflation = -2
+						log = "[This.GetName] reduces inflation"
+					}
+				}
+				else = {
+					event_target:base_target = {
+						add_power = {
+							power = adm
+						}
+						add_next_institution_embracement_scaled = 5
+						add_base_tax = 1
+						log = dev_info.1
+					}
 				}
 			}
 		}
@@ -66,20 +89,30 @@ country_decisions = {
 		}
 		effect = {
 			hidden_effect = {
-				set_country_flag = dip_flag
 				set_base_target = {
 					which = base_target
 					base = dip
 				}
-				clr_country_flag = dip_flag
-				
-				event_target:base_target = {
-					add_power = {
-						power = dip
+				if = {
+					limit = {
+						check_variable = {
+							which = baseCost
+							value = 999
+						}
 					}
-					add_next_institution_embracement_scaled = 5
-					add_base_production = 1
-					log = dev_info.2
+					dip_power_cost = 100
+					add_mercantilism = 1
+					log = "[This.GetName] promotes mercantilism"
+				}
+				else = {
+					event_target:base_target = {
+						add_power = {
+							power = dip
+						}
+						add_next_institution_embracement_scaled = 5
+						add_base_production = 1
+						log = dev_info.2
+					}
 				}
 			}
 		}
@@ -103,13 +136,52 @@ country_decisions = {
 					which = base_target
 					base = mil
 				}
-				event_target:base_target = {
-					add_power = {
-						power = mil
+				if = {
+					limit = {
+						check_variable = {
+							which = baseCost
+							value = 999
+						}
 					}
-					add_next_institution_embracement_scaled = 5
-					add_base_manpower = 1
-					log = dev_info.3
+					if = {
+						limit = {
+							NOT = { legitimacy_equivalent = 100 }
+						}
+						mil_power_cost = 100
+						
+						add_legitimacy = 10
+						add_horde_unity = 10
+						add_meritocracy = 10
+						add_devotion = 10
+						add_republican_tradition = 3
+						
+						add_absolutism = 2
+						
+						log = "[This.GetName] strengthens government"
+					}
+					else = {
+						mil_power_cost = 50
+						
+							 if = { limit = { army_tradition = 80 } create_general = { tradition = 90 } }
+						else_if = { limit = { army_tradition = 60 } create_general = { tradition = 70 } }
+						else_if = { limit = { army_tradition = 40 } create_general = { tradition = 50 } }
+						else_if = { limit = { army_tradition = 20 } create_general = { tradition = 30 } }
+						else 	= { 								create_general = { tradition = 10 } }
+						
+						add_army_professionalism = 0.01
+						
+						log = "[This.GetName] recruits army leader"
+					}
+				}
+				else = {
+					event_target:base_target = {
+						add_power = {
+							power = mil
+						}
+						add_next_institution_embracement_scaled = 5
+						add_base_manpower = 1
+						log = dev_info.3
+					}
 				}
 			}
 		}
