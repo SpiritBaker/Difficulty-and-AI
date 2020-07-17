@@ -91,15 +91,15 @@ country_decisions = {
 	change_religion_sunni = {
 		potential = {
 			has_dlc = "Star and Crescent"
-			religion = shiite
+			NOT = { religion = sunni }
 			dominant_religion = sunni
-			is_free_or_tributary_trigger = yes
+			
 			is_force_converted = no
 		}
 		allow = {
-			capital_scope = {
-				religion = sunni
-			}
+			is_free_or_tributary_trigger = yes
+			dominant_religion = sunni
+			stability = 1
 			is_at_war = no
 		}
 		effect = {
@@ -118,10 +118,10 @@ country_decisions = {
 			has_dlc = "Star and Crescent"
 			religion = sunni
 			dominant_religion = shiite
-			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
+			is_free_or_tributary_trigger = yes
 			dominant_religion = shiite
 			stability = 1
 			is_at_war = no
@@ -131,66 +131,6 @@ country_decisions = {
 			add_prestige = -50
 			add_piety = -1
 			change_religion = shiite		
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	change_religion_ibadi = {
-		potential = {
-			has_dlc = "Star and Crescent"
-			religion = sunni
-			dominant_religion = ibadi
-			is_free_or_tributary_trigger = yes
-			is_force_converted = no
-		}
-		allow = {
-			dominant_religion = ibadi
-			stability = 1
-			is_at_war = no
-		}
-		effect = {
-			add_stability = -1
-			add_prestige = -50
-			add_piety = -1
-			change_religion = ibadi
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	change_religion_shiite_iranian = {
-		potential = {
-			has_dlc = "Star and Crescent"
-			religion = sunni
-			OR = { 
-				culture_group = iranian
-				tag = TIM
-			}
-			is_free_or_tributary_trigger = yes
-			is_force_converted = no
-		}
-		provinces_to_highlight = {
-			province_id = 2221
-			province_id = 4326
-			province_id = 2235
-			province_id = 2236
-		}
-		allow = {
-			is_at_war = no
-			owns_core_province = 2221
-			owns_core_province = 4326
-			owns_core_province = 2235
-			owns_core_province = 2236
-		}
-		effect = {
-			add_prestige = -50
-			add_piety = -1
-			change_religion = shiite
-			add_country_modifier = {
-				name = per_shia_conversion_policy
-				duration = 3650
-			}		
 		}
 		ai_will_do = {
 			factor = 1
