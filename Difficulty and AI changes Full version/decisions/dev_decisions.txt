@@ -145,7 +145,7 @@ country_decisions = {
 					}
 					if = {
 						limit = {
-							legitimacy_equivalent = 100
+							NOT = { legitimacy_equivalent = 100 }
 						}
 						mil_power_cost = 100
 						
