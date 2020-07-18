@@ -39,7 +39,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1813320386
 
 Update for 1.3:
 - Added more efficient Development click for both Players and AI.
-- Added couple of AI events that disbands Mercenary Companies. ( Temporary workaround )
+- Added AI events that disbands Mercenary Companies. ( Temporary workaround )
 - War Enthusiasm changes, secondary participants are affected by balance of forces.
 - Limiting Estate privileges that give 5 loans, to 3 loans, disabling it during bankruptcy. 
 - Slight buff to new Rampart building.
