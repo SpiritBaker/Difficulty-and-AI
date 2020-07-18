@@ -56,6 +56,7 @@ Update for 1.3:
 -	Various small AI fixes.
 -	Adjusting climate&terrain in siberia and manchuria. ( I was really bored )
 -	Increased priority for Soldiers Household significantly.
+- Adding missing english localisation.
 
 Update for 1.29
 
