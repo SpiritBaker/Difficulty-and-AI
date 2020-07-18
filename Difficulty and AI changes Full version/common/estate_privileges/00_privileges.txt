@@ -1797,12 +1797,12 @@ estate_burghers_indebted_to_burghers = {
 			#}
 		}
 	}
-	#can_select = {
-	#	NOT = { has_country_modifier = bankruptcy }
-	#}
-	#is_valid = {
-	#	NOT = { has_country_modifier = bankruptcy }
-	#}
+	can_select = {
+		NOT = { is_bankrupt = yes }
+	}
+	is_valid = {
+		NOT = { is_bankrupt = yes }
+	}
 	penalties = {
 		trade_efficiency = -0.05
 	}
@@ -1810,10 +1810,6 @@ estate_burghers_indebted_to_burghers = {
 	}
 	ai_will_do = {
 		factor = 5
-		modifier = {
-			factor = 0
-			has_country_modifier = bankruptcy
-		}
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
@@ -2728,12 +2724,12 @@ estate_jains_indebted_to_jains = {
 			#}
 		}
 	}
-	#can_select = {
-	#	NOT = { has_country_modifier = bankruptcy }
-	#}
-	#is_valid = {
-	#	NOT = { has_country_modifier = bankruptcy }
-	#}
+	can_select = {
+		NOT = { is_bankrupt = yes }
+	}
+	is_valid = {
+		NOT = { is_bankrupt = yes }
+	}
 	penalties = {
 		trade_efficiency = -0.05
 	}
@@ -2741,10 +2737,6 @@ estate_jains_indebted_to_jains = {
 	}
 	ai_will_do = {
 		factor = 5
-		modifier = {
-			factor = 0
-			has_country_modifier = bankruptcy
-		}
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
