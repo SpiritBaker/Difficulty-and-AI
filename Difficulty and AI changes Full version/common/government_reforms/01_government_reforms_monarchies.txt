@@ -576,7 +576,7 @@ principality = {
 			}
 		}
 	}
-	fixed_rank = 1
+	fixed_rank = 2
 	legacy_equivalent = principality_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 5
@@ -1211,7 +1211,7 @@ poligar_reform = {
 		development_cost = -0.05
 	}
 	ai = {
-		factor = 3
+		factor = 5
 	}
 }
 
