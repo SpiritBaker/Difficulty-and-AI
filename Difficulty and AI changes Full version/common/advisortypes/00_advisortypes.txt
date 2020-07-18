@@ -168,7 +168,7 @@ master_of_mint = {
 		factor = 1
 		modifier = {
 			factor = 10
-			inflation = 5
+			inflation = 4
 		}
 	}
 }

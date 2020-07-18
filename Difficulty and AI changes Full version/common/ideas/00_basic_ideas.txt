@@ -93,6 +93,8 @@ aristocracy_ideas = {
 					NOT = { tag = QAR }
 					NOT = { tag = AKK }
 					NOT = { tag = PER }
+					NOT = { tag = TRS }
+					NOT = { tag = BUK }
 				}
 			}
 		}
@@ -111,6 +113,8 @@ aristocracy_ideas = {
 				tag = PER
 				tag = RUS
 				tag = MOS
+				tag = TRS
+				tag = BUK
 			}
 		}
 		modifier = {

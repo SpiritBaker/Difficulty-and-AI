@@ -17,20 +17,20 @@ estate_brahmins_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -94,20 +94,20 @@ estate_nobles_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -171,20 +171,20 @@ estate_church_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -248,20 +248,20 @@ estate_maratha_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -325,20 +325,20 @@ estate_burghers_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -402,20 +402,20 @@ estate_vaisyas_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -479,20 +479,20 @@ estate_cossacks_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -556,20 +556,20 @@ estate_nomadic_tribes_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -633,20 +633,20 @@ estate_dhimmi_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -710,20 +710,20 @@ estate_jains_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -787,20 +787,20 @@ estate_rajput_land_rights = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 1.5
-			num_of_states = 20
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.25
 			num_of_states = 25
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 30
+			factor = 1.25
+			num_of_states = 35
 		}
 		modifier = {
-			factor = 1.5
-			num_of_states = 35
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
 		}
 		modifier = {
 			factor = 0
@@ -1797,6 +1797,12 @@ estate_burghers_indebted_to_burghers = {
 			#}
 		}
 	}
+	#can_select = {
+	#	NOT = { has_country_modifier = bankruptcy }
+	#}
+	#is_valid = {
+	#	NOT = { has_country_modifier = bankruptcy }
+	#}
 	penalties = {
 		trade_efficiency = -0.05
 	}
@@ -1804,6 +1810,10 @@ estate_burghers_indebted_to_burghers = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			has_country_modifier = bankruptcy
+		}
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
@@ -2718,6 +2728,12 @@ estate_jains_indebted_to_jains = {
 			#}
 		}
 	}
+	#can_select = {
+	#	NOT = { has_country_modifier = bankruptcy }
+	#}
+	#is_valid = {
+	#	NOT = { has_country_modifier = bankruptcy }
+	#}
 	penalties = {
 		trade_efficiency = -0.05
 	}
@@ -2725,6 +2741,10 @@ estate_jains_indebted_to_jains = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			has_country_modifier = bankruptcy
+		}
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
