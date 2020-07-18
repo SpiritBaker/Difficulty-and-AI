@@ -22,9 +22,9 @@ Other changes:
 - Tweaks to ideas and policies, to make more idea groups relevant.
 - Rebalanced the amount of discipline in the game.
 - More meaningful advisers.
+- Added Development click, it works both for Players and AI. Prevents AI from wasting monarch points. Big thanks to LoStack for implimenting it. (https://github.com/stackpoint/Dev-Click)
 - Effect of corruption was reduced to 1/5 of original game values, AI is just not programmed to deal with that.
 - Increased base supply limit by 2, AI tends to have more troops with this mod.
-- Added simplified development click for AI, base game AI almost never dip devs, wasting enormous amounts of monarch points.
 - Light tweaks to Basic Government reforms.
 - Made Nomad life a bit easier, every Horde can now use banners, tied to culture just like Manchu. Increased Horde unity gain from looting.
 - Adds leaders without upkeep from various sources.
@@ -35,25 +35,22 @@ Other changes:
 Light and more compatible version of this mod. Only slightly improves AI as result.
 https://steamcommunity.com/sharedfiles/filedetails/?id=1813320386
 
-Known issues;
-- AI is not upgrading forts.
-- AI is constantly trying to merge merc stacks with regular stacks.
-- AI keeps giant merc stacks in a peacetime.
-- AI is hiring and disbanding regiments in a circle, prob merc related.
+
 
 Update for 1.3:
+- Added more efficient Development click for both Players and AI.
+- Added couple of AI events that disbands Mercenary Companies. ( Temporary workaround )
+- War Enthusiasm changes, secondary participants are affected by balance of forces. 
 - Slight buff to new Rampart building.
 -	Ramparts and State House no longer considered as manufactries. Both have limit per state and no special bonus from trade goods.
 -	AI Logic for new buildings.
 -	Getting Coal in a province should automatically delete existing manufactory.
--	Reverted increase in monarch points cap.
 -	Light reform growth penalties for Tribes and Nomads.
 -	Added Trade Center to Paris, moved fort from Chartres to Paris. ( Should be save game compatible )
 -	Nerfed Land limit from quantity to 33%, for performance and balance reasons.
 -	More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.
 -	More AI logic for new Estates
 -	Fixes to existing code, to make everything compatible.
--	Expanded AI dev click to prioritize gold provinces in the beginning of the game. Limited to 9 production.
 -	Major Fix to AI economy.
 -	Various small AI fixes.
 -	Adjusting climate&terrain in siberia and manchuria. ( I was really bored )
