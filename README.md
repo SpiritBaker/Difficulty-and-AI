@@ -22,7 +22,7 @@ Other changes:
 - Tweaks to ideas and policies, to make more idea groups relevant.
 - Rebalanced the amount of discipline in the game.
 - More meaningful advisers.
-- Added Development click, it works both for Players and AI. Prevents AI from wasting monarch points. Big thanks to LoStack for implimenting it. (https://github.com/stackpoint/Dev-Click)
+- Added Development click, it works both for Players and AI. Prevents AI from wasting monarch points. Big thanks to LoStack for implementing it. (https://github.com/stackpoint/Dev-Click)
 - Effect of corruption was reduced to 1/5 of original game values, AI is just not programmed to deal with that.
 - Increased base supply limit by 2, AI tends to have more troops with this mod.
 - Light tweaks to Basic Government reforms.
