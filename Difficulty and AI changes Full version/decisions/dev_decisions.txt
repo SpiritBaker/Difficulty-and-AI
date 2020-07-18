@@ -56,7 +56,7 @@ country_decisions = {
 						log = "[This.GetName] raises stability"
 					}
 					else = {
-						mil_power_cost = 75
+						adm_power_cost = 75
 						add_inflation = -2
 						log = "[This.GetName] reduces inflation"
 					}
