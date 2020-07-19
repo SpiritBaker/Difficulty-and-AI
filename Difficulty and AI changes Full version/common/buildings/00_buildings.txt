@@ -654,9 +654,9 @@ fort_15th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 8
 		modifier = {
-			factor = 10
+			factor = 15
 			is_capital = yes
 		}
 		modifier = {
@@ -837,10 +837,9 @@ courthouse = {
 		modifier = {
 			factor = 5
 			FROM = { 
-				development_in_provinces = {
-					value = 1
+				num_of_owned_provinces_with = {
+					value = 5
 					
-					owned_by = FROM 
 					NOT = { is_state_core = FROM  }
 					is_territorial_core = FROM 
 					is_owned_by_trade_company = no
@@ -853,14 +852,14 @@ courthouse = {
 			factor = 0.5
 			NOT = {
 				FROM = { 
-					development_in_provinces = {
-						value = 1
-					
-						owned_by = FROM 
+					num_of_owned_provinces_with = {
+						value = 3
+						
 						NOT = { is_state_core = FROM  }
 						is_territorial_core = FROM 
 						is_owned_by_trade_company = no
 						is_overseas = no
+						NOT = { has_construction = core }
 					}
 				}
 			}
@@ -1062,7 +1061,7 @@ fort_16th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 500
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -1105,7 +1104,11 @@ fort_16th = {
 			}
 			NOT = { is_capital = yes }
 		}
-
+		modifier = {
+			factor = 2
+			owned_by = FROM
+			any_neighbor_province = { owner = { is_rival = FROM } }
+		}
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -1738,7 +1741,7 @@ fort_17th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 500
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -1781,7 +1784,11 @@ fort_17th = {
 			}
 			NOT = { is_capital = yes }
 		}
-
+		modifier = {
+			factor = 2
+			owned_by = FROM
+			any_neighbor_province = { owner = { is_rival = FROM } }
+		}
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -2122,10 +2129,9 @@ town_hall = {
 		modifier = {
 			factor = 5
 			FROM = { 
-				development_in_provinces = {
-					value = 1
+				num_of_owned_provinces_with = {
+					value = 5
 					
-					owned_by = FROM 
 					NOT = { is_state_core = FROM  }
 					is_territorial_core = FROM 
 					is_owned_by_trade_company = no
@@ -2138,14 +2144,14 @@ town_hall = {
 			factor = 0.5
 			NOT = {
 				FROM = { 
-					development_in_provinces = {
-						value = 1
-					
-						owned_by = FROM 
+					num_of_owned_provinces_with = {
+						value = 3
+						
 						NOT = { is_state_core = FROM  }
 						is_territorial_core = FROM 
 						is_owned_by_trade_company = no
 						is_overseas = no
+						NOT = { has_construction = core }
 					}
 				}
 			}
@@ -2352,7 +2358,7 @@ fort_18th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 500
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -2395,7 +2401,11 @@ fort_18th = {
 			}
 			NOT = { is_capital = yes }
 		}
-
+		modifier = {
+			factor = 2
+			owned_by = FROM
+			any_neighbor_province = { owner = { is_rival = FROM } }
+		}
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -3354,10 +3364,9 @@ state_house = {
 		modifier = {
 			factor = 5
 			FROM = { 
-				development_in_provinces = {
-					value = 1
+				num_of_owned_provinces_with = {
+					value = 5
 					
-					owned_by = FROM 
 					NOT = { is_state_core = FROM  }
 					is_territorial_core = FROM 
 					is_owned_by_trade_company = no
@@ -3370,14 +3379,14 @@ state_house = {
 			factor = 0.5
 			NOT = {
 				FROM = { 
-					development_in_provinces = {
-						value = 1
-					
-						owned_by = FROM 
+					num_of_owned_provinces_with = {
+						value = 3
+						
 						NOT = { is_state_core = FROM  }
 						is_territorial_core = FROM 
 						is_owned_by_trade_company = no
 						is_overseas = no
+						NOT = { has_construction = core }
 					}
 				}
 			}

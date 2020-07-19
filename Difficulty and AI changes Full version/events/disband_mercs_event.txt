@@ -58,25 +58,149 @@ country_event = {
 	}
 	
 	immediate = {
-		#while = {
-		#	limit = {
-		#		any_hired_mercenary_company = {
-		#			hired_for_months = 12
-		#		}
-		#	}
-			hidden_effect = {
-				random_hired_mercenary_company = {
-					limit = {
-						hired_for_months = 1
-					}
-					disband_mercenary_company = THIS
+		hidden_effect = {
+			random_hired_mercenary_company = {
+				limit = {
+					hired_for_months = 1
 				}
-				log = "[This.GetName] disband_mercs.2"
+				disband_mercenary_company = THIS
 			}
-		#}
+			add_yearly_manpower = 0.25
+			log = "[This.GetName] disband_mercs.2"
+		}
 	}
 	
 	option = {
 		#hidden
+	}
+}
+
+province_event = { #Petition for redress copy
+	id = disband_mercs.3
+	title = "EVTNAME5089"
+	desc = "EVTDESC5089"
+	picture = COURT_eventPicture
+	goto = ROOT
+	
+	trigger = {
+		sieged_by = REB
+		fort_level = 1
+		#NOT = { fort_level = 10 }
+		owner = { NOT = { num_of_cities = 5 } }
+		NOT = { 
+			num_of_units_in_province = {
+				amount = 28
+			}
+		}
+		
+		OR = {
+			AND = {
+				#fort_level = 1
+				NOT = { fort_level = 2 }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 4
+					}
+				}
+			}
+			AND = {
+				fort_level = 2
+				NOT = { fort_level = 3 }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 7
+					}
+				}
+			}
+			AND = {
+				fort_level = 3
+				NOT = { fort_level = 4 }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 10
+					}
+				}
+			}
+			AND = {
+				fort_level = 4
+				NOT = { fort_level = 5 }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 13
+					}
+				}
+			}
+			AND = {
+				fort_level = 5
+				NOT = { fort_level = 6 }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 16
+					}
+				}
+			}
+			AND = {
+				fort_level = 6
+				NOT = { fort_level = 7 }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 19
+					}
+				}
+			}
+			AND = {
+				fort_level = 7
+				NOT = { fort_level = 8 }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 22
+					}
+				}
+			}
+			AND = {
+				fort_level = 8
+				NOT = { fort_level = 9 }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 25
+					}
+				}
+			}
+			#AND = {
+			#	fort_level = 9
+				#NOT = { fort_level = 10 }
+				#NOT = { 
+				#	num_of_units_in_province = {
+				#		amount = 28
+				#	}
+				#}
+			#}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA5089"	# Accept petition
+		
+		kill_units = {
+			who = REB
+		}
+		 
+		add_local_autonomy = 15
+
+		owner = {
+			add_prestige = -10
+			log = "[This.GetName] rebels [Prev.GetName]"
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { #ignore them
+		name = "EVTOPTB5089"	# Deny petition
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 }

@@ -102,7 +102,7 @@ NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 100.0				-- AI scoring for
 NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.0				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.1 -- How many times the cost of the investment must be in the treasury to consider buying it
-NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 2500	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
+NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10000	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1				-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
@@ -117,7 +117,7 @@ NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.15
 --NAVY_FRACTION_CAPITALIST = 1.25
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIZE = 1.33
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25
-NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.5
+NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.25
 --MISSIONARY_FRACTION = 0.15
 --STATE_MAINTENANCE_FRACTION = 0.1
 NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 2
