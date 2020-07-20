@@ -13,7 +13,7 @@ revolution = {
 		current_age = age_of_revolutions
 		is_revolutionary = no
 
-		AND = {
+		OR = {
 			is_great_power = yes
 			capital_scope = {
 				OR = {
@@ -21,11 +21,11 @@ revolution = {
 					has_revolution_in_province = yes
 				}
 			}
-		}
-		else = {
-			num_of_cities = 30
-			capital_scope = { continent = europe }
-			NOT = { revolution_target_exists = yes }
+			AND = {
+				num_of_cities = 30
+				capital_scope = { continent = europe }
+				NOT = { revolution_target_exists = yes }
+			}
 		}
 	}
 	

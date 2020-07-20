@@ -1106,7 +1106,6 @@ fort_16th = {
 		}
 		modifier = {
 			factor = 2.5
-			owned_by = FROM
 			any_neighbor_province = { owner = { is_rival = FROM } }
 		}
 		modifier = {
@@ -1786,7 +1785,6 @@ fort_17th = {
 		}
 		modifier = {
 			factor = 2.5
-			owned_by = FROM
 			any_neighbor_province = { owner = { is_rival = FROM } }
 		}
 		modifier = {
@@ -2403,7 +2401,6 @@ fort_18th = {
 		}
 		modifier = {
 			factor = 2.5
-			owned_by = FROM
 			any_neighbor_province = { owner = { is_rival = FROM } }
 		}
 		modifier = {

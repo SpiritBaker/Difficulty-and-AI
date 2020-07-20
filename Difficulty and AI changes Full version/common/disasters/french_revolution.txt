@@ -19,11 +19,11 @@ french_revolution = {
 					has_revolution_in_province = yes
 				}
 			}
-		}
-		else = {
-			num_of_cities = 30
-			capital_scope = { continent = europe }
-			NOT = { revolution_target_exists = yes }
+			AND = {
+				num_of_cities = 30
+				capital_scope = { continent = europe }
+				NOT = { revolution_target_exists = yes }
+			}
 		}
 	}
 	
