@@ -135,6 +135,19 @@ NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 15
 NDefines.NReligion.PIETY_ACTION_COOLDOWN = 10
 
 
+NDefines.NCountry.REVOLUTION_SPREAD_COUNT = 5			                -- Max number of concurrent province revolution spread
+--NDefines.NCountry.REVOLUTION_DAILY_SPREAD = 1.0			                -- How much the revolution spreads each day (progress is 0-100)
+NDefines.NCountry.REVOLUTION_EMBRACE_MIN_SPREAD = 0.75	                -- Minimum revolution spread in % of state development required to embrace to Revolution
+--NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 0	                    -- Minimum country development required to embrace to Revolution
+--NDefines.NCountry.REVOLUTIONARY_ZEAL_GAIN_SPREAD = 0.1	                -- Revolutionary Zeal gain for spreading Revolutionary Ideas to a province (multiplied by dev)
+--NDefines.NCountry.REVOLUTIONARY_ZEAL_GAIN_STRENGTHEN_GOVERNMENT = 5.0   -- Revolutionary Zeal gain for strengthening government
+--NDefines.NCountry.REVOLUTIONARY_ZEAL_LOST_WAR = -20.0	                -- Revolutionary Zeal impact of losing a war
+--NDefines.NCountry.REVOLUTIONARY_ZEAL_SUPPORT_REBELS_WAR = 0.05          -- Gained Rev Zeal from supporting revolutionary rebels through war in foreign country, multiplied by dev.
+--NDefines.NCountry.REVOLUTIONARY_ZEAL_SUPPORT_REBELS = 0.01              -- Gained Rev Zeal from supporting revolutionary rebels in foreign country, multiplied by dev.
+--NDefines.NCountry.REVOLUTION_CLAIM_MIN_ZEAL = 20.0                      -- Minimum Revolutionary Zeal required for contestant to claim the revolution target
+--NDefines.NCountry.REVOLUTION_CLAIM_COOLDOWN = 12			            -- How many months until it can be stolen again
+
+
 
 
 

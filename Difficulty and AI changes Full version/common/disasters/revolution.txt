@@ -32,10 +32,10 @@ revolution = {
 	
 	can_start = {
 		has_any_disaster = no
-		NOT = { stability = 2 }
+		#NOT = { stability = 2 }
+		revolution_spread = 0.25
 		OR = {
 			NOT = { stability = 0 }
-			revolution_spread = 0.2
 			num_of_loans = 15
 			is_bankrupt = yes
 			inflation = 10
