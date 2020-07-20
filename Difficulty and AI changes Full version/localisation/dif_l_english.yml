@@ -1,12 +1,8 @@
 ﻿l_english:
-change_religion_shiite_iranian_title:0 "Change Religion to Shiite"
-change_religion_shiite_iranian_desc:0 "The Shiites believe that only the heirs of the fourth caliph, Ali, are the legitimate successors of Mohammed while the Sunni believes that the first four caliphs - Mohammed's successors - rightfully took his place as the leaders of Muslims."
-change_religion_ibadi_title:0 "Change Religion to Ibadi"
-change_religion_ibadi_desc:0 "The Ibadis stress strict adherence to an interpretation of Islam and the Sharia that they hold as both older and more orthodox."
+ change_religion_shiite_iranian_title:0 "Change Religion to Shiite"
+ change_religion_shiite_iranian_desc:0 "The Shiites believe that only the heirs of the fourth caliph, Ali, are the legitimate successors of Mohammed while the Sunni believes that the first four caliphs - Mohammed's successors - rightfully took his place as the leaders of Muslims."
+ change_religion_ibadi_title:0 "Change Religion to Ibadi"
+ change_religion_ibadi_desc:0 "The Ibadis stress strict adherence to an interpretation of Islam and the Sharia that they hold as both older and more orthodox."
 
-obj_disc_army_desc:0 "Have least 115% discipline in your armies."
-
-estate_burghers_indebted_to_burghers_effect_tooltip:2 "Take §Y3§! five-year loans at §Y1.0%§! interest. The privilege will be removed automatically when repaid."
-
-AIPolicyAge_Of_Revolutions:0 "AI Bonus in the Age Of Revolutions"
-AIPolicyAge_Of_Absolutism:0 "AI Bomus in the Age Of Absolutism"
+ AIPolicyAge_Of_Revolutions:0 "AI Bonus in the Age Of Revolutions"
+ AIPolicyAge_Of_Absolutism:0 "AI Bomus in the Age Of Absolutism"
