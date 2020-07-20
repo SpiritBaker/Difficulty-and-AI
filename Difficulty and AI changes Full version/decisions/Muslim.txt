@@ -24,16 +24,15 @@ country_decisions = {
 				owns_or_vassal_of = 385 # Mekkah
 				owns_or_vassal_of = 384 # Medinah
 				owns_or_vassal_of = 382 # Dimashq
-				owns_or_vassal_of = 361 # Cairo				
-			}
-			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				owns_or_vassal_of = 361 # Cairo
+				owns_or_vassal_of = 379 # Al-Quds				
 			}
 		}
 		allow = {
 			religion_group = muslim
 		#	owns_or_vassal_of = 504
 		#	owns_or_vassal_of = 225
+			owns_or_vassal_of = 379 # Al-Quds
 			owns_or_vassal_of = 361 # Cairo
 			owns_or_vassal_of = 410 # Bagdad
 			owns_or_vassal_of = 385 # Mekkah
