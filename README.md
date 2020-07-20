@@ -70,3 +70,5 @@ Update for 1.29
 - Better AI army assignment logic.
 - Fixes to AI dev click.
 - Changed AI reasons for giving subsidies, AI will prioritize sending it to Allies in debt.
+- Small touch to Muslim faith, reworking old convert decisions and enabling it for AI.
+- Increasing duration of Muslim Schools bonuses by 10 years.
