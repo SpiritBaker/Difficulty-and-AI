@@ -7,3 +7,6 @@ change_religion_ibadi_desc:0 "The Ibadis stress strict adherence to an interpret
 obj_disc_army_desc:0 "Have least 115% discipline in your armies."
 
 estate_burghers_indebted_to_burghers_effect_tooltip:2 "Take §Y3§! five-year loans at §Y1.0%§! interest. The privilege will be removed automatically when repaid."
+
+AIPolicyAge_Of_Revolutions:0 "AI Bonus in the Age Of Revolutions"
+AIPolicyAge_Of_Absolutism:0 "AI Bomus in the Age Of Absolutism"

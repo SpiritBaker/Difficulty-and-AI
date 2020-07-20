@@ -64,7 +64,7 @@ country_decisions = {
 			owns_core_province = 323		# Konya
 			owns_core_province = 326		# Ankara
 			owns_core_province = 329		# Sivas
-			owns_core_province = 331		# Erzurum
+			#owns_core_province = 331		# Erzurum
 			owns_core_province = 2301		# Kayseri
 			owns_core_province = 4312		# Eskeshehir
 		}

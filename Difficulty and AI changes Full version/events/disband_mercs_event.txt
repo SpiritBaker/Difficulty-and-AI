@@ -184,8 +184,10 @@ province_event = { #Petition for redress copy
 		kill_units = {
 			who = REB
 		}
-		 
-		add_local_autonomy = 15
+		
+		every_owned_province = {
+			add_local_autonomy = 15
+		}
 
 		owner = {
 			add_prestige = -10

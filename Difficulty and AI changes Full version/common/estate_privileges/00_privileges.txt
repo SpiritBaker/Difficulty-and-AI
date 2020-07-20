@@ -1820,22 +1820,9 @@ estate_burghers_indebted_to_burghers = {
 			has_estate_privilege = estate_burghers_indebted_to_burghers
 		}
 		modifier = {
-			factor = 1.25
-			num_of_loans = 5
-		}
-		modifier = {
-			factor = 1.25
-			num_of_loans = 10
-		}
-		modifier = {
-			factor = 1.25
+			factor = 1.75
 			is_in_deficit = yes
-			num_of_loans = 1
-		}
-		modifier = {
-			factor = 1.25
-			num_of_loans = 3
-			is_in_deficit = yes
+			NOT = { treasury = 25 }
 		}
 		modifier = {
 			factor = 2

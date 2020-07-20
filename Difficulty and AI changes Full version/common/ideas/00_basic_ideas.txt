@@ -306,10 +306,9 @@ religious_ideas = {
 		}
 		modifier = {
 			factor = 0.8
-				NOT = { adm_tech = 8 }
+			NOT = { adm_tech = 8 }
 
 		}
-
 		modifier = {
 			factor = 2
 			has_idea_group = quantity_ideas
@@ -457,12 +456,11 @@ diplomatic_ideas = {
 	ai_will_do = {
 		factor = 0.2
 		modifier = {
-			factor = 0.2
-			NOT = { vassal = 1 }
+			factor = 0.5
 			NOT = { is_emperor = yes }
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
@@ -1379,37 +1377,35 @@ administrative_ideas = {
 
 	ai_will_do = {
 		factor = 0.5
-		modifier = {
-			factor = 2
-			has_reform = steppe_horde
-		}
+		#modifier = {
+		#	factor = 2
+		#	has_reform = steppe_horde
+		#}
 
-		modifier ={
+		modifier = {
 			factor = 0.2
-			NOT = { num_of_cities = 25 }
+			NOT = { num_of_states = 25 }
 		}
 
 		modifier = {
 			factor = 1.5
-			num_of_cities = 50
+			num_of_states = 25
 		}
-		
+
 		modifier = {
 			factor = 1.5
-			num_of_cities = 100
+			num_of_states = 35
+		}
+
+		modifier = {
+			factor = 1.5
+			num_of_states = 50
 		}		
 
 		modifier = {
-			factor = 0.2
+			factor = 0.3
 			NOT = { adm_tech = 20 }
-
 		}		
-
-		modifier = {
-			factor = 2
-			adm_tech = 29
-		}
-
 	}
 }
 
@@ -1547,12 +1543,11 @@ influence_ideas = {
 	ai_will_do = {
 		factor = 0.2
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			NOT = { is_emperor = yes }
-			NOT = { vassal = 1 }
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
@@ -1642,6 +1637,10 @@ naval_ideas = {
 			factor = 2
 			naval_forcelimit = 200 
 		}
+		modifier = {
+			factor = 2
+			naval_forcelimit = 300
+		}
 
 		modifier = {
 			factor = 10
@@ -1660,8 +1659,23 @@ naval_ideas = {
 				tag = OMA
 				tag = ZAN
 				tag = MOR
-				tag = NOR
 				tag = SPA
+				tag = SCA
+				tag = DAN
+				tag = NOR
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = { 
+				tag = VEN
+				tag = KNI
+				tag = TTS
+				tag = GEN
+				tag = FRA
+				tag = ARA
+				tag = CUB
+				tag = USA
 			}
 		}
 

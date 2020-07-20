@@ -1061,7 +1061,7 @@ fort_16th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 500
+		factor = 1000
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -1105,7 +1105,7 @@ fort_16th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			owned_by = FROM
 			any_neighbor_province = { owner = { is_rival = FROM } }
 		}
@@ -1741,7 +1741,7 @@ fort_17th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 500
+		factor = 1000
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -1785,7 +1785,7 @@ fort_17th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			owned_by = FROM
 			any_neighbor_province = { owner = { is_rival = FROM } }
 		}
@@ -2358,7 +2358,7 @@ fort_18th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 500
+		factor = 1000
 		modifier = {
 			factor = 10
 			is_capital = yes
@@ -2402,7 +2402,7 @@ fort_18th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			owned_by = FROM
 			any_neighbor_province = { owner = { is_rival = FROM } }
 		}

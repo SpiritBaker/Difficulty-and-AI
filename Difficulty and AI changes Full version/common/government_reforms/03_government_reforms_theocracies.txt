@@ -313,6 +313,9 @@ warrior_monks_reform = {
 		infantry_power = 0.05
 		mercenary_manpower = 0.1
 	}
+	ai = {
+		factor = 2
+	}
 }
 
 guru_advisors_reform = {
