@@ -42,7 +42,7 @@ country_decisions = {
 				province_id = 323		# Konya
 				province_id = 326		# Ankara
 				province_id = 329		# Sivas
-				province_id = 331		# Erzurum
+				#province_id = 331		# Erzurum
 				province_id = 2301		# Kayseri
 				province_id = 4312		# Eskeshehir
 			}

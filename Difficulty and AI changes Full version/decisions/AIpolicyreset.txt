@@ -1,21 +1,44 @@
-country_decisions = { 
+country_decisions = { # Forcing AI to re-evaluate slected policies
     AIpolicy_reset = {
         major = yes
         potential = {
-			adm_tech = 18
-			NOT = { adm_tech = 19 }
+            OR = {
+                AND = {
+                    adm_tech = 18
+                    NOT = { adm_tech = 19 }
+                    NOT = { has_country_flag = policy_reset_flag }
+                }
+                AND = {
+                    adm_tech = 24
+                    NOT = { adm_tech = 25 }
+                    NOT = { has_country_flag = second_policy_reset_flag }
+                }
+            }
 			ai = yes
-			NOT = { has_country_flag = policy_reset_flag }
         }
         allow = {
 			is_at_war = no
         }
         effect = {
+            if = {
+                limit = {
+                    adm_tech = 18
+                    NOT = { adm_tech = 19 }
+                }
+                set_country_flag = policy_reset_flag
+            }
+            else = {
+                limit ={
+                    adm_tech = 24
+                    NOT = { adm_tech = 25 }
+                }
+                set_country_flag = second_policy_reset_flag
+                clr_country_flag = policy_reset_flag
+            }
 			add_country_modifier = {
 				name = policy_reset
 				duration = 30
 			}
-			set_country_flag = policy_reset_flag
         }
         ai_will_do = {
             factor = 1

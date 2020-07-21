@@ -107,6 +107,10 @@ marketplace = {
 				} 
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -286,6 +290,10 @@ workshop = {
 			factor = 0.7
 				NOT = { tolerance_to_this = 0 }
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -383,6 +391,10 @@ temple = {
 					}
 				} 
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -503,6 +515,10 @@ barracks = {
 				NOT = { has_owner_culture = yes }
 				NOT = { culture_group = ROOT }
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }		
@@ -637,6 +653,10 @@ shipyard = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -719,6 +739,10 @@ fort_15th = {
 				has_province_modifier = tropical
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	} 
 } 
 
@@ -769,6 +793,10 @@ coastal_defence = {
 					}
 				} 
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -885,6 +913,10 @@ courthouse = {
 				} 
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -975,6 +1007,10 @@ dock = {
 				} 
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -1042,6 +1078,10 @@ regimental_camp = {
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -1129,6 +1169,10 @@ fort_16th = {
 				has_province_modifier = tropical
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	} 
 }
 
@@ -1179,6 +1223,10 @@ naval_battery = {
 					}
 				} 
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -1281,6 +1329,10 @@ cathedral = {
 					}
 				} 
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -1392,6 +1444,10 @@ university = {
 				trade_goods = gold
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -1464,6 +1520,10 @@ trade_depot = {
 					}
 				} 
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -1600,6 +1660,10 @@ grand_shipyard = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -1722,6 +1786,10 @@ training_fields = {
 				NOT = { culture_group = ROOT }
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -1808,6 +1876,10 @@ fort_17th = {
 				has_province_modifier = tropical
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	} 
 }
 
@@ -1882,6 +1954,10 @@ stock_exchange = {
 					}
 				} 
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2064,6 +2140,10 @@ counting_house = {
 			factor = 0.7
 				NOT = { tolerance_to_this = 0 }
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -2176,6 +2256,10 @@ town_hall = {
 				} 
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -2268,6 +2352,10 @@ drydock = {
 				} 
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -2337,6 +2425,10 @@ conscription_center = {
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2423,6 +2515,10 @@ fort_18th = {
 				has_province_modifier = arid
 				has_province_modifier = tropical
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	} 
 }
@@ -2520,6 +2616,10 @@ wharf = {
 			factor = 0.8
 			has_latent_trade_goods = coal
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -2579,6 +2679,10 @@ weapons = {
 		modifier = {
 			factor = 0.8
 			has_latent_trade_goods = coal
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2652,6 +2756,10 @@ textile = {
 			factor = 0.8
 			has_latent_trade_goods = coal
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -2719,6 +2827,10 @@ plantations = {
 		modifier = {
 			factor = 0.8
 			has_latent_trade_goods = coal
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2788,6 +2900,10 @@ tradecompany = {
 		modifier = {
 			factor = 0.8
 			has_latent_trade_goods = coal
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2878,6 +2994,10 @@ farm_estate = {
 			factor = 0.8
 			has_latent_trade_goods = coal
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -2954,6 +3074,10 @@ mills = {
 			factor = 0.8
 			has_latent_trade_goods = coal
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -2979,6 +3103,10 @@ furnace = {
 		modifier = {
 			factor = 0.1
 			NOT = { is_state = yes }
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -3086,6 +3214,10 @@ ramparts = {
 				} 
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -3185,6 +3317,10 @@ soldier_households = {
 				NOT = { culture_group = ROOT }
 			}
 		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
+		}
 	}
 }
 
@@ -3243,6 +3379,10 @@ impressment_offices = {
 		modifier = {
 			factor = 0.8
 			has_latent_trade_goods = coal
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -3408,6 +3548,10 @@ state_house = {
 					}
 				} 
 			}
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { num_of_loans = 1 }
 		}
 	}
 }

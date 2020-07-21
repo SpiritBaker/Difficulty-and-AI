@@ -1,6 +1,6 @@
 namespace = disband_mercs
 
-country_event = {
+country_event = { # Disbands Mercs during peacetime
 	id = disband_mercs.1
 	title = disband_mercs.1.t
 	desc = disband_mercs.1.d
@@ -40,7 +40,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { # Disbands Merc companies one at time, if AI went over the force limit.
 	id = disband_mercs.2
 	title = disband_mercs.2.t
 	desc = disband_mercs.2.d
@@ -75,7 +75,7 @@ country_event = {
 	}
 }
 
-province_event = { #Petition for redress copy
+province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 	id = disband_mercs.3
 	title = "EVTNAME5089"
 	desc = "EVTDESC5089"
@@ -84,9 +84,12 @@ province_event = { #Petition for redress copy
 	
 	trigger = {
 		sieged_by = REB
-		fort_level = 1
+		#fort_level = 1
 		#NOT = { fort_level = 10 }
-		owner = { NOT = { num_of_cities = 5 } }
+		OR = {
+			owner = { NOT = { num_of_cities = 5 } }
+			NOT = { num_of_units_in_province = { amount = 6 } }
+		}
 		NOT = { 
 			num_of_units_in_province = {
 				amount = 28
@@ -99,7 +102,7 @@ province_event = { #Petition for redress copy
 				NOT = { fort_level = 2 }
 				NOT = { 
 					num_of_units_in_province = {
-						amount = 4
+						amount = 6
 					}
 				}
 			}
@@ -185,14 +188,13 @@ province_event = { #Petition for redress copy
 			who = REB
 		}
 		
-		
-
 		owner = {
-			every_owned_province = { add_local_autonomy = 15 }
-			add_prestige = -10
+			
+			add_prestige = -5
 			log = "[This.GetName] rebels [Prev.GetName]"
 		}
-		
+		add_local_autonomy = 15
+
 		ai_chance = {
 			factor = 100
 		}

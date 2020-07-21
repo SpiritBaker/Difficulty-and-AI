@@ -44,7 +44,7 @@ NDefines.NAI.REGIMENTS_PER_GENERAL = 20
 NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 25
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 100 -- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
 NDefines.NAI.DEVELOPMENT_CAP_MULT = 10
-NDefines.NAI.EDICT_VALUE_THRESHOLD = 100
+NDefines.NAI.EDICT_VALUE_THRESHOLD = 20
 NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5
 NDefines.NAI.DIPLOMATIC_ACTION_GUARANTEE_POWERBALANCE_FACTOR = 25
 NDefines.NAI.POWERFUL_ALLY_PENALTY = 60	--Penalty on alliance for them already having a powerful ally if much stronger.
@@ -102,7 +102,7 @@ NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 100.0				-- AI scoring for
 NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.0				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.1 -- How many times the cost of the investment must be in the treasury to consider buying it
-NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10000	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
+NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 25	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1				-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
@@ -135,7 +135,7 @@ NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 15
 NDefines.NReligion.PIETY_ACTION_COOLDOWN = 10
 
 
-NDefines.NCountry.REVOLUTION_SPREAD_COUNT = 5			                -- Max number of concurrent province revolution spread
+NDefines.NCountry.REVOLUTION_SPREAD_COUNT = 4			                -- Max number of concurrent province revolution spread
 --NDefines.NCountry.REVOLUTION_DAILY_SPREAD = 1.0			                -- How much the revolution spreads each day (progress is 0-100)
 NDefines.NCountry.REVOLUTION_EMBRACE_MIN_SPREAD = 0.75	                -- Minimum revolution spread in % of state development required to embrace to Revolution
 --NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 0	                    -- Minimum country development required to embrace to Revolution
@@ -147,7 +147,8 @@ NDefines.NCountry.REVOLUTION_EMBRACE_MIN_SPREAD = 0.75	                -- Minimu
 --NDefines.NCountry.REVOLUTION_CLAIM_MIN_ZEAL = 20.0                      -- Minimum Revolutionary Zeal required for contestant to claim the revolution target
 --NDefines.NCountry.REVOLUTION_CLAIM_COOLDOWN = 12			            -- How many months until it can be stolen again
 
-
+NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 5400 -- 15 years
+--NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 0.5
 
 
 

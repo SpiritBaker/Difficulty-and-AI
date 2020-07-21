@@ -32,16 +32,13 @@ french_revolution = {
 		has_any_disaster = no
 		NOT = { stability = 2 }
 		OR = {
-			AND = {
-				NOT = { adm = 4 }
-				NOT = { dip = 4 }
-				NOT = { mil = 4 }
-			}
-			NOT = { stability = 0 }
 			revolution_spread = 0.5
+			NOT = { stability = 0 }
 			num_of_loans = 10
+			is_bankrupt = yes
 			inflation = 10
 			war_exhaustion = 10
+			NOT = { legitimacy = 50 }
 			NOT = { prestige = 0 }
 			custom_trigger_tooltip = {
 				tooltip = root_is_most_powerful_in_europe
