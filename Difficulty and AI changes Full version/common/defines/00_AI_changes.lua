@@ -98,11 +98,11 @@ NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 85.0
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 
-NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 100.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
+NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 75.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
 NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.0				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.1 -- How many times the cost of the investment must be in the treasury to consider buying it
-NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 25	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
+NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 100	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1				-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
@@ -110,11 +110,13 @@ NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 25	-- AI scoring for repaying loans, mu
 --MILITARY_FOCUS_DEFAULT = 1.0
 --MILITARY_FOCUS_LOWER_BOUND = 0.0
 --MILITARY_FOCUS_UPPER_BOUND = 2.0
-NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.30
-NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.75
+NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.35
+NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.85
 NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.15
---NAVY_FRACTION_PEACEFUL = 1.25
---NAVY_FRACTION_CAPITALIST = 1.25
+
+NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1.0
+NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 1.15
+
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIZE = 1.5
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25
 NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.25

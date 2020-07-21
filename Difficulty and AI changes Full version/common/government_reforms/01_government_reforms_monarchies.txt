@@ -400,6 +400,7 @@ iqta = {
 	modifiers = {
 		vassal_income = 0.33
 		global_tax_modifier = 0.05
+		church_influence_modifier = 0.1
 	}
 
 	conditional = {
