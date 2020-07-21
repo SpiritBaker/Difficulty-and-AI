@@ -41,22 +41,21 @@ Update for 1.3:
 - Added more efficient Development click for both Players and AI.
 - Added AI events that disbands Mercenary Companies. ( Temporary workaround )
 - War Enthusiasm changes, secondary participants are affected by balance of forces.
-- Limiting Estate privileges that give 5 loans, to 3 loans, disabling it during bankruptcy. 
+- Limiting Estate privileges that give 5 loans, to 3 loans, disabling it during bankruptcy.
 - Slight buff to new Rampart building.
--	Ramparts and State House no longer considered as manufactries. Both have limit per state and no special bonus from trade goods.
--	AI Logic for new buildings.
--	Getting Coal in a province should automatically delete existing manufactory.
--	Light reform growth penalties for Tribes and Nomads.
--	Added Trade Center to Paris, moved fort from Chartres to Paris. ( Should be save game compatible )
--	Nerfed Land limit from quantity to 33%, for performance and balance reasons.
--	More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.
--	More AI logic for new Estates
--	Fixes to existing code, to make everything compatible.
--	Major Fix to AI economy.
--	Various small AI fixes.
--	Adjusting climate&terrain in siberia and manchuria. ( I was really bored )
--	Increased priority for Soldiers Household significantly.
-- Adding missing english localisation.
+- Ramparts and State House no longer considered as manufactries. Both have limit per state and no special bonus from trade goods.
+- Getting Coal in a province should automatically delete existing manufactory.
+- Light reform growth penalties for Tribes and Nomads.
+- Added Trade Center to Paris, moved fort from Chartres to Paris. ( Should be save game compatible )
+- Adjusting climate & terrain in siberia and manchuria. ( I was really bored )
+- Reducing Land limit from quantity to 33%, for performance and balance reasons.
+- Reducing Ottoman's Age bonus from 33% to 25% siege ability.
+- AI Logic for new buildings.
+- More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.
+- More AI logic for new Estates
+- Major Fix to AI economy.
+- Various small AI fixes.
+- Increased priority for Soldiers Household significantly.
 
 Update for 1.29
 
