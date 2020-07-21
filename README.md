@@ -23,7 +23,8 @@ Other changes:
 - Rebalanced the amount of discipline in the game.
 - More meaningful advisers.
 - Added Development click, it works both for Players and AI. Prevents AI from wasting monarch points. Big thanks to LoStack for implementing it. (https://github.com/stackpoint/Dev-Click)
-- Effect of corruption was reduced to 1/5 of original game values, AI is just not programmed to deal with that.
+- Effect of corruption was reduced to 1/5 of original game values, and AI is less willing to use debase currency.
+- Restricting AI army movements a bit, AI should behave more defensively.   
 - Increased base supply limit by 2, AI tends to have more troops with this mod.
 - Light tweaks to Basic Government reforms.
 - Made Nomad life a bit easier, every Horde can now use banners, tied to culture just like Manchu. Increased Horde unity gain from looting.
