@@ -1,4 +1,52 @@
 country_decisions = {
+	change_religion_sunni = {
+		potential = {
+			#has_dlc = "Star and Crescent"
+			NOT = { religion = sunni }
+			dominant_religion = sunni
+			
+			is_force_converted = no
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			dominant_religion = sunni
+			stability = 1
+			is_at_war = no
+		}
+		effect = {
+			add_stability = -1
+			add_prestige = -50
+			add_piety = -1
+			change_religion = sunni
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	change_religion_shiite = {
+		potential = {
+			#has_dlc = "Star and Crescent"
+			religion = sunni
+			dominant_religion = shiite
+			is_force_converted = no
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			dominant_religion = shiite
+			stability = 1
+			is_at_war = no
+		}
+		effect = {
+			add_stability = -1
+			add_prestige = -50
+			add_piety = -1
+			change_religion = shiite		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	change_religion_ibadi = {
 		potential = {
