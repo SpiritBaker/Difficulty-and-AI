@@ -7,6 +7,10 @@ country_decisions = {
 			is_at_war = no
 			primitives = no
 			
+			NOT = { num_of_loans = 1 }
+			treasury = 300
+			current_income_balance = 3
+			
 			OR = {
 				AND = {
 					mil_tech = 24
@@ -16,10 +20,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_17th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_16th
@@ -52,10 +56,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_17th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_16th
@@ -84,10 +88,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_16th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_15th
@@ -112,10 +116,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_16th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_15th
@@ -137,10 +141,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_15th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									NOT = { has_building = fort_15th }
@@ -155,10 +159,10 @@ country_decisions = {
 							is_state_core = ROOT
 							can_build = fort_16th
 							has_building = fort_15th
-							ROOT = {
-								treasury = 300
-								current_income_balance = 3
-							}
+							#ROOT = {
+							#	treasury = 300
+							#	current_income_balance = 3
+							#}
 						}
 					}
 				}
@@ -166,10 +170,10 @@ country_decisions = {
 					NOT = { mil_tech = 14 }
 					capital_scope = {
 						can_build = fort_15th
-						ROOT = {
-							treasury = 300
-							current_income_balance = 3
-						}
+						#ROOT = {
+						#	treasury = 300
+						#	current_income_balance = 3
+						#}
 					}
 				}
 			}
@@ -187,10 +191,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_17th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_16th
@@ -235,10 +239,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_17th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_16th
@@ -264,10 +268,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_17th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_16th
@@ -308,10 +312,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_16th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_15th
@@ -348,10 +352,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_16th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_15th
@@ -370,10 +374,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_16th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									has_building = fort_15th
@@ -407,10 +411,10 @@ country_decisions = {
 							OR = {
 								AND = {
 									has_building = fort_15th
-									ROOT = {
-										treasury = 300
-										current_income_balance = 3
-									}
+									#ROOT = {
+									#	treasury = 300
+									#	current_income_balance = 3
+									#}
 								}
 								AND = {
 									NOT = { has_building = fort_15th }
@@ -437,10 +441,10 @@ country_decisions = {
 							is_state_core = ROOT
 							can_build = fort_16th
 							has_building = fort_15th
-							ROOT = {
-								treasury = 300
-								current_income_balance = 3
-							}
+							#ROOT = {
+							#	treasury = 300
+							#	current_income_balance = 3
+							#}
 						}
 					}
 					random_owned_province = {
@@ -448,10 +452,10 @@ country_decisions = {
 							is_state_core = ROOT
 							can_build = fort_16th
 							has_building = fort_15th
-							ROOT = {
-								treasury = 300
-								current_income_balance = 3
-							}
+							#ROOT = {
+							#	treasury = 300
+							#	current_income_balance = 3
+							#}
 						}
 						add_building_construction = {
 							building = fort_16th
@@ -470,10 +474,10 @@ country_decisions = {
 					limit = {
 						capital_scope = {
 							can_build = fort_15th
-							ROOT = {
-								treasury = 300
-								current_income_balance = 3
-							}
+							#ROOT = {
+							#	treasury = 300
+							#	current_income_balance = 3
+							#}
 						}
 					}
 					capital_scope = {
