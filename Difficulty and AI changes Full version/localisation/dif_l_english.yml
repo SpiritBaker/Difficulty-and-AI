@@ -6,3 +6,16 @@
 
  AIPolicyAge_Of_Revolutions:0 "AI Bonus in the Age Of Revolutions"
  AIPolicyAge_Of_Absolutism:0 "AI Bomus in the Age Of Absolutism"
+
+sovereign_personality:0 "Sovereign"
+desc_sovereign_personality:0  "WIP"
+sovereign_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+rughtles_personality:0 "Rughtles"
+desc_rughtles_personality:0  "This ruler is Ruthless. Determined to succeed no matter the cost."
+rughtles_personality_die_desc:0  "[Root.Monarch.GetHerHisCap] WIP."
+grandiose_personality:0 "Grandiose"
+desc_grandiose_personality:0 "WIP"
+grandiose_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+born_to_the_saddle_personality:0 "Born to the Saddle"
+desc_born_to_the_saddle_personality:0 "WIP"
+born_to_the_saddle_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."

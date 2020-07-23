@@ -88,6 +88,22 @@ ai_capitalist = {
 			factor = 5
 			has_reform = free_city
 		}
+		modifier = {
+			factor = 2
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 2
+			num_of_loans = 7
+		}
+		modifier = {
+			factor = 2
+			num_of_loans = 10
+		}
+		modifier = {
+			factor = 2
+			num_of_loans = 15
+		}
 	}
 	icon = 2
 }
@@ -184,6 +200,22 @@ ai_diplomat = {
 		modifier = {
 			factor = 5
 			has_reform = free_city
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 7
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 10
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 15
 		}		
 	}
 	icon = 3
@@ -199,6 +231,7 @@ ai_militarist = {
 		modifier = {
 			factor = 0.5
 			government = republic
+			NOT = { revolution_target_exists = yes }
 		}
 		modifier = {
 			factor = 1.5
@@ -222,12 +255,12 @@ ai_militarist = {
 		modifier = {
 			factor = 0.8
 			is_emperor = yes
-			total_development = 50
+			total_development = 250
 		}
 		modifier = {
 			factor = 0.8
 			is_emperor = yes
-			total_development = 100
+			total_development = 500
 		}			
 		modifier = {
 			factor = 1.5
@@ -339,8 +372,26 @@ ai_militarist = {
 			num_of_loans = 5
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			num_of_loans = 7
+		}
+		modifier = {
+			factor = 0.25
+			num_of_loans = 10
+		}
+		modifier = {
+			factor = 0.25
+			num_of_loans = 15
+		}
+		modifier = {
+			factor = 100
+			is_revolution_target = yes
+		}
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = { 
+				is_revolution_target = yes
+			}
 		}
 	}
 	icon = 4
@@ -412,7 +463,7 @@ ai_colonialist = {
 		modifier = {
 			factor = 0.5
 			tag = FRA
-		}
+		}	
 	}
 	icon = 5
 }
@@ -473,6 +524,26 @@ ai_balanced = {
 			adm = 6
 			dip = 6
 			mil = 6
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 7
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 10
+		}
+		modifier = {
+			factor = 1.25
+			num_of_loans = 15
+		}
+		modifier = {
+			factor = 1.5
+			tag = FRA
 		}
 	}
 	icon = 6

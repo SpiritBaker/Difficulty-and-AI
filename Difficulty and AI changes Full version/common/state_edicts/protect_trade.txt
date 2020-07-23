@@ -20,57 +20,44 @@ edict_protect_trade = {
 		modifier = {
 			factor = 0
 			all_province_in_state = {
-				AND = {
-					NOT = { province_has_center_of_trade_of_level = 1 }
-					NOT = { province_trade_power = 15 }
-				}
+				NOT = { province_has_center_of_trade_of_level = 1 }
+				NOT = { province_trade_power = 25 }
 			}
 		}
-		modifier = {
-			factor = 2
-			any_province_in_state = {
+		modifier= {
+			factor = 10
+			#capital_trade_node = FROM
+			is_in_capital_area = yes
+			OR = {
 				province_has_center_of_trade_of_level = 1
+				province_trade_power = 25
 			}
 		}
-		modifier = {
+		modifier= {
 			factor = 2
-			any_province_in_state = {
-				province_has_center_of_trade_of_level = 2
-			}
+			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
-			factor = 2
-			any_province_in_state = {
-				province_has_center_of_trade_of_level = 3
-			}
-		}
-		modifier = {
-			factor = 2
-			AND = {
-				any_province_in_state = {
-					province_trade_power = 15
+			factor = 6
+			FROM = {
+				home_trade_node = {
+					owned_by = FROM
+					OR = {
+						province_has_center_of_trade_of_level = 1
+						province_trade_power = 50
+					}
 				}
 			}
 		}
 		modifier = {
-			factor = 2
-			AND = {
-				any_province_in_state = {
-					province_trade_power = 30
-				}
-			}
-		}
-		modifier = {
-			factor = 2
-			AND = {
-				any_province_in_state = {
+			factor = 5
+			any_province_in_state = {
+				has_merchant = FROM
+				OR = {
+					province_has_center_of_trade_of_level = 1
 					province_trade_power = 50
 				}
 			}
-		}
-		modifier = {
-			factor = 4
-			is_in_capital_area = yes
 		}
 	}
 }

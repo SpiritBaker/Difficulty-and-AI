@@ -501,8 +501,8 @@ careful_personality = {
 		
 	}
 	
-	war_chance_multiplier = 0.4
-	enemy_strength_multiplier = 1.2
+	war_chance_multiplier = 0.9
+	enemy_strength_multiplier = 1.1
 	#wants_avoid_debase = yes
 	knowledge_sharing = yes
 
@@ -731,7 +731,7 @@ well_advised_personality = {
 	chance = {
 	}
 	
-	war_chance_multiplier = 0.6
+	war_chance_multiplier = 0.8
 	#wants_avoid_debase = yes
 	knowledge_sharing = yes
 
@@ -1385,6 +1385,7 @@ expansionist_personality = {
 	#wants_avoid_debase = yes
 	knowledge_sharing = yes
 	wants_colonies = yes
+	wants_gold = yes
 	
 	global_colonial_growth = 15
 	nation_designer_cost = 2
@@ -1762,7 +1763,7 @@ strict_personality = {
 	knowledge_sharing = yes
 	wants_avoid_loans = yes
 	
-	discipline = 0.05
+	discipline = 0.037
 	nation_designer_cost = 5
 } #1 easier event
 
@@ -2396,7 +2397,7 @@ drunkard_personality = {
 	}
 	
 	#random_troop_moves = yes Commenting out since often indistinguishable from a bug.
-	wants_loans = yes
+	#wants_loans = yes
 	#wants_avoid_debase = yes
 	knowledge_sharing = yes
 
@@ -2496,7 +2497,7 @@ sinner_personality = {
 	chance = {
 	}
 
-	easy_war_chance_multiplier = 1.5
+	easy_war_chance_multiplier = 1.25
 	different_religion_war_multiplier = 0.8
 	razing = yes
 	#wants_avoid_debase = yes
@@ -2716,7 +2717,7 @@ cruel_personality = {
 			}
 		}
 	}
-	easy_war_chance_multiplier = 1.5
+	easy_war_chance_multiplier = 1.25
 	wants_betray_allies = yes
 	wants_land = yes
 	#wants_avoid_debase = yes
@@ -3120,7 +3121,7 @@ obsessive_perfectionist_personality = {
 	chance = {
 	}
 	
-	war_chance_multiplier = 1.2
+	war_chance_multiplier = 1.15
 	enemy_strength_multiplier = 0.9
 
 	wants_land = yes
@@ -3221,8 +3222,8 @@ malevolent_personality = {
 	chance = {
 	}
 	
-	easy_war_chance_multiplier = 2
-	war_chance_multiplier = 1.5
+	easy_war_chance_multiplier = 1.5
+	war_chance_multiplier = 1.25
 
 	#wants_avoid_debase = yes
 	knowledge_sharing = yes
@@ -3454,4 +3455,361 @@ petty_personality = {
 	nation_designer_cost = -2
 }
 
+
+###############################################
+# Custom Traits
+###############################################
+
+
+sovereign_personality = {
+	ruler_allow = {
+		allow = {
+			MIL = 3
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				government = monarchy
+			}
+			modifier = {
+				factor = 1
+				is_hegemon = yes
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			heir_MIL = 3
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				government = monarchy
+			}
+			modifier = {
+				factor = 1
+				is_hegemon = yes
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			is_hegemon = yes
+		}
+
+		chance = {
+
+		}
+	}
+
+	allow = {
+		OR = {
+			is_hegemon = yes
+			is_great_power = yes
+		}
+	}
+
+	chance = {
+		modifier = {
+			factor = 1
+			great_power_rank = 1
+			NOT = { great_power_rank = 4 }
+		}
+	}
+
+
+	enemy_strength_multiplier = 0.9
+
+	other_ai_peace_term_bonus = 10
+	wants_threaten_war = yes
+	wants_land = yes
+	wants_avoid_ugly_borders = yes
+	underestimate_ae = yes
+	knowledge_sharing = yes
+	
+	unjustified_demands = -0.2
+	nation_designer_cost = 10
+}
+
+grandiose_personality = {
+	ruler_allow = {
+		allow = {
+			NOT = { ruler_has_personality = babbling_buffoon_personality }
+			NOT = { ruler_has_personality = naive_enthusiast_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 0.75
+				DIP = 6
+			}
+			modifier = {
+				factor = 0.75
+				ADM = 6
+			}
+			modifier = {
+				factor = 0.75
+				MIL = 6
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			NOT = { heir_has_personality = babbling_buffoon_personality }
+			NOT = { heir_has_personality = naive_enthusiast_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 0.75
+				heir_dip = 6
+			}
+			modifier = {
+				factor = 0.75
+				heir_adm = 6
+			}
+			modifier = {
+				factor = 0.75
+				heir_mil = 6
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			NOT = { consort_has_personality = petty_personality }
+			NOT = { consort_has_personality = babbling_buffoon_personality }
+			NOT = { consort_has_personality = naive_enthusiast_personality }
+		}
+
+		chance = {
+			modifier = {
+				factor = 0.75
+				consort_dip = 6
+			}
+			modifier = {
+				factor = 0.75
+				consort_adm = 6
+			}
+			modifier = {
+				factor = 0.75
+				consort_mil = 6
+			}
+		}
+	}
+
+	allow = {
+		is_emperor = yes
+	}
+
+	chance = {
+		modifier = {
+			factor = 1
+			is_great_power = yes
+		}
+	}
+	#wants_avoid_debase = yes
+	knowledge_sharing = yes
+	gift_chance = 25
+	different_religion_war_multiplier = 2
+	heretic_ally_acceptance = -50
+	heathen_ally_acceptance = -50
+
+
+	imperial_authority_value = 0.05
+	nation_designer_cost = 5
+}
+
+ruthless_personality = {
+	ruler_allow = {
+		allow = {
+			MIL = 3
+			NOT = { ruler_has_personality = craven_personality }
+			NOT = { ruler_has_personality = careful_personality }
+			NOT = { ruler_has_personality = kind_hearted_personality }
+			NOT = { ruler_has_personality = calm_personality }
+			NOT = { ruler_has_personality = benevolent_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_monarch_leader = yes
+			}
+			modifier = {
+				factor = 1
+				MIL = 5
+			}
+			modifier = {
+				factor = 1
+				OR = {
+					ruler_has_personality = conqueror_personality
+					ruler_has_personality = bold_fighter_personality
+					ruler_has_personality = tactical_genius_personality
+					ruler_has_personality = strict_personality
+					ruler_has_personality = inspiring_leader_personality
+					ruler_has_personality = martial_educator_personality
+				}
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			heir_MIL = 3
+			NOT = { heir_has_personality = craven_personality }
+			NOT = { heir_has_personality = careful_personality }
+			NOT = { heir_has_personality = kind_hearted_personality }
+			NOT = { heir_has_personality = calm_personality }
+			NOT = { heir_has_personality = benevolent_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_heir_leader = yes
+			}
+			modifier = {
+				factor = 1
+				heir_MIL = 5
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			consort_MIL = 3
+			NOT = { consort_has_personality = craven_personality }
+			NOT = { consort_has_personality = craven_personality }
+			NOT = { consort_has_personality = careful_personality }
+			NOT = { consort_has_personality = kind_hearted_personality }
+			NOT = { consort_has_personality = calm_personality }
+			NOT = { consort_has_personality = benevolent_personality }
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_MIL = 6
+			}
+		}
+	}
+
+	allow = {
+	}
+	
+	chance = {
+	}
+
+	war_chance_multiplier = 1.25
+	easy_war_chance_multiplier = 1.25
+
+	wants_land = yes
+	knowledge_sharing = yes
+
+	razing = yes
+	lower_autonomy = yes
+
+	shock_damage = 0.1
+	nation_designer_cost = 5
+}
+
+born_to_the_saddle_personality = {
+	ruler_allow = {
+		allow = {
+			MIL = 3
+			NOT = { ruler_has_personality = craven_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_monarch_leader = yes
+			}
+			modifier = {
+				factor = 1
+				MIL = 5
+			}
+			modifier = {
+				factor = 1
+				OR = {
+					ruler_has_personality = bold_fighter_personality
+					ruler_has_personality = tactical_genius_personality
+					ruler_has_personality = inspiring_leader_personality
+				}
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			heir_MIL = 3
+			NOT = { heir_has_personality = craven_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_heir_leader = yes
+			}
+			modifier = {
+				factor = 1
+				ruler_has_personality = born_to_the_saddle_personality
+			}
+			modifier = {
+				factor = 1
+				heir_MIL = 5
+			}
+			modifier = {
+				factor = 1
+				OR = {
+					heir_has_personality = bold_fighter_personality
+					heir_has_personality = tactical_genius_personality
+					heir_has_personality = inspiring_leader_personality
+				}
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			consort_MIL = 3
+			NOT = { consort_has_personality = craven_personality }
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_MIL = 6
+			}
+		}
+	}
+
+	allow = {
+		OR = {
+			nomad = yes
+			has_idea_group = aristocracy_ideas
+		}
+	}
+	
+	chance = {
+	}
+
+	war_chance_multiplier = 1.25
+	easy_war_chance_multiplier = 1.25
+
+	knowledge_sharing = yes
+
+	cavalry_power = 0.1
+	nation_designer_cost = 5
+}
+
+#defensive_planner_personality = {}
+
+#fascinated_by_artilary_personality = {}
 

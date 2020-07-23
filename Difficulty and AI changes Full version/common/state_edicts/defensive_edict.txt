@@ -15,7 +15,7 @@ edict_defensive_edict = {
 	
 	
 	ai_will_do = {
-        factor = 1
+        factor = 2
         modifier = {
             factor = 0
             any_province_in_state = {

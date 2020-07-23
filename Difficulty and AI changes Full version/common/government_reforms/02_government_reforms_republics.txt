@@ -1239,13 +1239,23 @@ fraternite_reform = {
 		is_revolutionary = yes
 		has_dlc = "Emperor"
 	}
-	modifiers = {
+	modifiers = { 
 		rr_royalists_influence = 0.1
 		culture_conversion_cost = -0.2
 		harsh_treatment_cost = -0.25
 	}
 	ai = {
 		factor = 2.5
+		modifier = {
+			factor = 5
+			OR = {
+				is_revolution_target = yes
+				AND = {
+					is_great_power = yes
+					capital_scope = { continent = europe }
+				}
+			}
+		}
 	}
 }
 
@@ -1400,6 +1410,16 @@ legislative_assembly_reform = {
 	}
 	ai = {
 		factor = 10
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_revolution_target = yes
+				AND = {
+					is_great_power = yes
+					capital_scope = { continent = europe }
+				}
+			}
+		}
 	}
 }
 
@@ -1784,6 +1804,10 @@ equality_principle_reform = {
 	}
 	ai = {
 		factor = 2
+		modifier = {
+			factor = 0
+			religious_unity = 0.85
+		}
 	}
 }
 
@@ -1801,6 +1825,16 @@ imperial_principle_reform = {
 	}
 	ai = {
 		factor = 2
+		modifier = {
+			factor = 2.5
+			OR = {
+				is_revolution_target = yes
+				AND = {
+					is_great_power = yes
+					capital_scope = { continent = europe }
+				}
+			}
+		}
 	}
 }
 
@@ -1920,6 +1954,16 @@ military_electorate_reform = {
 	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 5
+			OR = {
+				is_revolution_target = yes
+				AND = {
+					is_great_power = yes
+					capital_scope = { continent = europe }
+				}
+			}
+		}
 	}
 }
 
@@ -2117,6 +2161,18 @@ become_rev_empire_reform = {
 		}
 	}
 	ai = {
-		factor = 0
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_revolution_target = yes }
+				NOT = {
+					AND = {
+						is_great_power = yes
+						capital_scope = { continent = europe }
+					}
+				}
+			}
+		}
 	}
 }

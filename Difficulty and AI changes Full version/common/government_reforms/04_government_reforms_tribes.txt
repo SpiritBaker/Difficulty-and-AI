@@ -280,6 +280,10 @@ horde_tribal_unity_reform = {
 	}
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 2
+			nomad = yes
+		}
 	}
 }
 
@@ -328,11 +332,14 @@ tribe_becomes_monarchy_reform = {
 		factor = 1
 		modifier = {
 			factor = 2
-			has_reform = steppe_horde
 			OR = {
 				religion_group = muslim
 				religion_group = eastern
 			} 
+		}
+		modifier = {
+			factor = 0
+			nomad = yes
 		}
 	}
 }

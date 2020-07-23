@@ -18,25 +18,25 @@ edict_promote_military_recruitment = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 3
+			factor = 4
 			any_province_in_state = {
 				base_manpower = 5
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 4
 			any_province_in_state = {
 				base_manpower = 10
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 5
 			any_province_in_state = {
 				has_building = soldier_households
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 4
 			any_province_in_state = {
 				OR = {
 					has_building = barracks
