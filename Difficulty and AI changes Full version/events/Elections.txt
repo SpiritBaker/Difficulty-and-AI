@@ -183,19 +183,23 @@ country_event = {
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
-				mil = 1
-				adm = 4
-				dip = 1
-				fixed = yes
+				adm = 3
+				dip = 0
+				mil = 0
+				max_random_adm = 5
+				max_random_dip = 2
+				max_random_mil = 2
 				random_gender = yes # Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
-				mil = 1
-				adm = 4
-				dip = 1					
-				fixed = yes
+				adm = 3
+				dip = 0
+				mil = 0
+				max_random_adm = 5
+				max_random_dip = 2
+				max_random_mil = 2
 			}
 		}
 		if = {
@@ -272,19 +276,23 @@ country_event = {
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
-				dip = 4
-				adm = 1
-				mil = 1					
-				fixed = yes
+				adm = 0
+				dip = 3
+				mil = 0
+				max_random_adm = 2
+				max_random_dip = 5
+				max_random_mil = 2
 				random_gender = yes # Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
-				dip = 4
-				adm = 1
-				mil = 1					
-				fixed = yes
+				adm = 0
+				dip = 3
+				mil = 0
+				max_random_adm = 2
+				max_random_dip = 5
+				max_random_mil = 2
 			}
 		}
 		if = {
@@ -361,19 +369,23 @@ country_event = {
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
-				mil = 4
-				adm = 1
-				dip = 1					
-				fixed = yes
+				adm = 0
+				dip = 0
+				mil = 3
+				max_random_adm = 2
+				max_random_dip = 2
+				max_random_mil = 5
 				random_gender = yes # Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
-				mil = 4
-				adm = 1
-				dip = 1					
-				fixed = yes
+				adm = 0
+				dip = 0
+				mil = 3
+				max_random_adm = 2
+				max_random_dip = 2
+				max_random_mil = 5
 			}
 		}
 		if = {
@@ -551,19 +563,23 @@ country_event = {
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
-				mil = 1
-				adm = 4
-				dip = 1					
-				fixed = yes
+				adm = 3
+				dip = 0
+				mil = 0
+				max_random_adm = 5
+				max_random_dip = 2
+				max_random_mil = 2
 				random_gender = yes # Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
-				mil = 1
-				adm = 4
-				dip = 1					
-				fixed = yes
+				adm = 3
+				dip = 0
+				mil = 0
+				max_random_adm = 5
+				max_random_dip = 2
+				max_random_mil = 2
 			}
 		}
 		if = {
@@ -582,19 +598,23 @@ country_event = {
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
-				dip = 4
-				adm = 1
-				mil = 1					
-				fixed = yes
+				adm = 0
+				dip = 3
+				mil = 0
+				max_random_adm = 2
+				max_random_dip = 5
+				max_random_mil = 2
 				random_gender = yes # Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
-				dip = 4
-				adm = 1
-				mil = 1					
-				fixed = yes
+				adm = 0
+				dip = 3
+				mil = 0
+				max_random_adm = 2
+				max_random_dip = 5
+				max_random_mil = 2
 			}
 		}
 		if = {
@@ -613,19 +633,23 @@ country_event = {
 		if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
-				mil = 4
-				adm = 1
-				dip = 1					
-				fixed = yes
+				adm = 0
+				dip = 0
+				mil = 3
+				max_random_adm = 2
+				max_random_dip = 2
+				max_random_mil = 5
 				random_gender = yes # Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
-				mil = 4
-				adm = 1
-				dip = 1					
-				fixed = yes
+				adm = 0
+				dip = 0
+				mil = 3
+				max_random_adm = 2
+				max_random_dip = 2
+				max_random_mil = 5
 			}
 		}
 		if = {
