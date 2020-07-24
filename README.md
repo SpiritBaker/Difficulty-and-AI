@@ -6,7 +6,7 @@ AI logic is improved. AI is better at building Economy, picking Advisers, Polici
 
 Because the difference with base game AI is so substantial at this point, it inevitable started affecting balance. So I'm trying to keep the game as fun as possible, without compromising original goal to make AI better.
 
-AI Dept spiral is fixed, at least everything I can spot that is not merc related. Keep in mind that AI can take 5 loans with 1 interest interaction via estates.
+AI Dept spiral is fixed, at least everything I can spot that is not merc related. Keep in mind that AI can take 3 loans with 1 interest interaction via estates.
 
 Example from observer game 1.30.2 VH
 https://skanderbeg.pm/browse.php?id=a40601
