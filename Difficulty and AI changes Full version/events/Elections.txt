@@ -311,7 +311,7 @@ country_event = {
 				adm = 4
 				dip = 1
 				mil = 1
-				max_random_adm = 6
+				max_random_adm = 5
 				max_random_dip = 3
 				max_random_mil = 3
 				random_gender = yes # Allows random gender for republics
@@ -322,7 +322,7 @@ country_event = {
 				adm = 4
 				dip = 1
 				mil = 1
-				max_random_adm = 6
+				max_random_adm = 5
 				max_random_dip = 3
 				max_random_mil = 3
 			}
@@ -355,7 +355,7 @@ country_event = {
 				dip = 4
 				mil = 1
 				max_random_adm = 3
-				max_random_dip = 6
+				max_random_dip = 5
 				max_random_mil = 3
 				random_gender = yes # Allows random gender for republics
 			}
@@ -366,7 +366,7 @@ country_event = {
 				dip = 4
 				mil = 1
 				max_random_adm = 3
-				max_random_dip = 6
+				max_random_dip = 5
 				max_random_mil = 3
 			}
 		}
@@ -399,7 +399,7 @@ country_event = {
 				mil = 4
 				max_random_adm = 3
 				max_random_dip = 3
-				max_random_mil = 6
+				max_random_mil = 5
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -410,7 +410,7 @@ country_event = {
 				mil = 4
 				max_random_adm = 3
 				max_random_dip = 3
-				max_random_mil = 6
+				max_random_mil = 5
 			}
 		}
 		if = {
@@ -541,7 +541,7 @@ country_event = {
 				adm = 4
 				dip = 1
 				mil = 1
-				max_random_adm = 6
+				max_random_adm = 5
 				max_random_dip = 3
 				max_random_mil = 3
 				random_gender = yes # Allows random gender for republics
@@ -552,7 +552,7 @@ country_event = {
 				adm = 4
 				dip = 1
 				mil = 1
-				max_random_adm = 6
+				max_random_adm = 5
 				max_random_dip = 3
 				max_random_mil = 3
 			}
@@ -577,7 +577,7 @@ country_event = {
 				dip = 4
 				mil = 1
 				max_random_adm = 3
-				max_random_dip = 6
+				max_random_dip = 5
 				max_random_mil = 3
 				random_gender = yes # Allows random gender for republics
 			}
@@ -588,7 +588,7 @@ country_event = {
 				dip = 4
 				mil = 1
 				max_random_adm = 3
-				max_random_dip = 6
+				max_random_dip = 5
 				max_random_mil = 3
 			}
 		}
@@ -613,7 +613,7 @@ country_event = {
 				mil = 4
 				max_random_adm = 3
 				max_random_dip = 3
-				max_random_mil = 6
+				max_random_mil = 5
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -624,7 +624,7 @@ country_event = {
 				mil = 4
 				max_random_adm = 3
 				max_random_dip = 3
-				max_random_mil = 6
+				max_random_mil = 5
 			}
 		}
 		if = {
