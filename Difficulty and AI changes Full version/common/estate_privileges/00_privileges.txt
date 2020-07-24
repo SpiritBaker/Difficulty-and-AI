@@ -1035,14 +1035,6 @@ estate_nobles_levies = {
 			}
 		}
 		modifier = {
-			factor = 0.75
-			NOT = { current_income_balance = 5 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { current_income_balance = 0 }
-		}
-		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -7412,18 +7404,14 @@ estate_burghers_prussian_confederation = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 7.5
+		factor = 10
 		modifier = {
 			factor = 1.5
 			owns = 43
-			NOT = { num_of_cities = 6 }
-			crown_land_share = 40
-			NOT = {
-				estate_influence = {
-					estate = estate_burghers
-					influence = 70
-				}
-			}
+		}
+		modifier = {
+			factor = 0
+			is_year = 1501
 		}
 	}
 }

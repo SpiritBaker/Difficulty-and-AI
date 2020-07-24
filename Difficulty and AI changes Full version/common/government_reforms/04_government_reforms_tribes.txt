@@ -282,7 +282,7 @@ horde_tribal_unity_reform = {
 		factor = 1
 		modifier = {
 			factor = 2
-			nomad = yes
+			is_nomad = yes
 		}
 	}
 }
@@ -339,7 +339,7 @@ tribe_becomes_monarchy_reform = {
 		}
 		modifier = {
 			factor = 0
-			nomad = yes
+			is_nomad = yes
 		}
 	}
 }
