@@ -75,6 +75,94 @@ country_event = {
 		}
 		ai_chance = { 
 			factor = 120
+			modifier = {
+				factor = 0
+				NOT = { republican_tradition = 20 }
+			}
+			modifier = {
+				factor = 0
+				variable_arithmetic_trigger = {
+					export_to_variable = {
+						which = admSkill
+						value = ADM
+					}
+					export_to_variable = {
+						which = dipSkill
+						value = DIP
+					}
+					export_to_variable = {
+						which = milSkill
+						value = MIL
+					}
+					change_variable = {
+						which = admSkill
+						which = dipSkill
+					}
+					change_variable = {
+						which = admSkill
+						which = milSkill
+					}
+					NOT = {
+						check_variable = {
+							which = admSkill
+							value = 9
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_ruler_flag = ruler_reelected }
+				NOT = {
+					republican_tradition = 100
+					has_global_modifier_value = {
+						which = republican_tradition
+						value = 0
+					}
+				}
+				NOT = {
+					republican_tradition = 85
+					has_global_modifier_value = {
+						which = republican_tradition
+						value = 0.5
+					}
+				}
+				NOT = {
+					republican_tradition = 75
+					has_global_modifier_value = {
+						which = republican_tradition
+						value = 1
+					}
+				}
+				NOT = {
+					republican_tradition = 60
+					has_global_modifier_value = {
+						which = republican_tradition
+						value = 1.5
+					}
+				}
+				NOT = {
+					republican_tradition = 50
+					has_global_modifier_value = {
+						which = republican_tradition
+						value = 2
+					}
+				}
+				NOT = {
+					republican_tradition = 35
+					has_global_modifier_value = {
+						which = republican_tradition
+						value = 2.5
+					}
+				}
+				NOT = {
+					republican_tradition = 25
+					has_global_modifier_value = {
+						which = republican_tradition
+						value = 3
+					}
+				}
+			}
 		}
 		custom_tooltip = remains_ruler
 
@@ -204,6 +292,8 @@ country_event = {
 			else	= {									   add_scaled_republican_tradition = -10 }
 		}
 		add_karma = -5
+		
+		set_ruler_flag = ruler_reelected
 	}
 	option = {
 		name = "EVTOPTB700"	# An administrator type
@@ -211,58 +301,8 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 0
-				AND = {
-					adm = 4
-					dip = 4
-					mil = 4
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						republican_tradition = 50
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 2.5
-						}
-					}
-					AND = {
-						republican_tradition = 60
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 2.0
-						}
-					}
-					AND = {
-						republican_tradition = 70
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 1.5
-						}
-					}
-					AND = {
-						republican_tradition = 80
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 1.0
-						}
-					}
-					AND = {
-						republican_tradition = 90
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 0.5
-						}
-					}
-					AND = {
-						republican_tradition = 100
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 0.0
-						}
-					}
-				}
+				republican_tradition = 20
+				has_ruler_flag = ruler_reelected
 			}
 		}
 		if = {
@@ -304,58 +344,8 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 0
-				AND = {
-					adm = 4
-					dip = 4
-					mil = 4
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						republican_tradition = 50
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 2.5
-						}
-					}
-					AND = {
-						republican_tradition = 60
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 2.0
-						}
-					}
-					AND = {
-						republican_tradition = 70
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 1.5
-						}
-					}
-					AND = {
-						republican_tradition = 80
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 1.0
-						}
-					}
-					AND = {
-						republican_tradition = 90
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 0.5
-						}
-					}
-					AND = {
-						republican_tradition = 100
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 0.0
-						}
-					}
-				}
+				republican_tradition = 20
+				has_ruler_flag = ruler_reelected
 			}
 		}
 		if = {
@@ -397,58 +387,8 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 0
-				AND = {
-					adm = 4
-					dip = 4
-					mil = 4
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						republican_tradition = 50
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 2.5
-						}
-					}
-					AND = {
-						republican_tradition = 60
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 2.0
-						}
-					}
-					AND = {
-						republican_tradition = 70
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 1.5
-						}
-					}
-					AND = {
-						republican_tradition = 80
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 1.0
-						}
-					}
-					AND = {
-						republican_tradition = 90
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 0.5
-						}
-					}
-					AND = {
-						republican_tradition = 100
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 0.0
-						}
-					}
-				}
+				republican_tradition = 20
+				has_ruler_flag = ruler_reelected
 			}
 		}
 		if = {
@@ -494,58 +434,8 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				AND = {
-					adm = 4
-					dip = 4
-					mil = 4
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						republican_tradition = 50
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 2.5
-						}
-					}
-					AND = {
-						republican_tradition = 60
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 2.0
-						}
-					}
-					AND = {
-						republican_tradition = 70
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 1.5
-						}
-					}
-					AND = {
-						republican_tradition = 80
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 1.0
-						}
-					}
-					AND = {
-						republican_tradition = 90
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 0.5
-						}
-					}
-					AND = {
-						republican_tradition = 100
-						has_global_modifier_value = {
-							which = republican_tradition
-							value = 0.0
-						}
-					}
-				}
+				republican_tradition = 20
+				has_ruler_flag = ruler_reelected
 			}
 		}
 		if = {
