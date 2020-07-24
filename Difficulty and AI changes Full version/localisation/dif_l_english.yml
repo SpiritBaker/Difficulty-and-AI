@@ -1,21 +1,30 @@
-﻿l_english:
+l_english:
+ #DIf_Muslim.txt
  change_religion_shiite_iranian_title:0 "Change Religion to Shiite"
  change_religion_shiite_iranian_desc:0 "The Shiites believe that only the heirs of the fourth caliph, Ali, are the legitimate successors of Mohammed while the Sunni believes that the first four caliphs - Mohammed's successors - rightfully took his place as the leaders of Muslims."
  change_religion_ibadi_title:0 "Change Religion to Ibadi"
  change_religion_ibadi_desc:0 "The Ibadis stress strict adherence to an interpretation of Islam and the Sharia that they hold as both older and more orthodox."
-
+ 
+ #AIMilPolicy.txt
  AIPolicyAge_Of_Revolutions:0 "AI Bonus in the Age Of Revolutions"
  AIPolicyAge_Of_Absolutism:0 "AI Bomus in the Age Of Absolutism"
-
-sovereign_personality:0 "Sovereign"
-desc_sovereign_personality:0  "WIP"
-sovereign_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
-ruthless_ruler_personality:0 "Ruthless"
-desc_ruthless_ruler_personality:0  "This ruler is Ruthless. Determined to succeed no matter the cost."
-ruthless_ruler_personality_die_desc:0  "[Root.Monarch.GetHerHisCap] WIP."
-grandiose_personality:0 "Grandiose"
-desc_grandiose_personality:0 "WIP"
-grandiose_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
-born_to_the_saddle_ruler_personality:0 "Born to the Saddle"
-desc_born_to_the_saddle_ruler_personality:0 "WIP"
-born_to_the_saddle_ruler_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+ 
+ #ruler_personalities
+ sovereign_personality:0 "Sovereign"
+ desc_sovereign_personality:0  "WIP"
+ sovereign_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+ ruthless_ruler_personality:0 "Ruthless"
+ desc_ruthless_ruler_personality:0  "This ruler is Ruthless. Determined to succeed no matter the cost."
+ ruthless_ruler_personality_die_desc:0  "[Root.Monarch.GetHerHisCap] WIP."
+ grandiose_personality:0 "Grandiose"
+ desc_grandiose_personality:0 "WIP"
+ grandiose_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+ born_to_the_saddle_ruler_personality:0 "Born to the Saddle"
+ desc_born_to_the_saddle_ruler_personality:0 "WIP"
+ born_to_the_saddle_ruler_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+ 
+ #disband_mercs_event.txt
+ MODEVTNAME5089:0 "Petition for Redress"
+ MODEVTDESC5089:1 "One of the local [Owner.GetNobilityName] in [Root.GetName] has so upset and mistreated his subjects that a delegation of peasants has come before the [Owner.GetRulerTitleOrRegency] to ask for redress. Agreeing to this would be popular with the peasantry but would be seen as an infringement on their authority by the [Owner.GetNobilityName]."
+ MODEVTOPTA5089:0 "Accept petition."
+ MODEVTOPTB5089:0 "Deny petition."

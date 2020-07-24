@@ -77,8 +77,8 @@ country_event = { # Disbands Merc companies one at time, if AI went over the for
 
 province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 	id = disband_mercs.3
-	title = "EVTNAME5089"
-	desc = "EVTDESC5089"
+	title = "MODEVTNAME5089"
+	desc = "MODEVTDESC5089"
 	picture = COURT_eventPicture
 	goto = ROOT
 	
@@ -182,7 +182,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 	}
 	
 	option = {
-		name = "EVTOPTA5089"	# Accept petition
+		name = "MODEVTOPTA5089"	# Accept petition
 		
 		kill_units = {
 			who = REB
@@ -200,7 +200,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 		}
 	}
 	option = { #ignore them
-		name = "EVTOPTB5089"	# Deny petition
+		name = "MODEVTOPTB5089"	# Deny petition
 		
 		ai_chance = {
 			factor = 0
