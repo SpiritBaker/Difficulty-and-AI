@@ -10,11 +10,11 @@ l_english:
  AIPolicyAge_Of_Absolutism:0 "AI Bomus in the Age Of Absolutism"
  
  #ruler_personalities
- sovereign_personality:0 "Sovereign"
- desc_sovereign_personality:0  "WIP"
- sovereign_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+ ambitious_personality:0 "Ambitious"
+ desc_ambitious_personality:0  "WIP"
+ ambitious_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
  ruthless_ruler_personality:0 "Ruthless"
- desc_ruthless_ruler_personality:0  "This ruler is Ruthless. Determined to succeed no matter the cost."
+ desc_ruthless_ruler_personality:0  "WIP"
  ruthless_ruler_personality_die_desc:0  "[Root.Monarch.GetHerHisCap] WIP."
  grandiose_personality:0 "Grandiose"
  desc_grandiose_personality:0 "WIP"
@@ -22,6 +22,12 @@ l_english:
  born_to_the_saddle_ruler_personality:0 "Born to the Saddle"
  desc_born_to_the_saddle_ruler_personality:0 "WIP"
  born_to_the_saddle_ruler_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+ fascinated_by_artillery_personality:0 "Fascinated by Artillery"
+ desc_fascinated_by_artillery_personality:0 "WIP"
+ fascinated_by_artillery_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+ defensive_planner_ruler_personality:0 "Defensive Planner"
+ desc_defensive_planner_ruler_personality:0 "WIP"
+ defensive_planner_ruler_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
  
  #disband_mercs_event.txt
  MODEVTNAME5089:0 "Petition for Redress"

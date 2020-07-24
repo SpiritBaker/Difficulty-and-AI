@@ -1396,7 +1396,7 @@ charismatic_negotiator_personality = {
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = babbling_buffoon_personality }
-			DIP = 3
+			DIP = 4
 		}
 	
 		chance = {
@@ -1414,7 +1414,7 @@ charismatic_negotiator_personality = {
 	heir_allow = {
 		allow = {
 			NOT = { heir_has_personality = babbling_buffoon_personality }
-			heir_DIP = 3
+			heir_DIP = 4
 		}
 	
 		chance = {
@@ -1432,7 +1432,7 @@ charismatic_negotiator_personality = {
 	consort_allow = {
 		allow = {
 			NOT = { consort_has_personality = babbling_buffoon_personality }
-			consort_DIP = 3
+			consort_DIP = 4
 		}
 
 		chance = {
@@ -1933,6 +1933,14 @@ navigator_personality = {
 	}
 	
 	chance = {
+		modifier = {
+			factor = -1
+			OR = {
+				NOT = { has_idea_group = exploration_ideas }
+				NOT = { has_idea_group = maritime_ideas }
+				NOT = { has_idea_group = naval_ideas }
+			}
+		}
 	}
 
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
@@ -2029,6 +2037,14 @@ babbling_buffoon_personality = {
 					ruler_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				DIP = 6
+			}
 		}
 	}
 
@@ -2056,6 +2072,14 @@ babbling_buffoon_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 6
+			}
 		}
 	}
 	
@@ -2082,6 +2106,14 @@ babbling_buffoon_personality = {
 					consort_has_personality = embezzler_personality
 					consort_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 6
 			}
 		}
 	}
@@ -2126,6 +2158,14 @@ embezzler_personality = {
 					ruler_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				ADM = 4
+			}
+			modifier = {
+				factor = -0.5
+				ADM = 6
+			}
 		}
 	}
 
@@ -2152,6 +2192,14 @@ embezzler_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_ADM = 4
+			}
+			modifier = {
+				factor = -0.5
+				heir_ADM = 6
+			}
 		}
 	}
 	
@@ -2177,6 +2225,14 @@ embezzler_personality = {
 					consort_has_personality = babbling_buffoon_personality
 					consort_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_ADM = 4
+			}
+			modifier = {
+				factor = -0.5
+				consort_ADM = 6
 			}
 		}
 	}
@@ -2531,6 +2587,14 @@ greedy_personality = {
 					ruler_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				ADM = 5
+			}
+			modifier = {
+				factor = -0.5
+				ADM = 6
+			}
 		}
 	}
 
@@ -2557,6 +2621,14 @@ greedy_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_ADM = 5
+			}
+			modifier = {
+				factor = -0.5
+				heir_ADM = 6
+			}
 		}
 	}
 	
@@ -2582,6 +2654,14 @@ greedy_personality = {
 					consort_has_personality = babbling_buffoon_personality
 					consort_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_ADM = 5
+			}
+			modifier = {
+				factor = -0.5
+				consort_ADM = 6
 			}
 		}
 	}
@@ -2661,6 +2741,10 @@ cruel_personality = {
 					ruler_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				ADM = 6
+			}
 		}
 	}
 
@@ -2688,6 +2772,10 @@ cruel_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_ADM = 6
+			}
 		}
 	}
 	
@@ -2714,6 +2802,10 @@ cruel_personality = {
 					consort_has_personality = babbling_buffoon_personality
 					consort_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_ADM = 6
 			}
 		}
 	}
@@ -2758,6 +2850,14 @@ naive_personality = {
 					ruler_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				DIP = 6
+			}
 		}
 	}
 
@@ -2788,6 +2888,14 @@ naive_personality = {
 					heir_has_personality = babbling_buffoon_personality
 					heir_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 6
 			}
 		}
 	}
@@ -2820,6 +2928,14 @@ naive_personality = {
 					consort_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 6
+			}
 		}
 	}
 
@@ -2844,6 +2960,7 @@ craven_personality = {
 		allow = {
 			NOT = { ruler_has_personality = inspiring_leader_personality }
 			NOT = { ruler_has_personality = bold_fighter_personality }
+			NOT = { ruler_has_personality = ruthless_ruler_personality }
 		}
 	
 		chance = {
@@ -2867,6 +2984,14 @@ craven_personality = {
 					ruler_has_personality = babbling_buffoon_personality
 					ruler_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				MIL = 4
+			}
+			modifier = {
+				factor = -0.5
+				MIL = 6
 			}
 		}
 	}
@@ -2899,6 +3024,14 @@ craven_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_MIL = 4
+			}
+			modifier = {
+				factor = -0.5
+				heir_MIL = 6
+			}
 		}
 	}
 	
@@ -2925,6 +3058,14 @@ craven_personality = {
 					consort_has_personality = babbling_buffoon_personality
 					consort_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_MIL = 4
+			}
+			modifier = {
+				factor = -0.5
+				consort_MIL = 6
 			}
 		}
 	}
@@ -2967,6 +3108,14 @@ loose_lips_personality = {
 					ruler_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				DIP = 6
+			}
 		}
 	}
 
@@ -2994,6 +3143,14 @@ loose_lips_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 6
+			}
 		}
 	}
 	
@@ -3020,6 +3177,14 @@ loose_lips_personality = {
 					consort_has_personality = babbling_buffoon_personality
 					consort_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 6
 			}
 		}
 	}
@@ -3158,6 +3323,14 @@ malevolent_personality = {
 					ruler_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				DIP = 6
+			}
 		}
 	}
 
@@ -3185,6 +3358,14 @@ malevolent_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 6
+			}
 		}
 	}
 	
@@ -3211,6 +3392,14 @@ malevolent_personality = {
 					consort_has_personality = babbling_buffoon_personality
 					consort_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 4
+			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 6
 			}
 		}
 	}
@@ -3461,10 +3650,13 @@ petty_personality = {
 ###############################################
 
 
-sovereign_personality = {
+ambitious_personality = {
 	ruler_allow = {
 		allow = {
-			MIL = 3
+			OR = {
+				DIP = 5
+				MIL = 5
+			}
 		}
 	
 		chance = {
@@ -3481,7 +3673,10 @@ sovereign_personality = {
 
 	heir_allow = {
 		allow = {
-			heir_MIL = 3
+			OR = {
+				heir_DIP = 5
+				heir_MIL = 5
+			}
 		}
 	
 		chance = {
@@ -3498,7 +3693,10 @@ sovereign_personality = {
 	
 	consort_allow = {
 		allow = {
-			is_hegemon = yes
+			OR = {
+				consort_DIP = 5
+				consort_MIL = 5
+			}
 		}
 
 		chance = {
@@ -3531,7 +3729,7 @@ sovereign_personality = {
 	underestimate_ae = yes
 	knowledge_sharing = yes
 	
-	unjustified_demands = -0.2
+	unjustified_demands = -0.25
 	nation_designer_cost = 10
 }
 
@@ -3544,15 +3742,15 @@ grandiose_personality = {
 	
 		chance = {
 			modifier = {
-				factor = 0.75
+				factor = 1
 				DIP = 6
 			}
 			modifier = {
-				factor = 0.75
+				factor = 1
 				ADM = 6
 			}
 			modifier = {
-				factor = 0.75
+				factor = 1
 				MIL = 6
 			}
 		}
@@ -3560,46 +3758,17 @@ grandiose_personality = {
 
 	heir_allow = {
 		allow = {
-			NOT = { heir_has_personality = babbling_buffoon_personality }
-			NOT = { heir_has_personality = naive_personality }
 		}
 	
 		chance = {
-			modifier = {
-				factor = 0.75
-				heir_dip = 6
-			}
-			modifier = {
-				factor = 0.75
-				heir_adm = 6
-			}
-			modifier = {
-				factor = 0.75
-				heir_mil = 6
-			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
-			NOT = { consort_has_personality = petty_personality }
-			NOT = { consort_has_personality = babbling_buffoon_personality }
-			NOT = { consort_has_personality = naive_personality }
 		}
 
 		chance = {
-			modifier = {
-				factor = 0.75
-				consort_dip = 6
-			}
-			modifier = {
-				factor = 0.75
-				consort_adm = 6
-			}
-			modifier = {
-				factor = 0.75
-				consort_mil = 6
-			}
 		}
 	}
 
@@ -3611,6 +3780,10 @@ grandiose_personality = {
 		modifier = {
 			factor = 1
 			is_great_power = yes
+		}
+		modifier = {
+			factor = 1
+			current_age = age_of_reformation
 		}
 	}
 	#wants_avoid_debase = yes
@@ -3759,7 +3932,7 @@ born_to_the_saddle_ruler_personality = {
 			}
 			modifier = {
 				factor = 1
-				ruler_has_personality = born_to_the_saddle_personality
+				ruler_has_personality = born_to_the_saddle_ruler_personality
 			}
 			modifier = {
 				factor = 1
@@ -3809,7 +3982,159 @@ born_to_the_saddle_ruler_personality = {
 	nation_designer_cost = 5
 }
 
-#defensive_planner_personality = {}
+defensive_planner_ruler_personality = {
+	ruler_allow = {
+		allow = {
+			MIL = 3
+			NOT = { ruler_has_personality = craven_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				MIL = 5
+			}
+			modifier = {
+				factor = 1
+				OR = {
+					ruler_has_personality = tactical_genius_personality
+					ruler_has_personality = architectural_visionary_personality
+				}
+			}
+		}
+	}
 
-#fascinated_by_artilary_personality = {}
+	heir_allow = {
+		allow = {
+			heir_MIL = 3
+			NOT = { heir_has_personality = craven_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_heir_leader = yes
+			}
+			modifier = {
+				factor = 1
+				ruler_has_personality = defensive_planner_ruler_personality
+			}
+			modifier = {
+				factor = 1
+				heir_MIL = 5
+			}
+			modifier = {
+				factor = 1
+				OR = {
+					ruler_has_personality = tactical_genius_personality
+					ruler_has_personality = architectural_visionary_personality
+				}
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			consort_MIL = 3
+			NOT = { consort_has_personality = craven_personality }
+		}
+
+		chance = {
+			modifier = {
+				factor = 1
+				consort_MIL = 5
+			}
+		}
+	}
+
+	allow = {
+	}
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_idea_group = defensive_ideas
+		}
+	}
+
+	
+
+	knowledge_sharing = yes
+
+	defensiveness = 0.15
+	nation_designer_cost = 5
+}
+
+fascinated_by_artillery_personality = {
+	ruler_allow = {
+		allow = {
+			MIL = 4
+			NOT = { ruler_has_personality = craven_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_monarch_leader = yes
+			}
+			modifier = {
+				factor = 1
+				MIL = 5
+			}
+			modifier = {
+				factor = 1
+				OR = {
+					ruler_has_personality = martial_educator_personality
+					ruler_has_personality = tactical_genius_personality
+				}
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			heir_MIL = 4
+			NOT = { heir_has_personality = craven_personality }
+		}
+	
+		chance = {
+			modifier = {
+				factor = 1
+				is_heir_leader = yes
+			}
+			modifier = {
+				factor = 1
+				heir_MIL = 5
+			}
+			modifier = {
+				factor = 1
+				OR = {
+					ruler_has_personality = martial_educator_personality
+					ruler_has_personality = tactical_genius_personality
+				}
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			
+		}
+
+		chance = {
+		}
+	}
+
+	allow = {
+		mil_tech = 7
+	}
+	
+	chance = {
+	}
+
+	knowledge_sharing = yes
+
+	artillery_cost = -0.1
+	nation_designer_cost = 5
+}
 
