@@ -33,6 +33,7 @@ revolution = {
 	can_start = {
 		has_any_disaster = no
 		NOT = { stability = 2 }
+		revolution_spread = 0.25
 		OR = {
 			NOT = { stability = 0 }
 			revolution_spread = 0.5

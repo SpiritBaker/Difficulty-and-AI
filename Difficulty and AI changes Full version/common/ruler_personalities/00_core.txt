@@ -3539,7 +3539,7 @@ grandiose_personality = {
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = babbling_buffoon_personality }
-			NOT = { ruler_has_personality = naive_enthusiast_personality }
+			NOT = { ruler_has_personality = naive_personality }
 		}
 	
 		chance = {
@@ -3561,7 +3561,7 @@ grandiose_personality = {
 	heir_allow = {
 		allow = {
 			NOT = { heir_has_personality = babbling_buffoon_personality }
-			NOT = { heir_has_personality = naive_enthusiast_personality }
+			NOT = { heir_has_personality = naive_personality }
 		}
 	
 		chance = {
@@ -3584,7 +3584,7 @@ grandiose_personality = {
 		allow = {
 			NOT = { consort_has_personality = petty_personality }
 			NOT = { consort_has_personality = babbling_buffoon_personality }
-			NOT = { consort_has_personality = naive_enthusiast_personality }
+			NOT = { consort_has_personality = naive_personality }
 		}
 
 		chance = {
@@ -3625,7 +3625,7 @@ grandiose_personality = {
 	nation_designer_cost = 5
 }
 
-ruthless_personality = {
+ruthless_ruler_personality = {
 	ruler_allow = {
 		allow = {
 			MIL = 3
@@ -3719,7 +3719,7 @@ ruthless_personality = {
 	nation_designer_cost = 5
 }
 
-born_to_the_saddle_personality = {
+born_to_the_saddle_ruler_personality = {
 	ruler_allow = {
 		allow = {
 			MIL = 3
@@ -3792,7 +3792,7 @@ born_to_the_saddle_personality = {
 
 	allow = {
 		OR = {
-			nomad = yes
+			is_nomad = yes
 			has_idea_group = aristocracy_ideas
 		}
 	}

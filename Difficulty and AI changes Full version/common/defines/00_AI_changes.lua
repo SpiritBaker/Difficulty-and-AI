@@ -43,7 +43,7 @@ NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 2	--Change to above thresh
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 1.5	--Change to above threshold in case of low income
 NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5
 NDefines.NAI.AI_WANT_ACCEPT_CULTURES = 300	--How much the AI values having much development in accepted cultures.
-NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 12	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
+NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 6	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 
 NDefines.NAI.DIPLOMATIC_ACTION_GUARANTEE_POWERBALANCE_FACTOR = 25
 NDefines.NAI.POWERFUL_ALLY_PENALTY = 60	--Penalty on alliance for them already having a powerful ally if much stronger.
@@ -115,8 +115,8 @@ NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.1 -- How many times the
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 100	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
 
---NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1				-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
---NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.8					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
+--NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
+NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
 --MILITARY_FOCUS_DEFAULT = 1.0
 --MILITARY_FOCUS_LOWER_BOUND = 0.0
 NDefines.NAIEconomy.MILITARY_FOCUS_UPPER_BOUND = 3.0
