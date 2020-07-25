@@ -31,7 +31,7 @@
  
  #disband_mercs_event.txt
  MODEVTNAME5089:0 "Petition for Redress"
- MODEVTDESC5089:1 "One of the local [Owner.GetNobilityName] in [Root.GetName] has so upset and mistreated his subjects that a delegation of peasants has come before the [Owner.GetRulerTitleOrRegency] to ask for redress. Agreeing to this would be popular with the peasantry but would be seen as an infringement on their authority by the [Owner.GetNobilityName]."
+ MODEVTDESC5089:1 "One of the local [Root.Owner.GetNobilityName] in [Root.GetName] has so upset and mistreated his subjects that a delegation of peasants has come before the [Root.Owner.GetRulerTitleOrRegency] to ask for redress. Agreeing to this would be popular with the peasantry but would be seen as an infringement on their authority by the [Root.Owner.GetNobilityName]."
  MODEVTOPTA5089:0 "Accept petition."
  MODEVTOPTB5089:0 "Deny petition."
 
