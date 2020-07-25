@@ -77,7 +77,7 @@ country_event = {
 			factor = 120
 			modifier = {
 				factor = 0
-				NOT = { republican_tradition = 20 }
+				NOT = { republican_tradition = 40 }
 			}
 			modifier = {
 				factor = 0
@@ -114,42 +114,42 @@ country_event = {
 				factor = 0
 				NOT = { has_ruler_flag = ruler_reelected }
 				NOT = {
-					republican_tradition = 99
+					republican_tradition = 98
 					has_global_modifier_value = {
 						which = republican_tradition
 						value = 0.5
 					}
 				}
 				NOT = {
-					republican_tradition = 85
+					republican_tradition = 87
 					has_global_modifier_value = {
 						which = republican_tradition
 						value = 1
 					}
 				}
 				NOT = {
-					republican_tradition = 71
+					republican_tradition = 75
 					has_global_modifier_value = {
 						which = republican_tradition
 						value = 1.5
 					}
 				}
 				NOT = {
-					republican_tradition = 57
+					republican_tradition = 63
 					has_global_modifier_value = {
 						which = republican_tradition
 						value = 2
 					}
 				}
 				NOT = {
-					republican_tradition = 43
+					republican_tradition = 52
 					has_global_modifier_value = {
 						which = republican_tradition
 						value = 2.5
 					}
 				}
 				NOT = {
-					republican_tradition = 29
+					republican_tradition = 40
 					has_global_modifier_value = {
 						which = republican_tradition
 						value = 3
@@ -294,7 +294,7 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 0
-				republican_tradition = 20
+				republican_tradition = 40
 				has_ruler_flag = ruler_reelected
 			}
 		}
@@ -337,7 +337,7 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 0
-				republican_tradition = 20
+				republican_tradition = 40
 				has_ruler_flag = ruler_reelected
 			}
 		}
@@ -380,7 +380,7 @@ country_event = {
 			factor = 20
 			modifier = {
 				factor = 0
-				republican_tradition = 20
+				republican_tradition = 40
 				has_ruler_flag = ruler_reelected
 			}
 		}
@@ -427,7 +427,7 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				republican_tradition = 20
+				republican_tradition = 40
 				has_ruler_flag = ruler_reelected
 			}
 		}
