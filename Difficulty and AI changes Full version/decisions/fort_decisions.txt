@@ -52,6 +52,7 @@ country_decisions = {
 						}
 						any_owned_province = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_18th
 							OR = {
 								AND = {
@@ -64,7 +65,7 @@ country_decisions = {
 								AND = {
 									has_building = fort_16th
 									ROOT = {
-										treasury = 600
+										#treasury = 600
 										current_income_balance = 6
 									}
 								}
@@ -112,6 +113,7 @@ country_decisions = {
 						}
 						any_owned_province = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_17th
 							OR = {
 								AND = {
@@ -124,7 +126,7 @@ country_decisions = {
 								AND = {
 									has_building = fort_15th
 									ROOT = {
-										treasury = 600
+										#treasury = 600
 										current_income_balance = 6
 									}
 								}
@@ -157,6 +159,7 @@ country_decisions = {
 						}
 						any_owned_province = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_16th
 							has_building = fort_15th
 							#ROOT = {
@@ -235,6 +238,7 @@ country_decisions = {
 					limit = {
 						any_owned_province = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_18th
 							OR = {
 								AND = {
@@ -247,7 +251,7 @@ country_decisions = {
 								AND = {
 									has_building = fort_16th
 									ROOT = {
-										treasury = 600
+										#treasury = 600
 										current_income_balance = 6
 									}
 								}
@@ -264,6 +268,7 @@ country_decisions = {
 					random_owned_province = {
 						limit = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_18th
 							OR = {
 								AND = {
@@ -276,7 +281,7 @@ country_decisions = {
 								AND = {
 									has_building = fort_16th
 									ROOT = {
-										treasury = 600
+										#treasury = 600
 										current_income_balance = 6
 									}
 								}
@@ -348,6 +353,7 @@ country_decisions = {
 					limit = {
 						any_owned_province = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_17th
 							OR = {
 								AND = {
@@ -360,7 +366,7 @@ country_decisions = {
 								AND = {
 									has_building = fort_15th
 									ROOT = {
-										treasury = 600
+										#treasury = 600
 										current_income_balance = 6
 									}
 								}
@@ -370,6 +376,7 @@ country_decisions = {
 					random_owned_province = {
 						limit = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_17th
 							OR = {
 								AND = {
@@ -382,7 +389,7 @@ country_decisions = {
 								AND = {
 									has_building = fort_15th
 									ROOT = {
-										treasury = 600
+										#treasury = 600
 										current_income_balance = 6
 									}
 								}
@@ -439,6 +446,7 @@ country_decisions = {
 					limit = {
 						any_owned_province = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_16th
 							has_building = fort_15th
 							#ROOT = {
@@ -450,6 +458,7 @@ country_decisions = {
 					random_owned_province = {
 						limit = {
 							is_state_core = ROOT
+							ROOT = { treasury = 600 }
 							can_build = fort_16th
 							has_building = fort_15th
 							#ROOT = {
