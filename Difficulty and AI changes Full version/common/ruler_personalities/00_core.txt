@@ -1721,10 +1721,17 @@ bold_fighter_personality = {
 } #
 strict_personality = {
 	ruler_allow = {
+		allow = {
+			MIL = 2
+		}
 		chance = {
 			modifier = {
 				factor = 1
 				is_monarch_leader = yes
+			}
+			modifier = {
+				factor = -0.5
+				NOT = { MIL = 4 }
 			}
 			modifier = {
 				factor = 1
@@ -1734,10 +1741,17 @@ strict_personality = {
 	}
 
 	heir_allow = {
+		allow = {
+			heir_MIL = 2
+		}
 		chance = {
 			modifier = {
 				factor = 1
 				is_heir_leader = yes
+			}
+			modifier = {
+				factor = -0.5
+				NOT = { heir_MIL = 4 }
 			}
 			modifier = {
 				factor = 1
@@ -1747,10 +1761,17 @@ strict_personality = {
 	}
 	
 	consort_allow = {
+		allow = {
+			consort_MIL = 2
+		}
 		chance = {
 			modifier = {
 				factor = 1
 				consort_MIL = 6
+			}
+			modifier = {
+				factor = -0.5
+				NOT = { consort_MIL = 4 }
 			}
 		}
 	}
@@ -3807,7 +3828,7 @@ ambitious_personality = {
 	underestimate_ae = yes
 	knowledge_sharing = yes
 	
-	unjustified_demands = -0.25
+	unjustified_demands = -0.10
 	nation_designer_cost = 10
 }
 
@@ -3988,6 +4009,10 @@ born_to_the_saddle_ruler_personality = {
 			}
 			modifier = {
 				factor = 1
+				MIL = 6
+			}
+			modifier = {
+				factor = 1
 				OR = {
 					ruler_has_personality = bold_fighter_personality
 					ruler_has_personality = tactical_genius_personality
@@ -4015,6 +4040,10 @@ born_to_the_saddle_ruler_personality = {
 			modifier = {
 				factor = 1
 				heir_MIL = 5
+			}
+			modifier = {
+				factor = 1
+				heir_MIL = 6
 			}
 			modifier = {
 				factor = 1
