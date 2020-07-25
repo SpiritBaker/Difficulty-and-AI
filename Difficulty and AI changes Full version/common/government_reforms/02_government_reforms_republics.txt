@@ -61,6 +61,7 @@ signoria_reform = {
 		culture_group = latin
 	}
 	modifiers = {
+		candidate_random_bonus = 1
 		global_tax_modifier = 0.05
 		max_absolutism = -30
 	}
@@ -1229,6 +1230,13 @@ egalite_reform = {
 	}
 	ai = {
 		factor = 2.5
+		modifier = {
+			factor = 1.5
+			OR = {
+				NOT = { is_revolution_target = yes }
+				NOT = { is_great_power = yes }
+			}
+		}
 	}
 }
 
@@ -1631,6 +1639,13 @@ two_chamber_reform = {
 	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 2
+			OR = {
+				NOT = { is_revolution_target = yes }
+				NOT = { is_great_power = yes }
+			}
+		}
 	}
 }
 
@@ -1787,6 +1802,10 @@ revolutionary_principle_reform = {
 	}
 	ai = {
 		factor = 2
+		modifier = {
+			factor = 5
+			has_reform = revolutionary_empire_reform
+		}	
 	}
 }
 

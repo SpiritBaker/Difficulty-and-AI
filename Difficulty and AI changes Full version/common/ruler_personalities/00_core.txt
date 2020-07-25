@@ -2015,6 +2015,7 @@ fierce_negotiator_personality = {
 babbling_buffoon_personality = {
 	ruler_allow = {
 		allow = {
+			NOT = { DIP = 6 }
 			NOT = { ruler_has_personality = charismatic_negotiator_personality }
 			NOT = { ruler_has_personality = silver_tongue_personality }
 		}
@@ -2043,13 +2044,14 @@ babbling_buffoon_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				DIP = 6
+				DIP = 5
 			}
 		}
 	}
 
 	heir_allow = {
 		allow = {
+			NOT = { heir_DIP = 6 }
 			NOT = { heir_has_personality = charismatic_negotiator_personality }
 			NOT = { heir_has_personality = silver_tongue_personality }
 		}
@@ -2078,13 +2080,14 @@ babbling_buffoon_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				heir_DIP = 6
+				heir_DIP = 5
 			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			NOT = { consort_DIP = 6 }
 			NOT = { consort_has_personality = charismatic_negotiator_personality }
 			NOT = { consort_has_personality = silver_tongue_personality }
 		}
@@ -2137,6 +2140,7 @@ babbling_buffoon_personality = {
 embezzler_personality = {
 	ruler_allow = {
 		allow = {
+			NOT = { ADM = 6 }
 			NOT = { ruler_has_personality = incorruptible_personality }
 		}
 	
@@ -2164,13 +2168,14 @@ embezzler_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				ADM = 6
+				ADM = 5
 			}
 		}
 	}
 
 	heir_allow = {
 		allow = {
+			NOT = { heir_ADM = 6 }
 			NOT = { heir_has_personality = incorruptible_personality }
 		}
 	
@@ -2198,13 +2203,14 @@ embezzler_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				heir_ADM = 6
+				heir_ADM = 5
 			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			NOT = { consort_ADM = 6 }
 			NOT = { consort_has_personality = incorruptible_personality }
 		}
 
@@ -2232,7 +2238,7 @@ embezzler_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				consort_ADM = 6
+				consort_ADM = 5
 			}
 		}
 	}
@@ -2363,6 +2369,7 @@ infertile_personality = {
 drunkard_personality = {
 	ruler_allow = {
 		allow = {
+			NOT = { ADM = 6 }
 			NOT = { ruler_has_personality = pious_personality }
 			NOT = { ruler_has_personality = entrepreneur_personality }
 			NOT = { ruler_has_personality = zealot_personality }
@@ -2386,11 +2393,20 @@ drunkard_personality = {
 					ruler_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				ADM = 4
+			}
+			modifier = {
+				factor = -0.5
+				ADM = 5
+			}
 		}
 	}
 
 	heir_allow = {
 		allow = {
+			NOT = { heir_ADM = 6 }
 			NOT = { heir_has_personality = pious_personality }
 			NOT = { heir_has_personality = entrepreneur_personality }
 			NOT = { heir_has_personality = zealot_personality }
@@ -2414,11 +2430,20 @@ drunkard_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_ADM = 4
+			}
+			modifier = {
+				factor = -0.5
+				heir_ADM = 5
+			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			NOT = { consort_ADM = 6 }
 			NOT = { consort_has_personality = pious_personality }
 			NOT = { consort_has_personality = entrepreneur_personality }
 			NOT = { consort_has_personality = zealot_personality }
@@ -2441,6 +2466,14 @@ drunkard_personality = {
 					consort_has_personality = babbling_buffoon_personality
 					consort_has_personality = petty_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_ADM = 4
+			}
+			modifier = {
+				factor = -0.5
+				consort_ADM = 5
 			}
 		}
 	}
@@ -2466,6 +2499,7 @@ sinner_personality = {
 		allow = {
 			NOT = { ruler_has_personality = pious_personality }
 			NOT = { ruler_has_personality = zealot_personality }
+			NOT = { ruler_has_personality = incorruptible_personality }	
 		}
 	
 		chance = {
@@ -2493,6 +2527,7 @@ sinner_personality = {
 		allow = {
 			NOT = { heir_has_personality = pious_personality }
 			NOT = { heir_has_personality = zealot_personality }
+			NOT = { ruler_has_personality = incorruptible_personality }	
 		}
 	
 		chance = {
@@ -2520,6 +2555,7 @@ sinner_personality = {
 		allow = {
 			NOT = { consort_has_personality = pious_personality }
 			NOT = { consort_has_personality = zealot_personality }
+			NOT = { ruler_has_personality = incorruptible_personality }	
 		}
 
 		chance = {
@@ -2567,6 +2603,8 @@ greedy_personality = {
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = midas_touched_personality }
+			NOT = { ruler_has_personality = righteous_personality }	
+			NOT = { ruler_has_personality = benevolent_personality }
 		}
 	
 		chance = {
@@ -2601,6 +2639,8 @@ greedy_personality = {
 	heir_allow = {
 		allow = {
 			NOT = { heir_has_personality = midas_touched_personality }
+			NOT = { ruler_has_personality = righteous_personality }	
+			NOT = { ruler_has_personality = benevolent_personality }
 		}
 	
 		chance = {
@@ -2635,6 +2675,8 @@ greedy_personality = {
 	consort_allow = {
 		allow = {
 			NOT = { consort_has_personality = midas_touched_personality }
+			NOT = { ruler_has_personality = righteous_personality }	
+			NOT = { ruler_has_personality = benevolent_personality }
 		}
 
 		chance = {
@@ -2721,6 +2763,9 @@ cruel_personality = {
 		allow = {
 			NOT = { ruler_has_personality = just_personality }
 			NOT = { ruler_has_personality = kind_hearted_personality }
+			NOT = { ruler_has_personality = righteous_personality }	
+			NOT = { ruler_has_personality = benevolent_personality }
+			NOT = { ruler_has_personality = humane_personality }		
 		}
 	
 		chance = {
@@ -2752,6 +2797,9 @@ cruel_personality = {
 		allow = {
 			NOT = { heir_has_personality = just_personality }
 			NOT = { heir_has_personality = kind_hearted_personality }
+			NOT = { ruler_has_personality = righteous_personality }	
+			NOT = { ruler_has_personality = benevolent_personality }
+			NOT = { ruler_has_personality = humane_personality }
 		}
 	
 		chance = {
@@ -2783,6 +2831,9 @@ cruel_personality = {
 		allow = {
 			NOT = { consort_has_personality = just_personality }
 			NOT = { consort_has_personality = kind_hearted_personality }
+			NOT = { ruler_has_personality = righteous_personality }	
+			NOT = { ruler_has_personality = benevolent_personality }
+			NOT = { ruler_has_personality = humane_personality }	
 		}
 
 		chance = {
@@ -2824,6 +2875,7 @@ cruel_personality = {
 naive_personality = {
 	ruler_allow = {
 		allow = {
+			NOT = { DIP = 6 }
 			NOT = { ruler_has_personality = silver_tongue_personality }
 			NOT = { ruler_has_personality = careful_personality }
 		}
@@ -2856,13 +2908,14 @@ naive_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				DIP = 6
+				DIP = 5
 			}
 		}
 	}
 
 	heir_allow = {
 		allow = {
+			NOT = { heir_DIP = 6 }
 			NOT = { heir_has_personality = silver_tongue_personality }
 			NOT = { heir_has_personality = careful_personality }
 		}
@@ -2895,13 +2948,14 @@ naive_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				heir_DIP = 6
+				heir_DIP = 5
 			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			NOT = { consort_DIP = 6 }
 			NOT = { consort_has_personality = silver_tongue_personality }
 			NOT = { consort_has_personality = careful_personality }
 		}
@@ -2934,7 +2988,7 @@ naive_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				consort_DIP = 6
+				consort_DIP = 5
 			}
 		}
 	}
@@ -2958,6 +3012,7 @@ naive_personality = {
 craven_personality = {
 	ruler_allow = {
 		allow = {
+			NOT = { MIL = 6 }
 			NOT = { ruler_has_personality = inspiring_leader_personality }
 			NOT = { ruler_has_personality = bold_fighter_personality }
 			NOT = { ruler_has_personality = ruthless_ruler_personality }
@@ -2991,13 +3046,14 @@ craven_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				MIL = 6
+				MIL = 5
 			}
 		}
 	}
 
 	heir_allow = {
 		allow = {
+			NOT = { heir_MIL = 6 }
 			NOT = { heir_has_personality = inspiring_leader_personality }
 			NOT = { heir_has_personality = bold_fighter_personality }
 		}
@@ -3030,13 +3086,14 @@ craven_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				heir_MIL = 6
+				heir_MIL = 5
 			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			NOT = { consort_MIL = 6 }
 			NOT = { consort_has_personality = inspiring_leader_personality }
 			NOT = { consort_has_personality = bold_fighter_personality }
 		}
@@ -3065,7 +3122,7 @@ craven_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				consort_MIL = 6
+				consort_MIL = 5
 			}
 		}
 	}
@@ -3086,6 +3143,7 @@ craven_personality = {
 loose_lips_personality = {
 	ruler_allow = {
 		allow = {
+			NOT = { DIP = 6 }
 			NOT = { ruler_has_personality = intricate_web_weaver_personality }
 			NOT = { ruler_has_personality = secretive_personality }
 		}
@@ -3114,13 +3172,14 @@ loose_lips_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				DIP = 6
+				DIP = 5
 			}
 		}
 	}
 
 	heir_allow = {
 		allow = {
+			NOT = { heir_DIP = 6 }
 			NOT = { heir_has_personality = intricate_web_weaver_personality }
 			NOT = { heir_has_personality = secretive_personality }
 		}
@@ -3149,13 +3208,14 @@ loose_lips_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				heir_DIP = 6
+				heir_DIP = 5
 			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			NOT = { consort_DIP = 6 }
 			NOT = { consort_has_personality = intricate_web_weaver_personality }
 			NOT = { consort_has_personality = secretive_personality }
 		}
@@ -3184,7 +3244,7 @@ loose_lips_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				consort_DIP = 6
+				consort_DIP = 5
 			}
 		}
 	}
@@ -3301,6 +3361,7 @@ obsessive_perfectionist_personality = {
 malevolent_personality = {
 	ruler_allow = {
 		allow = {
+			NOT = { DIP = 6 }
 			NOT = { ruler_has_personality = benevolent_personality }
 			NOT = { ruler_has_personality = kind_hearted_personality }
 		}
@@ -3329,13 +3390,14 @@ malevolent_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				DIP = 6
+				DIP = 5
 			}
 		}
 	}
 
 	heir_allow = {
 		allow = {
+			NOT = { heir_DIP = 6 }
 			NOT = { heir_has_personality = benevolent_personality }
 			NOT = { heir_has_personality = kind_hearted_personality }
 		}
@@ -3364,13 +3426,14 @@ malevolent_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				heir_DIP = 6
+				heir_DIP = 5
 			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			NOT = { consort_DIP = 6 }
 			NOT = { consort_has_personality = benevolent_personality }
 			NOT = { consort_has_personality = kind_hearted_personality }
 		}
@@ -3399,7 +3462,7 @@ malevolent_personality = {
 			}
 			modifier = {
 				factor = -0.5
-				consort_DIP = 6
+				consort_DIP = 5
 			}
 		}
 	}
@@ -3654,6 +3717,7 @@ ambitious_personality = {
 	ruler_allow = {
 		allow = {
 			OR = {
+				ADM = 5
 				DIP = 5
 				MIL = 5
 			}
@@ -3662,11 +3726,11 @@ ambitious_personality = {
 		chance = {
 			modifier = {
 				factor = 1
-				government = monarchy
-			}
-			modifier = {
-				factor = 1
-				is_hegemon = yes
+				OR = {
+					DIP = 6
+					MIL = 6
+					ADM = 6
+				}
 			}
 		}
 	}
@@ -3674,19 +3738,20 @@ ambitious_personality = {
 	heir_allow = {
 		allow = {
 			OR = {
-				heir_DIP = 5
-				heir_MIL = 5
+				heir_DIP = 6
+				heir_MIL = 6
+				heir_ADM = 6
 			}
 		}
 	
 		chance = {
 			modifier = {
 				factor = 1
-				government = monarchy
-			}
-			modifier = {
-				factor = 1
-				is_hegemon = yes
+				OR = {
+					heir_DIP = 6
+					heir_MIL = 6
+					heir_ADM = 6
+				}
 			}
 		}
 	}
@@ -3694,13 +3759,21 @@ ambitious_personality = {
 	consort_allow = {
 		allow = {
 			OR = {
+				consort_ADM = 5
 				consort_DIP = 5
 				consort_MIL = 5
 			}
 		}
 
 		chance = {
-
+			modifier = {
+				factor = 1
+				OR = {
+					heir_DIP = 6
+					heir_MIL = 6
+					heir_ADM = 6
+				}
+			}
 		}
 	}
 
@@ -3716,6 +3789,11 @@ ambitious_personality = {
 			factor = 1
 			great_power_rank = 1
 			NOT = { great_power_rank = 4 }
+		}
+		modifier = {
+			factor = 1
+			government = monarchy
+			is_hegemon = yes
 		}
 	}
 

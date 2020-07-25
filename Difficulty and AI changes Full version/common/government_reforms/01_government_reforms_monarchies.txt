@@ -1849,6 +1849,10 @@ emperor_of_the_revolution_reform = {
 	}
 	ai = {
 		factor = 2.5
+		modifier = {
+			factor = 2
+			is_revolution_target = yes
+		}
 	}
 }
 
