@@ -945,9 +945,15 @@ estate_nobles_levies = {
 	influence = 0.1
 	is_valid = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 	}
 	can_select = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.25
@@ -1082,6 +1088,16 @@ estate_nobles_right_of_counsel = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
+	is_valid = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
+	}
+	can_select = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
+	}
 	penalties = {
 	}
 	benefits = {
@@ -1101,6 +1117,9 @@ estate_nobles_french_strong_duchies = {
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 		OR = {
 			has_estate_privilege = estate_nobles_french_strong_duchies
 			AND = {
@@ -1116,6 +1135,9 @@ estate_nobles_french_strong_duchies = {
 		}
 	}
 	can_select = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 		if = {
 			limit = {
 				has_dlc = "Art of War"
@@ -2888,6 +2910,14 @@ estate_maratha_levies = {
 	influence = 0.1
 	is_valid = {
 		NOT = { religion_group = muslim }
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
+	}
+	can_select = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.25
@@ -2987,6 +3017,14 @@ estate_maratha_levies_for_muslims = {
 	influence = 0.1
 	is_valid = {
 		religion_group = muslim
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
+	}
+	can_select = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 	}
 	on_granted = {
 		custom_tooltip = estate_maratha_levies_for_muslims_effect_tooltip
@@ -3473,6 +3511,14 @@ estate_nobles_supremacy_over_crown = {
 	loyalty = 0.1
 	is_valid = {
 		has_dlc = "Emperor"
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
+	}
+	can_select = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 	}
 	penalties = {
 	}
@@ -3518,6 +3564,14 @@ estate_brahmins_supremacy_over_crown = {
 	is_valid = {
 		has_dlc = "Emperor"
 		NOT = { religion_group = muslim }
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
+	}
+	can_select = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 	}
 	penalties = {
 	}
@@ -6495,6 +6549,9 @@ estate_nobles_strong_duchies = {
 	influence = 0.1
 	loyalty = 0.05
 	is_valid = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 		OR = {
 			any_subject_country = {
 				is_march = yes
@@ -6510,6 +6567,9 @@ estate_nobles_strong_duchies = {
 		}
 	}
 	can_select = {
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 		if = {
 			limit = {
 				has_dlc = "Art of War"
@@ -7406,12 +7466,12 @@ estate_burghers_prussian_confederation = {
 	ai_will_do = {
 		factor = 10
 		modifier = {
-			factor = 1.5
+			factor = 2
 			owns = 43
 		}
 		modifier = {
 			factor = 0
-			is_year = 1501
+			is_year = 1510
 		}
 	}
 }

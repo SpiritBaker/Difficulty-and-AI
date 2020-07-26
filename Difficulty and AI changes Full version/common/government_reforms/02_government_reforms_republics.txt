@@ -170,6 +170,8 @@ merchants_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		max_absolutism = -50
+		church_influence_modifier = -0.1
+		nobles_influence_modifier = -0.1
 		merchants = 1
 	}
 	valid_for_nation_designer = yes
@@ -259,6 +261,8 @@ venice_merchants_reform = {
 		max_absolutism = -50
 		merchants = 1
 		yearly_corruption = -0.1
+		church_influence_modifier = -0.1
+		nobles_influence_modifier = -0.1
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -694,6 +698,8 @@ trading_city = {
 		max_absolutism = -20
 		global_trade_power = 0.1
 		max_absolutism = -20
+		church_influence_modifier = -0.1
+		nobles_influence_modifier = -0.1
 	}
 
 	custom_attributes = {
@@ -776,6 +782,8 @@ veche_republic = {
 		merchants = 1
 		governing_capacity = 50
 		max_absolutism = -50
+		church_influence_modifier = -0.1
+		nobles_influence_modifier = -0.1
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
