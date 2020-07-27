@@ -277,6 +277,14 @@ set_base_target = {
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				NOT = {
+					controlled_by = owner
+					has_siege = no
+				}
+			}
+		}
 		else = {
 			set_base_value = {
 				which = baseCost
