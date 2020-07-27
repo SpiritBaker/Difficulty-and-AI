@@ -63,7 +63,7 @@ signoria_reform = {
 	modifiers = {
 		candidate_random_bonus = 1
 		global_tax_modifier = 0.05
-		max_absolutism = -30
+		max_absolutism = -25
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -1111,6 +1111,7 @@ republican_authoritarianism_reform = {
 	}
 	modifiers = {
 		global_unrest = -1
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 1
