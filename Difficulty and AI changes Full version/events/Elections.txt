@@ -55,27 +55,36 @@ country_event = {
 			random_list = {
 				1 = {
 					set_country_flag = adm_flag
-					set_country_flag = dip2_flag
-				}
-				1 = {
-					set_country_flag = adm_flag
-					set_country_flag = mil2_flag
+					random_list = {
+						1 = {
+							set_country_flag = dip2_flag
+						}
+						1 = {
+							set_country_flag = mil2_flag
+						}
+					}
 				}
 				1 = {
 					set_country_flag = dip_flag
-					set_country_flag = adm2_flag
-				}
-				1 = {
-					set_country_flag = dip_flag
-					set_country_flag = mil2_flag
+					random_list = {
+						1 = {
+							set_country_flag = adm2_flag
+						}
+						1 = {
+							set_country_flag = mil2_flag
+						}
+					}
 				}
 				1 = {
 					set_country_flag = mil_flag
-					set_country_flag = adm2_flag
-				}
-				1 = {
-					set_country_flag = mil_flag
-					set_country_flag = dip2_flag
+					random_list = {
+						1 = {
+							set_country_flag = adm2_flag
+						}
+						1 = {
+							set_country_flag = dip2_flag
+						}
+					}
 				}
 			}
 		}

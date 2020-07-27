@@ -1,4 +1,34 @@
 random_ruler = {
+	clr_country_flag = adm_4xx
+	clr_country_flag = adm_5xx
+	clr_country_flag = adm_6xx
+	clr_country_flag = adm_x1x
+	clr_country_flag = adm_x2x
+	clr_country_flag = adm_x3x
+	clr_country_flag = adm_xx1
+	clr_country_flag = adm_xx2
+	clr_country_flag = adm_xx3
+	
+	clr_country_flag = dip_1xx
+	clr_country_flag = dip_2xx
+	clr_country_flag = dip_3xx
+	clr_country_flag = dip_x4x
+	clr_country_flag = dip_x5x
+	clr_country_flag = dip_x6x
+	clr_country_flag = dip_xx1
+	clr_country_flag = dip_xx2
+	clr_country_flag = dip_xx3
+	
+	clr_country_flag = mil_1xx
+	clr_country_flag = mil_2xx
+	clr_country_flag = mil_3xx
+	clr_country_flag = mil_x1x
+	clr_country_flag = mil_x2x
+	clr_country_flag = mil_x3x
+	clr_country_flag = mil_xx4
+	clr_country_flag = mil_xx5
+	clr_country_flag = mil_xx6
+	
 	random_list = {
 		1 = {
 			set_country_flag = adm_4xx
@@ -119,7 +149,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -131,7 +160,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -140,9 +168,7 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x1x
 		}
 		else_if = {
 			limit = {
@@ -158,7 +184,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -170,7 +195,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -179,9 +203,7 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x2x
 		}
 		else = {
 			if = {
@@ -194,7 +216,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -206,7 +227,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -215,11 +235,8 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x3x
 		}
-		clr_country_flag = adm_4xx
 	}
 	else_if = {
 		limit = {
@@ -239,7 +256,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -251,7 +267,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -260,9 +275,7 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x1x
 		}
 		else_if = {
 			limit = {
@@ -278,7 +291,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -290,7 +302,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -299,9 +310,7 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x2x
 		}
 		else = {
 			if = {
@@ -314,7 +323,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -326,7 +334,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -335,11 +342,8 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x3x
 		}
-		clr_country_flag = adm_5xx
 	}
 	else = {
 		if = {
@@ -356,7 +360,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -368,7 +371,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -377,9 +379,7 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x1x
 		}
 		else_if = {
 			limit = {
@@ -395,7 +395,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -407,7 +406,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -416,9 +414,7 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x2x
 		}
 		else = {
 			if = {
@@ -431,7 +427,6 @@ adm_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -443,7 +438,6 @@ adm_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -452,11 +446,8 @@ adm_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x3x
 		}
-		clr_country_flag = adm_6xx
 	}
 }
 
@@ -479,7 +470,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -491,7 +481,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -500,9 +489,7 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x4x
 		}
 		else_if = {
 			limit = {
@@ -518,7 +505,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -530,7 +516,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -539,9 +524,7 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x5x
 		}
 		else = {
 			if = {
@@ -554,7 +537,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -566,7 +548,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -575,11 +556,8 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x6x
 		}
-		clr_country_flag = dip_1xx
 	}
 	else_if = {
 		limit = {
@@ -599,7 +577,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -611,7 +588,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -620,9 +596,7 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x4x
 		}
 		else_if = {
 			limit = {
@@ -638,7 +612,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -650,7 +623,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -659,9 +631,7 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x5x
 		}
 		else = {
 			if = {
@@ -674,7 +644,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -686,7 +655,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -695,11 +663,8 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x6x
 		}
-		clr_country_flag = dip_2xx
 	}
 	else = {
 		if = {
@@ -716,7 +681,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -728,7 +692,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -737,9 +700,7 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x4x
 		}
 		else_if = {
 			limit = {
@@ -755,7 +716,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -767,7 +727,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -776,9 +735,7 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x5x
 		}
 		else = {
 			if = {
@@ -791,7 +748,6 @@ dip_ruler = {
 					mil = 1
 					fixed = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -803,7 +759,6 @@ dip_ruler = {
 					mil = 2
 					fixed = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -812,11 +767,8 @@ dip_ruler = {
 					mil = 3
 					fixed = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x6x
 		}
-		clr_country_flag = dip_3xx
 	}
 }
 
@@ -839,7 +791,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -851,7 +802,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -860,9 +810,7 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x1x
 		}
 		else_if = {
 			limit = {
@@ -878,7 +826,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -890,7 +837,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -899,9 +845,7 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x2x
 		}
 		else = {
 			if = {
@@ -914,7 +858,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -926,7 +869,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -935,11 +877,8 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x3x
 		}
-		clr_country_flag = mil_1xx
 	}
 	else_if = {
 		limit = {
@@ -959,7 +898,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -971,7 +909,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -980,9 +917,7 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x1x
 		}
 		else_if = {
 			limit = {
@@ -998,7 +933,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -1010,7 +944,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -1019,9 +952,7 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x2x
 		}
 		else = {
 			if = {
@@ -1034,7 +965,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -1046,7 +976,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -1055,11 +984,8 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x3x
 		}
-		clr_country_flag = mil_2xx
 	}
 	else = {
 		if = {
@@ -1076,7 +1002,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -1088,7 +1013,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -1097,9 +1021,7 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x1x
 		}
 		else_if = {
 			limit = {
@@ -1115,7 +1037,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -1127,7 +1048,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -1136,9 +1056,7 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x2x
 		}
 		else = {
 			if = {
@@ -1151,7 +1069,6 @@ mil_ruler = {
 					mil = 4
 					fixed = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -1163,7 +1080,6 @@ mil_ruler = {
 					mil = 5
 					fixed = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -1172,11 +1088,8 @@ mil_ruler = {
 					mil = 6
 					fixed = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x3x
 		}
-		clr_country_flag = mil_3xx
 	}
 }
 
@@ -1200,7 +1113,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1213,7 +1125,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1223,9 +1134,7 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x1x
 		}
 		else_if = {
 			limit = {
@@ -1242,7 +1151,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1255,7 +1163,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1265,9 +1172,7 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x2x
 		}
 		else = {
 			if = {
@@ -1281,7 +1186,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1294,7 +1198,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1304,11 +1207,8 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x3x
 		}
-		clr_country_flag = adm_4xx
 	}
 	else_if = {
 		limit = {
@@ -1329,7 +1229,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1342,7 +1241,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1352,9 +1250,7 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x1x
 		}
 		else_if = {
 			limit = {
@@ -1371,7 +1267,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1384,7 +1279,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1394,9 +1288,7 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x2x
 		}
 		else = {
 			if = {
@@ -1410,7 +1302,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1423,7 +1314,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1433,11 +1323,8 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x3x
 		}
-		clr_country_flag = adm_5xx
 	}
 	else = {
 		if = {
@@ -1455,7 +1342,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1468,7 +1354,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1478,9 +1363,7 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x1x
 		}
 		else_if = {
 			limit = {
@@ -1497,7 +1380,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1510,7 +1392,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1520,9 +1401,7 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x2x
 		}
 		else = {
 			if = {
@@ -1536,7 +1415,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx1
 			}
 			else_if = {
 				limit = {
@@ -1549,7 +1427,6 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1559,11 +1436,8 @@ adm_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = adm_xx3
 			}
-			clr_country_flag = adm_x3x
 		}
-		clr_country_flag = adm_6xx
 	}
 }
 
@@ -1587,7 +1461,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1600,7 +1473,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1610,9 +1482,7 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x4x
 		}
 		else_if = {
 			limit = {
@@ -1629,7 +1499,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1642,7 +1511,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1652,9 +1520,7 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x5x
 		}
 		else = {
 			if = {
@@ -1668,7 +1534,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1681,7 +1546,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1691,11 +1555,8 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x6x
 		}
-		clr_country_flag = dip_1xx
 	}
 	else_if = {
 		limit = {
@@ -1716,7 +1577,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1729,7 +1589,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1739,9 +1598,7 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x4x
 		}
 		else_if = {
 			limit = {
@@ -1758,7 +1615,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1771,7 +1627,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1781,9 +1636,7 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x5x
 		}
 		else = {
 			if = {
@@ -1797,7 +1650,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1810,7 +1662,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1820,11 +1671,8 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x6x
 		}
-		clr_country_flag = dip_2xx
 	}
 	else = {
 		if = {
@@ -1842,7 +1690,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1855,7 +1702,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1865,9 +1711,7 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x4x
 		}
 		else_if = {
 			limit = {
@@ -1884,7 +1728,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1897,7 +1740,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1907,9 +1749,7 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x5x
 		}
 		else = {
 			if = {
@@ -1923,7 +1763,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx1
 			}
 			else_if = {
 				limit = {
@@ -1936,7 +1775,6 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx2
 			}
 			else = {
 				define_ruler = {
@@ -1946,11 +1784,8 @@ dip_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = dip_xx3
 			}
-			clr_country_flag = dip_x6x
 		}
-		clr_country_flag = dip_3xx
 	}
 }
 
@@ -1974,7 +1809,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -1987,7 +1821,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -1997,9 +1830,7 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x1x
 		}
 		else_if = {
 			limit = {
@@ -2016,7 +1847,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -2029,7 +1859,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -2039,9 +1868,7 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x2x
 		}
 		else = {
 			if = {
@@ -2055,7 +1882,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -2068,7 +1894,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -2078,11 +1903,8 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x3x
 		}
-		clr_country_flag = mil_1xx
 	}
 	else_if = {
 		limit = {
@@ -2103,7 +1925,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -2116,7 +1937,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -2126,9 +1946,7 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x1x
 		}
 		else_if = {
 			limit = {
@@ -2145,7 +1963,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -2158,7 +1975,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -2168,9 +1984,7 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x2x
 		}
 		else = {
 			if = {
@@ -2184,7 +1998,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -2197,7 +2010,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -2207,11 +2019,8 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x3x
 		}
-		clr_country_flag = mil_2xx
 	}
 	else = {
 		if = {
@@ -2229,7 +2038,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -2242,7 +2050,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -2252,9 +2059,7 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x1x
 		}
 		else_if = {
 			limit = {
@@ -2271,7 +2076,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -2284,7 +2088,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -2294,9 +2097,7 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x2x
 		}
 		else = {
 			if = {
@@ -2310,7 +2111,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx4
 			}
 			else_if = {
 				limit = {
@@ -2323,7 +2123,6 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx5
 			}
 			else = {
 				define_ruler = {
@@ -2333,10 +2132,7 @@ mil_ruler2 = {
 					fixed = yes
 					random_gender = yes
 				}
-				clr_country_flag = mil_xx6
 			}
-			clr_country_flag = mil_x3x
 		}
-		clr_country_flag = mil_3xx
 	}
 }
