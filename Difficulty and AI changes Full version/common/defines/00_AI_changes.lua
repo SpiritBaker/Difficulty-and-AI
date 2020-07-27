@@ -43,7 +43,7 @@ NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 2	--Change to above thresh
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 1.5	--Change to above threshold in case of low income
 NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5
 NDefines.NAI.AI_WANT_ACCEPT_CULTURES = 300	--How much the AI values having much development in accepted cultures.
-NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 6	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
+--NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 12	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 
 NDefines.NAI.DIPLOMATIC_ACTION_GUARANTEE_POWERBALANCE_FACTOR = 25
 NDefines.NAI.POWERFUL_ALLY_PENALTY = 60	--Penalty on alliance for them already having a powerful ally if much stronger.
@@ -66,8 +66,8 @@ NDefines.NAI.DIPLOMATIC_ACTION_SUBSIDIES_MIN_VALUE = 0.2 --Minimum amount of sub
 
 --NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 3
 NDefines.NAI.DEBASE_THRESHOLD = -5000 -- AI will not debase if it has more gold than this.
-NDefines.NAI.INVADING_BRAVERY =	1.0	--If (defender strength) / (invader strength) >
-NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.6
+NDefines.NAI.INVADING_BRAVERY =	1.2	--If (defender strength) / (invader strength) >
+NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.5
 NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.3
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45

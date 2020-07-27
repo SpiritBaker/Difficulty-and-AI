@@ -329,7 +329,12 @@ estate_nobles =
 			}
 		}
 	}
-
+	custom_name = {
+		desc = estate_aristocracy
+		trigger = {
+			culture_group = latin
+		}
+	}
 	color = { 200 0 50 }
 	
 	privileges = {

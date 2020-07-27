@@ -1,7 +1,7 @@
 french_revolution = {
 	ended_by_country_breaking_to_rebels = no
 	potential = {
-		#NOT = { has_country_flag = had_revolution }
+		NOT = { has_country_flag = had_revolution }
 		current_age = age_of_revolutions
 		tag = FRA
 		is_free_or_tributary_trigger = yes
@@ -30,8 +30,8 @@ french_revolution = {
 	
 	can_start = {
 		has_any_disaster = no
-		NOT = { stability = 2 }
-		revolution_spread = 0.25
+		NOT = { stability = 1 }
+		#revolution_spread = 0.25
 		OR = {
 			revolution_spread = 0.5
 			NOT = { stability = 0 }

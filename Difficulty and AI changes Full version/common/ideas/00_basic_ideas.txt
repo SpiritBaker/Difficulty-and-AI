@@ -913,6 +913,10 @@ exploration_ideas = {
 		}
 		modifier = {
 			factor = 0.1
+			technology_group = indian
+		}
+		modifier = {
+			factor = 0.1
 			OR = {
 				tag = TUR
 				tag = MNG
@@ -922,7 +926,6 @@ exploration_ideas = {
 		}
 		modifier = {
 			factor = 0.5
-			tag = FRA
 			num_of_loans = 5
 		}
 		modifier = {
@@ -943,20 +946,20 @@ exploration_ideas = {
 			technology_group = high_american
 		}
 		modifier = {
-			factor = 2.0
-			num_of_ports = 5
-		}
-		modifier = {
-			factor = 2.0
+			factor = 1.5
 			num_of_ports = 10
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.5
 			num_of_ports = 15
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.5
 			num_of_ports = 20
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 25
 		}
 		modifier = {
 			factor = 1000

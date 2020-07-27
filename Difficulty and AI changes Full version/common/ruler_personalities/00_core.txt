@@ -3881,8 +3881,11 @@ grandiose_personality = {
 			is_great_power = yes
 		}
 		modifier = {
-			factor = 1
-			current_age = age_of_reformation
+			factor = 2
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_discovery
+			}
 		}
 	}
 	#wants_avoid_debase = yes
