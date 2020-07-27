@@ -32,7 +32,8 @@ revolution = {
 	
 	can_start = {
 		has_any_disaster = no
-		NOT = { stability = 1 }
+		NOT = { stability = 2 }
+		incompetent_monarch = yes
 		#revolution_spread = 0.25
 		OR = {
 			NOT = { stability = 0 }

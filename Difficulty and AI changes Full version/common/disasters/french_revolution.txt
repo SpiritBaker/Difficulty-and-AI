@@ -30,7 +30,7 @@ french_revolution = {
 	
 	can_start = {
 		has_any_disaster = no
-		NOT = { stability = 1 }
+		incompetent_monarch = yes
 		#revolution_spread = 0.25
 		OR = {
 			revolution_spread = 0.5

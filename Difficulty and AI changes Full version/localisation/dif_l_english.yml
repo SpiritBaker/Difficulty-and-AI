@@ -37,3 +37,6 @@
 
  #estates
  estate_aristocracy:0 "Aristocracy"
+
+ #trigger
+ incompetent_monarch:0 "Incompetent Monarch"
