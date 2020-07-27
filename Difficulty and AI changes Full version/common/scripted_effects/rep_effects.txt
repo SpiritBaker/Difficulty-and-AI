@@ -1,0 +1,2342 @@
+random_ruler = {
+	random_list = {
+		1 = {
+			set_country_flag = adm_4xx
+		}
+		1 = {
+			set_country_flag = adm_5xx
+		}
+		1 = {
+			set_country_flag = adm_6xx
+		}
+	}
+	random_list = {
+		1 = {
+			set_country_flag = adm_x1x
+		}
+		1 = {
+			set_country_flag = adm_x2x
+		}
+		1 = {
+			set_country_flag = adm_x3x
+		}
+	}
+	random_list = {
+		1 = {
+			set_country_flag = adm_xx1
+		}
+		1 = {
+			set_country_flag = adm_xx2
+		}
+		1 = {
+			set_country_flag = adm_xx3
+		}
+	}
+	random_list = {
+		1 = {
+			set_country_flag = dip_1xx
+		}
+		1 = {
+			set_country_flag = dip_2xx
+		}
+		1 = {
+			set_country_flag = dip_3xx
+		}
+	}
+	random_list = {
+		1 = {
+			set_country_flag = dip_x4x
+		}
+		1 = {
+			set_country_flag = dip_x5x
+		}
+		1 = {
+			set_country_flag = dip_x6x
+		}
+	}
+	random_list = {
+		1 = {
+			set_country_flag = dip_xx1
+		}
+		1 = {
+			set_country_flag = dip_xx2
+		}
+		1 = {
+			set_country_flag = dip_xx3
+		}
+	}
+	random_list = {
+		1 = {
+			set_country_flag = mil_1xx
+		}
+		1 = {
+			set_country_flag = mil_2xx
+		}
+		1 = {
+			set_country_flag = mil_3xx
+		}
+	}
+	random_list = {
+		1 = {
+			set_country_flag = mil_x1x
+		}
+		1 = {
+			set_country_flag = mil_x2x
+		}
+		1 = {
+			set_country_flag = mil_x3x
+		}
+	}
+	random_list = {
+		1 = {
+			set_country_flag = mil_xx4
+		}
+		1 = {
+			set_country_flag = mil_xx5
+		}
+		1 = {
+			set_country_flag = mil_xx6
+		}
+	}
+}
+
+adm_ruler = {
+	if = {
+		limit = {
+			has_country_flag = adm_4xx
+		}
+		if = {
+			limit = {
+				has_country_flag = adm_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 4
+					dip = 1
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 4
+					dip = 1
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 4
+					dip = 1
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = adm_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 4
+					dip = 2
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 4
+					dip = 2
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 4
+					dip = 2
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 4
+					dip = 3
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 4
+					dip = 3
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 4
+					dip = 3
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x3x
+		}
+		clr_country_flag = adm_4xx
+	}
+	else_if = {
+		limit = {
+			has_country_flag = adm_5xx
+		}
+		if = {
+			limit = {
+				has_country_flag = adm_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 5
+					dip = 1
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 5
+					dip = 1
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 5
+					dip = 1
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = adm_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 5
+					dip = 2
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 5
+					dip = 2
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 5
+					dip = 2
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 5
+					dip = 3
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 5
+					dip = 3
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 5
+					dip = 3
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x3x
+		}
+		clr_country_flag = adm_5xx
+	}
+	else = {
+		if = {
+			limit = {
+				has_country_flag = adm_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 6
+					dip = 1
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 6
+					dip = 1
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 6
+					dip = 1
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = adm_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 6
+					dip = 2
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 6
+					dip = 2
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 6
+					dip = 2
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 6
+					dip = 3
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 6
+					dip = 3
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 6
+					dip = 3
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x3x
+		}
+		clr_country_flag = adm_6xx
+	}
+}
+
+dip_ruler = {
+	if = {
+		limit = {
+			has_country_flag = dip_1xx
+		}
+		if = {
+			limit = {
+				has_country_flag = dip_x4x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 1
+					dip = 4
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 1
+					dip = 4
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 4
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x4x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = dip_x5x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 1
+					dip = 5
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 1
+					dip = 5
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 5
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x5x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 1
+					dip = 6
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 1
+					dip = 6
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 6
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x6x
+		}
+		clr_country_flag = dip_1xx
+	}
+	else_if = {
+		limit = {
+			has_country_flag = dip_2xx
+		}
+		if = {
+			limit = {
+				has_country_flag = dip_x4x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 2
+					dip = 4
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 2
+					dip = 4
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 4
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x4x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = dip_x5x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 2
+					dip = 5
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 2
+					dip = 5
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 5
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x5x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 2
+					dip = 6
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 2
+					dip = 6
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 6
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x6x
+		}
+		clr_country_flag = dip_2xx
+	}
+	else = {
+		if = {
+			limit = {
+				has_country_flag = dip_x4x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 3
+					dip = 4
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 3
+					dip = 4
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 4
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x4x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = dip_x5x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 3
+					dip = 5
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 3
+					dip = 5
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 5
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x5x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 3
+					dip = 6
+					mil = 1
+					fixed = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 3
+					dip = 6
+					mil = 2
+					fixed = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 6
+					mil = 3
+					fixed = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x6x
+		}
+		clr_country_flag = dip_3xx
+	}
+}
+
+mil_ruler = {
+	if = {
+		limit = {
+			has_country_flag = mil_1xx
+		}
+		if = {
+			limit = {
+				has_country_flag = mil_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 1
+					dip = 1
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 1
+					dip = 1
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 1
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = mil_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 1
+					dip = 2
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 1
+					dip = 2
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 2
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 1
+					dip = 3
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 1
+					dip = 3
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 3
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x3x
+		}
+		clr_country_flag = mil_1xx
+	}
+	else_if = {
+		limit = {
+			has_country_flag = mil_2xx
+		}
+		if = {
+			limit = {
+				has_country_flag = mil_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 2
+					dip = 1
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 2
+					dip = 1
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 1
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = mil_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 2
+					dip = 2
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 2
+					dip = 2
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 2
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 2
+					dip = 3
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 2
+					dip = 3
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 3
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x3x
+		}
+		clr_country_flag = mil_2xx
+	}
+	else = {
+		if = {
+			limit = {
+				has_country_flag = mil_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 3
+					dip = 1
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 3
+					dip = 1
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 1
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = mil_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 3
+					dip = 2
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 3
+					dip = 2
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 2
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 3
+					dip = 3
+					mil = 4
+					fixed = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 3
+					dip = 3
+					mil = 5
+					fixed = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 3
+					mil = 6
+					fixed = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x3x
+		}
+		clr_country_flag = mil_3xx
+	}
+}
+
+adm_ruler2 = {
+	if = {
+		limit = {
+			has_country_flag = adm_4xx
+		}
+		if = {
+			limit = {
+				has_country_flag = adm_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 4
+					dip = 1
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 4
+					dip = 1
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 4
+					dip = 1
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = adm_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 4
+					dip = 2
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 4
+					dip = 2
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 4
+					dip = 2
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 4
+					dip = 3
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 4
+					dip = 3
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 4
+					dip = 3
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x3x
+		}
+		clr_country_flag = adm_4xx
+	}
+	else_if = {
+		limit = {
+			has_country_flag = adm_5xx
+		}
+		if = {
+			limit = {
+				has_country_flag = adm_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 5
+					dip = 1
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 5
+					dip = 1
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 5
+					dip = 1
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = adm_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 5
+					dip = 2
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 5
+					dip = 2
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 5
+					dip = 2
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 5
+					dip = 3
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 5
+					dip = 3
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 5
+					dip = 3
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x3x
+		}
+		clr_country_flag = adm_5xx
+	}
+	else = {
+		if = {
+			limit = {
+				has_country_flag = adm_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 6
+					dip = 1
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 6
+					dip = 1
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 6
+					dip = 1
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = adm_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 6
+					dip = 2
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 6
+					dip = 2
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 6
+					dip = 2
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = adm_xx1
+				}
+				define_ruler = {
+					adm = 6
+					dip = 3
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = adm_xx2
+				}
+				define_ruler = {
+					adm = 6
+					dip = 3
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 6
+					dip = 3
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = adm_xx3
+			}
+			clr_country_flag = adm_x3x
+		}
+		clr_country_flag = adm_6xx
+	}
+}
+
+dip_ruler2 = {
+	if = {
+		limit = {
+			has_country_flag = dip_1xx
+		}
+		if = {
+			limit = {
+				has_country_flag = dip_x4x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 1
+					dip = 4
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 1
+					dip = 4
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 4
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x4x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = dip_x5x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 1
+					dip = 5
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 1
+					dip = 5
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 5
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x5x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 1
+					dip = 6
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 1
+					dip = 6
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 6
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x6x
+		}
+		clr_country_flag = dip_1xx
+	}
+	else_if = {
+		limit = {
+			has_country_flag = dip_2xx
+		}
+		if = {
+			limit = {
+				has_country_flag = dip_x4x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 2
+					dip = 4
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 2
+					dip = 4
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 4
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x4x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = dip_x5x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 2
+					dip = 5
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 2
+					dip = 5
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 5
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x5x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 2
+					dip = 6
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 2
+					dip = 6
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 6
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x6x
+		}
+		clr_country_flag = dip_2xx
+	}
+	else = {
+		if = {
+			limit = {
+				has_country_flag = dip_x4x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 3
+					dip = 4
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 3
+					dip = 4
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 4
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x4x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = dip_x5x
+			}
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 3
+					dip = 5
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 3
+					dip = 5
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 5
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x5x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = dip_xx1
+				}
+				define_ruler = {
+					adm = 3
+					dip = 6
+					mil = 1
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = dip_xx2
+				}
+				define_ruler = {
+					adm = 3
+					dip = 6
+					mil = 2
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx2
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 6
+					mil = 3
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = dip_xx3
+			}
+			clr_country_flag = dip_x6x
+		}
+		clr_country_flag = dip_3xx
+	}
+}
+
+mil_ruler2 = {
+	if = {
+		limit = {
+			has_country_flag = mil_1xx
+		}
+		if = {
+			limit = {
+				has_country_flag = mil_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 1
+					dip = 1
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 1
+					dip = 1
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 1
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = mil_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 1
+					dip = 2
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 1
+					dip = 2
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 2
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 1
+					dip = 3
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 1
+					dip = 3
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 1
+					dip = 3
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x3x
+		}
+		clr_country_flag = mil_1xx
+	}
+	else_if = {
+		limit = {
+			has_country_flag = mil_2xx
+		}
+		if = {
+			limit = {
+				has_country_flag = mil_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 2
+					dip = 1
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 2
+					dip = 1
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 1
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = mil_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 2
+					dip = 2
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 2
+					dip = 2
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 2
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 2
+					dip = 3
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 2
+					dip = 3
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 2
+					dip = 3
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x3x
+		}
+		clr_country_flag = mil_2xx
+	}
+	else = {
+		if = {
+			limit = {
+				has_country_flag = mil_x1x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 3
+					dip = 1
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 3
+					dip = 1
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 1
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x1x
+		}
+		else_if = {
+			limit = {
+				has_country_flag = mil_x2x
+			}
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 3
+					dip = 2
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 3
+					dip = 2
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 2
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x2x
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = mil_xx4
+				}
+				define_ruler = {
+					adm = 3
+					dip = 3
+					mil = 4
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mil_xx5
+				}
+				define_ruler = {
+					adm = 3
+					dip = 3
+					mil = 5
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx5
+			}
+			else = {
+				define_ruler = {
+					adm = 3
+					dip = 3
+					mil = 6
+					fixed = yes
+					random_gender = yes
+				}
+				clr_country_flag = mil_xx6
+			}
+			clr_country_flag = mil_x3x
+		}
+		clr_country_flag = mil_3xx
+	}
+}
