@@ -1,12 +1,14 @@
 # Difficulty-and-AI
 EU4 mod. https://steamcommunity.com/sharedfiles/filedetails/?id=2053238435
 
-This mod changes Difficulty bonuses AI gets on Hard and Very Hard. Generally bonuses are halved, instead AI is more aggressive on higher difficulty.
-AI logic is improved. AI is better at building Economy, picking Advisers, Policies and Ideas. Using Multiplayer meta as reference point.
+This mod changes Difficulty bonuses AI gets on Hard and Very Hard. Generally bonuses are halved, instead Difficulty Ramps up over the course of the game. AI logic is improved in every aspect of the game. Using Multiplayer meta as reference point.
 
 Because the difference with base game AI is so substantial at this point, it inevitable started affecting balance. So I'm trying to keep the game as fun as possible, without compromising original goal to make AI better.
 
-AI Dept spiral is fixed, at least everything I can spot that is not merc related. Keep in mind that AI can take 3 loans with 1 interest interaction via estates.
+On Normal difficulty the game will feel similar to vanilla, on Very Hard difficulty the game escalates over time and looks like a player game. I'm recommending Very Hard if you are looking for challenge, or if it's a Coop game.
+
+
+Added more efficient fix to AI Dept spiral, and couple of events that disband mercs for AI, while AI at peace and if AI goes over the force limit. Hotfixed the fix.
 
 Example from observer game 1.30.2 VH
 https://skanderbeg.pm/browse.php?id=a40601
