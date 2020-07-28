@@ -32,16 +32,18 @@ revolution = {
 	
 	can_start = {
 		has_any_disaster = no
-		NOT = { stability = 2 }
-		incompetent_monarch = yes
+		OR = {
+			incompetent_monarch = yes
+			NOT = { stability = 2 }
+		}
 		#revolution_spread = 0.25
 		OR = {
 			NOT = { stability = 0 }
 			revolution_spread = 0.5
-			num_of_loans = 15
+			num_of_loans = 10
 			is_bankrupt = yes
 			inflation = 10
-			war_exhaustion = 10
+			war_exhaustion = 5
 			NOT = { legitimacy = 50 }
 			NOT = { prestige = 0 }
 			custom_trigger_tooltip = {
@@ -89,6 +91,10 @@ revolution = {
 		}
 		modifier = {
 			factor = 1
+			NOT = { legitimacy = 50 }
+		} 
+		modifier = {
+			factor = 1
 			war_exhaustion = 5
 		} 
 		modifier = {
@@ -128,6 +134,10 @@ revolution = {
 					}
 				}
 			}
+		}
+		modifier = {
+			factor = 0.5
+			incompetent_monarch = yes
 		}
 	}
 	

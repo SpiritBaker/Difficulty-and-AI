@@ -16,9 +16,9 @@
  ruthless_ruler_personality:0 "Ruthless"
  desc_ruthless_ruler_personality:0  "Desc Needed"
  ruthless_ruler_personality_die_desc:0  "[Root.Monarch.GetHerHisCap] WIP."
- grandiose_personality:0 "Grandiose"
- desc_grandiose_personality:0 "Desc Needed"
- grandiose_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
+ talented_statesman_personality:0 "Talented Statesman"
+ desc_talented_statesman_personality:0 "Desc Needed"
+ talented_statesman_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
  born_to_the_saddle_ruler_personality:0 "Born to the Saddle"
  desc_born_to_the_saddle_ruler_personality:0 "Desc Needed"
  born_to_the_saddle_ruler_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
@@ -40,3 +40,7 @@
 
  #trigger
  incompetent_monarch:0 "Incompetent Monarch"
+
+ #Buildings
+ building_state_house_desc:0 "Can be built alongside Manufactory"
+ building_ramparts_desc:0 "Can be built alongside Manufactory"

@@ -1,9 +1,25 @@
 incompetent_monarch = {
 	custom_trigger_tooltip = {
 		tooltip = incompetent_monarch
-		NOT = {	ADM = 4	}
-		NOT = {	DIP = 4	}
-		NOT = {	MIL = 4	}
+		OR = { 
+			AND = {
+				NOT = {	ADM = 4	}
+				NOT = {	DIP = 4	}
+				NOT = {	MIL = 4	}
+			}
+			AND = {
+				NOT = {	ADM = 2	}
+				NOT = {	DIP = 2	}
+			}
+			AND = {
+				NOT = {	ADM = 2	}
+				NOT = {	MIL = 2	}
+			}
+			AND = {
+				NOT = {	DIP = 2	}
+				NOT = {	MIL = 2	}
+			}
+		}
 		OR = {
 			ruler_has_personality = babbling_buffoon_personality
 			ruler_has_personality = embezzler_personality

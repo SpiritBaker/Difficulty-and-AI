@@ -2181,6 +2181,7 @@ babbling_buffoon_personality = {
 			NOT = { DIP = 6 }
 			NOT = { ruler_has_personality = charismatic_negotiator_personality }
 			NOT = { ruler_has_personality = silver_tongue_personality }
+			NOT = { ruler_has_personality = talented_statesman_personality }
 		}
 	
 		chance = {
@@ -2536,6 +2537,7 @@ drunkard_personality = {
 			NOT = { ruler_has_personality = pious_personality }
 			NOT = { ruler_has_personality = entrepreneur_personality }
 			NOT = { ruler_has_personality = zealot_personality }
+			NOT = { ruler_has_personality = talented_statesman_personality }
 		}
 	
 		chance = {
@@ -3056,6 +3058,7 @@ naive_personality = {
 			NOT = { DIP = 6 }
 			NOT = { ruler_has_personality = silver_tongue_personality }
 			NOT = { ruler_has_personality = careful_personality }
+			NOT = { ruler_has_personality = talented_statesman_personality }
 		}
 	
 		chance = {
@@ -3326,6 +3329,7 @@ loose_lips_personality = {
 			NOT = { DIP = 6 }
 			NOT = { ruler_has_personality = intricate_web_weaver_personality }
 			NOT = { ruler_has_personality = secretive_personality }
+			NOT = { ruler_has_personality = talented_statesman_personality }
 		}
 	
 		chance = {
@@ -3991,24 +3995,38 @@ ambitious_personality = {
 	nation_designer_cost = 10
 }
 
-grandiose_personality = {
+talented_statesman_personality = { # Talented Statesman
 	ruler_allow = {
 		allow = {
+			ADM = 3
+			DIP = 3
 			NOT = { ruler_has_personality = babbling_buffoon_personality }
 			NOT = { ruler_has_personality = naive_personality }
 		}
 	
 		chance = {
 			modifier = {
-				factor = 1
+				factor = 0.5
+				DIP = 5
+			}
+			modifier = {
+				factor = 2
 				DIP = 6
 			}
 			modifier = {
-				factor = 1
+				factor = 0.5
+				ADM = 5
+			}
+			modifier = {
+				factor = 2
 				ADM = 6
 			}
 			modifier = {
-				factor = 1
+				factor = 0.5
+				MIL = 5
+			}
+			modifier = {
+				factor = 2
 				MIL = 6
 			}
 		}

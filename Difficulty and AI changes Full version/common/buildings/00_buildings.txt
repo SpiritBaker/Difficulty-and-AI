@@ -691,7 +691,7 @@ fort_15th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 8
+		factor = 10
 		modifier = {
 			factor = 25
 			is_capital = yes
@@ -1143,9 +1143,9 @@ fort_16th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 1000
+		factor = 10
 		modifier = {
-			factor = 10
+			factor = 25
 			is_capital = yes
 		}
 		modifier = {
@@ -1877,9 +1877,9 @@ fort_17th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 1000
+		factor = 10
 		modifier = {
-			factor = 10
+			factor = 25
 			is_capital = yes
 		}
 		modifier = {
@@ -2547,9 +2547,9 @@ fort_18th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 1000
+		factor = 10
 		modifier = {
-			factor = 10
+			factor = 25
 			is_capital = yes
 		}
 		modifier = {

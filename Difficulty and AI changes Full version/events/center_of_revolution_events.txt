@@ -20,7 +20,7 @@ province_event = {
 	trigger = {
 		has_dlc = "Emperor"
 		current_age = age_of_revolutions
-		development = 30
+		development = 20
 		enlightenment = 100
 		owner = {
 			is_great_power = yes
@@ -30,13 +30,13 @@ province_event = {
 			OR = {
 				has_disaster = french_revolution
 				has_disaster = revolution
-				#has_disaster = aspiration_for_liberty
+				has_disaster = aspiration_for_liberty
 			}
 		}
 		NOT = { has_province_modifier = religious_center }
 	}
 	mean_time_to_happen = {
-		years = 300
+		years = 120
 		modifier = {
 			factor = 20
 			NOT = { continent = europe }
