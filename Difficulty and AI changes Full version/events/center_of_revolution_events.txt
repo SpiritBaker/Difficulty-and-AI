@@ -23,20 +23,49 @@ province_event = {
 		development = 20
 		enlightenment = 100
 		owner = {
-			is_great_power = yes
-			has_institution = enlightenment
-			is_free_or_tributary_trigger = yes
-			NOT = { tag = PAP }
 			OR = {
-				has_disaster = french_revolution
-				has_disaster = revolution
-				has_disaster = aspiration_for_liberty
+				AND = { 
+					is_great_power = yes
+					capital_scope = { continent = europe }
+				}
+				AND = { 
+					is_great_power = yes
+					is_year = 1780
+				}
+			}
+			OR = {
+				incompetent_monarch = yes
+				NOT = { stability = 2 }
+			}
+			OR = {
+				NOT = { stability = 0 }
+				#revolution_spread = 0.5
+				num_of_loans = 10
+				is_bankrupt = yes
+				inflation = 10
+				war_exhaustion = 5
+				NOT = { legitimacy = 50 }
+				NOT = { prestige = 0 }
+				custom_trigger_tooltip = {
+					tooltip = root_is_most_powerful_in_europe
+					capital_scope = { continent = europe }
+					NOT = {
+						any_country = {
+							capital_scope = { continent = europe }
+							OR = {
+								army_size = FROM
+								total_own_and_non_tributary_subject_development = FROM
+							}
+						}
+					}
+				}
 			}
 		}
+
 		NOT = { has_province_modifier = religious_center }
 	}
 	mean_time_to_happen = {
-		years = 120
+		years = 100
 		modifier = {
 			factor = 20
 			NOT = { continent = europe }
@@ -63,7 +92,7 @@ province_event = {
 			} 
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3
 			owner = {
 				capital_scope = {
 					NOT = { region = root }
@@ -90,12 +119,16 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			is_institution_enabled = industrialization
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			industrialization = 100
+		}
+		modifier = {
+			factor = 0.9
+			has_building = university
 		}
 		modifier = {
 			factor = 1.2

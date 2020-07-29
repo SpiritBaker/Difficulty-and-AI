@@ -456,7 +456,12 @@ diplomatic_ideas = {
 		}
 		modifier = {
 			factor = 0.5
+			NOT = { num_of_subjects = 1 }
+		}
+		modifier = {
+			factor = 0.5
 			NOT = { adm_tech = 15 }
+			NOT = { tag = AUS }
 		}
 		modifier = {
 			factor = 2.5
@@ -1529,11 +1534,29 @@ influence_ideas = {
 		}
 		modifier = {
 			factor = 0.5
+			NOT = { num_of_subjects = 1 }
+		}
+		modifier = {
+			factor = 0.5
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
 			factor = 2.5
 			is_emperor = yes
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				is_revolution_target = yes
+				has_reform = revolutionary_empire_reform
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				tag = AUS
+				tag = FRA
+			}
 		}
 		modifier = {
 			factor = 2.5

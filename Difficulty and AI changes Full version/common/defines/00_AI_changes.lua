@@ -37,13 +37,13 @@ NDefines.NAI.COLONY_BUDGET_FRACTION = 0.4
 NDefines.NAI.REGIMENTS_PER_GENERAL = 20
 NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 25
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 100 -- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
-NDefines.NAI.DEVELOPMENT_CAP_MULT = 10
+NDefines.NAI.DEVELOPMENT_CAP_MULT = 20
 NDefines.NAI.EDICT_VALUE_THRESHOLD = 20
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 2	--Change to above threshold in case of running deficit
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 1.5	--Change to above threshold in case of low income
 NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5
 NDefines.NAI.AI_WANT_ACCEPT_CULTURES = 300	--How much the AI values having much development in accepted cultures.
---NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 12	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
+--NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 50	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 
 NDefines.NAI.DIPLOMATIC_ACTION_GUARANTEE_POWERBALANCE_FACTOR = 25
 NDefines.NAI.POWERFUL_ALLY_PENALTY = 60	--Penalty on alliance for them already having a powerful ally if much stronger.
@@ -147,9 +147,9 @@ NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 15
 NDefines.NReligion.PIETY_ACTION_COOLDOWN = 10
 
 
-NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 45 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
+NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
 
-NDefines.NCountry.REVOLUTION_SPREAD_COUNT = 3			                -- Max number of concurrent province revolution spread
+--NDefines.NCountry.REVOLUTION_SPREAD_COUNT = 3			                -- Max number of concurrent province revolution spread
 --NDefines.NCountry.REVOLUTION_DAILY_SPREAD = 1.0			                -- How much the revolution spreads each day (progress is 0-100)
 NDefines.NCountry.REVOLUTION_EMBRACE_MIN_SPREAD = 0.75	                -- Minimum revolution spread in % of state development required to embrace to Revolution
 NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 300	                    -- Minimum country development required to embrace to Revolution

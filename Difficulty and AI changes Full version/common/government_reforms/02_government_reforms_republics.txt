@@ -1266,7 +1266,10 @@ fraternite_reform = {
 		modifier = {
 			factor = 5
 			OR = {
-				is_revolution_target = yes
+				AND = {
+					is_great_power = yes
+					is_revolution_target = yes
+				}
 				AND = {
 					is_great_power = yes
 					capital_scope = { continent = europe }
@@ -1856,7 +1859,10 @@ imperial_principle_reform = {
 		modifier = {
 			factor = 2.5
 			OR = {
-				is_revolution_target = yes
+				AND = {
+					is_great_power = yes
+					is_revolution_target = yes
+				}
 				AND = {
 					is_great_power = yes
 					capital_scope = { continent = europe }
@@ -1985,7 +1991,10 @@ military_electorate_reform = {
 		modifier = {
 			factor = 5
 			OR = {
-				is_revolution_target = yes
+				AND = {
+					is_great_power = yes
+					is_revolution_target = yes
+				}
 				AND = {
 					is_great_power = yes
 					capital_scope = { continent = europe }

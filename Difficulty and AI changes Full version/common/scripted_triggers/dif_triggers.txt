@@ -1,6 +1,7 @@
 incompetent_monarch = {
 	custom_trigger_tooltip = {
 		tooltip = incompetent_monarch
+		government = monarchy
 		OR = { 
 			AND = {
 				NOT = {	ADM = 4	}

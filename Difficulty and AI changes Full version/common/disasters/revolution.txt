@@ -3,29 +3,35 @@ revolution = {
 	potential = {
 		NOT = { has_country_flag = had_revolution }
 		NOT = { tag = PAP }
+		NOT = { tag = FRA }
 		OR = {
-			NOT = { government = monarchy }
-			NOT = { tag = FRA }
+			government = monarchy
+			revolution_spread = 0.5
 		}
 		#NOT = { has_reform = celestial_empire }
 		is_free_or_tributary_trigger = yes
 		uses_doom = no
 		current_age = age_of_revolutions
 		is_revolutionary = no
-
-		OR = {
-			is_great_power = yes
-			capital_scope = {
-				OR = {
-					continent = europe
-					has_revolution_in_province = yes
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+			}
+			OR = {
+				is_great_power = yes
+				revolution_spread = 0.2
+				capital_scope = {
+					OR = {
+						continent = europe
+						has_revolution_in_province = yes
+					}
 				}
 			}
-			AND = {
-				num_of_cities = 30
-				capital_scope = { continent = europe }
-				NOT = { revolution_target_exists = yes }
-			}
+		}
+		else = {
+			num_of_cities = 30
+			capital_scope = { continent = europe }
+			NOT = { revolution_target_exists = yes }
 		}
 	}
 	
@@ -36,7 +42,7 @@ revolution = {
 			incompetent_monarch = yes
 			NOT = { stability = 2 }
 		}
-		#revolution_spread = 0.25
+		revolution_spread = 0.25
 		OR = {
 			NOT = { stability = 0 }
 			revolution_spread = 0.5

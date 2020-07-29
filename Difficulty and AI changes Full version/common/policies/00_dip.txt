@@ -81,7 +81,19 @@ the_wooden_wall = {
 		modifier = {
 			factor = 0
 			NOT = { navy_size = 20 }
-		}				
+		}
+		modifier = {
+			factor = 2
+			navy_size = 250
+		}
+		modifier = {
+			factor = 2
+			navy_size = 500
+		}
+		modifier = {
+			factor = 2
+			navy_size = 750
+		}							
 	}
 }
 
@@ -311,7 +323,23 @@ naval_infrastructure_act = {
 		modifier = {
 			factor = 1.5
 			navy_size_percentage = 2.5
-		}				
+		}
+		modifier = {
+			factor = 2.5
+			navy_size = 250
+		}
+		modifier = {
+			factor = 2.5
+			navy_size = 500
+		}
+		modifier = {
+			factor = 2.5
+			navy_size = 750
+		}
+		modifier = {
+			factor = 2.5
+			navy_size = 1000
+		}							
 	}
 }
 
@@ -336,6 +364,24 @@ new_naval_tactis = {
 		modifier = {
 			factor = 0
 			NOT = { navy_size = 20 }
+		}
+		modifier = {
+			factor = 2
+			num_of_heavy_ship = 100
+		}
+		modifier = {
+			factor = 5
+			num_of_heavy_ship = 250
+		}
+		modifier = {
+			factor = 5
+			is_in_important_war = yes
+			num_of_heavy_ship = 50
+		}
+		modifier = {
+			factor = 10
+			is_in_important_war = yes
+			num_of_heavy_ship = 100
 		}
 	}
 }
@@ -397,6 +443,11 @@ naval_secrecy_act = {
 			factor = 0
 			NOT = { navy_size = 20 }
 		}	
+		modifier = {
+			factor = 10
+			navy_size = 250
+			is_in_important_war = yes
+		}
 	}
 }
 
@@ -481,6 +532,14 @@ production_quota_act = {
 
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 2
+			production_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 2
+			adm_tech = 22
+		}
 	}
 }
 
@@ -685,6 +744,11 @@ chaplains_of_the_fleet = {
 		modifier = {
 			factor = 0
 			NOT = { navy_size = 20 }
+		}
+		modifier = {
+			factor = 10
+			navy_size = 250
+			is_in_important_war = yes
 		}
 	}
 }
@@ -1236,8 +1300,18 @@ trained_marines_act = {
 		}
 		modifier = {
 			factor = 10
-			is_at_war = yes
+			is_in_important_war = yes
 			navy_size = 100
+		}
+		modifier = {
+			factor = 20
+			is_in_important_war = yes
+			navy_size = 250
+		}
+		modifier = {
+			factor = 100
+			is_in_important_war = yes
+			navy_size = 500
 		}
 	}
 }
@@ -1296,7 +1370,7 @@ trade_kontor_network = {
 	}
 	
 	merchants = 1
-	land_maintenance_modifier = -0.5
+	land_maintenance_modifier = -0.1
 
 	ai_will_do = {
 		factor = 0.6

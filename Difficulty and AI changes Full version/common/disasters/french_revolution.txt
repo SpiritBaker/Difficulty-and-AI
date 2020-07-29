@@ -11,26 +11,32 @@ french_revolution = {
 		normal_or_historical_nations = yes
 		is_revolutionary = no
 
-		OR = {
-			is_great_power = yes
-			capital_scope = {
-				OR = {
-					continent = europe
-					has_revolution_in_province = yes
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+			}
+			OR = {
+				is_great_power = yes
+				revolution_spread = 0.2
+				capital_scope = {
+					OR = {
+						continent = europe
+						has_revolution_in_province = yes
+					}
 				}
 			}
-			AND = {
-				num_of_cities = 30
-				capital_scope = { continent = europe }
-				NOT = { revolution_target_exists = yes }
-			}
+		}
+		else = {
+			num_of_cities = 30
+			capital_scope = { continent = europe }
+			NOT = { revolution_target_exists = yes }
 		}
 	}
 	
 	
 	can_start = {
 		has_any_disaster = no
-		#revolution_spread = 0.25
+		revolution_spread = 0.25
 		OR = {
 			incompetent_monarch = yes
 			NOT = { stability = 2 }
@@ -80,11 +86,11 @@ french_revolution = {
 			NOT = { revolution_spread = 0.8 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1
 			revolution_spread = 0.8
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1
 			NOT = { prestige = 0 }
 		}
 		modifier = {
@@ -92,7 +98,7 @@ french_revolution = {
 			NOT = { legitimacy = 50 }
 		} 
 		modifier = {
-			factor = 1.5
+			factor = 1
 			war_exhaustion = 5
 		} 
 		modifier = {

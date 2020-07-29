@@ -3788,6 +3788,7 @@ humane_personality = {
 petty_personality = {
 	ruler_allow = {
 		allow = {
+			NOT = { DIP = 6 }
 			NOT = { ruler_has_personality = humane_personality }
 		}
 	
@@ -3809,11 +3810,16 @@ petty_personality = {
 					ruler_has_personality = babbling_buffoon_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				DIP = 5
+			}
 		}
 	}
 
 	heir_allow = {
 		allow = {
+			NOT = { heir_DIP = 6 }
 			NOT = { heir_has_personality = humane_personality }
 		}
 	
@@ -3835,11 +3841,16 @@ petty_personality = {
 					heir_has_personality = babbling_buffoon_personality
 				}
 			}
+			modifier = {
+				factor = -0.5
+				heir_DIP = 5
+			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			NOT = { consort_DIP = 6 }
 			NOT = { consort_has_personality = humane_personality }
 		}
 
@@ -3860,6 +3871,10 @@ petty_personality = {
 					consort_has_personality = embezzler_personality
 					consort_has_personality = babbling_buffoon_personality
 				}
+			}
+			modifier = {
+				factor = -0.5
+				consort_DIP = 5
 			}
 		}
 	}
@@ -3922,9 +3937,9 @@ ambitious_personality = {
 	heir_allow = {
 		allow = {
 			OR = {
-				heir_DIP = 6
-				heir_MIL = 6
-				heir_ADM = 6
+				heir_DIP = 5
+				heir_MIL = 5
+				heir_ADM = 5
 			}
 		}
 	
@@ -3965,6 +3980,7 @@ ambitious_personality = {
 		OR = {
 			is_hegemon = yes
 			is_great_power = yes
+
 		}
 	}
 
@@ -3973,6 +3989,14 @@ ambitious_personality = {
 			factor = 1
 			great_power_rank = 1
 			NOT = { great_power_rank = 4 }
+		}
+		modifier = {
+			factor = 1
+			is_revolution_target = yes
+		}
+		modifier = {
+			factor = 2
+			has_reform = revolutionary_empire_reform
 		}
 		modifier = {
 			factor = 1
@@ -3988,7 +4012,7 @@ ambitious_personality = {
 	wants_threaten_war = yes
 	wants_land = yes
 	wants_avoid_ugly_borders = yes
-	underestimate_ae = yes
+	#underestimate_ae = yes
 	knowledge_sharing = yes
 	
 	unjustified_demands = -0.10
@@ -3998,7 +4022,6 @@ ambitious_personality = {
 talented_statesman_personality = { # Talented Statesman
 	ruler_allow = {
 		allow = {
-			ADM = 3
 			DIP = 3
 			NOT = { ruler_has_personality = babbling_buffoon_personality }
 			NOT = { ruler_has_personality = naive_personality }
