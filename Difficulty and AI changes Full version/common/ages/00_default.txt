@@ -698,13 +698,11 @@ age_of_revolutions = {
 				liberty_desire_from_subject_development = -0.33
 			}
 			ai_will_do = {
-				factor = 15
+				factor = 5
 				modifier = {
-					factor = 0
-					NOT = {
-						any_subject_country = {
-							liberty_desire = 30
-						}
+					factor = 2.5
+					any_subject_country = {
+						liberty_desire = 30
 					}
 				}
 			}
@@ -759,14 +757,12 @@ age_of_revolutions = {
 				reduced_liberty_desire_on_same_continent = 25
 			}
 			ai_will_do = {
-				factor = 15
+				factor = 5
 				modifier = {
-					factor = 0
-					NOT = {
-						any_subject_country = {
-							liberty_desire = 30
-							same_continent = ROOT
-						}
+					factor = 2.5
+					any_subject_country = {
+						liberty_desire = 30
+						same_continent = ROOT
 					}
 				}
 			}
