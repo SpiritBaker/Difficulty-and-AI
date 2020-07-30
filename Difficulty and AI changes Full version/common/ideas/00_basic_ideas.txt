@@ -159,7 +159,7 @@ plutocracy_ideas = {
 		caravan_power = 0.25
 	}
 	emancipation = {
-		land_forcelimit = 8
+		republican_tradition = 0.1
 		manpower_recovery_speed = 0.2
 	}
 
@@ -169,8 +169,12 @@ plutocracy_ideas = {
 		modifier = {
 			factor = 3
 			government = republic
+			NOT = { is_revolutionary = yes }
 		}
-		
+		modifier = {
+			factor = 0.5
+			is_revolutionary = yes
+		}
 		modifier = {
 			factor = 1.5
 			has_idea_group = trade_ideas

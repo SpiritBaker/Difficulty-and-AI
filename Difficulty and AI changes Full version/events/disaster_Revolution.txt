@@ -150,7 +150,12 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 3
+			factor = 1
+			modifier = {
+				factor = 2
+				revolution_target_exists = yes
+				is_great_power = no
+			}
 		}
 	}
 	option = {

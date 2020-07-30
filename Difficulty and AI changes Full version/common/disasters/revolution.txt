@@ -6,6 +6,7 @@ revolution = {
 		NOT = { tag = FRA }
 		OR = {
 			government = monarchy
+			has_reform = ottoman_government # Not a monarhy for some reason 
 			revolution_spread = 0.5
 		}
 		#NOT = { has_reform = celestial_empire }
