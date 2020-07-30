@@ -32,7 +32,20 @@ Other changes:
 - Made Nomad life a bit easier, every Horde can now use banners, tied to culture just like Manchu. Increased Horde unity gain from looting.
 - Adds leaders without upkeep from various sources.
 - More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.
+- Adding custom Ruler traits.
 
+Republic Election Changes:  
+- Elections Candidates will have randomized above average stats. 
+- Reelecting the same candidate will increase random stat by 1. Reelection cost increases over time.  
+- Enabling estates for Trade republics.
+
+Revolution Changes:
+- Requirements for Revolution center spawn are roughly the same as for Revolutionary Disaster. 
+- Overall revolution should unfold more logicly.
+- Changing minimum requirements for embarrassing revolution, to 75% Rev. spread and 300 Development.
+- If AI is a Revolutionary Target he would behave accordingly. 
+- AI can navigate through event chain and get Napoleon. 
+- Enabling Nationalism CB for Rev Empires.
 
 
 Light and more compatible version of this mod. Only slightly improves AI as result.
