@@ -279,9 +279,9 @@ set_base_target = {
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					controlled_by = owner
-					has_siege = no
+				OR = {
+					NOT = { controlled_by = owner }
+					has_siege = yes
 				}
 			}
 		}
