@@ -207,9 +207,7 @@ country_decisions = {
 			
 			all_owned_province = {
 				OR = {
-					NOT = {
-						is_state_core = ROOT
-					}
+					NOT = { is_state_core = ROOT }
 					NOT = { current_institution_growth = 0.5 }
 				}
 			}
