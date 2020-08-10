@@ -32,7 +32,6 @@ revolution = {
 		modifier = {
 			factor = 1.5
 			region = FROM
-			owned_by = FROM
 		}
 		modifier = {
 			factor = 2

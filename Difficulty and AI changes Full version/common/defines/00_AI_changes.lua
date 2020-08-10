@@ -18,7 +18,9 @@ NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.5 --Horde unity gained per ducat loot
 
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0.5 --% increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
-NDefines.NEconomy.CARAVAN_POWER_MAX = 15
+NDefines.NEconomy.CARAVAN_FACTOR = 10.0    --Development is divided by this factor, do not set to zero!
+NDefines.NEconomy.CARAVAN_POWER_MAX = 25
+NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 
 NDefines.NAI.SUBSIDY_YEARS = 20
 NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
@@ -92,10 +94,10 @@ NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 0.5
 NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.5	
 NDefines.NAI.PEACE_TERMS_ANNUL_TREATIES_BASE_MULT =	1	
-NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.5
+NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.2
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for releasing countries.
-NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 0.75	--AI desire for war reparations through peace.
-NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 0.35 -- AI only wants war reparations if other country has at least this % of their income
+NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 0.5	--AI desire for war reparations through peace.
+NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 0.5 -- AI only wants war reparations if other country has at least this % of their income
 NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.15  --AI desire for a province is multiplied by this if it is not on their conquest list.
 NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 5.0 -- AI desire for a province is multiplied by this if it has a core on it
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members

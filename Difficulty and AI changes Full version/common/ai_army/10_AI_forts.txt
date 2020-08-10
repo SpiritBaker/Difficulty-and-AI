@@ -6,18 +6,16 @@ province = {
         eval_multiply = {
 			factor = 5
 			modifier = {
-				AND = {
-					owned_by = FROM
-					OR = {
-						has_building = fort_15th
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
-					OR = {
-						NOT = { controlled_by = FROM }
-						has_siege = yes
-					}	
+				owned_by = FROM
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				OR = {
+					NOT = { controlled_by = FROM }
+					has_siege = yes
 				}
 			}
         }

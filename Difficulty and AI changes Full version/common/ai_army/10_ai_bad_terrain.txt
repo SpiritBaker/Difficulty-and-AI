@@ -1,0 +1,17 @@
+province = {
+    war = {
+        active = {
+            is_at_war = yes
+        }
+        eval_multiply = {
+            factor = 0.8
+            modifier = {
+				NOT = { owned_by = FROM }
+				OR = {
+					has_province_modifier = arid
+					has_province_modifier = tropical
+				}
+            }
+        }
+    }
+}
