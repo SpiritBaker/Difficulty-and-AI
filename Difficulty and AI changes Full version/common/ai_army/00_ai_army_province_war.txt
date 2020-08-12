@@ -4,10 +4,9 @@ province = {
             is_at_war = yes
         }
         eval_multiply = {
-            factor = 6
+            factor = 0.9
             modifier = {
                 is_in_capital_area = yes
-                NOT = { owned_by = FROM }
             }
         }
     }

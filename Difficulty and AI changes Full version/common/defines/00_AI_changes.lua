@@ -73,14 +73,19 @@ NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.5
 NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.3
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
-NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.6
+NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.65
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
-NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 25
+
+--Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
+NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 5 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
+NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.02 --AI will try to defend provinces under threat worth more than this percentage of total development
+
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1.0	--Army <-> province distance impact on province evaluation
 NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	8.0	--Border <-> province distance impact on province evaluation
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
+NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 25 --Influence on assimilation interest from number of provinces left to conquer
 --NDefines.NAI.PURSUE_DISTANCE = 100
---NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.025
+
 
 NDefines.NAI.PEACE_OTHER_WAR_FORCE_BALANCE_MULT = 0.33 -- Multiplies the force balance of other countries who are involved in a different war with either side
 NDefines.NAI.PEACE_ALLY_MILITARY_STRENGTH_MULT = 1.0 -- Multiplies PEACE_MILITARY_STRENGTH_FACTOR for allies in a war
