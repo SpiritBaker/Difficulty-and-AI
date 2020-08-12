@@ -2025,7 +2025,17 @@ bureaucratic_aparatus_reform = {
 		min_autonomy_in_territories = -0.10
 	}
 	ai = {
-		factor = 0
+		factor = 1
+		modifier = {
+			factor = 5
+			num_of_owned_provinces_with = {
+				value = 10
+				
+				NOT = { is_state_core = ROOT  }
+				is_territorial_core = ROOT
+				is_owned_by_trade_company = yes
+			}
+		}
 	}
 }
 
@@ -2037,7 +2047,7 @@ universal_suffrage_reform = {
 		num_accepted_cultures = 1
 	}
 	ai = {
-		factor = 1
+		factor = 2
 	}
 }
 

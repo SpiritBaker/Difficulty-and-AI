@@ -137,6 +137,7 @@ workshop = {
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.33
@@ -689,7 +690,7 @@ courthouse = {
 	}
 	
 	ai_will_do = {
-		factor = 1
+		factor = 1.25
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -751,7 +752,7 @@ courthouse = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = {
 				FROM = { 
 					num_of_owned_provinces_with = {
@@ -1806,6 +1807,7 @@ counting_house = {
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.33
@@ -1940,7 +1942,7 @@ town_hall = {
 	}
 	
 	ai_will_do = {
-		factor = 1
+		factor = 1.25
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -1998,7 +2000,7 @@ town_hall = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = {
 				FROM = { 
 					num_of_owned_provinces_with = {
@@ -2352,6 +2354,7 @@ wharf = {
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = { 
 			factor = 0.8
@@ -2431,6 +2434,7 @@ weapons = {
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.8
@@ -2492,6 +2496,7 @@ textile = {
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.8
@@ -2549,6 +2554,7 @@ plantations = {
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.8
@@ -2607,6 +2613,7 @@ tradecompany = {
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.8
@@ -2685,6 +2692,7 @@ farm_estate = {
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.8
@@ -2750,6 +2758,7 @@ mills = {
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.8
@@ -2793,6 +2802,7 @@ furnace = {
 		modifier = {
 			factor = 0.1
 			NOT = { is_state = yes }
+			is_owned_by_trade_company = no
 		}
 		modifier = {
 			factor = 0.1

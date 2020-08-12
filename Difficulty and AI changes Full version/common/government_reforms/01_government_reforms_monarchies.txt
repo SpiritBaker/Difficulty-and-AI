@@ -1747,6 +1747,19 @@ regional_representation_reform = {
 	modifiers = {
 		min_autonomy_in_territories = -0.10
 	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 5
+			num_of_owned_provinces_with = {
+				value = 10
+				
+				NOT = { is_state_core = ROOT  }
+				is_territorial_core = ROOT
+				is_owned_by_trade_company = yes
+			}
+		}
+	}
 }
 
 consulate_reform = {
