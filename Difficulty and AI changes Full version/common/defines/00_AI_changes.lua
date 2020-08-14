@@ -18,7 +18,7 @@ NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.5 --Horde unity gained per ducat loot
 
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0.5 --% increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
-NDefines.NEconomy.CARAVAN_FACTOR = 10.0    --Development is divided by this factor, do not set to zero!
+NDefines.NEconomy.CARAVAN_FACTOR = 5.0    --Development is divided by this factor, do not set to zero!
 NDefines.NEconomy.CARAVAN_POWER_MAX = 25
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 
