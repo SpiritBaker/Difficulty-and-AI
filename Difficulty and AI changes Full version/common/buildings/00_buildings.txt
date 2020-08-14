@@ -267,14 +267,14 @@ temple = {
 	}
 	
 	ai_will_do = {
-		factor = 5
+		factor = 7
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
 			NOT = { trade_goods = gold }
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			NOT = { base_tax = 5 }
 			NOT = { trade_goods = gold }
 		}
@@ -289,7 +289,7 @@ temple = {
 			NOT = { culture_group = ROOT }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { is_state = yes }
 		}
 		modifier = {
@@ -335,7 +335,7 @@ barracks = {
 	}
 	
 	ai_will_do = {
-		factor = 5.5
+		factor = 6
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -386,7 +386,7 @@ barracks = {
 			}
 		}
 		modifier = {
-			factor = 3.5
+			factor = 4
 			has_building = soldier_households
 		}
 		modifier = {
@@ -489,7 +489,7 @@ shipyard = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { is_state = yes }
 		}	
 		modifier = {
@@ -812,7 +812,7 @@ dock = {
 	ai_will_do = {
 		factor = 0.8
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { is_state = yes }
 		}
 		modifier = {
@@ -927,7 +927,7 @@ regimental_camp = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { is_state = yes }
 		}
 		modifier = {
@@ -1132,14 +1132,14 @@ cathedral = {
 	}
 	
 	ai_will_do = {
-		factor = 5
+		factor = 7
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
 			NOT = { trade_goods = gold }
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			NOT = { base_tax = 5 }
 			NOT = { trade_goods = gold }
 		}
@@ -1154,7 +1154,7 @@ cathedral = {
 			NOT = { culture_group = ROOT }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { is_state = yes }
 		}
 		modifier = {
@@ -1453,7 +1453,7 @@ grand_shipyard = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { is_state = yes }
 		}	
 		modifier = {
@@ -1506,7 +1506,7 @@ training_fields = {
 	}
 	
 	ai_will_do = {
-		factor = 5.5
+		factor = 6
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -1557,7 +1557,7 @@ training_fields = {
 			}
 		}
 		modifier = {
-			factor = 3.5
+			factor = 4
 			has_building = soldier_households
 		}
 		modifier = {
@@ -2063,7 +2063,7 @@ drydock = {
 	ai_will_do = {
 		factor = 0.8
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { is_state = yes }
 		}
 		modifier = {
@@ -2180,7 +2180,7 @@ conscription_center = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { is_state = yes }
 		}
 		modifier = {
@@ -2374,7 +2374,7 @@ wharf = {
 			trade_goods = fish
 		}
 		modifier = { 
-			factor = 2.5
+			factor = 2
 			OR = {
 				has_province_modifier = skanemarket
 				has_province_modifier = comet_ore_modifier
