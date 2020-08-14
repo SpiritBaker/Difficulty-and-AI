@@ -22,17 +22,18 @@ Incompatible with mods that change Ideas, Building, Policies. To do most of the 
 Other changes:
 - Added 10 Idea slots in a balanced way.
 - Tweaks to ideas and policies, to make more idea groups relevant.
-- Rebalanced the amount of discipline in the game.
+- Rebalanced the amount of discipline in the game. When AI started stacking discipline like player would, the game become obnoxious.
 - More meaningful advisers.
-- Added Development click, it works both for Players and AI. Prevents AI from wasting monarch points. Big thanks to LoStack for implementing it. (https://github.com/stackpoint/Dev-Click)
+- Added Development click, it works both for Players and AI. Prevents AI from wasting monarch points. Big thanks to LoStack for implementing it. ( https://github.com/stackpoint/Dev-Click )
 - Effect of corruption was reduced to 1/5 of original game values, and AI is less willing to use debase currency.
-- Restricting AI army movements a bit, AI should behave more defensively.   
+- Restricting AI army movements a bit, AI should behave more defensively.
+- Improved AI building logic, AI should build manufactory in every province.
 - Increased base supply limit by 2, AI tends to have more troops with this mod.
 - Light tweaks to Basic Government reforms.
 - Made Nomad life a bit easier, every Horde can now use banners, tied to culture just like Manchu. Increased Horde unity gain from looting.
 - Adds leaders without upkeep from various sources.
+- Custom Ruler traits. Restricting Ruler traits distribution, rulers with high stats are less likely to get negative trait.
 - More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.
-- Adding custom Ruler traits.
 
 Republic Election Changes:  
 - Elections Candidates will have randomized above average stats. 
