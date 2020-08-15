@@ -77,13 +77,13 @@ NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.65
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 
 --Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
-NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 5 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
-NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.02 --AI will try to defend provinces under threat worth more than this percentage of total development
+NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 10 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
+NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.03 --AI will try to defend provinces under threat worth more than this percentage of total development
 
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1.0	--Army <-> province distance impact on province evaluation
 NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	8.0	--Border <-> province distance impact on province evaluation
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
-NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 25 --Influence on assimilation interest from number of provinces left to conquer
+--NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 25 --Influence on assimilation interest from number of provinces left to conquer
 --NDefines.NAI.PURSUE_DISTANCE = 100
 
 

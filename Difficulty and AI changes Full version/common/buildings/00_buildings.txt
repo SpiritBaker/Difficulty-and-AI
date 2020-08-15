@@ -386,7 +386,7 @@ barracks = {
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 5
 			has_building = soldier_households
 		}
 		modifier = {
@@ -897,7 +897,7 @@ regimental_camp = {
 	}
 	
 	ai_will_do = {
-		factor = 0.5
+		factor = 0.55
 		modifier = {
 			factor = 0.8
 			has_port = yes
@@ -1557,7 +1557,7 @@ training_fields = {
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 5
 			has_building = soldier_households
 		}
 		modifier = {
@@ -2150,7 +2150,7 @@ conscription_center = {
 	}
 	
 	ai_will_do = {
-		factor = 0.45
+		factor = 0.55
 		modifier = {
 			factor = 0.8
 			has_port = yes
