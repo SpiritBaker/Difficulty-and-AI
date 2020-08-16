@@ -96,17 +96,19 @@ marketplace = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -228,17 +230,19 @@ workshop = {
 			factor = 0.1
 			NOT = { num_free_building_slots = 2 }
 			#NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -300,17 +304,19 @@ temple = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -393,17 +399,19 @@ barracks = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -505,17 +513,19 @@ shipyard = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -652,17 +662,19 @@ coastal_defence = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -772,17 +784,19 @@ courthouse = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -861,17 +875,19 @@ dock = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -934,17 +950,19 @@ regimental_camp = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -1094,17 +1112,19 @@ naval_battery = {
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
 			NOT = { has_building = coastal_defence }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -1166,17 +1186,19 @@ cathedral = {
 			NOT = { num_free_building_slots = 2 }
 			NOT = { has_building = temple }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -1204,7 +1226,7 @@ university = {
 	ai_will_do = {
 		factor = 320 	# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			development = 20
 			is_state = yes
 		}
@@ -1228,14 +1250,14 @@ university = {
 			has_climate = arctic
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			OR = {
 				has_terrain = grasslands
 				has_terrain = drylands
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			has_terrain = farmlands
 		}
 		modifier = {
@@ -1263,7 +1285,7 @@ university = {
 			is_capital = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			OR = {
 				trade_goods = paper
 				trade_goods = gems
@@ -1362,17 +1384,19 @@ trade_depot = {
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
 			NOT = { has_building = marketplace }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -1470,17 +1494,19 @@ grand_shipyard = {
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
 			NOT = { has_building = shipyard }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -1565,17 +1591,19 @@ training_fields = {
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
 			NOT = { has_building = barracks }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -1763,21 +1791,25 @@ stock_exchange = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = trade_depot }
-				NOT = { has_building = marketplace }
+			NOT = {
+				OR = {
+					has_building = trade_depot
+					has_building = marketplace
+				}
 			}
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -1901,17 +1933,19 @@ counting_house = {
 			NOT = { num_free_building_slots = 2 }
 			#NOT = { trade_goods = gold }
 			NOT = { has_building = workshop }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -2022,17 +2056,19 @@ town_hall = {
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
 			NOT = { has_building = courthouse }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -2113,17 +2149,19 @@ drydock = {
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
 			NOT = { has_building = dock }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -2188,17 +2226,19 @@ conscription_center = {
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
 			NOT = { has_building = regimental_camp }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -2904,17 +2944,19 @@ ramparts = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
+			NOT = {
+				OR = {
+					has_building = wharf 
+					has_building = weapons 
+					has_building = textile 
+					has_building = tradecompany 
+					has_building = farm_estate 
+					has_building = mills 
+					has_building = plantations 
+					has_building = furnace 
+					has_building = soldier_households 
+					has_building = impressment_offices
+				}
 			}
 		}
 		modifier = {
@@ -3257,7 +3299,7 @@ state_house = {
 			factor = 0.1
 			NOT = { num_free_building_slots = 2 }
 			NOT = { trade_goods = gold }
-			OR = {
+			AND = {
 				NOT = { has_building = wharf }
 				NOT = { has_building = weapons }
 				NOT = { has_building = textile }

@@ -17,7 +17,6 @@ country_decisions = {
 			religion = catholic
 			NOT = { exists = PRU }
 			OR = {
-				ai = no
 				is_religion_enabled = protestant
 				is_religion_enabled = reformed
 			}
@@ -69,7 +68,7 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_india_flag }
-			ai = no
+			ai = yes
 			#NOT = { exists = BHA }
 			NOT = { exists = HIN }
 			NOT = { tag = MUG }
@@ -112,7 +111,6 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
-			culture_group = dravidian
 			is_at_war = no
 			has_institution = feudalism
 			owns_core_province = 506 #Multan

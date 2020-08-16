@@ -1,7 +1,7 @@
 country_decisions = {
 	change_religion_sunni = {
 		potential = {
-			#has_dlc = "Star and Crescent"
+			has_dlc = "Star and Crescent"
 			NOT = { religion = sunni }
 			dominant_religion = sunni
 			
@@ -26,9 +26,13 @@ country_decisions = {
 	
 	change_religion_shiite = {
 		potential = {
-			#has_dlc = "Star and Crescent"
-			religion = sunni
+			has_dlc = "Star and Crescent"
+			OR = {
+				religion = sunni
+				religion = ibadi
+			}
 			dominant_religion = shiite
+			NOT = { religion = shiite }
 			is_force_converted = no
 		}
 		allow = {
@@ -50,8 +54,12 @@ country_decisions = {
 
 	change_religion_ibadi = {
 		potential = {
-			religion = sunni
+			OR = {
+				religion = sunni
+				religion = shiite
+			}	
 			dominant_religion = ibadi
+			NOT = { religion = ibadi }
 			is_force_converted = no
 		}
 		allow = {
@@ -72,8 +80,10 @@ country_decisions = {
 	}
 
 	change_religion_shiite_iranian = {
+		major = yes
 		potential = {
 			religion = sunni
+			NOT = { religion = shiite }
 			OR = { 
 				culture_group = iranian
 				tag = TIM

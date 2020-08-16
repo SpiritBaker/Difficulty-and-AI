@@ -71,12 +71,8 @@ aristocracy_ideas = {
 			factor = 2
 			has_idea_group = offensive_ideas
 		}
-		#modifier = {
-		#	factor = 3
-		#	cavalry_power = 0.20
-		#}
 		modifier = {
-			factor = 0.4
+			factor = 0.5
 			AND = {
 				NOT = { technology_group = nomad_group }
 				OR = {
@@ -99,7 +95,7 @@ aristocracy_ideas = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				tag = POL
 				tag = PLC
@@ -1533,11 +1529,11 @@ influence_ideas = {
 	ai_will_do = {
 		factor = 0.2
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = { is_emperor = yes }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = { num_of_subjects = 1 }
 		}
 		modifier = {
@@ -1565,6 +1561,10 @@ influence_ideas = {
 		modifier = {
 			factor = 2.5
 			vassal = 3
+		}
+		modifier = {
+			factor = 2.5
+			is_great_power = yes
 		}
 	}
 }
