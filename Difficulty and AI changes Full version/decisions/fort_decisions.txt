@@ -83,8 +83,6 @@ country_decisions = {
 								OR = {
 									NOT = {
 										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-									}
-									NOT = {
 										owner = {
 											ROOT = {
 												is_subject_of = PREV
@@ -93,16 +91,12 @@ country_decisions = {
 										}
 									}
 									any_neighbor_province = {
-										OR = {
-											NOT = {
-												ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											}
-											NOT = {
-												owner = {
-													ROOT = {
-														is_subject_of = PREV
-														NOT = { is_subject_of_type = tributary_state }
-													}
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
 												}
 											}
 										}
@@ -147,6 +141,7 @@ country_decisions = {
 							is_state_core = ROOT
 							ROOT = { treasury = 600 }
 							can_build = fort_17th
+							
 							OR = {
 								AND = {
 									has_building = fort_16th
@@ -160,6 +155,31 @@ country_decisions = {
 									ROOT = {
 										#treasury = 600
 										current_income_balance = 6
+									}
+								}
+							}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
+												}
+											}
+										}
 									}
 								}
 							}
@@ -194,16 +214,43 @@ country_decisions = {
 							ROOT = { treasury = 600 }
 							can_build = fort_16th
 							has_building = fort_15th
+							
 							#ROOT = {
 							#	treasury = 300
 							#	current_income_balance = 3
 							#}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
 				AND = {
 					NOT = { mil_tech = 14 }
 					capital_scope = {
+						always = no
 						can_build = fort_15th
 						#ROOT = {
 						#	treasury = 300
@@ -272,6 +319,7 @@ country_decisions = {
 							is_state_core = ROOT
 							ROOT = { treasury = 600 }
 							can_build = fort_18th
+							
 							OR = {
 								AND = {
 									has_building = fort_17th
@@ -295,6 +343,31 @@ country_decisions = {
 									}
 								}
 							}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 					random_owned_province = {
@@ -302,6 +375,7 @@ country_decisions = {
 							is_state_core = ROOT
 							ROOT = { treasury = 600 }
 							can_build = fort_18th
+							
 							OR = {
 								AND = {
 									has_building = fort_17th
@@ -322,6 +396,31 @@ country_decisions = {
 									ROOT = {
 										treasury = 900
 										current_income_balance = 9
+									}
+								}
+							}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
+												}
+											}
+										}
 									}
 								}
 							}
@@ -387,6 +486,7 @@ country_decisions = {
 							is_state_core = ROOT
 							ROOT = { treasury = 600 }
 							can_build = fort_17th
+							
 							OR = {
 								AND = {
 									has_building = fort_16th
@@ -403,6 +503,31 @@ country_decisions = {
 									}
 								}
 							}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 					random_owned_province = {
@@ -410,6 +535,7 @@ country_decisions = {
 							is_state_core = ROOT
 							ROOT = { treasury = 600 }
 							can_build = fort_17th
+							
 							OR = {
 								AND = {
 									has_building = fort_16th
@@ -423,6 +549,31 @@ country_decisions = {
 									ROOT = {
 										#treasury = 600
 										current_income_balance = 6
+									}
+								}
+							}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
+												}
+											}
+										}
 									}
 								}
 							}
@@ -481,10 +632,36 @@ country_decisions = {
 							ROOT = { treasury = 600 }
 							can_build = fort_16th
 							has_building = fort_15th
+							
 							#ROOT = {
 							#	treasury = 300
 							#	current_income_balance = 3
 							#}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 					random_owned_province = {
@@ -493,10 +670,36 @@ country_decisions = {
 							ROOT = { treasury = 600 }
 							can_build = fort_16th
 							has_building = fort_15th
+							
 							#ROOT = {
 							#	treasury = 300
 							#	current_income_balance = 3
 							#}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										NOT = {
+											ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											owner = {
+												ROOT = {
+													is_subject_of = PREV
+													NOT = { is_subject_of_type = tributary_state }
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 						add_building_construction = {
 							building = fort_16th
@@ -514,6 +717,7 @@ country_decisions = {
 				if = {
 					limit = {
 						capital_scope = {
+							always = no
 							can_build = fort_15th
 							#ROOT = {
 							#	treasury = 300
