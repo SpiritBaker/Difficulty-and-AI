@@ -54,6 +54,7 @@ country_decisions = {
 							is_state_core = ROOT
 							ROOT = { treasury = 600 }
 							can_build = fort_18th
+							
 							OR = {
 								AND = {
 									has_building = fort_17th
@@ -74,6 +75,37 @@ country_decisions = {
 									ROOT = {
 										treasury = 900
 										current_income_balance = 9
+									}
+								}
+							}
+							
+							any_neighbor_province = {
+								OR = {
+									NOT = {
+										ROOT = { owns_or_non_sovereign_subject_of = PREV }
+									}
+									NOT = {
+										owner = {
+											ROOT = {
+												is_subject_of = PREV
+												NOT = { is_subject_of_type = tributary_state }
+											}
+										}
+									}
+									any_neighbor_province = {
+										OR = {
+											NOT = {
+												ROOT = { owns_or_non_sovereign_subject_of = PREV }
+											}
+											NOT = {
+												owner = {
+													ROOT = {
+														is_subject_of = PREV
+														NOT = { is_subject_of_type = tributary_state }
+													}
+												}
+											}
+										}
 									}
 								}
 							}
