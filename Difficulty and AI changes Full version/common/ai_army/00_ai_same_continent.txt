@@ -9,7 +9,7 @@ province = {
 				provinces_on_capital_continent_of = owner
 				owned_by = ROOT
 				OR = {
-					NOT = { controlled_by = owner }
+					NOT = { controlled_by = owner }	
 					AND = {
 						has_siege = yes
 						OR = {
@@ -19,7 +19,7 @@ province = {
 							has_building = fort_18th
 						}
 					}
-				}			
+				}	
 			}
         }
     }

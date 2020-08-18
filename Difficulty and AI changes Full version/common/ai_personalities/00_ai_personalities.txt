@@ -75,7 +75,11 @@ ai_capitalist = {
 		modifier = {
 			factor = 2
 			tag = MAM
-		}	
+		}
+		modifier = {
+			factor = 1.5
+			tag = FRA
+		}		
 		modifier = {
 			factor = 3
 			OR = {
@@ -87,6 +91,10 @@ ai_capitalist = {
 		modifier = {
 			factor = 5
 			has_reform = free_city
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 3
 		}
 		modifier = {
 			factor = 2
@@ -170,7 +178,7 @@ ai_diplomat = {
 			tag = HAB
 		}		
 		modifier = {
-			factor = 2
+			factor = 1.5
 			tag = FRA
 		}		
 		modifier = {
@@ -211,7 +219,19 @@ ai_militarist = {
 		modifier = {
 			factor = 0
 			has_regency = yes
-		}	
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { mil_tech = 9 }
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { mil_tech = 11 }
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { mil_tech = 16 }
+		}			
 		modifier = {
 			factor = 0.5
 			government = republic
@@ -293,15 +313,15 @@ ai_militarist = {
 			invasion_nation = yes
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			government = native
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			has_reform = steppe_horde
 		}
 		modifier = {
-			factor = 100
+			factor = 2
 			OR = {
 				has_reform = daimyo
 				has_reform = indep_daimyo
@@ -313,7 +333,7 @@ ai_militarist = {
 			is_march = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 1.1
 			OR = {
 				tag = MOS
 				tag = RUS
@@ -368,7 +388,7 @@ ai_militarist = {
 			num_of_loans = 15
 		}
 		modifier = {
-			factor = 100
+			factor = 5
 			is_revolution_target = yes
 		}
 		modifier = {
@@ -387,7 +407,11 @@ ai_colonialist = {
 		modifier = {
 			factor = 0.5
 			has_regency = yes
-		}		
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { dip_tech = 10 }
+		}			
 		modifier = {
 			factor = 0.5
 			NOT = { adm = 1 }
@@ -447,6 +471,26 @@ ai_colonialist = {
 		modifier = {
 			factor = 0.5
 			tag = FRA
+		}
+		modifier = {
+			factor = 0.5
+			num_of_loans = 3
+		}
+		modifier = {
+			factor = 0.5
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 0.25
+			num_of_loans = 7
+		}
+		modifier = {
+			factor = 0.25
+			num_of_loans = 10
+		}
+		modifier = {
+			factor = 0.25
+			num_of_loans = 15
 		}	
 	}
 	icon = 5

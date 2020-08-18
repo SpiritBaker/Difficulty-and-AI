@@ -135,23 +135,19 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 6
+		factor = 7
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.75
 			NOT = { base_production = 3 }
 		}
 		modifier = {
 			factor = 0.75
 			NOT = { base_production = 4 }
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { base_production = 3 }
 			OR = {
 				trade_goods = grain
 				trade_goods = naval_supplies
@@ -449,7 +445,7 @@ shipyard = {
 	}
 
 	ai_will_do = {
-		factor = 0.4
+		factor = 0.3
 		modifier = {
 			factor = 1.2
 			NOT = { has_owner_accepted_culture = yes }
@@ -620,6 +616,10 @@ fort_15th = {
 			}
 		}
 		modifier = {
+			factor = 2
+			province_id = 365
+		}
+		modifier = {
 			factor = 0.1
 			FROM = { num_of_loans = 1 }
 		}
@@ -709,25 +709,26 @@ courthouse = {
 			NOT = { is_state = yes }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			area_for_scope_province = {
 				owner = { tag = ROOT }
 				is_capital = yes
 			}
 		}
 		modifier = {
+			factor = 0.5
+			NOT = { development = 10 }
+		}
+		modifier = {
 			factor = 1.5
-			num_free_building_slots = 2
 			development = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_free_building_slots = 2
 			development = 30
 		}
 		modifier = {
 			factor = 1.5
-			num_free_building_slots = 2
 			development = 40
 		}
 		modifier = {
@@ -1429,7 +1430,7 @@ grand_shipyard = {
 	}
 	
 	ai_will_do = {
-		factor = 0.4
+		factor = 0.3
 		modifier = {
 			factor = 1.2
 			NOT = { has_owner_accepted_culture = yes }
@@ -1837,23 +1838,19 @@ counting_house = {
 	allow_in_gold_provinces = no
 	
 	ai_will_do = {
-		factor = 6
+		factor = 7
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.75
 			NOT = { base_production = 3 }
 		}
 		modifier = {
 			factor = 0.75
 			NOT = { base_production = 4 }
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { base_production = 3 }
 			OR = {
 				trade_goods = grain
 				trade_goods = naval_supplies
@@ -1984,25 +1981,26 @@ town_hall = {
 			NOT = { is_state = yes }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			area_for_scope_province = {
 				owner = { tag = ROOT }
 				is_capital = yes
 			}
 		}
 		modifier = {
+			factor = 0.5
+			NOT = { development = 10 }
+		}
+		modifier = {
 			factor = 1.5
-			num_free_building_slots = 1
 			development = 20
 		}
 		modifier = {
 			factor = 1.5
-			num_free_building_slots = 1
 			development = 30
 		}
 		modifier = {
 			factor = 1.5
-			num_free_building_slots = 1
 			development = 40
 		}
 		modifier = {
@@ -3143,6 +3141,25 @@ impressment_offices = {
 			factor = 0
 			NOT = { owned_by = FROM }
 			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 0
+			FROM = { num_of_loans = 1 }
+		}
+		modifier = {
+			factor = 0
+			FROM = { is_tribal = yes }
+		}
+		modifier = {
+			factor = 0
+			FROM = { primitives = yes }
+		}
+		modifier = {
+			factor = 0
+			FROM = { 
+				NOT = { num_of_ports = 1 }
+				NOT = { is_colonial_nation = yes }
+			}
 		}
 	}
 }

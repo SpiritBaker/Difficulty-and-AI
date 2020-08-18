@@ -19,7 +19,7 @@ NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.5 --Horde unity gained per ducat loot
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0.5 --% increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
 --NDefines.NEconomy.CARAVAN_FACTOR = 7.5 --Development is divided by this factor, do not set to zero!
-NDefines.NEconomy.CARAVAN_POWER_MAX = 25
+NDefines.NEconomy.CARAVAN_POWER_MAX = 15
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 
 NDefines.NAI.SUBSIDY_YEARS = 20
@@ -73,7 +73,7 @@ NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.5
 NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.3
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
-NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.7
+NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.8
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 
 --Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.

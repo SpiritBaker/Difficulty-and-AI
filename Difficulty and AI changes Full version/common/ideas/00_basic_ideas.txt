@@ -56,17 +56,14 @@ aristocracy_ideas = {
 			factor = 0.5
 			is_subject = yes
 		}
-
 		modifier = {
 			factor = 2
 			has_idea_group = economic_ideas
 		}
-
 		modifier = {
 			factor = 2
 			has_idea_group = innovativeness_ideas
 		}
-
 		modifier = {
 			factor = 2
 			has_idea_group = offensive_ideas
@@ -228,7 +225,11 @@ innovativeness_ideas = {
 		factor = 1
 		modifier = {
 			factor = 2
-			has_reform = steppe_horde
+			OR = {
+				religion = anglican
+				religion = protestant
+				religion = reformed
+			}
 		}
 		modifier = {
 			factor = 2
@@ -246,10 +247,9 @@ innovativeness_ideas = {
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.6
 			NOT = { technology_group = western }
 		}
-
 	}
 }
 
@@ -308,12 +308,10 @@ religious_ideas = {
 			factor = 2
 			has_idea_group = quantity_ideas
 		}
-
 		modifier = {
 			factor = 2
 			has_idea_group = defensive_ideas
-		}
-		
+		}		
 		modifier = {
 			factor = 1.2
 			NOT = { religious_unity = 0.5 }
@@ -322,7 +320,6 @@ religious_ideas = {
 			factor = 1.5
 			NOT = { religious_unity = 0.2 }
 		}
-
 		modifier = {
 			factor = 1.5
 			OR = {
@@ -335,12 +332,10 @@ religious_ideas = {
 				religion = vajrayana
 			}
 		}
-
 		modifier = {
 			factor = 0.5
-				NOT = { has_border_with_religious_enemy = yes }
+			NOT = { has_border_with_religious_enemy = yes }
 		}
-
 		modifier = {
 			factor = 0.5
 			NOT = {
@@ -351,7 +346,6 @@ religious_ideas = {
 				
 			}
 		}
-
 		modifier = {
 			factor = 0.5
 			OR = {
@@ -469,7 +463,15 @@ diplomatic_ideas = {
 		}
 		modifier = {
 			factor = 2.5
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 2.5
 			vassal = 3
+		}
+		modifier = {
+			factor = 0.75
+			has_idea_group = influence_ideas
 		}
 	}
 }
@@ -507,10 +509,6 @@ offensive_ideas = {
 	ai_will_do = {
 		factor = 2
 
-		modifier = {
-			factor = 2
-			adm_tech = 16
-		}
 		modifier = {
 			factor = 2
 			has_idea_group = aristocracy_ideas
@@ -695,7 +693,7 @@ trade_ideas = {
 			NOT = { has_government_attribute = is_merchant_republic }
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			NOT = { trade_income_percentage = 0.1 }
 		}			
 		modifier = {
@@ -759,49 +757,40 @@ economic_ideas = {
 
 	ai_will_do = {
 		factor = 1
-
 		modifier = {
 			factor = 1.2
 			num_of_cities = 25
 		}
-
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_cities = 50
 		}
-
 		modifier = {
-			factor = 2
+			factor = 1.2
 			num_of_cities = 100
 		}
-
 		modifier ={
 			factor = 2.5
 			gold = 1
 		}
-
 		modifier ={
 			factor = 5
 			gold = 2
 		}
-
 		modifier = {
-			factor = 5
+			factor = 2
 			has_idea_group = offensive_ideas
 		}
-
 		modifier = {
-			factor = 5
+			factor = 2
 			has_idea_group = quality_ideas
 		}
-
 		modifier = {
-			factor = 5
+			factor = 2
 			has_idea_group = naval_ideas
 		}
-
 		modifier = {
-			factor = 5
+			factor = 2
 			has_idea_group = quantity_ideas
 		}
 	}
@@ -919,6 +908,11 @@ exploration_ideas = {
 		modifier = {
 			factor = 0.1
 			technology_group = indian
+		}
+		modifier = {
+			factor = 0.5
+			technology_group = muslim
+			NOT = { has_idea_group = exploration_ideas }
 		}
 		modifier = {
 			factor = 0.1
@@ -1127,7 +1121,11 @@ quality_ideas = {
 
 		modifier = {
 			factor = 2
-			adm_tech = 16
+			OR = {
+				religion = anglican
+				religion = protestant
+				religion = reformed
+			}
 		}
 
 		modifier = {
@@ -1139,12 +1137,12 @@ quality_ideas = {
 		}
 
 		modifier = {
-			factor = 5
+			factor = 2
 			has_idea_group = economic_ideas
 		}
 
 		modifier = {
-			factor = 5
+			factor = 2
 			has_idea_group = innovativeness_ideas
 		}
 
@@ -1193,24 +1191,19 @@ quantity_ideas = {
 		factor = 1.0
 
 		modifier = {
-			factor = 2
+			factor = 1.5
 			army_size = 100
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			army_size = 200
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			army_size = 300
 		}		
 		modifier = {
-			factor = 2
-			adm_tech =  22
-		}
-
-		modifier = {
-			factor = 2
+			factor = 1.5
 			is_great_power = yes
 		}
 		modifier = {
@@ -1322,7 +1315,7 @@ expansion_ideas = {
 			}
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.25
 			technology_group = chinese
 			technology_group = muslim
 		}
@@ -1368,34 +1361,37 @@ administrative_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
-		#modifier = {
-		#	factor = 2
-		#	has_reform = steppe_horde
-		#}
-
+		factor = 0.75
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 5
+				
+				NOT = { is_state_core = ROOT  }
+				is_territorial_core = ROOT
+				is_owned_by_trade_company = no
+				is_overseas = no
+				NOT = { has_construction = core }
+			}
+		}
 		modifier = {
 			factor = 0.2
 			NOT = { num_of_states = 25 }
 		}
-
 		modifier = {
 			factor = 1.5
 			num_of_states = 25
 		}
-
 		modifier = {
 			factor = 1.5
 			num_of_states = 35
 		}
-
 		modifier = {
 			factor = 1.5
 			num_of_states = 50
 		}		
-
 		modifier = {
-			factor = 0.3
+			factor = 0.5
 			NOT = { adm_tech = 20 }
 		}		
 	}
@@ -1440,11 +1436,11 @@ humanist_ideas = {
 			has_idea_group = religious_ideas
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			religious_unity = 1
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.75
 			religious_unity = 0.85
 		}
 		modifier = {
@@ -1565,6 +1561,10 @@ influence_ideas = {
 		modifier = {
 			factor = 2.5
 			is_great_power = yes
+		}
+		modifier = {
+			factor = 0.75
+			has_idea_group = diplomatic_ideas
 		}
 	}
 }

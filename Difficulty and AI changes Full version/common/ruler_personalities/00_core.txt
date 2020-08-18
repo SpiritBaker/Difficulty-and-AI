@@ -4057,14 +4057,44 @@ talented_statesman_personality = { # Talented Statesman
 
 	heir_allow = {
 		allow = {
+			DIP = 3
+			NOT = { heir_has_personality = babbling_buffoon_personality }
+			NOT = { heir_has_personality = naive_personality }
 		}
 	
 		chance = {
+			modifier = {
+				factor = 0.5
+				heir_DIP = 5
+			}
+			modifier = {
+				factor = 2
+				heir_DIP = 6
+			}
+			modifier = {
+				factor = 0.5
+				heir_ADM = 5
+			}
+			modifier = {
+				factor = 2
+				heir_ADM = 6
+			}
+			modifier = {
+				factor = 0.5
+				heir_MIL = 5
+			}
+			modifier = {
+				factor = 2
+				heir_MIL = 6
+			}
 		}
 	}
 	
 	consort_allow = {
 		allow = {
+			DIP = 3
+			NOT = { consort_has_personality = babbling_buffoon_personality }
+			NOT = { consort_has_personality = naive_personality }
 		}
 
 		chance = {
