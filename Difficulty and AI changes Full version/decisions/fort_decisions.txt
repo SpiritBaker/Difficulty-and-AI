@@ -53,7 +53,7 @@ country_decisions = {
 						}
 						any_owned_province = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_18th
 							
 							OR = {
@@ -129,7 +129,7 @@ country_decisions = {
 						}
 						any_owned_province = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_17th
 							
 							OR = {
@@ -190,7 +190,7 @@ country_decisions = {
 						}
 						any_owned_province = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_16th
 							has_building = fort_15th
 							
@@ -285,7 +285,7 @@ country_decisions = {
 					limit = {
 						any_owned_province = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_18th
 							
 							OR = {
@@ -329,7 +329,7 @@ country_decisions = {
 					random_owned_province = {
 						limit = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_18th
 							
 							OR = {
@@ -429,7 +429,7 @@ country_decisions = {
 					limit = {
 						any_owned_province = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_17th
 							
 							OR = {
@@ -466,7 +466,7 @@ country_decisions = {
 					random_owned_province = {
 						limit = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_17th
 							
 							OR = {
@@ -551,7 +551,7 @@ country_decisions = {
 					limit = {
 						any_owned_province = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_16th
 							has_building = fort_15th
 							
@@ -577,7 +577,7 @@ country_decisions = {
 					random_owned_province = {
 						limit = {
 							is_state_core = ROOT
-							ROOT = { treasury = 600 }
+							ROOT = { treasury = 700 }
 							can_build = fort_16th
 							has_building = fort_15th
 							
