@@ -40,6 +40,7 @@ country_decisions = {
 									}
 								}
 								AND = {
+									always = no
 									NOT = { has_building = fort_17th }
 									NOT = { has_building = fort_16th }
 									NOT = { has_building = fort_15th }
@@ -116,6 +117,7 @@ country_decisions = {
 									}
 								}
 								AND = {
+									always = no
 									NOT = { has_building = fort_16th }
 									NOT = { has_building = fort_15th }
 									ROOT = {
@@ -177,6 +179,7 @@ country_decisions = {
 									#}
 								}
 								AND = {
+									always = no
 									NOT = { has_building = fort_15th }
 									ROOT = {
 										treasury = 600
@@ -257,6 +260,7 @@ country_decisions = {
 									}
 								}
 								AND = {
+									always = no
 									NOT = { has_building = fort_17th }
 									NOT = { has_building = fort_16th }
 									NOT = { has_building = fort_15th }
@@ -401,6 +405,7 @@ country_decisions = {
 									}
 								}
 								AND = {
+									always = no
 									NOT = { has_building = fort_16th }
 									NOT = { has_building = fort_15th }
 									ROOT = {
@@ -523,6 +528,7 @@ country_decisions = {
 									#}
 								}
 								AND = {
+									always = no
 									NOT = { has_building = fort_15th }
 									ROOT = {
 										treasury = 600
