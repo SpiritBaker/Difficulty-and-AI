@@ -82,23 +82,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
@@ -162,23 +150,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
@@ -223,23 +199,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
@@ -347,23 +311,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
@@ -403,23 +355,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
@@ -507,23 +447,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
@@ -556,23 +484,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
@@ -641,23 +557,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
@@ -679,23 +583,11 @@ country_decisions = {
 							any_neighbor_province = {
 								OR = {
 									NOT = {
-										ROOT = { owns_or_non_sovereign_subject_of = PREV }
-										owner = {
-											ROOT = {
-												is_subject_of = PREV
-												NOT = { is_subject_of_type = tributary_state }
-											}
-										}
+										root_subject_overlord_owns = yes
 									}
 									any_neighbor_province = {
 										NOT = {
-											ROOT = { owns_or_non_sovereign_subject_of = PREV }
-											owner = {
-												ROOT = {
-													is_subject_of = PREV
-													NOT = { is_subject_of_type = tributary_state }
-												}
-											}
+											root_subject_overlord_owns = yes
 										}
 									}
 								}
