@@ -73,7 +73,7 @@ ai_capitalist = {
 			tag = KOR
 		}		
 		modifier = {
-			factor = 2
+			factor = 1.5
 			tag = MAM
 		}
 		modifier = {
@@ -196,6 +196,14 @@ ai_diplomat = {
 		modifier = {
 			factor = 1.5
 			tag = KOR
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 1
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
 		}
 		modifier = {
 			factor = 3

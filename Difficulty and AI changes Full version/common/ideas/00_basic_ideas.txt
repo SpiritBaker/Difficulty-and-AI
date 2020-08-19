@@ -69,7 +69,7 @@ aristocracy_ideas = {
 			has_idea_group = offensive_ideas
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			AND = {
 				NOT = { technology_group = nomad_group }
 				OR = {
