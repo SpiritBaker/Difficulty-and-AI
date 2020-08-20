@@ -199,10 +199,6 @@ ai_diplomat = {
 		}
 		modifier = {
 			factor = 1.5
-			vassal = 1
-		}
-		modifier = {
-			factor = 1.5
 			vassal = 3
 		}
 		modifier = {
@@ -349,8 +345,6 @@ ai_militarist = {
 				tag = CSU
 				tag = TIM
 				tag = MUG
-				tag = AKK
-				tag = ARL
 				tag = SWE
 			}
 		}				
@@ -465,7 +459,7 @@ ai_colonialist = {
 			NOT = { num_of_colonists = 1 }
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			tag = POR
 		}
 		modifier = {
@@ -520,50 +514,78 @@ ai_balanced = {
 			has_regency = yes
 		}		
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = {
-				adm = 1
-				dip = 1
-				mil = 1
+				OR = { 
+					adm = 1
+					dip = 1
+					mil = 1
+				}
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = {
-				adm = 2
-				dip = 2
-				mil = 2
+				OR = { 
+					adm = 2
+					dip = 2
+					mil = 2
+				}
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = {
-				adm = 3
-				dip = 3
-				mil = 3
+				OR = { 
+					adm = 3
+					dip = 3
+					mil = 3
+				}
 			}
 		}	
 		modifier = {
-			factor = 1.5
-			adm = 4
-			dip = 4
-			mil = 4
+			factor = 1.25
+			OR = { 
+				adm = 4
+				dip = 4
+				mil = 4
+			}
 		}
 		modifier = {
-			factor = 1.5
-			adm = 5
-			dip = 5
-			mil = 5
+			factor = 1.25
+			OR = { 
+				adm = 5
+				dip = 5
+				mil = 5
+			}
 		}		
 		modifier = {
-			factor = 1.5
-			adm = 6
-			dip = 6
-			mil = 6
+			factor = 1.25
+			OR = { 
+				adm = 6
+				dip = 6
+				mil = 6
+			}
 		}
 		modifier = {
 			factor = 1.5
-			tag = FRA
+			OR = {
+				tag = MOS
+				tag = RUS
+				tag = TUR
+				tag = CSU
+				tag = TIM
+				tag = MUG
+				tag = CAS
+				tag = SWE
+				tag = FRA
+				tag = PLC
+				tag = SPA
+			}
+		}	
+		modifier = {
+			factor = 1.25
+			is_emperor = yes
 		}
 	}
 	icon = 6

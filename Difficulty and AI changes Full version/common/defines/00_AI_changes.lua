@@ -72,6 +72,7 @@ NDefines.NAI.INVADING_BRAVERY =	1.2	--If (defender strength) / (invader strength
 NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.5
 NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.3
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
+NDefines.NAI.ADVISOR_BUDGET_FRACTION = 0.25 -- AI will spend a maximum of this fraction of monthly income on advisor maintenance
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
 NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.8
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85

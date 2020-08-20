@@ -3081,13 +3081,13 @@ estate_maratha_special_privilege = {
 		has_reform = permanent_marathas_council_reform
 	}
 	modifier_by_land_ownership = {
-		discipline = 0.05
 		global_manpower_modifier = 0.25
 		global_tax_modifier = -0.15
 	}
 	penalties = {
 	}
 	benefits = {
+		discipline = 0.025
 	}
 	ai_will_do = {
 		factor = 12

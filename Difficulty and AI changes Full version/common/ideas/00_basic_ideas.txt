@@ -57,42 +57,42 @@ aristocracy_ideas = {
 			is_subject = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 0.5
+			NOT = { cavalry_fraction = 0.1 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { cavalry_fraction = 0.2 }
+		}
+		modifier = {
+			factor = 1.5
 			has_idea_group = economic_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = innovativeness_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = offensive_ideas
 		}
 		modifier = {
-			factor = 0.75
-			AND = {
-				NOT = { technology_group = nomad_group }
-				OR = {
-					NOT = { tag = MOS }
-					NOT = { tag = RUS }
-					NOT = { tag = TIM }
-					NOT = { tag = MAM }
-					NOT = { tag = POL }
-					NOT = { tag = PLC }
-					NOT = { tag = LIT }
-					NOT = { tag = MUG }
-					NOT = { tag = TUR }
-					NOT = { tag = HUN }
-					NOT = { tag = QAR }
-					NOT = { tag = AKK }
-					NOT = { tag = PER }
-					NOT = { tag = TRS }
-					NOT = { tag = BUK }
-				}
+			factor = 1.5
+			OR = {
+				has_estate = estate_maratha
+				has_estate = estate_cossacks
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 1.5
+			OR = {
+				technology_group = nomad_group
+				technology_group = muslim
+				technology_group = eastern
+			}
+		}
+		modifier = {
+			factor = 1.5
 			OR = {
 				tag = POL
 				tag = PLC
@@ -112,9 +112,8 @@ aristocracy_ideas = {
 		}
 		modifier = {
 			factor = 5
-			technology_group = nomad_group
+			is_nomad = yes
 		}
-
 	}
 }
 
@@ -157,10 +156,10 @@ plutocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 1
 
 		modifier = {
-			factor = 3
+			factor = 2.5
 			government = republic
 			NOT = { is_revolutionary = yes }
 		}
@@ -232,22 +231,22 @@ innovativeness_ideas = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = offensive_ideas
 		}
 
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = quality_ideas
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			technology_group = western
 		}
 
 		modifier = {
-			factor = 0.6
+			factor = 0.75
 			NOT = { technology_group = western }
 		}
 	}
@@ -297,23 +296,27 @@ religious_ideas = {
 			has_idea_group = humanist_ideas
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
+			NOT = { has_border_with_religious_enemy = yes }
+		}
+		modifier = {
+			factor = 0.25
 			religious_unity = 1
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.75
 			religious_unity = 0.85
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = quantity_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = defensive_ideas
 		}		
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			NOT = { religious_unity = 0.5 }
 		}
 		modifier = {
@@ -330,11 +333,16 @@ religious_ideas = {
 				religion = coptic
 				religion = sikhism
 				religion = vajrayana
+				religion = shinto
 			}
 		}
 		modifier = {
-			factor = 0.5
-			NOT = { has_border_with_religious_enemy = yes }
+			factor = 1.5
+			tag = PAP
+		}
+		modifier = {
+			factor = 2
+			government = theocracy
 		}
 		modifier = {
 			factor = 0.5
@@ -404,7 +412,7 @@ spy_ideas = {
 			has_idea_group = aristocracy_ideas
 		}
 		modifier = {
-			factor = 0
+			factor = 0.1
 				NOT = { adm_tech = 18 }
 		}
 	}
@@ -443,19 +451,15 @@ diplomatic_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.2
+		factor = 0.25
 		modifier = {
 			factor = 0.5
 			NOT = { is_emperor = yes }
-		}
-		modifier = {
-			factor = 0.5
 			NOT = { num_of_subjects = 1 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.8
 			NOT = { adm_tech = 15 }
-			NOT = { tag = AUS }
 		}
 		modifier = {
 			factor = 2.5
@@ -507,23 +511,20 @@ offensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 1
 
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = aristocracy_ideas
 		}
-
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = innovativeness_ideas
 		}
-
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = economic_ideas
 		}
-
 		modifier = {
 			factor = 1.5
 			has_idea_group = religious_ideas
@@ -566,14 +567,14 @@ defensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 1
 
 		modifier = {
 			factor = 1.5
 			has_idea_group = trade_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = religious_ideas
 		}
 		modifier = {
@@ -581,7 +582,7 @@ defensive_ideas = {
 			has_idea_group = exploration_ideas
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			capital_scope = {
 				OR = {
 					region = persia_region
@@ -604,7 +605,7 @@ defensive_ideas = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 1.5
 			capital_scope = { 
 				OR = {
 					has_terrain = mountain
@@ -615,32 +616,32 @@ defensive_ideas = {
 		}
 		modifier = {
 			factor = 1.5
-				OR = {
-					culture_group = central_indic
-					culture_group = caucasian
-					culture_group = south_slavic
-					culture_group = latin
-					culture_group = iberian
-					culture_group = cushitic
-					culture_group = maghrebi
-					culture_group = finno_ugric
-					primary_culture = afghani 
-					primary_culture = kashmiri
-					primary_culture = assamese
-					primary_culture = nepali
-					primary_culture = pahari
-					primary_culture = rajput
-					primary_culture = baluchi
-					primary_culture = kurdish
-					primary_culture = azerbaijani
-					primary_culture = swiss
-					primary_culture = austrian
-					primary_culture = norwegian
-					primary_culture = finnish
-					primary_culture = yemeni_culture
-					primary_culture = uyghur
-					primary_culture = tibetan
-					primary_culture = hejazi_culture
+			OR = {
+				culture_group = central_indic
+				culture_group = caucasian
+				culture_group = south_slavic
+				culture_group = latin
+				culture_group = iberian
+				culture_group = cushitic
+				culture_group = maghrebi
+				culture_group = finno_ugric
+				primary_culture = afghani 
+				primary_culture = kashmiri
+				primary_culture = assamese
+				primary_culture = nepali
+				primary_culture = pahari
+				primary_culture = rajput
+				primary_culture = baluchi
+				primary_culture = kurdish
+				primary_culture = azerbaijani
+				primary_culture = swiss
+				primary_culture = austrian
+				primary_culture = norwegian
+				primary_culture = finnish
+				primary_culture = yemeni_culture
+				primary_culture = uyghur
+				primary_culture = tibetan
+				primary_culture = hejazi_culture
 			}
 		}		
 	}
@@ -690,10 +691,6 @@ trade_ideas = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { has_government_attribute = is_merchant_republic }
-		}
-		modifier = {
-			factor = 0.5
 			NOT = { trade_income_percentage = 0.1 }
 		}			
 		modifier = {
@@ -705,19 +702,19 @@ trade_ideas = {
 			trade_income_percentage = 0.5
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = quantity_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = economic_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = defensive_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = plutocracy_ideas
 		}
 	}
@@ -774,23 +771,23 @@ economic_ideas = {
 			gold = 1
 		}
 		modifier ={
-			factor = 5
+			factor = 2.5
 			gold = 2
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = offensive_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = quality_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = naval_ideas
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = quantity_ideas
 		}
 	}
@@ -837,8 +834,8 @@ exploration_ideas = {
 			is_colonial_nation = yes
 		}
 		modifier = {
-			factor = 0
-			is_year = 1630
+			factor = 0.3
+			is_year = 1600
 		}
 		modifier = {
 			factor = 0
@@ -945,19 +942,19 @@ exploration_ideas = {
 			technology_group = high_american
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_ports = 10
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_ports = 15
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_ports = 20
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			num_of_ports = 25
 		}
 		modifier = {
@@ -1039,7 +1036,7 @@ maritime_ideas = {
 			NOT = { num_of_ports = 8 }
 		}
 		modifier = {
-			factor = 0
+			factor = 0.25
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
@@ -1047,23 +1044,23 @@ maritime_ideas = {
 			num_of_cities = 100
 		}
 		modifier = {
-			factor = 2
-			colony = 2
+			factor = 1.5
+			colony = 1
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			naval_forcelimit = 100 
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			naval_forcelimit = 200 
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = naval_ideas
 		}
 		modifier = {
-			factor = 3
+			factor = 2.5
 			OR = { 
 				tag = GBR
 				tag = POR
@@ -1075,7 +1072,7 @@ maritime_ideas = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			OR = {
 				has_reform = pirate_republic_reform
 				has_reform = pirate_kingdom
@@ -1118,39 +1115,33 @@ quality_ideas = {
 
 	ai_will_do = {
 		factor = 1
-
 		modifier = {
-			factor = 2
+			factor = 1.5
 			OR = {
 				religion = anglican
 				religion = protestant
 				religion = reformed
 			}
 		}
-
 		modifier = {
-			factor = 0.6
+			factor = 0.75
 			OR = {
 				NOT = { technology_group = western }
 				NOT = { technology_group = eastern }
 			}
 		}
-
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = economic_ideas
 		}
-
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = innovativeness_ideas
 		}
-
 		modifier = {
-			factor = 10
+			factor = 5
 			has_idea_group = exploration_ideas
 		}
-
 		modifier = {
 			factor = 1.5
 			has_idea_group = trade_ideas
@@ -1207,17 +1198,15 @@ quantity_ideas = {
 			is_great_power = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = trade_ideas
 		}
-
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = economic_ideas
 		}
-
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_idea_group = religious_ideas
 		}
 
@@ -1363,7 +1352,7 @@ administrative_ideas = {
 	ai_will_do = {
 		factor = 0.75
 		modifier = {
-			factor = 2
+			factor = 2.5
 			num_of_owned_provinces_with = {
 				value = 5
 				
@@ -1375,7 +1364,7 @@ administrative_ideas = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.25
 			NOT = { num_of_states = 25 }
 		}
 		modifier = {
@@ -1392,7 +1381,7 @@ administrative_ideas = {
 		}		
 		modifier = {
 			factor = 0.5
-			NOT = { adm_tech = 20 }
+			NOT = { adm_tech = 15 }
 		}		
 	}
 }
@@ -1468,8 +1457,11 @@ humanist_ideas = {
 			num_of_cities = 100
 		}
 		modifier = {
-			factor = 1.5
-			tag = MUG
+			factor = 2
+			OR = {
+				tag = MUG
+				tag = MNG
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -1523,17 +1515,14 @@ influence_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.2
+		factor = 0.25
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			NOT = { is_emperor = yes }
-		}
-		modifier = {
-			factor = 0.75
 			NOT = { num_of_subjects = 1 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.8
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
@@ -1552,6 +1541,7 @@ influence_ideas = {
 			OR = {
 				tag = AUS
 				tag = FRA
+				tag = MNG
 			}
 		}
 		modifier = {
@@ -1630,28 +1620,36 @@ naval_ideas = {
 			num_of_cities = 50
 		}
 		modifier = {
-			factor = 0
+			factor = 0.25
 			NOT = { adm_tech = 12 }
 		}
 		modifier = {
-			factor = 5
+			factor = 1.5
+			colony = 1
+		}
+		modifier = {
+			factor = 1.5
 			colony = 2
+		}
+		modifier = {
+			factor = 1.5
+			colony = 3
 		}
 		modifier = {
 			factor = 1.5
 			naval_forcelimit = 100 
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			naval_forcelimit = 200 
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			naval_forcelimit = 300
 		}
 
 		modifier = {
-			factor = 10
+			factor = 5
 			OR = { 
 				tag = GBR
 				tag = POR
@@ -1674,7 +1672,7 @@ naval_ideas = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 2.5
 			OR = { 
 				tag = VEN
 				tag = KNI
@@ -1703,7 +1701,7 @@ naval_ideas = {
 		}
 
 		modifier = {
-			factor = 10
+			factor = 5
 			OR = {
 				has_reform = pirate_republic_reform
 				has_reform = pirate_kingdom
