@@ -44,3 +44,7 @@
  #Buildings
  building_state_house_desc:0 "Can be built alongside Manufactory"
  building_ramparts_desc:0 "Can be built alongside Manufactory"
+
+ #cb
+ cb_nationalist_rev:0 "Nationalism"
+ cb_nationalist_rev_desc:0 "They hold provinces of our culture group."
