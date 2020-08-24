@@ -29,8 +29,17 @@ province_event = {
 					capital_scope = { continent = europe }
 				}
 				AND = { 
+					government_rank = 2
+					is_year = 1710
+					capital_scope = { continent = europe }
+				}
+				AND = { 
 					is_great_power = yes
-					is_year = 1730
+					is_year = 1725
+				}
+				AND = { 
+					government_rank = 2
+					is_year = 1725
 				}
 			}
 			OR = {
@@ -67,19 +76,19 @@ province_event = {
 	mean_time_to_happen = {
 		years = 100
 		modifier = {
-			factor = 10
+			factor = 4
 			NOT = { continent = europe }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.8
 			is_capital = yes
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.8
 			owner = { tag = FRA }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			NOT = { owner = { religion_group = christian } }
 		}
 		modifier = {
@@ -92,7 +101,7 @@ province_event = {
 			} 
 		}
 		modifier = {
-			factor = 3
+			factor = 2.5
 			owner = {
 				capital_scope = {
 					NOT = { region = root }
@@ -109,7 +118,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			is_in_capital_area = no
 		}
 		modifier = {
@@ -395,12 +404,12 @@ province_event = {
 		}
 		#Time-based checks
 		modifier = {
-			factor = 2
+			factor = 1.5
 			NOT = { is_year = 1700 }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { is_year = 1750 }
+			NOT = { is_year = 1725 }
 		}
 		modifier = {
 			factor = 0.8

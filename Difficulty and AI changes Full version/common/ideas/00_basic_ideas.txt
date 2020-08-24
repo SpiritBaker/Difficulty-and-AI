@@ -300,6 +300,10 @@ religious_ideas = {
 			NOT = { has_border_with_religious_enemy = yes }
 		}
 		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
 			factor = 0.25
 			religious_unity = 1
 		}
@@ -707,10 +711,6 @@ trade_ideas = {
 		}
 		modifier = {
 			factor = 1.5
-			has_idea_group = economic_ideas
-		}
-		modifier = {
-			factor = 1.5
 			has_idea_group = defensive_ideas
 		}
 		modifier = {
@@ -838,6 +838,10 @@ exploration_ideas = {
 			is_year = 1600
 		}
 		modifier = {
+			factor = 0.1
+			is_year = 1650
+		}
+		modifier = {
 			factor = 0
 			is_tribal = yes
 		}
@@ -909,7 +913,6 @@ exploration_ideas = {
 		modifier = {
 			factor = 0.5
 			technology_group = muslim
-			NOT = { has_idea_group = exploration_ideas }
 		}
 		modifier = {
 			factor = 0.1
@@ -923,6 +926,10 @@ exploration_ideas = {
 		modifier = {
 			factor = 0.5
 			num_of_loans = 5
+		}
+		modifier = {
+			factor = 0.5
+			num_of_loans = 10
 		}
 		modifier = {
 			factor = 0.8
@@ -958,7 +965,7 @@ exploration_ideas = {
 			num_of_ports = 25
 		}
 		modifier = {
-			factor = 1000
+			factor = 100
 			OR = {
 				tag = POR
 				tag = CAS
@@ -1124,7 +1131,7 @@ quality_ideas = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.8
 			OR = {
 				NOT = { technology_group = western }
 				NOT = { technology_group = eastern }
@@ -1139,12 +1146,20 @@ quality_ideas = {
 			has_idea_group = innovativeness_ideas
 		}
 		modifier = {
-			factor = 5
+			factor = 2.5
 			has_idea_group = exploration_ideas
 		}
 		modifier = {
 			factor = 1.5
 			has_idea_group = trade_ideas
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = aristocracy_ideas
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = naval_ideas
 		}
 	}
 }
@@ -1247,7 +1262,7 @@ expansion_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.48
+		factor = 0.5
 		modifier = {
 			factor = 10
 			OR = {
@@ -1263,11 +1278,15 @@ expansion_ideas = {
 			is_year = 1600
 		}
 		modifier = {
+			factor = 0.1
+			is_year = 1650
+		}
+		modifier = {
 			factor = 5
 			tag = POR
 		}
 		modifier = {
-			factor = 3
+			factor = 2.5
 			OR = {
 				tag = CAS
 				tag = SPA
@@ -1302,11 +1321,21 @@ expansion_ideas = {
 					technology_group = chinese
 				} 
 			}
+			capital_scope = {
+				NOT = {
+					OR = {
+						region = central_africa_region
+						region = east_africa_region
+					}
+				}
+			}
 		}
 		modifier = {
-			factor = 0.25
-			technology_group = chinese
-			technology_group = muslim
+			factor = 0.66
+			OR = {
+				technology_group = chinese
+				technology_group = muslim
+			}
 		}
 		modifier = {
 			factor = 0

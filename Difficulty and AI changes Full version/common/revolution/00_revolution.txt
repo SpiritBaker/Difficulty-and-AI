@@ -23,7 +23,13 @@ revolution = {
 		}
 		modifier = {
 			factor = 0.8
-			owner = { NOT = { government = monarchy } }
+			owner = { 
+				OR = {
+					NOT = { government = monarchy } 
+					has_reform = parliamentary_reform 
+					government = republic 
+				}
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -57,12 +63,12 @@ revolution = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = { same_continent = FROM }
 			NOT = { owned_by = FROM }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = { same_continent = FROM }
 			NOT = {
 				OR = {
@@ -151,26 +157,30 @@ revolution = {
 			development = 30
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.15
 			development = 35
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.15
+			development = 40
+		}
+		modifier = {
+			factor = 1.1
 			province_has_center_of_trade_of_level = 2
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.1
 			province_has_center_of_trade_of_level = 3
 		}
 		#make it not be such a scatter gun
 		modifier = {
-			factor = 2.5
+			factor = 2.75
 			any_neighbor_province = {
 				has_revolution_in_province = yes
 			}
 		}
 		modifier = { #so that it will get to islands like Britain
-			factor = 1.6
+			factor = 1.75
 			has_port = yes
 			sea_zone = {
 				any_neighbor_province = {

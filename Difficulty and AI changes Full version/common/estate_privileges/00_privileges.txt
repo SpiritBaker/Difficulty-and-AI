@@ -1842,12 +1842,12 @@ estate_burghers_indebted_to_burghers = {
 			num_of_loans = 20
 		}
 		modifier = {
-			factor = 1.75
+			factor = 1.5
 			is_in_deficit = yes
 			NOT = { treasury = 25 }
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			is_at_war =  yes
 			is_in_deficit = yes
 			NOT = { treasury = 25 }
@@ -2764,12 +2764,12 @@ estate_jains_indebted_to_jains = {
 			num_of_loans = 20
 		}
 		modifier = {
-			factor = 1.75
+			factor = 1.5
 			is_in_deficit = yes
 			NOT = { treasury = 25 }
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			is_at_war =  yes
 			is_in_deficit = yes
 			NOT = { treasury = 25 }

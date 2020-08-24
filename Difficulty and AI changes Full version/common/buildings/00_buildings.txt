@@ -105,7 +105,7 @@ marketplace = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 1.5
 			any_province_in_state = {
 				has_merchant = FROM
 				OR = {
@@ -134,12 +134,7 @@ marketplace = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -268,12 +263,7 @@ workshop = {
 				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -338,12 +328,7 @@ temple = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -359,7 +344,7 @@ barracks = {
 	}
 	
 	ai_will_do = {
-		factor = 6
+		factor = 8
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -439,12 +424,7 @@ barracks = {
 			NOT = { culture_group = ROOT }
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -547,12 +527,7 @@ shipyard = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -642,12 +617,7 @@ fort_15th = {
 			province_id = 365
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	} 
@@ -700,12 +670,7 @@ coastal_defence = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -823,12 +788,7 @@ courthouse = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -914,12 +874,7 @@ dock = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -989,12 +944,7 @@ regimental_camp = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -1090,12 +1040,7 @@ fort_16th = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	} 
@@ -1151,12 +1096,7 @@ naval_battery = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -1225,12 +1165,7 @@ cathedral = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -1337,12 +1272,7 @@ university = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -1415,7 +1345,7 @@ trade_depot = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 1.5
 			any_province_in_state = {
 				has_merchant = FROM
 				OR = {
@@ -1445,12 +1375,7 @@ trade_depot = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -1555,12 +1480,7 @@ grand_shipyard = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -1577,7 +1497,7 @@ training_fields = {
 	}
 	
 	ai_will_do = {
-		factor = 6
+		factor = 8
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -1658,12 +1578,7 @@ training_fields = {
 			NOT = { culture_group = ROOT }
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -1765,12 +1680,7 @@ fort_17th = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	} 
@@ -1845,7 +1755,7 @@ stock_exchange = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 1.5
 			any_province_in_state = {
 				has_merchant = FROM
 				OR = {
@@ -1880,12 +1790,7 @@ stock_exchange = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2016,12 +1921,7 @@ counting_house = {
 			NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2136,12 +2036,7 @@ town_hall = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2229,12 +2124,7 @@ drydock = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2306,12 +2196,7 @@ conscription_center = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2415,12 +2300,7 @@ fort_18th = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	} 
@@ -2501,12 +2381,7 @@ wharf = {
 			has_latent_trade_goods = coal
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2551,12 +2426,7 @@ weapons = {
 			has_latent_trade_goods = coal
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2613,12 +2483,7 @@ textile = {
 			has_latent_trade_goods = coal
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2671,12 +2536,7 @@ plantations = {
 			has_latent_trade_goods = coal
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2730,12 +2590,7 @@ tradecompany = {
 			has_latent_trade_goods = coal
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2809,12 +2664,7 @@ farm_estate = {
 			has_latent_trade_goods = coal
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2875,12 +2725,7 @@ mills = {
 			has_latent_trade_goods = coal
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -2911,12 +2756,7 @@ furnace = {
 			is_owned_by_trade_company = no
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -3028,12 +2868,7 @@ ramparts = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -3136,12 +2971,7 @@ soldier_households = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -3219,12 +3049,7 @@ impressment_offices = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
@@ -3396,12 +3221,7 @@ state_house = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0
-			NOT = { owned_by = FROM }
+			factor = 0.33
 			FROM = { num_of_loans = 1 }
 		}
 	}
