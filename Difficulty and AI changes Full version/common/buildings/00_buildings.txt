@@ -2955,6 +2955,10 @@ ramparts = {
 				}
 			}
 		}
+		OR = {
+			fort_level = 1
+			FROM = { ai = no }
+		}
 	}	
 
 	modifier = {
