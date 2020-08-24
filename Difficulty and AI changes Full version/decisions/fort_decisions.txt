@@ -4,8 +4,10 @@ country_decisions = {
 		
 		potential = {
 			ai = yes
-			is_at_war = no
 			primitives = no
+			
+			is_at_war = no
+			manpower_percentage = 0.1
 			
 			NOT = { num_of_loans = 1 }
 			treasury = 300
