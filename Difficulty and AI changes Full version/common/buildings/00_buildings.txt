@@ -568,6 +568,28 @@ fort_15th = {
 		allowed_num_of_buildings = 1
 	}
 	
+	keep_trigger = {
+		OR = {
+			FROM = { ai = no }
+			is_capital = yes
+			province_group = strait_provinces
+			nationalism = 1
+			
+			NOT = {
+				any_neighbor_province = {
+					owned_by = FROM
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
+	}
+	
 	onmap = yes
 	influencing_fort = yes
 	
@@ -1009,6 +1031,28 @@ fort_16th = {
 	modifier = {
 		fort_level = 4
 		allowed_num_of_buildings = 1
+	}
+	
+	keep_trigger = {
+		OR = {
+			FROM = { ai = no }
+			is_capital = yes
+			province_group = strait_provinces
+			nationalism = 1
+			
+			NOT = {
+				any_neighbor_province = {
+					owned_by = FROM
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
 	}
 
 	onmap = yes
@@ -1679,6 +1723,28 @@ fort_17th = {
 		fort_level = 6
 		allowed_num_of_buildings = 1
 	}
+	
+	keep_trigger = {
+		OR = {
+			FROM = { ai = no }
+			is_capital = yes
+			province_group = strait_provinces
+			nationalism = 1
+			
+			NOT = {
+				any_neighbor_province = {
+					owned_by = FROM
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
+	}
 
 	onmap = yes
 	influencing_fort = yes
@@ -2326,6 +2392,28 @@ fort_18th = {
 	modifier = {
 		fort_level = 8
 		allowed_num_of_buildings = 1
+	}
+	
+	keep_trigger = {
+		OR = {
+			FROM = { ai = no }
+			is_capital = yes
+			province_group = strait_provinces
+			nationalism = 1
+			
+			NOT = {
+				any_neighbor_province = {
+					owned_by = FROM
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
 	}
 
 	onmap = yes
