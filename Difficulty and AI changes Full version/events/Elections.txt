@@ -132,7 +132,7 @@ country_event = {
 					NOT = {
 						check_variable = {
 							which = admSkill
-							value = 10
+							value = 9
 						}
 					}
 				}
@@ -140,46 +140,58 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = { has_ruler_flag = ruler_reelected }
-				NOT = {
-					republican_tradition = 100
-					has_global_modifier_value = {
-						which = republican_tradition
-						value = 0.5
+				OR = {
+					NOT = { republican_tradition = 100 }
+					NOT = {
+						has_global_modifier_value = {
+							which = republican_tradition
+							value = 0.5
+						}
 					}
 				}
-				NOT = {
-					republican_tradition = 90
-					has_global_modifier_value = {
-						which = republican_tradition
-						value = 1
+				OR = {
+					NOT = { republican_tradition = 90 }
+					NOT = {
+						has_global_modifier_value = {
+							which = republican_tradition
+							value = 1
+						}
 					}
 				}
-				NOT = {
-					republican_tradition = 80
-					has_global_modifier_value = {
-						which = republican_tradition
-						value = 1.5
+				OR = {
+					NOT = { republican_tradition = 80 }
+					NOT = {
+						has_global_modifier_value = {
+							which = republican_tradition
+							value = 1.5
+						}
 					}
 				}
-				NOT = {
-					republican_tradition = 70
-					has_global_modifier_value = {
-						which = republican_tradition
-						value = 2
+				OR = {
+					NOT = { republican_tradition = 70 }
+					NOT = {
+						has_global_modifier_value = {
+							which = republican_tradition
+							value = 2
+						}
 					}
 				}
-				NOT = {
-					republican_tradition = 60
-					has_global_modifier_value = {
-						which = republican_tradition
-						value = 2.5
+				OR = {
+					NOT = { republican_tradition = 60 }
+					NOT = {
+						has_global_modifier_value = {
+							which = republican_tradition
+							value = 2.5
+						}
 					}
 				}
-				NOT = {
-					republican_tradition = 50
-					has_global_modifier_value = {
-						which = republican_tradition
-						value = 3
+				OR = {
+					NOT = { republican_tradition = 50 }
+					NOT = {
+						has_global_modifier_value = {
+							which = republican_tradition
+							value = 3
+						}
 					}
 				}
 			}
