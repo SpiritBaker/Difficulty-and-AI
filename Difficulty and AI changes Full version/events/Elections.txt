@@ -132,7 +132,7 @@ country_event = {
 					NOT = {
 						check_variable = {
 							which = admSkill
-							value = 10
+							value = 9
 						}
 					}
 				}
