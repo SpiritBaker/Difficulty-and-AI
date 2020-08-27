@@ -28,6 +28,7 @@ country_decisions = {
 	adm_click = {
 		major = yes
 		potential = {
+			always = no
 			ai = yes
 			power_tech = {
 				power = adm
@@ -53,12 +54,12 @@ country_decisions = {
 						}
 						stab_cost = yes
 						add_stability = 1
-						log = "[This.GetName] raises stability"
+						log = "[This.GetName] raises stability**"
 					}
 					else = {
 						adm_power_cost = 75
 						add_inflation = -2
-						log = "[This.GetName] reduces inflation"
+						log = "[This.GetName] reduces inflation**"
 					}
 				}
 				else = {
@@ -81,6 +82,7 @@ country_decisions = {
 	dip_click = {
 		major = yes
 		potential = {
+			always = no
 			ai = yes
 			power_tech = {
 				power = dip
@@ -102,7 +104,7 @@ country_decisions = {
 					}
 					dip_power_cost = 100
 					add_mercantilism = 1
-					log = "[This.GetName] promotes mercantilism"
+					log = "[This.GetName] promotes mercantilism**"
 				}
 				else = {
 					event_target:base_target = {
@@ -124,6 +126,7 @@ country_decisions = {
 	mil_click = {
 		major = yes
 		potential = {
+			always = no
 			ai = yes
 			power_tech = {
 				power = mil
@@ -157,7 +160,7 @@ country_decisions = {
 						
 						add_absolutism = 2
 						
-						log = "[This.GetName] strengthens government"
+						log = "[This.GetName] strengthens government**"
 					}
 					else = {
 						mil_power_cost = 50
@@ -170,7 +173,7 @@ country_decisions = {
 						
 						add_army_professionalism = 0.01
 						
-						log = "[This.GetName] recruits army leader"
+						log = "[This.GetName] recruits army leader**"
 					}
 				}
 				else = {
@@ -193,7 +196,7 @@ country_decisions = {
 	spawn_click = {
 		major = yes
 		potential = {
-			always = no #DISABLED
+			always = no
 			ai = yes
 			is_lacking_institutions = yes
 			is_at_war = no
