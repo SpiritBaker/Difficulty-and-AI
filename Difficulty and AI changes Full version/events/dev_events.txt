@@ -142,7 +142,7 @@ country_event = {
 }
 
 country_event = {
-	# human event
+	# adm_click
 	id = dev_events.3
 	title = dev_events.3.t
 	desc = dev_events.3.d
@@ -150,97 +150,193 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		ai = no
-		has_country_flag = dev_click
 		OR = {
-			power_tech = {
-				power = adm
-				value = 990
-			}
-			power_tech = {
-				power = dip
-				value = 990
-			}
-			power_tech = {
-				power = mil
-				value = 990
-			}
+			ai = yes
+			has_country_flag = dev_click
+		}
+		power_tech = {
+			power = adm
+			value = 990
 		}
 	}
 
 	immediate = {
 		hidden_effect = {
-			export_to_variable = { variable_name = admPower 	value = trigger_value:adm_power }
-			export_to_variable = { variable_name = dipPower 	value = trigger_value:dip_power }
-			export_to_variable = { variable_name = milPower 	value = trigger_value:mil_power }
-			
+			set_base_target = {
+				which = base_target
+				base = adm
+			}
 			if = {
 				limit = {
-					check_variable = { which = admPower 	which = dipPower }
-					check_variable = { which = admPower 	which = milPower }
+					check_variable = {
+						which = baseCost
+						value = 999
+					}
 				}
-				set_base_target = {
-					which = base_target
-					base = adm
+				if = {
+					limit = {
+						NOT = { stability = 3 }
+					}
+					stab_cost = yes
+					add_stability = 1
+					log = "[This.GetName] raises stability**"
 				}
+				else = {
+					adm_power_cost = 75
+					add_inflation = -2
+					log = "[This.GetName] reduces inflation**"
+				}
+			}
+			else = {
 				event_target:base_target = {
 					add_power = {
 						power = adm
 					}
-					add_province_modifier = {
-						name = recent_growth
-						duration = 365
-					}
 					add_next_institution_embracement_scaled = 5
 					add_base_tax = 1
+					log = dev_info.1
 				}
 				change_variable = {
 					which = admClicks
 					value = 1
 				}
 			}
-			else_if = {
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
+
+country_event = {
+	# dip_click
+	id = dev_events.4
+	title = dev_events.4.t
+	desc = dev_events.4.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		OR = {
+			ai = yes
+			has_country_flag = dev_click
+		}
+		power_tech = {
+			power = dip
+			value = 990
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_base_target = {
+				which = base_target
+				base = dip
+			}
+			if = {
 				limit = {
-					check_variable = { which = dipPower	which = milPower }
+					check_variable = {
+						which = baseCost
+						value = 999
+					}
 				}
-				set_country_flag = dip_flag
-				set_base_target = {
-					which = base_target
-					base = dip
-				}
-				clr_country_flag = dip_flag
-				
+				dip_power_cost = 100
+				add_mercantilism = 1
+				log = "[This.GetName] promotes mercantilism**"
+			}
+			else = {
 				event_target:base_target = {
 					add_power = {
 						power = dip
 					}
-					add_province_modifier = {
-						name = recent_growth
-						duration = 365
-					}
 					add_next_institution_embracement_scaled = 5
 					add_base_production = 1
+					log = dev_info.2
 				}
 				change_variable = {
 					which = dipClicks
 					value = 1
 				}
 			}
-			else = {
-				set_base_target = {
-					which = base_target
-					base = mil
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
+
+country_event = {
+	# mil_click
+	id = dev_events.5
+	title = dev_events.5.t
+	desc = dev_events.5.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		OR = {
+			ai = yes
+			has_country_flag = dev_click
+		}
+		power_tech = {
+			power = mil
+			value = 990
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_base_target = {
+				which = base_target
+				base = mil
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = baseCost
+						value = 999
+					}
 				}
+				if = {
+					limit = {
+						NOT = { legitimacy_equivalent = 95 }
+					}
+					mil_power_cost = 100
+					
+					add_legitimacy = 10
+					add_horde_unity = 10
+					add_meritocracy = 10
+					add_devotion = 10
+					add_republican_tradition = 3
+					
+					add_absolutism = 2
+					
+					log = "[This.GetName] strengthens government**"
+				}
+				else = {
+					mil_power_cost = 50
+					
+						 if = { limit = { army_tradition = 80 } create_general = { tradition = 90 } }
+					else_if = { limit = { army_tradition = 60 } create_general = { tradition = 70 } }
+					else_if = { limit = { army_tradition = 40 } create_general = { tradition = 50 } }
+					else_if = { limit = { army_tradition = 20 } create_general = { tradition = 30 } }
+					else 	= { 								create_general = { tradition = 10 } }
+					
+					add_army_professionalism = 0.01
+					
+					log = "[This.GetName] recruits army leader**"
+				}
+			}
+			else = {
 				event_target:base_target = {
 					add_power = {
 						power = mil
 					}
-					add_province_modifier = {
-						name = recent_growth
-						duration = 365
-					}
 					add_next_institution_embracement_scaled = 5
 					add_base_manpower = 1
+					log = dev_info.3
 				}
 				change_variable = {
 					which = milClicks
