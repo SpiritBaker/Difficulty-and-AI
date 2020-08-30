@@ -897,15 +897,133 @@ country_decisions = {
 								}
 							}
 							else = {
-								random_list = {
-									1 = {
-										event_target:fort_one = {
-											save_event_target_as = fort_delete
+								if = { #neighbor_province
+									limit = {
+										variable_arithmetic_trigger  = {
+											export_to_variable = {
+												which = num1
+												value = 0
+											}
+											export_to_variable = {
+												which = num2
+												value = 0
+											}
+											
+											event_target:fort_one = {
+												all_neighbor_province = {
+													OR = {
+														NOT = { owned_by = ROOT }
+														ROOT = {
+															variable_arithmetic_trigger  = {
+																change_variable = {
+																	which = num1
+																	value = 1
+																}
+																always = yes
+															}
+														}
+													}
+												}
+											}
+											event_target:fort_two = {
+												all_neighbor_province = {
+													OR = {
+														NOT = { owned_by = ROOT }
+														ROOT = {
+															variable_arithmetic_trigger  = {
+																change_variable = {
+																	which = num2
+																	value = 1
+																}
+																always = yes
+															}
+														}
+													}
+												}
+											}
+											
+											NOT = {
+												check_variable = {
+													which = num1
+													which = num2
+												}
+											}
 										}
 									}
-									1 = {
-										event_target:fort_two = {
-											save_event_target_as = fort_delete
+									
+									event_target:fort_one = {
+										save_event_target_as = fort_delete
+									}
+								}
+								else_if = {
+									limit = {
+										variable_arithmetic_trigger  = {
+											export_to_variable = {
+												which = num1
+												value = 0
+											}
+											export_to_variable = {
+												which = num2
+												value = 0
+											}
+											
+											event_target:fort_one = {
+												all_neighbor_province = {
+													OR = {
+														NOT = { owned_by = ROOT }
+														ROOT = {
+															variable_arithmetic_trigger  = {
+																change_variable = {
+																	which = num1
+																	value = 1
+																}
+																always = yes
+															}
+														}
+													}
+												}
+											}
+											event_target:fort_two = {
+												all_neighbor_province = {
+													OR = {
+														NOT = { owned_by = ROOT }
+														ROOT = {
+															variable_arithmetic_trigger  = {
+																change_variable = {
+																	which = num2
+																	value = 1
+																}
+																always = yes
+															}
+														}
+													}
+												}
+											}
+											
+											NOT = {
+												check_variable = {
+													which = num2
+													which = num1
+												}
+											}
+										}
+									}
+									
+									event_target:fort_two = {
+										save_event_target_as = fort_delete
+									}
+								}
+								else = {
+									random_list = {
+										1 = {
+											event_target:fort_one = {
+												save_event_target_as = fort_delete
+											}
+										}
+										1 = {
+											event_target:fort_two = {
+												save_event_target_as = fort_delete
+											}
 										}
 									}
 								}
