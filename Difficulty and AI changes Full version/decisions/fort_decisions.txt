@@ -747,7 +747,7 @@ country_decisions = {
 						}
 					}
 					
-					event_target:fort_one = {
+					event_target:fort_two = {
 						save_event_target_as = fort_delete
 					}
 				}
@@ -761,7 +761,7 @@ country_decisions = {
 						}
 					}
 					
-					event_target:fort_two = {
+					event_target:fort_one = {
 						save_event_target_as = fort_delete
 					}
 				}
@@ -783,7 +783,7 @@ country_decisions = {
 							}
 						}
 						
-						event_target:fort_one = {
+						event_target:fort_two = {
 							save_event_target_as = fort_delete
 						}
 					}
@@ -804,7 +804,7 @@ country_decisions = {
 							}
 						}
 						
-						event_target:fort_two = {
+						event_target:fort_one = {
 							save_event_target_as = fort_delete
 						}
 					}
@@ -819,7 +819,7 @@ country_decisions = {
 								}
 							}
 							
-							event_target:fort_one = {
+							event_target:fort_two = {
 								save_event_target_as = fort_delete
 							}
 						}
@@ -833,7 +833,7 @@ country_decisions = {
 								}
 							}
 							
-							event_target:fort_two = {
+							event_target:fort_one = {
 								save_event_target_as = fort_delete
 							}
 						}
@@ -863,7 +863,7 @@ country_decisions = {
 									}
 								}
 								
-								event_target:fort_one = {
+								event_target:fort_two = {
 									save_event_target_as = fort_delete
 								}
 							}
@@ -892,7 +892,7 @@ country_decisions = {
 									}
 								}
 								
-								event_target:fort_two = {
+								event_target:fort_one = {
 									save_event_target_as = fort_delete
 								}
 							}
