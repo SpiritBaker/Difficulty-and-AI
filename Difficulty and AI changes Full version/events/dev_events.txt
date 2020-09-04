@@ -194,6 +194,7 @@ country_event = {
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_tax = 1
+					add_devastation_reduction = yes
 					log = dev_info.1
 				}
 				change_variable = {
@@ -252,6 +253,7 @@ country_event = {
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_production = 1
+					add_devastation_reduction = yes
 					log = dev_info.2
 				}
 				change_variable = {
@@ -336,6 +338,7 @@ country_event = {
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_manpower = 1
+					add_devastation_reduction = yes
 					log = dev_info.3
 				}
 				change_variable = {

@@ -528,3 +528,43 @@ stab_cost = {
 	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 2		valueSub = -2 }
 	binary_ad2 = { variable = stabCost	addcommand = adm	valueAdd = 1		valueSub = -1 }
 }
+
+binary_ad3 = {
+	if = {
+		limit = {
+			check_variable = {
+				which = $variable$
+				value = $valueAdd$
+			}
+		}
+		add_devastation = $valueSub$
+		
+		subtract_variable = {
+			which = $variable$
+			value = $valueAdd$
+		}
+	}
+}
+
+add_devastation_reduction = {
+	export_to_variable = {
+		variable_name = pDev2
+		value = trigger_value:development
+	}
+	multiply_variable = {
+		which = pDev2
+		value = 5
+	}
+	divide_variable = {
+		which = pDev2
+		value = 6
+	}
+	
+	binary_ad3 = { variable = pDev2 	valueAdd = 64 	valueSub = -64 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 32 	valueSub = -32 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 16 	valueSub = -16 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 8 	valueSub = -8 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 4 	valueSub = -4 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 2 	valueSub = -2 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 1 	valueSub = -1 }
+}
