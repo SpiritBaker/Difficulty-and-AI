@@ -52,9 +52,7 @@ country_event = { # Disbands Merc companies one at time, if AI went over the for
 		ai = yes
 		is_at_war = yes
 		army_size_percentage = 1.25
-		any_hired_mercenary_company = {
-			hired_for_months = 1
-		}
+		num_of_hired_mercenary_companies = 2
 	}
 	
 	immediate = {
