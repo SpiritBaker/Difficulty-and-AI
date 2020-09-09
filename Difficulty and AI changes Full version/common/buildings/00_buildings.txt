@@ -133,10 +133,10 @@ marketplace = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
+		#modifier = {
+		#	factor = 0.33
+		#	FROM = { num_of_loans = 1 }
+		#}
 	}
 }
 
@@ -262,10 +262,6 @@ workshop = {
 			factor = 0.7
 				NOT = { tolerance_to_this = 0 }
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -326,10 +322,6 @@ temple = {
 					has_building = impressment_offices
 				}
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -422,10 +414,6 @@ barracks = {
 			NOT = { has_owner_accepted_culture = yes }
 			NOT = { has_owner_culture = yes }
 			NOT = { culture_group = ROOT }
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }		
@@ -526,10 +514,6 @@ shipyard = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -542,7 +526,29 @@ fort_15th = {
 		fort_level = 2
 		allowed_num_of_buildings = 1
 	}
-	
+
+	keep_trigger = {
+		OR = {
+			FROM = { ai = no }
+			is_capital = yes
+			province_group = strait_provinces
+			nationalism = 1
+			
+			NOT = {
+				any_neighbor_province = {
+					owned_by = FROM
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
+	}
+
 	onmap = yes
 	influencing_fort = yes
 	
@@ -616,10 +622,6 @@ fort_15th = {
 			factor = 2
 			province_id = 365
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	} 
 } 
 
@@ -668,10 +670,6 @@ coastal_defence = {
 					has_building = impressment_offices
 				}
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -787,10 +785,6 @@ courthouse = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -873,10 +867,7 @@ dock = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
+
 	}
 }
 
@@ -943,10 +934,6 @@ regimental_camp = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -959,6 +946,28 @@ fort_16th = {
 	modifier = {
 		fort_level = 4
 		allowed_num_of_buildings = 1
+	}
+
+	keep_trigger = {
+		OR = {
+			FROM = { ai = no }
+			is_capital = yes
+			province_group = strait_provinces
+			nationalism = 1
+			
+			NOT = {
+				any_neighbor_province = {
+					owned_by = FROM
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
 	}
 
 	onmap = yes
@@ -1039,10 +1048,6 @@ fort_16th = {
 				has_province_modifier = tropical
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	} 
 }
 
@@ -1094,10 +1099,6 @@ naval_battery = {
 					has_building = impressment_offices
 				}
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -1163,10 +1164,6 @@ cathedral = {
 					has_building = impressment_offices
 				}
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -1271,10 +1268,6 @@ university = {
 				trade_goods = gold
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -1373,10 +1366,6 @@ trade_depot = {
 					has_building = impressment_offices
 				}
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -1479,10 +1468,6 @@ grand_shipyard = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -1577,10 +1562,6 @@ training_fields = {
 			NOT = { has_owner_culture = yes }
 			NOT = { culture_group = ROOT }
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -1593,6 +1574,28 @@ fort_17th = {
 	modifier = {
 		fort_level = 6
 		allowed_num_of_buildings = 1
+	}
+
+	keep_trigger = {
+		OR = {
+			FROM = { ai = no }
+			is_capital = yes
+			province_group = strait_provinces
+			nationalism = 1
+			
+			NOT = {
+				any_neighbor_province = {
+					owned_by = FROM
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
 	}
 
 	onmap = yes
@@ -1678,10 +1681,6 @@ fort_17th = {
 				has_province_modifier = arid
 				has_province_modifier = tropical
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	} 
 }
@@ -1788,10 +1787,6 @@ stock_exchange = {
 					has_building = impressment_offices
 				}
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -1920,10 +1915,6 @@ counting_house = {
 			factor = 0.7
 			NOT = { tolerance_to_this = 0 }
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2035,10 +2026,6 @@ town_hall = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2123,10 +2110,6 @@ drydock = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2195,10 +2178,6 @@ conscription_center = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2211,6 +2190,28 @@ fort_18th = {
 	modifier = {
 		fort_level = 8
 		allowed_num_of_buildings = 1
+	}
+
+	keep_trigger = {
+		OR = {
+			FROM = { ai = no }
+			is_capital = yes
+			province_group = strait_provinces
+			nationalism = 1
+			
+			NOT = {
+				any_neighbor_province = {
+					owned_by = FROM
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
 	}
 
 	onmap = yes
@@ -2299,10 +2300,6 @@ fort_18th = {
 				has_province_modifier = tropical
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	} 
 }
 
@@ -2380,10 +2377,6 @@ wharf = {
 			factor = 0.8
 			has_latent_trade_goods = coal
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2424,10 +2417,6 @@ weapons = {
 		modifier = {
 			factor = 0.8
 			has_latent_trade_goods = coal
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2482,10 +2471,6 @@ textile = {
 			factor = 0.8
 			has_latent_trade_goods = coal
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2534,10 +2519,6 @@ plantations = {
 		modifier = {
 			factor = 0.8
 			has_latent_trade_goods = coal
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2588,10 +2569,6 @@ tradecompany = {
 		modifier = {
 			factor = 0.8
 			has_latent_trade_goods = coal
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2663,10 +2640,6 @@ farm_estate = {
 			factor = 0.8
 			has_latent_trade_goods = coal
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2724,10 +2697,6 @@ mills = {
 			factor = 0.8
 			has_latent_trade_goods = coal
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2754,10 +2723,6 @@ furnace = {
 			factor = 0.1
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -2867,10 +2832,6 @@ ramparts = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -2970,10 +2931,6 @@ soldier_households = {
 				NOT = { culture_group = ROOT }
 			}
 		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
-		}
 	}
 }
 
@@ -3047,10 +3004,6 @@ impressment_offices = {
 				NOT = { num_of_ports = 1 }
 				NOT = { is_colonial_nation = yes }
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }
@@ -3219,10 +3172,6 @@ state_house = {
 				NOT = { has_building = soldier_households }
 				NOT = { has_building = impressment_offices }
 			}
-		}
-		modifier = {
-			factor = 0.33
-			FROM = { num_of_loans = 1 }
 		}
 	}
 }

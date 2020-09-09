@@ -225,15 +225,15 @@ ai_militarist = {
 			has_regency = yes
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.75
 			NOT = { mil_tech = 9 }
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.75
 			NOT = { mil_tech = 11 }
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.75
 			NOT = { mil_tech = 16 }
 		}			
 		modifier = {
@@ -337,7 +337,7 @@ ai_militarist = {
 			is_march = yes
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.5
 			OR = {
 				tag = MOS
 				tag = RUS
@@ -361,7 +361,7 @@ ai_militarist = {
 			tag = KOR
 		}	
 		modifier = {
-			factor = 100
+			factor = 2
 			religion = nahuatl
 			is_religion_reformed = no
 		}

@@ -1,4 +1,4 @@
-version="1.5.2"
+version="1.5.3"
 tags={
 	"Balance"
 	"Fixes"
@@ -6,5 +6,5 @@ tags={
 }
 name="Difficulty & AI"
 picture="thumbnail.png"
-supported_version="1.30.3"
+supported_version="1.30.4"
 remote_file_id="2053238435"

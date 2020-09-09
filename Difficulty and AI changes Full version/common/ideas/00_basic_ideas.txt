@@ -223,7 +223,7 @@ innovativeness_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 2
+			factor = 1.5
 			OR = {
 				religion = anglican
 				religion = protestant
@@ -244,7 +244,6 @@ innovativeness_ideas = {
 			factor = 1.5
 			technology_group = western
 		}
-
 		modifier = {
 			factor = 0.75
 			NOT = { technology_group = western }
@@ -296,11 +295,11 @@ religious_ideas = {
 			has_idea_group = humanist_ideas
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = { has_border_with_religious_enemy = yes }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			is_absolutism_active = yes
 		}
 		modifier = {
@@ -310,6 +309,10 @@ religious_ideas = {
 		modifier = {
 			factor = 0.75
 			religious_unity = 0.85
+		}
+		modifier = {
+			factor = 1.1
+			has_border_with_religious_enemy = yes
 		}
 		modifier = {
 			factor = 1.5
@@ -328,7 +331,7 @@ religious_ideas = {
 			NOT = { religious_unity = 0.2 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			OR = {
 				religion = shiite
 				religion = ibadi
@@ -349,23 +352,12 @@ religious_ideas = {
 			government = theocracy
 		}
 		modifier = {
-			factor = 0.5
-			NOT = {
-				OR = {
-					religion_group = muslim
-					religion_group = christian 
-				}
-				
-			}
-		}
-		modifier = {
-			factor = 0.5
+			factor = 0.35
 			OR = {
 				technology_group = indian
 				technology_group = chinese
 			}
 		}
-
 	}
 }
 
@@ -410,14 +402,14 @@ spy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.2
+		factor = 0.5
 		modifier = {
 			factor = 3
 			has_idea_group = aristocracy_ideas
 		}
 		modifier = {
 			factor = 0.1
-				NOT = { adm_tech = 18 }
+				NOT = { adm_tech = 15 }
 		}
 	}
 }
@@ -455,26 +447,26 @@ diplomatic_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.25
+		factor = 0.5
 		modifier = {
 			factor = 0.5
 			NOT = { is_emperor = yes }
 			NOT = { num_of_subjects = 1 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.75
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			is_emperor = yes
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			is_great_power = yes
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			vassal = 3
 		}
 		modifier = {
@@ -1024,7 +1016,7 @@ maritime_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.3
+		factor = 0.5
 		modifier = {
 			factor = 0
 			is_tribal = yes
@@ -1036,6 +1028,7 @@ maritime_ideas = {
 		modifier = {
 			factor = 0
 			NOT = { num_of_ports = 1 }
+			NOT = { government = republic }
 			NOT = { is_colonial_nation = yes }
 		}
 		modifier = {
@@ -1043,7 +1036,7 @@ maritime_ideas = {
 			NOT = { num_of_ports = 8 }
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.33
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
@@ -1051,19 +1044,19 @@ maritime_ideas = {
 			num_of_cities = 100
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			colony = 1
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			naval_forcelimit = 100 
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			naval_forcelimit = 200 
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			has_idea_group = naval_ideas
 		}
 		modifier = {
@@ -1197,19 +1190,19 @@ quantity_ideas = {
 		factor = 1.0
 
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			army_size = 100
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			army_size = 200
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			army_size = 300
 		}		
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			is_great_power = yes
 		}
 		modifier = {
@@ -1544,22 +1537,22 @@ influence_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.25
+		factor = 0.5
 		modifier = {
 			factor = 0.5
 			NOT = { is_emperor = yes }
 			NOT = { num_of_subjects = 1 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.75
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			is_emperor = yes
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			OR = {
 				is_revolution_target = yes
 				has_reform = revolutionary_empire_reform
@@ -1574,11 +1567,11 @@ influence_ideas = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			vassal = 3
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			is_great_power = yes
 		}
 		modifier = {
@@ -1649,31 +1642,31 @@ naval_ideas = {
 			num_of_cities = 50
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.33
 			NOT = { adm_tech = 12 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			colony = 1
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			colony = 2
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			colony = 3
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			naval_forcelimit = 100 
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			naval_forcelimit = 200 
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			naval_forcelimit = 300
 		}
 
@@ -1698,12 +1691,12 @@ naval_ideas = {
 				tag = SCA
 				tag = DAN
 				tag = NOR
+				tag = VEN
 			}
 		}
 		modifier = {
 			factor = 2.5
 			OR = { 
-				tag = VEN
 				tag = KNI
 				tag = TTS
 				tag = GEN
@@ -1713,22 +1706,18 @@ naval_ideas = {
 				tag = USA
 			}
 		}
-
 		modifier = {
 			factor = 1.5
 			has_idea_group = economic_ideas
 		}
-
 		modifier = {
 			factor = 1.5
 			has_idea_group = exploration_ideas
 		}
-
 		modifier = {
 			factor = 1.5
 			has_idea_group = quality_ideas
 		}
-
 		modifier = {
 			factor = 5
 			OR = {

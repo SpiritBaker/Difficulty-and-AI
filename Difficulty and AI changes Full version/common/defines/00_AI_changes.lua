@@ -66,15 +66,22 @@ NDefines.NAI.DIPLOMATIC_ACTION_SUBSIDIES_MAX_RELATIVE_INCOME = 0.2	--Max relativ
 NDefines.NAI.DIPLOMATIC_ACTION_SUBSIDIES_INDEBTED_FACTOR = 25 --AI scoring for giving subsidies to an ally in heavy debt.
 NDefines.NAI.DIPLOMATIC_ACTION_SUBSIDIES_MIN_VALUE = 0.2 --Minimum amount of subsidies that AI considers worthwhile.
 
+NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_BASE_FACTOR = 40 -- AI scoring for fabricating claims is always increased by this as long as the province is a conquest priority
+--NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_STRATEGY_FACTOR = 0.5 -- AI scoring for fabricating claims based on strategic conquest priorities
+--NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_OTHER_CB_FACTOR = 0.0 -- AI scoring for fabricating claims if they already have another CB usable on the province
+--NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_NOT_ADJACENT_FACTOR = 0.5 -- AI scoring for fabricating claims if the province is not adjacent
+--NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_HRE_FACTOR = 0.75 -- AI scoring for fabricating claims if both parts are HRE
+--NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_HRE_EMPEROR_FACTOR = 0.5 -- AI scoring for fabricating claims if province is HRE and they are emperor (does not stack with the above penalty)
+
 --NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 3
 NDefines.NAI.DEBASE_THRESHOLD = -5000 -- AI will not debase if it has more gold than this.
 NDefines.NAI.INVADING_BRAVERY =	1.2	--If (defender strength) / (invader strength) >
 NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.5
-NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.3
+NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.5
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
 --NDefines.NAI.ADVISOR_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on advisor maintenance
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
-NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.9
+NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.8
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 
 --Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
@@ -112,6 +119,7 @@ NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 5.0 -- AI desire for a province is
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
 NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 0.9	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
+NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5
@@ -120,11 +128,11 @@ NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 85.0
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 
-NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 75.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
+NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 100.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
 NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.0				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.1 -- How many times the cost of the investment must be in the treasury to consider buying it
-NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 1000	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
+NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
@@ -144,7 +152,7 @@ NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25
 NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.25
 --MISSIONARY_FRACTION = 0.15
 NDefines.NAIEconomy.STATE_MAINTENANCE_FRACTION = 0.25
-NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 2.5
+NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 1.0
 --SUBSIDY_PRIORITY_CONSIDERATION_THRESHOLD = 50.0
 --SUBSIDY_DESIRE_TO_PRIORITY_RATIO = 0.05
 
