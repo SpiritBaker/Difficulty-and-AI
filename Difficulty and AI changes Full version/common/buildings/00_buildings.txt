@@ -152,7 +152,7 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 7
+		factor = 8
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -275,7 +275,7 @@ temple = {
 	}
 	
 	ai_will_do = {
-		factor = 7
+		factor = 8
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -618,7 +618,7 @@ coastal_defence = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 2.5
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1024,7 +1024,7 @@ naval_battery = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 2.5
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1072,7 +1072,7 @@ cathedral = {
 	}
 	
 	ai_will_do = {
-		factor = 7
+		factor = 8
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -1738,7 +1738,7 @@ counting_house = {
 	allow_in_gold_provinces = no
 	
 	ai_will_do = {
-		factor = 7
+		factor = 8
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }

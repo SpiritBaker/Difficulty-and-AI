@@ -85,7 +85,7 @@ NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.8
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 
 --Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
-NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 10 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
+NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 5 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.03 --AI will try to defend provinces under threat worth more than this percentage of total development
 
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1.0	--Army <-> province distance impact on province evaluation
@@ -128,8 +128,8 @@ NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 85.0
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 
-NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 100.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
-NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.0				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
+NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 75.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
+NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 2.5				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.1 -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
@@ -152,7 +152,7 @@ NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25
 NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.25
 --MISSIONARY_FRACTION = 0.15
 NDefines.NAIEconomy.STATE_MAINTENANCE_FRACTION = 0.25
-NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 1.0
+NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 1.5
 --SUBSIDY_PRIORITY_CONSIDERATION_THRESHOLD = 50.0
 --SUBSIDY_DESIRE_TO_PRIORITY_RATIO = 0.05
 

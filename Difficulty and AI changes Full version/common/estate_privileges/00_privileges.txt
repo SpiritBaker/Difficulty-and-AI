@@ -1823,7 +1823,7 @@ estate_burghers_indebted_to_burghers = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
@@ -2745,7 +2745,7 @@ estate_jains_indebted_to_jains = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 0
 			NOT = { num_of_loans = 1 }
