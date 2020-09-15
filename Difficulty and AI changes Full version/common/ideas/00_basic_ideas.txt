@@ -108,7 +108,7 @@ aristocracy_ideas = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			OR = {
 				tag = POL
 				tag = PLC
@@ -474,15 +474,15 @@ diplomatic_ideas = {
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			is_emperor = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			is_great_power = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			vassal = 3
 		}
 		modifier = {
@@ -1583,11 +1583,11 @@ influence_ideas = {
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			is_emperor = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			OR = {
 				is_revolution_target = yes
 				has_reform = revolutionary_empire_reform
@@ -1602,11 +1602,11 @@ influence_ideas = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			vassal = 3
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			is_great_power = yes
 		}
 		modifier = {

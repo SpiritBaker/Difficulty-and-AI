@@ -1285,7 +1285,7 @@ legion_of_honor_reform = {
 		rajput_exclusive_loyalty_modifier = 0.1
 	}
 	ai = {
-		factor = 2.5
+		factor = 0
 	}
 }
 

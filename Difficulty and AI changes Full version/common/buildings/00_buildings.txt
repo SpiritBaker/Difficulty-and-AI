@@ -583,11 +583,16 @@ fort_15th = {
 				has_terrain = marsh
 				has_terrain = highlands
 				has_terrain = jungle
+				has_terrain = steppe_mountains
+				has_terrain = desert_highlands
 			}
 		}
 		modifier = {
 			factor = 2.5
-			has_terrain = mountain
+			OR = {
+				has_terrain = desert_mountains
+				has_terrain = mountain
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -991,11 +996,16 @@ fort_16th = {
 				has_terrain = marsh
 				has_terrain = highlands
 				has_terrain = jungle
+				has_terrain = steppe_mountains
+				has_terrain = desert_highlands
 			}
 		}
 		modifier = {
 			factor = 2.5
-			has_terrain = mountain
+			OR = {
+				has_terrain = desert_mountains
+				has_terrain = mountain
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -1603,11 +1613,16 @@ fort_17th = {
 				has_terrain = marsh
 				has_terrain = highlands
 				has_terrain = jungle
+				has_terrain = steppe_mountains
+				has_terrain = desert_highlands
 			}
 		}
 		modifier = {
 			factor = 2.5
-			has_terrain = mountain
+			OR = {
+				has_terrain = desert_mountains
+				has_terrain = mountain
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -2199,11 +2214,16 @@ fort_18th = {
 				has_terrain = marsh
 				has_terrain = highlands
 				has_terrain = jungle
+				has_terrain = steppe_mountains
+				has_terrain = desert_highlands
 			}
 		}
 		modifier = {
 			factor = 2.5
-			has_terrain = mountain
+			OR = {
+				has_terrain = desert_mountains
+				has_terrain = mountain
+			}
 		}
 		modifier = {
 			factor = 1.25
