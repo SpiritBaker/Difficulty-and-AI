@@ -1,4 +1,4 @@
-version="1.5.31"
+version="1.5.4"
 tags={
 	"Balance"
 	"Fixes"
