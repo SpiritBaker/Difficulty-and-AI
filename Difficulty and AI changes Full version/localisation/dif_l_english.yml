@@ -48,3 +48,14 @@
  #cb
  cb_nationalist_rev:0 "Nationalism"
  cb_nationalist_rev_desc:0 "They hold provinces of our culture group."
+
+ #culture
+ anatolian:0 "Anatolian"
+
+ #terrain
+ floodplains:0 "Floodplains"
+ desert_highlands:0 "Desert Highlands"
+ semi_desert:0 "Semi Desert"
+ desert_mountains:0 "Desert Mountains"
+ steppe_mountains:0 "Steppe Mountains"
+ oasis:0 "Oasis"

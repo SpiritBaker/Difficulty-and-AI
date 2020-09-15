@@ -152,7 +152,7 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 8
+		factor = 10
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -275,7 +275,7 @@ temple = {
 	}
 	
 	ai_will_do = {
-		factor = 8
+		factor = 10
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -1072,7 +1072,7 @@ cathedral = {
 	}
 	
 	ai_will_do = {
-		factor = 8
+		factor = 10
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -1738,7 +1738,7 @@ counting_house = {
 	allow_in_gold_provinces = no
 	
 	ai_will_do = {
-		factor = 8
+		factor = 10
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -2245,7 +2245,7 @@ wharf = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 3
+		factor = 5
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
@@ -2309,7 +2309,7 @@ weapons = {
 	onmap = yes	
 	
 	ai_will_do = {
-		factor = 4
+		factor = 5
 		modifier = {
 			factor = 2
 			OR = {
@@ -2354,7 +2354,7 @@ textile = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 4
+		factor = 5
 		modifier = {
 			factor = 0.8
 			NOT = { development = 3 }
@@ -2411,7 +2411,7 @@ plantations = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 4
+		factor = 5
 		modifier = {
 			factor = 2
 			OR = {
@@ -2457,7 +2457,7 @@ tradecompany = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 4
+		factor = 5
 		modifier = {
 			factor = 0.75
 			trade_goods = incense
@@ -2503,7 +2503,7 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 1
+		factor = 2
 
 
 		modifier = { 
@@ -2577,7 +2577,7 @@ mills = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 4
+		factor = 5
 		modifier = {
 			factor = 0.8
 			NOT = { base_production = 3 }

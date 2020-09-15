@@ -668,7 +668,11 @@ country_decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 2000 }
+			}
 		}
 	}
 	

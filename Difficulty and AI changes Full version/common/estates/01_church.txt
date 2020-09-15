@@ -154,6 +154,7 @@ estate_church =
 				religion = buddhism #Theravada
 				religion = mahayana
 				religion = vajrayana
+				religion = shinto
 			}
 		}
 	}

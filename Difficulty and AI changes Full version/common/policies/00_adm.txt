@@ -678,6 +678,10 @@ exchange_of_ideas = {
 	
 	ai_will_do = {
 		factor = 2
+		modifier = {
+			factor = 2.5
+			NOT = { adm_tech = 16 }
+		}
 	}
 }
 

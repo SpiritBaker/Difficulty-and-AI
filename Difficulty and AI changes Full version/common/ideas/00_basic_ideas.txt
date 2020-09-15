@@ -470,7 +470,7 @@ diplomatic_ideas = {
 			NOT = { num_of_subjects = 1 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
@@ -486,7 +486,7 @@ diplomatic_ideas = {
 			vassal = 3
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.25
 			has_idea_group = influence_ideas
 		}
 	}
@@ -523,7 +523,7 @@ offensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.5
 
 		modifier = {
 			factor = 1.5
@@ -541,7 +541,10 @@ offensive_ideas = {
 			factor = 1.5
 			has_idea_group = religious_ideas
 		}
-
+		modifier = {
+			factor = 1.5
+			is_absolutism_active = yes
+		}
 	}
 }
 
@@ -579,7 +582,7 @@ defensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.5
 
 		modifier = {
 			factor = 1.5
@@ -712,6 +715,18 @@ trade_ideas = {
 		modifier = {
 			factor = 1.5
 			trade_income_percentage = 0.5
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = quality_ideas
 		}
 		modifier = {
 			factor = 1.5
@@ -1076,6 +1091,10 @@ maritime_ideas = {
 			has_idea_group = naval_ideas
 		}
 		modifier = {
+			factor = 2
+			capital_scope = { island = yes }
+		}
+		modifier = {
 			factor = 2.5
 			OR = { 
 				tag = GBR
@@ -1130,7 +1149,7 @@ quality_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.5
 		modifier = {
 			factor = 1.5
 			OR = {
@@ -1203,7 +1222,7 @@ quantity_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.0
+		factor = 1.5
 
 		modifier = {
 			factor = 1.2
@@ -1388,7 +1407,7 @@ administrative_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.75
+		factor = 0.5
 		modifier = {
 			factor = 2.5
 			num_of_owned_provinces_with = {
@@ -1560,7 +1579,7 @@ influence_ideas = {
 			NOT = { num_of_subjects = 1 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			NOT = { adm_tech = 15 }
 		}
 		modifier = {
@@ -1591,7 +1610,7 @@ influence_ideas = {
 			is_great_power = yes
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.25
 			has_idea_group = diplomatic_ideas
 		}
 	}
@@ -1685,7 +1704,10 @@ naval_ideas = {
 			factor = 1.25
 			naval_forcelimit = 300
 		}
-
+		modifier = {
+			factor = 2
+			capital_scope = { island = yes }
+		}
 		modifier = {
 			factor = 5
 			OR = { 

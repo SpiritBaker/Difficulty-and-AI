@@ -96,22 +96,22 @@ interaction = {
 		modifier = {
 			factor = 2
 			num_of_loans = 5
-			crown_land_share = 30 
+			crown_land_share = 25
 		}
 		modifier = {
 			factor = 2
 			num_of_loans = 10
-			crown_land_share = 30 
+			crown_land_share = 25 
 		}
 		modifier = {
 			factor = 2
 			num_of_loans = 15
-			crown_land_share = 30 
+			crown_land_share = 25
 		}
 		modifier = {
 			factor = 2
 			num_of_loans = 20
-			crown_land_share = 30 
+			crown_land_share = 25
 		}
 		modifier = {
 			factor = 1.2
@@ -149,7 +149,7 @@ interaction = {
 			}
 		}
 		modifier = {
-			factor = 0.4
+			factor = 0.6
 			has_country_flag = recent_land_seizure
 			NOT = {
 				had_country_flag = {
@@ -337,22 +337,23 @@ interaction = {
 		modifier = {
 			factor = 0
 			crown_land_share = 20
-			if = {
-				limit = { num_of_cities = 50 }
-				NOT = { army_size_percentage = 0.5 }
-			}
-			else_if = {
-				limit = { num_of_cities = 25 }
-				NOT = { army_size_percentage = 0.75 }
-			}
-			else = {
-				NOT = { army_size_percentage = 0.9 }
-			}
-			if = {
-				limit = { is_emperor = yes }
-				NOT = { army_size = 50 }
-			}
-			NOT = { army_size = 100 }
+			#if = {
+			#	limit = { num_of_cities = 50 }
+			#	NOT = { army_size_percentage = 0.5 }
+			#}
+			#else_if = {
+			#	limit = { num_of_cities = 25 }
+			#	NOT = { army_size_percentage = 0.75 }
+			#}
+			#else = {
+			#	NOT = { army_size_percentage = 0.9 }
+			#}
+			#if = {
+			#	limit = { is_emperor = yes }
+			#	NOT = { army_size = 50 }
+			#}
+			NOT = { army_size_percentage = 0.25 }
+			NOT = { army_size = 15 }
 			NOT = { #sorry, scripted triggers glitched out
 				OR = {
 					has_disaster = estate_brahmins_disaster
@@ -425,19 +426,19 @@ interaction = {
 			NOT = { num_of_rebel_armies = 1 }
 		}
 		modifier = {
-			factor = 1.8
+			factor = 2
 			NOT = { crown_land_share = 20 }
 		}
 		modifier = {
-			factor = 1.6
+			factor = 2
 			NOT = { crown_land_share = 30 }
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.4
 			NOT = { crown_land_share = 35 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.2
 			NOT = { crown_land_share = 50 }
 		}
 		modifier = {
@@ -490,30 +491,21 @@ interaction = {
 				}
 			}
 		}
+		#modifier = {
+		#	factor = 0.8
+		#	NOT = {
+		#		estate_loyalty = {
+		#			estate = all
+		#			loyalty = 50
+		#		}
+		#	}
+		#}
 		modifier = {
-			factor = 0.8
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 50
-				}
-			}
-		}
-		modifier = {
-			factor = 0.8
+			factor = 0.5
 			NOT = {
 				estate_loyalty = {
 					estate = all
 					loyalty = 40
-				}
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 35 # Estate is almost disloyal
 				}
 			}
 		}
