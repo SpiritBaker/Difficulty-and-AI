@@ -3,9 +3,9 @@ EU4 mod. https://steamcommunity.com/sharedfiles/filedetails/?id=2053238435
 
 This mod changes Difficulty bonuses AI gets on Hard and Very Hard. Generally bonuses are halved, instead Difficulty Ramps up over the course of the game. AI logic is improved in every aspect of the game. Using Multiplayer meta as reference point.
 
-Because the difference with base game AI is so substantial at this point, it inevitable started affecting balance. So I'm trying to keep the game as fun as possible, without compromising original goal to make AI better.
+Because the difference with base game AI is so substantial at this point, it inevitably started affecting balance. So I'm trying to keep the game as fun as possible, without compromising original goal to make AI better.
 
-On Normal difficulty the game will feel similar to vanilla, on Very Hard difficulty the game escalates over time and looks like a player game. I'm recommending Very Hard if you are looking for challenge, or if it's a Coop game.
+On Normal difficulty the game will feel similar to vanilla but harder, on Very Hard difficulty the game escalates over time and looks like a player game. I'm recommending Very Hard if you are looking for challenge, or if it's a Coop game.
 
 
 Added more efficient fix to AI Dept spiral, and couple of events that disband mercs for AI, while AI at peace and if AI goes over the force limit. Hotfixed the fix.
@@ -21,6 +21,7 @@ Incompatible with mods that change Ideas, Building, Policies. To do most of the 
 
 Other changes:
 - Added 10 Idea slots in a balanced way.
+- Added 5 terrain types to the game, replacing most of the vanilla ones, reworking problem arias of the map. The source of the Images is CK3. 
 - Tweaks to ideas and policies, to make more idea groups relevant.
 - Rebalanced the amount of discipline in the game. When AI started stacking discipline like player would, the game become obnoxious.
 - More meaningful advisers.
