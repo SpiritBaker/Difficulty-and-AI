@@ -18,6 +18,8 @@ estate_burghers =
 			NOT = { has_reform = celestial_empire }
 			has_dlc = "Mandate of Heaven"
 		}
+		NOT = { has_reform = dzungar_khanate }
+		NOT = { has_reform = khanate_monarchy }
 		is_nomad = no
 		is_colonial_nation = no
 		NOT = { has_reform = revolutionary_empire_reform }

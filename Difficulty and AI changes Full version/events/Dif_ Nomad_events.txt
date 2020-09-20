@@ -26,3 +26,46 @@ country_event = {
 		add_karma = 5
 	}
 }
+
+country_event = {
+	id = nomad_increased_tribute_privileges.2
+	title = nomad_increased_tribute_privileges.2.t
+	desc = nomad_increased_tribute_privileges.2.d
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_province = {
+			limit = {
+				has_province_modifier = paying_additional_tribute_m
+			}
+			remove_province_modifier = paying_additional_tribute_m
+		}
+	}
+	
+	option = {
+		name = nomad_increased_tribute_privileges.2.a
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_terrain = drylands
+						has_terrain = farmlands
+						has_terrain = grasslands
+						has_terrain = oasis #modded terain
+						province_has_center_of_trade_of_level = 1
+					}
+				}
+				add_province_modifier = {
+					name = paying_additional_tribute_m
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = nomad_increased_tribute_privileges.2.b #no
+		#custom_tooltip = increased_tribute_privileges.1.b.tooltip 
+	}
+}

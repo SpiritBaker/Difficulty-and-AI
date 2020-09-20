@@ -25,6 +25,8 @@ estate_dhimmi = {
 		NOT = { has_reform = cossacks_reform }
 		#NOT = { has_reform = veche_republic }
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = dzungar_khanate }
+		NOT = { has_reform = khanate_monarchy }
 		is_nomad = no
 		is_colonial_nation = no
 		NOT = { has_reform = celestial_empire }

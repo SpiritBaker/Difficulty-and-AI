@@ -69,6 +69,7 @@
  #Tags
  SHY:0 "Shaybanids"
  KRG:0 "Kyrgyz"
+ KRG_ADJ:0 "Kyrgyz"
  MGS:0 "Moghulistan"
 
  #County Ideas
@@ -139,3 +140,6 @@
  estate_nomadic_aristocracy_confirm_noble_right:0 "Confirm Noble Rights"
  estate_nomadic_aristocracy_confirm_noble_right_desc:0 ""
  estate_nomadic_aristocracy_primacy:0 "Primacy of the Noyans"
+
+ #Tooltips
+ root_is_most_powerful_manchuria_tribe:0 "The Most Powerful Manchu Tribe"

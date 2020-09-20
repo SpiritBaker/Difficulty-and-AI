@@ -61,7 +61,7 @@ aristocracy_ideas = {
 			NOT = { cavalry_fraction = 0.1 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = { cavalry_fraction = 0.2 }
 		}
 		modifier = {
@@ -127,8 +127,12 @@ aristocracy_ideas = {
 			}
 		}
 		modifier = {
-			factor = 5
-			is_nomad = yes
+			factor = 6
+			OR = {
+				has_reform = khanate_monarchy
+				has_reform = dzungar_khanate
+				is_nomad = yes
+			}
 		}
 	}
 }

@@ -8,3 +8,12 @@ dzungar_gunsmith_manufactory = {
 last_nomad_empire_m = {
 	prestige = 1
 }
+paying_additional_tribute_m = {
+	local_unrest = 1
+	local_tax_modifier = 0.25
+	local_manpower_modifier = -0.25
+}
+nomads_special_trade_rights_m = {
+	local_production_efficiency = 0.10
+	province_trade_power_modifier = 0.25
+}

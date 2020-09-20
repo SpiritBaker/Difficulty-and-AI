@@ -14,3 +14,19 @@ nomadic_aristocracy = {
 		}
 	}
 }
+sedentary_subdjects = {
+	modifier_definition = {
+		type = loyalty
+		key = sedentary_subdjects_loyalty_modifier
+		trigger = {
+			has_estate = sedentary_subdjects
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = sedentary_subdjects_influence_modifier
+		trigger = {
+			has_estate = sedentary_subdjects
+		}
+	}
+}
