@@ -1,0 +1,28 @@
+# Nomad conversion 
+country_event = {
+	id = dif_buddhist_missions.1
+	title = "dif_buddhist_missions.1.t"
+	desc = "dif_buddhist_missions.1.d"
+	picture = RELIGION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Militant converts
+		name = "dif_buddhist_missions.1.a"
+		add_country_modifier = {
+			name = "religious_fervor"
+			duration = 18250
+		}
+		add_karma = -5
+	}
+	option = { # Invite Tibetan monks
+		name = "dif_buddhist_missions.1.b"
+		add_country_modifier = {
+			name = "tibetan_missionaries"
+			duration = 18250
+		}
+		add_karma = 5
+	}
+}

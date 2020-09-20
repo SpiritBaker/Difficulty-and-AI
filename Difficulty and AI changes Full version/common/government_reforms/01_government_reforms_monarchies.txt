@@ -1784,6 +1784,7 @@ political_absolutism_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = { has_reform = dzungar_khanate }
 	}
 	modifiers = {
 		max_absolutism = 5

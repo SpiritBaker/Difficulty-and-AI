@@ -1,0 +1,33 @@
+SHY_missions_1 = { #Uzbek
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = SHY
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	weakening_of_timurid_dynasty = {
+		icon = mission_kowtow
+		required_missions = {  }
+		#provinces_to_highlight = {
+		#	province_id = 1816
+		#}
+		#position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = weakening_of_timurid_dynasty
+				has_global_flag = death_of_shah_rukh
+			}
+		}
+		effect = {
+			transoxiana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

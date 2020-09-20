@@ -1,0 +1,2 @@
+KRG = "countries/Kyrgyz.txt"
+MGS = "countries/Moghulistan.txt"

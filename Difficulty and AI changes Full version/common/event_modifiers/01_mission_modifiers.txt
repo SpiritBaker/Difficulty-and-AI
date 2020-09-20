@@ -2410,7 +2410,7 @@ mongol_defeated_japan = {
 }
 
 pax_mongolica = {
-	global_unrest = -3
+	global_unrest = -2
 	stability_cost_modifier = -0.15
 }
 

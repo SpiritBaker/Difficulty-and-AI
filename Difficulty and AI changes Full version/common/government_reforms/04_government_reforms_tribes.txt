@@ -16,7 +16,7 @@ steppe_horde = {
 			culture_group = altaic
 			culture_group = tartar
 		}
-		has_reform = steppe_horde
+		#has_reform = steppe_horde
 		NOT = { has_reform = great_mongol_state_reform }
 	}
 	legacy_equivalent = steppe_horde_legacy
@@ -290,6 +290,9 @@ horde_tribal_unity_reform = {
 tribe_becomes_monarchy_reform = {
 	icon = "king_highlighted"
 	allow_normal_conversion = yes
+	potential = {
+		NOT = { has_reform = steppe_horde }
+	}
 	effect = {
 		set_country_flag = populists_in_government
 		lose_reforms = 4
@@ -468,6 +471,9 @@ tribe_becomes_theocracy_reform = {
 tribe_becomes_horde_reform = {
 	icon = "horde_riding_highlighted"
 	allow_normal_conversion = yes
+	potential = {
+		NOT = { has_reform = steppe_horde }
+	}
 	effect = {
 		set_country_flag = populists_in_government
 		add_government_reform = steppe_horde

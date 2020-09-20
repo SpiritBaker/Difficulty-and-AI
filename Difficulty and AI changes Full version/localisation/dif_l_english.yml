@@ -9,7 +9,7 @@
  AIPolicyAge_Of_Revolutions:0 "AI Bonus in the Age Of Revolutions"
  AIPolicyAge_Of_Absolutism:0 "AI Bomus in the Age Of Absolutism"
  
- #ruler_personalities
+ #Ruler personalities
  ambitious_personality:0 "Ambitious"
  desc_ambitious_personality:0  "Desc Needed"
  ambitious_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
@@ -29,30 +29,30 @@
  desc_defensive_planner_ruler_personality:0 "Desc Needed"
  defensive_planner_ruler_personality_die_desc:0 "[Root.Monarch.GetHerHisCap] WIP."
  
- #disband_mercs_event.txt
+ #Disband_mercs_event.txt
  MODEVTNAME5089:0 "Petition for Redress"
  MODEVTDESC5089:1 "One of the local [Root.Owner.GetNobilityName] in [Root.GetName] has so upset and mistreated his subjects that a delegation of peasants has come before the [Root.Owner.GetRulerTitleOrRegency] to ask for redress. Agreeing to this would be popular with the peasantry but would be seen as an infringement on their authority by the [Root.Owner.GetNobilityName]."
  MODEVTOPTA5089:0 "Accept petition."
  MODEVTOPTB5089:0 "Deny petition."
 
- #estates
+ #Estates
  estate_aristocracy:0 "Aristocracy"
 
- #trigger
+ #Trigger
  incompetent_monarch:0 "Incompetent Monarch"
 
  #Buildings
  building_state_house_desc:0 "Can be built alongside Manufactory"
  building_ramparts_desc:0 "Can be built alongside Manufactory"
 
- #cb
+ #CB
  cb_nationalist_rev:0 "Nationalism"
  cb_nationalist_rev_desc:0 "They hold provinces of our culture group."
 
- #culture
+ #Culture
  anatolian:0 "Anatolian"
 
- #terrain
+ #Terrain
  floodplains:0 "Floodplains"
  floodplains_desc:0 ""
  desert_highlands:0 "Desert Highlands"
@@ -65,3 +65,77 @@
  steppe_mountains_desc:0 ""
  oasis:0 "Oasis"
  oasis_desc:0 ""
+
+ #Tags
+ SHY:0 "Shaybanids"
+ KRG:0 "Kyrgyz"
+ MGS:0 "Moghulistan"
+
+ #County Ideas
+ BUK_ideas:0 "Bukhara Ideas"
+ BUK_ideas_start:0 "Bukhara Traditions"
+ BUK_ideas_bonus:0 "Bukhara Ambition"
+ KRG_ideas:0 "Kyrgyz Ideas"
+ KRG_ideas_start:0 "Kyrgyz Traditions"
+ KRG_ideas_bonus:0 "Kyrgyz Ambition"
+ MGS_ideas:0 "Moghulistan Ideas"
+ MGS_ideas_start:0 "Moghulistan Traditions"
+ MGS_ideas_bonus:0 "Moghulistan Ambition"
+ ZUN_ideas:0 "Dzungar Ideas"
+ ZUN_ideas_start:0 "Dzungar Traditions"
+ ZUN_ideas_bonus:0 "Dzungar Ambition"
+ vajrayana_tengri_syncretism:0 "Syncretism of New and Old"
+ vajrayana_tengri_syncretism_desc:0 ""
+ dzungar_centralized_bureaucracy:0 "Direct Control of Huntaiji"
+ dzungar_centralized_bureaucracy_desc:0 ""
+ dzungar_lancers:0 "Dzungar Lancers"
+ dzungar_lancers_desc:0 "Dzungars strayed away from traditional Mongol warfare, innovating in the use of Cavalry Lance. Equipping and training even traditional Horse Archers with a Lance. Putting greater emphasis on a Cavalry Charge."
+
+ #Modifiers
+ religious_fervor:0 "Religious Fervor"
+ dzungar_gunsmith_manufactory:0 "Dzungar Gunsmith Manufactory"
+ last_nomad_empire_m:0 "Last Nomad Empire"
+
+ #Mission
+ mongols_unity_through_faith_title:0 "Unity Through Faith"
+ mongols_unity_through_faith_desc:0 "Many Mongols have begun to adopt the Vajrayana Buddhist faith. Through adoption of one faith, we can ensure clans unity and prevent infighting."
+ alliance_of_four_oirats_title:0 "Alliance of Four Oirats"
+ alliance_of_four_oirats_desc:0 ""
+ securing_zungaria_title:0 "Securing Dzungaria"
+ securing_zungaria_desc:0 ""
+ subjugate_yarkand_title:0 "Subjugation of Yarkand"
+ subjugate_yarkand_desc:0 ""
+ oirat_migration_to_dzungaria_title:0 "Migration to Dzungaria"
+ oirat_migration_to_dzungaria_desc:0 ""
+ integrate_local_elites_title:0 "Integration of Local Elites"
+ integrate_local_elites_desc:0 ""
+ centralization_title:0 "Power of Huntaiji"
+ centralization_desc:0 ""
+ last_nomad_empire_title:0 "Last Nomad Empire"
+ last_nomad_empire_desc:0 ""
+ push_further_west_title:0 "Expansion West"
+ push_further_west_desc:0 ""
+ develop_local_source_of_iron_title:0 "Needs of the State"                          
+ develop_local_source_of_iron_desc:0 ""
+ gunsmith_manufactory_title:0 "Dzungar Gunsmiths"
+ gunsmith_manufactory_desc:0 ""
+
+ #Eevents
+ dif_buddhist_missions.1.t:0 "Syncretic Beliefs"
+ dif_buddhist_missions.1.d:0 "Recent converts displaying growing militancy, taking Buddhist teachings too far."
+ dif_buddhist_missions.1.a:0 "Side with them. This Word must be Reborn."
+ dif_buddhist_missions.1.b:0 "They need guidance."
+
+ #Title
+ HUNTAIJI:0 "Huntaiji"
+
+ #Estets
+ nomadic_aristocracy:0 "Noyans"
+ nomadic_aristocracy_desc:0 "This estate represents Nomadic Aristocracy, serving under teh Khan as commanders and administrators."
+ nomadic_aristocracy_influence_modifier:0 "Noyans Influence"
+ nomadic_aristocracy_loyalty_modifier:1 "Noyans Loyalty Equilibrium"
+ estate_nomadic_aristocracy_guaranteed_leadgership:0 "Noble Military Leadership"
+ estate_nomadic_aristocracy_guaranteed_leadgership_desc:0 ""
+ estate_nomadic_aristocracy_confirm_noble_right:0 "Confirm Noble Rights"
+ estate_nomadic_aristocracy_confirm_noble_right_desc:0 ""
+ estate_nomadic_aristocracy_primacy:0 "Primacy of the Noyans"

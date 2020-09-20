@@ -2301,9 +2301,10 @@ estate_nomadic_tribes_share_of_the_spoils = {
 	max_absolutism = -5
 	loyalty = 0.05
 	penalties = {
-		available_province_loot = -0.1
+		available_province_loot = -0.25
 	}
 	benefits = {
+		land_maintenance_modifier = -0.10
 	}
 	ai_will_do = {
 		factor = 7.5
@@ -2321,6 +2322,7 @@ estate_nomadic_tribes_chieftains_autonomy = {
 	influence = 0.1
 	penalties = {
 	}
+
 	benefits = {
 	}
 	ai_will_do = {
@@ -2332,38 +2334,45 @@ estate_nomadic_tribes_chieftains_autonomy = {
 	}
 }
 
-estate_nomadic_tribes_guaranteed_leadgership_in_host = {
-	icon = privilege_conscript_cossack_elite
-	max_absolutism = -5
-	influence = 0.05
-	can_select = {
-		army_tradition = 30
-	}
-	on_granted = {
-		add_army_tradition = -15
-	}
-	penalties = {
-	}
-	benefits = {
-		general_cost = -0.25
-		army_tradition_decay = -0.005
-	}
-	ai_will_do = {
-		factor = 8
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
-	}
-}
+#estate_nomadic_tribes_guaranteed_leadgership_in_host = {
+#	icon = privilege_conscript_cossack_elite
+#	max_absolutism = -5
+#	influence = 0.05
+#	can_select = {
+#		army_tradition = 30
+#	}
+#	on_granted = {
+#		add_army_tradition = -15
+#	}
+#	penalties = {
+#	}
+#	benefits = {
+#		general_cost = -0.25
+#		army_tradition_decay = -0.005
+#	}
+#	ai_will_do = {
+#		factor = 8
+#		modifier = {
+#			factor = 0.5
+#			is_absolutism_active = yes
+#		}
+#	}
+#}
 
 estate_nomadic_tribes_tribal_host = {
 	icon = privilege_raise_host
-	max_absolutism = -5
-	loyalty = -0.05
+	max_absolutism = -10
+	loyalty = 0
 	influence = 0.1
+	penalties = {
+		#global_tax_modifier = -0.20
+	}
+	modifier_by_land_ownership = {
+		global_tax_modifier = -0.25
+		global_manpower_modifier = 1
+	}
 	benefits = {
-		global_manpower_modifier = 0.2
+		#global_manpower_modifier = 0.2
 	}
 	ai_will_do = {
 		factor = 10

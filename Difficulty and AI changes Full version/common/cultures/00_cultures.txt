@@ -3488,8 +3488,6 @@ altaic = {
 	
 	mongol = {
 		primary = KHA
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 
 		male_names = {
 			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
@@ -3512,8 +3510,6 @@ altaic = {
 	}
 	chahar = { # now korchin
 		primary = KRC
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		male_names = {
 			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
 			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
@@ -3527,8 +3523,6 @@ altaic = {
 	}
 	khalkha = {
 		primary = KLK
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		male_names = {
 			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
 			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
@@ -3542,8 +3536,6 @@ altaic = {
 	}
 	oirats = {
 		primary = ZUN
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		male_names = {
 			Batula Toghan Galdan Amursana Erdeni Choghtu Dawa Esen Güshi Lha-bzang Khara Khula Kho Sengge Tseten 
 			Tsewang Kundelung Lobzang Sutai Tsobasa Ubasi Quduqa Toghto Altai Bäki Bayan Dayan Hami Molon Oori 
@@ -3555,8 +3547,6 @@ altaic = {
 	}
 	uzbehk = {
 		primary = SHY
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		male_names = {
 			Abdul-Aziz Abdul-Karim Abdul-Mumin Abdul-Rahim Abdulla Abu Said Abu'l-Feiz Abu'l-Ghazi Abu'l-Khayr 
 			Abu'l-Mansur Agatay Alim Anusha Arab Muhammad Avanesh Bahadur Bakht Baqi Muhammad Budjuga Bureke 
@@ -3572,8 +3562,6 @@ altaic = {
 	}
 	turkmeni = {
 		primary = KHI
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		dynasty_names = {
 			"Arabshahid" "Qungrat" "Bayan Arslan" "Mongke Cheren" "Mongke Bayar" "Suren Chinua" "Oyugun Nasan"
 			"Bora Tolui" Qadancher Batulun Batutai Bokejin Arighqan Burilgiteni
@@ -3594,8 +3582,6 @@ altaic = {
 	}
 	uyghur = {
 		primary = KAS
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		male_names = {
 			Abdul-Karim Abdul-Latif Abdul-Rashîd Abdullah Ahmad Alghu Ali Baraq Bayan Quli Buqa Temür Buzan 
 			Changshi Danishmendji Dost Muhammad Dughlat Duwa Duwa Temür Eljigidey Esen Buqa Ilbars Ilyas Ismail 
@@ -3612,8 +3598,6 @@ altaic = {
 	}
 	khazak = {
 		primary = KZH
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		male_names = {
 			Abilghazi Abilmambet Abulay Abulkhayr Ahmat Ayshwak Arunghazi Barak Batir Bokey Bulat Burunduq 
 			Erali Esim Ghubaydulla Haqnazar Jangir Janibek Jantore Jarmuhambet Jolbaris Kenesari Kerey Mamash 
@@ -3644,8 +3628,6 @@ altaic = {
 	}
 	kirgiz = {
 		primary = CHG
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		male_names = {
 			Abdul-Karim Abdul-Latif Abdul-Rashîd Abdullah Ahmad Alghu Ali Baraq Bayan Quli Buqa Temür Buzan 
 			Changshi Danishmendji Dost Muhammad Dughlat Duwa Duwa Temür Eljigidey Esen Buqa Ilbars Ilyas Ismail 
@@ -8239,8 +8221,6 @@ kamchatkan_g = {
 tartar	= {
 	graphical_culture = muslimgfx
 	astrakhani = {
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		primary = AST
 		dynasty_names = {
 			"Qara Chinua" "Delger Qyugun" "Arigh Gal" "Koke Erdene"	"Suren Unegen" "Tegus Enq" Qadandei Burilgigene Arighteni
@@ -8261,8 +8241,6 @@ tartar	= {
 		}
 	}
 	bashkir = {
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		primary = BSH
 		dynasty_names = {
 			Balna Salmiianov Ravna Taiborey Vylka Kanin Maimbava Arinin Aven Tsoy
@@ -8282,8 +8260,6 @@ tartar	= {
 		}
 	}
 	crimean = {
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		primary = CRI
 		dynasty_names = {
 			Altan Asanin Bekmambet Ziyaeddin Sarigöl Bektöre Celebicihan  Cobanzade Dägci Gaspirali Giraybay Hablemitoglu Hilmi 
@@ -8301,8 +8277,6 @@ tartar	= {
 		}
 	}
 	kazani = {
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		primary = KAZ
 		dynasty_names = {
 			Cälil Göbäydullina Nasiri Näcmetdin Nigmät Nurgäli Isxaqi Märcani Qamay "Qol-Gäli" Qursawi Tuqay Yusupow
@@ -8319,8 +8293,6 @@ tartar	= {
 		}
 	}
 	mishary = {
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		primary = GOL
 		dynasty_names = {
 			"Boke Temur" "Qutlugh Vachir" "Suren Chinua" "Delger Bayar" "Shria Gan" "Bora Chinua" Nasange Temur-chi Chinuagene 
@@ -8342,8 +8314,6 @@ tartar	= {
 		}
 	}
 	nogaybak = {
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		primary = NOG
 		dynasty_names = {
 			"Ulagan Temur" "Bora Chinua" "Suren Unegen" "Qara Erdene" 
@@ -8363,8 +8333,6 @@ tartar	= {
 		}
 	}
 	siberian = {
-		country = { has_banners = 1 }
-		province = { local_has_banners = 1 }
 		primary = SIB
 		dynasty_names = {
 			Balna Salmiianov Ravna Taiborey Vylka Kanin Maimbava Arinin Aven Tsoy

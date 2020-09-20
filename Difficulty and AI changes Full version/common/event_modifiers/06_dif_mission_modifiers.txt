@@ -1,0 +1,10 @@
+religious_fervor = {
+	land_morale = 0.1
+	tolerance_heathen = -1
+}
+dzungar_gunsmith_manufactory = {
+	artillery_cost = -0.1
+}
+last_nomad_empire_m = {
+	prestige = 1
+}

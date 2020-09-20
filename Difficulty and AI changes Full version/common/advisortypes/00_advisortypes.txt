@@ -229,6 +229,13 @@ statesman = {
 	
 	ai_will_do = {
 		factor = 0.5
+		modifier = {
+			factor = 10
+			OR = {
+				is_emperor_of_china = yes
+				is_emperor = yes
+			}
+		}
 	}
 }
 
@@ -370,6 +377,13 @@ diplomat = {
 	
 	ai_will_do = {
 		factor = 0.5
+		modifier = {
+			factor = 10
+			OR = {
+				is_emperor_of_china = yes
+				is_emperor = yes
+			}
+		}
 	}
 }
 
