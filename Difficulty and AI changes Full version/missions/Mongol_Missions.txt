@@ -1,42 +1,6 @@
 # These missions should require X provinces in [region] rather than entire regions
-# Restructured by Spirit
+# Oirat Misson Tree made by Spirit
 
-oir_missions_1 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		tag = OIR
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	oir_tumu_crisis = {
-		icon = mission_kowtow
-		required_missions = {  }
-		provinces_to_highlight = {
-			province_id = 1816
-		}
-		#position = 1
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = tumu_crisis_complete_tt
-				OR = {
-					has_country_flag = tumu_crisis_victory
-					owns_core_province = 1816
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					has_reform = steppe_horde
-				}
-				add_horde_unity = 25
-			}
-			add_army_tradition = 20
-		}
-	}
-}
 
 mongol_missions_1 = {
 	slot = 1
@@ -317,6 +281,112 @@ mongol_missions_2 = {
 	}
 	has_country_shield = yes
 	
+	mongols_yam = {
+		icon = mission_market_place_with_asian_traders
+		#required_missions = { mongols_persia } #mongols_tatars
+		provinces_to_highlight = {
+			OR = {
+				region = khorasan_region
+				region = central_asia_region
+				region = mongolia_region
+				region = north_china_region
+			}
+			province_has_center_of_trade_of_level = 1
+		}
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+				}
+				num_of_owned_provinces_with = {
+					OR = {
+						region = khorasan_region
+						region = central_asia_region
+						region = mongolia_region
+						region = north_china_region
+					}
+					province_has_center_of_trade_of_level = 3
+					value = 3
+				}
+			}
+			else = {
+				4233 = { is_strongest_trade_power = ROOT }
+				707 = { is_strongest_trade_power = ROOT }
+				454 = { is_strongest_trade_power = ROOT }
+			}
+		}
+		effect = {
+			add_dip_power = 200
+		}
+	}
+	mongols_pax_mongolica = {
+		icon = mission_kowtow
+		required_missions = { mongols_yam }
+		provinces_to_highlight = {
+			OR = {
+				region = mongolia_region
+				#region = north_china_region
+				region = central_asia_region
+				#region = crimea_region
+				#region = persia_region
+				#region = khorasan_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			stability = 3
+			NOT = { average_unrest = 3 }
+			mongolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			#north_china_region = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			central_asia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			#crimea_region = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#persia_region = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#khorasan_region = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "pax_mongolica"
+				duration = -1
+			}
+		}
+	}
+}
+
+
+mongol_missions_2b = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = mongol
+			primary_culture = chahar
+			primary_culture = khalkha
+			primary_culture = oirats
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
 	mongols_central_asia = {
 		icon = mission_central_asian_city
 		required_missions = { mongols_unite_the_mongols }
@@ -430,8 +500,101 @@ mongol_missions_2 = {
 	}
 }
 
-
 mongol_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = mongol
+			primary_culture = chahar
+			primary_culture = khalkha
+			primary_culture = oirats
+		}
+		#religion = tengri_pagan_reformed
+	}
+	has_country_shield = yes
+	
+	mongols_unity_through_faith = {
+		icon = mission_buddhist_monk_praying
+		#required_missions = { mongols_unite_the_mongols }
+		position = 1
+		trigger = {
+			has_institution = feudalism
+			has_matching_religion = vajrayana
+		}
+		effect = {
+			change_religion = vajrayana
+			country_event = { id = dif_buddhist_missions.1 }
+		}
+	}
+	mongols_religion_mission = {
+		icon = mission_hands_praying
+		required_missions = { mongols_unity_through_faith }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			religious_unity = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "mongol_religion_unity"
+				duration = -1
+			}
+		}
+	}
+}
+
+oir_missions_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		primary_culture = oirats
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	subjugate_yarkand = {
+		icon = mission_unite_home_region
+		required_missions = { securing_zungaria }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = turpan_kumul_area
+				area = tarim_basin_area
+				area = shanshan_area
+				area = kashgaria_area 
+			}
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		trigger = {
+			turpan_kumul_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			tarim_basin_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			shanshan_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			kashgaria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			add_prestige = 25
+		}
+	}
+}
+
+mongol_missions_3b = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -515,151 +678,328 @@ mongol_missions_3 = {
 	}
 }
 
-mongol_missions_4 = {
-	slot = 5
+oir_missions_2 = {
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			primary_culture = mongol
-			primary_culture = chahar
-			primary_culture = khalkha
-			primary_culture = oirats
-		}
-		#religion = tengri_pagan_reformed
+		primary_culture = oirats
+		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
-	mongols_unity_through_faith = {
-		icon = mission_buddhist_monk_praying
-		#required_missions = { mongols_unite_the_mongols }
-		#position = 1
+	alliance_of_four_oirats = {
+		icon = mission_unite_home_region
+		required_missions = {  }
+		position = 1
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
 		trigger = {
-			has_institution = feudalism
-			has_matching_religion = vajrayana
+			stability = 1
+			army_size_percentage = 0.8
 		}
 		effect = {
-			change_religion = vajrayana
-			country_event = { id = dif_buddhist_missions.1 }
+			zungaria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_zungaria = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	mongols_religion_mission = {
-		icon = mission_hands_praying
-		required_missions = { mongols_unity_through_faith }
+	securing_zungaria = {
+		icon = mission_unite_home_region
+		required_missions = { alliance_of_four_oirats }
+		#position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = zungaria_area
+				area = north_zungaria
+			}
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		trigger = {
+			zungaria_area = {
+				is_core = ROOT
+				type = all
+			}
+			north_zungaria = {
+				is_core = ROOT
+				type = all
+			}
+		}
+		effect = {
+			turpan_kumul_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tarim_basin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shanshan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kashgaria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	oirat_migration_to_dzungaria = {
+		icon = mission_unite_home_region
+		required_missions = { securing_zungaria }
+		position = 3
+		provinces_to_highlight = {
+			area = zungaria_area
+		}
+		trigger = {
+			zungaria_area = {
+				type = all
+				is_state_core = ROOT
+				controlled_by = ROOT
+			}
+			is_at_war = no
+		}
+		effect = {
+			2120 = {
+				change_province_name = "Ghulja"
+				move_capital_effect = yes
+			}
+			jetysuu_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			}
+			balchasj_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			}
+		}
+	}
+	integrate_local_elites = {
+		icon = mission_unite_home_region
+		required_missions = { oirat_migration_to_dzungaria }
+		position = 3
+		provinces_to_highlight = {
+			area = zungaria_area
+		}
+		trigger = {
+			zungaria_area = {
+				type = all
+				is_state_core = ROOT
+				#controlled_by = ROOT
+			}
+			religion = vajrayana
+			is_at_war = no
+		}
+		effect = {
+			zungaria_area = {
+				limit = {
+					NOT = { culture = oirats }
+				}
+				change_culture = oirats
+			}
+		}
+	}
+	centralization = { # Growing power of Khong Tayiji
+		icon = mission_unite_home_region
+		required_missions = { integrate_local_elites }
+		#position = 1
 		provinces_to_highlight = {
 		}
 		trigger = {
-			religious_unity = 1
+			tag = ZUN
+			zungaria_area = {
+				type = all
+				is_state_core = ROOT
+			}
+			north_zungaria = {
+				is_state_core = ROOT
+				type = all
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "growth_of_capital"
+						duration = 9125 #25 years
+					}
+				}
+			}
+		}
+	}
+	last_nomad_empire = {
+		icon = mission_unite_home_region
+		required_missions = { centralization }
+		#position = 1
+		#provinces_to_highlight = {
+		#}
+		trigger = {
+			OR = {
+				any_rival_country = { 
+					is_emperor_of_china = yes
+				}
+				any_known_country = {
+					is_emperor_of_china = yes
+					is_great_power = no
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "mongol_religion_unity"
+				name = "last_nomad_empire_m"
 				duration = -1
 			}
 		}
 	}
 }
 
-mongol_missions_5 = {
-	slot = 4
+oir_missions_3 = {
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			primary_culture = mongol
-			primary_culture = chahar
-			primary_culture = khalkha
-			primary_culture = oirats
-		}
+		tag = OIR
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
-	mongols_yam = {
-		icon = mission_market_place_with_asian_traders
-		#required_missions = { mongols_persia } #mongols_tatars
+	oir_tumu_crisis = {
+		icon = mission_kowtow
+		required_missions = {  }
 		provinces_to_highlight = {
-			OR = {
-				region = khorasan_region
-				region = central_asia_region
-				region = mongolia_region
-				region = north_china_region
-			}
-			province_has_center_of_trade_of_level = 1
+			province_id = 1816
 		}
-		position = 1
+		#position = 1
 		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = tumu_crisis_complete_tt
+				OR = {
+					has_country_flag = tumu_crisis_victory
+					owns_core_province = 1816
+				}
+			}
+		}
+		effect = {
 			if = {
 				limit = {
-					has_dlc = "Dharma"
+					has_reform = steppe_horde
 				}
-				num_of_owned_provinces_with = {
-					OR = {
-						region = khorasan_region
-						region = central_asia_region
-						region = mongolia_region
-						region = north_china_region
-					}
-					province_has_center_of_trade_of_level = 3
-					value = 3
-				}
+				add_horde_unity = 25
 			}
-			else = {
-				4233 = { is_strongest_trade_power = ROOT }
-				707 = { is_strongest_trade_power = ROOT }
-				454 = { is_strongest_trade_power = ROOT }
-			}
-		}
-		effect = {
-			add_dip_power = 200
+			add_army_tradition = 20
 		}
 	}
-	mongols_pax_mongolica = {
-		icon = mission_kowtow
-		required_missions = { mongols_yam }
+}
+
+oir_missions_3b = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		primary_culture = oirats
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	push_further_west = {
+		icon = mission_unite_home_region
+		required_missions = { securing_zungaria }
+		position = 3
 		provinces_to_highlight = {
 			OR = {
-				region = mongolia_region
-				#region = north_china_region
-				region = central_asia_region
-				#region = crimea_region
-				#region = persia_region
-				#region = khorasan_region
+				area = jetysuu_area
+				area = balchasj_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 		trigger = {
-			stability = 3
-			NOT = { average_unrest = 3 }
-			mongolia_region = {
+			jetysuu_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#north_china_region = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
-			central_asia_region = {
+			balchasj_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#crimea_region = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
-			#persia_region = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
-			#khorasan_region = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "pax_mongolica"
-				duration = -1
+			add_prestige = 25
+		}
+	}
+	develop_local_source_of_iron = {
+		icon = mission_unite_home_region
+		required_missions = { integrate_local_elites }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 2120
+		}
+		trigger = {
+			mil_tech = 11
+			owns_core_province = 2120
+			treasury = 500
+		}
+		effect = {
+			2120 = {
+				change_trade_goods = iron
+			}
+			add_treasury = -500
+		}
+	}
+	gunsmith_manufactory = {
+		icon = mission_unite_home_region
+		required_missions = { develop_local_source_of_iron }
+		#position = 7
+		provinces_to_highlight = {
+			province_id = 2120
+		}
+		trigger = {
+			owns_core_province = 2120
+			2120 = { has_building = weapons }
+		}
+		effect = {
+			add_country_modifier = { 
+				name = "dzungar_gunsmith_manufactory"
+				duration = -1  
 			}
 		}
 	}

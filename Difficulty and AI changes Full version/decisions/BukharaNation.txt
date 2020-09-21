@@ -34,9 +34,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 442 #Bukhara
-			NOT = { 
-				overlord_of = SIB
-			}
+			#NOT = { 
+			#	overlord_of = SIB
+			#}
 		}
 		effect = {
 			set_country_flag = bukharan_nation
@@ -76,17 +76,17 @@ country_decisions = {
 			add_permanent_claim = 1973 #Urgench
 			add_permanent_claim = 2363 #Khujand
 
-			if = {
-				limit = { 
-					NOT = { government = monarchy }
-					is_revolutionary = no
-				}
-				change_government_to_monarchy = yes
-			}
-			if = {
-				limit = { is_revolutionary = no }
-				add_government_reform = iqta
-			}
+			#if = {
+			#	limit = { 
+			#		NOT = { government = monarchy }
+			#		is_revolutionary = no
+			#	}
+			#	change_government_to_monarchy = yes
+			#}
+			#if = {
+			#	limit = { is_revolutionary = no }
+			#	add_government_reform = iqta
+			#}
 			change_technology_group = muslim
 			change_unit_type = muslim
 			set_global_flag = bukhara_formed

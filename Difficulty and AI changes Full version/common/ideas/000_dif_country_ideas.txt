@@ -79,40 +79,43 @@ BUK_ideas = {
 	}
 }
 
-#KRG_ideas = {
-#	start = {
-#		ae_impact = -0.10
-#		years_of_nationalism = -5
-#	}
-#	
-#	bonus = {
-#		stability_cost_modifier = -0.10
-#	}
-#	
-#	trigger = {
-#		has_reform = steppe_horde
-#	}
-#	free = yes
-#	
-#	life_of_steppe_warrior = {
-#		land_attrition = -0.20 #(effect taken in OIR_ideas)
-#	}
-#	traditions_of_the_great_khan = {
-#		cavalry_power = 0.20
-#	}
-#	horse_supplies = {
-#		land_maintenance_modifier = -0.05
-#	}
-#	steppe_leaders = {
-#		leader_land_shock = 1
-#	}
-#	tradition_of_conquest = {
-#		core_creation = -0.25 #(effect taken in CHG_ideas)
-#	}
-#	logistics_of_khan = {
-#		manpower_recovery_speed = 0.2 #(effect taken in GLH_ideas)
-#	}
-#	glory_of_conquest = {
-#		global_manpower_modifier = 0.25 #(effect taken in OIR_ideas)
-#	}
-#}
+SHY_ideas = {
+	start = {
+		ae_impact = -0.15
+		core_creation = -0.20
+	}
+	
+	bonus = {
+		land_morale = 0.1
+	}
+	
+	trigger = {
+		tag = SHY
+	}
+	free = yes
+	
+	traditions_of_the_great_khan = {
+		cavalry_power = 0.20
+	}
+	descendants_of_shiban  = {
+		legitimacy = 1
+		horde_unity = 1
+	}
+	life_of_steppe_warrior = {
+		attrition = -0.20
+	}
+	horse_supplies = {
+		cavalry_cost = -0.1
+		land_maintenance_modifier = -0.05
+	}
+	tradition_of_conquest = {
+		years_of_nationalism = -5
+		global_unrest = -1 #(effect taken in CHG_ideas)
+	}
+	logistics_of_khan = {
+		manpower_recovery_speed = 0.2 #(effect taken in GLH_ideas)
+	}
+	glory_of_conquest = {
+		global_manpower_modifier = 0.25 #(effect taken in OIR_ideas)
+	}
+}

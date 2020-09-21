@@ -413,3 +413,29 @@ sedentary_subjects_guarantee_religious_freedom = {
 		}
 	}
 }
+
+estate_nomadic_tribes_expand_banners = {
+	icon = privilege_royal_authority
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	#modifier_by_land_ownership = {
+	#	global_manpower_modifier = -0.25
+	#	amount_of_banners = 0.50
+	#}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 2
+			OR = {
+				tag = MCH
+				tag = MJZ
+			}
+		}
+	}
+}

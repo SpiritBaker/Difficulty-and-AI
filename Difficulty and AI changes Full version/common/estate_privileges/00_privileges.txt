@@ -3491,6 +3491,10 @@ estate_nomadic_tribes_primacy_to_the_bannermen = {
 		OR = {
 			primary_culture = manchu
 			primary_culture = manchu_new
+			primary_culture = oirats
+			primary_culture = mongol
+			primary_culture = chahar
+			primary_culture = khalkha
 		}
 	}
 	penalties = {

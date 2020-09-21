@@ -48,6 +48,8 @@
  #CB
  cb_nationalist_rev:0 "Nationalism"
  cb_nationalist_rev_desc:0 "They hold provinces of our culture group."
+ dif_cb_khanate:0 "Tribal Conquest"
+ dif_cb_khanate_desc:0 "We will force them to bend the knee to the Khan, or they shall perish."
 
  #Culture
  anatolian:0 "Anatolian"
@@ -79,18 +81,24 @@
  KRG_ideas:0 "Kyrgyz Ideas"
  KRG_ideas_start:0 "Kyrgyz Traditions"
  KRG_ideas_bonus:0 "Kyrgyz Ambition"
- MGS_ideas:0 "Moghulistan Ideas"
- MGS_ideas_start:0 "Moghulistan Traditions"
- MGS_ideas_bonus:0 "Moghulistan Ambition"
+ SHY_ideas:0 "Shaybanids Ideas"
+ SHY_ideas_start:0 "Shaybanids Traditions"
+ SHY_ideas_bonus:0 "Shaybanids Ambition"
+ #MGS_ideas:0 "Moghulistan Ideas"
+ #MGS_ideas_start:0 "Moghulistan Traditions"
+ #MGS_ideas_bonus:0 "Moghulistan Ambition"
  ZUN_ideas:0 "Dzungar Ideas"
  ZUN_ideas_start:0 "Dzungar Traditions"
  ZUN_ideas_bonus:0 "Dzungar Ambition"
- vajrayana_tengri_syncretism:0 "Syncretism of New and Old"
+ vajrayana_tengri_syncretism:0 "Tengry Syncretism"
  vajrayana_tengri_syncretism_desc:0 ""
  dzungar_centralized_bureaucracy:0 "Direct Control of Huntaiji"
  dzungar_centralized_bureaucracy_desc:0 ""
  dzungar_lancers:0 "Dzungar Lancers"
  dzungar_lancers_desc:0 "Dzungars strayed away from traditional Mongol warfare, innovating in the use of Cavalry Lance. Equipping and training even traditional Horse Archers with a Lance. Putting greater emphasis on a Cavalry Charge."
+ descendants_of_shiban:0 "Descendants of Shiban"
+ descendants_of_shiban_desc:0 "Your ruler is descendant of Shiban, the Grandson of Chinggis Khan. As a member of royal Chinggisid bloodline we have the Right to Rule as legitimate descendants of the Great Khan."
+ 
 
  #Modifiers
  religious_fervor:0 "Religious Fervor"
@@ -140,6 +148,20 @@
  estate_nomadic_aristocracy_confirm_noble_right:0 "Confirm Noble Rights"
  estate_nomadic_aristocracy_confirm_noble_right_desc:0 ""
  estate_nomadic_aristocracy_primacy:0 "Primacy of the Noyans"
+ sedentary_subdjects:0 "Sedentary Subdjects"
+ sedentary_subdjects_desc:0 "This estate represents City States and Farming communities that are nominally ruled by our Khan."
+ sedentary_subdjects_influence_modifier:0 "Sedentary Influence"
+ sedentary_subdjects_loyalty_modifier:1 "Sedentary Loyalty Equilibrium"
+ sedentary_subdjects_land_of_commerce:0 "Land of Commerce"
+ sedentary_subdjects_land_of_commerce_desc:0 ""
+ sedentary_subdjects_patronage_of_the_arts:0 "Patronage of the Arts"
+ sedentary_subdjects_patronage_of_the_arts_desc:0 ""
+ sedentary_subdjects_increased_tribute:0 "Increased Tribute"
+ sedentary_subdjects_increased_tribute_desc:0 ""
+ sedentary_subdjects_trade_rights:0 "Trade Rights"
+ sedentary_subdjects_trade_rights_desc:0 ""
+ sedentary_subjects_guarantee_religious_freedom:0 "Guarantee Religious Freedom"
+ sedentary_subjects_guarantee_religious_freedom_desc:0 ""
 
  #Tooltips
  root_is_most_powerful_manchuria_tribe:0 "The Most Powerful Manchu Tribe"

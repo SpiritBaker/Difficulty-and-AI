@@ -55,9 +55,10 @@ aristocracy_ideas = {
 		modifier = {
 			factor = 0.5
 			is_subject = yes
+			NOT = { is_subject_of_type = tributary_state }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			NOT = { cavalry_fraction = 0.1 }
 		}
 		modifier = {
@@ -127,7 +128,7 @@ aristocracy_ideas = {
 			}
 		}
 		modifier = {
-			factor = 6
+			factor = 10
 			OR = {
 				has_reform = khanate_monarchy
 				has_reform = dzungar_khanate

@@ -3487,6 +3487,8 @@ altaic = {
 
 	
 	mongol = {
+		country = { has_banners = 1 }
+		province = { local_has_banners = 1 }
 		primary = KHA
 
 		male_names = {
@@ -3509,6 +3511,8 @@ altaic = {
 		}
 	}
 	chahar = { # now korchin
+		country = { has_banners = 1 }
+		province = { local_has_banners = 1 }
 		primary = KRC
 		male_names = {
 			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
@@ -3522,6 +3526,8 @@ altaic = {
 		}
 	}
 	khalkha = {
+		country = { has_banners = 1 }
+		province = { local_has_banners = 1 }
 		primary = KLK
 		male_names = {
 			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
@@ -3535,6 +3541,8 @@ altaic = {
 		}
 	}
 	oirats = {
+		country = { has_banners = 1 }
+		province = { local_has_banners = 1 }
 		primary = ZUN
 		male_names = {
 			Batula Toghan Galdan Amursana Erdeni Choghtu Dawa Esen Güshi Lha-bzang Khara Khula Kho Sengge Tseten 
@@ -5253,8 +5261,8 @@ east_asian = {	# Chinese Group
 	graphical_culture = asiangfx
 
 	manchu_new = {
-		country = { has_banners = 1}
-		province = { local_has_banners = 1}
+		country = { has_banners = 1 }
+		province = { local_has_banners = 1 }
 		primary = MCH
 		dynasty_names = {
 			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru

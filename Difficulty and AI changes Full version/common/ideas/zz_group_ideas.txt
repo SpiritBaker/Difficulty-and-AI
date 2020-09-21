@@ -560,6 +560,7 @@ horde_ideas = {
 		cavalry_power = 0.20
 	}
 	horse_supplies = {
+		cavalry_cost = -0.1
 		land_maintenance_modifier = -0.05
 	}
 	steppe_leaders = {

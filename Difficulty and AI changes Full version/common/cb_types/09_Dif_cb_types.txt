@@ -9,3 +9,21 @@ cb_nationalist_rev = {
 
     war_goal = take_province_nationalist
 }
+
+dif_cb_khanate = {
+	valid_for_subject = no
+
+	prerequisites = {
+		is_neighbor_of = FROM
+		#FROM = {
+		#	is_nomad = no
+        #}
+        OR = {
+            has_reform = dzungar_khanate
+            has_reform = khanate_monarchy
+        }
+		is_revolutionary = no
+	}
+
+	war_goal = superiority_horde
+}
