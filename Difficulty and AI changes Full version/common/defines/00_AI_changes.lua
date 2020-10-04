@@ -165,6 +165,7 @@ NDefines.NReligion.MAYA_COLLAPSE_PROVINCES_PER_REFORM = 1 --Maya keeps this many
 NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 15
 --NDefines.NReligion.YEARLY_PAPAL_INFLUENCE_CATHOLIC = 1 
 NDefines.NReligion.PIETY_ACTION_COOLDOWN = 10
+NDefines.NReligion.KARMA_FOR_OFFENSIVE_WAR = -5 --base -10
 
 
 NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
