@@ -793,6 +793,11 @@ oir_missions_2 = {
 				change_province_name = "Ghulja"
 				move_capital_effect = yes
 			}
+			zungaria_area = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
 			jetysuu_area = { 
 				limit = {
 					NOT = { is_core = ROOT }
@@ -971,16 +976,17 @@ oir_missions_3b = {
 		required_missions = { integrate_local_elites }
 		position = 5
 		provinces_to_highlight = {
-			province_id = 2120
+			province_id = 2125
 		}
 		trigger = {
 			mil_tech = 11
-			owns_core_province = 2120
+			owns_core_province = 2125
 			treasury = 500
 		}
 		effect = {
-			2120 = {
+			2125 = {
 				change_trade_goods = iron
+				add_base_production = 2
 			}
 			add_treasury = -500
 		}
@@ -990,11 +996,11 @@ oir_missions_3b = {
 		required_missions = { develop_local_source_of_iron }
 		#position = 7
 		provinces_to_highlight = {
-			province_id = 2120
+			province_id = 2125
 		}
 		trigger = {
-			owns_core_province = 2120
-			2120 = { has_building = weapons }
+			owns_core_province = 2125
+			2125 = { has_building = weapons }
 		}
 		effect = {
 			add_country_modifier = { 

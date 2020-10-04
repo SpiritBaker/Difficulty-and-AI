@@ -8,7 +8,7 @@ SHY_missions_1 = { #Uzbek
 	}
 	has_country_shield = yes
 	weakening_of_timurid_dynasty = {
-		icon = mission_kowtow
+		icon = mission_unite_home_region
 		required_missions = {  }
 		#provinces_to_highlight = {
 		#	province_id = 1816
@@ -21,7 +21,95 @@ SHY_missions_1 = { #Uzbek
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = "oma_buildforces_mod"
+				duration = 5475
+			}
 			transoxiana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	claim_rulership_over_samarkand = {
+		icon = mission_unite_home_region
+		required_missions = { weakening_of_timurid_dynasty }
+		provinces_to_highlight = {
+			area = transoxiana_area
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		#position = 1
+		trigger = {
+			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			ferghana_area = {
+				limit = {
+					NOT = { province_id = 460 }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			khiva_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			termez_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	uzb_invade_herat = {
+		icon = mission_unite_home_region
+		required_missions = { claim_rulership_over_samarkand }
+		provinces_to_highlight = {
+			area = transoxiana_area
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		#position = 1
+		trigger = {
+			tag = BUK
+			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			merv_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			balkh_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			herat_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

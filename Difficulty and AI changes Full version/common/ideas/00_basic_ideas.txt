@@ -13,6 +13,7 @@ aristocracy_ideas = {
 	bonus = {
 		leader_siege = 1
 		nobles_loyalty_modifier = 0.1
+		nomadic_aristocracy_loyalty_modifier = 0.1
 	}
 
 	trigger = {
@@ -128,10 +129,11 @@ aristocracy_ideas = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 6
 			OR = {
+				has_reform = tribal_federation
 				has_reform = khanate_monarchy
-				has_reform = dzungar_khanate
+				has_reform = nomad_empire 
 				is_nomad = yes
 			}
 		}
@@ -549,6 +551,16 @@ offensive_ideas = {
 		modifier = {
 			factor = 1.5
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 2.5
+			has_idea_group = aristocracy_ideas
+			OR = {
+				has_reform = tribal_federation
+				has_reform = khanate_monarchy
+				has_reform = nomad_empire 
+				is_nomad = yes
+			}
 		}
 	}
 }

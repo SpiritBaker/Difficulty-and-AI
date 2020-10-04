@@ -32,7 +32,7 @@ monarchy = {
 				austrian_archduchy_reform
 				#Dif&AI 
 				khanate_monarchy
-				dzungar_khanate
+				nomad_empire 
 			}
 		}
 		hereditary_vs_nobility = {
@@ -437,6 +437,7 @@ tribal = {
 			reforms = {
 				centralize_tribal_power_reform
 				retain_tribal_hierarchy_reform
+				nomad_reform_dif
 			}
 		}
 		tribal_reformation = {

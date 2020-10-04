@@ -1502,7 +1502,7 @@ estate_church_inwards_perfection = {
 	#	development_cost = -0.25
 	#}
 	penalties = {
-		stability_cost_to_declare_war = 1
+		army_tradition = -0.1
 	}
 	benefits = {
 		development_cost = -0.10
@@ -3485,7 +3485,7 @@ estate_vaisyas_patronage_of_the_arts = {
 
 estate_nomadic_tribes_primacy_to_the_bannermen = {
 	icon = privilege_royal_authority
-	max_absolutism = -5
+	max_absolutism = -10
 	influence = 0.1
 	is_valid = {
 		OR = {
@@ -3498,13 +3498,14 @@ estate_nomadic_tribes_primacy_to_the_bannermen = {
 		}
 	}
 	penalties = {
-		amount_of_banners = -0.25
+		
 	}
 	benefits = {
-		land_morale = 0.1
+		amount_of_banners = 0.15
+		#land_morale = 0.1
 	}
 	ai_will_do = {
-		factor = 5
+		factor = 10
 		modifier = {
 			factor = 2
 			OR = {

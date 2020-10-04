@@ -11,7 +11,7 @@ estate_nomadic_tribes = {
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = cossacks_reform }
 		OR = {
-			has_reform = dzungar_khanate
+			has_reform = nomad_empire
 			has_reform = khanate_monarchy
 			is_nomad = yes
 			AND = {
@@ -84,6 +84,32 @@ estate_nomadic_tribes = {
 
 	# Influence modifiers
 	base_influence = 10
+	influence_modifier = {
+		desc = EST_STEPPE_PROVINCES
+		trigger = {
+			any_owned_province = {
+				OR = {
+					has_terrain = steppe
+					has_terrain = steppe_mountains 
+				}
+			}
+			num_of_cities = 5
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_STEPPE_PROVINCES
+		trigger = {
+			any_owned_province = {
+				OR = {
+					has_terrain = steppe
+					has_terrain = steppe_mountains 
+				}
+			}
+			num_of_cities = 10
+		}
+		influence = 5
+	}
 
 	influence_from_dev_modifier = 1
 

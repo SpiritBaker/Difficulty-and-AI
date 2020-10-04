@@ -17,11 +17,12 @@ ZUN_ideas = {
 	free = yes
 	
 	fearsome_warriors_of_tumu = {
-		leader_land_manuever = 1
+		leader_land_shock = 1
 		cavalry_cost = -0.1
 	}
-	life_of_steppe_warrior = { #also used in Horde ideas, KHA_ideas
-		land_attrition = -0.20
+	defiance_of_the_dzungars = {
+		discipline = 0.05
+		manpower_recovery_speed = 0.15
 	}
 	vajrayana_tengri_syncretism = {
 		land_morale = 0.1
@@ -33,12 +34,12 @@ ZUN_ideas = {
 	dzungar_centralized_bureaucracy = {
 		global_trade_goods_size_modifier = 0.1
 	}
-	defiance_of_the_dzungars = {
-		discipline = 0.05
-		manpower_recovery_speed = 0.15
+	life_of_steppe_warrior = { #also used in Horde ideas, KHA_ideas
+		leader_land_manuever = 1
+		land_attrition = -0.20
 	}
 	dzungar_lancers = { 
-		shock_damage = 0.1
+		shock_damage = 0.15
 	}
 }
 

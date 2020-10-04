@@ -14556,11 +14556,12 @@ OIR_ideas = {
 	free = yes
 	
 	fearsome_warriors_of_tumu = {
-		leader_land_manuever = 1
+		leader_land_shock = 1
 		cavalry_cost = -0.1
 	}
-	life_of_steppe_warrior = { #also used in Horde ideas, KHA_ideas
-		land_attrition = -0.20
+	defiance_of_the_dzungars = {
+		discipline = 0.05
+		manpower_recovery_speed = 0.15
 	}
 	the_four_oirats = {
 		horde_unity = 1
@@ -14569,12 +14570,12 @@ OIR_ideas = {
 	todo_besheg_script = {
 		technology_cost = -0.05
 	}
+	life_of_steppe_warrior = { #also used in Horde ideas, KHA_ideas
+		leader_land_manuever = 1
+		land_attrition = -0.20
+	}
 	OIR_great_khans_legacy = {
 		ae_impact = -0.15
-	}
-	defiance_of_the_dzungars = {
-		discipline = 0.05
-		manpower_recovery_speed = 0.15
 	}
 	glory_of_conquest = { #also used in Horde ideas, KHA_ideas and CHG_ideas
 		global_manpower_modifier = 0.25

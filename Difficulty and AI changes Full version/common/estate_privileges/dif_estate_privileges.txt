@@ -82,6 +82,27 @@ estate_nomadic_aristocracy_guaranteed_leadgership = {
 	}
 }
 
+estate_nomadic_aristocracy_unrestricted_looting = {
+	icon = privilege_supply_arms
+	max_absolutism = -10
+	influence = 0.05
+	loyalty = 0.05
+	penalties = {
+		stability_cost_modifier = 0.15
+		years_of_nationalism = 5
+	}
+	benefits = {
+		available_province_loot = 0.5
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
 estate_nomadic_aristocracy_confirm_noble_right = {
 	icon = privilege_grant_autonomy
 	max_absolutism = -10

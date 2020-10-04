@@ -19,7 +19,7 @@ dif_cb_khanate = {
 		#	is_nomad = no
         #}
         OR = {
-            has_reform = dzungar_khanate
+            has_reform = nomad_empire
             has_reform = khanate_monarchy
         }
 		is_revolutionary = no

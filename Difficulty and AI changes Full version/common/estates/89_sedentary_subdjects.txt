@@ -16,7 +16,7 @@ sedentary_subdjects = {
 		NOT = { has_reform = siberian_tribe }
 		#NOT = { has_reform = celestial_empire } ?
 		OR = {
-			has_reform = dzungar_khanate
+			has_reform = nomad_empire
 			has_reform = khanate_monarchy
 			is_nomad = yes
 		}
@@ -102,9 +102,19 @@ sedentary_subdjects = {
 	influence_modifier = {	
 		desc = EST_VAL_COT
 		trigger = {
-			NOT = { has_reform = free_city }
+			#NOT = { has_reform = free_city }
 			any_owned_province = {
 				province_has_center_of_trade_of_level = 1
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {	
+		desc = EST_VAL_COT
+		trigger = {
+			#NOT = { has_reform = free_city }
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 3
 			}
 		}
 		influence = 5

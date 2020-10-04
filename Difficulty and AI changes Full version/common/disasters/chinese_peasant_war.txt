@@ -1,0 +1,116 @@
+chinese_peasant_war = {
+	potential = {
+		OR = {
+			current_age = age_of_reformation
+			current_age = age_of_discovery
+		}
+		OR = {
+			is_emperor_of_china = yes
+			has_reform = celestial_empire
+		}
+		NOT = { has_reform = steppe_horde }		
+		NOT = { has_country_flag = had_peasant_war }
+	}
+	
+	
+	can_start = {
+		OR = {
+			current_age = age_of_reformation
+			current_age = age_of_discovery
+		}
+		#is_at_war = no
+		has_any_disaster = no
+		NOT = { manpower_percentage = 0.25 }
+		OR = {
+			NOT = { stability = 0 }
+			corruption = 10
+			NOT = { imperial_mandate = 25 }
+		}
+	}
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			manpower_percentage = 0.50
+			stability = 3
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}	
+		modifier = {
+			factor = 1
+			NOT = { imperial_mandate = 25 }
+		}	
+		modifier = {
+			factor = 0.5
+			NOT = { imperial_mandate = 50 }
+		}	
+		modifier = {
+			factor = 1.5
+			government = monarchy
+			NOT = { meritocracy = 50 }
+		} 
+		modifier = {
+			factor = 1
+			num_of_loans = 10
+		}	
+		modifier = {
+			factor = 2
+			is_bankrupt = yes
+		}		
+		modifier = {
+			factor = 0.5
+			overextension_percentage = 0.25
+			NOT = { 
+				overextension_percentage = 0.5
+			}
+		}
+		modifier = {
+			factor = 1.0
+			overextension_percentage = 0.5
+		}
+	}
+	
+	can_end = {
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		OR = {
+			imperial_mandate = 50
+			is_emperor_of_china = no
+		}
+	}
+	
+
+	modifier = {
+		reduced_liberty_desire = -10
+		imperial_mandate = -0.05
+		global_unrest = 5
+		stability_cost_modifier = 0.50
+	}	
+	
+	
+	on_start = chinese_peasant_war.1
+	on_end = chinese_peasant_war.6
+	
+	on_monthly = {
+		events = {
+	
+		}
+		random_events = { 
+			1000 = 0
+			100 = chinese_peasant_war.2
+			100 = chinese_peasant_war.3
+			100 = chinese_peasant_war.4
+			100 = chinese_peasant_war.5
+		
+		}
+	}
+}

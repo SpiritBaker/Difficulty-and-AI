@@ -1,9 +1,15 @@
 
 
 NDefines.NMilitary.SUPPLYLIMIT_BASE_MULTIPLIER = 8.0
-NDefines.NMilitary.BANNER_REINFORCE_SPEED = -0.25
-NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.15	
-NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	-0.10
+
+NDefines.NMilitary.BANNER_DISCIPLINE_BONUS = 0.05	
+NDefines.NMilitary.BANNER_MANPOWER_USAGE = 0.25	
+NDefines.NMilitary.BANNER_REINFORCE_SPEED = 0
+NDefines.NMilitary.BANNER_MAINTENANCE_COST = 0.75	
+NDefines.NMilitary.BANNER_AGE_MULTIPLIER =	0.50	
+NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.10	
+NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0
+
 NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in percent for leader to gain a trait after combat (modified by tradition gained).
 --NDefines.NMilitary.COMBAT_DICE_SIDE = 6 
 --NDefines.NMilitary.LEADER_MAX_PIPS = 5	--Max general/admiral pips (per skill).
@@ -27,7 +33,7 @@ NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
 
 
 
-NDefines.NAI.MAX_CAV_PERCENTAGE = 50
+NDefines.NAI.MAX_CAV_PERCENTAGE = 70
 NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.15	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
 NDefines.NAI.ARMY_BUDGET_FRACTION = 0.7
 NDefines.NAI.ARTILLERY_FRACTION = 0.25
@@ -72,6 +78,8 @@ NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_BASE_FACTOR = 40 -- AI scoring fo
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_NOT_ADJACENT_FACTOR = 0.5 -- AI scoring for fabricating claims if the province is not adjacent
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_HRE_FACTOR = 0.75 -- AI scoring for fabricating claims if both parts are HRE
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_HRE_EMPEROR_FACTOR = 0.5 -- AI scoring for fabricating claims if province is HRE and they are emperor (does not stack with the above penalty)
+NDefines.NAI.WANT_TRIBUTARY_LOST_MANDATE = 8 --How important it is for Celestial Emperor to make tributaries out of neighbors.
+
 
 --NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 3
 NDefines.NAI.DEBASE_THRESHOLD = -5000 -- AI will not debase if it has more gold than this.
@@ -88,7 +96,7 @@ NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 5 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.03 --AI will try to defend provinces under threat worth more than this percentage of total development
 
-NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1.0	--Army <-> province distance impact on province evaluation
+NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 0.1	--Army <-> province distance impact on province evaluation
 NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	8.0	--Border <-> province distance impact on province evaluation
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
 --NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10 --Influence on assimilation interest from number of provinces left to conquer

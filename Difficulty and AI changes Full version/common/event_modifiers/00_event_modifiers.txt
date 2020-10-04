@@ -1160,7 +1160,7 @@ navigator_boost = {
 }
 
 grand_captain_boost = {
-	land_morale = 0.20
+	land_morale = 0.15
 }
 
 army_organiser_boost = {

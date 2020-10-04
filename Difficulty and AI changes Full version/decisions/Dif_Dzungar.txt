@@ -20,7 +20,13 @@ country_decisions = {
 			}
 			NOT = { tag = MNG }
 			NOT = { tag = QNG }
-			primary_culture = oirats
+			OR = {
+				primary_culture = oirats
+				AND = {
+					primary_culture = mongol
+					mission_completed = mongols_unite_the_mongols
+				}
+			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -67,11 +73,11 @@ country_decisions = {
 			set_country_flag = formed_dzungar_flag
 			if = {
 				limit = { 
-					NOT = { has_reform = dzungar_khanate }
+					NOT = { has_reform = nomad_empire  }
 					is_revolutionary = no
 				}
 				change_government_to_monarchy = yes
-				add_government_reform = dzungar_khanate
+				add_government_reform = nomad_empire 
 			}
 		}
 		ai_will_do = {

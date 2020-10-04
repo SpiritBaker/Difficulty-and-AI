@@ -555,13 +555,14 @@ horde_ideas = {
 	
 	life_of_steppe_warrior = {
 		#land_attrition = -0.20 (effect taken in OIR_ideas)
+		#leader_land_manuever = 1
 	}
 	traditions_of_the_great_khan = {
 		cavalry_power = 0.20
 	}
 	horse_supplies = {
 		cavalry_cost = -0.1
-		land_maintenance_modifier = -0.05
+		#land_maintenance_modifier = -0.05
 	}
 	steppe_leaders = {
 		leader_land_shock = 1

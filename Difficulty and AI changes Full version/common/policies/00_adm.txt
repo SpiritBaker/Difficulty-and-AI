@@ -67,7 +67,7 @@ the_court_of_wards_and_liveries = {
 			factor = 5
 			OR = {
 				has_reform = khanate_monarchy
-				has_reform = dzungar_khanate
+				has_reform = nomad_empire 
 				is_nomad = yes
 			}
 		}

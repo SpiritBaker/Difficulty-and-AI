@@ -160,22 +160,45 @@ feudalism = {
 			scale = yes
 			force_potential = yes	# Hide the this modifier when potential is false
 			potential = {
-				owner = { has_estate = estate_nobles }
+				owner = { 
+					OR = {
+						has_estate = estate_nobles 
+						has_estate = nomadic_aristocracy
+					}
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = FEUDALISM_AND_NOBLES
-				any_neighbor_province = {
-					feudalism = 100
+				OR = {
+					any_neighbor_province = {
+						feudalism = 100
+					}
+					is_capital = yes
 				}
 				owner = {
-					has_estate = estate_nobles
-					estate_loyalty = {
-						estate = estate_nobles
-						loyalty = 40
-					}
-					estate_territory = {
-						estate = estate_nobles
-						territory = 30
+					OR = {
+						AND = {
+							has_estate = estate_nobles
+							estate_loyalty = {
+								estate = estate_nobles
+								loyalty = 40
+							}
+							estate_territory = {
+								estate = estate_nobles
+								territory = 15
+							}
+						}
+						AND = {
+							has_estate = nomadic_aristocracy
+							estate_loyalty = {
+								estate = nomadic_aristocracy
+								loyalty = 40
+							}
+							estate_territory = {
+								estate = nomadic_aristocracy
+								territory = 15
+							}
+						}
 					}
 				}
 			}

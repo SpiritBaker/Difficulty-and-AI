@@ -45,7 +45,7 @@ nomadic_aristocracy = {
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = cossacks_reform }
 		OR = {
-			has_reform = dzungar_khanate
+			has_reform = nomad_empire
 			has_reform = khanate_monarchy
 			is_nomad = yes
 		}
@@ -74,15 +74,22 @@ nomadic_aristocracy = {
 	# Influence modifiers
 	base_influence = 10
 	influence_modifier = {
-		desc = EST_STEPPE_PROVINCES
+		desc = OLD_MONGOLIAN_CAPITAL
 		trigger = {
-			any_owned_province = {
-				has_terrain = steppe
-			}
-			num_of_cities = 10
+			owns_or_non_sovereign_subject_of = 2190
 		}
-		influence = 10
+	
+		influence = 5
 	}
+	influence_modifier = {
+		desc = OLD_MONGOLIAN_CULTURAL_CENTER
+		trigger = {
+			owns_or_non_sovereign_subject_of = 2116
+		}
+	
+		influence = 5
+	}
+
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
@@ -108,6 +115,7 @@ nomadic_aristocracy = {
 	privileges = {
 		estate_nomadic_aristocracy_primacy
 		estate_nomadic_aristocracy_guaranteed_leadgership
+		estate_nomadic_aristocracy_unrestricted_looting 
 		estate_nomadic_aristocracy_confirm_noble_right
 	}
 

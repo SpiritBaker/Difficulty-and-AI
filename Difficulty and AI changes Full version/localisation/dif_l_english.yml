@@ -104,6 +104,8 @@
  religious_fervor:0 "Religious Fervor"
  dzungar_gunsmith_manufactory:0 "Dzungar Gunsmith Manufactory"
  last_nomad_empire_m:0 "Last Nomad Empire"
+ smith_tribes:0 "Shor Smiths"
+ desc_smith_tribes:0 "Major source of Iron and Iron craftsmanship for waring Nomadic clans in the region."
 
  #Mission
  mongols_unity_through_faith_title:0 "Unity Through Faith"
@@ -128,6 +130,12 @@
  develop_local_source_of_iron_desc:0 ""
  gunsmith_manufactory_title:0 "Dzungar Gunsmiths"
  gunsmith_manufactory_desc:0 ""
+ weakening_of_timurid_dynasty_title:0 "Death of Shah Rukh"
+ weakening_of_timurid_dynasty_desc:0 ""
+ claim_rulership_over_samarkand_title:0 "Claim Samarkand"
+ claim_rulership_over_samarkand_desc:0 ""
+ uzb_invade_herat_title:0 "Invade Herat"
+ uzb_invade_herat_desc:0 ""
 
  #Eevents
  dif_buddhist_missions.1.t:0 "Syncretic Beliefs"
@@ -140,7 +148,7 @@
 
  #Estets
  nomadic_aristocracy:0 "Noyans"
- nomadic_aristocracy_desc:0 "This estate represents Nomadic Aristocracy, serving under teh Khan as commanders and administrators."
+ nomadic_aristocracy_desc:0 "This estate represents Nomadic Aristocracy, serving under the Khan as commanders and administrators."
  nomadic_aristocracy_influence_modifier:0 "Noyans Influence"
  nomadic_aristocracy_loyalty_modifier:1 "Noyans Loyalty Equilibrium"
  estate_nomadic_aristocracy_guaranteed_leadgership:0 "Noble Military Leadership"
@@ -165,3 +173,11 @@
 
  #Tooltips
  root_is_most_powerful_manchuria_tribe:0 "The Most Powerful Manchu Tribe"
+ ming_crisis_active_for_20_years_tooltip:0 "Ming Crisis active for 25"
+
+ #Dif_Formables
+ dzungar_nation_title:0 "Form Dzungaria"
+ dzungar_nation_desc:0 ""
+
+ #Disasters
+ chinese_peasant_war:0 "Chinese Peasant War"
