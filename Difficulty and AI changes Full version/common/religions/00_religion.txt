@@ -1208,6 +1208,7 @@ eastern = {
 		country = {
 			tolerance_heretic = 2
 			advisor_cost = -0.1
+			yearly_karma_decay = 0.005
 		}
 		country_as_secondary = {
 			development_cost = -0.1
@@ -1239,6 +1240,7 @@ eastern = {
 		country = {
 			tolerance_heretic = 1
 			land_morale = 0.05
+			yearly_karma_decay = 0.005
 		}
 		country_as_secondary = {
 			horde_unity = 1
@@ -1270,6 +1272,7 @@ eastern = {
 		country = {
 			tolerance_heretic = 2
 			idea_cost = -0.05
+			yearly_karma_decay = 0.005
 		}
 		country_as_secondary = {
 			global_tax_modifier = 0.1
