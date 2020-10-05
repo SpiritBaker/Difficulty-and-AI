@@ -147,6 +147,7 @@
  HUNTAIJI:0 "Huntaiji"
 
  #Estets
+ EST_NOT_TRUE_NOMAD:0 "Not a True Nomad: §Y$VAL$%§!"
  nomadic_aristocracy:0 "Noyans"
  nomadic_aristocracy_desc:0 "This estate represents Nomadic Aristocracy, serving under the Khan as commanders and administrators."
  nomadic_aristocracy_influence_modifier:0 "Noyans Influence"

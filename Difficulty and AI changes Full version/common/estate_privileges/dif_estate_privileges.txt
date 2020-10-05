@@ -88,8 +88,8 @@ estate_nomadic_aristocracy_unrestricted_looting = {
 	influence = 0.05
 	loyalty = 0.05
 	penalties = {
-		stability_cost_modifier = 0.15
-		years_of_nationalism = 5
+		stability_cost_modifier = 0.10
+		years_of_nationalism = 2
 	}
 	benefits = {
 		available_province_loot = 0.5

@@ -1117,6 +1117,8 @@ quash_noble_power_reform = {
 		nobles_influence_modifier = -0.1
 		maratha_exclusive_influence_modifier = -0.1
 		rajput_exclusive_influence_modifier = -0.1
+		
+		nomadic_aristocracy_influence_modifier = -0.1
 	}
 	ai = {
 		factor = 1
@@ -1458,6 +1460,9 @@ of_noble_bearing_reform = {
 		nobles_loyalty_modifier = 0.05
 		maratha_exclusive_loyalty_modifier = 0.05
 		rajput_exclusive_loyalty_modifier = 0.05
+
+		nomadic_aristocracy_loyalty_modifier = 0.05
+		nomadic_aristocracy_influence_modifier = 0.1
 	}
 	ai = {
 		factor = 1
@@ -1502,6 +1507,9 @@ meritocratic_focus_reform = {
 		burghers_influence_modifier = 0.1
 		burghers_loyalty_modifier = 0.05
 		vaisyas_non_muslim_influence_modifier = 0.1
+
+		sedentary_subdjects_loyalty_modifier = 0.05
+		sedentary_subdjects_influence_modifier = 0.1
 	}
 	ai = {
 		factor = 1

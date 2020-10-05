@@ -2175,7 +2175,7 @@ MCH_ideas = {
 		amount_of_banners = 0.25
 	}
 	the_manchu_alphabet = {
-		global_institution_spread = 0.05
+		global_institution_spread = 0.15
 		stability_cost_modifier = -0.1
 	}
 	the_later_jin = {

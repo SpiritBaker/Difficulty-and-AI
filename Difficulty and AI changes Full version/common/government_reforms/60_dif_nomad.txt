@@ -86,6 +86,8 @@ nomadic_privileges_reform = {
 	modifiers = {
 		global_manpower_modifier = 0.15
 		army_tradition = 0.25
+
+		nomadic_tribes_influence_modifier = 0.1 
 	}
 	ai = {
 		factor = 5

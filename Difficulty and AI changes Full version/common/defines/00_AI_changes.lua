@@ -128,6 +128,7 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasi
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
 NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 0.9	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
 NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
+NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 10
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5
@@ -192,6 +193,8 @@ NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 300	                    -- Minimu
 
 NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3650 -- 10 years
 --NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 0.5
+
+
 
 
 

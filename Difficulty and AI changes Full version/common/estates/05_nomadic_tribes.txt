@@ -110,7 +110,13 @@ estate_nomadic_tribes = {
 		}
 		influence = 5
 	}
-
+	influence_modifier = {
+		desc = EST_NOT_TRUE_NOMAD
+		trigger = {
+			is_nomad = no
+		}
+		influence = -10
+	}
 	influence_from_dev_modifier = 1
 
 	privileges = {

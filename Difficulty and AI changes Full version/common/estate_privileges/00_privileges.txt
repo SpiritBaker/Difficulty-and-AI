@@ -2300,6 +2300,7 @@ estate_nomadic_tribes_share_of_the_spoils = {
 	icon = privilege_supply_arms
 	max_absolutism = -5
 	loyalty = 0.05
+	influence = 0.05
 	penalties = {
 		available_province_loot = -0.25
 	}
@@ -3485,6 +3486,7 @@ estate_vaisyas_patronage_of_the_arts = {
 
 estate_nomadic_tribes_primacy_to_the_bannermen = {
 	icon = privilege_royal_authority
+	loyalty = 0.05
 	max_absolutism = -10
 	influence = 0.1
 	is_valid = {

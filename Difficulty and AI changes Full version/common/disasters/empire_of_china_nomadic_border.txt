@@ -5,7 +5,7 @@ empire_of_china_nomadic_border = {
 	}
 
 	can_start = {
-		#has_any_disaster = no
+		has_any_disaster = no
 		any_neighbor_country = {
 			OR = {
 				has_reform = steppe_horde
@@ -22,7 +22,7 @@ empire_of_china_nomadic_border = {
 	
 	can_stop = { 
 		OR = {
-			#has_any_disaster = yes
+			has_any_disaster = yes
 			NOT = {
 				any_neighbor_country = {
 					OR = {
