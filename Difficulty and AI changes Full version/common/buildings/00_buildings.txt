@@ -50,7 +50,7 @@ marketplace = {
 	}
 	
 	ai_will_do = {
-		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
 			factor = 0
 			NOT = { province_has_center_of_trade_of_level = 1 }
@@ -133,10 +133,6 @@ marketplace = {
 				}
 			}
 		}
-		#modifier = {
-		#	factor = 0.33
-		#	FROM = { num_of_loans = 1 }
-		#}
 	}
 }
 
@@ -152,7 +148,7 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -163,7 +159,7 @@ workshop = {
 			NOT = { base_production = 3 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			NOT = { base_production = 4 }
 			OR = {
 				trade_goods = grain
@@ -286,11 +282,11 @@ temple = {
 	}
 	
 	ai_will_do = {
-		factor = 10
+		factor = 15
 		modifier = {
-			factor = 0
+			factor = 0.1
 			NOT = { base_tax = 4 }
-			NOT = { trade_goods = gold }
+			#NOT = { trade_goods = gold }
 		}
 		modifier = {
 			factor = 0.5
@@ -331,6 +327,7 @@ temple = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -347,7 +344,7 @@ barracks = {
 	}
 	
 	ai_will_do = {
-		factor = 8
+		factor = 15
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -446,7 +443,7 @@ shipyard = {
 	}
 
 	ai_will_do = {
-		factor = 0.3
+		factor = 0.5
 		modifier = {
 			factor = 1.2
 			NOT = { has_owner_accepted_culture = yes }
@@ -546,6 +543,12 @@ fort_15th = {
 		modifier = {
 			factor = 25
 			is_capital = yes
+			FROM = { num_of_cities = 2 }
+			OR = {
+				owner = { government = monarchy }
+				owner = { government = republic }
+				owner = { government = theocracy }
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -557,8 +560,12 @@ fort_15th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.5
-			owner = { government = tribal }
+			factor = 0.1
+			OR = {
+				owner = { government = tribal }
+				owner = { government = native }
+				FROM = { NOT = { num_of_cities = 2 } }
+			}
 		}
 		modifier = {
 			factor = 0
@@ -612,10 +619,6 @@ fort_15th = {
 				has_province_modifier = tropical
 			}
 		}
-		modifier = {
-			factor = 2
-			province_id = 365
-		}
 	} 
 } 
 
@@ -634,7 +637,7 @@ coastal_defence = {
 	}
 
 	ai_will_do = {
-		factor = 2.5
+		factor = 3
 		modifier = {
 			factor = 0
 			NOT = {
@@ -682,7 +685,7 @@ courthouse = {
 	}
 	
 	ai_will_do = {
-		factor = 2
+		factor = 5
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -795,7 +798,7 @@ dock = {
 	}
 	
 	ai_will_do = {
-		factor = 0.8
+		factor = 1
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -861,7 +864,6 @@ dock = {
 				}
 			}
 		}
-
 	}
 }
 
@@ -876,7 +878,7 @@ regimental_camp = {
 	}
 	
 	ai_will_do = {
-		factor = 0.55
+		factor = 0.8
 		modifier = {
 			factor = 0.8
 			has_port = yes
@@ -950,6 +952,12 @@ fort_16th = {
 		modifier = {
 			factor = 25
 			is_capital = yes
+			FROM = { num_of_cities = 2 }
+			OR = {
+				owner = { government = monarchy }
+				owner = { government = republic }
+				owner = { government = theocracy }
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -961,8 +969,12 @@ fort_16th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.5
-			owner = { government = tribal }
+			factor = 0.1
+			OR = {
+				owner = { government = tribal }
+				owner = { government = native }
+				FROM = { NOT = { num_of_cities = 2 } }
+			}
 		}
 		modifier = {
 			factor = 0
@@ -989,16 +1001,7 @@ fort_16th = {
 			}
 			NOT = { is_capital = yes }
 		}
-		modifier = {
-			factor = 5
-			any_neighbor_province = { owner = { is_rival = FROM } }
-			has_building = fort_15th
-		}
-		modifier = {
-			factor = 2.5
-			any_neighbor_province = { NOT = { owned_by = FROM } }
-			has_building = fort_15th
-		}
+
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -1045,7 +1048,7 @@ naval_battery = {
 	}
 
 	ai_will_do = {
-		factor = 2.5
+		factor = 3
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1104,11 +1107,11 @@ cathedral = {
 	}
 	
 	ai_will_do = {
-		factor = 10
+		factor = 15
 		modifier = {
-			factor = 0
+			factor = 0.1
 			NOT = { base_tax = 4 }
-			NOT = { trade_goods = gold }
+			#NOT = { trade_goods = gold }
 		}
 		modifier = {
 			factor = 0.5
@@ -1136,7 +1139,6 @@ cathedral = {
 		modifier = {
 			factor = 0
 			NOT = { num_free_building_slots = 2 }
-			NOT = { has_building = temple }
 			NOT = { trade_goods = gold }
 			NOT = {
 				OR = {
@@ -1150,6 +1152,7 @@ cathedral = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -1167,7 +1170,7 @@ university = {
 	}
 	
 	ai_will_do = {
-		factor = 320 	# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
+		factor = 420 	# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
 		modifier = {
 			factor = 1.2
 			development = 20
@@ -1271,7 +1274,7 @@ trade_depot = {
 	}
 	
 	ai_will_do = {
-		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
 			factor = 0
 			NOT = { province_has_center_of_trade_of_level = 1 }
@@ -1376,7 +1379,7 @@ grand_shipyard = {
 	}
 	
 	ai_will_do = {
-		factor = 0.3
+		factor = 0.5
 		modifier = {
 			factor = 1.2
 			NOT = { has_owner_accepted_culture = yes }
@@ -1572,6 +1575,12 @@ fort_17th = {
 		modifier = {
 			factor = 25
 			is_capital = yes
+			FROM = { num_of_cities = 2 }
+			OR = {
+				owner = { government = monarchy }
+				owner = { government = republic }
+				owner = { government = theocracy }
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -1583,8 +1592,12 @@ fort_17th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.5
-			owner = { government = tribal }
+			factor = 0.1
+			OR = {
+				owner = { government = tribal }
+				owner = { government = native }
+				FROM = { NOT = { num_of_cities = 2 } }
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1611,22 +1624,7 @@ fort_17th = {
 			}
 			NOT = { is_capital = yes }
 		}
-		modifier = {
-			factor = 5
-			any_neighbor_province = { owner = { is_rival = FROM } }
-			OR = {
-				has_building = fort_15th
-				has_building = fort_16th
-			}
-		}
-		modifier = {
-			factor = 2.5
-			any_neighbor_province = { NOT = { owned_by = FROM } }
-			OR = {
-				has_building = fort_15th
-				has_building = fort_16th
-			}
-		}
+
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -1670,7 +1668,7 @@ stock_exchange = {
 	}
 	
 	ai_will_do = {
-		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
 			factor = 0
 			NOT = { province_has_center_of_trade_of_level = 1 }
@@ -1775,7 +1773,7 @@ counting_house = {
 	allow_in_gold_provinces = no
 	
 	ai_will_do = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -1786,7 +1784,7 @@ counting_house = {
 			NOT = { base_production = 3 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			NOT = { base_production = 4 }
 			OR = {
 				trade_goods = grain
@@ -1799,7 +1797,7 @@ counting_house = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3
 			OR = { 
 				has_building = mills
 				has_building = farm_estate
@@ -1812,7 +1810,7 @@ counting_house = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			OR = {
 				trade_goods = paper
 				trade_goods = gems
@@ -1838,7 +1836,7 @@ counting_house = {
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 4
 			trade_goods = coal
 		}
 		modifier = {
@@ -1866,7 +1864,6 @@ counting_house = {
 			factor = 0.1
 			NOT = { num_free_building_slots = 2 }
 			#NOT = { trade_goods = gold }
-			NOT = { has_building = workshop }
 			NOT = {
 				OR = {
 					has_building = wharf 
@@ -1884,7 +1881,7 @@ counting_house = {
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { tolerance_to_this = 0 }
+				NOT = { tolerance_to_this = 0 }
 		}
 	}
 }
@@ -1903,7 +1900,7 @@ town_hall = {
 	}
 	
 	ai_will_do = {
-		factor = 2
+		factor = 5
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -2014,7 +2011,7 @@ drydock = {
 	}	
 	
 	ai_will_do = {
-		factor = 0.8
+		factor = 1
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -2096,7 +2093,7 @@ conscription_center = {
 	}
 	
 	ai_will_do = {
-		factor = 0.55
+		factor = 0.8
 		modifier = {
 			factor = 0.8
 			has_port = yes
@@ -2171,6 +2168,12 @@ fort_18th = {
 		modifier = {
 			factor = 25
 			is_capital = yes
+			FROM = { num_of_cities = 2 }
+			OR = {
+				owner = { government = monarchy }
+				owner = { government = republic }
+				owner = { government = theocracy }
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -2182,8 +2185,12 @@ fort_18th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.5
-			owner = { government = tribal }
+			factor = 0.1
+			OR = {
+				owner = { government = tribal }
+				owner = { government = native }
+				FROM = { NOT = { num_of_cities = 2 } }
+			}
 		}
 		modifier = {
 			factor = 0
@@ -2210,24 +2217,7 @@ fort_18th = {
 			}
 			NOT = { is_capital = yes }
 		}
-		modifier = {
-			factor = 5
-			any_neighbor_province = { owner = { is_rival = FROM } }
-			OR = {
-				has_building = fort_15th
-				has_building = fort_16th
-				has_building = fort_17th
-			}
-		}
-		modifier = {
-			factor = 2.5
-			any_neighbor_province = { NOT = { owned_by = FROM } }
-			OR = {
-				has_building = fort_15th
-				has_building = fort_16th
-				has_building = fort_17th
-			}
-		}
+
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -2287,7 +2277,7 @@ wharf = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
@@ -2351,7 +2341,7 @@ weapons = {
 	onmap = yes	
 	
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 2
 			OR = {
@@ -2396,7 +2386,7 @@ textile = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 0.8
 			NOT = { development = 3 }
@@ -2453,7 +2443,7 @@ plantations = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 2
 			OR = {
@@ -2499,7 +2489,7 @@ tradecompany = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 0.75
 			trade_goods = incense
@@ -2545,9 +2535,7 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 2
-
-
+		factor = 4
 		modifier = { 
 			factor = 0.4
 			NOT = { base_production = 3 }
@@ -2619,7 +2607,7 @@ mills = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 5
+		factor = 7.5
 		modifier = {
 			factor = 0.8
 			NOT = { base_production = 3 }
@@ -2680,6 +2668,8 @@ furnace = {
 		}
 	}
 }
+
+##########################
 
 ramparts = {
 	cost = 500
@@ -2789,6 +2779,8 @@ ramparts = {
 	}
 }
 
+##########################
+
 soldier_households = {
 	manufactory = {
 		all
@@ -2815,7 +2807,7 @@ soldier_households = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 10
+		factor = 20
 		modifier = {
 			factor = 0
 			NOT = {
@@ -2888,6 +2880,8 @@ soldier_households = {
 	}
 }
 
+##########################
+
 impressment_offices = {
 	manufactory = {
 		all
@@ -2916,7 +2910,7 @@ impressment_offices = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 2
 		modifier = {
 			factor = 0.1
 			NOT = {
@@ -2962,6 +2956,7 @@ impressment_offices = {
 	}
 }
 
+##########################
 
 state_house = {
 	cost = 500

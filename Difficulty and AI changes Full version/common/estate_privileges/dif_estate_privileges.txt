@@ -228,9 +228,9 @@ sedentary_subdjects_patronage_of_the_arts = {
 
 sedentary_subdjects_increased_tribute = {
 	icon = privilege_demand_more_troops
-	land_share = 5
+	#land_share = 5
 	max_absolutism = -5
-	loyalty = -0.05
+	loyalty = -0.1
 	influence = 0.05
 	is_valid = {
 		any_owned_province = {

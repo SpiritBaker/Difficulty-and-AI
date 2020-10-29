@@ -157,7 +157,7 @@
  estate_nomadic_aristocracy_confirm_noble_right:0 "Confirm Noble Rights"
  estate_nomadic_aristocracy_confirm_noble_right_desc:0 ""
  estate_nomadic_aristocracy_primacy:0 "Primacy of the Noyans"
- sedentary_subdjects:0 "Sedentary Subdjects"
+ sedentary_subdjects:0 "Sedentary Subjects"
  sedentary_subdjects_desc:0 "This estate represents City States and Farming communities that are nominally ruled by our Khan."
  sedentary_subdjects_influence_modifier:0 "Sedentary Influence"
  sedentary_subdjects_loyalty_modifier:1 "Sedentary Loyalty Equilibrium"
