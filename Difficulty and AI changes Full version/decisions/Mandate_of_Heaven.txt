@@ -1,0 +1,55 @@
+country_decisions = {
+	take_mandate_of_heaven = {
+		major = yes
+		
+		potential = {
+			is_emperor_of_china = no
+			any_owned_province = {
+				superregion = china_superregion
+			}
+			OR = {
+				technology_group = chinese
+				technology_group = nomad_group
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816  # Beijing
+				province_id = 1821	# Nanjing
+				province_id = 667	# Canton
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_emperor_of_china = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { imperial_mandate = 10 }
+			OR = {
+				owns_core_province = 1816	# Beijing
+				owns_core_province = 1821	# Nanjing
+				owns_core_province = 667	# Canton
+			}
+			custom_trigger_tooltip = {
+				tooltip = control_over_china_desc # 20
+				num_of_owned_provinces_with = {
+					value = 25 #107 
+					
+					superregion = china_superregion
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			set_emperor_of_china = ROOT
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+	}
+}

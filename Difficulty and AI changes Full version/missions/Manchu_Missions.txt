@@ -227,7 +227,7 @@ manchu_missions_1_b = {
 			country_event = { id = mch_missions.3 }
 		}
 	}
-	mch_devastate_china = {
+	mch_devastate_china = { # might need a rework
 		icon = mission_steppe_warriors
 		required_missions = { mch_green_standard_army }
 		completed_by = 1644.4.22
@@ -253,7 +253,7 @@ manchu_missions_1_b = {
 							region = south_china_region
 							region = xinan_region
 						}
-						development = 25
+						development = 20
 					}
 				}
 				custom_trigger_tooltip = {
@@ -266,8 +266,8 @@ manchu_missions_1_b = {
 							region = xinan_region
 						}
 						controlled_by = ROOT
-						development = 25
-						devastation = 20
+						development = 20
+						devastation = 10
 					}
 				}
 			}
@@ -280,7 +280,7 @@ manchu_missions_1_b = {
 							region = xinan_region
 						}
 						owned_by = ROOT
-						development = 25
+						development = 20
 					}
 				}
 			}			

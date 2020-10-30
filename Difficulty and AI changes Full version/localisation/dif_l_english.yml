@@ -182,3 +182,8 @@
 
  #Disasters
  chinese_peasant_war:0 "Chinese Peasant War"
+
+ #Decisions
+ take_mandate_of_heaven_title:0 "Take Mandate of Heaven"
+ take_mandate_of_heaven_desc:0 ""
+ control_over_china_desc:0 "Own at least 25 provinces in China"
