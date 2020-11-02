@@ -111,14 +111,6 @@ country_event = {
 			limit = { is_core = ROOT }
 			anti_tax_rebels = 3 
 		}
-		random_owned_province = { 
-			limit = { is_core = ROOT }
-			anti_tax_rebels = 3 
-		}
-		random_owned_province = { 
-			limit = { is_core = ROOT }
-			anti_tax_rebels = 3 
-		}
 		capital_scope = { 
 			anti_tax_rebels = 2
 		}
@@ -297,10 +289,6 @@ country_event = {
 	option = {
 		name = "EVTOPTA3025"			# Crush the rebels
 		ai_chance = { factor = 55 }
-		random_owned_province = {
-			limit = { is_core = ROOT }
-			anti_tax_rebels = 3
-		}
 		random_owned_province = {
 			limit = { is_core = ROOT }
 			anti_tax_rebels = 3

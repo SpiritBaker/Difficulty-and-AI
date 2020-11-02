@@ -35,9 +35,6 @@
  MODEVTOPTA5089:0 "Accept petition."
  MODEVTOPTB5089:0 "Deny petition."
 
- #Estates
- estate_aristocracy:0 "Aristocracy"
-
  #Trigger
  incompetent_monarch:0 "Incompetent Monarch"
 
@@ -106,6 +103,9 @@
  last_nomad_empire_m:0 "Last Nomad Empire"
  smith_tribes:0 "Shor Smiths"
  desc_smith_tribes:0 "Major source of Iron and Iron craftsmanship for waring Nomadic clans in the region."
+ tributary_tech_cost_bonus:0 "Tribute to Celestial Empire"
+ shun_rebellion:0 "Shun Rebellion"
+ great_unifier:0 "Great Unifier"
 
  #Mission
  mongols_unity_through_faith_title:0 "Unity Through Faith"
@@ -136,17 +136,22 @@
  claim_rulership_over_samarkand_desc:0 ""
  uzb_invade_herat_title:0 "Invade Herat"
  uzb_invade_herat_desc:0 ""
+ struggle_among_jurchens_mission_title:0 "Struggle Among Jurchens"
+ struggle_among_jurchens_mission_desc:0 ""
 
  #Eevents
  dif_buddhist_missions.1.t:0 "Syncretic Beliefs"
  dif_buddhist_missions.1.d:0 "Recent converts displaying growing militancy, taking Buddhist teachings too far."
  dif_buddhist_missions.1.a:0 "Side with them. This Word must be Reborn."
  dif_buddhist_missions.1.b:0 "They need guidance."
+ ming_crisis.10.t:0 "Li Zicheng's Rebellion"
+ ming_crisis.10.d:0 "Major Revolt in Northern China"
 
  #Title
  HUNTAIJI:0 "Huntaiji"
 
  #Estets
+ estate_aristocracy:0 "Aristocracy"
  EST_NOT_TRUE_NOMAD:0 "Not a True Nomad: §Y$VAL$%§!"
  nomadic_aristocracy:0 "Noyans"
  nomadic_aristocracy_desc:0 "This estate represents Nomadic Aristocracy, serving under the Khan as commanders and administrators."
@@ -171,10 +176,16 @@
  sedentary_subdjects_trade_rights_desc:0 ""
  sedentary_subjects_guarantee_religious_freedom:0 "Guarantee Religious Freedom"
  sedentary_subjects_guarantee_religious_freedom_desc:0 ""
+ nomad_becomes_monarchy_reform:0 "Nomad Monarchy"
+ nomad_becomes_monarchy_reform_desc:0 ""
+ nomad_reform_dif:0 "Keep Nomadic Traditions"
+ nomad_reform_dif_desc:0 ""
 
  #Tooltips
  root_is_most_powerful_manchuria_tribe:0 "The Most Powerful Manchu Tribe"
  ming_crisis_active_for_20_years_tooltip:0 "Ming Crisis active for 25"
+ strongest_power_in_china:0 "Strongest Power in China"
+ OVERLORD_INFLUENCE:0 "Influenced by Celestial Empire"
 
  #Dif_Formables
  dzungar_nation_title:0 "Form Dzungaria"
@@ -186,4 +197,17 @@
  #Decisions
  take_mandate_of_heaven_title:0 "Take Mandate of Heaven"
  take_mandate_of_heaven_desc:0 ""
- control_over_china_desc:0 "Own at least 25 provinces in China"
+ 
+ #Gov reforms
+ khanate_monarchy:0 "Khanate"
+ nomadic_privileges_reform:0 "Tribal Council"
+ militarization_of_nomad_society:0 "Military Administration"
+ absulute_power_of_huntaiji:0 "Direct Control of Huntaiji"
+
+ #Rebels
+ shun_rebels_name:0 "Shun Rebels"
+ shun_rebels_desc:0 "Shun Rebels"
+ shun_rebels_army:0 "Shun Rebels"
+
+ #Opinion modifiers
+ opposed_unification:0 "Opposed Unification"

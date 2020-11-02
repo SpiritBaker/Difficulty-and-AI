@@ -190,6 +190,15 @@ manchu_missions_1 = {
 					}
 				}
 			}
+			hidden_effect = {
+				north_china_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
 		}
 	}
 }
@@ -315,7 +324,10 @@ manchu_missions_1_b = {
 			owned_by = MNG
 		}
 		trigger ={
-			NOT = { exists = MNG }
+			OR = {
+				MNG = { NOT = { num_of_cities = 6 } }
+				NOT = { exists = MNG }
+			}
 		}
 		effect = {
 			if = {

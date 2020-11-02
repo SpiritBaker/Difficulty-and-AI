@@ -163,6 +163,10 @@ martial_society_reform = {
 				army_size = root
 			}
 		}
+		modifier = {
+			factor = 3
+			is_nomad = yes
+		}
 	}
 }
 
@@ -170,7 +174,7 @@ civil_society_reform = {
 	allow_normal_conversion = yes
 	icon = "tribal_civil_society"
 	modifiers = {
-		global_tax_modifier = 0.05
+		global_tax_modifier = 0.1
 		yearly_corruption = -0.05
 	}
 	ai = {
@@ -213,6 +217,13 @@ lip_service_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		land_maintenance_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 2
+			is_nomad = yes
+		}
 	}
 }
 

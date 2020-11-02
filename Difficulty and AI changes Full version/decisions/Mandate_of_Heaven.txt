@@ -10,6 +10,7 @@ country_decisions = {
 			OR = {
 				technology_group = chinese
 				technology_group = nomad_group
+				culture_group = altaic
 			}
 		}
 		provinces_to_highlight = {
@@ -33,13 +34,25 @@ country_decisions = {
 				owns_core_province = 1821	# Nanjing
 				owns_core_province = 667	# Canton
 			}
+			num_of_owned_provinces_with = {
+				superregion = china_superregion
+				value = 20 #107 
+			}
 			custom_trigger_tooltip = {
-				tooltip = control_over_china_desc # 20
-				num_of_owned_provinces_with = {
-					value = 25 #107 
-					
+				tooltip = strongest_power_in_china
+				any_owned_province = {
 					superregion = china_superregion
-					owned_by = ROOT
+				}
+				NOT = {
+					any_country = {
+						any_owned_province = {
+							superregion = china_superregion
+						}
+						OR = {
+							army_size = root
+							total_own_and_non_tributary_subject_development = root
+						}
+					}
 				}
 			}
 		}

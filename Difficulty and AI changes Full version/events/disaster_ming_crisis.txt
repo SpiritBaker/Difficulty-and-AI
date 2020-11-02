@@ -46,28 +46,6 @@ country_event = {
 					unrest = 5
 				}
 			}
-			random_owned_province = {
-				limit = {
-					is_state = yes
-					superregion = china_superregion
-				}
-				spawn_rebels = {
-					type = anti_tax_rebels 
-					size = 3
-					unrest = 5
-				}
-			}
-			random_owned_province = { 
-				limit = {
-					is_state = yes
-					superregion = china_superregion
-				}
-				spawn_rebels = {
-					type = anti_tax_rebels 
-					size = 3
-					unrest = 5
-				}
-			}
 			random_owned_province = { 
 				limit = {
 					is_state = yes
@@ -152,9 +130,11 @@ country_event = {
 				area = west_gansu_area
 				area = shaanxi_area
 				area = shanxi_area
-				area = hebei_area
-				area = south_hebei_area
-				area = liaoning_area
+				area = north_henan_area
+				area = henan_area
+				#area = hebei_area
+				#area = south_hebei_area
+				#area = liaoning_area
 			}
 		}
 	}
@@ -172,9 +152,11 @@ country_event = {
 						area = west_gansu_area
 						area = shaanxi_area
 						area = shanxi_area
-						area = hebei_area
-						area = south_hebei_area
-						area = liaoning_area
+						area = north_henan_area
+						area = henan_area
+						#area = hebei_area
+						#area = south_hebei_area
+						#area = liaoning_area
 					}
 					OR = {
 						controlled_by = REB
@@ -206,6 +188,20 @@ country_event = {
 						cavalry = 0.3
 						artillery = 0.1
 					}
+					PREV = {
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+					}
 				}
 				change_government = monarchy
 				add_government_reform = autocracy_reform
@@ -218,13 +214,14 @@ country_event = {
 		name = ming_crisis.3.a
 		add_stability = -2
 		add_mandate = -10
+		add_yearly_manpower = -2.5
 		CSH = {
 			define_ruler = {
 				name = "Zicheng"
 				dynasty = "Li"
 			}
-			add_yearly_manpower = 15
-			add_years_of_income = 15
+			add_manpower = 30
+			add_treasury = 500
 		}
 		if = {
 			limit = {
@@ -581,7 +578,7 @@ country_event = {
 	option = {
 		name = ming_crisis.6.a
 		ai_chance = { factor = 1 }
-		#add_mandate = 5
+		add_mandate = 1
 		event_target:ming_disaster_rebel_province = {
 			spawn_rebels = {
 				type = anti_tax_rebels 
@@ -591,7 +588,7 @@ country_event = {
 	}
 	option = {
 		name = ming_crisis.6.b
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 1 }
 		#add_mandate = -5
 		event_target:ming_disaster_rebel_province = {
 			area = {
@@ -785,6 +782,111 @@ country_event = {
 					is_rival = from
 				}
 			}
+		}
+	}
+}
+
+country_event = { # Start of Shun rebelion 
+	id = ming_crisis.10
+	title = "ming_crisis.10.t"
+	desc = "ming_crisis.10.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		NOT = { exists = CSH }
+		tag = MNG
+		OR = {
+			AND = {
+				NOT = { manpower_percentage = 0.15 }
+				NOT = { imperial_mandate = 20 }
+			} 
+			AND = {
+				NOT = { imperial_mandate = 20 }
+				is_at_war = yes
+				NOT = { manpower_percentage = 0.25 }
+				has_wartaxes = yes
+			}
+		}
+		any_owned_province = {
+			OR = {
+				area = gansu_area
+				area = west_gansu_area
+				area = shaanxi_area
+				area = shanxi_area
+				area = north_henan_area
+				area = henan_area
+				#area = hebei_area
+				#area = south_hebei_area
+				#area = liaoning_area
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = { 
+				limit = {
+					#is_state = yes
+					area = shaanxi_area
+					#superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = shun_rebels
+					size = 3
+					leader = "Li Zicheng"
+					leader_dynasty = "Shun"
+					win = yes
+					#unrest = 5
+				}
+			}
+			random_owned_province = {
+				limit = {
+					#is_state = yes
+					area = shaanxi_area
+					#superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = shun_rebels
+					size = 3
+					unrest = 5
+				}
+			}
+			random_owned_province = { 
+				limit = {
+					#is_state = yes
+					area = gansu_area
+					#superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = shun_rebels
+					size = 3
+					unrest = 5
+				}
+			}
+			random_owned_province = { 
+				limit = {
+					#is_state = yes
+					area = shanxi_area
+					#superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = shun_rebels
+					size = 3
+					unrest = 5
+				}
+			}
+		}
+	}
+	
+	option = {
+		add_country_modifier = {
+			name = "shun_rebellion"
+			duration = 5475
+			#desc = "END_OF_REVOLUTION"
 		}
 	}
 }

@@ -2084,12 +2084,12 @@ drydock = {
 ##########################
 
 conscription_center = {
-	cost = 400
+	cost = 350
 	time = 12
 	make_obsolete = regimental_camp
 
 	modifier = {
-		land_forcelimit = 2
+		land_forcelimit = 1.5
 	}
 	
 	ai_will_do = {
