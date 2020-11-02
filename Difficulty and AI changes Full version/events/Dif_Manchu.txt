@@ -69,31 +69,29 @@ country_event = {
 	#fire_only_once = yes
 	
 	trigger = {
-		any_country = {
-			NOT = { has_country_flag = country_manchu_unification }
-			OR = {
-				primary_culture = manchu
-				primary_culture = manchu_new
-			}
-			OR = {
-				MJZ = {
-					has_ruler_modifier = great_unifier
-					OR = {
-						alliance_with = ROOT
-						ROOT = {
-							is_subject_of = MJZ
-							is_subject_of_type = tributary_state
-						}
+		NOT = { has_country_flag = country_manchu_unification }
+		OR = {
+			primary_culture = manchu
+			primary_culture = manchu_new
+		}		
+		OR = {
+			MJZ = {
+				has_ruler_modifier = great_unifier
+				OR = {
+					alliance_with = ROOT
+					ROOT = {
+						is_subject_of = MJZ
+						is_subject_of_type = tributary_state
 					}
 				}
-				MCH = {
-					has_ruler_modifier = great_unifier
-					OR = {
-						alliance_with = ROOT
-						ROOT = {
-							is_subject_of = MCH
-							is_subject_of_type = tributary_state
-						}
+			}
+			MCH = {
+				has_ruler_modifier = great_unifier
+				OR = {
+					alliance_with = ROOT
+					ROOT = {
+						is_subject_of = MCH
+						is_subject_of_type = tributary_state
 					}
 				}
 			}
