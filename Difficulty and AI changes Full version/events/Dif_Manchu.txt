@@ -1,0 +1,240 @@
+#Nurhaci
+country_event = { 
+	id = dif_manchu.1
+	title = "dif_manchu.EVTNAME1"
+	desc = "dif_manchu.EVTDESC1"
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MJZ
+		is_year = 1500
+		NOT = { is_year = 1800 }
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			is_year = 1550
+		}
+		modifier = {
+			factor = 0.2
+			is_year = 1575
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			hidden_effect = {
+				kill_heir = yes
+			}
+		}
+	}
+
+	option = {
+		name = "flavor_mch.EVTOPTA8"
+		define_ruler = {
+			name = "Nurhaci"
+			dynasty = "Aisin Gioro"
+			adm = 6
+			dip = 4
+			mil = 6
+			fixed = yes
+			age = 25
+		}
+		hidden_effect = {
+			set_ruler_flag = nurhaci_ruler_flag
+			add_ruler_personality = strict_personality
+			add_ruler_modifier = {
+				name = "great_unifier"
+				duration = -1
+				#desc = 
+			}
+		}
+	}
+}
+
+# Unification
+country_event = {
+	id = dif_manchu.2
+	title = "dif_manchu.EVTNAME2"
+	desc = "dif_manchu.EVTDESC2"
+	picture = LAND_MILITARY_eventPicture
+	
+	#fire_only_once = yes
+	
+	trigger = {
+		any_country = {
+			NOT = { has_country_flag = country_manchu_unification }
+			OR = {
+				primary_culture = manchu
+				primary_culture = manchu_new
+			}
+			OR = {
+				MJZ = {
+					has_ruler_modifier = great_unifier
+					OR = {
+						alliance_with = ROOT
+						ROOT = {
+							is_subject_of = MJZ
+							is_subject_of_type = tributary_state
+						}
+					}
+				}
+				MCH = {
+					has_ruler_modifier = great_unifier
+					OR = {
+						alliance_with = ROOT
+						ROOT = {
+							is_subject_of = MCH
+							is_subject_of_type = tributary_state
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		set_country_flag = country_manchu_unification
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "dif_manchu.EVTOPTA2"
+		if = {
+			limit = { 
+				MJZ = {
+					has_ruler_modifier = great_unifier
+				}
+			}
+			MJZ = { vassalize = ROOT }
+		}
+		else_if = {
+			limit = { 
+				MCH = {
+					has_ruler_modifier = great_unifier
+				}
+			}
+			MCH = { vassalize = ROOT }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				is_subject_of_type = tributary_state
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					army_strength = {
+						who = MJZ
+						value = 0.8
+					}
+					army_strength = {
+						who = MCH
+						value = 0.8
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "dif_manchu.EVTOPTB2"
+		if = {
+			limit = {
+				MJZ = {
+					has_ruler_modifier = great_unifier
+					alliance_with = ROOT
+				}
+			}
+			MJZ = {
+				add_opinion = {
+					who = FROM
+					modifier = opposed_unification
+				}
+			}
+			add_historical_rival = MJZ
+		}
+		else_if = {
+			limit = {
+				MCH = {
+					has_ruler_modifier = great_unifier
+					alliance_with = ROOT
+				}
+			}
+			MCH = {
+				add_opinion = {
+					who = FROM
+					modifier = opposed_unification
+				}
+			}
+			add_historical_rival = MCH
+		}
+		else_if = {
+			limit = {
+				MJZ = {
+					has_ruler_modifier = great_unifier
+					ROOT = {
+						is_subject_of = MJZ
+						is_subject_of_type = tributary_state
+					}
+				}
+			}
+			MJZ = {
+				add_opinion = {
+					who = FROM
+					modifier = opposed_unification
+				}
+			}
+			grant_independence = yes
+		}
+		else_if = {
+			limit = {
+				MCH = {
+					has_ruler_modifier = great_unifier
+					ROOT = {
+						is_subject_of = MCH
+						is_subject_of_type = tributary_state
+					}
+				}
+			}
+			MCH = {
+				add_opinion = {
+					who = FROM
+					modifier = opposed_unification
+				}
+			}
+			grant_independence = yes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_subject_of_type = tributary_state
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					army_strength = {
+						who = MJZ
+						value = 0.8
+					}
+					army_strength = {
+						who = MCH
+						value = 0.8
+					}
+				}
+			}
+		}
+	}
+}
