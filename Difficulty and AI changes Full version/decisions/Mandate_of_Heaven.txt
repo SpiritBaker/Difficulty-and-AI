@@ -57,6 +57,28 @@ country_decisions = {
 			}
 		}
 		effect = {
+			set_government_rank = 3
+			if = {
+				limit = {
+					has_reform = steppe_horde
+				}
+				change_government = monarchy
+				#set_legacy_government = despotic_monarchy
+			}
+			if = {
+				limit = {
+					technology_group = nomad_group
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
+			if = {
+				limit = {
+					NOT = { religion = confucianism }
+				}
+				change_religion = confucianism
+			}
+	
 			set_emperor_of_china = ROOT
 			add_prestige = 25
 		}

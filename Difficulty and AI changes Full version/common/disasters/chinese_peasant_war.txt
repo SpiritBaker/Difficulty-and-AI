@@ -92,6 +92,7 @@ chinese_peasant_war = {
 	modifier = {
 		reduced_liberty_desire = -10
 		imperial_mandate = -0.05
+		tax_income = -0.20
 		global_unrest = 5
 		stability_cost_modifier = 0.50
 	}	

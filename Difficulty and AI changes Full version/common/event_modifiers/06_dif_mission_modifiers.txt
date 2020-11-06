@@ -26,3 +26,9 @@ great_unifier = {
 	land_forcelimit_modifier = 0.25
 	land_maintenance_modifier = -0.10
 }
+manchu_conqest_of_china_ai = {
+	land_forcelimit_modifier = 0.25
+	land_maintenance_modifier = -0.10
+	land_morale = 0.1
+	province_warscore_cost = 0.25
+}

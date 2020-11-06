@@ -1,9 +1,0 @@
-government = tribal
-add_government_reform = steppe_horde
-technology_group = nomad_group
-religion = tengri_pagan_reformed
-primary_culture = kirgiz
-capital = 480 #Chimgi-Tura
-historical_rival = SIB
-#religious_school = hanafi_school
-

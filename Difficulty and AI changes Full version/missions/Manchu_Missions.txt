@@ -74,10 +74,10 @@ manchu_missions_1 = {
 				726 = {
 					owner = {
 						war_with = ROOT
-						OR = {
-							is_emperor_of_china = no
-							NOT = { imperial_mandate = 50 }
-						}
+						#OR = {
+						#	is_emperor_of_china = no
+						#	NOT = { imperial_mandate = 50 }
+						#}
 					}
 				}
 			}

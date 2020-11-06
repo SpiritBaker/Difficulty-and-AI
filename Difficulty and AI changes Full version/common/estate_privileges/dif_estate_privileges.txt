@@ -293,7 +293,7 @@ sedentary_subdjects_increased_tribute = {
 	}
 	cooldown_years = 10
 	on_cooldown_expires = {
-		country_event = { id = nomad_increased_tribute_privileges.2 }
+		country_event = { id = dif_nomad_events.2 }
 	}
 	ai_will_do = {
 		factor = 0

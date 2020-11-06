@@ -1,0 +1,415 @@
+
+namespace = shun_rebelion
+# Li Zicheng's rebellion and the Shun dynasty
+country_event = {
+	id = shun_rebelion.1
+	title = "ming_crisis.3.t"
+	desc = "ming_crisis.3.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		has_any_disaster = yes
+		NOT = { exists = CSH }
+		num_of_owned_provinces_with = {
+			value = 10
+			region = north_china_region
+			controlled_by = REB
+		}
+		any_owned_province = {
+			OR = {
+				area = gansu_area
+				area = west_gansu_area
+				area = shaanxi_area
+				area = shanxi_area
+				area = north_henan_area
+				area = henan_area
+				#area = hebei_area
+				#area = south_hebei_area
+				#area = liaoning_area
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						controlled_by = REB
+						controlled_by = ROOT
+					}
+					OR = {
+						area = gansu_area
+						area = west_gansu_area
+						area = shaanxi_area
+						area = shanxi_area
+						area = north_henan_area
+						area = henan_area
+						#area = hebei_area
+						#area = south_hebei_area
+						#area = liaoning_area
+					}
+					OR = {
+						controlled_by = REB
+						controlled_by = ROOT
+					}
+				}
+				add_core = CSH
+				clear_rebels = yes
+			}
+			every_owned_province = { #get rid of bordergore from random Mongolian provinces
+				limit = {
+					region = mongolia_region
+					any_neighbor_province = {
+						is_core = CSH
+					}
+					OR = {
+						controlled_by = REB
+						controlled_by = ROOT
+					}
+				}
+				add_core = CSH
+				clear_rebels = yes
+			}
+			release = CSH
+			CSH = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.6
+						cavalry = 0.3
+						artillery = 0.1
+					}
+					PREV = {
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+					}
+				}
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				adopt_reform_progress = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = shun_rebelion.1.a
+		add_stability = -2
+		add_mandate = -10
+		add_yearly_manpower = -2.5
+		CSH = {
+			define_ruler = {
+				name = "Zicheng"
+				dynasty = "Li"
+			}
+			add_manpower = 30
+			add_treasury = 500
+		}
+		if = {
+			limit = {
+				is_emperor_of_china = yes
+			}
+			CSH = {
+				declare_war_with_cb = {
+					who = root
+					casus_belli = cb_take_mandate
+				}
+			}
+		}
+		else = {
+			CSH = {
+				declare_war = root
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			CSH = {
+				if = {
+					limit = {
+						any_neighbor_country = {
+							has_reform = steppe_horde
+							total_own_and_non_tributary_subject_development = 300
+							is_subject = no
+							#NOT = { truce_with = ROOT }
+							NOT = { alliance_with = ROOT }
+							#NOT = { is_subject_of = ROOT }
+						}
+					}
+					random_neighbor_country = {
+						limit = {
+							has_reform = steppe_horde
+							total_own_and_non_tributary_subject_development = 300
+							is_subject = no
+							#NOT = { truce_with = ROOT }
+							NOT = { alliance_with = ROOT }
+							#NOT = { is_subject_of = ROOT }
+						}
+						country_event = { id = ming_crisis.9 days = 1 }
+					}
+				}
+				else_if = {
+					limit = {
+						any_neighbor_country = {
+							tag = MCH
+							is_free_or_tributary_trigger = yes
+							NOT = { alliance_with = root }
+						}
+					}
+					MCH = {
+						country_event = { id = ming_crisis.9 days = 1 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Manchu/Nomadic Intervention on Shun
+country_event = {
+	id = shun_rebelion.2
+	title = "ming_crisis.9.t"
+	desc = "ming_crisis.9.d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = shun_rebelion.2.A
+
+		liaoning_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+
+		hebei_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+
+		south_hebei_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+
+		shanxi_area = {
+			limit = {
+				owned_by = CSH
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_claim = ROOT
+		}
+		
+		if = {
+			limit = {
+				has_casus_belli = {
+					type = cb_horde_vs_civ
+					target = CSH
+				}
+			}
+			declare_war_with_cb = {
+				who = CSH
+				casus_belli = cb_horde_vs_civ
+			}
+		}
+		else = {
+			declare_war_with_cb = {
+				who = CSH
+				casus_belli = cb_conquest
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.67
+				has_opinion = {
+					who = from
+					value = 10
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					who = from
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_opinion = {
+					who = from
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 0.5
+				is_at_war = yes
+				NOT = { war_score = 0 }
+			}
+			modifier = {
+				factor = 0
+				is_at_war = yes
+				NOT = { war_score = -15 }
+			}
+			modifier = {
+				factor = 0.2
+				is_in_large_debt = yes
+			}
+		}
+	}
+
+	option = {
+		name = shun_rebelion.2.A
+
+		add_prestige = -20
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				OR = {
+					ai_attitude = {
+						who = from
+						attitude = attitude_hostile
+					}
+					is_rival = from
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Start of Shun rebelion 
+	id = shun_rebelion.3
+	title = "ming_crisis.10.t"
+	desc = "ming_crisis.10.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		has_any_disaster = yes
+		NOT = { exists = CSH }
+		tag = MNG
+		OR = {
+			AND = {
+				NOT = { manpower_percentage = 0.15 }
+				NOT = { imperial_mandate = 20 }
+			} 
+			AND = {
+				NOT = { imperial_mandate = 20 }
+				is_at_war = yes
+				NOT = { manpower_percentage = 0.25 }
+				has_wartaxes = yes
+			}
+		}
+		any_owned_province = {
+			OR = {
+				area = gansu_area
+				area = west_gansu_area
+				area = shaanxi_area
+				area = shanxi_area
+				area = north_henan_area
+				area = henan_area
+				#area = hebei_area
+				#area = south_hebei_area
+				#area = liaoning_area
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = { 
+				limit = {
+					#is_state = yes
+					province_id = 700
+					#superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = shun_rebels
+					size = 3
+					leader = "Li Zicheng"
+					leader_dynasty = "Shun"
+					win = yes
+					#unrest = 5
+				}
+			}
+			random_owned_province = {
+				limit = {
+					#is_state = yes
+					area = shaanxi_area
+					#superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = shun_rebels
+					size = 3
+					unrest = 5
+				}
+			}
+			random_owned_province = { 
+				limit = {
+					#is_state = yes
+					area = gansu_area
+					#superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = shun_rebels
+					size = 3
+					unrest = 5
+				}
+			}
+			random_owned_province = { 
+				limit = {
+					#is_state = yes
+					area = shanxi_area
+					#superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = shun_rebels
+					size = 3
+					unrest = 5
+				}
+			}
+		}
+	}
+	
+	option = {
+		add_country_modifier = {
+			name = "shun_rebellion"
+			duration = 5475
+			#desc = "END_OF_REVOLUTION"
+		}
+	}
+}

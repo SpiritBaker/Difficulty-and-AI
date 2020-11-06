@@ -1,8 +1,9 @@
+namespace = dif_nomad_events
 # Nomad conversion 
 country_event = {
-	id = dif_buddhist_missions.1
-	title = "dif_buddhist_missions.1.t"
-	desc = "dif_buddhist_missions.1.d"
+	id = dif_nomad_events.1
+	title = "dif_nomad_events.1.t"
+	desc = "dif_nomad_events.1.d"
 	picture = RELIGION_eventPicture
 	
 	fire_only_once = yes
@@ -10,7 +11,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Militant converts
-		name = "dif_buddhist_missions.1.a"
+		name = "dif_nomad_events.1.a"
 		add_country_modifier = {
 			name = "religious_fervor"
 			duration = 18250
@@ -18,7 +19,7 @@ country_event = {
 		add_karma = -5
 	}
 	option = { # Invite Tibetan monks
-		name = "dif_buddhist_missions.1.b"
+		name = "dif_nomad_events.1.b"
 		add_country_modifier = {
 			name = "tibetan_missionaries"
 			duration = 18250
@@ -28,9 +29,9 @@ country_event = {
 }
 
 country_event = {
-	id = nomad_increased_tribute_privileges.2
-	title = nomad_increased_tribute_privileges.2.t
-	desc = nomad_increased_tribute_privileges.2.d
+	id = dif_nomad_events.2
+	title = dif_nomad_events.2.t
+	desc = dif_nomad_events.2.d
 	picture = TRADEGOODS_eventPicture
 
 	is_triggered_only = yes
@@ -45,7 +46,7 @@ country_event = {
 	}
 	
 	option = {
-		name = nomad_increased_tribute_privileges.2.a
+		name = dif_nomad_events.2.a
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
@@ -65,7 +66,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nomad_increased_tribute_privileges.2.b #no
+		name = dif_nomad_events.2.b #no
 		#custom_tooltip = increased_tribute_privileges.1.b.tooltip 
 	}
 }

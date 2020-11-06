@@ -1168,7 +1168,9 @@ cb_chinese_unification = {
 		}
 		is_neighbor_of = FROM
 	}
-
+	attacker_disabled_po = {
+		po_become_tributary_state
+	}
 	war_goal = superiority_chinese_unification
 }
 

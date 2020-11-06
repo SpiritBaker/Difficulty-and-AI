@@ -140,10 +140,10 @@
  struggle_among_jurchens_mission_desc:0 ""
 
  #Eevents
- dif_buddhist_missions.1.t:0 "Syncretic Beliefs"
- dif_buddhist_missions.1.d:0 "Recent converts displaying growing militancy, taking Buddhist teachings too far."
- dif_buddhist_missions.1.a:0 "Side with them. This Word must be Reborn."
- dif_buddhist_missions.1.b:0 "They need guidance."
+ dif_nomad_events.1.t:0 "Syncretic Beliefs"
+ dif_nomad_events.1.d:0 "Recent converts displaying growing militancy, taking Buddhist teachings too far."
+ dif_nomad_events.1.a:0 "Side with them. This Word must be Reborn."
+ dif_nomad_events.1.b:0 "They need guidance."
  ming_crisis.10.t:0 "Li Zicheng's Rebellion"
  ming_crisis.10.d:0 "Major Revolt in Northern China"
 
@@ -195,7 +195,7 @@
  chinese_peasant_war:0 "Chinese Peasant War"
 
  #Decisions
- take_mandate_of_heaven_title:0 "Take Mandate of Heaven"
+ take_mandate_of_heaven_title:0 "Claim Mandate of Heaven"
  take_mandate_of_heaven_desc:0 ""
  
  #Gov reforms

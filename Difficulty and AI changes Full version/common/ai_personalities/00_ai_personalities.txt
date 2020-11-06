@@ -321,7 +321,7 @@ ai_militarist = {
 			government = native
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			OR = {
 				has_reform = khanate_monarchy
 				has_reform = nomad_empire
@@ -329,7 +329,7 @@ ai_militarist = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			OR = {
 				has_reform = daimyo
 				has_reform = indep_daimyo
@@ -365,7 +365,7 @@ ai_militarist = {
 			tag = KOR
 		}	
 		modifier = {
-			factor = 2.5
+			factor = 3
 			religion = nahuatl
 			is_religion_reformed = no
 		}

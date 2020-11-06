@@ -1,2 +1,2 @@
-KRG = "countries/Kyrgyz.txt"
-MGS = "countries/Moghulistan.txt"
+#KRG = "countries/Kyrgyz.txt"
+#MGS = "countries/Moghulistan.txt"

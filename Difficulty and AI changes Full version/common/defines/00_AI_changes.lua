@@ -28,6 +28,15 @@ NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
 NDefines.NEconomy.CARAVAN_POWER_MAX = 15
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 
+
+--NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
+--NDefines.NDiplomacy.TRIBUTE_BASE_ADM = 0.02  --Tributary State: Part Adm tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_BASE_DIP = 0.02	  --Tributary State: Part Dip tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	10.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
+--NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
+
+
 NDefines.NAI.SUBSIDY_YEARS = 20
 NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
 
@@ -93,11 +102,11 @@ NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.8
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 
 --Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
-NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 5 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
+NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 10 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.05 --AI will try to defend provinces under threat worth more than this percentage of total development
 
-NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 0.25	--Army <-> province distance impact on province evaluation
-NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	20.0	--Border <-> province distance impact on province evaluation
+NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	--Army <-> province distance impact on province evaluation / divides total score by this amount
+NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	25.0	--Border <-> province distance impact on province evaluation / actual distance penalty
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
 --NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10 --Influence on assimilation interest from number of provinces left to conquer
 --NDefines.NAI.PURSUE_DISTANCE = 100
@@ -114,9 +123,10 @@ NDefines.NAI.PEACE_ALLY_WAR_DIRECTION_MULT = 0.5 -- Multiplies PEACE_WAR_DIRECTI
 
 NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 3.0 --Max AI desire for humiliating its enemy.
 NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 2.0
-NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 0.5	
-NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1
-NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.5	
+NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 1	
+NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1.25
+NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.5
+NDefines.NAI.PEACE_TERMS_REVOKE_CORES_BASE_MULT = 0.5	
 NDefines.NAI.PEACE_TERMS_ANNUL_TREATIES_BASE_MULT =	1	
 NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.2
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for releasing countries.
@@ -126,7 +136,7 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for
 NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 5.0 -- AI desire for a province is multiplied by this if it has a core on it
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
-NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 0.9	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
+NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 0.95	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
 NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
 NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 0
 NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 2.5  --Multiplies with strategic interest of making them our Tributary.
@@ -141,7 +151,7 @@ NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 
 NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 25.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
-NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 4				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
+NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 4.5				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2 -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
@@ -196,8 +206,6 @@ NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 300	                    -- Minimu
 
 NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3650 -- 10 years
 --NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 0.5
-
-
 
 
 

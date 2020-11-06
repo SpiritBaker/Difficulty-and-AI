@@ -125,8 +125,8 @@ ming_crisis = {
 	on_monthly = {
 		events = {
 			mch_missions.5 # Koxinga flees to Taiwan
-			ming_crisis.3 # Li Zicheng's Rebellion and the Shun Dynasty
-			ming_crisis.10 # begning of Shun Rebellion
+			#ming_crisis.3 # Li Zicheng's Rebellion and the Shun Dynasty
+			#ming_crisis.10 # begning of Shun Rebellion
 			ming_crisis.4 # Autonomy for Yunnan province
 			ming_crisis.5 # Losing Control in the South
 		}
