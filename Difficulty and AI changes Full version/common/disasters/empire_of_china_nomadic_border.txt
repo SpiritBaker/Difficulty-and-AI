@@ -131,6 +131,7 @@ empire_of_china_nomadic_border = {
 
 	modifier = {
 		imperial_mandate = -0.3
+		global_unrest = 5
 		reduced_liberty_desire = -25
 		land_morale = -0.10
 		discipline = -0.05
@@ -143,13 +144,16 @@ empire_of_china_nomadic_border = {
 	on_monthly = {
 		events = {
 			mch_missions.5 # Koxinga flees to Taiwan
-			#ming_crisis.3 # Li Zicheng's Rebellion and the Shun Dynasty
+			ming_crisis.3 # Li Zicheng's Rebellion and the Shun Dynasty
 			ming_crisis.4 # Autonomy for Yunnan province
 			ming_crisis.5 # Losing Control in the South
+			ming_crisis.10 # Start of Shun rebelion 
 		}
 		random_events = { 
-			#1000 = 0
-			# None
+			1000 = 0
+			100 = ming_crisis.11 # Obsolete forces
+			100 = ming_crisis.12 # Peasant protests
+			100 = ming_crisis.13 # National decentralisation
 		}
 	}
 

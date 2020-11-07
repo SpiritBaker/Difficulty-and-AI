@@ -331,7 +331,10 @@ country_event = { # Start of Shun rebelion
 				NOT = { imperial_mandate = 20 }
 				is_at_war = yes
 				NOT = { manpower_percentage = 0.25 }
-				has_wartaxes = yes
+				OR = {
+					has_wartaxes = yes
+					war_with = MCH
+				}
 			}
 		}
 		any_owned_province = {

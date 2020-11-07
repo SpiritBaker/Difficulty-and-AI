@@ -348,7 +348,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { mil_tech = MNG }
+				MNG = { MCH = {	NOT = { mil_tech = PREV } } }
 			}
 			add_mil_tech = 1
 		}

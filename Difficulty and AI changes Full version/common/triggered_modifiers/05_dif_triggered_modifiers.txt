@@ -1,16 +1,16 @@
-tributary_tech_cost_bonus = {
-	potential = {
-		is_subject_of_type = tributary_state
-		overlord = { is_emperor_of_china = yes }
-	}
-
-	trigger = {
-		overlord = {
-			is_emperor_of_china = yes
-			tech_difference = 1
-		}
-	}
-
-	technology_cost = -0.05
-	embracement_cost = -0.1
-}
+#tributary_tech_cost_bonus = {
+#	potential = {
+#		is_subject_of_type = tributary_state
+#		overlord = { is_emperor_of_china = yes }
+#	}
+#
+#	trigger = {
+#		overlord = {
+#			is_emperor_of_china = yes
+#			tech_difference = 1
+#		}
+#	}
+#
+#	technology_cost = -0.05
+#	embracement_cost = -0.1
+#}
