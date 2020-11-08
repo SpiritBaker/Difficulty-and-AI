@@ -7747,7 +7747,7 @@ fought_back_the_hungarians = {
 
 #China:
 uniter_of_the_manchus = {
-	horde_unity = 2
+	#horde_unity = 1
 	manpower_recovery_speed = 0.1
 	land_morale = 0.1
 }

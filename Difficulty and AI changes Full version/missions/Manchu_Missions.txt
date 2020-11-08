@@ -673,6 +673,7 @@ manchu_missions_2 = {
 				name = "uniter_of_the_manchus"
 				duration = -1
 			}
+			add_horde_unity = 10
 			if = {
 				limit = {
 					NOT = {
@@ -687,6 +688,12 @@ manchu_missions_2 = {
 					siege = 2
 				}
 				set_global_flag = dorgon_flag
+			}
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				
 			}
 			hebei_area = {
 				limit = {

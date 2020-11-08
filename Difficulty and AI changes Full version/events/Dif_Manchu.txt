@@ -60,7 +60,7 @@ country_event = {
 			dip = 4
 			mil = 6
 			fixed = yes
-			age = 25
+			age = 20
 		}
 		hidden_effect = {
 			set_ruler_flag = nurhaci_ruler_flag
@@ -334,7 +334,7 @@ country_event = {
 		name = "dif_manchu.EVTOPTA3"
 		declare_war_with_cb = {
 			who = MNG
-			casus_belli = cb_take_mandate
+			casus_belli = cb_border_war
 		}
 		add_country_modifier = {
 			name = "manchu_conqest_of_china_ai"

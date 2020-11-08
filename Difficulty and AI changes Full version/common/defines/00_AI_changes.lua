@@ -102,10 +102,10 @@ NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.8
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 
 --Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
-NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 15 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
+NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 10 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.05 --AI will try to defend provinces under threat worth more than this percentage of total development
 
-NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 0.5	--Army <-> province distance impact on province evaluation / divides total score by this amount
+NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	--Army <-> province distance impact on province evaluation / divides total score by this amount
 NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	25.0	--Border <-> province distance impact on province evaluation / actual distance penalty
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
 --NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10 --Influence on assimilation interest from number of provinces left to conquer
@@ -133,15 +133,16 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 0.35	--AI desire for war reparations through peace.
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 1 -- AI only wants war reparations if other country has at least this % of their income
 --NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.05  --AI desire for a province is multiplied by this if it is not on their conquest list.
-NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 5.0 -- AI desire for a province is multiplied by this if it has a core on it
+NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 15.0 -- AI desire for a province is multiplied by this if it has a core on it
+NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 10.0	--AI desire for a province is multiplied by this if it has a claim on it.
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
 NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 0.95	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
 NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
 NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 0
-NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 2.5  --Multiplies with strategic interest of making them our Tributary.
+NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 3  --Multiplies with strategic interest of making them our Tributary.
 
-NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 8	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
+NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 9	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5

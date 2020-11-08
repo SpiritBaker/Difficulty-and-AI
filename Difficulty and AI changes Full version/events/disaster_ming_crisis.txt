@@ -201,11 +201,15 @@ country_event = {
 						infantry = PREV
 						infantry = PREV
 						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
 					}
 				}
 				change_government = monarchy
 				add_government_reform = autocracy_reform
 				adopt_reform_progress = ROOT
+				north_china_region = { add_permanent_claim = CSH }
 			}
 		}
 	}
@@ -810,18 +814,9 @@ country_event = { # Start of Shun rebelion
 	trigger = {
 		NOT = { exists = CSH }
 		tag = MNG
-		OR = {
-			AND = {
-				NOT = { manpower_percentage = 0.15 }
-				NOT = { imperial_mandate = 20 }
-			} 
-			AND = {
-				NOT = { imperial_mandate = 20 }
-				is_at_war = yes
-				NOT = { manpower_percentage = 0.25 }
-				has_wartaxes = yes
-			}
-		}
+		NOT = { imperial_mandate = 20 }
+		is_at_war = yes
+		NOT = { manpower_percentage = 0.25 }
 		any_owned_province = {
 			OR = {
 				area = gansu_area
@@ -842,7 +837,7 @@ country_event = { # Start of Shun rebelion
 			random_owned_province = { 
 				limit = {
 					#is_state = yes
-					area = shaanxi_area
+					province_id = 700
 					#superregion = china_superregion
 				}
 				spawn_rebels = {

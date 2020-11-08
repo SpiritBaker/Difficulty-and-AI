@@ -131,7 +131,7 @@ empire_of_china_nomadic_border = {
 
 	modifier = {
 		imperial_mandate = -0.3
-		global_unrest = 5
+		global_unrest = 4
 		reduced_liberty_desire = -25
 		land_morale = -0.10
 		discipline = -0.05

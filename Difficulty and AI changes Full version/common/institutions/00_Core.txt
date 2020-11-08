@@ -272,9 +272,10 @@ feudalism = {
 				is_capital = yes
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 					overlord = { 
 						is_emperor_of_china = yes
-						has_institution = industrialization
+						has_institution = feudalism
 					}
 				}
 			}
@@ -556,9 +557,10 @@ renaissance = {
 				is_capital = yes
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 					overlord = { 
 						is_emperor_of_china = yes
-						has_institution = industrialization
+						has_institution = renaissance
 					}
 				}
 			}
@@ -846,9 +848,10 @@ new_world_i = {
 				is_capital = yes
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 					overlord = { 
 						is_emperor_of_china = yes
-						has_institution = industrialization
+						has_institution = new_world_i
 					}
 				}
 			}
@@ -1204,7 +1207,7 @@ printing_press = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.2
 			scale = yes
 			potential = {
 				owner = {
@@ -1216,9 +1219,10 @@ printing_press = {
 				is_capital = yes
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 					overlord = { 
 						is_emperor_of_china = yes
-						has_institution = industrialization
+						has_institution = printing_press
 					}
 				}
 			}
@@ -1533,7 +1537,7 @@ global_trade = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.15
 			scale = yes
 			potential = {
 				owner = {
@@ -1545,9 +1549,10 @@ global_trade = {
 				is_capital = yes
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 					overlord = { 
 						is_emperor_of_china = yes
-						has_institution = industrialization
+						has_institution = global_trade
 					}
 				}
 			}
@@ -2057,7 +2062,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.15
 			scale = yes
 			potential = {
 				owner = {
@@ -2069,9 +2074,10 @@ manufactories = {
 				is_capital = yes
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 					overlord = { 
 						is_emperor_of_china = yes
-						has_institution = industrialization
+						has_institution = manufactories
 					}
 				}
 			}
@@ -2460,7 +2466,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.1
 			scale = yes
 			potential = {
 				owner = {
@@ -2472,9 +2478,10 @@ enlightenment = {
 				is_capital = yes
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 					overlord = { 
 						is_emperor_of_china = yes
-						has_institution = industrialization
+						has_institution = enlightenment
 					}
 				}
 			}
@@ -3138,7 +3145,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.1
 			scale = yes
 			potential = {
 				owner = {
@@ -3150,6 +3157,7 @@ industrialization = {
 				is_capital = yes
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 					overlord = { 
 						is_emperor_of_china = yes
 						has_institution = industrialization

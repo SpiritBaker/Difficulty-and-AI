@@ -65,13 +65,13 @@ ai_capitalist = {
 			tag = PAP
 		}
 		modifier = {
-			factor = 1.5
-			tag = MNG
+			factor = 5
+			tag = KOR
 		}
 		modifier = {
 			factor = 1.5
-			tag = KOR
-		}		
+			tag = MNG
+		}	
 		modifier = {
 			factor = 1.5
 			tag = MAM

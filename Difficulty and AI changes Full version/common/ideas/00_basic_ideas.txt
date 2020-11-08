@@ -1538,10 +1538,15 @@ humanist_ideas = {
 			}
 		}
 		modifier = {
+			factor = 0.1
+			NOT = { adm_tech = 7 }
+			tag = MNG
+		}
+		modifier = {
 			factor = 1.5
 			religion = confucianism
 		}
-		modifier ={
+		modifier = {
 			factor = 1.5
 			OR = { 
 				technology_group = indian
