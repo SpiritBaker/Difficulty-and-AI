@@ -2154,12 +2154,12 @@ MJZ_ideas = {
 
 MCH_ideas = {
 	start = {
+		land_morale = 0.15
 		leader_land_shock = 1	
-		land_maintenance_modifier = -0.05
 	}
 	
 	bonus = {
-		land_morale = 0.15	
+		land_maintenance_modifier = -0.05
 	}
 	
 	trigger = {

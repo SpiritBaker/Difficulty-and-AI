@@ -2,6 +2,9 @@ empire_of_china_nomadic_border = {
 	potential = {
 		has_dlc = "Mandate of Heaven"
 		is_emperor_of_china = yes
+		culture_group = east_asian
+		NOT = { primary_culture = manchu }
+		NOT = { primary_culture = manchu_new }
 	}
 
 	can_start = {

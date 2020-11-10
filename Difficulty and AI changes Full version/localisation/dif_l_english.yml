@@ -47,6 +47,10 @@
  cb_nationalist_rev_desc:0 "They hold provinces of our culture group."
  dif_cb_khanate:0 "Tribal Conquest"
  dif_cb_khanate_desc:0 "We will force them to bend the knee to the Khan, or they shall perish."
+ cb_manchu_unification:0 "Manchu Unification"
+ cb_manchu_unification_desc:0 ""
+ MANCHU_UNIFICATION_WAR_NAME:0 "Manchu Unification War"	
+ ALL_MANCHU_PROVS:0 "Provinces in Manchuria Region"
 
  #Culture
  anatolian:0 "Anatolian"

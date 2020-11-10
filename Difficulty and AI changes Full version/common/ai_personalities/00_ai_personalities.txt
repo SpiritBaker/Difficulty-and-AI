@@ -79,6 +79,12 @@ ai_capitalist = {
 		modifier = {
 			factor = 1.5
 			tag = FRA
+		}	
+		modifier = {
+			factor = 2
+			tag = QNG
+			is_year = 1700
+			is_emperor_of_china = yes
 		}		
 		modifier = {
 			factor = 3

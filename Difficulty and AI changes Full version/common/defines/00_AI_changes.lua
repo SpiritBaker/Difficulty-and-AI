@@ -33,7 +33,7 @@ NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 --NDefines.NDiplomacy.TRIBUTE_BASE_ADM = 0.02  --Tributary State: Part Adm tribute multiplied by total development.
 --NDefines.NDiplomacy.TRIBUTE_BASE_DIP = 0.02	  --Tributary State: Part Dip tribute multiplied by total development.
 --NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
---NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	10.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
+NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
 --NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
 
 
@@ -133,8 +133,8 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 0.35	--AI desire for war reparations through peace.
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 1 -- AI only wants war reparations if other country has at least this % of their income
 --NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.05  --AI desire for a province is multiplied by this if it is not on their conquest list.
-NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 15.0 -- AI desire for a province is multiplied by this if it has a core on it
-NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 10.0	--AI desire for a province is multiplied by this if it has a claim on it.
+NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 25.0 -- AI desire for a province is multiplied by this if it has a core on it
+NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 15.0	--AI desire for a province is multiplied by this if it has a claim on it.
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
 NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 0.95	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
@@ -142,7 +142,7 @@ NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a pro
 NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 0
 NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 3  --Multiplies with strategic interest of making them our Tributary.
 
-NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 9	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
+NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 8	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5

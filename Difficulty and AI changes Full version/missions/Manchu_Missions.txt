@@ -142,6 +142,13 @@ manchu_missions_1 = {
 				name = "conquest_of_beijing"
 				duration = 7300
 			}
+			north_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	mch_mandate_of_heaven = {
@@ -190,14 +197,13 @@ manchu_missions_1 = {
 					}
 				}
 			}
-			hidden_effect = {
-				north_china_region = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_core = ROOT
+			north_china_region = {
+				limit = {
+					culture_group = east_asian
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
 				}
+				add_core = ROOT
 			}
 		}
 	}
@@ -344,6 +350,7 @@ manchu_missions_1_b = {
 			hidden_effect = {
 				china_superregion = {
 					limit = {
+						culture_group = east_asian
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
 					}

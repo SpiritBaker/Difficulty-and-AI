@@ -39,7 +39,7 @@ ZUN_ideas = {
 		land_attrition = -0.20
 	}
 	dzungar_lancers = { 
-		shock_damage = 0.15
+		shock_damage = 0.10
 	}
 }
 
@@ -107,7 +107,7 @@ SHY_ideas = {
 	}
 	horse_supplies = {
 		cavalry_cost = -0.1
-		land_maintenance_modifier = -0.05
+		leader_land_manuever = 1
 	}
 	tradition_of_conquest = {
 		years_of_nationalism = -5

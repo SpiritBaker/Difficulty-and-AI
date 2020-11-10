@@ -12,8 +12,34 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { exists = MCH }
+				MJZ = { num_of_cities = 6 }
 			}
 			tag = MJZ
+		}
+		else_if = {
+			limit = { 
+				NOT = { exists = MCH }
+				MJZ = { NOT = { num_of_cities = 6 } }
+			}
+			custom_trigger_tooltip = {
+				tooltip = root_is_most_powerful_manchuria_tribe
+				OR = {
+					primary_culture = manchu
+					primary_culture = manchu_new
+				}
+				NOT = {
+					any_country = {
+						OR = {
+							primary_culture = manchu
+							primary_culture = manchu_new
+						}
+						OR = {
+							army_size = root
+							total_own_and_non_tributary_subject_development = root
+						}
+					}
+				}
+			}
 		}
 		else = {
 			tag = MCH
@@ -25,6 +51,14 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 500
+		modifier = {
+			factor = 1.5
+			NOT = { is_year = 1525 }
+		}
+		modifier = {
+			factor = 0.5
+			exists = CSH
+		}
 		modifier = {
 			factor = 0.5
 			is_year = 1550
@@ -65,11 +99,17 @@ country_event = {
 		hidden_effect = {
 			set_ruler_flag = nurhaci_ruler_flag
 			add_ruler_personality = strict_personality
-			add_ruler_modifier = {
-				name = "great_unifier"
-				duration = -1
-				#desc = 
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_ruler_modifier = {
+					name = "great_unifier"
+					duration = -1
+					#desc = 
+				}
 			}
+		
 			set_ai_personality = {
 				personality = ai_militarist
 				locked = yes
@@ -92,26 +132,22 @@ country_event = {
 		OR = {
 			primary_culture = manchu
 			primary_culture = manchu_new
-		}		
+		}
+		has_ruler_modifier = great_unifier
 		OR = {
-			MJZ = {
-				has_ruler_modifier = great_unifier
+			any_ally = {
+				ai = yes
 				OR = {
-					alliance_with = ROOT
-					ROOT = {
-						is_subject_of = MJZ
-						is_subject_of_type = tributary_state
-					}
+					primary_culture = manchu
+					primary_culture = manchu_new
 				}
-			}
-			MCH = {
-				has_ruler_modifier = great_unifier
+			}		
+			any_subject_country = {
+				ai = yes
+				is_subject_of_type = tributary_state
 				OR = {
-					alliance_with = ROOT
-					ROOT = {
-						is_subject_of = MCH
-						is_subject_of_type = tributary_state
-					}
+					primary_culture = manchu
+					primary_culture = manchu_new
 				}
 			}
 		}
@@ -127,168 +163,60 @@ country_event = {
 
 	option = {
 		name = "dif_manchu.EVTOPTA2"
-		
 		if = {
-			limit = { 
-				MJZ = {
-					has_ruler_modifier = great_unifier
-				}
-				OR = {
-					MNG = {
-						has_any_disaster = yes
+			limit = {
+				any_subject_country = {
+					ai = yes
+					is_subject_of_type = tributary_state
+					OR = {
+						primary_culture = manchu
+						primary_culture = manchu_new
 					}
-					exists = CSH
 				}
 			}
-			every_owned_province = {
-				cede_province = MJZ
-				add_core = MJZ
-			}
-		}
-		else_if = {
-			limit = { 
-				MCH = {
-					has_ruler_modifier = great_unifier
-				}
-				OR = {
-					MNG = {
-						has_any_disaster = yes
+			random_subject_country = {
+				limit = {
+					ai = yes
+					is_subject_of_type = tributary_state
+					OR = {
+						primary_culture = manchu
+						primary_culture = manchu_new
 					}
-					exists = CSH
-				}
-			}
-			every_owned_province = {
-				cede_province = MCH
-				add_core = MCH
+				}	
+				ROOT = { vassalize = PREV }
 			}
 		}
 		else_if = {
-			limit = { 
-				MJZ = {
-					has_ruler_modifier = great_unifier
-				}
+			limit = {
+				any_ally = {
+					ai = yes
+					OR = {
+						primary_culture = manchu
+						primary_culture = manchu_new
+					}
+				}	
 			}
-			MJZ = { vassalize = ROOT }
-		}
-		else_if = {
-			limit = { 
-				MCH = {
-					has_ruler_modifier = great_unifier
-				}
+			random_ally = {
+				limit = {
+					ai = yes
+					OR = {
+						primary_culture = manchu
+						primary_culture = manchu_new
+					}
+				}	
+				ROOT = { vassalize = PREV }
 			}
-			MCH = { vassalize = ROOT }
 		}
 		ai_chance = {
 			factor = 10
-			modifier = {
-				factor = 2
-				is_subject_of_type = tributary_state
-			}
-			modifier = {
-				factor = 0.1
-				MNG = { has_any_disaster = no }
-				OR = {
-					army_strength = {
-						who = MJZ
-						value = 0.8
-					}
-					army_strength = {
-						who = MCH
-						value = 0.8
-					}
-				}
-			}
 		}
 	}
 
 	option = {
 		name = "dif_manchu.EVTOPTB2"
-		if = {
-			limit = {
-				MJZ = {
-					has_ruler_modifier = great_unifier
-					alliance_with = ROOT
-				}
-			}
-			MJZ = {
-				add_opinion = {
-					who = FROM
-					modifier = opposed_unification
-				}
-			}
-			add_historical_rival = MJZ
-		}
-		else_if = {
-			limit = {
-				MCH = {
-					has_ruler_modifier = great_unifier
-					alliance_with = ROOT
-				}
-			}
-			MCH = {
-				add_opinion = {
-					who = FROM
-					modifier = opposed_unification
-				}
-			}
-			add_historical_rival = MCH
-		}
-		else_if = {
-			limit = {
-				MJZ = {
-					has_ruler_modifier = great_unifier
-					ROOT = {
-						is_subject_of = MJZ
-						is_subject_of_type = tributary_state
-					}
-				}
-			}
-			MJZ = {
-				add_opinion = {
-					who = FROM
-					modifier = opposed_unification
-				}
-			}
-			grant_independence = yes
-		}
-		else_if = {
-			limit = {
-				MCH = {
-					has_ruler_modifier = great_unifier
-					ROOT = {
-						is_subject_of = MCH
-						is_subject_of_type = tributary_state
-					}
-				}
-			}
-			MCH = {
-				add_opinion = {
-					who = FROM
-					modifier = opposed_unification
-				}
-			}
-			grant_independence = yes
-		}
+		add_prestige = 15
 		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_subject_of_type = tributary_state
-			}
-			modifier = {
-				factor = 5
-				MNG = { has_any_disaster = no }
-				OR = {
-					army_strength = {
-						who = MJZ
-						value = 0.8
-					}
-					army_strength = {
-						who = MCH
-						value = 0.8
-					}
-				}
-			}
+			factor = 0
 		}
 	}
 }
@@ -303,38 +231,69 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		is_at_war = no
+		OR = {
+			is_at_war = no
+			war_with = MNG
+		}
 		exists = MNG
 		NOT = { vassal_of = MNG }
 		tag = MCH
 		is_bankrupt = no
-		total_development = 300
+		total_development = 250
 		ai = yes
 		OR = {
-			is_year = 1600
+			is_year = 1575
+			MNG = { has_any_disaster = yes }
 			has_ruler_flag = nurhaci_ruler_flag
 		}
 		NOT = { is_year = 1675 }
-		NOT = { war_with = MNG }
+		NOT = { truce_with = MNG }
+		NOT = { alliance_with = MNG }
 		any_owned_province = { 
 			any_neighbor_province = { 
 				owned_by = MNG 
-				NOT = {
+				OR = {
 					is_claim = ROOT
-				}
+					is_core = ROOT
+				}	
 			}
 		}
 	}
 	
+	immediate = {
+		add_casus_belli = {
+			target = MNG
+			type = cb_border_war
+			months = 24
+		}
+	}
+
 	mean_time_to_happen = {
 		months = 100
+		modifier = {
+			factor = 0.5
+			NOT = { imperial_mandate = 20 }
+		}
+		modifier = {
+			factor = 0.75
+			MNG = { has_any_disaster = yes }
+		}
+		modifier = {
+			factor = 0.75
+			exists = CSH
+		}
 	}
 	
 	option = {
 		name = "dif_manchu.EVTOPTA3"
-		declare_war_with_cb = {
-			who = MNG
-			casus_belli = cb_border_war
+		if = {
+			limit = {
+				is_at_war = no
+			}
+			declare_war_with_cb = {
+				who = MNG
+				casus_belli = cb_border_war
+			}
 		}
 		add_country_modifier = {
 			name = "manchu_conqest_of_china_ai"
@@ -351,6 +310,90 @@ country_event = {
 				MNG = { MCH = {	NOT = { mil_tech = PREV } } }
 			}
 			add_mil_tech = 1
+		}
+	}
+}
+
+country_event = {
+	id = dif_manchu.4
+	title = "dif_manchu.EVTNAME4"
+	desc = "dif_manchu.EVTDESC4"
+	picture = LAND_MILITARY_eventPicture
+	
+	#fire_only_once = yes
+	
+	trigger = {
+		culture_group = east_asian
+		ai = yes
+		is_bankrupt = no
+		NOT = { tag = MNG }
+		OR = {
+			any_ally = {
+				ai = yes
+				culture_group = east_asian
+			}
+			any_subject_country = { 
+				ai = yes
+				culture_group = east_asian
+				is_subject_of_type = tributary_state
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = strongest_power_in_china
+			any_owned_province = {
+				superregion = china_superregion
+			}
+			NOT = {
+				any_country = {
+					any_owned_province = {
+						superregion = china_superregion
+					}
+					OR = {
+						army_size = root
+						total_own_and_non_tributary_subject_development = root
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 25
+	}
+	
+	option = {
+		name = "dif_manchu.EVTOPTA4"
+		if = {
+			limit = {
+				any_subject_country = { 
+					ai = yes
+					culture_group = east_asian
+					is_subject_of_type = tributary_state
+				}
+			}
+			random_subject_country = {
+				limit = {
+					ai = yes
+					culture_group = east_asian
+					is_subject_of_type = tributary_state
+				}	
+				ROOT = { vassalize = PREV }
+			}
+		}
+		else_if = {
+			limit = { 
+				any_ally = {
+					ai = yes
+					culture_group = east_asian
+				}
+			}
+			random_ally = {
+				add_historical_rival = ROOT
+				add_opinion = {
+					who = ROOT
+					modifier = opposed_unification
+				}
+			}
 		}
 	}
 }
