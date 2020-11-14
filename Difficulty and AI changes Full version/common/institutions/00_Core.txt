@@ -160,22 +160,45 @@ feudalism = {
 			scale = yes
 			force_potential = yes	# Hide the this modifier when potential is false
 			potential = {
-				owner = { has_estate = estate_nobles }
+				owner = { 
+					#OR = {
+						has_estate = estate_nobles 
+						#has_estate = nomadic_aristocracy
+					#}
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = FEUDALISM_AND_NOBLES
-				any_neighbor_province = {
-					feudalism = 100
+				OR = {
+					any_neighbor_province = {
+						feudalism = 100
+					}
+					is_capital = yes
 				}
 				owner = {
-					has_estate = estate_nobles
-					estate_loyalty = {
-						estate = estate_nobles
-						loyalty = 40
-					}
-					estate_territory = {
-						estate = estate_nobles
-						territory = 30
+					OR = {
+						AND = {
+							has_estate = estate_nobles
+							estate_loyalty = {
+								estate = estate_nobles
+								loyalty = 40
+							}
+							estate_territory = {
+								estate = estate_nobles
+								territory = 15
+							}
+						}
+						#AND = {
+						#	has_estate = nomadic_aristocracy
+						#	estate_loyalty = {
+						#		estate = nomadic_aristocracy
+						#		loyalty = 40
+						#	}
+						#	estate_territory = {
+						#		estate = nomadic_aristocracy
+						#		territory = 15
+						#	}
+						#}
 					}
 				}
 			}
@@ -233,6 +256,27 @@ feudalism = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = feudalism
+				}
+			}
+		}
+		modifier = {
+			factor = 0.33
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = feudalism
+					}
 				}
 			}
 		}
@@ -497,6 +541,27 @@ renaissance = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = renaissance
+				}
+			}
+		}
+		modifier = {
+			factor = 0.33
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = renaissance
+					}
 				}
 			}
 		}
@@ -767,6 +832,27 @@ new_world_i = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = new_world_i
+				}
+			}
+		}
+		modifier = {
+			factor = 0.33
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = new_world_i
+					}
 				}
 			}
 		}
@@ -1120,6 +1206,27 @@ printing_press = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = printing_press
+					}
+				}
+			}
+		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -1426,6 +1533,27 @@ global_trade = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = global_trade
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = global_trade
+					}
 				}
 			}
 		}
@@ -1933,6 +2061,27 @@ manufactories = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = manufactories
+					}
+				}
+			}
+		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -2313,6 +2462,27 @@ enlightenment = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = enlightenment
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = enlightenment
+					}
 				}
 			}
 		}
@@ -2971,6 +3141,27 @@ industrialization = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = industrialization
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = industrialization
+					}
 				}
 			}
 		}
