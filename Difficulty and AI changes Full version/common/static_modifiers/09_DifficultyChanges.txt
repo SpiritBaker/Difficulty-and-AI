@@ -5,6 +5,7 @@ difficulty_hard_ai = {
     ae_impact = -0.10
 	all_power_cost = -0.05
 	global_unrest = -1
+	interest = -0.25
 }
 
 difficulty_very_hard_ai = {
@@ -16,6 +17,7 @@ difficulty_very_hard_ai = {
 	build_cost = -0.1
     ae_impact = -0.20
 	all_power_cost = -0.1	
+	interest = -0.5
 }
 
 ai_nation = {
