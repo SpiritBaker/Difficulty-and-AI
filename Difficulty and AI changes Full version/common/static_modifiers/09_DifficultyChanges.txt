@@ -1,8 +1,9 @@
 
 difficulty_hard_ai = {
 	manpower_recovery_speed = 0.20
+	inflation_reduction = 0.025
 	build_cost = -0.05
-    ae_impact = -0.10
+	ae_impact = -0.10
 	all_power_cost = -0.05
 	global_unrest = -1
 }
@@ -12,6 +13,7 @@ difficulty_very_hard_ai = {
 	global_manpower_modifier = 0.50
 	land_forcelimit_modifier = 0.25
 	naval_forcelimit_modifier = 0.25
+	inflation_reduction = 0.05
 	global_unrest = -2
 	build_cost = -0.1
     ae_impact = -0.20

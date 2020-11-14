@@ -120,7 +120,7 @@ country_event = {
 	trigger = {
 		NOT = { exists = CSH }
 		num_of_owned_provinces_with = {
-			value = 10
+			value = 8
 			region = north_china_region
 			controlled_by = REB
 		}

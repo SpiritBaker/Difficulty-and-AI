@@ -35,6 +35,7 @@ NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 --NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
 NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
 --NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
 
 
 NDefines.NAI.SUBSIDY_YEARS = 20
@@ -125,8 +126,9 @@ NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 3.0 --Max AI desire for humiliati
 NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 2.0
 NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 1	
 NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1.25
-NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.5
-NDefines.NAI.PEACE_TERMS_REVOKE_CORES_BASE_MULT = 0.5	
+NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.75
+NDefines.NAI.PEACE_TERMS_REVOKE_CORES_BASE_MULT = 0.5
+NDefines.NAI.PEACE_TERMS_RETURN_CORES_BASE_MULT	= 1.1
 NDefines.NAI.PEACE_TERMS_ANNUL_TREATIES_BASE_MULT =	1	
 NDefines.NAI.PEACE_TERMS_GOLD_BASE_MULT = 0.2
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for releasing countries.

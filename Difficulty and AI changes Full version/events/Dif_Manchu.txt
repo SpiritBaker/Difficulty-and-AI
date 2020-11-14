@@ -52,7 +52,7 @@ country_event = {
 	mean_time_to_happen = {
 		months = 500
 		modifier = {
-			factor = 1.5
+			factor = 2
 			NOT = { is_year = 1525 }
 		}
 		modifier = {
@@ -221,83 +221,189 @@ country_event = {
 	}
 }
 
-# AI Manchu Decleres War on Ming
+# Unification Events
 country_event = {
 	id = dif_manchu.3
 	title = "dif_manchu.EVTNAME3"
 	desc = "dif_manchu.EVTDESC3"
 	picture = LAND_MILITARY_eventPicture
 	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	#immediate = {
+	#	set_country_flag = country_manchu_unification
+	#}
+
+	option = {
+		name = "dif_manchu.EVTOPTA3"
+		if = {
+			limit = {
+				ai = yes
+				is_subject_of_type = tributary_state
+				overlord = { has_country_flag = country_manchu_unification }
+				OR = {
+					primary_culture = manchu
+					primary_culture = manchu_new
+				}
+			}
+			every_known_country = {
+				limit = {
+					overlord_of = ROOT
+					has_country_flag = country_manchu_unification
+				}	
+				vassalize = ROOT
+			}
+		}
+		else_if = {
+			limit = {
+				ai = yes
+				OR = {
+					primary_culture = manchu
+					primary_culture = manchu_new
+				}
+				any_ally = {
+					has_country_flag = country_manchu_unification
+				}
+			}
+			every_ally = {
+				limit = {
+					has_country_flag = country_manchu_unification
+				}	
+				vassalize = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				is_subject_of_type = tributary_state
+			}
+		}
+	}
+
+	option = {
+		name = "dif_manchu.EVTOPTB3"
+		add_prestige = 15
+		if = {
+			limit = { 
+				OR = {
+					any_ally = {
+						has_country_flag = country_manchu_unification
+					}
+					overlord = {
+						has_country_flag = country_manchu_unification
+					}
+				}
+			}
+			every_known_country = {
+				limit = {
+					has_country_flag = country_manchu_unification
+				}
+				ROOT = { add_historical_rival = PREV }
+				add_opinion = {
+					who = PREV
+					modifier = opposed_unification
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_subject_of_type = tributary_state
+			}
+		}
+	}
+}
+
+
+# AI Manchu Decleres War on Ming
+country_event = {
+	id = dif_manchu.4
+	title = "dif_manchu.EVTNAME4"
+	desc = "dif_manchu.EVTDESC4"
+	picture = LAND_MILITARY_eventPicture
+	
 	fire_only_once = yes
 	
 	trigger = {
 		OR = {
-			is_at_war = no
+			AND = {
+				is_at_war = no
+				is_bankrupt = no
+				total_development = 250
+				NOT = { truce_with = MNG }
+				NOT = { alliance_with = MNG }
+				any_owned_province = { 
+					any_neighbor_province = { 
+						owned_by = MNG 
+						OR = {
+							is_claim = ROOT
+							is_core = ROOT
+						}	
+					}
+				}
+			}
 			war_with = MNG
 		}
 		exists = MNG
 		NOT = { vassal_of = MNG }
 		tag = MCH
-		is_bankrupt = no
-		total_development = 250
 		ai = yes
 		OR = {
-			is_year = 1575
+			is_year = 1500
 			MNG = { has_any_disaster = yes }
 			has_ruler_flag = nurhaci_ruler_flag
 		}
 		NOT = { is_year = 1675 }
-		NOT = { truce_with = MNG }
-		NOT = { alliance_with = MNG }
-		any_owned_province = { 
-			any_neighbor_province = { 
-				owned_by = MNG 
-				OR = {
-					is_claim = ROOT
-					is_core = ROOT
-				}	
-			}
-		}
 	}
 	
-	immediate = {
-		add_casus_belli = {
-			target = MNG
-			type = cb_border_war
-			months = 24
-		}
-	}
+	#immediate = {
+	#	add_casus_belli = {
+	#		target = MNG
+	#		type = cb_border_war
+	#		months = 24
+	#	}
+	#}
 
 	mean_time_to_happen = {
 		months = 100
 		modifier = {
-			factor = 0.5
-			NOT = { imperial_mandate = 20 }
+			factor = 0.01
+			war_with = MNG
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.25
+			NOT = { imperial_mandate = 25 }
+		}
+		modifier = {
+			factor = 0.25
 			MNG = { has_any_disaster = yes }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.25
 			exists = CSH
 		}
 	}
 	
 	option = {
-		name = "dif_manchu.EVTOPTA3"
+		name = "dif_manchu.EVTOPTA4"
+		add_country_modifier = {
+			name = "manchu_conqest_of_china_ai"
+			duration = 9125
+			#desc = 
+		}
 		if = {
 			limit = {
 				is_at_war = no
 			}
 			declare_war_with_cb = {
 				who = MNG
-				casus_belli = cb_border_war
+				casus_belli = cb_horde_vs_civ
 			}
-		}
-		add_country_modifier = {
-			name = "manchu_conqest_of_china_ai"
-			duration = 7300
 		}
 		if = {
 			limit = {
@@ -315,9 +421,9 @@ country_event = {
 }
 
 country_event = {
-	id = dif_manchu.4
-	title = "dif_manchu.EVTNAME4"
-	desc = "dif_manchu.EVTDESC4"
+	id = dif_manchu.5
+	title = "dif_manchu.EVTNAME5"
+	desc = "dif_manchu.EVTDESC5"
 	picture = LAND_MILITARY_eventPicture
 	
 	#fire_only_once = yes
@@ -362,7 +468,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "dif_manchu.EVTOPTA4"
+		name = "dif_manchu.EVTOPTA5"
 		if = {
 			limit = {
 				any_subject_country = { 

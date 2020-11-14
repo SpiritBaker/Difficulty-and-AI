@@ -18,6 +18,8 @@ estate_nomadic_tribes = {
 				OR = {
 					culture_group = altaic
 					culture_group = tartar
+					culture = manchu
+					culture = manchu_new
 				}
 				OR = {
 					has_estate = estate_nomadic_tribes
@@ -31,7 +33,24 @@ estate_nomadic_tribes = {
 			}
 		}
 		is_colonial_nation = no
-		NOT = { has_reform = celestial_empire }
+		OR = {
+			NOT = { has_reform = celestial_empire }
+			AND = {
+				OR = {
+					have_had_reform = nomad_empire
+					have_had_reform = khanate_monarchy
+					have_had_reform = khanate_monarchy
+					have_had_reform = steppe_horde
+				}
+				has_reform = celestial_empire
+				OR = {
+					culture_group = altaic
+					culture_group = tartar
+					primary_culture = manchu
+					primary_culture = manchu_new
+				}
+			}
+		}
 		NOT = { has_reform = revolutionary_empire_reform }
 	}
 
