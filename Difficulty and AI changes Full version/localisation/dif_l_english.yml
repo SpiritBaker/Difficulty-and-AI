@@ -65,3 +65,6 @@
  steppe_mountains_desc:0 ""
  oasis:0 "Oasis"
  oasis_desc:0 ""
+
+ #Tooltips
+ OVERLORD_INFLUENCE:0 "Influenced by Celestial Empire"
