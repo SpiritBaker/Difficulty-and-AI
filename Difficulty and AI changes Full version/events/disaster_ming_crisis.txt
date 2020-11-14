@@ -889,6 +889,7 @@ country_event = { # Start of Shun rebelion
 	}
 	
 	option = {
+		name = ming_crisis.10.A
 		add_country_modifier = {
 			name = "shun_rebellion"
 			duration = 5475
