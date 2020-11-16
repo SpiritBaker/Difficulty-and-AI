@@ -7,7 +7,7 @@ country_event = {
 	desc = dev_events.1.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-
+	
 	trigger = {
 		NOT = { is_month = 1 }
 		REB = {
@@ -16,8 +16,9 @@ country_event = {
 				NOT = { has_country_flag = janYear }
 			}
 		}
+		NOT = { has_global_flag = dev_click_disabled }
 	}
-
+	
 	immediate = {
 		REB = {
 			clr_country_flag = janYear
@@ -39,7 +40,7 @@ country_event = {
 	picture = INVENTION_eventPicture
 	is_triggered_only = yes
 	hidden = yes
-
+	
 	immediate = {
 		REB = {
 			log = "==yearly institution counter=="
@@ -148,18 +149,24 @@ country_event = {
 	desc = dev_events.3.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-
+	
 	trigger = {
 		OR = {
 			ai = yes
 			has_country_flag = dev_click
 		}
+		
+		REB = {
+			NOT = { had_country_flag = { flag = janYear	days = 365 } }
+			has_country_flag = janYear
+		}
+		
 		power_tech = {
 			power = adm
-			value = 990
+			value = 960
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect = {
 			set_base_target = {
@@ -197,6 +204,10 @@ country_event = {
 					add_devastation_reduction = yes
 					log = dev_info.1
 				}
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
 				change_variable = {
 					which = admClicks
 					value = 1
@@ -217,18 +228,24 @@ country_event = {
 	desc = dev_events.4.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-
+	
 	trigger = {
 		OR = {
 			ai = yes
 			has_country_flag = dev_click
 		}
+		
+		REB = {
+			NOT = { had_country_flag = { flag = janYear	days = 365 } }
+			has_country_flag = janYear
+		}
+		
 		power_tech = {
 			power = dip
-			value = 990
+			value = 960
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect = {
 			set_base_target = {
@@ -256,6 +273,10 @@ country_event = {
 					add_devastation_reduction = yes
 					log = dev_info.2
 				}
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
 				change_variable = {
 					which = dipClicks
 					value = 1
@@ -276,18 +297,24 @@ country_event = {
 	desc = dev_events.5.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-
+	
 	trigger = {
 		OR = {
 			ai = yes
 			has_country_flag = dev_click
 		}
+		
+		REB = {
+			NOT = { had_country_flag = { flag = janYear	days = 365 } }
+			has_country_flag = janYear
+		}
+		
 		power_tech = {
 			power = mil
-			value = 990
+			value = 960
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect = {
 			set_base_target = {
@@ -318,13 +345,9 @@ country_event = {
 					log = "[This.GetName] strengthens government**"
 				}
 				else = {
-					mil_power_cost = 50
+					general_cost = yes
 					
-						 if = { limit = { army_tradition = 80 } create_general = { tradition = 90 } }
-					else_if = { limit = { army_tradition = 60 } create_general = { tradition = 70 } }
-					else_if = { limit = { army_tradition = 40 } create_general = { tradition = 50 } }
-					else_if = { limit = { army_tradition = 20 } create_general = { tradition = 30 } }
-					else 	= { 								create_general = { tradition = 10 } }
+					create_general_var = yes
 					
 					add_army_professionalism = 0.01
 					
@@ -341,6 +364,10 @@ country_event = {
 					add_devastation_reduction = yes
 					log = dev_info.3
 				}
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
 				change_variable = {
 					which = milClicks
 					value = 1
@@ -351,5 +378,33 @@ country_event = {
 	
 	option = {
 		#hidden
+	}
+}
+
+country_event = {
+	# Disable for MP
+	id = dev_events.6
+	title = dev_events.6.t
+	desc = dev_events.6.d
+	picture = INVENTION_eventPicture
+	
+	trigger = {
+		ai = no
+		NOT = { has_global_flag = dev_click_enabled }
+		NOT = { has_global_flag = dev_click_disabled }
+	}
+	
+	option = {
+		name = dev_events.6.a
+		hidden_effect = {
+			set_global_flag = dev_click_enabled
+		}
+	}
+	
+	option = {
+		name = dev_events.6.b
+		hidden_effect = {
+			set_global_flag = dev_click_disabled
+		}
 	}
 }
