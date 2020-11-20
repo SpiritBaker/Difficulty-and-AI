@@ -63,10 +63,10 @@ khanate_monarchy = {
 		land_maintenance_modifier = -0.10
 		cav_to_inf_ratio = 0.25
 	}
-	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
-		allow_banners = yes
-	}
+	#conditional = {
+	#	allow = { has_dlc = "Mandate of Heaven" }
+	#	allow_banners = yes
+	#}
 	ai = {
 		factor = 10
 	}
