@@ -335,6 +335,10 @@ interaction = {
 			}
 		}
 		modifier = {
+			factor = 0.6
+			NOT = { num_of_cities = 3 }
+		}
+		modifier = {
 			factor = 0
 			crown_land_share = 20
 			#if = {

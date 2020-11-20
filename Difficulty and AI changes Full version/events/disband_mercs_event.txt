@@ -82,7 +82,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 	
 	trigger = {
 		sieged_by = REB
-		#fort_level = 1
+		fort_level = 1
 		#NOT = { fort_level = 10 }
 		OR = {
 			owner = { NOT = { num_of_cities = 5 } }
@@ -95,6 +95,14 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 		}
 		
 		OR = {
+			AND = {
+				owner = { NOT = { num_of_cities = 3 } }
+				NOT = { 
+					num_of_units_in_province = {
+						amount = 3
+					}
+				}
+			}
 			AND = {
 				#fort_level = 1
 				NOT = { fort_level = 2 }
@@ -123,6 +131,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 				}
 			}
 			AND = {
+				owner = { NOT = { num_of_cities = 3 } }
 				fort_level = 4
 				NOT = { fort_level = 5 }
 				NOT = { 
@@ -132,6 +141,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 				}
 			}
 			AND = {
+				owner = { NOT = { num_of_cities = 3 } }
 				fort_level = 5
 				NOT = { fort_level = 6 }
 				NOT = { 
@@ -141,6 +151,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 				}
 			}
 			AND = {
+				owner = { NOT = { num_of_cities = 3 } }
 				fort_level = 6
 				NOT = { fort_level = 7 }
 				NOT = { 
@@ -150,6 +161,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 				}
 			}
 			AND = {
+				owner = { NOT = { num_of_cities = 3 } }
 				fort_level = 7
 				NOT = { fort_level = 8 }
 				NOT = { 
@@ -159,6 +171,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 				}
 			}
 			AND = {
+				owner = { NOT = { num_of_cities = 3 } }
 				fort_level = 8
 				NOT = { fort_level = 9 }
 				NOT = { 
