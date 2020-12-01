@@ -1,0 +1,31 @@
+goods_check = {
+	ROOT = {
+		set_variable = {
+			which = $goods$_price
+			which = high_price
+		}
+	}
+	if = {
+		limit = {
+			REB = {
+				check_variable = {
+					which = $goods$_price
+					which = ROOT
+				}
+			}
+		}
+		REB = {
+			ROOT = {
+				set_variable = {
+					which = $goods$_price
+					which = PREV
+				}
+				set_variable = {
+					which = high_price
+					which = $goods$_price
+				}
+			}
+		}
+		save_event_target_as = build_target
+	}
+}

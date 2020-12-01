@@ -1,0 +1,184 @@
+namespace = build_events
+
+country_event = {
+	# build manufactory
+	id = build_events.1
+	title = build_events.1.t
+	desc = build_events.1.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		primitives = no
+		
+		is_at_war = no
+		NOT = { num_of_loans = 1 }
+		treasury = 1000
+		current_income_balance = 0
+		
+		any_owned_province = {
+			is_state_core = ROOT
+			OR = {
+				can_build = wharf
+				can_build = weapons
+				can_build = textile
+				can_build = plantations
+				can_build = tradecompany
+				can_build = farm_estate
+				can_build = mills
+				can_build = furnace
+			}
+		}
+	}
+
+	immediate = {
+		log = "[Root.GetName] build manufactory"
+		set_variable = { high_price = 0 }
+		
+		every_owned_province = {
+			limit = {
+				is_state_core = ROOT
+				OR = {
+					can_build = wharf
+					can_build = weapons
+					can_build = textile
+					can_build = plantations
+					can_build = tradecompany
+					can_build = farm_estate
+					can_build = mills
+					can_build = furnace
+				}
+			}
+			trigger_switch = {
+				on_trigger = trade_goods
+				coal = { goods_check = { goods = coal } }
+				cocoa = { goods_check = { goods = cocoa } }
+				dyes = { goods_check = { goods = dyes } }
+				gems = { goods_check = { goods = gems } }
+				ivory = { goods_check = { goods = ivory } }
+				silk = { goods_check = { goods = silk } }
+				paper = { goods_check = { goods = paper } }
+				chinaware = { goods_check = { goods = chinaware } }
+				cloth = { goods_check = { goods = cloth } }
+				coffee = { goods_check = { goods = coffee } }
+				copper = { goods_check = { goods = copper } }
+				cotton = { goods_check = { goods = cotton } }
+				glass = { goods_check = { goods = glass } }
+				iron = { goods_check = { goods = iron } }
+				salt = { goods_check = { goods = salt } }
+				spices = { goods_check = { goods = spices } }
+				sugar = { goods_check = { goods = sugar } }
+				tobacco = { goods_check = { goods = tobacco } }
+				fish = { goods_check = { goods = fish } }
+				grain = { goods_check = { goods = grain } }
+				incense = { goods_check = { goods = incense } }
+				wine = { goods_check = { goods = wine } }
+				wool = { goods_check = { goods = wool } }
+				fur = { goods_check = { goods = fur } }
+				livestock = { goods_check = { goods = livestock } }
+				naval_supplies = { goods_check = { goods = naval_supplies } }
+				slaves = { goods_check = { goods = slaves } }
+				tea = { goods_check = { goods = tea } }
+				tropical_wood = { goods_check = { goods = tropical_wood } }
+				#gold = { goods_check = { goods = gold } }
+				#unknown = { goods_check = { goods = unknown } }
+			}
+		}
+		
+		event_target:build_target = {
+			if = {
+				limit = { can_build = wharf }
+				add_building_construction = { building = wharf }
+			}
+			else_if = {
+				limit = { can_build = weapons }
+				add_building_construction = { building = weapons }
+			}
+			else_if = {
+				limit = { can_build = textile }
+				add_building_construction = { building = textile }
+			}
+			else_if = {
+				limit = { can_build = plantations }
+				add_building_construction = { building = plantations }
+			}
+			else_if = {
+				limit = { can_build = tradecompany }
+				add_building_construction = { building = tradecompany }
+			}
+			else_if = {
+				limit = { can_build = farm_estate }
+				add_building_construction = { building = farm_estate }
+			}
+			else_if = {
+				limit = { can_build = mills }
+				add_building_construction = { building = mills }
+			}
+			else_if = {
+				limit = { can_build = furnace }
+				add_building_construction = { building = furnace }
+			}
+			log = "[This.GetName] build manufactory"
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
+
+country_event = {
+	# build manufactory
+	id = build_events.2
+	title = build_events.2.t
+	desc = build_events.2.d
+	picture = INVENTION_eventPicture
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		always = yes
+	}
+
+	immediate = {
+		log = "set prices"
+		REB = {
+			set_variable = { coal_price = 10 }
+			set_variable = { cocoa_price = 4 }
+			set_variable = { dyes_price = 4 }
+			set_variable = { gems_price = 4 }
+			set_variable = { ivory_price = 4 }
+			set_variable = { silk_price = 4 }
+			set_variable = { paper_price = 3.5 }
+			set_variable = { chinaware_price = 3 }
+			set_variable = { cloth_price = 3 }
+			set_variable = { coffee_price = 3 }
+			set_variable = { copper_price = 3 }
+			set_variable = { cotton_price = 3 }
+			set_variable = { glass_price = 3 }
+			set_variable = { iron_price = 3 }
+			set_variable = { salt_price = 3 }
+			set_variable = { spices_price = 3 }
+			set_variable = { sugar_price = 3 }
+			set_variable = { tobacco_price = 3 }
+			set_variable = { fish_price = 2.5 }
+			set_variable = { grain_price = 2.5 }
+			set_variable = { incense_price = 2.5 }
+			set_variable = { wine_price = 2.5 }
+			set_variable = { wool_price = 2.5 }
+			set_variable = { fur_price = 2 }
+			set_variable = { livestock_price = 2 }
+			set_variable = { naval_supplies_price = 2 }
+			set_variable = { slaves_price = 2 }
+			set_variable = { tea_price = 2 }
+			set_variable = { tropical_wood_price = 2 }
+			set_variable = { gold_price = 0 }
+			set_variable = { unknown_price = 0 }
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
