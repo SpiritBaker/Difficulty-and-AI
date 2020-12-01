@@ -21,12 +21,24 @@ country_event = {
 			is_state_core = ROOT
 			NOT = { has_latent_trade_goods = coal }
 			OR = {
-				can_build = wharf
+				AND = {
+					can_build = wharf
+					NOT = { trade_goods = fish }
+				}
 				can_build = weapons
 				can_build = textile
 				can_build = plantations
 				can_build = tradecompany
-				can_build = farm_estate
+				#can_build = farm_estate
+				AND = {
+					can_build = soldier_households
+					OR = {
+						trade_goods = grain
+						trade_goods = fish
+						trade_goods = livestock
+						trade_goods = wine
+					}
+				}
 				can_build = mills
 				can_build = furnace
 			}
@@ -42,12 +54,24 @@ country_event = {
 				is_state_core = ROOT
 				NOT = { has_latent_trade_goods = coal }
 				OR = {
-					can_build = wharf
+					AND = {
+						can_build = wharf
+						NOT = { trade_goods = fish }
+					}
 					can_build = weapons
 					can_build = textile
 					can_build = plantations
 					can_build = tradecompany
-					can_build = farm_estate
+					#can_build = farm_estate
+					AND = {
+						can_build = soldier_households
+						OR = {
+							trade_goods = grain
+							trade_goods = fish
+							trade_goods = livestock
+							trade_goods = wine
+						}
+					}
 					can_build = mills
 					can_build = furnace
 				}
@@ -90,7 +114,10 @@ country_event = {
 		
 		event_target:build_target = {
 			if = {
-				limit = { can_build = wharf }
+				limit = {
+					can_build = wharf
+					NOT = { trade_goods = fish }
+				}
 				add_building_construction = { building = wharf }
 			}
 			else_if = {
@@ -110,8 +137,17 @@ country_event = {
 				add_building_construction = { building = tradecompany }
 			}
 			else_if = {
-				limit = { can_build = farm_estate }
-				add_building_construction = { building = farm_estate }
+				limit = {
+					#can_build = farm_estate
+					can_build = soldier_households
+					OR = {
+						trade_goods = grain
+						trade_goods = fish
+						trade_goods = livestock
+						trade_goods = wine
+					}
+				}
+				add_building_construction = { building = soldier_households }
 			}
 			else_if = {
 				limit = { can_build = mills }
