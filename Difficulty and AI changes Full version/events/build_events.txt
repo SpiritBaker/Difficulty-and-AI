@@ -19,6 +19,7 @@ country_event = {
 		
 		any_owned_province = {
 			is_state_core = ROOT
+			NOT = { has_latent_trade_goods = coal }
 			OR = {
 				can_build = wharf
 				can_build = weapons
@@ -39,6 +40,7 @@ country_event = {
 		every_owned_province = {
 			limit = {
 				is_state_core = ROOT
+				NOT = { has_latent_trade_goods = coal }
 				OR = {
 					can_build = wharf
 					can_build = weapons
