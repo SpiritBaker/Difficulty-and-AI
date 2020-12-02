@@ -109,7 +109,7 @@ the_importation_act = {
 		full_idea_group = administrative_ideas
 	}
 	
-	trade_efficiency = 0.20
+	trade_efficiency = 0.15
 	
 	ai_will_do = {
 		factor = 1.2
@@ -487,7 +487,7 @@ cloth_quality_edict = {
 		full_idea_group = trade_ideas
 		full_idea_group = quality_ideas
 	}
-	trade_efficiency = 0.2
+	trade_efficiency = 0.15
 
 	ai_will_do = {
 		factor = 1.2
@@ -527,7 +527,7 @@ production_quota_act = {
 		full_idea_group = trade_ideas
 		full_idea_group = quantity_ideas
 	}
-	global_trade_goods_size_modifier = 0.2
+	global_trade_goods_size_modifier = 0.1
  
 
 	ai_will_do = {

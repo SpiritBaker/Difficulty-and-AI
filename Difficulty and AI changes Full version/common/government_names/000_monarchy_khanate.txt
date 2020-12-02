@@ -90,10 +90,8 @@ nomad_empire = {
 	}
 	
 	trigger = {
-		OR = {
-			has_reform = nomad_empire 
-			NOT = { tag = ZUN }
-		}
+		has_reform = nomad_empire 
+		NOT = { tag = ZUN }
 	}
 }
 
@@ -141,9 +139,7 @@ nomad_empire = {
 	}
 	
 	trigger = {
-		OR = {
-			has_reform = khanate_monarchy
-			tag = ZUN
-		}
+		has_reform = nomad_empire
+		tag = ZUN
 	}
 }

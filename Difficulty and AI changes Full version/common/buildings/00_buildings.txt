@@ -395,7 +395,7 @@ barracks = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 8
 			has_building = soldier_households
 		}
 		modifier = {
@@ -1473,7 +1473,7 @@ training_fields = {
 	}
 	
 	ai_will_do = {
-		factor = 8
+		factor = 15
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -1524,7 +1524,7 @@ training_fields = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 8
 			has_building = soldier_households
 		}
 		modifier = {

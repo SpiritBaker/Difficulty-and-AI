@@ -59,7 +59,7 @@ NDefines.NAI.DEVELOPMENT_CAP_MULT = 20
 NDefines.NAI.EDICT_VALUE_THRESHOLD = 20
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 2	--Change to above threshold in case of running deficit
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 1.5	--Change to above threshold in case of low income
-NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5
+NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5  --AI will only call in allies in an offensive war if their military power ratio to the enemy is less than this.
 NDefines.NAI.AI_WANT_ACCEPT_CULTURES = 300	--How much the AI values having much development in accepted cultures.
 --NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 50	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 
@@ -103,11 +103,11 @@ NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.8
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 
 --Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
-NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 10 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
+NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 5.1 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.05 --AI will try to defend provinces under threat worth more than this percentage of total development
 
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	--Army <-> province distance impact on province evaluation / divides total score by this amount
-NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	25.0	--Border <-> province distance impact on province evaluation / actual distance penalty
+NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	15 --Border <-> province distance impact on province evaluation / actual distance penalty
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
 --NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10 --Influence on assimilation interest from number of provinces left to conquer
 --NDefines.NAI.PURSUE_DISTANCE = 100
@@ -208,7 +208,6 @@ NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 300	                    -- Minimu
 --NDefines.NCountry.REVOLUTION_CLAIM_COOLDOWN = 12			            -- How many months until it can be stolen again
 
 NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.1   -- Minimum of crownland when distributing land at start
-NDefines.NCountry.STARTING_ARMY_SIZE = 1	-- Percentage of force limit
 
 NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3650 -- 10 years
 --NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 0.5

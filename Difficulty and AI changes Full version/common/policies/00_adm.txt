@@ -10,7 +10,7 @@ the_combination_act = {
 		full_idea_group = innovativeness_ideas
 	}
 	
-	production_efficiency = 0.20
+	production_efficiency = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -133,7 +133,7 @@ agricultural_cultivations = {
 		full_idea_group = quantity_ideas
 	}		
 	
-	development_cost = -0.1
+	development_cost = -0.05
 	land_forcelimit_modifier = 0.1
 
 	ai_will_do = {
@@ -971,7 +971,7 @@ the_transportation_act = {
 		full_idea_group = economic_ideas
 	}	
 	
-	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.05
 	production_efficiency = 0.1
 	
 	ai_will_do = {
@@ -1412,7 +1412,7 @@ church_sponsored_guilds = {
 		full_idea_group = trade_ideas
 	}
 	
-	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.05
 	global_missionary_strength = 0.01
 	
 	ai_will_do = {
