@@ -12,10 +12,14 @@ country_event = {
 		ai = yes
 		primitives = no
 		
-		is_at_war = no
 		NOT = { num_of_loans = 1 }
 		treasury = 1000
-		current_income_balance = 0
+		is_in_deficit = no
+		
+		OR = {
+			is_at_war = no
+			treasury = 2000
+		}
 		
 		any_owned_province = {
 			is_state_core = ROOT
