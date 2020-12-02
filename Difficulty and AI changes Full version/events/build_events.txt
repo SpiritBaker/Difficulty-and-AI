@@ -19,34 +19,48 @@ country_event = {
 		
 		any_owned_province = {
 			is_state_core = ROOT
-			NOT = { has_latent_trade_goods = coal }
 			OR = {
 				AND = {
-					can_build = wharf
-					NOT = { trade_goods = fish }
-				}
-				can_build = weapons
-				can_build = textile
-				can_build = plantations
-				can_build = tradecompany
-				#can_build = farm_estate
-				AND = {
-					can_build = soldier_households
+					has_local_modifier_value = {
+						which = trade_goods_size
+						value = 0.5
+					}
 					OR = {
-						trade_goods = grain
-						trade_goods = fish
-						trade_goods = livestock
-						trade_goods = wine
+						can_build = workshop
+						can_build = counting_house
 					}
 				}
-				can_build = mills
-				can_build = furnace
+				AND = {
+					NOT = { has_latent_trade_goods = coal }
+					OR = {
+						AND = {
+							can_build = wharf
+							NOT = { trade_goods = fish }
+						}
+						can_build = weapons
+						can_build = textile
+						can_build = plantations
+						can_build = tradecompany
+						#can_build = farm_estate
+						AND = {
+							can_build = soldier_households
+							OR = {
+								trade_goods = grain
+								trade_goods = fish
+								trade_goods = livestock
+								trade_goods = wine
+							}
+						}
+						can_build = mills
+						can_build = furnace
+					}
+				}
 			}
 		}
 	}
 
 	immediate = {
-		log = "[Root.GetName] build manufactory"
+		log = "[Root.GetName] building"
 		set_variable = { high_price = 0 }
 		
 		every_owned_province = {
@@ -111,53 +125,117 @@ country_event = {
 				#unknown = { goods_check = { goods = unknown } }
 			}
 		}
-		
-		event_target:build_target = {
-			if = {
-				limit = {
-					can_build = wharf
-					NOT = { trade_goods = fish }
+		if = {
+			limit = { has_saved_event_target = build_target }
+			event_target:build_target = {
+				if = {
+					limit = {
+						can_build = wharf
+						NOT = { trade_goods = fish }
+					}
+					add_building_construction = { building = wharf }
 				}
-				add_building_construction = { building = wharf }
+				else_if = {
+					limit = { can_build = weapons }
+					add_building_construction = { building = weapons }
+				}
+				else_if = {
+					limit = { can_build = textile }
+					add_building_construction = { building = textile }
+				}
+				else_if = {
+					limit = { can_build = plantations }
+					add_building_construction = { building = plantations }
+				}
+				else_if = {
+					limit = { can_build = tradecompany }
+					add_building_construction = { building = tradecompany }
+				}
+				else_if = {
+					limit = {
+						#can_build = farm_estate
+						can_build = soldier_households
+						OR = {
+							trade_goods = grain
+							trade_goods = fish
+							trade_goods = livestock
+							trade_goods = wine
+						}
+					}
+					add_building_construction = { building = soldier_households }
+				}
+				else_if = {
+					limit = { can_build = mills }
+					add_building_construction = { building = mills }
+				}
+				else_if = {
+					limit = { can_build = furnace }
+					add_building_construction = { building = furnace }
+				}
+				log = "[This.GetName] build manufactory"
 			}
-			else_if = {
-				limit = { can_build = weapons }
-				add_building_construction = { building = weapons }
-			}
-			else_if = {
-				limit = { can_build = textile }
-				add_building_construction = { building = textile }
-			}
-			else_if = {
-				limit = { can_build = plantations }
-				add_building_construction = { building = plantations }
-			}
-			else_if = {
-				limit = { can_build = tradecompany }
-				add_building_construction = { building = tradecompany }
-			}
-			else_if = {
+		}
+		else = {
+			set_variable = { high_price = 0 }
+			
+			every_owned_province = {
 				limit = {
-					#can_build = farm_estate
-					can_build = soldier_households
+					is_state_core = ROOT
+					has_local_modifier_value = {
+						which = trade_goods_size
+						value = 0.5
+					}
 					OR = {
-						trade_goods = grain
-						trade_goods = fish
-						trade_goods = livestock
-						trade_goods = wine
+						can_build = workshop
+						can_build = counting_house
 					}
 				}
-				add_building_construction = { building = soldier_households }
+				trigger_switch = {
+					on_trigger = trade_goods
+					coal = { value_check = { goods = coal } }
+					cocoa = { value_check = { goods = cocoa } }
+					dyes = { value_check = { goods = dyes } }
+					gems = { value_check = { goods = gems } }
+					ivory = { value_check = { goods = ivory } }
+					silk = { value_check = { goods = silk } }
+					paper = { value_check = { goods = paper } }
+					chinaware = { value_check = { goods = chinaware } }
+					cloth = { value_check = { goods = cloth } }
+					coffee = { value_check = { goods = coffee } }
+					copper = { value_check = { goods = copper } }
+					cotton = { value_check = { goods = cotton } }
+					glass = { value_check = { goods = glass } }
+					iron = { value_check = { goods = iron } }
+					salt = { value_check = { goods = salt } }
+					spices = { value_check = { goods = spices } }
+					sugar = { value_check = { goods = sugar } }
+					tobacco = { value_check = { goods = tobacco } }
+					fish = { value_check = { goods = fish } }
+					grain = { value_check = { goods = grain } }
+					incense = { value_check = { goods = incense } }
+					wine = { value_check = { goods = wine } }
+					wool = { value_check = { goods = wool } }
+					fur = { value_check = { goods = fur } }
+					livestock = { value_check = { goods = livestock } }
+					naval_supplies = { value_check = { goods = naval_supplies } }
+					slaves = { value_check = { goods = slaves } }
+					tea = { value_check = { goods = tea } }
+					tropical_wood = { value_check = { goods = tropical_wood } }
+					#gold = { value_check = { goods = gold } }
+					#unknown = { value_check = { goods = unknown } }
+				}
 			}
-			else_if = {
-				limit = { can_build = mills }
-				add_building_construction = { building = mills }
+			event_target:build_target = {
+				if = {
+					limit = { can_build = counting_house }
+					add_building_construction = { building = counting_house }
+				}
+				else_if = {
+					limit = { can_build = workshop }
+					add_building_construction = { building = workshop }
+				}
+				log = "[This.GetName] build workshop"
 			}
-			else_if = {
-				limit = { can_build = furnace }
-				add_building_construction = { building = furnace }
-			}
-			log = "[This.GetName] build manufactory"
 		}
 	}
 	
