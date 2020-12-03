@@ -35,9 +35,9 @@ country_event = {
 					}
 				}
 				AND = {
-					has_local_modifier_value = {
-						which = local_manpower
-						value = 1.5
+					OR = {
+						base_manpower = 6
+						has_building = soldier_households
 					}
 					OR = {
 						can_build = barracks
@@ -259,13 +259,13 @@ country_event = {
 				every_owned_province = {
 					limit = {
 						is_state_core = ROOT
-						has_local_modifier_value = {
-							which = local_manpower
-							value = 1.5
+						OR = {
+							base_manpower = 6
+							has_building = soldier_households
 						}
 						OR = {
-							can_build = workshop
-							can_build = counting_house
+							can_build = barracks
+							can_build = training_fields
 						}
 					}
 					ROOT = {
@@ -273,6 +273,18 @@ country_event = {
 							which = lmVar
 							value = modifier:local_manpower
 							who = PREV
+						}
+						export_to_variable = {
+							which = bmVar
+							value = base_manpower
+							who = PREV
+						}
+						multiply_variable = {
+							bmVar = 0.25
+						}
+						change_variable = {
+							which = lmVar
+							which = bmVar
 						}
 					}
 					if = {
@@ -294,8 +306,14 @@ country_event = {
 									which = high_price
 								}
 							}
-							save_event_target_as = build_target
 						}
+						ROOT = {
+							set_variable = {
+								which = high_price
+								which = lmVar
+							}
+						}
+						save_event_target_as = build_target
 					}
 				}
 				event_target:build_target = {
