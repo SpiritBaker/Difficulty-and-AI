@@ -213,9 +213,15 @@
  
  #Gov reforms
  khanate_monarchy:0 "Khanate"
+ khanate_monarchy_desc:0 ""
+ nomad_empire:0 "Nomad Empire"
+ nomad_empire_desc:0 ""
  nomadic_privileges_reform:0 "Tribal Council"
+ nomadic_privileges_reform_desc:0 ""
  militarization_of_nomad_society:0 "Military Administration"
+ militarization_of_nomad_society_desc:0 ""
  absulute_power_of_huntaiji:0 "Direct Control of Huntaiji"
+ absulute_power_of_huntaiji_desc:0 ""
 
  #Rebels
  shun_rebels_name:0 "Shun Rebels"
