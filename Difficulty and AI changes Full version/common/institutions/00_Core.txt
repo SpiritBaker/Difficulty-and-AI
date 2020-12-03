@@ -565,6 +565,23 @@ renaissance = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				owner = {
+					has_country_modifier = byzantine_influx
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = byzantine_influx_spread_of_renaissance
+				is_capital = yes
+				owner = {
+					has_country_modifier = byzantine_influx
+				}
+			}
+		}
+		
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)

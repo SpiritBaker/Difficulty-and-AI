@@ -302,9 +302,9 @@ horde_tribal_unity_reform = {
 tribe_becomes_monarchy_reform = {
 	icon = "king_highlighted"
 	allow_normal_conversion = yes
-	potential = {
-		NOT = { has_reform = steppe_horde }
-	}
+	#potential = {
+		#NOT = { has_reform = steppe_horde }
+	#}
 	effect = {
 		set_country_flag = populists_in_government
 		lose_reforms = 4
@@ -353,7 +353,7 @@ tribe_becomes_monarchy_reform = {
 			} 
 		}
 		modifier = {
-			factor = 0
+			factor = 10
 			is_nomad = yes
 		}
 	}

@@ -30,7 +30,7 @@ nomad_empire = {
 		allow_banners = yes
 	}
 	ai = {
-		factor = 10
+		factor = 15
 	}
 }
 
@@ -144,55 +144,6 @@ absulute_power_of_huntaiji = {
 	}
 }
 
-
-nomad_becomes_monarchy_reform = {
-	icon = "horde_riding_highlighted"
-	allow_normal_conversion = yes
-	potential = {
-		has_reform = steppe_horde
-	}
-	effect = {
-		set_country_flag = populists_in_government
-		lose_reforms = 4
-		if = {
-			limit = {
-				technology_group = nomad_group
-				OR = {
-					religion_group = muslim
-					secondary_religion = sunni
-					secondary_religion = shiite
-					secondary_religion = ibadi
-				}
-			}
-			change_technology_group = muslim
-			change_unit_type = muslim
-		}
-		if = {
-			limit = {
-				technology_group = nomad_group
-				religion_group = christian
-			}
-			change_technology_group = eastern
-			change_unit_type = eastern
-		}
-		if = {
-			limit = {
-				technology_group = nomad_group
-				NOT = { religion_group = muslim }
-				NOT = { religion_group = christian }
-				NOT = { secondary_religion = sunni }
-				NOT = { secondary_religion = shiite }
-				NOT = { secondary_religion = ibadi }
-			}
-			change_technology_group = chinese
-			change_unit_type = chinese
-		}
-		change_government = monarchy
-	}
-	ai = {
-		factor = 5
-	}
-}
 
 nomad_reform_dif = {
 	icon = "all_under_tengri_reform"

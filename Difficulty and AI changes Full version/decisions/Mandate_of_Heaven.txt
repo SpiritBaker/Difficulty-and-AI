@@ -3,6 +3,9 @@ country_decisions = {
 		major = yes
 		
 		potential = {
+			any_country = {
+				is_emperor_of_china = yes
+			}
 			is_emperor_of_china = no
 			any_owned_province = {
 				superregion = china_superregion
@@ -10,7 +13,11 @@ country_decisions = {
 			OR = {
 				technology_group = chinese
 				technology_group = nomad_group
-				culture_group = altaic
+				OR = {
+					is_nomad = yes
+					has_reform = nomad_empire 
+					has_reform = khanate_monarchy 
+				}	
 			}
 		}
 		provinces_to_highlight = {

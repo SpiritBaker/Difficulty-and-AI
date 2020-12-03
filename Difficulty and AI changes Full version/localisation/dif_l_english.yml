@@ -69,12 +69,7 @@
  oasis:0 "Oasis"
  oasis_desc:0 "Oasis terrain represents fertile areas of freshwater surrounded by desert or semi-desert areas."
 
- #Tags
- SHY:0 "Shaybanids"
- KRG:0 "Kyrgyz"
- KRG_ADJ:0 "Kyrgyz"
- MGS:0 "Moghulistan"
- TRS:0 "Mawarannahr"
+
 
  #County Ideas
  BUK_ideas:0 "Bukhara Ideas"
@@ -111,6 +106,8 @@
  tributary_tech_cost_bonus:0 "Tribute to Celestial Empire"
  shun_rebellion:0 "Shun Rebellion"
  great_unifier:0 "Great Unifier"
+ paying_additional_tribute_m:0 "Additional Tribute"
+ nomads_special_trade_rights_m:0 "Trade Rights"
 
  #Mission
  mongols_unity_through_faith_title:0 "Unity Through Faith"
@@ -188,12 +185,20 @@
  nomad_becomes_monarchy_reform_desc:0 ""
  nomad_reform_dif:0 "Keep Nomadic Traditions"
  nomad_reform_dif_desc:0 ""
+ estate_nomadic_aristocracy_unrestricted_looting:0 "Unrestricted Looting"
+ estate_nomadic_aristocracy_unrestricted_looting_desc:0 ""
 
  #Tooltips
  root_is_most_powerful_manchuria_tribe:0 "The Most Powerful Manchu Tribe"
  ming_crisis_active_for_20_years_tooltip:0 "Ming Crisis active for 25"
  strongest_power_in_china:0 "Strongest Power in China"
  OVERLORD_INFLUENCE:0 "Influenced by Celestial Empire"
+ byzantine_influx_spread_of_renaissance:0 "Byzantine Influx"
+ sedentary_subdjects_increased_tribute_tooltip:0 "Every owned NOT Nomad province gets §Y'Additional Tribute'§!, giving the following effects:\nLocal Tax Modifier: §G25.0%§! \nLocal Manpower Modifier: §R-33.0%§!"
+ sedentary_subdjects_revoke_tribute_tooltip:0 ""
+ nomads_special_trade_rights_tooltip:0 "Every owned province with a Center of Trade gets §Y'Trade Rights'§!, giving the following effects:\nLocal Development Cost: §G-5.0%§! \nLocal Province Trade Power: §G25.0%§!"
+ revoke_nomads_special_trade_rights_tooltip:0 ""
+
 
  #Dif_Formables
  dzungar_nation_title:0 "Form Dzungaria"

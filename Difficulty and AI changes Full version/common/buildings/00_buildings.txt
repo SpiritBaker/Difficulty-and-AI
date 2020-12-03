@@ -2798,10 +2798,10 @@ soldier_households = {
 	}
 
 	modifier = {
-		local_manpower = 0.75
+		local_manpower = 0.65
 	}
 	bonus_modifier = {
-		local_manpower = 0.75
+		local_manpower = 0.65
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way

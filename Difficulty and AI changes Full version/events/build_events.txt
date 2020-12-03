@@ -13,12 +13,12 @@ country_event = {
 		primitives = no
 		
 		NOT = { num_of_loans = 1 }
-		treasury = 1000
+		treasury = 1500
 		is_in_deficit = no
 		
 		OR = {
 			is_at_war = no
-			treasury = 2000
+			treasury = 2500
 		}
 		
 		any_owned_province = {

@@ -27,6 +27,7 @@ NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
 --NDefines.NEconomy.CARAVAN_FACTOR = 7.5 --Development is divided by this factor, do not set to zero!
 NDefines.NEconomy.CARAVAN_POWER_MAX = 15
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1
+NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03125	--% each tech increases it. 100% increase at tech 32
 
 
 --NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
@@ -42,6 +43,7 @@ NDefines.NAI.SUBSIDY_YEARS = 20
 NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
 
 
+NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
 
 NDefines.NAI.MAX_CAV_PERCENTAGE = 70
 NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.15	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
@@ -154,7 +156,7 @@ NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 
 NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 25.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
-NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 4.5				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
+--NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 5				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2 -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
@@ -185,15 +187,13 @@ NDefines.NGovernment.RUSSIAN_ABILITY_STRELTSY_SPAWN_SIZE = 0.1
 --NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_CORRUPTION = 5.0
 --NDefines.NGovernment.GOVERNMENT_REFORM_YEARLY_BASE_PROGRESS	= 8.0
 
-NDefines.NReligion.YEARLY_DOOM_INCREASE = 0.5 --Multiplied by number of provinces.
-NDefines.NReligion.MAYA_COLLAPSE_PROVINCES_PER_REFORM = 1 --Maya keeps this many extra provinces per reform.
-NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 15
+--NDefines.NReligion.YEARLY_DOOM_INCREASE = 0.5 --Multiplied by number of provinces.
+--NDefines.NReligion.MAYA_COLLAPSE_PROVINCES_PER_REFORM = 1 --Maya keeps this many extra provinces per reform.
+--NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 15
 --NDefines.NReligion.YEARLY_PAPAL_INFLUENCE_CATHOLIC = 1 
 NDefines.NReligion.PIETY_ACTION_COOLDOWN = 10
 NDefines.NReligion.KARMA_FOR_OFFENSIVE_WAR = -5 --base -10
 
-
-NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
 
 --NDefines.NCountry.REVOLUTION_SPREAD_COUNT = 3			                -- Max number of concurrent province revolution spread
 --NDefines.NCountry.REVOLUTION_DAILY_SPREAD = 1.0			                -- How much the revolution spreads each day (progress is 0-100)
