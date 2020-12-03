@@ -35,6 +35,16 @@ country_event = {
 					}
 				}
 				AND = {
+					has_local_modifier_value = {
+						which = local_manpower
+						value = 1.5
+					}
+					OR = {
+						can_build = barracks
+						can_build = training_fields
+					}
+				}
+				AND = {
 					NOT = { has_latent_trade_goods = coal }
 					OR = {
 						AND = {
@@ -229,16 +239,76 @@ country_event = {
 					#unknown = { value_check = { goods = unknown } }
 				}
 			}
-			event_target:build_target = {
-				if = {
-					limit = { can_build = counting_house }
-					add_building_construction = { building = counting_house }
+			if = {
+				limit = { has_saved_event_target = build_target }
+				event_target:build_target = {
+					if = {
+						limit = { can_build = counting_house }
+						add_building_construction = { building = counting_house }
+					}
+					else_if = {
+						limit = { can_build = workshop }
+						add_building_construction = { building = workshop }
+					}
+					log = "[This.GetName] build workshop"
 				}
-				else_if = {
-					limit = { can_build = workshop }
-					add_building_construction = { building = workshop }
+			}
+			else = {
+				set_variable = { high_price = 0 }
+				
+				every_owned_province = {
+					limit = {
+						is_state_core = ROOT
+						has_local_modifier_value = {
+							which = local_manpower
+							value = 1.5
+						}
+						OR = {
+							can_build = workshop
+							can_build = counting_house
+						}
+					}
+					ROOT = {
+						export_to_variable = {
+							which = lmVar
+							value = modifier:local_manpower
+							who = PREV
+						}
+					}
+					if = {
+						limit = {
+							can_build = training_fields
+							NOT = { has_building = barracks }
+						}
+						ROOT = {
+							multiply_variable = {
+								lmVar = 2
+							}
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								check_variable = {
+									which = lmVar
+									which = high_price
+								}
+							}
+							save_event_target_as = build_target
+						}
+					}
 				}
-				log = "[This.GetName] build workshop"
+				event_target:build_target = {
+					if = {
+						limit = { can_build = training_fields }
+						add_building_construction = { building = training_fields }
+					}
+					else_if = {
+						limit = { can_build = barracks }
+						add_building_construction = { building = barracks }
+					}
+					log = "[This.GetName] build barracks"
+				}
 			}
 		}
 	}
