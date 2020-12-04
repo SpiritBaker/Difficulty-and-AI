@@ -882,6 +882,9 @@ mughal_government = {
 		western_aryan = {
 			trade_efficiency = 0.05
 		}
+		anatolian = {
+			leader_siege = 1
+		}
 	}
 }
 

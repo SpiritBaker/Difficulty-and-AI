@@ -32,3 +32,7 @@ manchu_conqest_of_china_ai = {
 	discipline = 0.05
 	province_warscore_cost = -0.25
 }
+uzbek_grand_host = {
+	land_morale = 0.05
+	land_maintenance_modifier = -0.10
+}

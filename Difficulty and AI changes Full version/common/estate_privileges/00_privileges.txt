@@ -1814,6 +1814,9 @@ estate_burghers_indebted_to_burghers = {
 	can_select = {
 		NOT = { is_bankrupt = yes }
 	}
+	can_revoke = {
+		NOT = { num_of_loans = 1 }
+	}
 	is_valid = {
 		NOT = { is_bankrupt = yes }
 	}
@@ -2745,6 +2748,9 @@ estate_jains_indebted_to_jains = {
 	}
 	can_select = {
 		NOT = { is_bankrupt = yes }
+	}
+	can_revoke = {
+		NOT = { num_of_loans = 1 }
 	}
 	is_valid = {
 		NOT = { is_bankrupt = yes }

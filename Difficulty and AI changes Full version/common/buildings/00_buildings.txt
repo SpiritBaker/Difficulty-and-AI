@@ -81,15 +81,15 @@ marketplace = {
 			is_in_capital_area = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 1
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 2
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
@@ -1305,15 +1305,15 @@ trade_depot = {
 			is_in_capital_area = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 1
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 2
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
@@ -1487,6 +1487,7 @@ training_fields = {
 			factor = 0.4
 			NOT = { base_manpower = 4 }
 			NOT = { has_building = soldier_households }
+			NOT = { has_building = barracks }
 		}
 		modifier = {
 			factor = 1.2
@@ -1699,15 +1700,15 @@ stock_exchange = {
 			is_in_capital_area = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 1
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 2
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {

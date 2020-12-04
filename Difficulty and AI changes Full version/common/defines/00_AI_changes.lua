@@ -44,6 +44,7 @@ NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
 
 
 NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
+NDefines.NAI.AI_CONVERT_CULTURES = 0	--If set to 0 AI will not convert cultures.
 
 NDefines.NAI.MAX_CAV_PERCENTAGE = 70
 NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.15	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
@@ -166,7 +167,7 @@ NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, mu
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
 --MILITARY_FOCUS_DEFAULT = 1.0
 --MILITARY_FOCUS_LOWER_BOUND = 0.0
-NDefines.NAIEconomy.MILITARY_FOCUS_UPPER_BOUND = 3.0
+--NDefines.NAIEconomy.MILITARY_FOCUS_UPPER_BOUND = 3.0
 --NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.35
 --NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.85
 --NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.15

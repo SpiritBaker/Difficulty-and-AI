@@ -8682,7 +8682,7 @@ lost_cultures_group = {
 	}
 }
 
-	anatolian = { #Levantine
+	anatolian = { #Turkish
 	graphical_culture = muslimgfx
 
 	turkish = {

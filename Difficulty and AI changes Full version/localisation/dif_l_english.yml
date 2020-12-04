@@ -51,6 +51,8 @@
  cb_manchu_unification_desc:0 "Unify lands of the Manchuria Region."
  MANCHU_UNIFICATION_WAR_NAME:0 "Manchu Unification War"	
  ALL_MANCHU_PROVS:0 "Provinces in Manchuria Region"
+ cb_horde_invasion:0 "Invasion"
+ cb_horde_invasion_desc:0 ""
 
  #Culture
  anatolian:0 "Anatolian"
@@ -108,6 +110,7 @@
  great_unifier:0 "Great Unifier"
  paying_additional_tribute_m:0 "Additional Tribute"
  nomads_special_trade_rights_m:0 "Trade Rights"
+ uzbek_grand_host:0 "Grand Host"
 
  #Mission
  mongols_unity_through_faith_title:0 "Unity Through Faith"
@@ -195,9 +198,10 @@
  OVERLORD_INFLUENCE:0 "Influenced by Celestial Empire"
  byzantine_influx_spread_of_renaissance:0 "Byzantine Influx"
  sedentary_subdjects_increased_tribute_tooltip:0 "Every owned NOT Nomad province gets §Y'Additional Tribute'§!, giving the following effects:\nLocal Tax Modifier: §G25.0%§! \nLocal Manpower Modifier: §R-33.0%§!"
- sedentary_subdjects_revoke_tribute_tooltip:0 ""
+ sedentary_subdjects_revoke_tribute_tooltip:0 "The modifier §Y'Additional Tribute'§! is removed from all owned provinces."
  nomads_special_trade_rights_tooltip:0 "Every owned province with a Center of Trade gets §Y'Trade Rights'§!, giving the following effects:\nLocal Development Cost: §G-5.0%§! \nLocal Province Trade Power: §G25.0%§!"
- revoke_nomads_special_trade_rights_tooltip:0 ""
+ revoke_nomads_special_trade_rights_tooltip:0 "The modifier §Y'Trade Rights'§! is removed from all owned provinces."
+ weakening_of_timurid_dynasty_tooltip:0 "Death of Shah Rukh"
 
 
  #Dif_Formables

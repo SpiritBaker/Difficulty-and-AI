@@ -57,3 +57,12 @@ cb_manchu_unification = {
 	}
 	war_goal = superiority_chinese_unification
 }
+
+cb_horde_invasion = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 180
+
+	war_goal = horde_invasion
+}
