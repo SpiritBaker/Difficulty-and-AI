@@ -91,7 +91,7 @@ NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_BASE_FACTOR = 40 -- AI scoring fo
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_NOT_ADJACENT_FACTOR = 0.5 -- AI scoring for fabricating claims if the province is not adjacent
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_HRE_FACTOR = 0.75 -- AI scoring for fabricating claims if both parts are HRE
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_HRE_EMPEROR_FACTOR = 0.5 -- AI scoring for fabricating claims if province is HRE and they are emperor (does not stack with the above penalty)
-NDefines.NAI.WANT_TRIBUTARY_LOST_MANDATE = 8 --How important it is for Celestial Emperor to make tributaries out of neighbors.
+NDefines.NAI.WANT_TRIBUTARY_LOST_MANDATE = 7.5 --How important it is for Celestial Emperor to make tributaries out of neighbors.
 
 
 --NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 3
@@ -102,11 +102,11 @@ NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.5
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
 --NDefines.NAI.ADVISOR_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on advisor maintenance
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
-NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.8
+NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.75
 NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
 
 --Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
-NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 5.1 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
+NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 6 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.05 --AI will try to defend provinces under threat worth more than this percentage of total development
 
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	--Army <-> province distance impact on province evaluation / divides total score by this amount
@@ -127,8 +127,8 @@ NDefines.NAI.PEACE_ALLY_WAR_DIRECTION_MULT = 0.5 -- Multiplies PEACE_WAR_DIRECTI
 
 NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 3.0 --Max AI desire for humiliating its enemy.
 NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 2.0
-NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 1	
-NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1.25
+NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 1.25	
+NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1.5
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.75
 NDefines.NAI.PEACE_TERMS_REVOKE_CORES_BASE_MULT = 0.5
 NDefines.NAI.PEACE_TERMS_RETURN_CORES_BASE_MULT	= 1.1
@@ -142,12 +142,12 @@ NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 25.0 -- AI desire for a province i
 NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 15.0	--AI desire for a province is multiplied by this if it has a claim on it.
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
-NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 0.95	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
+NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 1	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
 NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
 NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 0
-NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 3  --Multiplies with strategic interest of making them our Tributary.
+NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 2  --Multiplies with strategic interest of making them our Tributary.
 
-NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 8	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
+NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 7.5	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5

@@ -21,9 +21,11 @@ nomad_empire = {
 	#allow_banners = yes
 	#nomad = yes
 	modifiers = {
-		land_forcelimit_modifier = 0.10
+		max_absolutism = 10
+		governing_capacity = 150
 		land_maintenance_modifier = -0.10
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.15
+		movement_speed = 0.10
 	}
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
@@ -61,7 +63,8 @@ khanate_monarchy = {
 	modifiers = {
 		land_forcelimit_modifier = 0.10
 		land_maintenance_modifier = -0.10
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.15
+		movement_speed = 0.10
 	}
 	#conditional = {
 	#	allow = { has_dlc = "Mandate of Heaven" }
@@ -136,7 +139,7 @@ absulute_power_of_huntaiji = {
 		}
 	}
 	modifiers = {
-		max_absolutism = 15
+		max_absolutism = 10
 		yearly_absolutism = 0.5
 	}
 	ai = {

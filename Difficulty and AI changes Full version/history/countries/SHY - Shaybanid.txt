@@ -19,7 +19,6 @@ religious_school = hanafi_school
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = conqueror_personality
-	add_ruler_personality = ruthless_ruler_personality
 }
 
 1446.1.1 = { capital = 1970 } # moved to Syghnak
