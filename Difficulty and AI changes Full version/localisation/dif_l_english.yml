@@ -165,6 +165,7 @@
  nomadic_aristocracy_desc:0 "This estate represents Nomadic Aristocracy, serving under the Khan as commanders and administrators."
  nomadic_aristocracy_influence_modifier:0 "Noyans Influence"
  nomadic_aristocracy_loyalty_modifier:1 "Noyans Loyalty Equilibrium"
+ nomadic_aristocracy_ownership:0 "Noyans Land Ownership"
  estate_nomadic_aristocracy_guaranteed_leadgership:0 "Noble Military Leadership"
  estate_nomadic_aristocracy_guaranteed_leadgership_desc:0 ""
  estate_nomadic_aristocracy_confirm_noble_right:0 "Confirm Noble Rights"
@@ -174,6 +175,7 @@
  sedentary_subdjects_desc:0 "This estate represents City States and Farming communities that are nominally ruled by our Khan."
  sedentary_subdjects_influence_modifier:0 "Sedentary Influence"
  sedentary_subdjects_loyalty_modifier:1 "Sedentary Loyalty Equilibrium"
+ sedentary_subdjects_ownership:0 "Sedentary Land Ownership"
  sedentary_subdjects_land_of_commerce:0 "Land of Commerce"
  sedentary_subdjects_land_of_commerce_desc:0 ""
  sedentary_subdjects_patronage_of_the_arts:0 "Patronage of the Arts"
@@ -184,7 +186,7 @@
  sedentary_subdjects_trade_rights_desc:0 ""
  sedentary_subjects_guarantee_religious_freedom:0 "Guarantee Religious Freedom"
  sedentary_subjects_guarantee_religious_freedom_desc:0 ""
- nomad_becomes_monarchy_reform:0 "Nomad Monarchy"
+ nomad_becomes_monarchy_reform:0 "Nomad Monarchy" 
  nomad_becomes_monarchy_reform_desc:0 ""
  nomad_reform_dif:0 "Keep Nomadic Traditions"
  nomad_reform_dif_desc:0 ""
@@ -228,9 +230,9 @@
  absulute_power_of_huntaiji_desc:0 ""
 
  #Rebels
- shun_rebels_name:0 "Shun Rebels"
- shun_rebels_desc:0 "Shun Rebels"
- shun_rebels_army:0 "Shun Rebels"
+ #shun_rebels_name:0 "Shun Rebels"
+ #shun_rebels_desc:0 "Shun Rebels"
+ #shun_rebels_army:0 "Shun Rebels"
 
  #Opinion modifiers
  opposed_unification:0 "Opposed Unification"
