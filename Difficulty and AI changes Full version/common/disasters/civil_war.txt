@@ -7,6 +7,7 @@ civil_war = {
 			is_capital = no
 		}
 		government = monarchy
+		NOT = { has_government_attribute = nomad }
 		is_free_or_tributary_trigger = yes
 		uses_doom = no
 		NOT = { has_country_flag = had_civil_war }

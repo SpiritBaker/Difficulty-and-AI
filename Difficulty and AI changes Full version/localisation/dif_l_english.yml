@@ -234,3 +234,7 @@
 
  #Opinion modifiers
  opposed_unification:0 "Opposed Unification"
+ 
+ #Steppe civil war
+ steppe_civil_war:0 "Steppe Civil War"
+ desc_steppe_civil_war:0 "The nation has effectively split in two, with brother fighting against brother. A house divided against itself cannot stand."

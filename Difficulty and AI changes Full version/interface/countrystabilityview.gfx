@@ -92,6 +92,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_disaster_steppe_civil_war"
+		texturefile = "gfx//interface//disasters//civil_war.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
 		name = "GFX_disaster_court_and_country"
 		texturefile = "gfx//interface//disasters//court_and_country.dds"
 		noOfFrames = 3
