@@ -163,6 +163,25 @@ sedentary_subdjects = {
 	}
 
 	agendas = {
+		sedentary_subdjects_build_trade_building_in_y
+		sedentary_subdjects_build_port_building_in_y
+		sedentary_subdjects_build_production_building_in_y
+		sedentary_subdjects_build_manufactory_in_y
+		sedentary_subdjects_build_university_in_y
+		sedentary_subdjects_develop_x
+		sedentary_subdjects_hire_advisor
+		sedentary_subdjects_fire_advisor
+		sedentary_subdjects_pay_off_loans
+		sedentary_subdjects_restore_currency
+		sedentary_subdjects_recovery_from_hyperinflation
+		sedentary_subdjects_increase_trade_power_in_X
+		sedentary_subdjects_access_sea
+		sedentary_subdjects_improve_dip_rep
+		sedentary_subdjects_get_cash
+		sedentary_subdjects_silk_trade
+		sedentary_subdjects_spice_trade
+		sedentary_subdjects_tea_trade
+		sedentary_subdjects_reduce_corruption
 	}
 
 	influence_from_dev_modifier = 1.0

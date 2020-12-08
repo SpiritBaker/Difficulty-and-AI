@@ -169,8 +169,8 @@ estate_nomadic_tribes = {
 		estate_nomadic_tribes_recover_stability
 		estate_nomadic_tribes_increase_stability
 		estate_nomadic_tribes_despoil_x
-		estate_nomadic_tribes_hire_advisor
-		estate_nomadic_tribes_fire_advisor
+		#estate_nomadic_tribes_hire_advisor
+		#estate_nomadic_tribes_fire_advisor
 	}
 
 	color = { 50 150 50 }
