@@ -236,3 +236,13 @@
 
  #Opinion modifiers
  opposed_unification:0 "Opposed Unification"
+
+ #Agendas
+ estate_privileges_and_agendas_events.3.y:0 "The proposal of the Nomadic Aristocracy"
+ estate_privileges_and_agendas_events.3.z:0 "The proposal of the Sedentary Subdjects"
+ nomadic_aristocracy_build_army_building_in_y:0 ""Expand Military Infrastructure in [agenda_province.GetName]""
+ nomadic_aristocracy_build_army_building_in_y_desc:0 ""The Aristocracy of [agenda_province.GetName] urge us to build new army training and recruitment centers in the province so that our supply of high-quality recruits to the army may be made more secure.""
+ nomadic_aristocracy_build_fort_building_in_y:0 "Fortify [agenda_province.GetName]"
+ nomadic_aristocracy_build_fort_building_in_y_desc:0 "The Aristocracy call for us to strengthen our fortifications in [agenda_province.GetName]. They argue that it is imperative we protect this key strategic position from attack."
+ nomadic_aristocracy_build_manufactory_in_y:0 ""
+ nomadic_aristocracy_build_manufactory_in_y_desc:0 ""

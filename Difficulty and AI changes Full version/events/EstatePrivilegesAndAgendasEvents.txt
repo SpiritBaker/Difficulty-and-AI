@@ -736,12 +736,12 @@ country_event = {
 		}
 	}
 	option = {
-		name = estate_privileges_and_agendas_events.3.j
+		name = estate_privileges_and_agendas_events.3.y
 		trigger = { has_country_flag = nomadic_aristocracy_present_agenda }
 		start_estate_agenda = nomadic_aristocracy
 	}
 	option = {
-		name = estate_privileges_and_agendas_events.3.k
+		name = estate_privileges_and_agendas_events.3.z
 		trigger = { has_country_flag = sedentary_subdjects_present_agenda }
 		start_estate_agenda = sedentary_subdjects
 	}
