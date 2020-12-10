@@ -1,40 +1,30 @@
 steppe_civil_war = {
 	potential = {
-		#num_of_cities = 5
+		total_development = 100
 		any_owned_province = {
 			any_core_country = {
 				exists = no
 			}
 			is_capital = no
 		}
-		#government = monarchy
 		has_government_attribute = nomad
 		is_free_or_tributary_trigger = yes
-		#uses_doom = no
 		NOT = { has_ruler_flag = steppe_civil_war }
 	}
-
-	
 	
 	can_start = {
 		has_any_disaster = no
 		has_regency = no
-		#average_home_autonomy = 30
-		NOT = { horde_unity = 90 }
-		NOT = { months_of_ruling = 12 }
+		NOT = { months_of_ruling = 120 }
 	}
-	
 	
 	can_stop = {
 		OR = {
 			has_any_disaster = yes
-			horde_unity = 100
 			has_regency = yes
-			has_ruler_flag = steppe_civil_war
+			months_of_ruling = 120
 		}
 	}
-		
-	
 	
 	progress = {
 		modifier = {
@@ -56,30 +46,20 @@ steppe_civil_war = {
 		modifier = {
 			factor = 1
 			overextension_percentage = 0.10
-		}		
-		#modifier = {
-		#	factor = 2
-		#	revolt_percentage = 0.10
-		#}
+		}
 		modifier = {
 			factor = 0.5
 			NOT = { stability = 0 }
-		}		
+		}
 	}
-	
-	
 	
 	can_end = {
-		#horde_unity = 100
-		#NOT = { has_spawned_rebels = pretender_rebels }
-		has_ruler_flag = steppe_civil_war
+		NOT = { has_spawned_rebels = pretender_rebels }
 	}
 	
-
 	modifier = {
-		#global_unrest = 10
-	}	
-	
+		global_unrest = 1
+	}
 	
 	on_start = steppe_civil_war.1
 	on_end = steppe_civil_war.100
