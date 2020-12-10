@@ -524,8 +524,7 @@ mongol_missions_3 = {
 			has_matching_religion = vajrayana
 		}
 		effect = {
-			change_religion = vajrayana
-			country_event = { id = dif_buddhist_missions.1 }
+			country_event = { id = dif_nomad_events.1 }
 		}
 	}
 	mongols_religion_mission = {

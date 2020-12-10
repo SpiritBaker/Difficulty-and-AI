@@ -214,3 +214,29 @@ prestige = {
 	nomadic_aristocracy_loyalty_modifier = 0.05
 	sedentary_subdjects_loyalty_modifier = 0.05
 }
+
+########################################
+# Karma
+########################################
+
+karma_just_right =
+{
+	diplomatic_reputation = 2
+	discipline = 0.025
+}
+
+karma_too_high =
+{
+	diplomatic_reputation = 1
+}
+
+karma_too_low =
+{
+	land_morale = 0.05
+	diplomatic_reputation = -1
+}
+
+# Caps at 600
+horde_development = {
+	horde_unity = -2
+}

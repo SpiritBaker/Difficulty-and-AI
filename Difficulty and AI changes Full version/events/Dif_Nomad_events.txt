@@ -2,29 +2,29 @@ namespace = dif_nomad_events
 # Nomad conversion 
 country_event = {
 	id = dif_nomad_events.1
-	title = "dif_nomad_events.1.t"
-	desc = "dif_nomad_events.1.d"
+	title = dif_nomad_events.1.t
+	desc = dif_nomad_events.1.d
 	picture = RELIGION_eventPicture
 	
 	fire_only_once = yes
 	
 	is_triggered_only = yes
 	
-	option = { # Militant converts
-		name = "dif_nomad_events.1.a"
-		add_country_modifier = {
-			name = "religious_fervor"
-			duration = 18250
-		}
-		add_karma = -5
-	}
-	option = { # Invite Tibetan monks
-		name = "dif_nomad_events.1.b"
+	option = { # Change Religion & Invite Tibetan monks
+		name = dif_nomad_events.1.a
+		change_religion = vajrayana
 		add_country_modifier = {
 			name = "tibetan_missionaries"
-			duration = 18250
+			duration = 9125
 		}
-		add_karma = 5
+		hidden_effect = {
+			add_prestige = 75
+		}
+	}
+	option = { # Traditional ways
+		name = dif_nomad_events.1.b
+		add_stability = 1
+		add_prestige = 15
 	}
 }
 
