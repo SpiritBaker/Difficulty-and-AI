@@ -1192,8 +1192,7 @@ HAB_ideas = {
 CHI_ideas = {
 	start = {
 		fort_maintenance_modifier = -0.2
-		improve_relation_modifier = 0.3
-		
+		improve_relation_modifier = 0.25
 	}
 	
 	bonus = {

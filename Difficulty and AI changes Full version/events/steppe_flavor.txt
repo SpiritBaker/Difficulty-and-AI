@@ -511,6 +511,15 @@ country_event = {
 		ai_chance = { factor = 33 }
 		if = {
 			limit = {
+				has_estate = nomadic_aristocracy
+			}
+			add_estate_loyalty = {
+				estate = nomadic_aristocracy
+				loyalty = 10
+			}
+		}
+		if = {
+			limit = {
 				has_estate = estate_nomadic_tribes
 			}
 			add_estate_loyalty = {
@@ -523,6 +532,15 @@ country_event = {
 	option = {
 		name = "randomeventsstapehordes.9.EVTOPTB"
 		ai_chance = { factor = 33 }
+		if = {
+			limit = {
+				has_estate = nomadic_aristocracy
+			}
+			add_estate_loyalty = {
+				estate = nomadic_aristocracy
+				loyalty = 10
+			}
+		}
 		if = {
 			limit = {
 				has_estate = estate_nomadic_tribes
@@ -558,10 +576,10 @@ country_event = {
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
-				has_estate = estate_nomadic_tribes
+				has_estate = nomadic_aristocracy
 			}
 			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				loyalty = 10
 			}
 		}
@@ -592,10 +610,10 @@ country_event = {
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
-				has_estate = estate_nomadic_tribes
+				has_estate = nomadic_aristocracy
 			}
 			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				loyalty = -10
 			}
 		}
@@ -626,6 +644,15 @@ country_event = {
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
+				has_estate = nomadic_aristocracy
+			}
+			add_estate_loyalty = {
+				estate = nomadic_aristocracy
+				loyalty = 10
+			}
+		}
+		if = {
+			limit = {
 				has_estate = estate_nomadic_tribes
 			}
 			add_estate_loyalty = {
@@ -634,7 +661,7 @@ country_event = {
 			}
 		}
 		add_prestige = 15
-		add_yearly_manpower = 0.1
+		add_yearly_manpower = 1
 	}
 }
 
@@ -748,7 +775,7 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				modifier = EST_VAL_RANDOMSTEPPE_LEADER
 			}
 		}
@@ -761,15 +788,15 @@ country_event = {
 		create_general = { tradition = 50 }
 		if = {
 			limit = {
-				has_estate = estate_nomadic_tribes
+				has_estate = nomadic_aristocracy
 			}
 			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				loyalty = 15
 			}
 			add_estate_influence_modifier = {
 				desc = EST_VAL_RANDOMSTEPPE_LEADER
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				influence = 10
 				duration = 3650
 			}
@@ -781,20 +808,20 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0
-				has_estate = estate_nomadic_tribes
+				has_estate = nomadic_aristocracy
 				NOT = {
 					estate_loyalty = {
-						estate = estate_nomadic_tribes
+						estate = nomadic_aristocracy
 						loyalty = 40
 					}
 				}
 			}
 		}
 		trigger = {
-			has_estate = estate_nomadic_tribes
+			has_estate = nomadic_aristocracy
 		}
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			loyalty = -15
 		}
 	}
@@ -820,7 +847,7 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				modifier = EST_VAL_RANDOMSTEPPE_LEADER
 			}
 		}
@@ -833,7 +860,7 @@ country_event = {
 			modifier = {
 				factor = 0.25
 				estate_influence = {
-					estate = estate_nomadic_tribes
+					estate = nomadic_aristocracy
 					influence = 60
 				}
 			}
@@ -842,15 +869,15 @@ country_event = {
 		create_general = { tradition = 75 }
 		if = {
 			limit = {
-				has_estate = estate_nomadic_tribes
+				has_estate = nomadic_aristocracy
 			}
 			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				loyalty = 15
 			}
 			add_estate_influence_modifier = {
 				desc = EST_VAL_RANDOMSTEPPE_LEADER
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				influence = 10
 				duration = 3650
 			}
@@ -862,20 +889,20 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0
-				has_estate = estate_nomadic_tribes
+				has_estate = nomadic_aristocracy
 				NOT = {
 					estate_loyalty = {
-						estate = estate_nomadic_tribes
+						estate = nomadic_aristocracy
 						loyalty = 40
 					}
 				}
 			}
 		}
 		trigger = {
-			has_estate = estate_nomadic_tribes
+			has_estate = nomadic_aristocracy
 		}
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			loyalty = -15
 		}
 	}
@@ -1005,9 +1032,9 @@ country_event = {
 		ai_chance = { factor = 100 }
 		add_prestige = -10
 		if = {
-			limit = { has_estate = estate_nomadic_tribes }
+			limit = { has_estate = nomadic_aristocracy }
 			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				loyalty = -10
 			}
 		}
@@ -1042,9 +1069,9 @@ country_event = {
 		add_horde_unity = -5
 		add_prestige = -10
 		if = {
-			limit = { has_estate = estate_nomadic_tribes }
+			limit = { has_estate = nomadic_aristocracy }
 			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				loyalty = -10
 			}
 		}
@@ -1078,9 +1105,9 @@ country_event = {
 		ai_chance = { factor = 100 }
 		add_army_tradition = -5
 		if = {
-			limit = { has_estate = estate_nomadic_tribes }
+			limit = { has_estate = nomadic_aristocracy }
 			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				loyalty = -10
 			}
 		}
@@ -1117,11 +1144,11 @@ country_event = {
 		name = "randomeventsstapehordes.23.EVTOPTA"
 		ai_chance = { factor = 100 }
 		add_prestige = -2		
-		add_yearly_manpower = -0.2
+		add_yearly_manpower = -0.5
 		if = {
-			limit = { has_estate = estate_nomadic_tribes }
+			limit = { has_estate = nomadic_aristocracy }
 			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 				loyalty = -10
 			}
 		}

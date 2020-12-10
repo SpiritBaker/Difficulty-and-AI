@@ -111,6 +111,8 @@
  paying_additional_tribute_m:0 "Additional Tribute"
  nomads_special_trade_rights_m:0 "Trade Rights"
  uzbek_grand_host:0 "Grand Host"
+ amur_estuary_modifier:0 "Amur Estuary"
+ desc_amur_estuary_modifier:0 "Controlling the important river estuary of the Amur strengthens our hold of the trade in the region."
 
  #Mission
  mongols_unity_through_faith_title:0 "Unity Through Faith"

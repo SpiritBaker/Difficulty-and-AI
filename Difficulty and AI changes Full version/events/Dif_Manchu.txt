@@ -327,7 +327,7 @@ country_event = {
 	desc = "dif_manchu.EVTDESC4"
 	picture = LAND_MILITARY_eventPicture
 	
-	fire_only_once = yes
+	#fire_only_once = yes
 	
 	trigger = {
 		OR = {
@@ -348,6 +348,10 @@ country_event = {
 				}
 			}
 			war_with = MNG
+		}
+		MNG = {
+			is_emperor_of_china = yes
+			ai = yes
 		}
 		exists = MNG
 		NOT = { vassal_of = MNG }
@@ -391,10 +395,15 @@ country_event = {
 	
 	option = {
 		name = "dif_manchu.EVTOPTA4"
-		add_country_modifier = {
-			name = "manchu_conqest_of_china_ai"
-			duration = 9125
-			#desc = 
+		if = {
+			limit = {
+				NOT = { has_country_modifier = manchu_conqest_of_china_ai }
+			}
+			add_country_modifier = {
+				name = "manchu_conqest_of_china_ai"
+				duration = 9125
+				#desc = 
+			}
 		}
 		if = {
 			limit = {
@@ -402,7 +411,7 @@ country_event = {
 			}
 			declare_war_with_cb = {
 				who = MNG
-				casus_belli = cb_horde_vs_civ
+				casus_belli = cb_take_mandate
 			}
 		}
 		if = {
@@ -499,6 +508,50 @@ country_event = {
 					who = ROOT
 					modifier = opposed_unification
 				}
+			}
+		}
+	}
+}
+
+country_event = { #AI only event
+	id = dif_manchu.6
+	title = "dif_manchu.EVTNAME6"
+	desc = "dif_manchu.EVTDESC6"
+	picture = LAND_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		MHX = {
+			ai = yes
+		}
+		tag = MJZ
+		ai = yes
+		NOT = { is_year = 1445 }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "dif_manchu.EVTOPTA6"
+		if = {
+			limit = {
+				is_at_war = no
+			}
+			declare_war_with_cb = {
+				who = MHX
+				casus_belli = cb_tribal_feud
+				war_goal_province = 730
+			}
+		}
+		capital_scope = {
+			PREV = {
+				infantry = PREV
+				infantry = PREV
+				infantry = PREV
+				infantry = PREV
 			}
 		}
 	}

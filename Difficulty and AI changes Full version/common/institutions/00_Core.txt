@@ -265,6 +265,7 @@ feudalism = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -550,6 +551,7 @@ renaissance = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -858,6 +860,7 @@ new_world_i = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -1229,6 +1232,7 @@ printing_press = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -1559,6 +1563,7 @@ global_trade = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2084,6 +2089,7 @@ manufactories = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2488,6 +2494,7 @@ enlightenment = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -3167,6 +3174,7 @@ industrialization = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {

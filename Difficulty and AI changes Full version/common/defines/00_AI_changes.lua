@@ -145,7 +145,7 @@ NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if 
 NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 1	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
 NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
 NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 0
-NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 2  --Multiplies with strategic interest of making them our Tributary.
+NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 5  --Multiplies with strategic interest of making them our Tributary.
 
 NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 7.5	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
 

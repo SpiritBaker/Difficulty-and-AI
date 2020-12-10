@@ -222,7 +222,7 @@ prestige = {
 karma_just_right =
 {
 	diplomatic_reputation = 2
-	discipline = 0.025
+	discipline = 0.03
 }
 
 karma_too_high =
