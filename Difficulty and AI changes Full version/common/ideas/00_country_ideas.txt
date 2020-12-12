@@ -2178,16 +2178,16 @@ MCH_ideas = {
 		global_institution_spread = 0.15
 		stability_cost_modifier = -0.1
 	}
+	manchu_chinese_learning = {
+		technology_cost = -0.05
+	}
+	link_with_the_mongol_dynasty = {
+		cavalry_power = 0.15
+	}
 	the_later_jin = {
 		horde_unity = 1
 		legitimacy = 1
 	}	
-	link_with_the_mongol_dynasty = {
-		cavalry_power = 0.15
-	}
-	manchu_chinese_learning = {
-		mil_tech_cost_modifier = -0.1
-	}
 	seven_grievances = {
 		ae_impact = -0.1
 	}
