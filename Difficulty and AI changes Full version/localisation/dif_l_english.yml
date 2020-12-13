@@ -338,3 +338,16 @@
  estate_privileges_and_agendas_events.3.y:0 "The Proposal of the Noyans"
  estate_privileges_and_agendas_events.3.z:0 "The Proposal of our Sedentary Subjects"
  
+ #Triggered Modifiers
+ consort_adm_bonus:0 "Consort's Administrative Assistance"
+ desc_consort_adm_bonus:0 "[Root.Consort.GetTitle] [Root.Consort.GetName]'s administrative skill far exceeds the [Root.Monarch.GetTitle]'s and [Root.Consort.GetHerHis] assistance with administration is of great importance."
+ consort_adm_bonus_tt:0 "[Root.Consort.GetTitle] §Y[Root.Consort.GetName]§! has at least §Y2§! more Administrative Skill than [Root.Monarch.GetTitle] §Y[Root.Monarch.GetName]§!"
+ 
+ consort_dip_bonus:0 "Consort's Diplomatic Assistance"
+ desc_consort_dip_bonus:0 "[Root.Consort.GetTitle] [Root.Consort.GetName]'s diplomatic skill far exceeds the [Root.Monarch.GetTitle]'s and [Root.Consort.GetHerHis] assistance with diplomacy is of great importance."
+ consort_dip_bonus_tt:0 "[Root.Consort.GetTitle] §Y[Root.Consort.GetName]§! has at least §Y2§! more Diplomatic Skill than [Root.Monarch.GetTitle] §Y[Root.Monarch.GetName]§!"
+ 
+ consort_mil_bonus:0 "Consort's Military Assistance"
+ desc_consort_mil_bonus:0 "[Root.Consort.GetTitle] [Root.Consort.GetName]'s military skill far exceeds the [Root.Monarch.GetTitle]'s and [Root.Consort.GetHerHis] assistance with militarization is of great importance."
+ consort_mil_bonus_tt:0 "[Root.Consort.GetTitle] §Y[Root.Consort.GetName]§! has at least §Y2§! more Military Skill than [Root.Monarch.GetTitle] §Y[Root.Monarch.GetName]§!"
+ 
