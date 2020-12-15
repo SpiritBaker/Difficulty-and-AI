@@ -260,7 +260,7 @@ feudalism = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.25
 			scale = yes
 			potential = {
 				owner = {
@@ -546,7 +546,7 @@ renaissance = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.25
 			scale = yes
 			potential = {
 				owner = {
@@ -568,7 +568,7 @@ renaissance = {
 			}
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.25
 			scale = yes
 			potential = {
 				owner = {
@@ -855,7 +855,7 @@ new_world_i = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.2
 			scale = yes
 			potential = {
 				owner = {

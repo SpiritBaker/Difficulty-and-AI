@@ -98,10 +98,7 @@ country_event = {
 	picture = BIG_BOOK_eventPicture
 
 	trigger = {
-		OR = {
-			has_institution = renaissance
-			religion = orthodox
-		}
+		is_institution_enabled = renaissance
 		religion_group = christian
 		current_age = age_of_discovery
 		NOT = {
