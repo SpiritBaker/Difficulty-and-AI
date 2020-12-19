@@ -543,6 +543,7 @@ offensive_ideas = {
 		modifier = {
 			factor = 1.5
 			has_idea_group = economic_ideas
+			mil_tech = 16
 		}
 		modifier = {
 			factor = 1.5
@@ -817,6 +818,10 @@ economic_ideas = {
 		modifier = {
 			factor = 1.5
 			has_idea_group = offensive_ideas
+		}
+		modifier = {
+			factor = 5
+			has_idea_group = exploration_ideas
 		}
 		modifier = {
 			factor = 1.5
@@ -1183,6 +1188,10 @@ quality_ideas = {
 			}
 		}
 		modifier = {
+			factor = 5
+			is_subject_of_type = march
+		}
+		modifier = {
 			factor = 1.5
 			has_idea_group = economic_ideas
 		}
@@ -1331,7 +1340,7 @@ expansion_ideas = {
 			tag = POR
 		}
 		modifier = {
-			factor = 2.5
+			factor = 3
 			OR = {
 				tag = CAS
 				tag = SPA
@@ -1380,14 +1389,6 @@ expansion_ideas = {
 			OR = {
 				technology_group = chinese
 				technology_group = muslim
-			}
-		}
-		modifier = {
-			factor = 0
-			AND = {
-				adm_tech = 22
-				NOT = { is_colonial_nation = yes }
-				NOT = { is_former_colonial_nation = yes }
 			}
 		}
 	}

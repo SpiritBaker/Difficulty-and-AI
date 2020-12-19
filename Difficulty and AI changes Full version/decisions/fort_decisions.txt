@@ -1,5 +1,5 @@
-country_decisions = {
-	build_forts = {
+country_decisions = { 
+	build_forts = { #fort upgrade
 		major = yes
 		
 		potential = {
@@ -676,7 +676,7 @@ country_decisions = {
 		}
 	}
 	
-	remove_forts = {
+	remove_forts = { #removing forts
 		major = yes
 		
 		potential = {
