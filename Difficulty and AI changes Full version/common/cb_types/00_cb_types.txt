@@ -326,6 +326,9 @@ cb_core = {
 		core_claim = FROM
 	}
 
+	attacker_disabled_po = {
+		po_become_tributary_state
+	}
 	war_goal = take_core
 }
 

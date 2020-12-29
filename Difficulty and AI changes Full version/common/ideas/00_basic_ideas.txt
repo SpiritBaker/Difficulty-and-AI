@@ -577,12 +577,13 @@ defensive_ideas = {
 
 	battlefield_commisions = {
 		army_tradition_from_battle = 1.0
+		army_tradition = 0.25
 	}
 	military_drill = {
 		land_morale = 0.15
 	}
 	improved_manuever = {
-		shock_damage_received = -0.05
+		shock_damage_received = -0.1
 		leader_land_manuever = 1
 	}
 	regimental_system = {
@@ -1557,6 +1558,10 @@ humanist_ideas = {
 		modifier = {
 			factor = 1.5
 			has_idea_group = offensive_ideas
+		}
+		modifier = {
+			factor = 0.5
+			is_nomad = yes
 		}
 	}
 }

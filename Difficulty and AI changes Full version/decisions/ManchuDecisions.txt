@@ -164,7 +164,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 704		# Liaoxi
-				province_id = 723		# Xilin Gol
+				#province_id = 723		# Xilin Gol
 				province_id = 726		# Liaodong
 				province_id = 1816		# Beijing
 			}
@@ -172,7 +172,7 @@ country_decisions = {
 		}
 		allow = {
 			owns = 704		# Liaoxi
-			owns = 723		# Xilin Gol
+			#owns = 723		# Xilin Gol
 			owns = 726		# Liaodong
 			owns = 1816		# Beijing
 			is_at_war = no
@@ -251,6 +251,10 @@ country_decisions = {
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 3650
+			}
+			add_country_modifier = {
+				name = "successful_bureaucracy"
+				duration = 5475
 			}
 			if = {
 				limit = {

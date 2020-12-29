@@ -334,7 +334,7 @@ country_event = {
 			AND = {
 				is_at_war = no
 				is_bankrupt = no
-				total_development = 250
+				total_development = 300
 				NOT = { truce_with = MNG }
 				NOT = { alliance_with = MNG }
 				any_owned_province = { 
@@ -358,7 +358,6 @@ country_event = {
 		tag = MCH
 		ai = yes
 		OR = {
-			is_year = 1500
 			MNG = { has_any_disaster = yes }
 			has_ruler_flag = nurhaci_ruler_flag
 		}
@@ -388,7 +387,7 @@ country_event = {
 			MNG = { has_any_disaster = yes }
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.75
 			exists = CSH
 		}
 	}
