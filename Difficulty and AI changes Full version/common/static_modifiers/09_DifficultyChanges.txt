@@ -10,7 +10,7 @@ difficulty_hard_ai = {
 
 difficulty_very_hard_ai = {
 	manpower_recovery_speed = 0.20
-	global_manpower_modifier = 0.50
+	global_manpower_modifier = 0.25
 	land_forcelimit_modifier = 0.25
 	naval_forcelimit_modifier = 0.25
 	inflation_reduction = 0.05

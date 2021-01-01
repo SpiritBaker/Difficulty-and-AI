@@ -15,6 +15,7 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_nomadic_tribes
+		has_estate = sedentary_subdjects
 		num_of_cities = 5
 		estate_territory = { 
 			estate = estate_nomadic_tribes
@@ -83,6 +84,10 @@ country_event = {
 			}
 		}
 		add_estate_loyalty = {
+			estate = sedentary_subdjects
+			loyalty = 10
+		}
+		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = -15
 		}
@@ -148,6 +153,10 @@ country_event = {
 		}
 		every_owned_province = {
 			clr_province_flag = conflict_regarding_tax_collection
+		}
+		add_estate_loyalty = {
+			estate = sedentary_subdjects
+			loyalty = -10
 		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
@@ -263,7 +272,7 @@ country_event = {
 
 
 
-# Local Chiefs Complain
+# Local Chiefs Complain #mark
 country_event = {
 	id = tribal_estate_events.4
 	title = tribal_estate_events.4.t
@@ -288,7 +297,7 @@ country_event = {
 				factor = 2.0
 				NOT = {
 					estate_loyalty = {
-						estate = estate_nomadic_tribes
+						estate = nomadic_aristocracy
 						loyalty = 40
 					}
 				}
@@ -296,7 +305,7 @@ country_event = {
 		}
 		add_army_tradition = -10
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			loyalty = 15
 		}
 
@@ -309,7 +318,7 @@ country_event = {
 				factor = 0.25
 				NOT = {
 					estate_loyalty = {
-						estate = estate_nomadic_tribes
+						estate = nomadic_aristocracy
 						loyalty = 40
 					}
 				}
@@ -317,7 +326,7 @@ country_event = {
 		}
 		add_army_tradition = 10
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			loyalty = -15
 		}
 	}
@@ -349,7 +358,7 @@ country_event = {
 				factor = 2.0
 				NOT = {
 					estate_loyalty = {
-						estate = estate_nomadic_tribes
+						estate = nomadic_aristocracy
 						loyalty = 40
 					}
 				}
@@ -357,7 +366,7 @@ country_event = {
 		}
 		add_prestige = -10
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			loyalty = 15
 		}
 
@@ -370,7 +379,7 @@ country_event = {
 				factor = 0.25
 				NOT = {
 					estate_loyalty = {
-						estate = estate_nomadic_tribes
+						estate = nomadic_aristocracy
 						loyalty = 40
 					}
 				}
@@ -378,7 +387,7 @@ country_event = {
 		}
 		add_years_of_income = 0.25
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			loyalty = -15
 		}		
 	}
@@ -467,6 +476,7 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_nomadic_tribes
+		has_estate = nomadic_aristocracy
 		NOT = { army_tradition = 30 }
 		NOT = {
 			has_estate_influence_modifier = {
@@ -525,7 +535,13 @@ country_event = {
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = -10
-		}		
+		}
+		add_estate_influence_modifier = {
+			estate = nomadic_aristocracy
+			desc = EST_VAL_ARISTOCRATIC_ARMY #EST_VAL_ARISTOCRATIC_ARMY:0 "Traditional Ways: §Y$VAL$%§!"
+			influence = 10
+			duration = 7300
+		}			
 	}
 }
 
@@ -538,8 +554,13 @@ country_event = {
 	picture = NOMAD_ESTATE_eventPicture
 	
 	trigger = {
+		OR = {
+			is_nomad = yes
+			government = monarchy
+		}
 		has_estate = estate_nomadic_tribes
-		NOT = { horde_unity = 70 }
+		has_estate = nomadic_aristocracy
+		NOT = { legitimacy_or_horde_unity = 70 }
 		NOT = {
 			has_estate_influence_modifier = {
 				estate = estate_nomadic_tribes
@@ -570,7 +591,15 @@ country_event = {
 				}
 			}
 		}
-		add_horde_unity = 20
+		if = {
+			limit = {
+				is_nomad = yes
+			}
+			add_horde_unity = 20
+		}
+		else = {
+			add_legitimacy = 15
+		}
 		add_estate_influence_modifier = {
 			estate = estate_nomadic_tribes
 			desc = EST_VAL_TRIBES_UNITY
@@ -632,7 +661,16 @@ country_event = {
 			name = the_proper_old_ways
 			duration = 3650
 		}
-
+		add_estate_loyalty = {
+			estate = sedentary_subdjects
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = sedentary_subdjects
+			desc = EST_VAL_UNHAPPY_SUBJECTS #EST_VAL_UNHAPPY_SUBJECTS:0 "Old Ways: §Y$VAL$%§!"
+			influence = -10
+			duration = 7300
+		}	
 	}
 	option = {
 		name = tribal_estate_events.9.b
@@ -669,7 +707,7 @@ province_event = {
 	}
 }
 
-#Nomadic Tribes Demand weak candidate to be next in line to be Khan
+#Nomadic Tribes Demand weak candidate to be next in line to be Khan #potentially can be changed
 #Demands at High Influence
 country_event = {
 	id = tribal_estate_events.11
@@ -679,11 +717,18 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_nomadic_tribes
+		has_estate = nomadic_aristocracy
 		has_regency = no
 		has_government_attribute = heir
-		estate_influence = {
-			estate = estate_nomadic_tribes
-			influence = 70
+		OR = {
+			estate_influence = {
+				estate = estate_nomadic_tribes
+				influence = 70
+			}
+			estate_influence = {
+				estate = nomadic_aristocracy
+				influence = 70
+			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
@@ -719,11 +764,27 @@ country_event = {
 			claim = 15
 			age = 45
 		}
-		add_estate_influence_modifier = {
-			desc = EST_VAL_KINGMAKERS
-			estate = estate_nomadic_tribes
-			influence = 10
-			duration = 3650
+		if = {
+			limit = {
+				estate_influence = {
+					estate = nomadic_aristocracy
+					influence = 70
+				}
+			}
+			add_estate_influence_modifier = {
+				desc = EST_VAL_KINGMAKERS 
+				estate = nomadic_aristocracy
+				influence = 10
+				duration = 3650
+			}
+		}
+		else = {
+			add_estate_influence_modifier = {
+				desc = EST_VAL_KINGMAKERS
+				estate = estate_nomadic_tribes
+				influence = 10
+				duration = 3650
+			}
 		}
 	}
 	option = {
@@ -740,15 +801,35 @@ country_event = {
 				}
 			}
 		}
-		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
-			loyalty = -20
+		if = {
+			limit = {
+				estate_influence = {
+					estate = nomadic_aristocracy
+					influence = 70
+				}
+			}
+			add_estate_loyalty = {
+				estate = nomadic_aristocracy
+				loyalty = -10
+			}
+			add_estate_influence_modifier = {
+				desc = EST_VAL_REFUSED_TO_ALTER_SUCCESSION
+				estate = nomadic_aristocracy
+				influence = -10
+				duration = 3650
+			}
 		}
-		add_estate_influence_modifier = {
-			desc = EST_VAL_REFUSED_TO_ALTER_SUCCESSION
-			estate = estate_nomadic_tribes
-			influence = -10
-			duration = 3650
+		else = {
+			add_estate_loyalty = {
+				estate = estate_nomadic_tribes
+				loyalty = -10
+			}
+			add_estate_influence_modifier = {
+				desc = EST_VAL_REFUSED_TO_ALTER_SUCCESSION
+				estate = estate_nomadic_tribes
+				influence = -10
+				duration = 3650
+			}
 		}
 	}
 }
@@ -822,7 +903,7 @@ country_event = {
 		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
-			loyalty = -20
+			loyalty = -15
 		}
 	}
 }
@@ -885,6 +966,10 @@ country_event = {
 						NOT = { has_province_flag = add_autonomy_tmp_flag }
 						is_capital = no
 						is_city = yes
+						OR = {
+							has_terrain = steppe
+							has_terrain = steppe_mountains
+						}
 					}
 				}
 				random_owned_province = {
@@ -892,6 +977,11 @@ country_event = {
 						NOT = { has_province_flag = add_autonomy_tmp_flag }
 						is_capital = no
 						is_city = yes
+						OR = {
+							has_terrain = steppe
+							has_terrain = steppe_mountains
+						}
+						
 					}
 					add_local_autonomy = 35
 					set_province_flag = add_autonomy_tmp_flag
@@ -927,7 +1017,7 @@ country_event = {
 		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
-			loyalty = -20
+			loyalty = -15
 		}
 	}
 	after = {
@@ -949,21 +1039,21 @@ country_event = {
 	picture = NOMAD_ESTATE_eventPicture
 	
 	trigger = {
-		has_estate = estate_nomadic_tribes
+		has_estate = nomadic_aristocracy
 		estate_influence = {
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			influence = 70
 		}
 		NOT = {
 			has_estate_influence_modifier = {
 				modifier = EST_VAL_TRIBES_DEMANDING
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
 				modifier = EST_VAL_TRIBES_REFUSED_DEMANDING
-				estate = estate_nomadic_tribes
+				estate = nomadic_aristocracy
 			}
 		}
 	}
@@ -985,7 +1075,7 @@ country_event = {
 		}
 		add_estate_influence_modifier = {
 			desc = EST_VAL_TRIBES_DEMANDING
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			influence = 10
 			duration = 1825
 		}
@@ -1006,13 +1096,13 @@ country_event = {
 		}
 		add_estate_influence_modifier = {
 			desc = EST_VAL_TRIBES_REFUSED_DEMANDING
-			estate = estate_nomadic_tribes
+			estate = nomadic_aristocracy
 			influence = -10
 			duration = 1825
 		}
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
-			loyalty = -20
+			estate = nomadic_aristocracy
+			loyalty = -15
 		}
 	}
 }

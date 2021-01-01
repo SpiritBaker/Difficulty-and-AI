@@ -44,7 +44,10 @@ country_event = {
 		else = {
 			tag = MCH
 		}
-		is_year = 1500
+		OR = {
+			is_year = 1500
+			tag = MCH
+		}
 		NOT = { is_year = 1800 }
 		NOT = { has_global_flag = nurhaci_spawned_flag }
 	}
@@ -54,6 +57,10 @@ country_event = {
 		modifier = {
 			factor = 2
 			NOT = { is_year = 1525 }
+		}
+		modifier = {
+			factor = 0.5
+			tag = MCH
 		}
 		modifier = {
 			factor = 0.5
@@ -357,10 +364,8 @@ country_event = {
 		NOT = { vassal_of = MNG }
 		tag = MCH
 		ai = yes
-		OR = {
-			MNG = { has_any_disaster = yes }
-			has_ruler_flag = nurhaci_ruler_flag
-		}
+		MNG = { has_any_disaster = yes }
+		#has_ruler_flag = nurhaci_ruler_flag
 		NOT = { is_year = 1675 }
 	}
 	
@@ -380,7 +385,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.25
-			NOT = { imperial_mandate = 25 }
+			NOT = { imperial_mandate = 20 }
 		}
 		modifier = {
 			factor = 0.25

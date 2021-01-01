@@ -870,7 +870,10 @@ muslim = {
 				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = hanafi_scholar_modifier duration = 9125‬ }
+				add_country_modifier = { 
+					name = hanafi_scholar_modifier
+					duration = 9125
+				}	 
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -911,7 +914,10 @@ muslim = {
 				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = hanbali_scholar_modifier duration = 9125‬ }
+				add_country_modifier = { 
+					name = hanbali_scholar_modifier
+					duration = 9125
+				}	
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -951,7 +957,10 @@ muslim = {
 				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = maliki_scholar_modifier duration = 9125‬ }
+				add_country_modifier = { 
+					name = maliki_scholar_modifier
+					duration = 9125
+				}	
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -991,7 +1000,10 @@ muslim = {
 				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = shafii_scholar_modifier duration = 9125‬ }
+				add_country_modifier = { 
+					name = shafii_scholar_modifier
+					duration = 9125
+				}	
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1032,7 +1044,10 @@ muslim = {
 				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = ismaili_scholar_modifier duration = 9125‬ }
+				add_country_modifier = { 
+					name = ismaili_scholar_modifier
+					duration = 9125
+				}
 			}
 			
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1075,7 +1090,10 @@ muslim = {
 				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = jafari_scholar_modifier duration = 9125‬ }
+				add_country_modifier = { 
+					name = jafari_scholar_modifier
+					duration = 9125
+				}
 			}
 			
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1115,7 +1133,10 @@ muslim = {
 				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = zaidi_scholar_modifier duration = 9125‬ }
+				add_country_modifier = { 
+					name = zaidi_scholar_modifier
+					duration = 9125
+				}
 			}
 			
 			# If you don't set this it will expand on_invite_scholar effect which might be super big

@@ -27,6 +27,8 @@ NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35 --Development is divided by this factor, do not set to zero!
 NDefines.NEconomy.CARAVAN_FACTOR = 6.0							
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1
+NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER =  10   
+--NDefines.NEconomy.TRADE_PROPAGATE_THRESHOLD  =  2
 NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03125	--% each tech increases it. 100% increase at tech 32
 
 
@@ -139,10 +141,10 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 1 -- AI only wants war reparations if other country has at least this % of their income
 --NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.05  --AI desire for a province is multiplied by this if it is not on their conquest list.
 NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 10.0 -- AI desire for a province is multiplied by this if it has a core on it
-NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 5.0	--AI desire for a province is multiplied by this if it has a claim on it.
+NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 7.5	--AI desire for a province is multiplied by this if it has a claim on it.
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
-NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 1.1	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
+NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 1	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
 NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
 NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 0
 NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 4  --Multiplies with strategic interest of making them our Tributary.

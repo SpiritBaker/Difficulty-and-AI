@@ -122,8 +122,8 @@ aristocracy_ideas = {
 				tag = TUR
 				tag = MUG
 				tag = PER
-				tag = RUS
-				tag = MOS
+				#tag = RUS
+				#tag = MOS
 				tag = TRS
 				tag = BUK
 			}

@@ -874,11 +874,11 @@ regimental_camp = {
 	time = 12
 
 	modifier = {
-		land_forcelimit = 1
+		land_forcelimit = 0.75
 	}
 	
 	ai_will_do = {
-		factor = 0.8
+		factor = 1
 		modifier = {
 			factor = 0.8
 			has_port = yes
@@ -2085,7 +2085,7 @@ drydock = {
 ##########################
 
 conscription_center = {
-	cost = 350
+	cost = 400
 	time = 12
 	make_obsolete = regimental_camp
 
@@ -2094,7 +2094,7 @@ conscription_center = {
 	}
 	
 	ai_will_do = {
-		factor = 0.8
+		factor = 1
 		modifier = {
 			factor = 0.8
 			has_port = yes
