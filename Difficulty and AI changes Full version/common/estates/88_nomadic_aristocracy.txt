@@ -117,6 +117,7 @@ nomadic_aristocracy = {
 		estate_nomadic_aristocracy_guaranteed_leadgership
 		estate_nomadic_aristocracy_unrestricted_looting 
 		estate_nomadic_aristocracy_confirm_noble_right
+		estate_nomadic_aristocracy_statutory_rights
 	}
 
 	agendas = {

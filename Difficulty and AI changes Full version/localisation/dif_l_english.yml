@@ -172,6 +172,8 @@
  estate_nomadic_aristocracy_guaranteed_leadgership_desc:0 "Our nomadic aristocrats make fine leaders of men. We need look no further when seeking new generals for our armies."
  estate_nomadic_aristocracy_confirm_noble_right:0 "Confirm Noble Rights"
  estate_nomadic_aristocracy_confirm_noble_right_desc:0 ""
+ estate_nomadic_aristocracy_statutory_rights:0 "Estates Statutory Rights"
+ estate_nomadic_aristocracy_statutory_rights_desc:0 "In return for their support in a moment of need, the [Root.Monarch.GetTitle] has agreed to grant the Estates considerable rights that place stringent limitations on [Root.Monarch.GetHerHis] authority."
  estate_nomadic_aristocracy_primacy:0 "Primacy of the Noyans"
  sedentary_subdjects:0 "Sedentary Subjects"
  sedentary_subdjects_desc:0 "This estate represents City States and Farming communities that are nominally ruled by our Khan."
