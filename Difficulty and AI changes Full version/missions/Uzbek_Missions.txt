@@ -60,7 +60,7 @@ SHY_missions_1 = { #Uzbek
 		}
 	}
 	claim_rulership_over_samarkand = {
-		icon = mission_unite_home_region
+		icon = mission_central_asian_city
 		required_missions = { weakening_of_timurid_dynasty }
 		provinces_to_highlight = {
 			area = transoxiana_area
@@ -102,7 +102,7 @@ SHY_missions_1 = { #Uzbek
 		}
 	}
 	uzb_invade_herat = {
-		icon = mission_unite_home_region
+		icon = mission_arabian_fort
 		required_missions = { claim_rulership_over_samarkand }
 		provinces_to_highlight = {
 			area = transoxiana_area

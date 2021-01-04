@@ -532,7 +532,7 @@ manchu_missions_2 = {
 	}
 	has_country_shield = yes
 	struggle_among_jurchens_mission = { #new one
-		icon = mission_manchu_warrior
+		icon = mission_unite_home_region
 		required_missions = {  }
 		completed_by = 1616.1.1
 		ai_weight = {
