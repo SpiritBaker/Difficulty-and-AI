@@ -41,6 +41,16 @@ NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/D
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
 
 
+
+--NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
+--NDefines.NDiplomacy.TRIBUTE_BASE_ADM = 0.02  --Tributary State: Part Adm tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_BASE_DIP = 0.02	  --Tributary State: Part Dip tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
+NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
+--NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
+
+
 NDefines.NAI.SUBSIDY_YEARS = 20
 NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
 

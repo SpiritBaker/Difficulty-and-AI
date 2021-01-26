@@ -2085,7 +2085,7 @@ drydock = {
 ##########################
 
 conscription_center = {
-	cost = 400
+	cost = 350
 	time = 12
 	make_obsolete = regimental_camp
 
