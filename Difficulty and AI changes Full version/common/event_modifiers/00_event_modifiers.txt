@@ -1160,7 +1160,7 @@ navigator_boost = {
 }
 
 grand_captain_boost = {
-	land_morale = 0.20
+	land_morale = 0.15
 }
 
 army_organiser_boost = {
@@ -7747,6 +7747,7 @@ fought_back_the_hungarians = {
 
 #China:
 uniter_of_the_manchus = {
+	#horde_unity = 1
 	manpower_recovery_speed = 0.1
 	land_morale = 0.1
 }
@@ -10688,7 +10689,7 @@ warriors_do_not_read_books = {
 #EoC Rebalance
 
 new_mandate_holder = {
-	imperial_mandate = 0.05
+	imperial_mandate = 0.1
 }
 
 
@@ -11195,11 +11196,11 @@ colony_inspired_by_revolution = {
 
 estate_cossacks_prime_herding_rights_mod = {
 	local_tax_modifier = -0.5
-	local_manpower_modifier = 1
+	local_manpower_modifier = 0.33
 }
 
 estate_cossacks_exploration_expedition_mod = {
-	local_development_cost = -0.15
+	local_development_cost = -0.10
 }
 
 shortage_of_officers = {

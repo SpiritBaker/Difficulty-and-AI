@@ -9,3 +9,60 @@ cb_nationalist_rev = {
 
     war_goal = take_province_nationalist
 }
+
+dif_cb_khanate = {
+	valid_for_subject = no
+
+	prerequisites = {
+		is_neighbor_of = FROM
+		#FROM = {
+		#	is_nomad = no
+        #}
+        OR = {
+            has_reform = nomad_empire
+            has_reform = khanate_monarchy
+        }
+		is_revolutionary = no
+	}
+
+	war_goal = superiority_horde
+}
+
+# Reunification of China
+cb_manchu_unification = {
+	valid_for_subject = no
+
+	prerequisites = {
+        is_free_or_tributary_trigger = yes
+        OR = {
+            has_ruler_flag = nurhaci_ruler_flag
+            tag = MCH
+            tag = QNG
+        }
+		
+		FROM = { #Applies against other Manchu tribes
+			any_owned_province = {
+				region = manchuria_region
+			}
+            OR = {
+                primary_culture = manchu
+                primary_culture = manchu_new
+                primary_culture = evenk
+            }
+		}
+		is_neighbor_of = FROM
+	}
+	attacker_disabled_po = {
+		po_become_tributary_state
+	}
+	war_goal = superiority_chinese_unification
+}
+
+cb_horde_invasion = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 180
+
+	war_goal = horde_invasion
+}

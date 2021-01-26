@@ -161,10 +161,10 @@ feudalism = {
 			force_potential = yes	# Hide the this modifier when potential is false
 			potential = {
 				owner = { 
-					#OR = {
+					OR = {
 						has_estate = estate_nobles 
-						#has_estate = nomadic_aristocracy
-					#}
+						has_estate = nomadic_aristocracy
+					}
 				}
 			}
 			custom_trigger_tooltip = {
@@ -188,17 +188,17 @@ feudalism = {
 								territory = 15
 							}
 						}
-						#AND = {
-						#	has_estate = nomadic_aristocracy
-						#	estate_loyalty = {
-						#		estate = nomadic_aristocracy
-						#		loyalty = 40
-						#	}
-						#	estate_territory = {
-						#		estate = nomadic_aristocracy
-						#		territory = 15
-						#	}
-						#}
+						AND = {
+							has_estate = nomadic_aristocracy
+							estate_loyalty = {
+								estate = nomadic_aristocracy
+								loyalty = 40
+							}
+							estate_territory = {
+								estate = nomadic_aristocracy
+								territory = 15
+							}
+						}
 					}
 				}
 			}
@@ -260,11 +260,12 @@ feudalism = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.25
 			scale = yes
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -545,11 +546,12 @@ renaissance = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.25
 			scale = yes
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -562,6 +564,22 @@ renaissance = {
 						is_emperor_of_china = yes
 						has_institution = renaissance
 					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			scale = yes
+			potential = {
+				owner = {
+					has_country_modifier = byzantine_influx
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = byzantine_influx_spread_of_renaissance
+				is_capital = yes
+				owner = {
+					has_country_modifier = byzantine_influx
 				}
 			}
 		}
@@ -836,11 +854,12 @@ new_world_i = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.2
 			scale = yes
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -1212,6 +1231,7 @@ printing_press = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -1542,6 +1562,7 @@ global_trade = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2067,6 +2088,7 @@ manufactories = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2471,6 +2493,7 @@ enlightenment = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {
@@ -3150,6 +3173,7 @@ industrialization = {
 			potential = {
 				owner = {
 					is_subject = yes
+					is_subject_of_type = tributary_state
 				}
 			}
 			custom_trigger_tooltip = {

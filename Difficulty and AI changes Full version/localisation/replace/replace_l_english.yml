@@ -4,3 +4,11 @@
  
  #EU4_l_english.yml
  obj_disc_army_desc:0 "Have least 115% discipline in your armies."
+
+ #LOADING TIPS
+ LOADING_TIP_97:0 "At Very Hard difficulty, the game escalates over time to make playing even major nations a challenge."
+
+ #Tags
+ #SHY:0 "Shaybanids"
+ CHG:0 "Moghulistan"
+ TRS:0 "Mawarannahr"

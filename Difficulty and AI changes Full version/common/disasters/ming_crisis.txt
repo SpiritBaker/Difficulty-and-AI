@@ -93,7 +93,7 @@ ming_crisis = {
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = ming_crisis_active_for_20_years_tooltip
-					had_country_flag = { flag = had_ming_crisis_country_flag days = 7300 }
+					had_country_flag = { flag = had_ming_crisis_country_flag days = 3650 }
 				}
 				imperial_mandate = 75
 				is_emperor_of_china = no

@@ -4,7 +4,7 @@ province = {
             is_at_war = yes
         }
         eval_multiply = {
-            factor = 0.35
+            factor = 0.4
             modifier = {
 				has_province_modifier = arctic
             }

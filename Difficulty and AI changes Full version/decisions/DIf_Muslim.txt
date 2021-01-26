@@ -84,10 +84,7 @@ country_decisions = {
 		potential = {
 			religion = sunni
 			NOT = { religion = shiite }
-			OR = { 
-				culture_group = iranian
-				tag = TIM
-			}
+			culture_group = iranian
 			is_force_converted = no
 		}
 		provinces_to_highlight = {

@@ -805,7 +805,7 @@ country_event = { # Start of Shun rebelion
 	id = ming_crisis.10
 	title = "ming_crisis.10.t"
 	desc = "ming_crisis.10.d"
-	picture = ANGRY_MOB_eventPicture
+	picture = CIVIL_WAR_eventPicture
 	
 	is_triggered_only = yes
 	fire_only_once = yes

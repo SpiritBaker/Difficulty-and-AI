@@ -65,13 +65,13 @@ ai_capitalist = {
 			tag = PAP
 		}
 		modifier = {
-			factor = 1.5
-			tag = MNG
+			factor = 5
+			tag = KOR
 		}
 		modifier = {
 			factor = 1.5
-			tag = KOR
-		}		
+			tag = MNG
+		}	
 		modifier = {
 			factor = 1.5
 			tag = MAM
@@ -79,6 +79,10 @@ ai_capitalist = {
 		modifier = {
 			factor = 1.5
 			tag = FRA
+		}	
+		modifier = {
+			factor = 2
+			is_emperor_of_china = yes
 		}		
 		modifier = {
 			factor = 3
@@ -225,15 +229,15 @@ ai_militarist = {
 			has_regency = yes
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			NOT = { mil_tech = 9 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			NOT = { mil_tech = 11 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			NOT = { mil_tech = 16 }
 		}			
 		modifier = {
@@ -317,15 +321,19 @@ ai_militarist = {
 			invasion_nation = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			government = native
 		}
 		modifier = {
-			factor = 2
-			has_reform = steppe_horde
+			factor = 3
+			OR = {
+				has_reform = khanate_monarchy
+				has_reform = nomad_empire
+				has_reform = steppe_horde
+			}
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			OR = {
 				has_reform = daimyo
 				has_reform = indep_daimyo
@@ -333,7 +341,7 @@ ai_militarist = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			is_march = yes
 		}
 		modifier = {
@@ -361,7 +369,7 @@ ai_militarist = {
 			tag = KOR
 		}	
 		modifier = {
-			factor = 2
+			factor = 3
 			religion = nahuatl
 			is_religion_reformed = no
 		}

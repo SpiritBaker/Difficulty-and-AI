@@ -4130,7 +4130,7 @@ talented_statesman_personality = { # Talented Statesman
 	gift_chance = 25
 	different_religion_war_multiplier = 2
 	heretic_ally_acceptance = -50
-	heathen_ally_acceptance = -50
+	#heathen_ally_acceptance = -50
 
 
 	imperial_authority_value = 0.05

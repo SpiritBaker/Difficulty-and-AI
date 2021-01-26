@@ -16,7 +16,7 @@ steppe_horde = {
 			culture_group = altaic
 			culture_group = tartar
 		}
-		has_reform = steppe_horde
+		#has_reform = steppe_horde
 		NOT = { has_reform = great_mongol_state_reform }
 	}
 	legacy_equivalent = steppe_horde_legacy
@@ -93,6 +93,7 @@ tribal_federation = {
 
 	modifiers = {
 		years_of_nationalism = -5
+		cavalry_cost = -0.1
 	}
 
 	conditional = {
@@ -162,6 +163,10 @@ martial_society_reform = {
 				army_size = root
 			}
 		}
+		modifier = {
+			factor = 3
+			is_nomad = yes
+		}
 	}
 }
 
@@ -169,7 +174,7 @@ civil_society_reform = {
 	allow_normal_conversion = yes
 	icon = "tribal_civil_society"
 	modifiers = {
-		global_tax_modifier = 0.05
+		global_tax_modifier = 0.1
 		yearly_corruption = -0.05
 	}
 	ai = {
@@ -212,6 +217,13 @@ lip_service_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		land_maintenance_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 2
+			is_nomad = yes
+		}
 	}
 }
 
@@ -290,6 +302,9 @@ horde_tribal_unity_reform = {
 tribe_becomes_monarchy_reform = {
 	icon = "king_highlighted"
 	allow_normal_conversion = yes
+	#potential = {
+		#NOT = { has_reform = steppe_horde }
+	#}
 	effect = {
 		set_country_flag = populists_in_government
 		lose_reforms = 4
@@ -338,7 +353,7 @@ tribe_becomes_monarchy_reform = {
 			} 
 		}
 		modifier = {
-			factor = 0
+			factor = 10
 			is_nomad = yes
 		}
 	}
@@ -468,6 +483,9 @@ tribe_becomes_theocracy_reform = {
 tribe_becomes_horde_reform = {
 	icon = "horde_riding_highlighted"
 	allow_normal_conversion = yes
+	potential = {
+		NOT = { has_reform = steppe_horde }
+	}
 	effect = {
 		set_country_flag = populists_in_government
 		add_government_reform = steppe_horde

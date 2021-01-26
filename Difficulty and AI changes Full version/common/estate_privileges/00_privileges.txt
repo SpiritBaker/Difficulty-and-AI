@@ -1502,7 +1502,7 @@ estate_church_inwards_perfection = {
 	#	development_cost = -0.25
 	#}
 	penalties = {
-		stability_cost_to_declare_war = 1
+		army_tradition = -0.1
 	}
 	benefits = {
 		development_cost = -0.10
@@ -1813,6 +1813,9 @@ estate_burghers_indebted_to_burghers = {
 	}
 	can_select = {
 		NOT = { is_bankrupt = yes }
+	}
+	can_revoke = {
+		NOT = { num_of_loans = 1 }
 	}
 	is_valid = {
 		NOT = { is_bankrupt = yes }
@@ -2300,10 +2303,12 @@ estate_nomadic_tribes_share_of_the_spoils = {
 	icon = privilege_supply_arms
 	max_absolutism = -5
 	loyalty = 0.05
+	influence = 0.05
 	penalties = {
-		available_province_loot = -0.1
+		available_province_loot = -0.25
 	}
 	benefits = {
+		land_maintenance_modifier = -0.10
 	}
 	ai_will_do = {
 		factor = 7.5
@@ -2321,6 +2326,7 @@ estate_nomadic_tribes_chieftains_autonomy = {
 	influence = 0.1
 	penalties = {
 	}
+
 	benefits = {
 	}
 	ai_will_do = {
@@ -2332,38 +2338,45 @@ estate_nomadic_tribes_chieftains_autonomy = {
 	}
 }
 
-estate_nomadic_tribes_guaranteed_leadgership_in_host = {
-	icon = privilege_conscript_cossack_elite
-	max_absolutism = -5
-	influence = 0.05
-	can_select = {
-		army_tradition = 30
-	}
-	on_granted = {
-		add_army_tradition = -15
-	}
-	penalties = {
-	}
-	benefits = {
-		general_cost = -0.25
-		army_tradition_decay = -0.005
-	}
-	ai_will_do = {
-		factor = 8
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
-	}
-}
+#estate_nomadic_tribes_guaranteed_leadgership_in_host = {
+#	icon = privilege_conscript_cossack_elite
+#	max_absolutism = -5
+#	influence = 0.05
+#	can_select = {
+#		army_tradition = 30
+#	}
+#	on_granted = {
+#		add_army_tradition = -15
+#	}
+#	penalties = {
+#	}
+#	benefits = {
+#		general_cost = -0.25
+#		army_tradition_decay = -0.005
+#	}
+#	ai_will_do = {
+#		factor = 8
+#		modifier = {
+#			factor = 0.5
+#			is_absolutism_active = yes
+#		}
+#	}
+#}
 
 estate_nomadic_tribes_tribal_host = {
 	icon = privilege_raise_host
-	max_absolutism = -5
-	loyalty = -0.05
+	max_absolutism = -10
+	loyalty = 0
 	influence = 0.1
+	penalties = {
+		#global_tax_modifier = -0.20
+	}
+	modifier_by_land_ownership = {
+		global_tax_modifier = -0.25
+		global_manpower_modifier = 1
+	}
 	benefits = {
-		global_manpower_modifier = 0.2
+		#global_manpower_modifier = 0.2
 	}
 	ai_will_do = {
 		factor = 10
@@ -2735,6 +2748,9 @@ estate_jains_indebted_to_jains = {
 	}
 	can_select = {
 		NOT = { is_bankrupt = yes }
+	}
+	can_revoke = {
+		NOT = { num_of_loans = 1 }
 	}
 	is_valid = {
 		NOT = { is_bankrupt = yes }
@@ -3476,22 +3492,28 @@ estate_vaisyas_patronage_of_the_arts = {
 
 estate_nomadic_tribes_primacy_to_the_bannermen = {
 	icon = privilege_royal_authority
-	max_absolutism = -5
+	loyalty = 0.05
+	max_absolutism = -10
 	influence = 0.1
 	is_valid = {
 		OR = {
 			primary_culture = manchu
 			primary_culture = manchu_new
+			primary_culture = oirats
+			primary_culture = mongol
+			primary_culture = chahar
+			primary_culture = khalkha
 		}
 	}
 	penalties = {
-		amount_of_banners = -0.25
+		
 	}
 	benefits = {
-		land_morale = 0.1
+		amount_of_banners = 0.15
+		#land_morale = 0.1
 	}
 	ai_will_do = {
-		factor = 5
+		factor = 10
 		modifier = {
 			factor = 2
 			OR = {
@@ -3698,6 +3720,15 @@ estate_burghers_monopoly_of_textiles = {
 	ai_will_do = { #having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_burghers_monopoly_of_textiles
+				has_estate_privilege = estate_burghers_monopoly_of_dyes
+				has_estate_privilege = estate_burghers_monopoly_of_glass
+				has_estate_privilege = estate_burghers_monopoly_of_paper
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -3800,6 +3831,15 @@ estate_burghers_monopoly_of_dyes = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_burghers_monopoly_of_textiles
+				#has_estate_privilege = estate_burghers_monopoly_of_dyes
+				has_estate_privilege = estate_burghers_monopoly_of_glass
+				has_estate_privilege = estate_burghers_monopoly_of_paper
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -3904,6 +3944,15 @@ estate_burghers_monopoly_of_glass = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_burghers_monopoly_of_textiles
+				has_estate_privilege = estate_burghers_monopoly_of_dyes
+				#has_estate_privilege = estate_burghers_monopoly_of_glass
+				has_estate_privilege = estate_burghers_monopoly_of_paper
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -4006,6 +4055,15 @@ estate_burghers_monopoly_of_paper = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_burghers_monopoly_of_textiles
+				has_estate_privilege = estate_burghers_monopoly_of_dyes
+				has_estate_privilege = estate_burghers_monopoly_of_glass
+				#has_estate_privilege = estate_burghers_monopoly_of_paper
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -4119,6 +4177,15 @@ estate_vaisyas_monopoly_of_textiles = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_vaisyas_monopoly_of_textiles
+				has_estate_privilege = estate_vaisyas_monopoly_of_dyes
+				has_estate_privilege = estate_vaisyas_monopoly_of_glass
+				has_estate_privilege = estate_vaisyas_monopoly_of_paper
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -4221,6 +4288,15 @@ estate_vaisyas_monopoly_of_dyes = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_vaisyas_monopoly_of_textiles
+				#has_estate_privilege = estate_vaisyas_monopoly_of_dyes
+				has_estate_privilege = estate_vaisyas_monopoly_of_glass
+				has_estate_privilege = estate_vaisyas_monopoly_of_paper
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -4325,6 +4401,15 @@ estate_vaisyas_monopoly_of_glass = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_vaisyas_monopoly_of_textiles
+				has_estate_privilege = estate_vaisyas_monopoly_of_dyes
+				#has_estate_privilege = estate_vaisyas_monopoly_of_glass
+				has_estate_privilege = estate_vaisyas_monopoly_of_paper
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -4427,6 +4512,15 @@ estate_vaisyas_monopoly_of_paper = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_vaisyas_monopoly_of_textiles
+				has_estate_privilege = estate_vaisyas_monopoly_of_dyes
+				has_estate_privilege = estate_vaisyas_monopoly_of_glass
+				#has_estate_privilege = estate_vaisyas_monopoly_of_paper
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -4542,6 +4636,15 @@ estate_jains_monopoly_of_textiles = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_jains_monopoly_of_textiles
+				has_estate_privilege = estate_jains_monopoly_of_dyes
+				has_estate_privilege = estate_jains_monopoly_of_glass
+				has_estate_privilege = estate_jains_monopoly_of_paper
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -4646,6 +4749,15 @@ estate_jains_monopoly_of_dyes = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_jains_monopoly_of_textiles
+				#has_estate_privilege = estate_jains_monopoly_of_dyes
+				has_estate_privilege = estate_jains_monopoly_of_glass
+				has_estate_privilege = estate_jains_monopoly_of_paper
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -4752,6 +4864,15 @@ estate_jains_monopoly_of_glass = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_jains_monopoly_of_textiles
+				has_estate_privilege = estate_jains_monopoly_of_dyes
+				#has_estate_privilege = estate_jains_monopoly_of_glass
+				has_estate_privilege = estate_jains_monopoly_of_paper
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -4856,6 +4977,15 @@ estate_jains_monopoly_of_paper = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_jains_monopoly_of_textiles
+				has_estate_privilege = estate_jains_monopoly_of_dyes
+				has_estate_privilege = estate_jains_monopoly_of_glass
+				#has_estate_privilege = estate_jains_monopoly_of_paper
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -4969,6 +5099,14 @@ estate_nobles_monopoly_of_metals = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_nobles_monopoly_of_metals
+				has_estate_privilege = estate_nobles_monopoly_of_livestock
+				has_estate_privilege = estate_nobles_monopoly_of_gems
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -5070,6 +5208,14 @@ estate_nobles_monopoly_of_livestock = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_nobles_monopoly_of_metals
+				#has_estate_privilege = estate_nobles_monopoly_of_livestock
+				has_estate_privilege = estate_nobles_monopoly_of_gems
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -5173,6 +5319,14 @@ estate_nobles_monopoly_of_gems = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_nobles_monopoly_of_metals
+				has_estate_privilege = estate_nobles_monopoly_of_livestock
+				#has_estate_privilege = estate_nobles_monopoly_of_gems
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -5287,6 +5441,14 @@ estate_rajput_monopoly_of_metals = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_rajput_monopoly_of_metals
+				has_estate_privilege = estate_rajput_monopoly_of_livestock
+				has_estate_privilege = estate_rajput_monopoly_of_gems
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -5391,6 +5553,14 @@ estate_rajput_monopoly_of_livestock = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_rajput_monopoly_of_metals
+				#has_estate_privilege = estate_rajput_monopoly_of_livestock
+				has_estate_privilege = estate_rajput_monopoly_of_gems
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -5490,6 +5660,14 @@ estate_rajput_monopoly_of_gems = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_rajput_monopoly_of_metals
+				has_estate_privilege = estate_rajput_monopoly_of_livestock
+				#has_estate_privilege = estate_rajput_monopoly_of_gems
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -5603,6 +5781,14 @@ estate_maratha_monopoly_of_metals = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_maratha_monopoly_of_metals
+				has_estate_privilege = estate_maratha_monopoly_of_livestock
+				has_estate_privilege = estate_maratha_monopoly_of_gems
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -5706,6 +5892,14 @@ estate_maratha_monopoly_of_livestock = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_maratha_monopoly_of_metals
+				#has_estate_privilege = estate_maratha_monopoly_of_livestock
+				has_estate_privilege = estate_maratha_monopoly_of_gems
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -5804,6 +5998,14 @@ estate_maratha_monopoly_of_gems = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_maratha_monopoly_of_metals
+				has_estate_privilege = estate_maratha_monopoly_of_livestock
+				#has_estate_privilege = estate_maratha_monopoly_of_gems
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -5907,6 +6109,15 @@ estate_church_monopoly_of_incense = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_church_monopoly_of_incense
+				has_estate_privilege = estate_church_monopoly_of_wool
+				has_estate_privilege = estate_church_monopoly_of_wine
+				has_estate_privilege = estate_church_monopoly_of_slaves
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -6008,6 +6219,15 @@ estate_church_monopoly_of_wool = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_church_monopoly_of_incense
+				#has_estate_privilege = estate_church_monopoly_of_wool
+				has_estate_privilege = estate_church_monopoly_of_wine
+				has_estate_privilege = estate_church_monopoly_of_slaves
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -6112,6 +6332,15 @@ estate_church_monopoly_of_wine = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_church_monopoly_of_incense
+				has_estate_privilege = estate_church_monopoly_of_wool
+				#has_estate_privilege = estate_church_monopoly_of_wine
+				has_estate_privilege = estate_church_monopoly_of_slaves
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -6210,6 +6439,15 @@ estate_church_monopoly_of_slaves = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_church_monopoly_of_incense
+				has_estate_privilege = estate_church_monopoly_of_wool
+				has_estate_privilege = estate_church_monopoly_of_wine
+				#has_estate_privilege = estate_church_monopoly_of_slaves
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -6314,6 +6552,13 @@ estate_brahmins_monopoly_of_incense = {
 	ai_will_do = {
 		factor = 5
 		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_brahmins_monopoly_of_incense
+				has_estate_privilege = estate_brahmins_monopoly_of_wool
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
@@ -6416,6 +6661,13 @@ estate_brahmins_monopoly_of_wool = {
 	}
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_brahmins_monopoly_of_incense
+				#has_estate_privilege = estate_brahmins_monopoly_of_wool
+			}
+		}
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes

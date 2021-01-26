@@ -81,15 +81,15 @@ marketplace = {
 			is_in_capital_area = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 1
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 2
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
@@ -395,7 +395,7 @@ barracks = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 8
 			has_building = soldier_households
 		}
 		modifier = {
@@ -874,11 +874,11 @@ regimental_camp = {
 	time = 12
 
 	modifier = {
-		land_forcelimit = 1
+		land_forcelimit = 0.75
 	}
 	
 	ai_will_do = {
-		factor = 0.8
+		factor = 1
 		modifier = {
 			factor = 0.8
 			has_port = yes
@@ -1305,15 +1305,15 @@ trade_depot = {
 			is_in_capital_area = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 1
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 2
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
@@ -1473,7 +1473,7 @@ training_fields = {
 	}
 	
 	ai_will_do = {
-		factor = 8
+		factor = 15
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -1487,6 +1487,7 @@ training_fields = {
 			factor = 0.4
 			NOT = { base_manpower = 4 }
 			NOT = { has_building = soldier_households }
+			NOT = { has_building = barracks }
 		}
 		modifier = {
 			factor = 1.2
@@ -1524,7 +1525,7 @@ training_fields = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 8
 			has_building = soldier_households
 		}
 		modifier = {
@@ -1699,15 +1700,15 @@ stock_exchange = {
 			is_in_capital_area = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 1
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 2
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
@@ -2093,7 +2094,7 @@ conscription_center = {
 	}
 	
 	ai_will_do = {
-		factor = 0.8
+		factor = 1
 		modifier = {
 			factor = 0.8
 			has_port = yes
@@ -2798,10 +2799,10 @@ soldier_households = {
 	}
 
 	modifier = {
-		local_manpower = 0.75
+		local_manpower = 0.5
 	}
 	bonus_modifier = {
-		local_manpower = 0.75
+		local_manpower = 0.5
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way

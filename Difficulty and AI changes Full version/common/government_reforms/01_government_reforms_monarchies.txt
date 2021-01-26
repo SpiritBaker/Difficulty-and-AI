@@ -330,6 +330,7 @@ celestial_empire = {
 		church_influence_modifier = -0.1
 		nobles_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
+		nomadic_tribes_influence_modifier = -0.1
 		governing_capacity = 300
 	}
 	
@@ -881,6 +882,9 @@ mughal_government = {
 		western_aryan = {
 			trade_efficiency = 0.05
 		}
+		anatolian = {
+			leader_siege = 1
+		}
 	}
 }
 
@@ -1117,6 +1121,8 @@ quash_noble_power_reform = {
 		nobles_influence_modifier = -0.1
 		maratha_exclusive_influence_modifier = -0.1
 		rajput_exclusive_influence_modifier = -0.1
+		
+		nomadic_aristocracy_influence_modifier = -0.1
 	}
 	ai = {
 		factor = 1
@@ -1458,6 +1464,9 @@ of_noble_bearing_reform = {
 		nobles_loyalty_modifier = 0.05
 		maratha_exclusive_loyalty_modifier = 0.05
 		rajput_exclusive_loyalty_modifier = 0.05
+
+		nomadic_aristocracy_loyalty_modifier = 0.05
+		nomadic_aristocracy_influence_modifier = 0.1
 	}
 	ai = {
 		factor = 1
@@ -1502,6 +1511,9 @@ meritocratic_focus_reform = {
 		burghers_influence_modifier = 0.1
 		burghers_loyalty_modifier = 0.05
 		vaisyas_non_muslim_influence_modifier = 0.1
+
+		sedentary_subdjects_loyalty_modifier = 0.05
+		sedentary_subdjects_influence_modifier = 0.1
 	}
 	ai = {
 		factor = 1
@@ -1784,6 +1796,7 @@ political_absolutism_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+		NOT = { has_reform = nomad_empire  }
 	}
 	modifiers = {
 		max_absolutism = 5

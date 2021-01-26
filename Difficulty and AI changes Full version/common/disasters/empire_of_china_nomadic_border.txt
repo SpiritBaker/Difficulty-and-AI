@@ -2,19 +2,20 @@ empire_of_china_nomadic_border = {
 	potential = {
 		has_dlc = "Mandate of Heaven"
 		is_emperor_of_china = yes
-		culture_group = east_asian
-		NOT = { primary_culture = manchu }
-		NOT = { primary_culture = manchu_new }
+		tag = MNG
+		#culture_group = east_asian
+		#NOT = { primary_culture = manchu }
+		#NOT = { primary_culture = manchu_new }
 	}
 
 	can_start = {
 		has_any_disaster = no
 		any_neighbor_country = {
-			#OR = {
+			OR = {
 				has_reform = steppe_horde
-				#has_reform = nomad_empire
-				#has_reform = khanate_monarchy
-			#}
+				has_reform = nomad_empire
+				has_reform = khanate_monarchy
+			}
 			total_own_and_non_tributary_subject_development = 300
 			is_subject = no
 			NOT = { truce_with = ROOT }
@@ -28,11 +29,11 @@ empire_of_china_nomadic_border = {
 			has_any_disaster = yes
 			NOT = {
 				any_neighbor_country = {
-					#OR = {
+					OR = {
 						has_reform = steppe_horde
-						#has_reform = nomad_empire
-						#has_reform = khanate_monarchy
-					#}
+						has_reform = nomad_empire
+						has_reform = khanate_monarchy
+					}
 					total_own_and_non_tributary_subject_development = 300
 					NOT = { truce_with = ROOT }
 					NOT = { alliance_with = ROOT }
@@ -47,11 +48,11 @@ empire_of_china_nomadic_border = {
 		modifier = {
 			factor = 1
 			any_neighbor_country = {
-				#OR = {
+				OR = {
 					has_reform = steppe_horde
-					#has_reform = nomad_empire
-					#has_reform = khanate_monarchy
-				#}
+					has_reform = nomad_empire
+					has_reform = khanate_monarchy
+				}
 				total_own_and_non_tributary_subject_development = 300
 				is_subject = no
 				NOT = { truce_with = ROOT }
@@ -62,11 +63,11 @@ empire_of_china_nomadic_border = {
 		modifier = {
 			factor = 1.5
 			any_neighbor_country = {
-					#OR = {
-						has_reform = steppe_horde
-						#has_reform = nomad_empire
-						#has_reform = khanate_monarchy
-					#}
+				OR = {
+					has_reform = steppe_horde
+					has_reform = nomad_empire
+					has_reform = khanate_monarchy
+				}
 				total_own_and_non_tributary_subject_development = 300
 				war_with = ROOT
 				war_score_against = {
@@ -78,11 +79,11 @@ empire_of_china_nomadic_border = {
 		modifier = {
 			factor = 3
 			any_neighbor_country = {
-				#OR = {
+				OR = {
 					has_reform = steppe_horde
-					#has_reform = nomad_empire
-					#has_reform = khanate_monarchy
-				#}
+					has_reform = nomad_empire
+					has_reform = khanate_monarchy
+				}
 				total_own_and_non_tributary_subject_development = 300
 				war_with = ROOT
 				war_score_against = {
@@ -94,11 +95,11 @@ empire_of_china_nomadic_border = {
 		modifier = {
 			factor = -3
 			any_neighbor_country = {
-					#OR = {
-						has_reform = steppe_horde
-						#has_reform = nomad_empire
-						#has_reform = khanate_monarchy
-					#}
+				OR = {
+					has_reform = steppe_horde
+					has_reform = nomad_empire
+					has_reform = khanate_monarchy
+				}
 				war_with = ROOT
 				total_own_and_non_tributary_subject_development = 300
 				ROOT = {
@@ -118,11 +119,11 @@ empire_of_china_nomadic_border = {
 			is_emperor_of_china = no
 			NOT = {
 				any_neighbor_country = {
-						#OR = {
-							has_reform = steppe_horde
-							#has_reform = nomad_empire
-							#has_reform = khanate_monarchy
-						#}
+					OR = {
+						has_reform = steppe_horde
+						has_reform = nomad_empire
+						has_reform = khanate_monarchy
+					}
 					total_own_and_non_tributary_subject_development = 300
 					NOT = { alliance_with = ROOT }
 					is_subject = no
@@ -155,8 +156,8 @@ empire_of_china_nomadic_border = {
 		random_events = { 
 			1000 = 0
 			100 = ming_crisis.11 # Obsolete forces
-			#100 = ming_crisis.12 # Peasant protests
-			#100 = ming_crisis.13 # National decentralisation
+			100 = ming_crisis.12 # Peasant protests
+			100 = ming_crisis.13 # National decentralisation
 		}
 	}
 
@@ -186,11 +187,11 @@ empire_of_china_nomadic_border = {
 			set_country_flag = empire_of_china_nomadic_border_started_ticker
 			every_neighbor_country = {
 				limit = {
-						#OR = {
-							has_reform = steppe_horde
-							#has_reform = nomad_empire
-							#has_reform = khanate_monarchy
-						#}
+					OR = {
+						has_reform = steppe_horde
+						has_reform = nomad_empire
+						has_reform = khanate_monarchy
+					}
 					total_own_and_non_tributary_subject_development = 300
 					NOT = { alliance_with = ROOT }
 					is_subject = no
@@ -210,11 +211,11 @@ empire_of_china_nomadic_border = {
 			set_country_flag = empire_of_china_nomadic_border_further_ticker
 			every_neighbor_country = {
 				limit = {
-						#OR = {
-							has_reform = steppe_horde
-							#has_reform = nomad_empire
-							#has_reform = khanate_monarchy
-						#}
+					OR = {
+						has_reform = steppe_horde
+						has_reform = nomad_empire
+						has_reform = khanate_monarchy
+					}
 					total_own_and_non_tributary_subject_development = 300
 					NOT = { alliance_with = ROOT }
 					is_subject = no
