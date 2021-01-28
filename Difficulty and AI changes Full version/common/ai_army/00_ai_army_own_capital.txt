@@ -4,7 +4,7 @@ province = {
             is_at_war = yes
         }
         eval_multiply = {
-            factor = 2
+            factor = 1.8
             modifier = {
                 is_in_capital_area = yes
                 owned_by = ROOT
