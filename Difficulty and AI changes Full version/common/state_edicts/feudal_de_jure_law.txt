@@ -1,5 +1,6 @@
 edict_feudal_de_jure_law = {
 	potential = {
+		ai = no
 		current_age = age_of_discovery
 	}
 	
@@ -19,67 +20,6 @@ edict_feudal_de_jure_law = {
 	
 	
 	ai_will_do = {
-		factor = 50
-		modifier = {
-			factor = 0
-			OR = {
-				AND = {
-					NOT = {
-						has_state_edict = edict_feudal_de_jure_law
-					}
-					all_province_in_state = {
-						NOT = { unrest = 1 }
-					}
-				}
-				AND = {
-					has_state_edict = edict_feudal_de_jure_law
-					
-					all_province_in_state = {
-						NOT = { unrest = 1 }
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 5
-			
-			AND = {
-				NOT = {
-					has_state_edict = edict_feudal_de_jure_law
-				}
-				all_province_in_state = {
-					unrest = 1
-					NOT = { unrest = 5 }
-				}
-			}
-		}
-		modifier = {
-			factor = 3
-			AND = {
-				NOT = {
-					has_state_edict = edict_feudal_de_jure_law
-				}
-				all_province_in_state = {
-					unrest = 1
-				}
-			}
-		}
-		modifier = {
-			factor = 5
-			OR = {
-				AND = {
-					NOT = {
-						has_state_edict = edict_feudal_de_jure_law
-					}
-					any_province_in_state = {
-						unrest = 1
-						NOT = { unrest = 5 }
-					}
-				}
-				
-				has_state_edict = edict_feudal_de_jure_law
-			}
-		}
+		factor = 0
 	}
-	
 }
