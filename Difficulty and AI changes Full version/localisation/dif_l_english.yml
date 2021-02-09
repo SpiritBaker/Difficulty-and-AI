@@ -355,3 +355,15 @@
  desc_consort_mil_bonus:0 "[Root.Consort.GetTitle] [Root.Consort.GetName]'s military skill far exceeds the [Root.Monarch.GetTitle]'s and [Root.Consort.GetHerHis] assistance with militarization is of great importance."
  consort_mil_bonus_tt:0 "[Root.Consort.GetTitle] §Y[Root.Consort.GetName]§! has at least §Y2§! more Military Skill than [Root.Monarch.GetTitle] §Y[Root.Monarch.GetName]§!"
  
+ #edicts
+ edict_religious_unity2:0 "Enforce Religious Unity"
+ edict_protect_trade2:0 "Protect Trade"
+ edict_promote_military_recruitment2:1 "Increased Enlistment"
+ edict_encourage_development2:0 "Encourage Development"
+ edict_defensive_edict2:0 "Defensive Edict"
+ edict_advancement_effort2:0 "Advancement Effort"
+ edict_centralization_effort2:0 "Centralization Effort"
+ edict_feudal_de_jure_law2:0 "Feudal De Jure Law"
+ edict_religion_enforced2:0 "Religion Enforced"
+ edict_of_absolutism2:0 "Edict of Absolutism"
+ state_edict_cost:0 "State Edict Cost"

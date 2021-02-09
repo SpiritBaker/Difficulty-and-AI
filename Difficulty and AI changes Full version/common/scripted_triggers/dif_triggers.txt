@@ -35,3 +35,18 @@ incompetent_monarch = {
 		}
 	}
 }
+
+any_state_edict = {
+	OR = {
+		has_state_edict = advancement_effort
+		has_state_edict = centralisation_edict
+		has_state_edict = defensive_edict
+		has_state_edict = edict_of_absolutism
+		has_state_edict = encourage_development
+		has_state_edict = feudal_de_jure_law
+		has_state_edict = promote_military_recruitment
+		has_state_edict = protect_trade
+		has_state_edict = religion_enforced_edict
+		has_state_edict = religious_unity
+	}
+}

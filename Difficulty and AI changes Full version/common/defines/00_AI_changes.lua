@@ -22,7 +22,7 @@ NDefines.NCountry.IDEA_TO_TECH = -0.015
 NDefines.NCountry.PS_BUY_IDEA = 380
 NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.5 --Horde unity gained per ducat looted.
 
-NDefines.NEconomy.EDICTS_COST_INCREASE = 0.5 --% increase on state maintenance.
+NDefines.NEconomy.EDICTS_COST_INCREASE = 0 --% increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35 --Development is divided by this factor, do not set to zero!
 NDefines.NEconomy.CARAVAN_FACTOR = 6.0							

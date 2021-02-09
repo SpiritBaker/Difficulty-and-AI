@@ -6,3 +6,6 @@ shun_rebellion = {
 	manpower_recovery_speed = -0.1
 	land_maintenance_modifier = 0.10
 }
+state_edict_cost = {
+	local_state_maintenance_modifier = 0.5
+}
