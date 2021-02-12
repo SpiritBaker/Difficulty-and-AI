@@ -316,6 +316,10 @@ cb_conquest = {
 		claim = FROM
 	}
 
+	attacker_disabled_po = {
+		po_become_tributary_state
+	}
+
 	war_goal = take_claim
 }
 
@@ -386,6 +390,10 @@ cb_nationalist = {
 		is_revolutionary = no
 	}
 
+	attacker_disabled_po = {
+		po_become_tributary_state
+	}
+
 	war_goal = take_province_nationalist
 }
 
@@ -401,6 +409,10 @@ cb_imperial = {
 		is_free_or_tributary_trigger = yes
 		is_revolutionary = no
 		NOT = { has_reform = war_against_the_world_doctrine_reform }
+	}
+
+	attacker_disabled_po = {
+		po_become_tributary_state
 	}
 
 	war_goal = take_capital_imperial
@@ -911,6 +923,7 @@ cb_horde_vs_civ = {
 		}
 		is_nomad = yes
 		is_revolutionary = no
+		ai = no
 	}
 
 	war_goal = superiority_horde
@@ -927,6 +940,7 @@ cb_tribal_feud = {
 		}
 		is_neighbor_of = FROM
 		is_revolutionary = no
+		ai = no
 	}
 
 	war_goal = take_province_tribal_feud
@@ -1193,6 +1207,10 @@ cb_take_mandate = {
 		}
 		NOT = { truce_with = FROM }
 		is_revolutionary = no
+	}
+
+	attacker_disabled_po = {
+		po_become_tributary_state
 	}
 
 	war_goal = take_capital_take_mandate
