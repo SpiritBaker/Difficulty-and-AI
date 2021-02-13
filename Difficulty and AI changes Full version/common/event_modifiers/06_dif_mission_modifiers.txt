@@ -23,14 +23,15 @@ shun_rebellion = {
 	land_maintenance_modifier = 0.10
 }
 great_unifier = {
-	land_forcelimit_modifier = 0.25
+	land_forcelimit_modifier = 0.15
 	land_maintenance_modifier = -0.10
-	adm_tech_cost_modifier = -0.1
+	idea_cost = -0.1
 }
 manchu_conqest_of_china_ai = {
-	land_forcelimit_modifier = 0.25
+	land_forcelimit_modifier = 0.15
 	land_maintenance_modifier = -0.15
 	discipline = 0.03
+	adm_tech_cost_modifier = -0.1
 	yearly_corruption = -0.1
 	core_creation = -0.25
 }

@@ -320,6 +320,7 @@ celestial_empire = {
 		temples
 		enuchs
 		bureaucrats
+		tribes
 	}
 
 	fixed_rank = 3
@@ -766,7 +767,7 @@ mughal_government = {
 			mercenary_cost = -0.1
 		}
 		caucasian = {
-			mercenary_discipline = 0.05
+			mercenary_discipline = 0.03
 		}
 		gaelic = {
 			shock_damage = 0.05
@@ -826,7 +827,7 @@ mughal_government = {
 			embracement_cost = -0.1
 		}
 		lost_cultures_group = {
-			discipline = 0.05
+			discipline = 0.03
 		}
 		turko_semitic = {
 			cavalry_power = 0.1
@@ -1270,7 +1271,7 @@ black_army_reform = {
 	}
 	modifiers = {
 		merc_maintenance_modifier = -0.15
-		mercenary_discipline = 0.025
+		mercenary_discipline = 0.03
 		nobles_loyalty_modifier = -0.1
 	}
 	ai = {

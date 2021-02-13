@@ -43,6 +43,7 @@ country_decisions = {
 			}
 			num_of_owned_provinces_with = {
 				superregion = china_superregion
+				is_core = root
 				value = 20 #107 
 			}
 			custom_trigger_tooltip = {

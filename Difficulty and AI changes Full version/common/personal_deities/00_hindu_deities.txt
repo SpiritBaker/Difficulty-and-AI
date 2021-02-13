@@ -93,7 +93,7 @@ shakti =
 { 
 	#(Military - Offensive) 
 	siege_ability = 0.15
-	discipline = 0.025
+	discipline = 0.03
 	
 	allow = { religion = hinduism }
 	sprite = 5

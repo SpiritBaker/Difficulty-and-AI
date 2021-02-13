@@ -15,6 +15,22 @@ estate_nomadic_tribes = {
 			has_reform = khanate_monarchy
 			is_nomad = yes
 			AND = {
+				has_reform = celestial_empire
+				OR = {
+					tag = QNG
+					tag = YUA
+				}
+				OR = {
+					has_estate = estate_nomadic_tribes
+					any_owned_province = {
+						OR = {
+							has_terrain = steppe
+							has_terrain = steppe_mountains 
+						}
+					}
+				}
+			}
+			AND = {
 				OR = {
 					culture_group = altaic
 					culture_group = tartar
@@ -33,11 +49,6 @@ estate_nomadic_tribes = {
 			}
 		}
 		is_colonial_nation = no
-		OR = {
-			NOT = { has_reform = celestial_empire }
-			tag = QNG
-			tag = YUA
-		}
 		NOT = { has_reform = revolutionary_empire_reform }
 	}
 

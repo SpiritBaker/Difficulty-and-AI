@@ -156,7 +156,7 @@ plutocracy_ideas = {
 
 	tradition_of_payment = {
 		mercenary_manpower = 0.10
-		mercenary_discipline = 0.025
+		mercenary_discipline = 0.05
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
@@ -1420,6 +1420,7 @@ administrative_ideas = {
 	}
 	administrative_efficiency_idea = {
 		advisor_pool = 1
+		yearly_corruption = -0.05
 	}
 	civil_servants = {
 		adm_tech_cost_modifier = -0.1
@@ -1442,6 +1443,18 @@ administrative_ideas = {
 		modifier = {
 			factor = 0.25
 			NOT = { num_of_states = 25 }
+			NOT = {
+				tag = QNG
+				tag = MCH
+				tag = MUG
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				tag = QNG
+				tag = MJZ
+			}
 		}
 		modifier = {
 			factor = 1.5

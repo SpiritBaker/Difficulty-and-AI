@@ -664,7 +664,7 @@ christian = {
 			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
 
 			icon_michael = {
-				discipline = 0.025
+				discipline = 0.03
 				manpower_recovery_speed = 0.15
 				
 				allow = {
@@ -1340,7 +1340,7 @@ eastern = {
 			local_missionary_strength = -0.02
 		}
 		country_as_secondary = {
-			discipline = 0.025
+			discipline = 0.03
 			global_unrest = -1
 		}
 		heretic = { SHUGENDO }

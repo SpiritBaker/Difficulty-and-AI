@@ -250,10 +250,6 @@ country_event = { #AI only event
 		tag = MJZ
 		ai = yes
 		NOT = { is_year = 1445 }
-		all_neighbor_country = {
-			culture_group = root
-			ai = yes
-		}
 	}
 
 	#mean_time_to_happen = {
@@ -274,8 +270,8 @@ country_event = { #AI only event
 		}
 		capital_scope = {
 			build_to_forcelimit = {
-				infantry = 0.5
-				cavalry = 0.5
+				infantry = 0.4
+				cavalry = 0.3
 			}
 		}
 	}

@@ -208,7 +208,7 @@ integration_of_lithuania = {
 	global_autonomy = -0.05
 }
 teutons_pacified = {
-	discipline = 0.05
+	discipline = 0.03
 }
 silesia_conquered = {
 	manpower_recovery_speed = 0.2
@@ -726,7 +726,7 @@ strengthened_shinobi = {
 	global_spy_defence = 0.33
 }
 strengthened_bushido = {
-	discipline = 0.015
+	discipline = 0.02
 }
 divine_wind_modifier = {
 	navy_tradition = 0.25
@@ -872,7 +872,7 @@ akk_caucasus = {
 
 akk_persia = {
 	global_tax_modifier = 0.1
-	discipline = 0.025
+	discipline = 0.03
 }
 
 akk_iraq = {
@@ -1307,7 +1307,7 @@ empower_rajput_trade_guilds = {
 
 masters_of_malwa = {
 	cavalry_cost = -0.15
-	discipline = 0.025
+	discipline = 0.03
 }
 
 mer_united_rajputana = {
@@ -1537,7 +1537,7 @@ mug_looting = {
 }
 
 mug_fall_of_delhi = {
-	discipline = 0.025
+	discipline = 0.03
 }
 
 fortified_the_doab = {
@@ -1633,7 +1633,7 @@ gen_delhi_conquest = {
 }
 
 warrior_castes_promoted = {
-	discipline = 0.025
+	discipline = 0.03
 }
 
 indian_empire = {
@@ -1652,7 +1652,7 @@ south_india_forts = {
 }
 
 deccan_conquest = {
-	discipline = 0.025
+	discipline = 0.03
 }
 
 india_gunpowder_empire = {
@@ -1902,7 +1902,7 @@ mor_el_badi_palace = {
 }
 
 mor_black_guard = {
-	discipline = 0.025
+	discipline = 0.03
 }
 
 mor_conquest_of_kanem = {
@@ -2164,7 +2164,7 @@ pirate_a_scourge_on_the_seven_seas = {
 }
 
 pirate_the_pirate_code = {
-	discipline = 0.05
+	discipline = 0.03
 }
 
 pirate_diplomacy = {
@@ -2553,7 +2553,7 @@ kor_reforms_of_third_literati = {
 }
 
 kor_manchurian_expedition = {
-	discipline = 0.05
+	discipline = 0.03
 }
 
 kor_factional_upheaval = {
@@ -2895,11 +2895,11 @@ bav_rising_power = {
 }
 
 bav_professional_army2 = {
-	discipline = 0.05
+	discipline = 0.03
 }
 
 bav_professional_army = {
-	discipline = 0.05
+	discipline = 0.03
 	drill_gain_modifier = 0.15
 	drill_decay_modifier = -0.15
 }
@@ -2923,7 +2923,7 @@ bav_splendorous_bavaria = {
 
 bav_tamed_brandenburg = {
 	army_tradition = 0.5
-	discipline = 0.025
+	discipline = 0.03
 }
 
 bav_piety_shown = {
@@ -2969,7 +2969,7 @@ hun_hungary_poland = {
 }
 
 hun_supreme_black_army = {
-	mercenary_discipline = 0.05
+	mercenary_discipline = 0.03
 	core_creation = -0.1
 }
 
@@ -3027,7 +3027,7 @@ sax_saxon_ambition = {
 
 sax_defeated_brandenburg = {
 	land_morale = 0.05
-	discipline = 0.025
+	discipline = 0.03
 }
 
 sax_king_of_poland = {
@@ -3875,7 +3875,7 @@ bohemian_commonwealth = {
 	diplomatic_annexation_cost = -0.15
 }
 pap_papal_swiss_guard = {
-	mercenary_discipline = 0.05
+	mercenary_discipline = 0.03
 }
 
 pap_papal_mission = {

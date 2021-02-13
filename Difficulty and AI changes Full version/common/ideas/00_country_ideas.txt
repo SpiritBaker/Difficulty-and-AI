@@ -2196,7 +2196,7 @@ MCH_ideas = {
 
 QNG_ideas = {
 	start = {
-		core_creation = -0.2
+		core_creation = -0.25
 		ae_impact = -0.1
 	}
 	

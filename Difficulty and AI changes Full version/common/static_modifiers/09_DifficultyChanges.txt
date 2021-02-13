@@ -115,7 +115,7 @@ militarized_society = {
 #Multiplied by current Horde Unity - 50
 horde_unity = {
 	global_unrest = -4
-	discipline = 0.10
+	discipline = 0.08
 	nomadic_tribes_loyalty_modifier = 0.05
 	nomadic_aristocracy_loyalty_modifier = 0.05
 }
@@ -229,6 +229,7 @@ karma_just_right =
 
 karma_too_high =
 {
+	global_tax_modifier = 0.15
 	diplomatic_reputation = 1
 }
 

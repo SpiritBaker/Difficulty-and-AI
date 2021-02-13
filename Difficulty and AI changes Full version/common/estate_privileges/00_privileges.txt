@@ -941,7 +941,7 @@ estate_nobles_officer_corp = {
 
 estate_nobles_levies = {
 	icon = privilege_demand_more_troops
-	max_absolutism = -5
+	max_absolutism = -10
 	influence = 0.1
 	is_valid = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
@@ -957,7 +957,7 @@ estate_nobles_levies = {
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.25
-		global_manpower_modifier = 1
+		global_manpower_modifier = 0.5
 	}
 	penalties = {
 	}
@@ -2373,7 +2373,7 @@ estate_nomadic_tribes_tribal_host = {
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.25
-		global_manpower_modifier = 1
+		global_manpower_modifier = 0.5
 	}
 	benefits = {
 		#global_manpower_modifier = 0.2
@@ -2922,7 +2922,7 @@ estate_maratha_loyalty_privilege = {
 
 estate_maratha_levies = {
 	icon = privilege_recruit_from_marathi
-	max_absolutism = -5
+	max_absolutism = -10
 	influence = 0.1
 	is_valid = {
 		NOT = { religion_group = muslim }
@@ -2937,7 +2937,7 @@ estate_maratha_levies = {
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.25
-		global_manpower_modifier = 1
+		global_manpower_modifier = 0.5
 	}
 	penalties = {
 	}
@@ -3103,7 +3103,7 @@ estate_maratha_special_privilege = {
 	penalties = {
 	}
 	benefits = {
-		discipline = 0.025
+		discipline = 0.03
 	}
 	ai_will_do = {
 		factor = 12
@@ -6943,7 +6943,7 @@ estate_nobles_golden_liberty = {
 	penalties = {
 	}
 	benefits = {
-		global_manpower_modifier = 0.5
+		global_manpower_modifier = 0.33
 	}
 	mechanics = {
 		exempt_from_seize_land

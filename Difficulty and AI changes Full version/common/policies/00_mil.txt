@@ -804,7 +804,7 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	discipline = 0.025
+	discipline = 0.03
 	fire_damage = 0.05
 	
 	ai_will_do = {

@@ -1726,6 +1726,12 @@ take_capital_force_tributary = {
 	
 	peace_options = {
 		po_become_tributary_state
+		po_become_vassal
+		po_revoke_cores
+		po_release_vassals
+		po_release_annexed
+		po_gold
+		po_annul_treaties
 	}
 	
 	war_name = TRIBUTARY_MISSION_WAR_NAME

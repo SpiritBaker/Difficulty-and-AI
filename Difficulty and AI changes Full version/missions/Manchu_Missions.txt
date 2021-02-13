@@ -200,7 +200,7 @@ manchu_missions_1 = {
 			north_china_region = {
 				limit = {
 					culture_group = east_asian
-					NOT = { owned_by = ROOT }
+					#NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_core = ROOT

@@ -92,6 +92,10 @@ feudalism = {
 				culture_group = hindusthani
 				NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
 			}
+			AND = {
+				technology_group = nomad
+				NOT = { tag = SHY }
+			}
 			owner = { technology_group = high_american }
 			owner = {
 				NOT = {
@@ -110,7 +114,7 @@ feudalism = {
 				is_year = 1600
 				owner = {
 					NOT = { has_reform = siberian_tribe }
-					NOT = { has_reform = steppe_horde }
+					#NOT = { has_reform = steppe_horde }
 				}
 			}
 			is_year = 1700

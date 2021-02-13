@@ -407,6 +407,11 @@ ai_militarist = {
 				is_revolution_target = yes
 			}
 		}
+		modifier = {
+			factor = 0.5
+			is_emperor_of_china = yes
+			tag = QNG
+		}	
 	}
 	icon = 4
 }

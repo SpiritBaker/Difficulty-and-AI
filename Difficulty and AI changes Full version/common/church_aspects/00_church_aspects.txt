@@ -56,7 +56,7 @@ adult_baptism_aspect = {
 holy_sacraments_aspect = {
 	cost = 100
 	modifier = { 
-		discipline = 0.025
+		discipline = 0.03
 	}
 	ai_will_do = {
 		factor = 10

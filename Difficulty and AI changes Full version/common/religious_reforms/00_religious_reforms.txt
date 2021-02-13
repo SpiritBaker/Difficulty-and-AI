@@ -26,7 +26,7 @@ nahuatl_reforms = {
 		diplomatic_upkeep = 1
 	}
 	nahuatl_reform_3 = {
-		discipline = 0.05
+		discipline = 0.03
 	}
 	nahuatl_reform_4 = {
 		colonists = 1

@@ -1898,7 +1898,7 @@ strict_personality = {
 	knowledge_sharing = yes
 	wants_avoid_loans = yes
 	
-	discipline = 0.037
+	discipline = 0.03
 	nation_designer_cost = 5
 } #1 easier event
 

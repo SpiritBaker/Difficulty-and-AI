@@ -19,6 +19,7 @@ steppe_horde = {
 		#has_reform = steppe_horde
 		NOT = { has_reform = great_mongol_state_reform }
 	}
+	maintain_dynasty = yes
 	legacy_equivalent = steppe_horde_legacy
 	nomad = yes
 	valid_for_nation_designer = yes
