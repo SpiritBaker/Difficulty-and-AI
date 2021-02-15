@@ -13,10 +13,10 @@ country_event = {
 	option = { # Change Religion & Invite Tibetan monks
 		name = dif_nomad_events.1.a
 		change_religion = vajrayana
-		add_country_modifier = {
-			name = "tibetan_missionaries"
-			duration = 9125
-		}
+		#add_country_modifier = {
+		#	name = "tibetan_missionaries"
+		#	duration = 9125
+		#}
 		hidden_effect = {
 			add_prestige = 75
 			add_stability = 1

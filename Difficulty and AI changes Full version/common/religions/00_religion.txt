@@ -1153,7 +1153,8 @@ muslim = {
 		color = { 0 153 0 }
 		icon = 5
 		country = {
-			cavalry_flanking = 0.25
+			land_morale = 0.05
+			cav_to_inf_ratio = 0.1
 			heir_chance = 1.0
 		}
 		country_as_secondary = {
@@ -1173,8 +1174,9 @@ muslim = {
 		color = { 0 204 0 }
 		icon = 6
 		country = {
-			heir_chance = 1.0
 			land_morale = 0.05
+			manpower_recovery_speed = 0.10
+			heir_chance = 1.0
 		}
 		country_as_secondary = {
 			land_morale = 0.05
@@ -1193,8 +1195,9 @@ muslim = {
 		color = { 0 102 0 }
 		icon = 16
 		country = {
-			heir_chance = 1.0
+			naval_morale = 0.1
 			global_trade_goods_size_modifier = 0.1
+			heir_chance = 1.0
 		}
 		country_as_secondary = {
 			global_ship_cost = -0.1

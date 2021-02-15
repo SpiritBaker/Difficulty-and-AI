@@ -79,10 +79,14 @@ ai_capitalist = {
 		modifier = {
 			factor = 1.5
 			tag = FRA
+		}
+		modifier = {
+			factor = 1.5
+			tag = QNG
 		}	
 		modifier = {
-			factor = 2
-			is_emperor_of_china = yes
+			factor = 1.5
+			is_emperor = yes
 		}		
 		modifier = {
 			factor = 3
@@ -408,8 +412,8 @@ ai_militarist = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			is_emperor_of_china = yes
+			factor = 0.1
+			government_rank = 3
 			tag = QNG
 		}	
 	}

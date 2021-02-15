@@ -522,6 +522,7 @@ mongol_missions_3 = {
 		trigger = {
 			has_institution = feudalism
 			has_matching_religion = vajrayana
+			adm_tech = 6
 		}
 		effect = {
 			country_event = { id = dif_nomad_events.1 }

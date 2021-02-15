@@ -39,7 +39,7 @@ NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03125	--% each tech increases
 NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
 --NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
-
+NDefines.NDiplomacy.PEACE_COST_DEMAND_CAPITAL_MULT = 1.25
 
 
 --NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
@@ -219,6 +219,8 @@ NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 300	                    -- Minimu
 --NDefines.NCountry.REVOLUTION_CLAIM_COOLDOWN = 12			            -- How many months until it can be stolen again
 
 NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.1   -- Minimum of crownland when distributing land at start
+NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
+--NDefines.NCountry.PS_IMPROVE_PROVINCE_CAPITAL_DISCOUNT = 0.025
 
 NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3650 -- 10 years
 --NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 0.5
