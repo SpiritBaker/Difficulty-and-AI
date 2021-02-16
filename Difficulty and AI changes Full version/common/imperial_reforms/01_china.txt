@@ -10,7 +10,7 @@ seaban_decision = {
 	empire = celestial_empire
 	emperor = {
 		diplomats = 1
-		trade_efficiency = 0.05
+		trade_efficiency = 0.1
 	}
 	required_reform = establish_gaituguiliu_decision
 }

@@ -1,0 +1,30 @@
+namespace = dif_ai
+#AI only events
+country_event = { 
+	id = dif_ai.1
+	title = "dif_ai.EVTNAME1"
+	desc = "dif_ai.EVTDESC1"
+	picture = LAND_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			tag = QNG
+			tag = MUG
+		}
+	}
+
+	#mean_time_to_happen = {
+	#	months = 1
+	#}
+	
+	option = {
+		name = "dif_ai.EVTOPTA1"
+		add_country_modifier = {
+			name = "ai_reset_merchants"
+			duration = 30
+		}
+	}
+}

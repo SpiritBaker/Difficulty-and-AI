@@ -411,11 +411,6 @@ ai_militarist = {
 				is_revolution_target = yes
 			}
 		}
-		modifier = {
-			factor = 0.1
-			government_rank = 3
-			tag = QNG
-		}	
 	}
 	icon = 4
 }

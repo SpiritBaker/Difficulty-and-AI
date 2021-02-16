@@ -1250,7 +1250,10 @@ cb_force_tributary = {
 	prerequisites = {
 		has_dlc = "Mandate of Heaven"
 		is_emperor_of_china = yes
-		FROM = { is_subject = no }
+		FROM = { 
+			is_subject = no
+			NOT = { culture_group = east_asian } #Chinese
+		}
 		is_neighbor_of = FROM
 	}
 

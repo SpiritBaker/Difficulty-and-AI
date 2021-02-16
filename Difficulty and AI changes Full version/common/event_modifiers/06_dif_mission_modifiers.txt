@@ -22,19 +22,6 @@ shun_rebellion = {
 	manpower_recovery_speed = -0.1
 	land_maintenance_modifier = 0.10
 }
-great_unifier = {
-	land_forcelimit_modifier = 0.15
-	land_maintenance_modifier = -0.10
-	idea_cost = -0.1
-}
-manchu_conqest_of_china_ai = {
-	land_forcelimit_modifier = 0.15
-	land_maintenance_modifier = -0.15
-	discipline = 0.03
-	adm_tech_cost_modifier = -0.1
-	yearly_corruption = -0.1
-	core_creation = -0.25
-}
 uzbek_grand_host = {
 	land_morale = 0.05
 	land_maintenance_modifier = -0.10

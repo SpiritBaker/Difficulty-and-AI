@@ -119,7 +119,7 @@ country_event = {
 		
 			set_ai_personality = {
 				personality = ai_militarist
-				locked = yes
+				#locked = yes
 			}
 		}
 	}
