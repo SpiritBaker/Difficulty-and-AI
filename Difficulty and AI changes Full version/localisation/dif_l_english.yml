@@ -198,6 +198,7 @@
  estate_nomadic_aristocracy_unrestricted_looting_desc:0 ""
  EST_VAL_ARISTOCRATIC_ARMY:0 "Traditional Ways: §Y$VAL$%§!"
  EST_VAL_UNHAPPY_SUBJECTS:0 "Old Ways: §Y$VAL$%§!"
+ estate_banners:0 "Banners"
  
  #Agendas
  nomadic_aristocracy_build_army_building_in_y:0 "Expand Military Infrastructure in [agenda_province.GetName]"

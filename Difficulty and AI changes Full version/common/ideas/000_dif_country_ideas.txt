@@ -4,7 +4,7 @@
 ZUN_ideas = {
 	start = {
 		cavalry_power = 0.25
-		core_creation = -0.20
+		land_forcelimit_modifier = 0.15
 	}
 	
 	bonus = {

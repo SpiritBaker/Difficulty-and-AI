@@ -3499,17 +3499,13 @@ estate_nomadic_tribes_primacy_to_the_bannermen = {
 		OR = {
 			primary_culture = manchu
 			primary_culture = manchu_new
-			primary_culture = oirats
-			primary_culture = mongol
-			primary_culture = chahar
-			primary_culture = khalkha
 		}
 	}
 	penalties = {
 		
 	}
 	benefits = {
-		amount_of_banners = 0.15
+		amount_of_banners = 0.10
 		#land_morale = 0.1
 	}
 	ai_will_do = {
@@ -6854,6 +6850,10 @@ estate_nobles_strong_duchies = {
 		modifier = { #will lose it via invalid sooner or later
 			factor = 2
 			has_estate_privilege = estate_nobles_strong_duchies
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 2
 		}
 		modifier = {
 			factor = 0

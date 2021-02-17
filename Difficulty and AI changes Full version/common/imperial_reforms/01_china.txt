@@ -2,7 +2,7 @@ establish_gaituguiliu_decision = {
 	empire = celestial_empire
 	emperor = {
 		meritocracy = 0.5
-		global_tax_modifier = 0.10
+		governing_capacity_modifier = 0.1
 	}
 }
 
@@ -18,7 +18,7 @@ seaban_decision = {
 reform_land_tax_decision = {
 	empire = celestial_empire
 	emperor = {
-		global_autonomy = -0.05
+		global_tax_modifier = 0.15
 		state_maintenance_modifier = -0.25
 	}
 	required_reform = seaban_decision

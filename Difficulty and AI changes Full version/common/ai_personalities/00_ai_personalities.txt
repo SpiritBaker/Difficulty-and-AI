@@ -269,12 +269,12 @@ ai_militarist = {
 			NOT = { mil = 3 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			is_emperor = yes
 			total_development = 250
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			is_emperor = yes
 			total_development = 500
 		}			
@@ -317,8 +317,12 @@ ai_militarist = {
 			}
 		}
 		modifier = {
-			factor = 2
-			tag = MCH
+			factor = 2.5
+			OR = {
+				tag = MCH
+				primary_culture = manchu
+				primary_culture = manchu_new
+			}
 		}
 		modifier = {
 			factor = 100
@@ -329,7 +333,7 @@ ai_militarist = {
 			government = native
 		}
 		modifier = {
-			factor = 3
+			factor = 2.5
 			OR = {
 				has_reform = khanate_monarchy
 				has_reform = nomad_empire
@@ -596,7 +600,7 @@ ai_balanced = {
 			}
 		}	
 		modifier = {
-			factor = 1.25
+			factor = 2.5
 			is_emperor = yes
 		}
 	}

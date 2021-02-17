@@ -28,3 +28,30 @@ country_event = {
 		}
 	}
 }
+
+country_event = { 
+	id = dif_ai.2
+	title = "dif_ai.EVTNAME2"
+	desc = "dif_ai.EVTDESC2"
+	picture = LAND_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ai = yes
+		tag = MAM
+		#exists = MDA
+	}
+
+	#mean_time_to_happen = {
+	#	months = 1
+	#}
+	
+	option = {
+		name = "dif_ai.EVTOPTA2"
+		set_ai_personality = {
+			personality = ai_balanced
+			#locked = yes
+		}
+	}
+}

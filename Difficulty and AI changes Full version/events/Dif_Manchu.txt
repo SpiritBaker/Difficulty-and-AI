@@ -268,9 +268,13 @@ country_event = { #AI only event
 				war_goal_province = 730
 			}
 		}
+		set_ai_personality = {
+			personality = ai_militarist
+			#locked = yes
+		}
 		capital_scope = {
 			build_to_forcelimit = {
-				infantry = 0.4
+				infantry = 0.3
 				cavalry = 0.3
 			}
 		}

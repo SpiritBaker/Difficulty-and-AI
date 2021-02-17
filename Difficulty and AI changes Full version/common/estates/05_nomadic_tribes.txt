@@ -136,6 +136,13 @@ estate_nomadic_tribes = {
 	}
 	influence_from_dev_modifier = 1
 
+	custom_name = {
+		desc = estate_banners
+		trigger = {
+			has_reform = celestial_empire
+		}
+	}
+
 	privileges = {
 		estate_nomadic_tribes_land_rights
 		estate_nomadic_tribes_share_of_the_spoils
