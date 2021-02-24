@@ -772,9 +772,13 @@ country_decisions = {
 					limit = {
 						event_target:fort_one = {
 							has_terrain = mountain
+							has_terrain = desert_mountains
 						}
 						event_target:fort_two = {
-							NOT = { has_terrain = mountain }
+							NOT = {
+								has_terrain = mountain
+								has_terrain = desert_mountains
+							}
 						}
 					}
 					
@@ -786,9 +790,13 @@ country_decisions = {
 					limit = {
 						event_target:fort_two = {
 							has_terrain = mountain
+							has_terrain = desert_mountains
 						}
 						event_target:fort_one = {
-							NOT = { has_terrain = mountain }
+							NOT = {
+								has_terrain = mountain
+								has_terrain = desert_mountains
+							}
 						}
 					}
 					
@@ -803,13 +811,16 @@ country_decisions = {
 								OR = {
 									has_terrain = hills
 									has_terrain = highlands
+									has_terrain = desert_highlands
 								}
 							}
 							event_target:fort_two = {
 								NOT = {
 									has_terrain = mountain
+									has_terrain = desert_mountains
 									has_terrain = hills
 									has_terrain = highlands
+									has_terrain = desert_highlands
 								}
 							}
 						}
@@ -824,13 +835,16 @@ country_decisions = {
 								OR = {
 									has_terrain = hills
 									has_terrain = highlands
+									has_terrain = desert_highlands
 								}
 							}
 							event_target:fort_one = {
 								NOT = {
 									has_terrain = mountain
+									has_terrain = desert_mountains
 									has_terrain = hills
 									has_terrain = highlands
+									has_terrain = desert_highlands
 								}
 							}
 						}
@@ -878,18 +892,22 @@ country_decisions = {
 											has_terrain = woods
 											has_terrain = jungle
 											has_terrain = marsh
+											has_terrain = steppe_mountains
 										}
 									}
 									event_target:fort_two = {
 										NOT = {
 											has_terrain = mountain
+											has_terrain = desert_mountains
 											has_terrain = hills
 											has_terrain = highlands
+											has_terrain = desert_highlands
 											has_terrain = glacier
 											has_terrain = forest
 											has_terrain = woods
 											has_terrain = jungle
 											has_terrain = marsh
+											has_terrain = steppe_mountains
 										}
 									}
 								}
@@ -907,18 +925,22 @@ country_decisions = {
 											has_terrain = woods
 											has_terrain = jungle
 											has_terrain = marsh
+											has_terrain = steppe_mountains
 										}
 									}
 									event_target:fort_one = {
 										NOT = {
 											has_terrain = mountain
+											has_terrain = desert_mountains
 											has_terrain = hills
 											has_terrain = highlands
+											has_terrain = desert_highlands
 											has_terrain = glacier
 											has_terrain = forest
 											has_terrain = woods
 											has_terrain = jungle
 											has_terrain = marsh
+											has_terrain = steppe_mountains
 										}
 									}
 								}
