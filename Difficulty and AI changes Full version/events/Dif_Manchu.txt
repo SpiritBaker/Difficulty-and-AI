@@ -163,7 +163,7 @@ country_event = {
 		tag = MCH
 		ai = yes
 		OR = {
-			NOT = { imperial_mandate = 15 }
+			NOT = { imperial_mandate = 5 }
 			MNG = { has_any_disaster = yes }
 			war_with = MNG
 		}

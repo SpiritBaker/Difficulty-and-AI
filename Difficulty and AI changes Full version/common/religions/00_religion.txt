@@ -143,7 +143,7 @@ christian = {
 					}
 				}
 				ai_will_do = {
-					factor = 1
+					factor = 2
 				}				
 			}			
 			bless_monarch = {
@@ -164,6 +164,10 @@ christian = {
 				}
 				ai_will_do = {
 					factor = 1
+					modifier = {
+						factor = 2
+						NOT = { prestige = -25 }
+					}
 				}
 			}
 			indulgence_for_sins = {
@@ -185,6 +189,10 @@ christian = {
 				}
 				ai_will_do = {
 					factor = 1
+					modifier = {
+						factor = 2.5
+						NOT = { legitimacy = 50 }
+					}
 				}
 			}	
 			local_saint = {
@@ -228,6 +236,14 @@ christian = {
 						factor = 0
 						NOT = { num_of_loans = 1 }
 					}
+					modifier = {
+						factor = 2.5
+						num_of_loans = 5
+					}
+					modifier = {
+						factor = 2.5
+						inflation = 10
+					}
 				}
 			}			
 			proclaim_holy_war = {
@@ -252,6 +268,10 @@ christian = {
 						factor = 0
 						manpower_percentage = 0.5
 					}
+					modifier = {
+						factor = 2
+						is_great_power = yes
+					}
 				}
 			}
 			send_papal_legate = {
@@ -272,6 +292,10 @@ christian = {
 				}
 				ai_will_do = {
 					factor = 1
+					modifier = {
+						factor = 2.5
+						is_emperor = yes
+					}
 				}
 			}	
 			sanction_commercial_monopoly = {
@@ -292,26 +316,36 @@ christian = {
 						factor = 0
 						NOT = { has_idea_group = trade_ideas }
 					}
+					modifier = {
+						factor = 2
+						num_of_colonies = 1
+					}
 				}
 			}
 			investigate_heresy = {
-				curia_treasury_cost = 200
+				curia_treasury_cost = 500
 				potential = {
 					has_dlc = "Emperor"
 					is_papal_controller = yes
+					tag = PAP
 				}
 				allow = {
 					is_papal_controller = yes
 					reform_desire = 0.05
+					NOT = { has_country_modifier = papal_investigate_heresy }
 				}
 				effect = {
 					add_reform_desire = -0.05
-					add_reform_desire_scale = 0.1
+					add_reform_desire_scale = 0.25
+					add_country_modifier = {
+						name = "papal_investigate_heresy"
+						duration = 3650
+					}
 				}
 				ai_will_do = {
-					factor = 0
-				}				
-			}		
+					factor = 10
+				}
+			}	
 		}
 	}
 

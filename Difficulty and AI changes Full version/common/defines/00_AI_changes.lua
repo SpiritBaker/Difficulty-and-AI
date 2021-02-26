@@ -29,7 +29,7 @@ NDefines.NEconomy.CARAVAN_FACTOR = 6.0
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER =  10   
 --NDefines.NEconomy.TRADE_PROPAGATE_THRESHOLD  =  2
-NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03125	--% each tech increases it. 100% increase at tech 32
+NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03	--% each tech increases it. 96% increase at tech 32
 
 
 --NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
@@ -174,6 +174,7 @@ NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 25.0				-- AI scoring for 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2 -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
+NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 0.1	-- AI scoring for becoming defender of faith, multiplied by budget/cost
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)

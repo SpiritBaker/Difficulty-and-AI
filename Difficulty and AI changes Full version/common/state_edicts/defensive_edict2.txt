@@ -8,7 +8,7 @@ edict_defensive_edict2 = {
 	}
 	
 	modifier = {
-		local_defensiveness = 0.33
+		local_defensiveness = 0.25
 		local_state_maintenance_modifier = 0.5
 	}
 	
