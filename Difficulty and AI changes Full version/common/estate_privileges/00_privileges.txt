@@ -3284,6 +3284,9 @@ estate_rajput_look_up_purbias = {
 	is_valid = {
 		has_estate_privilege = estate_rajput_rajput_regiments
 	}
+	modifier_by_land_ownership = {
+		special_unit_forcelimit = 0.5
+	}
 	can_select = {
 	}
 	on_granted = {
@@ -3326,6 +3329,9 @@ estate_rajput_look_up_purbias = {
 	penalties = {
 	}
 	benefits = {
+	}
+	mechanics = {
+		enables_rajput_regiments
 	}
 	ai_will_do = {
 		factor = 10

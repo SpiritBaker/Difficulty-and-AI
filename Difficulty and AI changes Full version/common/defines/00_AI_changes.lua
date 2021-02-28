@@ -50,6 +50,10 @@ NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/D
 --NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
 
+NDefines.NDiplomacy.HRE_VOTE_TOO_SMALL = -100
+--NDefines.NDiplomacy.HRE_VOTE_BIG_COUNTRY = 50
+--NDefines.NDiplomacy.HRE_VOTE_VERY_BIG_COUNTRY = 75
+
 
 NDefines.NAI.SUBSIDY_YEARS = 20
 NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
@@ -185,8 +189,8 @@ NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what re
 --NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.85
 --NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.15
 
---NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1.25
---NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 1.25
+NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1.0
+NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 0.8
 
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIZE = 1.5
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25

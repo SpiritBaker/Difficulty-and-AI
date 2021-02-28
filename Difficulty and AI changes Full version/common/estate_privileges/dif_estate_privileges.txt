@@ -461,28 +461,37 @@ sedentary_subjects_guarantee_religious_freedom = {
 	}
 }
 
-estate_nomadic_tribes_expand_banners = {
+estate_nomadic_tribes_great_games = {
 	icon = privilege_royal_authority
 	land_share = 5
 	max_absolutism = -5
-	loyalty = 0.1
-	influence = 0.1
+	#loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		OR = {
+			primary_culture = oirats
+			primary_culture = khalkha
+			primary_culture = mongol
+			primary_culture = chahar
+			primary_culture = manchu
+		}
+	}
 	#modifier_by_land_ownership = {
 	#	global_manpower_modifier = -0.25
 	#	amount_of_banners = 0.50
 	#}
 	penalties = {
+		global_tax_modifier = -0.1
 	}
 	benefits = {
+		cav_to_inf_ratio = 0.10
+		army_tradition = 0.25
 	}
 	ai_will_do = {
-		factor = 5
+		factor = 10
 		modifier = {
-			factor = 2
-			OR = {
-				tag = MCH
-				tag = MJZ
-			}
+			factor = 0.5
+			is_absolutism_active = yes
 		}
 	}
 }

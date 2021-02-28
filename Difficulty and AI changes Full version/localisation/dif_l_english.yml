@@ -200,6 +200,8 @@
  EST_VAL_ARISTOCRATIC_ARMY:0 "Traditional Ways: §Y$VAL$%§!"
  EST_VAL_UNHAPPY_SUBJECTS:0 "Old Ways: §Y$VAL$%§!"
  estate_banners:0 "Banners"
+ estate_nomadic_tribes_great_games:0 "Anual Great Games"
+ estate_nomadic_tribes_great_games_desc:0 "Traditional Games for Tribes west of Altai mountians."
  
  #Agendas
  nomadic_aristocracy_build_army_building_in_y:0 "Expand Military Infrastructure in [agenda_province.GetName]"

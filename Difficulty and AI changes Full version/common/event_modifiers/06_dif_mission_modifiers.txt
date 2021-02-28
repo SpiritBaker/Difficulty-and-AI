@@ -10,7 +10,7 @@ last_nomad_empire_m = {
 }
 paying_additional_tribute_m = {
 	#local_unrest = 1
-	local_tax_modifier = 0.25
+	local_tax_modifier = 0.50
 	local_manpower_modifier = -0.33
 }
 nomads_special_trade_rights_m = {
