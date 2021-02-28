@@ -1,0 +1,27 @@
+country_decisions = {
+	investigate_heresy_ai = {
+		potential = {
+			ai = yes
+			has_dlc = "Emperor"
+			tag = PAP
+		}
+		allow = {
+			is_papal_controller = yes
+			reform_desire = 0.1
+			NOT = { has_country_modifier = papal_investigate_heresy }
+			curia_treasury_size = 500
+		}
+		effect = {
+			add_curia_treasury = -500
+			add_reform_desire = -0.05
+			add_reform_desire_scale = 0.25
+			add_country_modifier = {
+				name = "papal_investigate_heresy"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
