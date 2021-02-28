@@ -4,6 +4,7 @@ country_decisions = {
 			ai = yes
 			has_dlc = "Emperor"
 			tag = PAP
+			NOT = { is_religion_enabled = protestant }
 		}
 		allow = {
 			is_papal_controller = yes
