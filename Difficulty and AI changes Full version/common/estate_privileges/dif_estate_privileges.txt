@@ -484,7 +484,7 @@ estate_nomadic_tribes_great_games = {
 		global_tax_modifier = -0.1
 	}
 	benefits = {
-		cav_to_inf_ratio = 0.10
+		cav_to_inf_ratio = 0.15
 		army_tradition = 0.25
 	}
 	ai_will_do = {

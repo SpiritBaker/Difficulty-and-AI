@@ -143,7 +143,7 @@ christian = {
 					}
 				}
 				ai_will_do = {
-					factor = 2
+					factor = 1.5
 				}				
 			}			
 			bless_monarch = {
@@ -165,7 +165,7 @@ christian = {
 				ai_will_do = {
 					factor = 1
 					modifier = {
-						factor = 2
+						factor = 1.5
 						NOT = { prestige = -25 }
 					}
 				}
@@ -190,7 +190,7 @@ christian = {
 				ai_will_do = {
 					factor = 1
 					modifier = {
-						factor = 2.5
+						factor = 1.6
 						NOT = { legitimacy = 50 }
 					}
 				}
@@ -210,7 +210,7 @@ christian = {
 				ai_will_do = {
 					factor = 1
 					modifier = {
-						factor = 2
+						factor = 1.6
 						NOT = { stability = 0 }
 					}
 				}
@@ -237,11 +237,11 @@ christian = {
 						NOT = { num_of_loans = 1 }
 					}
 					modifier = {
-						factor = 2.5
+						factor = 1.6
 						num_of_loans = 5
 					}
 					modifier = {
-						factor = 2.5
+						factor = 1.6
 						inflation = 10
 					}
 				}
@@ -269,7 +269,7 @@ christian = {
 						manpower_percentage = 0.5
 					}
 					modifier = {
-						factor = 2
+						factor = 1.6
 						is_great_power = yes
 					}
 				}
@@ -293,7 +293,7 @@ christian = {
 				ai_will_do = {
 					factor = 1
 					modifier = {
-						factor = 2.5
+						factor = 1.7
 						is_emperor = yes
 					}
 				}
@@ -317,7 +317,7 @@ christian = {
 						NOT = { has_idea_group = trade_ideas }
 					}
 					modifier = {
-						factor = 2
+						factor = 1.5
 						num_of_colonies = 1
 					}
 				}
@@ -336,14 +336,14 @@ christian = {
 				}
 				effect = {
 					add_reform_desire = -0.05
-					add_reform_desire_scale = 0.25
+					add_reform_desire_scale = 0.10
 					add_country_modifier = {
 						name = "papal_investigate_heresy"
 						duration = 3650
 					}
 				}
 				ai_will_do = {
-					factor = 10
+					factor = 0
 				}
 			}	
 		}

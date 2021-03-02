@@ -29,6 +29,10 @@ defender_of_faith_1 = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			is_great_power = no
+		}
+		modifier = {
 			factor = 5
 			tag = SPA
 			religion = catholic
@@ -79,6 +83,10 @@ defender_of_faith_2 = {
 			NOT = {
 				num_of_cities = 15
 			}
+		}
+		modifier = {
+			factor = 0.5
+			is_great_power = no
 		}
 		modifier = {
 			factor = 5
@@ -134,6 +142,10 @@ defender_of_faith_3 = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			is_great_power = no
+		}
+		modifier = {
 			factor = 5
 			tag = SPA
 			religion = catholic
@@ -187,6 +199,10 @@ defender_of_faith_4 = {
 			NOT = {
 				num_of_cities = 10
 			}
+		}
+		modifier = {
+			factor = 0.5
+			is_great_power = no
 		}
 		modifier = {
 			factor = 5
@@ -245,6 +261,10 @@ defender_of_faith_5 = {
 			NOT = {
 				num_of_cities = 10
 			}
+		}
+		modifier = {
+			factor = 0.5
+			is_great_power = no
 		}
 		modifier = {
 			factor = 5

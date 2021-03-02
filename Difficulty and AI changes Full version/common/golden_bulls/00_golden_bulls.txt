@@ -84,19 +84,7 @@ libertas_ecclesiae = {
         hre_religion_locked = yes
     }
     ai_will_do = {
-        factor = 1
-        modifier = {
-            factor = 0
-            is_emperor = no
-            #hre_religion = catholic
-            #hre_religion_locked = yes
-        }
-        modifier = {
-            factor = 10
-            is_emperor = yes
-            #hre_religion = catholic
-            #hre_religion_locked = yes
-        }
+        factor = 10
     }
 }
 

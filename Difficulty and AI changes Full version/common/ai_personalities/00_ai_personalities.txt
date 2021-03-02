@@ -79,10 +79,6 @@ ai_capitalist = {
 		modifier = {
 			factor = 1.5
 			tag = FRA
-		}
-		modifier = {
-			factor = 1.5
-			tag = QNG
 		}	
 		modifier = {
 			factor = 1.5
@@ -319,7 +315,6 @@ ai_militarist = {
 		modifier = {
 			factor = 2.5
 			OR = {
-				tag = MCH
 				primary_culture = manchu
 				primary_culture = manchu_new
 			}
@@ -394,15 +389,15 @@ ai_militarist = {
 			num_of_loans = 5
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			num_of_loans = 7
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			num_of_loans = 10
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			num_of_loans = 15
 		}
 		modifier = {
