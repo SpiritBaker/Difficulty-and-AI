@@ -8,7 +8,7 @@ NDefines.NMilitary.BANNER_REINFORCE_SPEED = 0
 NDefines.NMilitary.BANNER_MAINTENANCE_COST = 0.75	
 NDefines.NMilitary.BANNER_AGE_MULTIPLIER =	0.50	
 NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.10	
-NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0
+NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0.10
 
 NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in percent for leader to gain a trait after combat (modified by tradition gained).
 --NDefines.NMilitary.COMBAT_DICE_SIDE = 6 
@@ -20,7 +20,8 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in p
 NDefines.NCountry.FREE_IDEA_GROUP_COST = 4
 NDefines.NCountry.IDEA_TO_TECH = -0.015
 NDefines.NCountry.PS_BUY_IDEA = 380
-NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.5 --Horde unity gained per ducat looted.
+NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.35 --Horde unity gained per ducat looted.
+NDefines.NCountry.NOMAD_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
 
 NDefines.NEconomy.EDICTS_COST_INCREASE = 0 --% increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
@@ -182,12 +183,12 @@ NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 0.1	-- AI scoring for becoming d
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
---MILITARY_FOCUS_DEFAULT = 1.0
---MILITARY_FOCUS_LOWER_BOUND = 0.0
---NDefines.NAIEconomy.MILITARY_FOCUS_UPPER_BOUND = 3.0
---NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.35
---NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.85
---NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.15
+NDefines.MILITARY_FOCUS_DEFAULT = 1.0
+NDefines.MILITARY_FOCUS_LOWER_BOUND = 0.25
+NDefines.MILITARY_FOCUS_UPPER_BOUND = 1.5
+NDefines.ARMY_FRACTION_MILITARIZE = 1.5
+NDefines.ARMY_FRACTION_PEACEFUL = 0.9
+NDefines.ARMY_FRACTION_MILITARIST = 1.15
 
 NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1.0
 NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 0.8

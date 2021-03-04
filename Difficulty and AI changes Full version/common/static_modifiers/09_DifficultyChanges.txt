@@ -115,7 +115,7 @@ militarized_society = {
 #Multiplied by current Horde Unity - 50
 horde_unity = {
 	global_unrest = -4
-	discipline = 0.08
+	discipline = 0.06
 	nomadic_tribes_loyalty_modifier = 0.05
 	nomadic_aristocracy_loyalty_modifier = 0.05
 }
@@ -239,11 +239,6 @@ karma_too_low =
 	diplomatic_reputation = -1
 }
 
-# Caps at 600
-horde_development = {
-	horde_unity = -2
-}
-
 bankruptcy = {
 	global_unrest = 5
 	interest = 5
@@ -279,4 +274,9 @@ emperor = {
 	free_leader_pool = 1
 	prestige = 1
 	papal_influence = 1
+}
+
+# Caps at 1000
+horde_development = {
+	horde_unity = -2
 }

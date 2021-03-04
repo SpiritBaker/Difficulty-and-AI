@@ -1146,7 +1146,7 @@ quality_ideas = {
 	category = MIL
 
 	bonus = {
-		yearly_army_professionalism = 0.02
+		yearly_army_professionalism = 0.002
 	}
 
 	private_to_marshal = {

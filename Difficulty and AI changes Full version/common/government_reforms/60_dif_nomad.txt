@@ -17,10 +17,10 @@ nomad_empire = {
 	}
 	maintain_dynasty = yes
 	legacy_equivalent = despotic_monarchy
+	nomad = yes
 	#fixed_rank = 3
 	valid_for_nation_designer = no
 	#allow_banners = yes
-	#nomad = yes
 	modifiers = {
 		max_absolutism = 10
 		governing_capacity = 150
@@ -58,10 +58,10 @@ khanate_monarchy = {
 	}
 	maintain_dynasty = yes
 	legacy_equivalent = despotic_monarchy
+	nomad = yes
 	#fixed_rank = 2
 	valid_for_nation_designer = no
 	#allow_banners = yes
-	#nomad = yes
 	modifiers = {
 		land_forcelimit_modifier = 0.10
 		land_maintenance_modifier = -0.10
