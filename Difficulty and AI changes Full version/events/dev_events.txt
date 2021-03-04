@@ -399,3 +399,101 @@ country_event = {
 		#hidden
 	}
 }
+
+country_event = {
+	#gold dev
+	id = dev_events.6
+	title = dev_events.6.t
+	desc = dev_events.6.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	trigger = {
+		ai = yes
+		is_at_war = no
+		primitives = no
+		dip_power = 100
+		any_owned_province = {
+			is_state_core = ROOT
+			trade_goods = gold
+			NOT = { base_production = 10 }
+		}
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				is_state_core = ROOT
+				trade_goods = gold
+				NOT = { base_production = 10 }
+			}
+			set_base_value = {
+				which = baseCost
+			}
+			
+			export_to_variable = { which = bTax 	value = base_tax }
+			export_to_variable = { which = bPro 	value = base_production }
+			export_to_variable = { which = bMan 	value = base_manpower }
+			
+			set_variable 	= { which = notPro 	which = bMan }
+			change_variable = { which = notPro 	which = bTax }
+			
+			export_to_variable = { which = admPower 	value = trigger_value:adm_power 	who = PREV }
+			export_to_variable = { which = milPower 	value = trigger_value:mil_power 	who = PREV }
+			
+			add_next_institution_embracement_scaled = 5
+			
+			if = {
+				limit = {
+					check_variable = {
+						which = notPro
+						which = bPro
+					}
+				}
+				add_power = {
+					power = dip
+				}
+				add_base_production = 1
+				log = dev_info.2
+			}
+			else = {
+				if = {
+					limit = {
+						check_variable = {
+							which = admPower
+							which = milPower
+						}
+					}
+					add_power = {
+						power = adm
+					}
+					add_base_tax = 1
+					log = dev_info.1
+				}
+				else = {
+					add_power = {
+						power = mil
+					}
+					add_base_manpower = 1
+					log = dev_info.3
+				}
+			}
+			
+			add_devastation_reduction = yes
+			owner = {
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
+			}
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
