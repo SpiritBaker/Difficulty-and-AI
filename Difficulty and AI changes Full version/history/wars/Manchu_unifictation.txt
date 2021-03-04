@@ -1,0 +1,16 @@
+name = "Tribal feud"
+war_goal = {
+	type = take_province_tribal_feud
+	casus_belli = cb_tribal_feud_ai
+	province = 730 # Jilin
+}
+
+1444.1.1 = {
+	add_attacker = MJZ
+	add_defender = MHX
+}
+
+1446.1.1 = {
+	rem_attacker = MJZ
+	rem_defender = MHX
+}

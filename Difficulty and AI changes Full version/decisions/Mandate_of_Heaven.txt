@@ -86,7 +86,24 @@ country_decisions = {
 				}
 				change_religion = confucianism
 			}
-	
+			if = {
+				limit = {
+					NOT = { owns = 1816 }
+				}
+				set_country_flag = reconquest_of_beijing_flag
+			}
+			if = {
+				limit = {
+					NOT = { owns = 1821 }
+				}
+				set_country_flag = reconquest_of_nanjing_flag
+			}
+			if = {
+				limit = {
+					NOT = { owns = 667 }
+				}
+				set_country_flag = reconquest_of_canton_flag
+			}
 			set_emperor_of_china = ROOT
 			add_prestige = 25
 		}

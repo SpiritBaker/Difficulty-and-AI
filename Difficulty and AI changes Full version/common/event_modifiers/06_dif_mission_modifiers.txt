@@ -33,3 +33,12 @@ amur_estuary_modifier = {
 papal_investigate_heresy = {
 	unjustified_demands = -0.1
 }
+reconquest_of_beijing = {
+	imperial_mandate = 0.05
+}
+reconquest_of_nanjing = {
+	imperial_mandate = 0.05
+}
+reconquest_of_canton = {
+	imperial_mandate = 0.05
+}

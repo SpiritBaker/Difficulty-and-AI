@@ -114,12 +114,15 @@
  amur_estuary_modifier:0 "Amur Estuary"
  desc_amur_estuary_modifier:0 "Controlling the important river estuary of the Amur strengthens our hold of the trade in the region."
  papal_investigate_heresy:0 "Prosecuting Heresy"
+ reconquest_of_beijing:0 "Reconquest of Beijing"
+ reconquest_of_nanjing:0 "Reconquest of Nanjing"
+ reconquest_of_canton:0 "Reconquest of Canton"
 
  #Mission
  mongols_unity_through_faith_title:0 "Unity Through Faith"
  mongols_unity_through_faith_desc:0 "Many Mongols have begun to adopt the Vajrayana Buddhist faith. Through adoption of one faith, we can ensure clans unity and prevent infighting."
  alliance_of_four_oirats_title:0 "Alliance of Four Oirats"
- alliance_of_four_oirats_desc:0 "The Alliance of the Four Oirat Tribes binds the Western Mongols together. Made up of the Dzungars (or Choros), Torghut, Dörbet and Khoshut, it first emerged in 1399 and has held firm ever since, allowing a powerful Oirat state to emerge Central Asian Steppe."
+ alliance_of_four_oirats_desc:0 "The Alliance of the Four Oirat Tribes binds the Western Mongols together. Made up of the Dzungars (or Choros), Torghut, Dörbet and Khoshut, it first emerged in 1399 and has held firm ever since, and as long as our stability and military prowess remain high, it will continue to hold in the future!"
  securing_zungaria_title:0 "Securing Dzungaria"
  securing_zungaria_desc:0 ""
  subjugate_yarkand_title:0 "Subjugation of Yarkand"
@@ -132,7 +135,7 @@
  centralization_desc:0 ""
  last_nomad_empire_title:0 "Last Nomad Empire"
  last_nomad_empire_desc:0 ""
- push_further_west_title:0 "Expansion West"
+ push_further_west_title:0 "Kazakh wars"
  push_further_west_desc:0 ""
  develop_local_source_of_iron_title:0 "Needs of the State"                          
  develop_local_source_of_iron_desc:0 ""
@@ -164,6 +167,7 @@
  #Estates
  estate_aristocracy:0 "Aristocracy"
  EST_NOT_TRUE_NOMAD:0 "Not a True Nomad: §Y$VAL$%§!"
+ EST_NO_STEPPE_PROVINCES:0 "Lack of Steppe Provinces: §Y$VAL$%§!"
  nomadic_aristocracy:0 "Noyans"
  nomadic_aristocracy_desc:0 "This estate represents Nomadic Aristocracy, serving under the Khan as commanders and administrators."
  nomadic_aristocracy_influence_modifier:0 "Noyans Influence"

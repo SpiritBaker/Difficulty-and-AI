@@ -943,7 +943,7 @@ oir_missions_3b = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	push_further_west = {
+	push_further_west = { # Kazakh wars
 		icon = mission_unite_home_region
 		required_missions = { securing_zungaria }
 		position = 3

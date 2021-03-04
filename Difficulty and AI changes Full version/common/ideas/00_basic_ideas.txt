@@ -32,7 +32,7 @@ aristocracy_ideas = {
 		mil_tech_cost_modifier  = -0.1
 	}
 	local_nobility = {
-		cavalry_flanking = 0.25
+		cav_to_inf_ratio = 0.10
 		yearly_absolutism = 0.5
 	}
 	serfdom = {
@@ -577,7 +577,7 @@ defensive_ideas = {
 
 	battlefield_commisions = {
 		army_tradition_from_battle = 1.0
-		army_tradition = 0.25
+		army_tradition = 0.5
 	}
 	military_drill = {
 		land_morale = 0.15
@@ -587,7 +587,7 @@ defensive_ideas = {
 		leader_land_manuever = 1
 	}
 	regimental_system = {
-		land_maintenance_modifier = -0.05
+		land_maintenance_modifier = -0.1
 	}
 	defensive_mentality = {
 		defensiveness = 0.2
@@ -1146,7 +1146,7 @@ quality_ideas = {
 	category = MIL
 
 	bonus = {
-		drill_gain_modifier = 0.25
+		yearly_army_professionalism = 0.02
 	}
 
 	private_to_marshal = {
