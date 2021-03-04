@@ -317,14 +317,20 @@ country_event = {
 			limit = {
 				any_subject_country = { 
 					ai = yes
-					culture_group = east_asian
+					OR = {
+						culture_group = east_asian
+						capital_scope = { superregion = china_superregion }
+					}
 					is_subject_of_type = tributary_state
 				}
 			}
 			random_subject_country = {
 				limit = {
 					ai = yes
-					culture_group = east_asian
+					OR = {
+						culture_group = east_asian
+						capital_scope = { superregion = china_superregion }
+					}
 					is_subject_of_type = tributary_state
 				}
 				add_historical_rival = PREV	
@@ -343,13 +349,21 @@ country_event = {
 	#fire_only_once = yes
 	
 	trigger = {
-		owns = 1816 # beijing
 		NOT = { tag = MNG }
 		is_emperor_of_china = yes
-		OR = { 
-			has_country_flag = reconquest_of_beijing_flag 
-			has_country_flag = reconquest_of_nanjing_flag
-			has_country_flag = reconquest_of_canton_flag
+		OR = {
+			AND = {
+				owns = 1816 # beijing
+				has_country_flag = reconquest_of_beijing_flag 
+			} 
+			AND = {
+				owns = 1821 # beijing
+				has_country_flag = reconquest_of_nanjing_flag
+			}
+			AND = {
+				owns = 667 # beijing
+				has_country_flag = reconquest_of_canton_flag 
+			}
 		}
 	}
 	
@@ -359,6 +373,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = reconquest_of_beijing_flag
+				owns = 1816
 			}
 			add_country_modifier = {
 				name = "reconquest_of_beijing" # 0.05 mandate for 25 years 
@@ -370,6 +385,7 @@ country_event = {
 		else_if = {
 			limit = {
 				has_country_flag = reconquest_of_nanjing_flag
+				owns = 1821
 			}
 			add_country_modifier = {
 				name = "reconquest_of_nanjing" # 0.05 mandate for 25 years 
@@ -381,6 +397,7 @@ country_event = {
 		else_if = {
 			limit = {
 				has_country_flag = reconquest_of_canton_flag
+				owns = 667 
 			}
 			add_country_modifier = {
 				name = "reconquest_of_canton" # 0.05 mandate for 25 years 

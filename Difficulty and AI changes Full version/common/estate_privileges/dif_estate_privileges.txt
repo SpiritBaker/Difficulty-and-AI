@@ -469,11 +469,9 @@ estate_nomadic_tribes_great_games = {
 	influence = 0.05
 	is_valid = {
 		OR = {
-			primary_culture = oirats
-			primary_culture = khalkha
-			primary_culture = mongol
-			primary_culture = chahar
-			primary_culture = manchu
+			is_nomad = yes
+			has_reform = nomad_empire
+			has_reform = khanate_monarchy
 		}
 	}
 	#modifier_by_land_ownership = {
