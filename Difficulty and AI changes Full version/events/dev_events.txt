@@ -420,7 +420,7 @@ country_event = {
 		any_owned_province = {
 			is_state_core = ROOT
 			trade_goods = gold
-			NOT = { base_production = 10 }
+			NOT = { base_production = 8 }
 		}
 	}
 	
@@ -429,7 +429,7 @@ country_event = {
 			limit = {
 				is_state_core = ROOT
 				trade_goods = gold
-				NOT = { base_production = 10 }
+				NOT = { base_production = 8 }
 			}
 			set_base_value = {
 				which = baseCost
