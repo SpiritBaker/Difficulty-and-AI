@@ -102,7 +102,7 @@ technology = {
 	#Standardised Pikes
 	supply_limit 		= 	0.5
 	infantry_shock		= 	0.15
-	cavalry_shock		= 	0.2
+	cavalry_shock		= 	0.25
 
 	enable = western_men_at_arms	
 	enable = western_longbow	
@@ -140,6 +140,7 @@ technology = {
 	military_tactics 	= 	0.25
 	infantry_shock		= 	0.30
 	infantry_fire 		= 	0.20
+	cavalry_shock		=	0.25
 	
 	
 	barracks = yes
@@ -181,7 +182,7 @@ technology = {
 	
 	#Pike and Shot
 	infantry_fire		= 	0.25
-	cavalry_shock		=	0.8
+	cavalry_shock		=	0.5
 
 	
 	regimental_camp = yes

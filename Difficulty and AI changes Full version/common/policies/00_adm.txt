@@ -503,66 +503,6 @@ land_inheritance_act = {
 
 
 
-
-the_witchcraft_act = {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = religious_ideas
-		has_idea_group = aristocracy_ideas
-	}
-	
-	allow = {
-		full_idea_group = religious_ideas
-		full_idea_group = aristocracy_ideas
-	}
-	
-	global_unrest = -1
-	global_missionary_strength = 0.01
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			religious_unity = 1
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.8 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.6 }
-		}			
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.4 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.2 }
-		}
-		
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 2
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 4
-		}			
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 6
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 8
-		}
-	}
-}
-
-
 the_education_act = {
 	monarch_power = ADM
 

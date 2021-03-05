@@ -160,6 +160,7 @@ sedentary_subdjects = {
 		sedentary_subdjects_increased_tribute
 		sedentary_subdjects_trade_rights
 		sedentary_subjects_guarantee_religious_freedom
+		sedentary_subjects_patronage_of_the_science
 	}
 
 	agendas = {

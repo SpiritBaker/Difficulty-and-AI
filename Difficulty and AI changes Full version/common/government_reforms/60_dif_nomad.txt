@@ -3,30 +3,22 @@ nomad_empire = {
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	potential = {
-		government_rank = 3
+		is_revolutionary = no
 		OR = {
-			has_reform = nomad_empire 
-			have_had_reform = khanate_monarchy 
-		}
-		OR = {
-			culture_group = altaic
-			culture_group = tartar
-			primary_culture = manchu_new
-			primary_culture = manchu
+			tag = ZUN
 		}
 	}
-	maintain_dynasty = yes
+	#maintain_dynasty = yes
 	legacy_equivalent = despotic_monarchy
-	nomad = yes
-	#fixed_rank = 3
+	#nomad = yes
+	fixed_rank = 3
 	valid_for_nation_designer = no
 	#allow_banners = yes
 	modifiers = {
-		max_absolutism = 10
+		land_forcelimit_modifier = 0.10
+		unjustified_demands = -0.20
+		max_absolutism = 5
 		governing_capacity = 150
-		land_maintenance_modifier = -0.10
-		cav_to_inf_ratio = 0.15
-		movement_speed = 0.10
 	}
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
@@ -58,13 +50,14 @@ khanate_monarchy = {
 	}
 	maintain_dynasty = yes
 	legacy_equivalent = despotic_monarchy
-	nomad = yes
+	#nomad = yes
 	#fixed_rank = 2
 	valid_for_nation_designer = no
 	#allow_banners = yes
 	modifiers = {
-		land_forcelimit_modifier = 0.10
+		land_morale = 0.05
 		land_maintenance_modifier = -0.10
+		#land_maintenance_modifier = -0.10
 		cav_to_inf_ratio = 0.15
 		movement_speed = 0.10
 	}

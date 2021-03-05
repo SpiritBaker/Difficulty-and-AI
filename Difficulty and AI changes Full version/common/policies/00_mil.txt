@@ -986,3 +986,23 @@ deserteur_act = {
 		}
 	}
 }
+
+the_witchcraft_act = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = aristocracy_ideas
+	}
+	
+	cav_to_inf_ratio = 0.10
+
+	ai_will_do = {
+		factor = 5
+	}
+}

@@ -34,13 +34,22 @@ country_decisions = {
 	spawn_click = {
 		major = yes
 		potential = {
-			always = no
+			#always = no
 			ai = yes
 			is_lacking_institutions = yes
 			is_at_war = no
 			primitives = no
 			is_subject = no
-			
+			num_of_cities = 5
+			OR = {
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = well_connected_personality
+				ruler_has_personality = well_advised_personality
+				ruler_has_personality = scholar_personality
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = industrious_personality
+			}
+
 			num_of_owned_provinces_with = {
 				value = 3
 				is_state_core = ROOT

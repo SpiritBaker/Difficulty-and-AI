@@ -824,10 +824,10 @@ oir_missions_2 = {
 		trigger = {
 			zungaria_area = {
 				type = all
+				religion = vajrayana
 				is_state_core = ROOT
 				#controlled_by = ROOT
 			}
-			religion = vajrayana
 			is_at_war = no
 		}
 		effect = {
