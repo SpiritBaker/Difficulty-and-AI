@@ -461,7 +461,7 @@ sedentary_subjects_guarantee_religious_freedom = {
 	}
 }
 
-sedentary_subjects_patronage_of_the_science = {
+sedentary_subjects_patronage_of_science = {
 	icon = privilege_build_jain_temple
 	max_absolutism = -5
 	#loyalty = 0.05
@@ -471,8 +471,8 @@ sedentary_subjects_patronage_of_the_science = {
 		global_spy_defence = -0.10
 	}
 	benefits = {
-		global_institution_spread = 0.15
-		embracement_cost = -0.15
+		global_institution_spread = 0.25
+		embracement_cost = -0.10
 	}
 	ai_will_do = {
 		factor = 5

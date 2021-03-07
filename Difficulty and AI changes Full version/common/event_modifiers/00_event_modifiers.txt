@@ -1509,6 +1509,7 @@ papal_blessing = {
 }
 
 papal_sanction_for_holy_war = {
+	land_morale = 0.05
 	manpower_recovery_speed = 0.15
 	religion = yes
 }

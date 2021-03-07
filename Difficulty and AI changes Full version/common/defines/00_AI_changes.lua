@@ -9,6 +9,8 @@ NDefines.NMilitary.BANNER_MAINTENANCE_COST = 0.75
 NDefines.NMilitary.BANNER_AGE_MULTIPLIER =	0.50	
 NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.10	
 NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0.10
+--NDefines.NMilitary.ARMY_ATTRITION_AT_COAST = 1					-- How many percent attrition units take while loaded onto ships along the coast
+NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 5					-- How many percent attrition units take while loaded onto ships traveling open sea
 
 NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in percent for leader to gain a trait after combat (modified by tradition gained).
 --NDefines.NMilitary.COMBAT_DICE_SIDE = 6 
@@ -51,7 +53,7 @@ NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/D
 --NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
 
-NDefines.NDiplomacy.HRE_VOTE_TOO_SMALL = -100
+--NDefines.NDiplomacy.HRE_VOTE_TOO_SMALL = -100
 --NDefines.NDiplomacy.HRE_VOTE_BIG_COUNTRY = 50
 --NDefines.NDiplomacy.HRE_VOTE_VERY_BIG_COUNTRY = 75
 
@@ -230,6 +232,9 @@ NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
 
 NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3650 -- 10 years
 --NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 0.5
+NDefines.NDiplomacy.DEFENDER_OF_FAITH_COST = 1000				-- _DDEF_DEFENDER_OF_FAITH_COST_
+--NDefines.NDiplomacy.DEFENDER_OF_FAITH_MONTHS = 24				-- _DDEF_DEFENDER_OF_FAITH_MONTHS_ (Minimum months before it can be taken from another country with less prestige)
+
 
 
 

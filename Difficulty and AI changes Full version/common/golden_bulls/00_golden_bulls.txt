@@ -15,7 +15,11 @@ illius_qui_se_pro_divini = {
 		}
     }
     ai_will_do = {
-        factor = 0
+        factor = 0.5
+        modifier = {
+            factor = 2.5
+            personality = ai_militarist
+        }
     }
 }
 

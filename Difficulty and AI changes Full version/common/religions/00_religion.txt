@@ -79,7 +79,7 @@ christian = {
 			concessions = {
 				first_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						global_heretic_missionary_strength  = 0.02
 					}	
 					concilatory = {
@@ -89,7 +89,7 @@ christian = {
 				}
 				second_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						institution_spread_from_true_faith = 0.30
 					}	
 					concilatory = {
@@ -99,7 +99,7 @@ christian = {
 				}
 				third_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						manpower_in_true_faith_provinces  = 0.1
 					}	
 					concilatory = {
@@ -109,8 +109,8 @@ christian = {
 				}
 				fourth_concession = {
 					harsh = {
-						relation_with_heretics = -20
-						warscore_cost_vs_other_religion  = -0.10
+						relation_with_heretics = -10
+						warscore_cost_vs_other_religion  = -0.15
 					}	
 					concilatory = {
 						relation_with_heretics = 10

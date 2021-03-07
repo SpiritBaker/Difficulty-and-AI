@@ -294,3 +294,19 @@ emperor = {
 horde_development = {
 	horde_unity = -2
 }
+
+army_tradition = {
+	recover_army_morale_speed = 0.1
+	land_morale = 0.25
+	#discipline = 0.05
+	manpower_recovery_speed = 0.1
+	siege_ability = 0.05
+	temples_influence = 0.1
+	mr_aristocrats_influence = 0.1
+	rr_girondists_influence = 0.1
+	monthly_militarized_society = 0.1
+	nobles_loyalty_modifier = 0.05
+	maratha_loyalty_modifier = 0.05
+	rajput_loyalty_modifier = 0.05
+	nomadic_aristocracy_loyalty_modifier = 0.05
+}
