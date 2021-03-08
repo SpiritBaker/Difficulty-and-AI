@@ -1187,8 +1187,7 @@ muslim = {
 		color = { 0 153 0 }
 		icon = 5
 		country = {
-			land_morale = 0.05
-			cav_to_inf_ratio = 0.1
+			manpower_recovery_speed = 0.10
 			heir_chance = 1.0
 		}
 		country_as_secondary = {
@@ -1209,7 +1208,6 @@ muslim = {
 		icon = 6
 		country = {
 			land_morale = 0.05
-			manpower_recovery_speed = 0.10
 			heir_chance = 1.0
 		}
 		country_as_secondary = {
@@ -1229,7 +1227,6 @@ muslim = {
 		color = { 0 102 0 }
 		icon = 16
 		country = {
-			naval_morale = 0.1
 			global_trade_goods_size_modifier = 0.1
 			heir_chance = 1.0
 		}

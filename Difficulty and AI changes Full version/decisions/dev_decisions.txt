@@ -39,7 +39,10 @@ country_decisions = {
 			is_lacking_institutions = yes
 			is_at_war = no
 			primitives = no
-			is_subject = no
+			OR = {
+				is_subject_of_type = tributary_state
+				is_subject = no
+			}
 			num_of_cities = 5
 			OR = {
 				ruler_has_personality = free_thinker_personality
@@ -48,11 +51,6 @@ country_decisions = {
 				ruler_has_personality = scholar_personality
 				ruler_has_personality = entrepreneur_personality
 				ruler_has_personality = industrious_personality
-			}
-
-			num_of_owned_provinces_with = {
-				value = 3
-				is_state_core = ROOT
 			}
 			
 			all_owned_province = {
