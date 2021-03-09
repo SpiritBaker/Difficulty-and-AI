@@ -532,14 +532,45 @@ country_event = {
 							log = "[This.GetName] upgrade cathedral"
 						}
 					}
-					else = {
-						random_owned_province = {
+					else = { #university
+						set_variable = { high_price = 0 }
+						
+						every_owned_province = {
 							limit = {
 								is_state_core = ROOT
 								can_build = university
 							}
-							add_building_construction = { building = cathedral }
-							log = "[This.GetName] upgrade cathedral"
+							ROOT = {
+								export_to_variable = {
+									which = pDev
+									value = development
+									who = PREV
+								}
+							}
+							if = {
+								limit = {
+									ROOT = {
+										NOT = {
+											check_variable = {
+												which = high_price
+												which = pDev
+											}
+										}
+									}
+								}
+								ROOT = {
+									set_variable = {
+										which = high_price
+										which = pDev
+									}
+								}
+								save_event_target_as = build_target
+							}
+						}
+						
+						event_target:build_target = {
+							add_building_construction = { building = university }
+							log = "[This.GetName] build university"
 						}
 					}
 				}
