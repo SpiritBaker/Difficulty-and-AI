@@ -1,7 +1,7 @@
 namespace = build_events
 
 country_event = {
-	# build manufactory
+	# build/upgrade
 	id = build_events.1
 	title = build_events.1.t
 	desc = build_events.1.d
@@ -24,27 +24,7 @@ country_event = {
 		any_owned_province = {
 			is_state_core = ROOT
 			OR = {
-				AND = {
-					has_local_modifier_value = {
-						which = trade_goods_size
-						value = 0.5
-					}
-					OR = {
-						can_build = workshop
-						can_build = counting_house
-					}
-				}
-				AND = {
-					OR = {
-						base_manpower = 6
-						has_building = soldier_households
-					}
-					OR = {
-						can_build = barracks
-						can_build = training_fields
-					}
-				}
-				AND = {
+				AND = { #manufactory
 					NOT = { has_latent_trade_goods = coal }
 					OR = {
 						AND = {
@@ -69,6 +49,71 @@ country_event = {
 						can_build = furnace
 					}
 				}
+				AND = { #workshop
+					has_local_modifier_value = {
+						which = trade_goods_size
+						value = 0.5
+					}
+					OR = {
+						can_build = workshop
+						can_build = counting_house
+					}
+				}
+				AND = { #barracks
+					OR = {
+						base_manpower = 6
+						has_building = soldier_households
+					}
+					OR = {
+						can_build = barracks
+						can_build = training_fields
+					}
+				}
+				AND = { #production
+					has_building = workshop
+					can_build = counting_house
+				}
+				AND = { #trade
+					OR = {
+						has_building = marketplace
+						has_building = trade_depot
+					}
+					OR = {
+						can_build = trade_depot
+						can_build = stock_exchange
+					}
+				}
+				AND = { #barracks
+					has_building = barracks
+					can_build = training_fields
+				}
+				AND = { #regimental_camp
+					has_building = regimental_camp
+					can_build = conscription_center
+				}
+				AND = { #government
+					has_building = courthouse
+					can_build = town_hall
+					
+					num_of_owned_provinces_with = {
+						value = 5
+						
+						NOT = { is_state_core = ROOT }
+						is_territorial_core = ROOT
+						is_owned_by_trade_company = no
+						is_overseas = no
+						NOT = { has_construction = core }
+					}
+				}
+				AND = { #shipyard
+					has_building = shipyard
+					can_build = grand_shipyard
+				}
+				AND = { #taxation
+					has_building = temple
+					can_build = cathedral
+				}
+				can_build = university
 			}
 		}
 	}
@@ -245,12 +290,13 @@ country_event = {
 					if = {
 						limit = { can_build = counting_house }
 						add_building_construction = { building = counting_house }
+						log = "[This.GetName] build counting_house"
 					}
 					else_if = {
 						limit = { can_build = workshop }
 						add_building_construction = { building = workshop }
+						log = "[This.GetName] build workshop"
 					}
-					log = "[This.GetName] build workshop"
 				}
 			}
 			else = {
@@ -316,16 +362,186 @@ country_event = {
 						save_event_target_as = build_target
 					}
 				}
-				event_target:build_target = {
-					if = {
-						limit = { can_build = training_fields }
-						add_building_construction = { building = training_fields }
+				if = {
+					limit = { has_saved_event_target = build_target }
+					event_target:build_target = {
+						if = {
+							limit = { can_build = training_fields }
+							add_building_construction = { building = training_fields }
+							log = "[This.GetName] build training_fields"
+						}
+						else = {
+							add_building_construction = { building = barracks }
+							log = "[This.GetName] build barracks"
+						}
 					}
-					else_if = {
-						limit = { can_build = barracks }
-						add_building_construction = { building = barracks }
+				}
+				else = {
+					if = { #production
+						limit = {
+							any_owned_province = {
+								is_state_core = ROOT
+								has_building = workshop
+								can_build = counting_house
+							}
+						}
+						random_owned_province = {
+							limit = {
+								is_state_core = ROOT
+								has_building = workshop
+								can_build = counting_house
+							}
+							add_building_construction = { building = counting_house }
+							log = "[This.GetName] upgrade counting_house"
+						}
 					}
-					log = "[This.GetName] build barracks"
+					else_if = { #trade
+						limit = {
+							any_owned_province = {
+								is_state_core = ROOT
+								OR = {
+									has_building = marketplace
+									has_building = trade_depot
+								}
+								OR = {
+									can_build = trade_depot
+									can_build = stock_exchange
+								}
+							}
+						}
+						random_owned_province = {
+							limit = {
+								is_state_core = ROOT
+								OR = {
+									has_building = marketplace
+									has_building = trade_depot
+								}
+								OR = {
+									can_build = trade_depot
+									can_build = stock_exchange
+								}
+							}
+							if = {
+								limit = { can_build = stock_exchange }
+								add_building_construction = { building = stock_exchange }
+								log = "[This.GetName] upgrade stock_exchange"
+							}
+							else = {
+								add_building_construction = { building = trade_depot }
+								log = "[This.GetName] upgrade trade_depot"
+							}
+						}
+					}
+					else_if = { #barracks
+						limit = {
+							any_owned_province = {
+								is_state_core = ROOT
+								has_building = barracks
+								can_build = training_fields
+							}
+						}
+						random_owned_province = {
+							limit = {
+								is_state_core = ROOT
+								has_building = barracks
+								can_build = training_fields
+							}
+							add_building_construction = { building = training_fields }
+							log = "[This.GetName] upgrade training_fields"
+						}
+					}
+					else_if = { #regimental_camp
+						limit = {
+							any_owned_province = {
+								is_state_core = ROOT
+								has_building = regimental_camp
+								can_build = conscription_center
+							}
+						}
+						random_owned_province = {
+							limit = {
+								is_state_core = ROOT
+								has_building = regimental_camp
+								can_build = conscription_center
+							}
+							add_building_construction = { building = conscription_center }
+							log = "[This.GetName] upgrade conscription_center"
+						}
+					}
+					else_if = { #government
+						limit = {
+							any_owned_province = {
+								is_state_core = ROOT
+								has_building = courthouse
+								can_build = town_hall
+								
+								num_of_owned_provinces_with = {
+									value = 5
+									
+									NOT = { is_state_core = ROOT }
+									is_territorial_core = ROOT
+									is_owned_by_trade_company = no
+									is_overseas = no
+									NOT = { has_construction = core }
+								}
+							}
+						}
+						random_owned_province = {
+							limit = {
+								is_state_core = ROOT
+								has_building = courthouse
+								can_build = town_hall
+							}
+							add_building_construction = { building = town_hall }
+							log = "[This.GetName] upgrade town_hall"
+						}
+					}
+					else_if = { #shipyard
+						limit = {
+							any_owned_province = {
+								is_state_core = ROOT
+								has_building = shipyard
+								can_build = grand_shipyard
+							}
+						}
+						random_owned_province = {
+							limit = {
+								is_state_core = ROOT
+								has_building = shipyard
+								can_build = grand_shipyard
+							}
+							add_building_construction = { building = grand_shipyard }
+							log = "[This.GetName] upgrade grand_shipyard"
+						}
+					}
+					else_if = { #taxation
+						limit = {
+							any_owned_province = {
+								is_state_core = ROOT
+								has_building = temple
+								can_build = cathedral
+							}
+						}
+						random_owned_province = {
+							limit = {
+								is_state_core = ROOT
+								has_building = temple
+								can_build = cathedral
+							}
+							add_building_construction = { building = cathedral }
+							log = "[This.GetName] upgrade cathedral"
+						}
+					}
+					else = {
+						random_owned_province = {
+							limit = {
+								is_state_core = ROOT
+								can_build = university
+							}
+							add_building_construction = { building = cathedral }
+							log = "[This.GetName] upgrade cathedral"
+						}
+					}
 				}
 			}
 		}
@@ -383,236 +599,6 @@ country_event = {
 			set_variable = { tropical_wood_price = 2 }
 			set_variable = { gold_price = 0 }
 			set_variable = { unknown_price = 0 }
-		}
-	}
-	
-	option = {
-		#hidden
-	}
-}
-
-country_event = {
-	# upgrade buildings
-	id = build_events.3
-	title = build_events.3.t
-	desc = build_events.3.d
-	picture = INVENTION_eventPicture
-	hidden = yes
-
-	trigger = {
-		ai = yes
-		primitives = no
-		
-		NOT = { num_of_loans = 1 }
-		treasury = 1500
-		is_in_deficit = no
-		
-		OR = {
-			is_at_war = no
-			treasury = 2500
-		}
-		
-		any_owned_province = {
-			is_state_core = ROOT
-			OR = {
-				AND = { #production
-					has_building = workshop
-					can_build = counting_house
-				}
-				AND = { #trade
-					OR = {
-						has_building = marketplace
-						has_building = trade_depot
-					}
-					OR = {
-						can_build = trade_depot
-						can_build = stock_exchange
-					}
-				}
-				AND = { #barracks
-					has_building = barracks
-					can_build = training_fields
-				}
-				AND = { #regimental_camp
-					has_building = regimental_camp
-					can_build = conscription_center
-				}
-				AND = { #government
-					has_building = courthouse
-					can_build = town_hall
-					
-					num_of_owned_provinces_with = {
-						value = 5
-						
-						NOT = { is_state_core = ROOT }
-						is_territorial_core = ROOT
-						is_owned_by_trade_company = no
-						is_overseas = no
-						NOT = { has_construction = core }
-					}
-				}
-				AND = { #shipyard
-					has_building = shipyard
-					can_build = grand_shipyard
-				}
-				AND = { #taxation
-					has_building = temple
-					can_build = cathedral
-				}
-			}
-		}
-	}
-
-	immediate = {
-		log = "[Root.GetName] upgrading"
-		
-		if = { #production
-			limit = {
-				any_owned_province = {
-					is_state_core = ROOT
-					has_building = workshop
-					can_build = counting_house
-				}
-			}
-			random_owned_province = {
-				limit = {
-					is_state_core = ROOT
-					has_building = workshop
-					can_build = counting_house
-				}
-				add_building_construction = { building = counting_house }
-				log = "[This.GetName] upgrade counting_house"
-			}
-		}
-		else_if = { #trade
-			limit = {
-				any_owned_province = {
-					is_state_core = ROOT
-					OR = {
-						has_building = marketplace
-						has_building = trade_depot
-					}
-					OR = {
-						can_build = trade_depot
-						can_build = stock_exchange
-					}
-				}
-			}
-			random_owned_province = {
-				limit = {
-					is_state_core = ROOT
-					OR = {
-						has_building = marketplace
-						has_building = trade_depot
-					}
-					OR = {
-						can_build = trade_depot
-						can_build = stock_exchange
-					}
-				}
-				if = {
-					limit = { can_build = stock_exchange }
-					add_building_construction = { building = stock_exchange }
-					log = "[This.GetName] upgrade stock_exchange"
-				}
-				else = {
-					add_building_construction = { building = trade_depot }
-					log = "[This.GetName] upgrade trade_depot"
-				}
-			}
-		}
-		else_if = { #barracks
-			limit = {
-				any_owned_province = {
-					is_state_core = ROOT
-					has_building = barracks
-					can_build = training_fields
-				}
-			}
-			random_owned_province = {
-				limit = {
-					is_state_core = ROOT
-					has_building = barracks
-					can_build = training_fields
-				}
-				add_building_construction = { building = training_fields }
-				log = "[This.GetName] upgrade training_fields"
-			}
-		}
-		else_if = { #regimental_camp
-			limit = {
-				any_owned_province = {
-					is_state_core = ROOT
-					has_building = regimental_camp
-					can_build = conscription_center
-				}
-			}
-			random_owned_province = {
-				limit = {
-					is_state_core = ROOT
-					has_building = regimental_camp
-					can_build = conscription_center
-				}
-				add_building_construction = { building = conscription_center }
-				log = "[This.GetName] upgrade conscription_center"
-			}
-		}
-		else_if = { #government
-			limit = {
-				any_owned_province = {
-					is_state_core = ROOT
-					has_building = courthouse
-					can_build = town_hall
-					
-					num_of_owned_provinces_with = {
-						value = 5
-						
-						NOT = { is_state_core = ROOT }
-						is_territorial_core = ROOT
-						is_owned_by_trade_company = no
-						is_overseas = no
-						NOT = { has_construction = core }
-					}
-				}
-			}
-			random_owned_province = {
-				limit = {
-					is_state_core = ROOT
-					has_building = courthouse
-					can_build = town_hall
-				}
-				add_building_construction = { building = town_hall }
-				log = "[This.GetName] upgrade town_hall"
-			}
-		}
-		else_if = { #shipyard
-			limit = {
-				any_owned_province = {
-					is_state_core = ROOT
-					has_building = shipyard
-					can_build = grand_shipyard
-				}
-			}
-			random_owned_province = {
-				limit = {
-					is_state_core = ROOT
-					has_building = shipyard
-					can_build = grand_shipyard
-				}
-				add_building_construction = { building = grand_shipyard }
-				log = "[This.GetName] upgrade grand_shipyard"
-			}
-		}
-		else = { #taxation
-			random_owned_province = {
-				limit = {
-					is_state_core = ROOT
-					has_building = temple
-					can_build = cathedral
-				}
-				add_building_construction = { building = cathedral }
-				log = "[This.GetName] upgrade cathedral"
-			}
 		}
 	}
 	
