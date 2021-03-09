@@ -392,7 +392,7 @@ country_event = {
 }
 
 country_event = {
-	# build manufactory
+	# upgrade buildings
 	id = build_events.3
 	title = build_events.3.t
 	desc = build_events.3.d
@@ -481,7 +481,7 @@ country_event = {
 					can_build = counting_house
 				}
 				add_building_construction = { building = counting_house }
-				log = "[This.GetName] build counting_house"
+				log = "[This.GetName] upgrade counting_house"
 			}
 		}
 		else_if = { #trade
@@ -513,11 +513,11 @@ country_event = {
 				if = {
 					limit = { can_build = stock_exchange }
 					add_building_construction = { building = stock_exchange }
-					log = "[This.GetName] build stock_exchange"
+					log = "[This.GetName] upgrade stock_exchange"
 				}
 				else = {
 					add_building_construction = { building = trade_depot }
-					log = "[This.GetName] build trade_depot"
+					log = "[This.GetName] upgrade trade_depot"
 				}
 			}
 		}
@@ -536,7 +536,7 @@ country_event = {
 					can_build = training_fields
 				}
 				add_building_construction = { building = training_fields }
-				log = "[This.GetName] build training_fields"
+				log = "[This.GetName] upgrade training_fields"
 			}
 		}
 		else_if = { #regimental_camp
@@ -554,7 +554,7 @@ country_event = {
 					can_build = conscription_center
 				}
 				add_building_construction = { building = conscription_center }
-				log = "[This.GetName] build conscription_center"
+				log = "[This.GetName] upgrade conscription_center"
 			}
 		}
 		else_if = { #government
@@ -582,7 +582,7 @@ country_event = {
 					can_build = town_hall
 				}
 				add_building_construction = { building = town_hall }
-				log = "[This.GetName] build town_hall"
+				log = "[This.GetName] upgrade town_hall"
 			}
 		}
 		else_if = { #shipyard
@@ -600,7 +600,7 @@ country_event = {
 					can_build = grand_shipyard
 				}
 				add_building_construction = { building = grand_shipyard }
-				log = "[This.GetName] build grand_shipyard"
+				log = "[This.GetName] upgrade grand_shipyard"
 			}
 		}
 		else = { #taxation
@@ -611,7 +611,7 @@ country_event = {
 					can_build = cathedral
 				}
 				add_building_construction = { building = cathedral }
-				log = "[This.GetName] build cathedral"
+				log = "[This.GetName] upgrade cathedral"
 			}
 		}
 	}
