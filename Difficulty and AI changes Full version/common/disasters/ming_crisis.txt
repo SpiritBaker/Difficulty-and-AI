@@ -116,7 +116,7 @@ ming_crisis = {
 		#discipline = -0.05
 		
 		technology_cost = 0.2
-		global_unrest = 4
+		global_unrest = 5
 	}
 	
 	on_start = ming_crisis.1

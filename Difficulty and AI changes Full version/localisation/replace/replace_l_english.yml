@@ -15,3 +15,7 @@
  TRS:0 "Samarkand"
  TRS_ADJ:0 "Samarkand"
  KOR:1 "Joseon"
+
+ #Policies
+ superior_fortification_act:0 "Field Fortifications"
+ desc_superior_fortification_act:0 "We shall make sure that our positions are always fortified with state-of-the-art technologies."

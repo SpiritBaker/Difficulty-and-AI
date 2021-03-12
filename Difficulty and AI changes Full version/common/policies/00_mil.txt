@@ -221,12 +221,15 @@ superior_fortification_act = {
 		full_idea_group = defensive_ideas
 	}
 	
-	defensiveness = 0.1
-	fort_maintenance_modifier = -0.10
+	fire_damage_received = -0.10
 
 
 	ai_will_do = {
-		factor = 1
+		factor = 10		
+		modifier = {
+			factor = 1000
+			is_in_important_war = yes
+		}
 	}
 }
 
@@ -805,7 +808,7 @@ weapon_quality_standards = {
 	}
 	
 	discipline = 0.03
-	fire_damage = 0.05
+	#fire_damage = 0.05
 	
 	ai_will_do = {
 		factor = 10
