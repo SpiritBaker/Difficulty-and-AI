@@ -25,6 +25,8 @@ country_decisions = {
 				province_id = 1816  # Beijing
 				province_id = 1821	# Nanjing
 				province_id = 667	# Canton
+				province_id = 700   # xian
+				province_id = 1836  # luoyang
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -40,6 +42,8 @@ country_decisions = {
 				owns_core_province = 1816	# Beijing
 				owns_core_province = 1821	# Nanjing
 				owns_core_province = 667	# Canton
+				owns_core_province = 700    # xian
+				owns_core_province = 1836   # luoyang
 			}
 			num_of_owned_provinces_with = {
 				superregion = china_superregion
@@ -103,6 +107,28 @@ country_decisions = {
 					NOT = { owns = 667 }
 				}
 				set_country_flag = reconquest_of_canton_flag
+			}
+			if = {
+				limit = {
+					NOT = { owns = 700 }
+				}
+				set_country_flag = reconquest_of_xian_flag 
+			}
+			if = {
+				limit = {
+					NOT = { owns = 1836 }
+				}
+				set_country_flag = reconquest_of_luoyang_flag 
+			}
+			if = {
+				limit = {
+					ai = yes
+					personality = ai_militarist
+				}
+				set_ai_personality = {
+					personality = ai_balanced
+					locked = no
+				}
 			}
 			set_emperor_of_china = ROOT
 			add_prestige = 25

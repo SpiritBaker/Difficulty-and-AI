@@ -9,7 +9,7 @@ defender_of_faith_1 = {
 		papal_influence = 0.25
     }
 	ai_will_do = {
-		factor = 0.1
+		factor = 0.2
 		modifier = {
 			factor = 0
 			num_of_loans = 1
@@ -31,6 +31,15 @@ defender_of_faith_1 = {
 		modifier = {
 			factor = 0.5
 			is_great_power = no
+		}
+		modifier = {
+			factor = 0.33
+			NOT = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = zealot_personality 
+				ruler_has_personality = pious_personality
+				ruler_has_personality = just_personality
+			}
 		}
 		modifier = {
 			factor = 2.5
@@ -89,6 +98,15 @@ defender_of_faith_2 = {
 			is_great_power = no
 		}
 		modifier = {
+			factor = 0.33
+			NOT = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = zealot_personality 
+				ruler_has_personality = pious_personality
+				ruler_has_personality = just_personality
+			}
+		}
+		modifier = {
 			factor = 2.5
 			tag = SPA
 			religion = catholic
@@ -122,7 +140,7 @@ defender_of_faith_3 = {
 		papal_influence = 0.5
     }
 	ai_will_do = {
-		factor = 0.4
+		factor = 0.3
 		modifier = {
 			factor = 0
 			num_of_loans = 1
@@ -144,6 +162,15 @@ defender_of_faith_3 = {
 		modifier = {
 			factor = 0.5
 			is_great_power = no
+		}
+		modifier = {
+			factor = 0.33
+			NOT = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = zealot_personality 
+				ruler_has_personality = pious_personality
+				ruler_has_personality = just_personality
+			}
 		}
 		modifier = {
 			factor = 2.5
@@ -181,7 +208,7 @@ defender_of_faith_4 = {
 		papal_influence = 0.75
     }
 	ai_will_do = {
-		factor = 0.6
+		factor = 0.5
 		modifier = {
 			factor = 0
 			num_of_loans = 1
@@ -203,6 +230,15 @@ defender_of_faith_4 = {
 		modifier = {
 			factor = 0.5
 			is_great_power = no
+		}
+		modifier = {
+			factor = 0.33
+			NOT = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = zealot_personality 
+				ruler_has_personality = pious_personality
+				ruler_has_personality = just_personality
+			}
 		}
 		modifier = {
 			factor = 2.5
@@ -243,7 +279,7 @@ defender_of_faith_5 = {
 		missionary_maintenance_cost = -0.2
 	}
 	ai_will_do = {
-		factor = 0.8
+		factor = 0.6
 		modifier = {
 			factor = 0
 			num_of_loans = 1
@@ -265,6 +301,15 @@ defender_of_faith_5 = {
 		modifier = {
 			factor = 0.5
 			is_great_power = no
+		}
+		modifier = {
+			factor = 0.33
+			NOT = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = zealot_personality 
+				ruler_has_personality = pious_personality
+				ruler_has_personality = just_personality
+			}
 		}
 		modifier = {
 			factor = 2.5

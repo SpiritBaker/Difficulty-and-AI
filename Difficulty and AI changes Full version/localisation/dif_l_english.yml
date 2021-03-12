@@ -37,6 +37,10 @@
 
  #Trigger
  incompetent_monarch:0 "Incompetent Monarch"
+ lost_control_of_xian:1 "Emperor does not own and control Xi'an"
+ desc_lost_control_of_xian:0 "It bodes poorly for our claim to the Mandate of Heaven if we cannot hold Xi'an, one of China's chief cities."
+ lost_control_of_luoyang:1 "Emperor does not own and control Luoyang"
+ desc_lost_control_of_xian:0 "It bodes poorly for our claim to the Mandate of Heaven if we cannot hold Luoyang, one of China's chief cities."
 
  #Buildings
  building_state_house_desc:0 "Can be built alongside Manufactory"
@@ -97,23 +101,23 @@
  ZUN_ideas_start:0 "Dzunghar Traditions"
  ZUN_ideas_bonus:0 "Dzunghar Ambition"
  dzungaria:0 "Dzungharia"
- dzungaria_desc:0 "Our homeland roughly corresponds to the region bounded by the Tian Shan Mountains to the south and the Altai Mountains to the north. Being outside of the Middle Kingdom and in the vast steppe region, our history is undoubtedly intertwined with the legends of before, such as the Four Oirats, the Northern Yuan, the Uzbeks, the Kazakhs, and many other groups. Zungharia is but a small part of this entire place, but it is our homeland and as any homeland should, it deserves to be united through any means possible."
+ dzungaria_desc:0 "Our homeland roughly corresponds to the region bounded by the Tian Shan Mountains to the south and the Altai Mountains to the north. Being outside of the Middle Kingdom and in the vast steppe region, our history is undoubtedly intertwined with the legends of before, such as the Four Oirats, the Northern Yuan, the Uzbeks, the Kazakhs, and many other groups. Dzungharia is but a small part of this entire place, but it is our homeland and as any homeland should, it deserves to be united through any means possible."
  oirat_roots:0 "Oirat Roots"
  oirat_roots_desc:0 "From the Four Oirats do we descend from and find ourselves in the current state of things. We must never forget the troubles and trials our ancestors went through for it was not all for nothing. The martial prowess the Four Oirats once held as their own will pass on to us and we will improve on what they did in their own time."
  rivalry_against_the_khalkhas:0 "Rivalry against the Khalkhas"
- rivalry_against_the_khalkhas_desc:0 "They have been our rivals for a great many years now and it does not seem like we are going to find peace anytime soon. Whoever shows the most martial prowess and the greatest leadership skills in the steppe is the one that comes out on top and we of Zungharia will show this through the fires of war. The Khalkhas will submit to the true authority of the steppe that are the leaders of Zungharia."
+ rivalry_against_the_khalkhas_desc:0 "They have been our rivals for a great many years now and it does not seem like we are going to find peace anytime soon. Whoever shows the most martial prowess and the greatest leadership skills in the steppe is the one that comes out on top and we of Dzungharia will show this through the fires of war. The Khalkhas will submit to the true authority of the steppe that are the leaders of Dzungharia."
  militant_buddhists:0 "Militant Buddhists"
  militant_buddhists_desc:0 "Conversion to Vajrayana imbued our warriors with burning religious fervour. Now as never before they are united and determined to bring the word of Buddha to unbelievers."
  cut_down_pretenders:0 "Cut Down the Pretenders"
- cut_down_pretenders_desc:0 "Our power may seem secure to those outside of our realm, but on the inside, we know there are people who plot the downfall of the Zunghar people and their state. Whether in the form of palace coups or open separatist revolts, we must actively work to gather information on these groups of rebels and cut them down before they can prove to be deadly to us."
+ cut_down_pretenders_desc:0 "Our power may seem secure to those outside of our realm, but on the inside, we know there are people who plot the downfall of the Dzunghar people and their state. Whether in the form of palace coups or open separatist revolts, we must actively work to gather information on these groups of rebels and cut them down before they can prove to be deadly to us."
  influences_in_tibet:0 "Influences in Tibet"
- influences_in_tibet_desc:0 "Long have the hordes of the steppe had interests in the lands of Tibet as the Dalai Lama, the foremost spiritual leader for our branch of Buddhism, hails from and is usually found inside Tibetan land. By extending our influence beyond our nominal borders and using our connections through faith, we can promote not only a greater spiritual unity amongst the Zunghar people, but also a greater legitimate authority over the entirety of the steppe."
+ influences_in_tibet_desc:0 "Long have the hordes of the steppe had interests in the lands of Tibet as the Dalai Lama, the foremost spiritual leader for our branch of Buddhism, hails from and is usually found inside Tibetan land. By extending our influence beyond our nominal borders and using our connections through faith, we can promote not only a greater spiritual unity amongst the Dzunghar people, but also a greater legitimate authority over the entirety of the steppe."
  dzungar_lancers:0 "Dzungar Lancers"
  dzungar_lancers_desc:0 "Dzungars strayed away from traditional Mongol warfare, innovating in the use of Cavalry Lance. They went so far as to equip and train even traditional horse archers with a lance, and putting greater emphasis on a cavalry charge."
  buying_new_weaponry:0 "Buying New Weapons"
  buying_new_weaponry_desc:0 "From the west and the south, new weapons are coming in that are far more effective than our traditional bow-and-arrow, even on horseback. Traders from the mentioned regions are often willing to sell these new weapons for a price and we are most assuredly willing to buy them if they can help us defeat those rivals around us."
  take_the_throne_of_the_steppe:0 "Taking the Steppe Throne"
- take_the_throne_of_the_steppe_desc:0 "The steppe is a harsh place full of warring states and different people groups, but there was a time of unity throughout that we look back upon fondly. Yes, the Mongol Empire is no more, but that does not mean another state cannot claim the throne they left vacant! The Zunghars will be the next in line to claim this throne and will be the ones to bring unity to the steppe once more, just as they already have to Zungharia."
+ take_the_throne_of_the_steppe_desc:0 "The steppe is a harsh place full of warring states and different people groups, but there was a time of unity throughout that we look back upon fondly. Yes, the Mongol Empire is no more, but that does not mean another state cannot claim the throne they left vacant! The Dzunghars will be the next in line to claim this throne and will be the ones to bring unity to the steppe once more, just as they already have to Dzungharia."
  
 
  #Modifiers
@@ -134,7 +138,10 @@
  reconquest_of_beijing:0 "Reconquest of Beijing"
  reconquest_of_nanjing:0 "Reconquest of Nanjing"
  reconquest_of_canton:0 "Reconquest of Canton"
- manchu_conqest_of_china_ai:0 "Conqest of China"
+ reconquest_of_xian:0 "Reconquest of Xi'an"
+ reconquest_of_luoyang:0 "Reconquest of Luoyang"
+ manchu_conquest_of_china_ai:0 "Conquest of China"
+
 
  #Mission
  mongols_unity_through_faith_title:0 "Unity Through Faith"
@@ -320,7 +327,7 @@
  
  #Tooltips
  root_is_most_powerful_manchuria_tribe:0 "The Most Powerful Manchu Tribe"
- ming_crisis_active_for_20_years_tooltip:0 "Ming Crisis active for 25"
+ ming_crisis_active_for_20_years_tooltip:0 "Ming Crisis active for 25 years."
  strongest_power_in_china:0 "Strongest Power in China"
  OVERLORD_INFLUENCE:0 "Influenced by Celestial Empire"
  byzantine_influx_spread_of_renaissance:0 "Byzantine Influx"
@@ -329,6 +336,7 @@
  nomads_special_trade_rights_tooltip:0 "Every owned province with a Center of Trade gets §Y'Trade Rights'§!, giving the following effects:\nLocal Development Cost: §G-5.0%§! \nLocal Province Trade Power: §G25.0%§!"
  revoke_nomads_special_trade_rights_tooltip:0 "The modifier §Y'Trade Rights'§! is removed from all owned provinces."
  weakening_of_timurid_dynasty_tooltip:0 "Death of Shah Rukh"
+ not_enough_prestige_dif:0 "At least 25 Prestige"
 
 
  #Dif_Formables

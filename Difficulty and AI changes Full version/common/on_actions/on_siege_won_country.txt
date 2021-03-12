@@ -61,3 +61,13 @@ on_siege_won_country = {
 		90 = 0
 	}
 }
+
+on_general_recruited = {
+	add_army_professionalism = 0.005
+}
+
+on_mercenary_recruited = {
+	FROM = {
+		add_army_professionalism = -0.02
+	}
+}

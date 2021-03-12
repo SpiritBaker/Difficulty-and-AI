@@ -284,9 +284,9 @@ temple = {
 	ai_will_do = {
 		factor = 15
 		modifier = {
-			factor = 0.1
+			factor = 0
 			NOT = { base_tax = 4 }
-			#NOT = { trade_goods = gold }
+			NOT = { trade_goods = gold }
 		}
 		modifier = {
 			factor = 0.5
@@ -1109,9 +1109,9 @@ cathedral = {
 	ai_will_do = {
 		factor = 15
 		modifier = {
-			factor = 0.1
+			factor = 0
 			NOT = { base_tax = 4 }
-			#NOT = { trade_goods = gold }
+			NOT = { trade_goods = gold }
 		}
 		modifier = {
 			factor = 0.5

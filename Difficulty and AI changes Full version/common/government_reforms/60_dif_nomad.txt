@@ -15,7 +15,8 @@ nomad_empire = {
 	valid_for_nation_designer = no
 	#allow_banners = yes
 	modifiers = {
-		land_forcelimit_modifier = 0.10
+		land_forcelimit_modifier = 0.15
+		cav_to_inf_ratio = 0.15
 		unjustified_demands = -0.20
 		max_absolutism = 5
 		governing_capacity = 150
@@ -55,9 +56,8 @@ khanate_monarchy = {
 	valid_for_nation_designer = no
 	#allow_banners = yes
 	modifiers = {
-		land_morale = 0.05
+		land_forcelimit_modifier = 0.10
 		land_maintenance_modifier = -0.10
-		#land_maintenance_modifier = -0.10
 		cav_to_inf_ratio = 0.15
 		movement_speed = 0.10
 	}
@@ -74,6 +74,7 @@ nomadic_privileges_reform = {
 	icon = "all_under_tengri_reform"
 	allow_normal_conversion = yes
 	potential = {
+		NOT = { has_reform = celestial_empire }
 		is_revolutionary = no
 		OR = {
 			has_reform = khanate_monarchy
@@ -102,6 +103,7 @@ militarization_of_nomad_society = {
 	icon = "steppe_lancer"
 	allow_normal_conversion = yes
 	potential = {
+		NOT = { has_reform = celestial_empire }
 		is_revolutionary = no
 		OR = {
 			has_reform = khanate_monarchy
@@ -128,6 +130,7 @@ absulute_power_of_huntaiji = {
 	icon = "mandala_system"
 	allow_normal_conversion = yes
 	potential = {
+		NOT = { has_reform = celestial_empire }
 		is_revolutionary = no
 		OR = {
 			tag = ZUN

@@ -1252,7 +1252,20 @@ cb_force_tributary = {
 		is_emperor_of_china = yes
 		FROM = { 
 			is_subject = no
-			NOT = { culture_group = east_asian } #Chinese
+			OR = {
+				NOT = { primary_culture = zhuang }
+				NOT = { primary_culture = yi }
+				NOT = { primary_culture = bai }
+				NOT = { culture_group = east_asian } #Chinese
+				AND = {
+					ai = yes
+					NOT = { 
+						any_owned_province = {
+							superregion = china_superregion
+						}
+					}
+				}
+			}
 		}
 		is_neighbor_of = FROM
 	}

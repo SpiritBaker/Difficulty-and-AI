@@ -10690,7 +10690,7 @@ warriors_do_not_read_books = {
 #EoC Rebalance
 
 new_mandate_holder = {
-	imperial_mandate = 0.1
+	imperial_mandate = 0.2
 }
 
 

@@ -2212,7 +2212,7 @@ QNG_ideas = {
 	
 	expand_the_banners = {
 		amount_of_banners = 0.15
-		discipline = 0.03
+		cavalry_power = 0.15
 	}
 	the_green_standard_army = {
 		manpower_recovery_speed = 0.15

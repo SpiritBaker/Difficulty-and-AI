@@ -94,17 +94,17 @@ christian = {
 					}	
 					concilatory = {
 						relation_with_heretics = 10
-						global_institution_spread = 0.10
+						embracement_cost = -0.1
 					}
 				}
 				third_concession = {
 					harsh = {
 						relation_with_heretics = -10
-						manpower_in_true_faith_provinces  = 0.1
+						manpower_in_true_faith_provinces  = 0.15
 					}	
 					concilatory = {
 						relation_with_heretics = 10
-						global_manpower_modifier = 0.05
+						global_manpower_modifier = 0.1
 					}
 				}
 				fourth_concession = {

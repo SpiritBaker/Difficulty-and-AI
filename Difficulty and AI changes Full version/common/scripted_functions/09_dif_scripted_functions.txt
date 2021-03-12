@@ -1,0 +1,10 @@
+can_claim_defender_of_faith = {
+	condition = {
+		tooltip = "not_enough_prestige_dif"
+		potential = {
+		}
+		allow = {
+			prestige = 25
+		}
+	}
+}

@@ -41,8 +41,7 @@ NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03	--% each tech increases it
 --NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
 NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
 --NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
-NDefines.NDiplomacy.PEACE_COST_DEMAND_CAPITAL_MULT = 1.25
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -5.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
 
 
 --NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
@@ -159,7 +158,7 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for
 --NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.05  --AI desire for a province is multiplied by this if it is not on their conquest list.
 NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 10.0 -- AI desire for a province is multiplied by this if it has a core on it
 NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 7.5	--AI desire for a province is multiplied by this if it has a claim on it.
-NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 3.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
+NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 5.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
 NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 1	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
 NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
@@ -187,10 +186,10 @@ NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 0.1	-- AI scoring for becoming d
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
 NDefines.MILITARY_FOCUS_DEFAULT = 1.0
 NDefines.MILITARY_FOCUS_LOWER_BOUND = 0.25
-NDefines.MILITARY_FOCUS_UPPER_BOUND = 1.5
+NDefines.MILITARY_FOCUS_UPPER_BOUND = 1.75
 NDefines.ARMY_FRACTION_MILITARIZE = 1.5
 NDefines.ARMY_FRACTION_PEACEFUL = 0.9
-NDefines.ARMY_FRACTION_MILITARIST = 1.15
+NDefines.ARMY_FRACTION_MILITARIST = 1.25
 
 NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1.0
 NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 0.8
@@ -232,7 +231,7 @@ NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
 
 NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3650 -- 10 years
 --NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 0.5
-NDefines.NDiplomacy.DEFENDER_OF_FAITH_COST = 1000				-- _DDEF_DEFENDER_OF_FAITH_COST_
+--NDefines.NDiplomacy.DEFENDER_OF_FAITH_COST = 1000				-- _DDEF_DEFENDER_OF_FAITH_COST_
 --NDefines.NDiplomacy.DEFENDER_OF_FAITH_MONTHS = 24				-- _DDEF_DEFENDER_OF_FAITH_MONTHS_ (Minimum months before it can be taken from another country with less prestige)
 
 

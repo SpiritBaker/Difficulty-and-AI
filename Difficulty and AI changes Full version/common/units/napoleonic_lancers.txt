@@ -1,11 +1,11 @@
-# Napoleonic Lancers
+# Napoleonic Lancers # Latin Lancers
 
 unit_type = western	
 type = cavalry
 
 maneuver = 2
-offensive_morale = 5
-defensive_morale = 4
+offensive_morale = 4
+defensive_morale = 5
 offensive_fire = 0
 defensive_fire = 2
 offensive_shock = 6

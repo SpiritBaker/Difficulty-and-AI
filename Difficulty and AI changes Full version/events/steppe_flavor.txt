@@ -18,7 +18,11 @@ country_event = {
 	is_triggered_only = yes	
 	
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = steppe_horde
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
+		}
 		is_at_war = no
 		NOT = { had_recent_war = 2 }
 		capital_scope = {
@@ -73,7 +77,11 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = steppe_horde
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
+		}
 		war_exhaustion = 2
 		capital_scope = {
 			OR = {
@@ -118,7 +126,11 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = steppe_horde
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
+		}
 		is_at_war = yes
 		NOT = { manpower_percentage = 0.9 }
 		capital_scope = {
@@ -167,6 +179,8 @@ country_event = {
 		OR = {
 			has_reform = steppe_horde
 			has_reform = tribal_federation
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
 		}
 		has_estate = estate_nomadic_tribes
 		estate_territory = {
@@ -228,6 +242,8 @@ country_event = {
 
 	trigger = {
 		OR = {
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
 			has_reform = steppe_horde
 			has_reform = tribal_federation
 		}
@@ -316,6 +332,8 @@ country_event = {
 
 	trigger = {
 		OR = {
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
 			has_reform = steppe_horde
 			has_reform = tribal_federation
 		}
@@ -384,6 +402,8 @@ country_event = {
 
 	trigger = {
 		OR = {
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
 			has_reform = steppe_horde
 			has_reform = tribal_federation
 		}
@@ -453,7 +473,11 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
+			has_reform = steppe_horde
+		}
 		is_at_war = no
 		has_regency = no
 	}
@@ -681,6 +705,8 @@ country_event = {
 		OR = {
 			has_reform = steppe_horde
 			has_reform = tribal_federation
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
 		}
 		NOT = { manpower_percentage = 0.5 }
 	}
@@ -719,7 +745,11 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire
+			has_reform = steppe_horde 
+		}
 		NOT = { manpower_percentage = 0.5 }
 		is_at_war = no
 		capital_scope = {
@@ -926,6 +956,8 @@ country_event = {
 			has_reform = tribal_federation
 			has_reform = tribal_kingdom
 			has_reform = tribal_despotism
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire
 		}
 	}
 
@@ -975,6 +1007,8 @@ country_event = {
 			has_reform = tribal_federation
 			has_reform = tribal_kingdom
 			has_reform = tribal_despotism
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire
 		}
 		has_heir = yes
 		heir_age = 11
@@ -1018,6 +1052,8 @@ country_event = {
 			has_reform = tribal_federation
 			has_reform = tribal_kingdom
 			has_reform = tribal_despotism
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire
 		}
 		NOT = { army_size_percentage = 0.5 }
 	}
@@ -1054,7 +1090,11 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = steppe_horde
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire
+		}
 		NOT = { army_size_percentage = 0.5 }
 	}
 
@@ -1091,7 +1131,11 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = steppe_horde
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire
+		}
 		NOT = { army_size_percentage = 0.5 }
 	}
 
@@ -1131,7 +1175,11 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = steppe_horde
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire
+		}
 		NOT = { army_size_percentage = 0.5 }
 	}
 
@@ -1172,7 +1220,11 @@ country_event = {
 	is_triggered_only = yes	
 
 	trigger = {
-		has_reform = steppe_horde
+		OR = {
+			has_reform = steppe_horde
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire
+		}
 		OR = {
 			legitimacy = 99
 			horde_unity = 99

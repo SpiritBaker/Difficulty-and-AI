@@ -646,6 +646,40 @@ lost_control_of_canton = {
 	imperial_mandate = -0.05
 }
 
+lost_control_of_xian = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		NOT = {
+			700 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+	}
+
+	imperial_mandate = -0.05
+}
+
+lost_control_of_luoyang = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		NOT = {
+			1836 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+	}
+
+	imperial_mandate = -0.05
+}
+
 waging_war_for_china = {
 	potential = {
 		has_reform = celestial_empire

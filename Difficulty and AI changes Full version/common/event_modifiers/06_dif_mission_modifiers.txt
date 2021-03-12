@@ -42,3 +42,9 @@ reconquest_of_nanjing = {
 reconquest_of_canton = {
 	imperial_mandate = 0.05
 }
+reconquest_of_xian = {
+	imperial_mandate = 0.05
+}
+reconquest_of_luoyang = {
+	imperial_mandate = 0.05
+}

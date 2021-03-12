@@ -350,7 +350,7 @@ manchu_missions_1_b = {
 			hidden_effect = {
 				china_superregion = {
 					limit = {
-						culture_group = east_asian
+						#culture_group = east_asian
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
 					}

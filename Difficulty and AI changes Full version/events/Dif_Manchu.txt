@@ -119,7 +119,7 @@ country_event = {
 		
 			set_ai_personality = {
 				personality = ai_militarist
-				#locked = yes
+				locked = yes
 			}
 		}
 	}
@@ -139,7 +139,8 @@ country_event = {
 			AND = {
 				is_at_war = no
 				is_bankrupt = no
-				total_development = 300
+				NOT = { num_of_loans = 5 }
+				total_development = 400
 				NOT = { truce_with = MNG }
 				NOT = { alliance_with = MNG }
 				any_owned_province = { 
@@ -154,6 +155,11 @@ country_event = {
 			}
 			war_with = MNG
 		}
+		OR = {
+			NOT = { imperial_mandate = 5 }
+			MNG = { has_any_disaster = yes }
+			war_with = MNG
+		}
 		MNG = {
 			is_emperor_of_china = yes
 			ai = yes
@@ -162,11 +168,6 @@ country_event = {
 		NOT = { vassal_of = MNG }
 		tag = MCH
 		ai = yes
-		OR = {
-			NOT = { imperial_mandate = 5 }
-			MNG = { has_any_disaster = yes }
-			war_with = MNG
-		}
 		#has_ruler_flag = nurhaci_ruler_flag
 		NOT = { is_year = 1675 }
 	}
@@ -203,10 +204,10 @@ country_event = {
 		name = "dif_manchu.EVTOPTA4"
 		if = {
 			limit = {
-				NOT = { has_country_modifier = manchu_conqest_of_china_ai }
+				NOT = { has_country_modifier = manchu_conquest_of_china_ai }
 			}
 			add_country_modifier = {
-				name = "manchu_conqest_of_china_ai"
+				name = "manchu_conquest_of_china_ai"
 				duration = 9125
 				#desc = 
 			}
@@ -270,7 +271,7 @@ country_event = { #AI only event
 		}
 		set_ai_personality = {
 			personality = ai_militarist
-			#locked = yes
+			locked = no
 		}
 		capital_scope = {
 			build_to_forcelimit = {
@@ -301,7 +302,7 @@ country_event = {
 			ai = yes
 			OR = {
 				culture_group = east_asian
-				capital_scope = { superregion = china_superregion }
+				any_owned_province = { superregion = china_superregion }
 			}
 			is_subject_of_type = tributary_state
 		}
@@ -319,7 +320,7 @@ country_event = {
 					ai = yes
 					OR = {
 						culture_group = east_asian
-						capital_scope = { superregion = china_superregion }
+						any_owned_province = { superregion = china_superregion }
 					}
 					is_subject_of_type = tributary_state
 				}
@@ -329,10 +330,11 @@ country_event = {
 					ai = yes
 					OR = {
 						culture_group = east_asian
-						capital_scope = { superregion = china_superregion }
+						any_owned_province = { superregion = china_superregion }
 					}
 					is_subject_of_type = tributary_state
 				}
+				grant_independence = yes
 				add_historical_rival = PREV	
 				ROOT = { add_historical_rival = PREV }
 			}
@@ -363,6 +365,14 @@ country_event = {
 			AND = {
 				owns = 667 # beijing
 				has_country_flag = reconquest_of_canton_flag 
+			}
+			AND = {
+				owns = 700 # Xi'an
+				has_country_flag = reconquest_of_xian_flag 
+			}
+			AND = {
+				owns = 1836 # Luoyang
+				has_country_flag = reconquest_of_luoyang_flag 
 			}
 		}
 	}
@@ -405,6 +415,30 @@ country_event = {
 				#desc = 
 			}
 			clr_country_flag = reconquest_of_canton_flag
+		}
+		else_if = {
+			limit = {
+				has_country_flag = reconquest_of_xian_flag 
+				owns = 700
+			}
+			add_country_modifier = {
+				name = "reconquest_of_xian" # 0.05 mandate for 25 years 
+				duration = 9125
+				#desc = 
+			}
+			clr_country_flag = reconquest_of_xian_flag 
+		}
+		else_if = {
+			limit = {
+				has_country_flag = reconquest_of_luoyang_flag 
+				owns = 1836
+			}
+			add_country_modifier = {
+				name = "reconquest_of_luoyang" # 0.05 mandate for 25 years 
+				duration = 9125
+				#desc = 
+			}
+			clr_country_flag = reconquest_of_luoyang_flag 
 		}
 	}
 }
