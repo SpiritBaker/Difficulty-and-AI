@@ -1,3 +1,18 @@
-huge_city = {
+regiopolis_city = {
+	local_development_cost = 1
+	local_tax_modifier = 0.2
+	local_production_efficiency = 0.1
+	local_manpower_modifier = 0.4
+}
+metropolis_city = {
+	local_development_cost = 2
+	local_tax_modifier = 0.4
+	local_production_efficiency = 0.2
+	local_manpower_modifier = 0.8
+}
+world_city = {
 	local_development_cost = 4
+	local_tax_modifier = 0.8
+	local_production_efficiency = 0.4
+	local_manpower_modifier = 1.2
 }

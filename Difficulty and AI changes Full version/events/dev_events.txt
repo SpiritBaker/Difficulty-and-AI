@@ -511,16 +511,64 @@ province_event = {
 	}
 	
 	trigger = {
-		development = 60
-		NOT = { has_province_modifier = huge_city }
+		OR = {
+			AND = {
+				development = 50
+				NOT = { development = 60 }
+				NOT = { has_province_modifier = regiopolis_city }
+			}
+			AND = {
+				development = 60
+				NOT = { development = 70 }
+				NOT = { has_province_modifier = metropolis_city }
+			}
+			AND = {
+				development = 70
+				NOT = { has_province_modifier = world_city }
+			}
+		}
 	}
 	
 	option = {
 		name = dev_events.7.a
 		
-		add_province_modifier = {
-			name = huge_city
-			duration = -1
+		if = {
+			limit = {
+				development = 50
+				NOT = { development = 60 }
+				NOT = { has_province_modifier = regiopolis_city }
+			}
+			remove_province_modifier = metropolis_city
+			remove_province_modifier = world_city
+			add_province_modifier = {
+				name = regiopolis_city
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				development = 60
+				NOT = { development = 70 }
+				NOT = { has_province_modifier = metropolis_city }
+			}
+			remove_province_modifier = regiopolis_city
+			remove_province_modifier = world_city
+			add_province_modifier = {
+				name = metropolis_city
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				development = 70
+				NOT = { has_province_modifier = world_city }
+			}
+			remove_province_modifier = regiopolis_city
+			remove_province_modifier = metropolis_city
+			add_province_modifier = {
+				name = world_city
+				duration = -1
+			}
 		}
 	}
 }
@@ -538,12 +586,23 @@ province_event = {
 	}
 	
 	trigger = {
-		NOT = { development = 60 }
-		has_province_modifier = huge_city
+		OR = {
+			has_province_modifier = regiopolis_city
+			has_province_modifier = metropolis_city
+			has_province_modifier = world_city
+		}
+		NOT = { development = 50 }
 	}
 	
 	immediate = {
-		remove_province_modifier = huge_city
+		if = {
+			limit = {
+				NOT = { development = 50 }
+			}
+			remove_province_modifier = regiopolis_city
+			remove_province_modifier = metropolis_city
+			remove_province_modifier = world_city
+		}
 	}
 	
 	option = {

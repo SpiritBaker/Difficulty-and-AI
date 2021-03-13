@@ -25,5 +25,7 @@
  dev_events.7.t:0 "City of Cities"
  dev_events.7.d:0 "Under the leadership of [This.Owner.Monarch.GetTitle] [This.Owner.Monarch.GetName], the development of [This.GetName] has reached heights unimagined in the current era."
  dev_events.7.a:0 "It will be difficult to grow [This.GetName] any further..."
- huge_city:0 "City of Cities"
+ regiopolis_city:0 "Regiopolis"
+ metropolis_city:0 "Metropolis"
+ world_city:0 "World City"
  
