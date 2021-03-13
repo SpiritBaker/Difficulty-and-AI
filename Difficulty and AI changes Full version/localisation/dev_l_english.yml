@@ -21,3 +21,9 @@
  dev_events.6.d:0 "The AI is really bad at developing their provinces. They will often sit at the monarch point cap for no reason instead of developing. This feature will allow the AI to develop their lowest cost province when the AI hits a predefined threshold of monarch points (scaled to institution penalties).\n\n§RAt the moment, this feature causes out of sync issues in multiplayer sessions.§!"
  dev_events.6.a:0 "§GENABLE§! (Recommended for SP)"
  dev_events.6.b:0 "§RDISABLE§! (Recommended for MP)"
+ 
+ dev_events.7.t:0 "City of Cities"
+ dev_events.7.d:0 "Under the leadership of [This.Owner.Monarch.GetTitle] [This.Owner.Monarch.GetName], the development of [This.GetName] has reached heights unimagined in the current era."
+ dev_events.7.a:0 "It will be difficult to grow [This.GetName] any further..."
+ huge_city:0 "City of Cities"
+ 

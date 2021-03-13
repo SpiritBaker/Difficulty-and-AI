@@ -497,3 +497,56 @@ country_event = {
 		#hidden
 	}
 }
+
+province_event = {
+	# dev cap
+	id = dev_events.7
+	title = dev_events.7.t
+	desc = dev_events.7.d
+	picture = CITY_VIEW_eventPicture
+	goto = ROOT
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	trigger = {
+		development = 60
+		NOT = { has_province_modifier = huge_city }
+	}
+	
+	option = {
+		name = dev_events.7.a
+		
+		add_province_modifier = {
+			name = huge_city
+			duration = -1
+		}
+	}
+}
+
+province_event = {
+	# dev cap
+	id = dev_events.8
+	title = dev_events.8.t
+	desc = dev_events.8.d
+	picture = CITY_VIEW_eventPicture
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	trigger = {
+		NOT = { development = 60 }
+		has_province_modifier = huge_city
+	}
+	
+	immediate = {
+		remove_province_modifier = huge_city
+	}
+	
+	option = {
+		#hidden
+	}
+}
