@@ -92,7 +92,7 @@ country_event = {
 	option = {
 		name = army_professionalism_events.1.b #We We need better discipline! (and salaries)
 		ai_chance = {
-			factor = 25
+			factor = 10
 			modifier = {
 				factor = 3
 				years_of_income = 0.5
@@ -110,7 +110,7 @@ country_event = {
 	option = {
 		name = army_professionalism_events.1.a #We must punish the perpetrators
 		ai_chance = {
-			factor = 50
+			factor = 20
 		}
 		add_prestige = -5
 		FROM = {
@@ -157,9 +157,37 @@ country_event = {
 				factor = 0
 				FROM = {
 					owner = {
-						reverse_has_opinion = {
-							who = ROOT
-							value = 0
+						ROOT = {
+							OR = {
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_friendly
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_defensive
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_protective
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_domineering
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_overlord
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_loyal
+								}
+								ai_attitude = {
+									who = PREV
+									attitude = attitude_allied
+								}
+							}
 						}
 					}
 				}
