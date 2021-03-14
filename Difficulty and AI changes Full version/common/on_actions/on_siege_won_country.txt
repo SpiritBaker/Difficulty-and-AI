@@ -57,8 +57,8 @@ on_siege_won_country = {
 		flavor_oir.5 # Oirats capture Beijing
 	}
 	random_events = {
-		20 = army_professionalism_events.1 #City Sacked
-		90 = 0
+		40 = army_professionalism_events.1 #City Sacked
+		70 = 0
 	}
 }
 

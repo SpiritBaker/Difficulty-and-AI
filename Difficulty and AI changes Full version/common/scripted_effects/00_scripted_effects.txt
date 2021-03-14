@@ -110,10 +110,210 @@ add_loot_from_province_effect = {
 		limit = {
 			FROM = {
 				development = 39
+				NOT = { development = 42 }
 			}
 		}
 		add_treasury = 280
 		add_mil_power = 50
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 42
+				NOT = { development = 45 }
+			}
+		}
+		add_treasury = 300
+		add_mil_power = 55
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 45
+				NOT = { development = 48 }
+			}
+		}
+		add_treasury = 320
+		add_mil_power = 60
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 48
+				NOT = { development = 51 }
+			}
+		}
+		add_treasury = 340
+		add_mil_power = 65
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 51
+				NOT = { development = 54 }
+			}
+		}
+		add_treasury = 360
+		add_mil_power = 70
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 54
+				NOT = { development = 57 }
+			}
+		}
+		add_treasury = 380
+		add_mil_power = 75
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 57
+				NOT = { development = 60 }
+			}
+		}
+		add_treasury = 400
+		add_mil_power = 80
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 60
+				NOT = { development = 63 }
+			}
+		}
+		add_treasury = 420
+		add_mil_power = 85
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 63
+				NOT = { development = 66 }
+			}
+		}
+		add_treasury = 440
+		add_mil_power = 90
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 66
+				NOT = { development = 69 }
+			}
+		}
+		add_treasury = 460
+		add_mil_power = 95
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 69
+				NOT = { development = 72 }
+			}
+		}
+		add_treasury = 480
+		add_mil_power = 100
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 72
+				NOT = { development = 75 }
+			}
+		}
+		add_treasury = 500
+		add_mil_power = 105
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 75
+				NOT = { development = 78 }
+			}
+		}
+		add_treasury = 520
+		add_mil_power = 110
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 78
+				NOT = { development = 81 }
+			}
+		}
+		add_treasury = 540
+		add_mil_power = 115
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 81
+				NOT = { development = 84 }
+			}
+		}
+		add_treasury = 560
+		add_mil_power = 120
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 84
+				NOT = { development = 87 }
+			}
+		}
+		add_treasury = 580
+		add_mil_power = 125
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 87
+				NOT = { development = 90 }
+			}
+		}
+		add_treasury = 600
+		add_mil_power = 130
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 90
+				NOT = { development = 93 }
+			}
+		}
+		add_treasury = 620
+		add_mil_power = 135
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 93
+				NOT = { development = 96 }
+			}
+		}
+		add_treasury = 640
+		add_mil_power = 140
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 96
+				NOT = { development = 99 }
+			}
+		}
+		add_treasury = 660
+		add_mil_power = 145
+	}
+	if = {
+		limit = {
+			FROM = {
+				development = 99
+			}
+		}
+		add_treasury = 680
+		add_mil_power = 150
 	}
 }
 
@@ -202,10 +402,190 @@ reduce_dev_from_province_effect = {
 	if = {
 		limit = {
 			development = 39
+			NOT = { development = 42 }
 		}
 		add_base_tax = -4
 		add_base_production = -4
 		add_base_manpower = -4
+	}
+	if = {
+		limit = {
+			development = 42
+			NOT = { development = 45 }
+		}
+		add_base_tax = -4
+		add_base_production = -5
+		add_base_manpower = -4
+	}
+	if = {
+		limit = {
+			development = 45
+			NOT = { development = 48 }
+		}
+		add_base_tax = -5
+		add_base_production = -5
+		add_base_manpower = -4
+	}
+	if = {
+		limit = {
+			development = 48
+			NOT = { development = 51 }
+		}
+		add_base_tax = -5
+		add_base_production = -5
+		add_base_manpower = -5
+	}
+	if = {
+		limit = {
+			development = 51
+			NOT = { development = 54 }
+		}
+		add_base_tax = -5
+		add_base_production = -6
+		add_base_manpower = -5
+	}
+	if = {
+		limit = {
+			development = 54
+			NOT = { development = 57 }
+		}
+		add_base_tax = -6
+		add_base_production = -6
+		add_base_manpower = -5
+	}
+	if = {
+		limit = {
+			development = 57
+			NOT = { development = 60 }
+		}
+		add_base_tax = -6
+		add_base_production = -6
+		add_base_manpower = -6
+	}
+	if = {
+		limit = {
+			development = 60
+			NOT = { development = 63 }
+		}
+		add_base_tax = -6
+		add_base_production = -7
+		add_base_manpower = -6
+	}
+	if = {
+		limit = {
+			development = 63
+			NOT = { development = 66 }
+		}
+		add_base_tax = -7
+		add_base_production = -7
+		add_base_manpower = -6
+	}
+	if = {
+		limit = {
+			development = 66
+			NOT = { development = 69 }
+		}
+		add_base_tax = -7
+		add_base_production = -7
+		add_base_manpower = -7
+	}
+	if = {
+		limit = {
+			development = 69
+			NOT = { development = 72 }
+		}
+		add_base_tax = -7
+		add_base_production = -8
+		add_base_manpower = -7
+	}
+	if = {
+		limit = {
+			development = 72
+			NOT = { development = 75 }
+		}
+		add_base_tax = -8
+		add_base_production = -8
+		add_base_manpower = -7
+	}
+	if = {
+		limit = {
+			development = 75
+			NOT = { development = 78 }
+		}
+		add_base_tax = -8
+		add_base_production = -8
+		add_base_manpower = -8
+	}
+	if = {
+		limit = {
+			development = 78
+			NOT = { development = 81 }
+		}
+		add_base_tax = -8
+		add_base_production = -9
+		add_base_manpower = -8
+	}
+	if = {
+		limit = {
+			development = 81
+			NOT = { development = 84 }
+		}
+		add_base_tax = -9
+		add_base_production = -9
+		add_base_manpower = -8
+	}
+	if = {
+		limit = {
+			development = 84
+			NOT = { development = 87 }
+		}
+		add_base_tax = -9
+		add_base_production = -9
+		add_base_manpower = -9
+	}
+	if = {
+		limit = {
+			development = 87
+			NOT = { development = 90 }
+		}
+		add_base_tax = -9
+		add_base_production = -10
+		add_base_manpower = -9
+	}
+	if = {
+		limit = {
+			development = 90
+			NOT = { development = 93 }
+		}
+		add_base_tax = -10
+		add_base_production = -10
+		add_base_manpower = -9
+	}
+	if = {
+		limit = {
+			development = 93
+			NOT = { development = 96 }
+		}
+		add_base_tax = -10
+		add_base_production = -10
+		add_base_manpower = -10
+	}
+	if = {
+		limit = {
+			development = 96
+			NOT = { development = 99 }
+		}
+		add_base_tax = -10
+		add_base_production = -11
+		add_base_manpower = -10
+	}
+	if = {
+		limit = {
+			development = 99
+		}
+		add_base_tax = -11
+		add_base_production = -11
+		add_base_manpower = -10
 	}
 }
 
