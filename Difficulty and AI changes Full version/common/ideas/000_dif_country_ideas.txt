@@ -39,7 +39,8 @@ ZUN_ideas = {  #Zunghar
 		shock_damage = 0.10
 	}
 	take_the_throne_of_the_steppe = {
-		manpower_recovery_speed = 0.10
+		discipline = 0.05
+		manpower_recovery_speed = 0.15
 	}
 }
 
@@ -103,7 +104,7 @@ SHY_ideas = {
 		horde_unity = 1
 	}
 	life_of_steppe_warrior = {
-		attrition = -0.20
+		land_attrition = -0.20
 	}
 	horse_supplies = {
 		cavalry_cost = -0.1

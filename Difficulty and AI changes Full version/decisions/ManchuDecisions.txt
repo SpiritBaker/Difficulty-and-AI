@@ -183,41 +183,24 @@ country_decisions = {
 			NOT = {
 				has_ruler_modifier = tribal_succession_crisis
 			}
-			custom_trigger_tooltip = {
-				tooltip = strongest_power_in_china
-				any_owned_province = {
-					superregion = china_superregion
-				}
-				NOT = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
 					any_country = {
-						any_owned_province = {
-							superregion = china_superregion
-						}
-						OR = {
-							army_size = root
-							total_own_and_non_tributary_subject_development = root
-						}
+						is_emperor_of_china = yes
 					}
 				}
+				is_emperor_of_china = yes
 			}
-			#if = {
-			#	limit = {
-			#		has_dlc = "Mandate of Heaven"
-			#		any_country = {
-			#			is_emperor_of_china = yes
-			#		}
-			#	}
-			#	is_emperor_of_china = yes
-			#}
-			#else_if = {
-			#	limit = {
-			#		has_dlc = "Common Sense"
-			#	}
-			#	government_rank = 3
-			#}
-			#else = {
-			#	total_development = 1000
-			#}
+			else_if = {
+				limit = {
+					has_dlc = "Common Sense"
+				}
+				government_rank = 3
+			}
+			else = {
+				total_development = 1000
+			}
 		}
 		effect = {
 			1816 = {

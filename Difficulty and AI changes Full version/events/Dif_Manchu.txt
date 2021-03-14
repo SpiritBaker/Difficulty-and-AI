@@ -342,6 +342,7 @@ country_event = {
 	}
 }
 
+# Reconquest
 country_event = { 
 	id = dif_manchu.8
 	title = "dif_manchu.EVTNAME8"
@@ -351,6 +352,7 @@ country_event = {
 	#fire_only_once = yes
 	
 	trigger = {
+		always = no
 		NOT = { tag = MNG }
 		is_emperor_of_china = yes
 		OR = {

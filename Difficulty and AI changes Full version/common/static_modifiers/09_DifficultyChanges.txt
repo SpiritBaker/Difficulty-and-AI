@@ -243,13 +243,13 @@ karma_just_right =
 
 karma_too_high =
 {
-	global_tax_modifier = 0.15
+	development_cost = -0.10
 	diplomatic_reputation = 1
 }
 
 karma_too_low =
 {
-	land_morale = 0.05
+	discipline = 0.03
 	diplomatic_reputation = -1
 }
 

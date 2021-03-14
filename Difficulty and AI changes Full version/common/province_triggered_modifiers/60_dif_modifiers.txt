@@ -30,3 +30,27 @@ smith_tribes = {
 	
 	}
 }
+
+important_chinese_city = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	
+	#viewer = {
+	#}
+	
+	trigger = {
+		owner = {
+			is_emperor_of_china = yes
+		}
+	}
+	
+	imperial_mandate = 0.02
+	#Province scope
+	on_activation = {
+	
+	}
+	on_deactivation = {
+	
+	}
+}

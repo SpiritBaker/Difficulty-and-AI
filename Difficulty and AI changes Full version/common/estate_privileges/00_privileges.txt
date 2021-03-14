@@ -1180,6 +1180,7 @@ estate_church_religious_state = {
 	max_absolutism = -5
 	loyalty = -0.05
 	can_select = {
+		is_nomad = no
 	}
 	on_granted = {
 	}

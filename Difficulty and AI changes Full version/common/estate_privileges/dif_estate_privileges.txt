@@ -4,6 +4,7 @@ estate_nomadic_aristocracy_primacy = {
 	max_absolutism = -5
 	loyalty = -0.05
 	can_select = {
+		is_nomad = no
 		custom_trigger_tooltip = {
 			tooltip = no_other_mil_privilege
 			NOT = { has_estate_privilege = estate_rajput_military }
@@ -153,6 +154,7 @@ sedentary_subdjects_land_of_commerce = {
 	max_absolutism = -5
 	loyalty = -0.05
 	can_select = {
+		is_nomad = no
 	}
 	on_granted = {
 	}
@@ -252,7 +254,7 @@ sedentary_subdjects_patronage_of_the_arts = {
 }
 
 sedentary_subdjects_increased_tribute = {
-	icon = privilege_demand_more_troops
+	icon = privilege_give_money
 	#land_share = 5
 	#max_absolutism = -5
 	loyalty = -0.1
@@ -260,10 +262,6 @@ sedentary_subdjects_increased_tribute = {
 	is_valid = {
 		any_owned_province = {
 			OR = {
-				has_terrain = drylands
-				has_terrain = farmlands
-				has_terrain = grasslands
-				has_terrain = oasis #modded terain
 				province_has_center_of_trade_of_level = 1
 			}
 		}
@@ -276,10 +274,6 @@ sedentary_subdjects_increased_tribute = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						has_terrain = drylands
-						has_terrain = farmlands
-						has_terrain = grasslands
-						has_terrain = oasis #modded terain
 						province_has_center_of_trade_of_level = 1
 					}
 				}
@@ -461,25 +455,25 @@ sedentary_subjects_guarantee_religious_freedom = {
 	}
 }
 
-sedentary_subjects_patronage_of_science = {
-	icon = privilege_build_jain_temple
+sedentary_subjects_weapons_tribute = {
+	icon = privilege_demand_more_troops
 	max_absolutism = -5
-	#loyalty = 0.05
+	loyalty = -0.05
 	influence = 0.05
+	can_select = {
+		is_nomad = no
+		any_owned_province = {
+			trade_goods = iron
+		}
+	}
 	penalties = {
-		trade_efficiency = -0.10
-		global_spy_defence = -0.10
+		production_efficiency = -0.10
 	}
 	benefits = {
-		global_institution_spread = 0.25
-		embracement_cost = -0.10
+		shock_damage_received = -0.10
 	}
 	ai_will_do = {
-		factor = 5
-		modifier = {
-			factor = 2.2
-			is_lacking_institutions = yes
-		}
+		factor = 10
 	}
 }
 
@@ -506,6 +500,31 @@ estate_nomadic_tribes_great_games = {
 	benefits = {
 		cav_to_inf_ratio = 0.15
 		army_tradition = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_nomadic_aristocracy_greater_war_support = {
+	icon = privilege_conscript_cossack_elite
+	max_absolutism = -10
+	land_share = 5
+	influence = 0.05
+	can_select = {
+		prestige = 0
+	}
+	on_granted = {
+		add_prestige = -15
+	}
+	penalties = {
+	}
+	benefits = {
+		war_taxes_cost_modifier = -0.5
 	}
 	ai_will_do = {
 		factor = 10

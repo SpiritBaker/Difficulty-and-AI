@@ -84,12 +84,12 @@ country_decisions = {
 				change_technology_group = chinese
 				change_unit_type = chinese
 			}
-			if = {
-				limit = {
-					NOT = { religion = confucianism }
-				}
-				change_religion = confucianism
-			}
+			#if = {
+			#	limit = {
+			#		NOT = { religion = confucianism }
+			#	}
+			#	change_religion = confucianism
+			#}
 			if = {
 				limit = {
 					NOT = { owns = 1816 }

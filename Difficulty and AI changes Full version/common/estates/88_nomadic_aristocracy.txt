@@ -80,7 +80,7 @@ nomadic_aristocracy = {
 			owns_or_non_sovereign_subject_of = 2190
 		}
 	
-		influence = 5
+		influence = 10
 	}
 	influence_modifier = {
 		desc = OLD_MONGOLIAN_CULTURAL_CENTER
@@ -88,7 +88,7 @@ nomadic_aristocracy = {
 			owns_or_non_sovereign_subject_of = 2116
 		}
 	
-		influence = 5
+		influence = 10
 	}
 
 	influence_modifier = {
@@ -119,6 +119,7 @@ nomadic_aristocracy = {
 		estate_nomadic_aristocracy_unrestricted_looting 
 		estate_nomadic_aristocracy_confirm_noble_right
 		estate_nomadic_aristocracy_statutory_rights
+		estate_nomadic_aristocracy_greater_war_support
 	}
 
 	agendas = {

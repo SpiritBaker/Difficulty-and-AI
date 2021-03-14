@@ -18,48 +18,10 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in p
 --NDefines.NMilitary.REGULAR_LEADER_POWER	= 0.8	--Used for generals & admirals (affects total pips).
 --NDefines.NMilitary.EXPLORER_LEADER_POWER = 0.6	--Used for conquistadors & explorers (affects total pips).
 
---NDefines.NCountry.POWER_MAX = 1199
-NDefines.NCountry.FREE_IDEA_GROUP_COST = 4
-NDefines.NCountry.IDEA_TO_TECH = -0.015
-NDefines.NCountry.PS_BUY_IDEA = 380
-NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.35 --Horde unity gained per ducat looted.
-NDefines.NCountry.NOMAD_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
-
-NDefines.NEconomy.EDICTS_COST_INCREASE = 0 --% increase on state maintenance.
-NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
-NDefines.NEconomy.CARAVAN_POWER_MAX = 35 --Development is divided by this factor, do not set to zero!
-NDefines.NEconomy.CARAVAN_FACTOR = 6.0							
-NDefines.NEconomy.CARAVAN_POWER_MIN = 1
-NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER =  10   
---NDefines.NEconomy.TRADE_PROPAGATE_THRESHOLD  =  2
-NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03	--% each tech increases it. 96% increase at tech 32
-
-
---NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
---NDefines.NDiplomacy.TRIBUTE_BASE_ADM = 0.02  --Tributary State: Part Adm tribute multiplied by total development.
---NDefines.NDiplomacy.TRIBUTE_BASE_DIP = 0.02	  --Tributary State: Part Dip tribute multiplied by total development.
---NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
-NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
---NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -5.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
-
-
---NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
---NDefines.NDiplomacy.TRIBUTE_BASE_ADM = 0.02  --Tributary State: Part Adm tribute multiplied by total development.
---NDefines.NDiplomacy.TRIBUTE_BASE_DIP = 0.02	  --Tributary State: Part Dip tribute multiplied by total development.
---NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
-NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
---NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
-
---NDefines.NDiplomacy.HRE_VOTE_TOO_SMALL = -100
---NDefines.NDiplomacy.HRE_VOTE_BIG_COUNTRY = 50
---NDefines.NDiplomacy.HRE_VOTE_VERY_BIG_COUNTRY = 75
 
 
 NDefines.NAI.SUBSIDY_YEARS = 20
 NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
-
 
 NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
 NDefines.NAI.AI_CONVERT_CULTURES = 0	--If set to 0 AI will not convert cultures.
@@ -165,7 +127,7 @@ NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a pro
 NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 0
 NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 4  --Multiplies with strategic interest of making them our Tributary.
 
-NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 7.5	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
+NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 6	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5
@@ -205,13 +167,17 @@ NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 1.5
 
 NDefines.NGovernment.RUSSIAN_ABILITY_STRELTSY_SPAWN_SIZE = 0.1
 
+--NReligion
+
 --NDefines.NReligion.YEARLY_DOOM_INCREASE = 0.5 --Multiplied by number of provinces.
 --NDefines.NReligion.MAYA_COLLAPSE_PROVINCES_PER_REFORM = 1 --Maya keeps this many extra provinces per reform.
 --NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 15
 --NDefines.NReligion.YEARLY_PAPAL_INFLUENCE_CATHOLIC = 1 
 NDefines.NReligion.PIETY_ACTION_COOLDOWN = 10
 NDefines.NReligion.KARMA_FOR_OFFENSIVE_WAR = -5 --base -10
+NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = -25 --from 25
 
+--NCountry
 
 --NDefines.NCountry.REVOLUTION_SPREAD_COUNT = 3			                -- Max number of concurrent province revolution spread
 --NDefines.NCountry.REVOLUTION_DAILY_SPREAD = 1.0			                -- How much the revolution spreads each day (progress is 0-100)
@@ -227,13 +193,58 @@ NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 300	                    -- Minimu
 
 NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.1   -- Minimum of crownland when distributing land at start
 NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
---NDefines.NCountry.PS_IMPROVE_PROVINCE_CAPITAL_DISCOUNT = 0.025
+NDefines.NCountry.PS_IMPROVE_PROVINCE_CAPITAL_DISCOUNT = 0.1
+NDefines.NCountry.PS_MOVE_CAPITAL_EXTRA = 75 --Per 100 country development.
+NDefines.NCountry.RAZE_PROVINCE_DEVELOPMENT_DECREASE = 0.25	
+--NDefines.NCountry.RAZE_PROVINCE_POWER_PER_DEVELOPMENT = 25.0
+
+--NDefines.NCountry.POWER_MAX = 1199
+NDefines.NCountry.FREE_IDEA_GROUP_COST = 4
+NDefines.NCountry.IDEA_TO_TECH = -0.015
+NDefines.NCountry.PS_BUY_IDEA = 380
+NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.35 --Horde unity gained per ducat looted.
+NDefines.NCountry.NOMAD_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
+
+
+--NDiplomacy
 
 NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3650 -- 10 years
 --NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 0.5
 --NDefines.NDiplomacy.DEFENDER_OF_FAITH_COST = 1000				-- _DDEF_DEFENDER_OF_FAITH_COST_
 --NDefines.NDiplomacy.DEFENDER_OF_FAITH_MONTHS = 24				-- _DDEF_DEFENDER_OF_FAITH_MONTHS_ (Minimum months before it can be taken from another country with less prestige)
 
+--NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
+--NDefines.NDiplomacy.TRIBUTE_BASE_ADM = 0.02  --Tributary State: Part Adm tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_BASE_DIP = 0.02	  --Tributary State: Part Dip tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
+NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
+--NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.10 --Yearly change of Mandate for each hundred development tributary state.
+
+--NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
+--NDefines.NDiplomacy.TRIBUTE_BASE_ADM = 0.02  --Tributary State: Part Adm tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_BASE_DIP = 0.02	  --Tributary State: Part Dip tribute multiplied by total development.
+--NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
+NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
+--NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.10 --Yearly change of Mandate for each hundred development tributary state.
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STABILITY = 0.21	--Yearly change of Mandate for each point of positive stability.
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.4	--Yearly change of Mandate for every 5 loans.
+
+--NDefines.NDiplomacy.HRE_VOTE_TOO_SMALL = -100
+--NDefines.NDiplomacy.HRE_VOTE_BIG_COUNTRY = 50
+--NDefines.NDiplomacy.HRE_VOTE_VERY_BIG_COUNTRY = 75
 
 
+--NEconomy
 
+NDefines.NEconomy.EDICTS_COST_INCREASE = 0 --% increase on state maintenance.
+NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
+NDefines.NEconomy.CARAVAN_POWER_MAX = 35 --Development is divided by this factor, do not set to zero!
+NDefines.NEconomy.CARAVAN_FACTOR = 6.0							
+NDefines.NEconomy.CARAVAN_POWER_MIN = 1
+NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER =  10   
+--NDefines.NEconomy.TRADE_PROPAGATE_THRESHOLD  =  2
+NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03	--% each tech increases it. 96% increase at tech 32

@@ -1262,7 +1262,7 @@ eastern = {
 		}
 		country = {
 			tolerance_heretic = 2
-			advisor_cost = -0.1
+			idea_cost = -0.05
 			yearly_karma_decay = 0.005
 		}
 		country_as_secondary = {
@@ -1270,7 +1270,7 @@ eastern = {
 			diplomats = 1
 		}
 		on_convert = {
-			add_prestige = -100
+			add_prestige = -50
 			add_stability = -1
 			add_country_modifier = {
 				name = "conversion_zeal"
@@ -1293,7 +1293,7 @@ eastern = {
 			buddhism #Theravada
 		}
 		country = {
-			tolerance_heretic = 1
+			tolerance_heretic = 2
 			land_morale = 0.05
 			yearly_karma_decay = 0.005
 		}
@@ -1302,7 +1302,7 @@ eastern = {
 			tolerance_own = 1
 		}
 		on_convert = {
-			add_prestige = -100
+			add_prestige = -50
 			add_stability = -1
 			add_country_modifier = {
 				name = "conversion_zeal"
@@ -1326,7 +1326,7 @@ eastern = {
 		}
 		country = {
 			tolerance_heretic = 2
-			idea_cost = -0.05
+			technology_cost = -0.05
 			yearly_karma_decay = 0.005
 		}
 		country_as_secondary = {
@@ -1334,7 +1334,7 @@ eastern = {
 			tolerance_heathen = 2
 		}
 		on_convert = {
-			add_prestige = -100
+			add_prestige = -50
 			add_stability = -1
 			add_country_modifier = {
 				name = "conversion_zeal"
@@ -1519,7 +1519,7 @@ pagan = {
 			local_missionary_strength = 0.02
 		}
 		
-		heretic = { BEAR_SPIRIT }	
+		heretic = { BEAR_SPIRIT }
 	}
 	
 	inti = {
@@ -1567,7 +1567,7 @@ pagan = {
 		religious_reforms = yes
 		reform_tooltip = NAHUATL_REFORM_TOOLTIP
 		
-		heretic = { NAHUATL_HERETIC }	
+		heretic = { NAHUATL_HERETIC }
 	}
 	
 	mesoamerican_religion = {
@@ -1589,7 +1589,7 @@ pagan = {
 		religious_reforms = yes
 		reform_tooltip = MESOAMERICAN_REFORM_TOOLTIP
 		
-		heretic = { MESOAMERICAN_HERETIC }	
+		heretic = { MESOAMERICAN_HERETIC }
 	}
 	
 	norse_pagan_reformed = {
@@ -1623,8 +1623,8 @@ pagan = {
 		heretic = { OLD_TENGRI }
 	}
 	
-	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_pagan
+	crusade_name = CRUSADE
 }
 
 jewish_group = {

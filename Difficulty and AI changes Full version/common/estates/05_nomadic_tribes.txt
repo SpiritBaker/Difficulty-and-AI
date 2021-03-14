@@ -118,28 +118,37 @@ estate_nomadic_tribes = {
 	influence_modifier = {
 		desc = EST_STEPPE_PROVINCES
 		trigger = {
-			any_owned_province = {
+			num_of_owned_provinces_with = {
+				value = 5
 				OR = {
 					has_terrain = steppe
 					has_terrain = steppe_mountains 
 				}
 			}
-			num_of_cities = 5
 		}
 		influence = 5
 	}
 	influence_modifier = {
 		desc = EST_STEPPE_PROVINCES
 		trigger = {
-			any_owned_province = {
+			num_of_owned_provinces_with = {
+				value = 10
 				OR = {
 					has_terrain = steppe
 					has_terrain = steppe_mountains 
 				}
 			}
-			num_of_cities = 10
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 5
+					OR = {
+						has_terrain = steppe
+						has_terrain = steppe_mountains 
+					}
+				}
+			}
 		}
-		influence = 5
+		influence = 10
 	}
 	influence_modifier = {
 		desc = EST_NOT_TRUE_NOMAD

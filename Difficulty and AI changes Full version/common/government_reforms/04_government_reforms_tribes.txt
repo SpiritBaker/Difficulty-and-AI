@@ -35,13 +35,13 @@ steppe_horde = {
 	modifiers = {
 		global_manpower_modifier = 0.15
 		land_forcelimit_modifier = 0.10
-		loot_amount = 0.50
+		#loot_amount = 0.50
 		reinforce_cost_modifier = -0.5
 		cav_to_inf_ratio = 0.25
 		movement_speed = 0.2
 		years_of_nationalism = -5
 		global_institution_spread = -0.15
-		reform_progress_growth = -0.1
+		#reform_progress_growth = -0.1
 	}
 	ai = {
 		factor = 1000
@@ -303,9 +303,9 @@ horde_tribal_unity_reform = {
 tribe_becomes_monarchy_reform = {
 	icon = "king_highlighted"
 	allow_normal_conversion = yes
-	#potential = {
-		#NOT = { has_reform = steppe_horde }
-	#}
+	potential = {
+		NOT = { has_reform = steppe_horde }
+	}
 	effect = {
 		set_country_flag = populists_in_government
 		lose_reforms = 4

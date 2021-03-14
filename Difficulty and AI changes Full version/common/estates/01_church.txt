@@ -152,7 +152,13 @@ estate_church =
 		}
 		loyalty = -20
 	}
-	
+	influence_modifier = {
+		desc = EST_VAL_NOMAD
+		trigger = {
+			is_nomad = yes
+		}	
+		influence = -5
+	}
 	custom_name = {
 		desc = estate_monasteries
 		trigger = {
@@ -164,6 +170,7 @@ estate_church =
 			}
 		}
 	}
+
 	custom_name = {
 		desc = estate_babaylanes
 		trigger = {

@@ -23,13 +23,7 @@ sedentary_subdjects = {
 		OR = {
 			has_estate = sedentary_subdjects
 			any_owned_province = {
-				OR = {
-					has_terrain = drylands
-					has_terrain = farmlands
-					has_terrain = grasslands
-					has_terrain = oasis #modded terain
-					province_has_center_of_trade_of_level = 1
-				}
+				province_has_center_of_trade_of_level = 1
 			}
 		}
 		is_colonial_nation = no
@@ -89,7 +83,7 @@ sedentary_subdjects = {
 	}
 
 	# Influence modifiers
-	base_influence = 10
+	base_influence = 5
 	influence_modifier = {	
 		desc = EST_HIGH_DEVELOPMENT_PROVINCE
 		trigger = {
@@ -97,7 +91,7 @@ sedentary_subdjects = {
 				development = 30
 			}
 		}
-		influence = 5
+		influence = 10
 	}
 	influence_modifier = {	
 		desc = EST_VAL_COT
@@ -109,15 +103,29 @@ sedentary_subdjects = {
 		}
 		influence = 5
 	}
+
+	influence_modifier = {	
+		desc = EST_VAL_COT
+		trigger = {
+			#NOT = { has_reform = free_city }
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 2
+				NOT = { province_has_center_of_trade_of_level = 1 }
+			}
+		}
+		influence = 10
+	}
+
 	influence_modifier = {	
 		desc = EST_VAL_COT
 		trigger = {
 			#NOT = { has_reform = free_city }
 			any_owned_province = {
 				province_has_center_of_trade_of_level = 3
+				NOT = { province_has_center_of_trade_of_level = 2 }
 			}
 		}
-		influence = 5
+		influence = 15
 	}
 
 	influence_modifier = {
@@ -125,7 +133,7 @@ sedentary_subdjects = {
 		trigger = {
 			NOT = { trade_income_percentage = 0.25 }
 		}	
-		influence = -5
+		influence = -10
 	}
 	influence_modifier = {
 		desc = EST_VAL_HIGH_TRADE_INCOME
@@ -133,14 +141,14 @@ sedentary_subdjects = {
 			trade_income_percentage = 0.5
 			NOT = { trade_income_percentage = 0.75 }
 		}	
-		influence = 5
+		influence = 10
 	}
 	influence_modifier = {
 		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
 		trigger = {
 			trade_income_percentage = 0.75
 		}	
-		influence = 10
+		influence = 15
 	}
 
 	#Custom Names
@@ -160,7 +168,7 @@ sedentary_subdjects = {
 		sedentary_subdjects_increased_tribute
 		sedentary_subdjects_trade_rights
 		sedentary_subjects_guarantee_religious_freedom
-		sedentary_subjects_patronage_of_the_science
+		sedentary_subjects_weapons_tribute
 	}
 
 	agendas = {
