@@ -1422,7 +1422,9 @@ global_trade = {
 							global_trade = 100
 						}
 						any_neighbor_country = {
-							ROOT = { global_trade = 100 }
+							any_core_province = { 
+								global_trade = 100
+							}
 						}
 					}
 				}
@@ -1438,7 +1440,9 @@ global_trade = {
 							global_trade = 100
 						}
 						any_neighbor_country = {
-							ROOT = { global_trade = 100 }
+							any_core_province = { 
+								global_trade = 100
+							}
 						}
 					}
 				}
@@ -1454,7 +1458,9 @@ global_trade = {
 							global_trade = 100
 						}
 						any_neighbor_country = {
-							ROOT = { global_trade = 100 }
+							any_core_province = { 
+								global_trade = 100
+							}
 						}
 					}
 				}
@@ -1470,7 +1476,9 @@ global_trade = {
 							global_trade = 100
 						}
 						any_neighbor_country = {
-							ROOT = { global_trade = 100 }
+							any_core_province = { 
+								global_trade = 100
+							}
 						}
 					}
 				}
@@ -1496,7 +1504,9 @@ global_trade = {
 								global_trade = 100
 							}
 							any_neighbor_country = {
-								ROOT = { global_trade = 100 }
+								any_core_province = { 
+									global_trade = 100
+								}
 							}
 						}
 					}
@@ -1523,7 +1533,9 @@ global_trade = {
 								global_trade = 100
 							}
 							any_neighbor_country = {
-								ROOT = { global_trade = 100 }
+								any_core_province = { 
+									global_trade = 100
+								}
 							}
 						}
 					}
@@ -1550,7 +1562,9 @@ global_trade = {
 								global_trade = 100
 							}
 							any_neighbor_country = {
-								ROOT = { global_trade = 100 }
+								any_core_province = { 
+									global_trade = 100
+								}
 							}
 						}
 					}
@@ -1577,7 +1591,9 @@ global_trade = {
 						territory = 30
 					}
 					any_neighbor_country = {
-						ROOT = { global_trade = 100 }
+						any_core_province = { 
+							global_trade = 100
+						}
 					}
 				}
 			}
@@ -1905,7 +1921,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -1932,7 +1950,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -1961,7 +1981,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -1992,7 +2014,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2022,7 +2046,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2050,7 +2076,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2080,7 +2108,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2108,7 +2138,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2135,7 +2167,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2164,7 +2198,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2195,7 +2231,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2225,7 +2263,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2253,7 +2293,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2283,7 +2325,9 @@ manufactories = {
 							manufactories = 100
 						}
 						any_neighbor_country = {
-							ROOT = { manufactories = 100 }
+							any_core_province = { 
+								manufactories = 100
+							}
 						}
 					}
 				}
@@ -2560,7 +2604,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2583,7 +2629,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2609,7 +2657,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2634,7 +2684,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2658,7 +2710,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2668,7 +2722,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2692,7 +2748,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2716,7 +2774,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2740,7 +2800,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2763,7 +2825,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
@@ -2786,7 +2850,9 @@ enlightenment = {
 							enlightenment = 100
 						}
 						any_neighbor_country = {
-							ROOT = { enlightenment = 100 }
+							any_core_province = { 
+								enlightenment = 100
+							}
 						}
 					}
 				}
