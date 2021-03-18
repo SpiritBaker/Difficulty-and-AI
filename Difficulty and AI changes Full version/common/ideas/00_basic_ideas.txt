@@ -1502,6 +1502,7 @@ humanist_ideas = {
 	bonus = {
 		idea_cost = -0.1
 		yearly_harmony = 0.25  # Used if religion uses harmony (confucianism)
+		yearly_karma_decay = 0.005 # For Buddhists
 		brahmins_muslim_loyalty_modifier = 0.1
 		dhimmi_loyalty_modifier = 0.1
 	}
