@@ -149,6 +149,13 @@ manchu_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_jiangsu_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	mch_mandate_of_heaven = {
@@ -199,8 +206,14 @@ manchu_missions_1 = {
 			}
 			north_china_region = {
 				limit = {
-					culture_group = east_asian
-					#NOT = { owned_by = ROOT }
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_core = ROOT
+			}
+			south_jiangsu_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_core = ROOT

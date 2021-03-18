@@ -205,6 +205,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { has_country_modifier = manchu_conquest_of_china_ai }
+				NOT = { has_country_flag = manchu_declered_war_dif }
 			}
 			add_country_modifier = {
 				name = "manchu_conquest_of_china_ai"
@@ -224,15 +225,18 @@ country_event = {
 		if = {
 			limit = {
 				num_of_loans = 1
+				NOT = { has_country_flag = manchu_declered_war_dif }
 			}
 			add_treasury = 500
 		}
 		if = {
 			limit = {
 				MNG = { MCH = {	NOT = { mil_tech = PREV } } }
+				NOT = { has_country_flag = manchu_declered_war_dif }
 			}
 			add_mil_tech = 1
 		}
+		set_country_flag = manchu_declered_war_dif
 	}
 }
 
