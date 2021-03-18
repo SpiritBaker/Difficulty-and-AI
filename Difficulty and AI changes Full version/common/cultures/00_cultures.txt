@@ -3649,6 +3649,22 @@ altaic = {
 			Doquez-khatum Goland Ho'elun Khultulun  Qamish Orqina Sorghaghtani Toregene "Fatima" "Ibtisam" "Jalila" "Janan" Sakina
 		}
 	}
+	buryat = {
+		graphical_culture = inuitgfx
+		primary = BRT
+		dynasty_names = {
+			Badarhan "Chagatay" "Edigüid" "Giray" "Borjigin" "Shaybanid" "Janid" "Mangit"
+		}
+		male_names = {
+			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan Darayisung 
+			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke Mulan 
+			Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun Tümen 
+			Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi
+		}
+		female_names = {
+			Temülen Börte Mandukhai Samar Zaufishan 
+		}
+	}
 	male_names = {
 		Abagha Achigh Aguchu Ajai Ajinai Akhutai Alagh Alchi Alchidai Altan Ambaghai Arkhai Arasen 
 		Babur Badai Bagaridai Bala Barghujin Bartan Batu Bedugun Begter Belgutei Belgunutei Bilge Berke 
@@ -8135,22 +8151,6 @@ evenks = {
 		}
 		female_names = {
 			Naryiaana Aiyyna Kydaana Tuskulaana Khaarchaana Temülen Börte Mandukhai Samar Zaufishan 
-		}
-	}
-	buryat = {
-		graphical_culture = inuitgfx
-		primary = BRT
-		dynasty_names = {
-			Badarhan "Chagatay" "Edigüid" "Giray" "Borjigin" "Shaybanid" "Janid" "Mangit"
-		}
-		male_names = {
-			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan Darayisung 
-			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke Mulan 
-			Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun Tümen 
-			Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi
-		}
-		female_names = {
-			Temülen Börte Mandukhai Samar Zaufishan 
 		}
 	}
 	tungus = {

@@ -52,7 +52,7 @@ country_decisions = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			religion = vajrayana
-			mission_completed = oirat_migration_to_dzungaria		
+			#mission_completed = oirat_migration_to_dzungaria		
 			zungaria_area = {
 				is_core = ROOT
 			}

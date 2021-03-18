@@ -3,7 +3,7 @@
 NDefines.NMilitary.SUPPLYLIMIT_BASE_MULTIPLIER = 8.0
 
 NDefines.NMilitary.BANNER_DISCIPLINE_BONUS = 0.05	
-NDefines.NMilitary.BANNER_MANPOWER_USAGE = 0.25	
+NDefines.NMilitary.BANNER_MANPOWER_USAGE = 0.75	
 NDefines.NMilitary.BANNER_REINFORCE_SPEED = 0
 NDefines.NMilitary.BANNER_MAINTENANCE_COST = 0.75	
 NDefines.NMilitary.BANNER_AGE_MULTIPLIER =	0.50	
@@ -193,8 +193,6 @@ NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 300	                    -- Minimu
 
 NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.1   -- Minimum of crownland when distributing land at start
 NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
-NDefines.NCountry.PS_IMPROVE_PROVINCE_CAPITAL_DISCOUNT = 0.1
-NDefines.NCountry.PS_MOVE_CAPITAL_EXTRA = 75 --Per 100 country development.
 NDefines.NCountry.RAZE_PROVINCE_DEVELOPMENT_DECREASE = 0.25	
 --NDefines.NCountry.RAZE_PROVINCE_POWER_PER_DEVELOPMENT = 25.0
 
@@ -204,7 +202,7 @@ NDefines.NCountry.IDEA_TO_TECH = -0.015
 NDefines.NCountry.PS_BUY_IDEA = 380
 NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.35 --Horde unity gained per ducat looted.
 NDefines.NCountry.NOMAD_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
-
+NDefines.NCountry.CORRUPTION_FROM_BANNERS = 2.5
 
 --NDiplomacy
 
@@ -219,8 +217,6 @@ NDefines.NDiplomacy.HEGEMONY_LOST_DAYS = 3650 -- 10 years
 --NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
 NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
 --NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.10 --Yearly change of Mandate for each hundred development tributary state.
 
 --NDefines.NDiplomacy.TRIBUTE_BASE_CASH =	0.150	--Tributary State: Part of yearly income given in tribute.
 --NDefines.NDiplomacy.TRIBUTE_BASE_ADM = 0.02  --Tributary State: Part Adm tribute multiplied by total development.
@@ -228,10 +224,10 @@ NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.10 --
 --NDefines.NDiplomacy.TRIBUTE_BASE_MIL = 0.02	  --Tributary State: Base Mil tribute multiplied by total development.
 NDefines.NDiplomacy.TRIBUTE_MAX_MONARCH_POWER =	6.0	--Tributary State: Max Adm/Dip/Mil per Tributary.
 --NDefines.NDiplomacy.TRIBUTE_BASE_MANPOWER =	0.33	--Tributary State: Part of yearly manpower given in tribute.
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -8.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -5.0 --Yearly change of Mandate for each hundred devastated development (scaled to devastation).
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.10 --Yearly change of Mandate for each hundred development tributary state.
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STABILITY = 0.21	--Yearly change of Mandate for each point of positive stability.
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.4	--Yearly change of Mandate for every 5 loans.
+--NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STABILITY = 0.21	--Yearly change of Mandate for each point of positive stability.
+--NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.4	--Yearly change of Mandate for every 5 loans.
 
 --NDefines.NDiplomacy.HRE_VOTE_TOO_SMALL = -100
 --NDefines.NDiplomacy.HRE_VOTE_BIG_COUNTRY = 50

@@ -320,7 +320,6 @@ celestial_empire = {
 		temples
 		enuchs
 		bureaucrats
-		tribes
 	}
 
 	fixed_rank = 3

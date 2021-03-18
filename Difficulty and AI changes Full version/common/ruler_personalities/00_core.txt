@@ -1679,7 +1679,7 @@ conqueror_personality = {
 	building_budget_multiplier = 0.75
 	gift_chance = -50
 	wants_land = yes
-	
+	razing = yes
 	chance = {
 		
 	}
@@ -4322,7 +4322,7 @@ born_to_the_saddle_ruler_personality = {
 
 	war_chance_multiplier = 1.25
 	easy_war_chance_multiplier = 1.25
-
+	razing = yes 
 	knowledge_sharing = yes
 
 	cavalry_power = 0.1

@@ -5,6 +5,7 @@
 #Raze a province
 estate_nomadic_tribes_raze_a_province = {
 	can_select = {
+		is_nomad = yes
 		OR = {
 			has_reform = great_mongol_state_reform
 			has_reform = steppe_horde

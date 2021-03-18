@@ -619,6 +619,10 @@ fort_15th = {
 				has_province_modifier = tropical
 			}
 		}
+		modifier = {
+			factor = 1.25
+			FROM = { is_emperor_of_china = yes }
+		}
 	} 
 } 
 
@@ -874,7 +878,7 @@ regimental_camp = {
 	time = 12
 
 	modifier = {
-		land_forcelimit = 0.75
+		land_forcelimit = 1
 	}
 	
 	ai_will_do = {
@@ -2085,12 +2089,12 @@ drydock = {
 ##########################
 
 conscription_center = {
-	cost = 350
+	cost = 400
 	time = 12
 	make_obsolete = regimental_camp
 
 	modifier = {
-		land_forcelimit = 1.5
+		land_forcelimit = 2
 	}
 	
 	ai_will_do = {

@@ -860,6 +860,12 @@ estate_nobles_nobility_primacy = {
 			NOT = { has_estate_privilege = estate_maratha_military }
 		}
 	}
+	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+		}
+	}
 	on_granted = {
 	}
 	penalties = {
@@ -1182,6 +1188,12 @@ estate_church_religious_state = {
 	can_select = {
 		is_nomad = no
 	}
+	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+		}
+	}
 	on_granted = {
 	}
 	penalties = {
@@ -1213,10 +1225,10 @@ estate_church_religious_state = {
 			}
 			NOT = { has_estate_privilege = estate_church_religious_state }
 		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	is_absolutism_active = yes
+		#}
 		modifier = {
 			factor = 1.25
 			NOT = { adm = 2 }
@@ -1635,6 +1647,12 @@ estate_burghers_land_of_commerce = {
 	loyalty = -0.05
 	can_select = {
 	}
+	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+		}
+	}
 	on_granted = {
 	}
 	penalties = {
@@ -1666,10 +1684,10 @@ estate_burghers_land_of_commerce = {
 			}
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	is_absolutism_active = yes
+		#}
 		modifier = {
 			factor = 1.25
 			NOT = { dip = 2 }
@@ -2392,6 +2410,12 @@ estate_brahmins_brahmin_governance = {
 	is_valid = {
 		NOT = { religion_group = muslim }
 	}
+	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+		}
+	}
 	can_select = {
 	}
 	on_granted = {
@@ -2425,10 +2449,10 @@ estate_brahmins_brahmin_governance = {
 			}
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	is_absolutism_active = yes
+		#}
 		modifier = {
 			factor = 1.25
 			NOT = { adm = 2 }
@@ -2635,6 +2659,10 @@ estate_jains_diplomacy = {
 	max_absolutism = -5
 	loyalty = -0.05
 	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+		}
 		NOT = { religion_group = muslim }
 	}
 	can_select = {
@@ -2670,10 +2698,10 @@ estate_jains_diplomacy = {
 			}
 			NOT = { has_estate_privilege = estate_jains_diplomacy }
 		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	is_absolutism_active = yes
+		#}
 		modifier = {
 			factor = 1.25
 			NOT = { dip = 2 }
@@ -2819,8 +2847,13 @@ estate_maratha_military = {
 	max_absolutism = -5
 	loyalty = -0.05
 	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+		}
 	}
 	can_select = {
+		NOT = { has_reform = free_city }
 		custom_trigger_tooltip = {
 			tooltip = no_other_mil_privilege
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
@@ -2857,10 +2890,10 @@ estate_maratha_military = {
 			}
 			NOT = { has_estate_privilege = estate_maratha_military }
 		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	is_absolutism_active = yes
+		#}
 		modifier = {
 			factor = 1.25
 			NOT = { mil = 2 }
@@ -3146,8 +3179,13 @@ estate_rajput_military = {
 	max_absolutism = -5
 	loyalty = -0.05
 	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+		}
 	}
 	can_select = {
+		NOT = { has_reform = free_city }
 		custom_trigger_tooltip = {
 			tooltip = no_other_mil_privilege
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
@@ -3184,10 +3222,10 @@ estate_rajput_military = {
 			}
 			NOT = { has_estate_privilege = estate_rajput_military }
 		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	is_absolutism_active = yes
+		#}
 		modifier = {
 			factor = 1.25
 			NOT = { mil = 2 }
@@ -3644,6 +3682,7 @@ estate_burghers_monopoly_of_textiles = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -3761,6 +3800,7 @@ estate_burghers_monopoly_of_dyes = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -3873,6 +3913,7 @@ estate_burghers_monopoly_of_glass = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -3985,6 +4026,7 @@ estate_burghers_monopoly_of_paper = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -4100,6 +4142,7 @@ estate_vaisyas_monopoly_of_textiles = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -4218,6 +4261,7 @@ estate_vaisyas_monopoly_of_dyes = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -4330,6 +4374,7 @@ estate_vaisyas_monopoly_of_glass = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -4442,6 +4487,7 @@ estate_vaisyas_monopoly_of_paper = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -4559,6 +4605,7 @@ estate_jains_monopoly_of_textiles = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -4679,6 +4726,7 @@ estate_jains_monopoly_of_dyes = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -4793,6 +4841,7 @@ estate_jains_monopoly_of_glass = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -4907,6 +4956,7 @@ estate_jains_monopoly_of_paper = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5022,6 +5072,7 @@ estate_nobles_monopoly_of_metals = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5139,6 +5190,7 @@ estate_nobles_monopoly_of_livestock = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5249,6 +5301,7 @@ estate_nobles_monopoly_of_gems = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5364,6 +5417,7 @@ estate_rajput_monopoly_of_metals = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5482,6 +5536,7 @@ estate_rajput_monopoly_of_livestock = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5590,6 +5645,7 @@ estate_rajput_monopoly_of_gems = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5705,6 +5761,7 @@ estate_maratha_monopoly_of_metals = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5822,6 +5879,7 @@ estate_maratha_monopoly_of_livestock = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -5929,6 +5987,7 @@ estate_maratha_monopoly_of_gems = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -6039,6 +6098,7 @@ estate_church_monopoly_of_incense = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -6150,6 +6210,7 @@ estate_church_monopoly_of_wool = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -6262,6 +6323,7 @@ estate_church_monopoly_of_wine = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -6370,6 +6432,7 @@ estate_church_monopoly_of_slaves = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -6482,6 +6545,7 @@ estate_brahmins_monopoly_of_incense = {
 		NOT = { has_estate = estate_church }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -6592,6 +6656,7 @@ estate_brahmins_monopoly_of_wool = {
 		NOT = { has_estate = estate_church }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }

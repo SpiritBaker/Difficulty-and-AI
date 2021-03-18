@@ -55,6 +55,11 @@ country_decisions = {
 				any_owned_province = {
 					superregion = china_superregion
 				}
+				num_of_owned_provinces_with = { 
+					superregion = china_superregion
+					is_core = root
+					value = 10
+				}
 				NOT = {
 					any_country = {
 						any_owned_province = {

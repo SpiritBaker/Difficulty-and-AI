@@ -511,6 +511,7 @@ province_event = {
 	}
 	
 	trigger = {
+		always = no 
 		OR = {
 			AND = {
 				development = 50
@@ -586,6 +587,7 @@ province_event = {
 	}
 	
 	trigger = {
+		always = no 
 		OR = {
 			has_province_modifier = regiopolis_city
 			has_province_modifier = metropolis_city

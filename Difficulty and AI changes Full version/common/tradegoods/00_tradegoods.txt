@@ -1800,7 +1800,7 @@ gems = {
 coal = {
 	color = { 0.0 1.0 1.0 }
 	is_latent = yes
-	is_valuable = yes
+	#is_valuable = yes
 
 	rnw_latent_chance = 7 # Kind of on average how many provinces we want to spawn with it
 	

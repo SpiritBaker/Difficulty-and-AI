@@ -18,6 +18,14 @@ revolution = {
 			}
 		}
 		modifier = {
+			factor = 3
+			owner = {
+				any_owned_province = {
+					is_center_of_revolution = yes
+				}
+			}
+		}
+		modifier = {
 			factor = 1.25
 			owner = { incompetent_monarch = yes }
 		}
@@ -40,7 +48,7 @@ revolution = {
 			region = FROM
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			controller = {
 				is_revolution_target = yes
 			}

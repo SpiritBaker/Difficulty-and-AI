@@ -43,10 +43,10 @@ estate_nomadic_aristocracy_primacy = {
 			}
 			NOT = { has_estate_privilege = estate_nomadic_aristocracy_primacy }
 		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	is_absolutism_active = yes
+		#}
 		modifier = {
 			factor = 1.25
 			NOT = { mil = 2 }
@@ -187,10 +187,10 @@ sedentary_subdjects_land_of_commerce = {
 			}
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 		}
-		modifier = {
-			factor = 0.8
-			is_absolutism_active = yes
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	is_absolutism_active = yes
+		#}
 		modifier = {
 			factor = 1.25
 			NOT = { dip = 2 }

@@ -14,3 +14,18 @@
 #	technology_cost = -0.05
 #	embracement_cost = -0.1
 #}
+
+AI_OPM_penalty = {
+	potential = {
+		always = no
+		ai = yes
+		NOT = { num_of_cities = 2 }
+	}
+	trigger = {
+		ai = yes
+		NOT = { num_of_cities = 2 }
+	}
+	monarch_admin_power = -1
+	monarch_diplomatic_power = -1 
+	monarch_military_power = -1
+}

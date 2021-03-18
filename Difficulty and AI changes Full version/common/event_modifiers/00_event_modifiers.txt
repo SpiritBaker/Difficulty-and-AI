@@ -8857,53 +8857,64 @@ overlord_military_mission = {
 
 # Religions
 harmonized_vajrayana = {
+	land_morale = 0.05
 	production_efficiency = 0.05
 	religion = yes
 }
 
 harmonized_buddhism = { #Theravada
 	advisor_cost = -0.05
+	idea_cost = -0.05
 	religion = yes
 }
 
 harmonized_mahayana = {
-	idea_cost = -0.07
+	technology_cost = -0.05
+	legitimacy = 0.5
+	meritocracy = 0.25
 	religion = yes
 }
 
 harmonized_shinto = {
 	infantry_power = 0.05
+	global_regiment_cost = -0.1
 	religion = yes
 }
 
 # Religion Groups
 harmonized_pagan = {
+	cavalry_power = 0.05
 	global_unrest = -0.5
 	religion = yes
 }
 
 harmonized_jewish_group = {
-	global_institution_spread = 0.15
+	global_institution_spread = 0.10
+	inflation_reduction = -0.05
 	religion = yes
 }
 
 harmonized_zoroastrian_group = {
 	trade_efficiency = 0.1
+	yearly_harmony = 0.25
 	religion = yes
 }
 
 harmonized_dharmic = {
 	tolerance_own = 1
+	num_accepted_cultures = 1
 	religion = yes
 }
 
 harmonized_muslim = {
 	trade_efficiency = 0.05
+	global_manpower_modifier = 0.10
 	religion = yes
 }
 
 harmonized_christian = {
-	stability_cost_modifier = -0.05
+	stability_cost_modifier = -0.1
+	army_tradition = 0.25
 	religion = yes
 }
 

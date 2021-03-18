@@ -44,40 +44,43 @@ ZUN_ideas = {  #Zunghar
 	}
 }
 
-BUK_ideas = {
+BUK_ideas = {  #Bukhara, from NIE
 	start = {
-		land_morale = 0.1
-		cavalry_cost = -0.1
+		trade_steering = 0.15
+		cavalry_power = 0.20
 	}
+	
 	bonus = {
-		build_cost = -0.1
+		advisor_cost = -0.15
 	}
+	
 	trigger = {
 		tag = BUK
 	}
 	free = yes
 	
-	trs_mawarannahr = {
-		cavalry_power = 0.2
+	recovery_from_the_mongol_invasion = {
+		development_cost = -0.10
 	}
-	trs_threshold_of_paradise = {
-		prestige = 1
+	intellect_center_of_the_islamic_world = {
+		religious_unity = 0.15
+		technology_cost = -0.075
 	}
-	trs_adept_diplomacy = {
-		spy_offence = 0.2
+	improve_public_education = {
+		global_institution_spread = 0.20
 	}
-	trs_turkoman_cannoneers = { #Babur's ambition
-		artillery_cost = -0.15
+	settling_from_the_steppe = {
+		free_adm_policy = 1
 	}
-	trs_scientific_patronage = {
-		technology_cost = -0.05
+	utilizing_fire_and_shock = {
+		shock_damage = 0.05
+		fire_damage = 0.05
 	}
-	trs_entrepot_of_the_silk_road = {
-		global_own_trade_power = 0.25
+	persian_cannoneer_experience = {
+		artillery_power = 0.10
 	}
-	chagatai_literature = { #Same as Timurids
-		legitimacy = 1
-		horde_unity = 1 
+	patronize_learning_and_arts = {
+		idea_cost = -0.10
 	}
 }
 

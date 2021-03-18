@@ -262,7 +262,10 @@ innovativeness_ideas = {
 			factor = 1.5
 			has_idea_group = quality_ideas
 		}
-
+		modifier = {
+			factor = 1.5
+			has_idea_group = naval_ideas
+		}
 		modifier = {
 			factor = 1.5
 			technology_group = western
@@ -1028,6 +1031,17 @@ exploration_ideas = {
 				tag = NOR
 			}
 		}
+		modifier = {
+			factor = 1.2
+			capital_scope = {
+				OR = {
+					region = indonesia_region
+					region = malaya_region
+					region = moluccas_region
+					region = japan_region
+				}
+			}
+		}
 	}
 }
 
@@ -1345,6 +1359,13 @@ expansion_ideas = {
 			OR = {
 				tag = CAS
 				tag = SPA
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				tag = ENG
+				tag = GBR
 			}
 		}
 		modifier = {
@@ -1755,13 +1776,11 @@ naval_ideas = {
 				tag = GBR
 				tag = POR
 				tag = NED
-				tag = MAJ
-				tag = BEI
-				tag = MSA
-				tag = JAP
-				tag = PSA
-				tag = MAS
-				tag = MLC
+				#tag = MAJ
+				#tag = BEI
+				#tag = PSA
+				#tag = MAS
+				#tag = MLC
 				tag = ORM
 				tag = OMA
 				tag = ZAN
@@ -1776,6 +1795,9 @@ naval_ideas = {
 		modifier = {
 			factor = 2.5
 			OR = { 
+				tag = MSA
+				tag = JAP
+				tag = SWE
 				tag = KNI
 				tag = TTS
 				tag = GEN
@@ -1783,6 +1805,19 @@ naval_ideas = {
 				tag = ARA
 				tag = CUB
 				tag = USA
+			}
+		}
+		modifier = {
+			factor = 2.5
+			capital_scope = {
+				OR = {
+					region = indonesia_region
+					region = malaya_region
+					region = moluccas_region
+					region = japan_region
+					region = british_isles_region
+					region = carribeans_region
+				}
 			}
 		}
 		modifier = {
@@ -1796,6 +1831,10 @@ naval_ideas = {
 		modifier = {
 			factor = 1.5
 			has_idea_group = quality_ideas
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = innovativeness_ideas
 		}
 		modifier = {
 			factor = 5

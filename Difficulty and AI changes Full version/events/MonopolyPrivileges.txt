@@ -37,10 +37,23 @@ country_event = {
 		reapply_estate_privilege = { privilege = estate_burghers_monopoly_of_textiles }
 		reapply_estate_privilege = { privilege = estate_vaisyas_monopoly_of_textiles }
 		reapply_estate_privilege = { privilege = estate_jains_monopoly_of_textiles }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.1.b.tooltip
 
@@ -91,10 +104,23 @@ country_event = {
 		reapply_estate_privilege = { privilege = estate_burghers_monopoly_of_dyes }
 		reapply_estate_privilege = { privilege = estate_vaisyas_monopoly_of_dyes }
 		reapply_estate_privilege = { privilege = estate_jains_monopoly_of_dyes }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.2.b.tooltip
 
@@ -142,10 +168,23 @@ country_event = {
 		reapply_estate_privilege = { privilege = estate_burghers_monopoly_of_glass }
 		reapply_estate_privilege = { privilege = estate_vaisyas_monopoly_of_glass }
 		reapply_estate_privilege = { privilege = estate_jains_monopoly_of_glass }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.3.b.tooltip
 
@@ -193,10 +232,23 @@ country_event = {
 		reapply_estate_privilege = { privilege = estate_burghers_monopoly_of_paper }
 		reapply_estate_privilege = { privilege = estate_vaisyas_monopoly_of_paper }
 		reapply_estate_privilege = { privilege = estate_jains_monopoly_of_paper }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.4.b.tooltip
 
@@ -244,10 +296,23 @@ country_event = {
 		reapply_estate_privilege = { privilege = estate_nobles_monopoly_of_metals }
 		reapply_estate_privilege = { privilege = estate_rajput_monopoly_of_metals }
 		reapply_estate_privilege = { privilege = estate_maratha_monopoly_of_metals }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.5.b.tooltip
 
@@ -298,10 +363,23 @@ country_event = {
 		reapply_estate_privilege = { privilege = estate_nobles_monopoly_of_livestock }
 		reapply_estate_privilege = { privilege = estate_rajput_monopoly_of_livestock }
 		reapply_estate_privilege = { privilege = estate_maratha_monopoly_of_livestock }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.6.b.tooltip
 
@@ -349,10 +427,23 @@ country_event = {
 		reapply_estate_privilege = { privilege = estate_nobles_monopoly_of_gems }
 		reapply_estate_privilege = { privilege = estate_rajput_monopoly_of_gems }
 		reapply_estate_privilege = { privilege = estate_maratha_monopoly_of_gems }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.7.b.tooltip
 
@@ -394,10 +485,23 @@ country_event = {
 		name = monopoly_privileges.1.a
 		reapply_estate_privilege = { privilege = estate_church_monopoly_of_incense }
 		reapply_estate_privilege = { privilege = estate_brahmins_monopoly_of_incense }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.8.b.tooltip
 
@@ -438,10 +542,23 @@ country_event = {
 		name = monopoly_privileges.1.a
 		reapply_estate_privilege = { privilege = estate_church_monopoly_of_wool }
 		reapply_estate_privilege = { privilege = estate_brahmins_monopoly_of_wool }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.9.b.tooltip
 
@@ -473,10 +590,23 @@ country_event = {
 	option = {
 		name = monopoly_privileges.1.a
 		reapply_estate_privilege = { privilege = estate_church_monopoly_of_wine }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 1000
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.10.b.tooltip
 
@@ -507,10 +637,23 @@ country_event = {
 	option = {
 		name = monopoly_privileges.1.a
 		reapply_estate_privilege = { privilege = estate_church_monopoly_of_slaves }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_absolutism_active = yes
+			} 
+		}
 	}
 	option = {
 		name = monopoly_privileges.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				is_absolutism_active = yes
+			} 
+		}
 		
 		custom_tooltip = monopoly_privileges.11.b.tooltip
 
