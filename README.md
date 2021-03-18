@@ -8,7 +8,6 @@ Because the difference with base game AI is so substantial at this point, it ine
 
 On Normal difficulty the game will feel similar to vanilla but harder, on Very Hard difficulty the game escalates over time and looks like a player game. I'm recommending Very Hard if you are looking for a challenge, or if it's a Coop game.
 
-Updated for 1.30.3
 Direct download.
 https://github.com/SpiritBaker/Difficulty-and-AI/releases
 
@@ -28,7 +27,7 @@ Nomads:
 - Enabling Clergy for Hordes that have organized religion.
 - Tribes estate functions similarly to cossacks.  
 - Removing banners reinforcements speed penalty, mainly for gameplay reasons. Reducing the amount of available banners.
-- Hordes combat bonus in plains is reduced to 10% shock damage, 10% damage received.
+- Hordes combat bonus in plains is reduced to 10% shock damage, and penalty to -10% shock damage.
 - Horde unity should be easier to maintain.       
 - Adding Dzungar khanate as possible formable for Oirats with unique NI’s.
 - Adding Bukhara NI’s, borrowed from NIE. 
@@ -66,6 +65,8 @@ Gameplay and Balance changes:
 - Fixes and tweaks to Hegemon’s. Preventing Ai from claiming Eco hegemon after getting some cash in a peace deal.  
 - Small touch to Muslim faith, reworking old convert decisions and enabling it for AI.
 - Increasing duration of Muslim Schools bonuses by 10 years. 
+- Small changes to trade regions, Bordeaux is an end node, white sea flows into Novgorod.
+- Nerf to trade propagation, from 20% to 10%. 
 - Making last Institutions semi-global, they will still spread really fast around the world.
 - Naval attrition is reduced to 5%, as it’s currently bugged and ticks 2 times per month. 
 - Various small exploits and bug fixes. If we know about them and it can be fixed.
@@ -110,7 +111,3 @@ Incompatible with mods that change Ideas, Building, Policies. To do most of the 
 Special thanks to ppl who helped us test development build and provided feedback along the way:
 Atwix
 Derrurak
-
-
-
-
