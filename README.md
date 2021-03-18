@@ -49,6 +49,7 @@ Gameplay and Balance changes:
 - Added 10 Idea slots in a balanced way.
 - Tweaks to ideas and policies, to make more idea groups relevant.
 - Major reduction of the amount of Discipline, Force limit and Manpower in the game. For performance and gameplay reasons. 
+- Small adjustment to cavalry pips, mostly adding defensive pips in a late game. 
 - More meaningful advisers, weaker Advisers have more to offer. 
 - Light tweaks to Basic Government reforms.
 - Effect of corruption was reduced to 1/5 of original game values, and AI is less willing to use debase currency.
