@@ -1,10 +1,10 @@
-version="1.6.1"
+version="2.0"
 tags={
 	"Balance"
-	"Fixes"
 	"Gameplay"
+	"Fixes"
 }
-name="Difficulty & AI"
+name="Difficulty & AI 2.0"
 picture="thumbnail.png"
 supported_version="1.30.6"
-remote_file_id="2053238435"
+remote_file_id="2453967654"
