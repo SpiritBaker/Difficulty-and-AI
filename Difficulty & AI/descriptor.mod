@@ -3,6 +3,11 @@ tags={
 	"Balance"
 	"Gameplay"
 	"Fixes"
+	"Expansion"
+	"Military"
+	"Map"
+	"Missions and Decisions"
+	"National Ideas"
 }
 name="Difficulty & AI 2.0"
 picture="thumbnail.png"

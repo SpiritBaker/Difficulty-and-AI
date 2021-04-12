@@ -2195,6 +2195,7 @@ champagne={
 		191 192 193 1877 4392 #bourgogne_area
 		203 204 205 4719 #savoy_dauphine_area
 		4720 4721 4764 4766 
+		182 183 185 4388 #ile_de_france_area
 	}
 }
 
@@ -2244,7 +2245,6 @@ bordeaux={
 		173 174 175 176 #pyrenees_area
 		177 178 4389 #loire_area
 		4694 4697 4777 # new for 1.30
-		182 183 185 4388 #ile_de_france_area
 		179 184 4776 # Orleans area
 		167 168 1879 4385 #normandy_area
 	}
