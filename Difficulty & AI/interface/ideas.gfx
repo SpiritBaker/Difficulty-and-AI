@@ -179,6 +179,30 @@ spriteTypes = {
 		
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
+
+	spriteType = {
+		name = "GFX_idea_theocracy_gov_ideas"
+		texturefile = "gfx//interface//ideas//idea_theocracy_gov_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+
+	spriteType = {
+		name = "GFX_idea_indigenous_ideas"
+		texturefile = "gfx//interface//ideas//idea_indigenous_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_horde_gov_ideas"
+		texturefile = "gfx//interface//ideas//idea_horde_gov_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+    }
 	
 	spriteType = {
 		name = "GFX_idea_administrative_ideas"
@@ -187,62 +211,4 @@ spriteTypes = {
 		
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
-	
-	######
-	
-	spriteType = {
-		name = "GFX_idea_grand_court_ideas"
-		texturefile = "gfx//interface//ideas//idea_grand_court_ideas.dds"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-    }
-    
-    spriteType = {
-		name = "GFX_idea_imperial_ideas"
-		texturefile = "gfx//interface//ideas//idea_imperial_ideas.dds"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-    }
-    
-    spriteType = {
-        name = "GFX_idea_marcher_lord_ideas"
-		texturefile = "gfx//interface//ideas//idea_marcher_lord_ideas.dds"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-    }
-
-    spriteType = {
-        name = "GFX_idea_permanent_war_ideas"
-		texturefile = "gfx//interface//ideas//idea_permanent_war_ideas.dds"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-    }
-    
-    spriteType = {
-        name = "GFX_idea_royal_education_ideas"
-		texturefile = "gfx//interface//ideas//idea_royal_education_ideas.dds"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-    }
-    
-    spriteType = {
-        name = "GFX_idea_theocratic_ideas"
-		texturefile = "gfx//interface//ideas//idea_theocratic_ideas.dds"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-    }
-    
-	spriteType = {
-        name = "GFX_idea_military_doctrine_ideas"
-		texturefile = "gfx//interface//ideas//idea_military_doctrine_ideas.dds"
-		noOfFrames = 1
-		
-		effectFile = "gfx/FX/buttonstate.lua"
-    }
 }

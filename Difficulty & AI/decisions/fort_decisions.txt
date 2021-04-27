@@ -5,6 +5,7 @@ country_decisions = {
 		potential = {
 			ai = yes
 			primitives = no
+			always = no
 			
 			is_at_war = no
 			manpower_percentage = 0.1

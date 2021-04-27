@@ -19,6 +19,27 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in p
 --NDefines.NMilitary.EXPLORER_LEADER_POWER = 0.6	--Used for conquistadors & explorers (affects total pips).
 
 
+--NDefines.NAI.ACCEPTABLE_FRACTION_OF_INTEREST_PAYMENTS = 0.3 --of income
+--NDefines.NAI.ACCEPTABLE_FRACTION_OF_INTEREST_PAYMENTS_VASSAL = 0.5 --of income
+--NDefines.NAI.GREAT_PROJECT_DESIRE_MOVE_FROM_SUBJECT_MODIFIER = 2
+--NDefines.NAI.GREAT_PROJECT_DESIRE_LEAVE_IN_SUBJECT_MODIFIER = 0.5
+--NDefines.NAI.GREAT_PROJECT_DESIRE_UPGRADE_IN_SUBJECT_MODIFIER = 0.5
+--NDefines.NAI.GREAT_PROJECT_DESIRE_UPGRADE_MODIFIER = 1
+--NDefines.NAI.GREAT_PROJECT_DESIRE_BUILD_NEW_MODIFIER = 2
+--NDefines.NAI.GREAT_PROJECT_DESIRE_CAPITAL_MODIFIER = 10
+--NDefines.NAI.GREAT_PROJECT_DESIRE_CAPITAL_BASE = 10
+
+--NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on state maintenance
+
+--NDefines.NAI.MIN_SHIPS_FOR_TEST_MONARCH_MILITARY_SKILL = 25
+--NDefines.NAI.MIN_AI_ADMIRALS_WANTED = 1
+--NDefines.NAI.MAX_AI_ADMIRALS_WANTED_WARTIME = 4
+--NDefines.NAI.MAX_AI_ADMIRALS_WANTED_PEACETIME = 2
+--NDefines.NAI.BONUS_ADMIRAL_SCORE_SHIP_COUNT_START = 50
+
+--NDefines.AI_TOTAL_DEV_CULTURE_MULTIPLIER = 6			-- Multiplier for how much the AI values having much development in accepted cultures.
+--NDefines.AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER = 30	-- Multiplier for how much the AI wants to convert brother cultures in terms of percentage of the nation. Essentially we compare the total dev of the non-promoted culture * AI_TOTAL_DEV_CULTURE_MULTIPLIER with the proportion of dev of the country * AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER and choose the larger of the two as our desire to add an accepted culture.
+--NDefines.AI_BROTHER_CULTURE_MULTIPLIER = 0.75			-- How much multiplier for how much the AI wants to convert brother cultures (there's less penalty on them not being the same culture because they're at least close).
 
 NDefines.NAI.SUBSIDY_YEARS = 20
 NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
@@ -146,12 +167,12 @@ NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 0.1	-- AI scoring for becoming d
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
-NDefines.MILITARY_FOCUS_DEFAULT = 1.0
-NDefines.MILITARY_FOCUS_LOWER_BOUND = 0.25
-NDefines.MILITARY_FOCUS_UPPER_BOUND = 1.75
-NDefines.ARMY_FRACTION_MILITARIZE = 1.5
-NDefines.ARMY_FRACTION_PEACEFUL = 0.9
-NDefines.ARMY_FRACTION_MILITARIST = 1.25
+--NDefines.NAIEconomy.MILITARY_FOCUS_DEFAULT = 1.0
+--NDefines.NAIEconomy.MILITARY_FOCUS_LOWER_BOUND = 0.25
+--NDefines.NAIEconomy.MILITARY_FOCUS_UPPER_BOUND = 1.75
+--NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.5
+--NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.9
+--NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.25
 
 NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1.0
 NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 0.8
@@ -161,7 +182,8 @@ NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25
 NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.25
 --MISSIONARY_FRACTION = 0.15
 NDefines.NAIEconomy.STATE_MAINTENANCE_FRACTION = 0.25
-NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 1.5
+NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 0.7 --from 1.5
+NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY_WARTIME = 0.4
 --SUBSIDY_PRIORITY_CONSIDERATION_THRESHOLD = 50.0
 --SUBSIDY_DESIRE_TO_PRIORITY_RATIO = 0.05
 
@@ -244,3 +266,4 @@ NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER =  10   
 --NDefines.NEconomy.TRADE_PROPAGATE_THRESHOLD  =  2
 NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03	--% each tech increases it. 96% increase at tech 32
+NDefines.NEconomy.NAVAL_TECH_MAINTENANCE_IMPACT = 0.03 			-- % each tech increases it.

@@ -125,7 +125,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 361 # Cairo
+			province_id = 361 	# Cairo
+			361 = { 			# Cairo
+				is_state = yes
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }

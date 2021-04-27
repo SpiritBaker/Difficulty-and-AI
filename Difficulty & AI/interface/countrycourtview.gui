@@ -507,8 +507,8 @@ guiTypes = {
 			horizontal = 0
 			spacing = 2.5
 			scrollbartype = "standardlistbox_slider"
-			borderSize = { x = 0 y = 0 }
-			allwaystransparent = yes
+			borderSize = {x = 0 y = 0}
+			alwaystransparent = yes
 		}
 		
 
@@ -855,7 +855,7 @@ guiTypes = {
 			position = { x = -12 y = 19 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.8
-			allwaystransparent = yes
+			alwaystransparent = yes
 			frame = 17
 		}
 
@@ -965,8 +965,8 @@ guiTypes = {
 			maxWidth = 125
 			maxHeight = 32
 			format = center
-			allwaystransparent = yes
-		}
+			alwaystransparent = yes
+		}	
 
 		guiButtonType = {
 			name ="progress_bar_frame"
@@ -1078,7 +1078,7 @@ guiTypes = {
 			position = { x = -35 y = 10 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.8
-			allwaystransparent = yes
+			alwaystransparent = yes
 			frame = 17
 		}
 

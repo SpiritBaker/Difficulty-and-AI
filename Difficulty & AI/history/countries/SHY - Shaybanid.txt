@@ -3,10 +3,10 @@ add_government_reform = steppe_horde
 technology_group = nomad_group
 religion = sunni
 primary_culture = uzbehk
-add_accepted_culture = khazak
-capital = 476 #Kypshak
+capital = 1075 #Chimgi-Tura
 historical_rival = TIM
 religious_school = hanafi_school
+add_accepted_culture = khazak
 
 1428.1.1 = { 
 	monarch = { 

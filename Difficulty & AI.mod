@@ -1,4 +1,4 @@
-version="2.0"
+version="2.0.2"
 tags={
 	"Balance"
 	"Gameplay"
@@ -11,5 +11,5 @@ tags={
 }
 name="Difficulty & AI 2.0"
 picture="thumbnail.png"
-supported_version="1.30.6"
+supported_version="1.31.*"
 path="mod/Difficulty & AI"

@@ -1396,3 +1396,269 @@ trade_kontor_network = {
 		}
 	}
 }
+
+steppe_nomad_migrations_policy = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = exploration_ideas
+	}
+	
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = exploration_ideas
+	}
+	
+	colonist_placement_chance = 0.05
+	native_uprising_chance = -0.5
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+riverine_navy_policy = { 
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = maritime_ideas
+	}
+	
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = maritime_ideas
+	}
+	
+	naval_forcelimit_modifier = 0.1
+	navy_tradition = 1
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 0
+			NOT = { navy_size = 20 }
+		}				
+	}
+}
+
+passport_to_merchants_policy = { 
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = trade_ideas
+	}
+	
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	mercantilism_cost = -0.2
+	global_own_trade_power = 0.1
+
+	ai_will_do = {
+		factor = 0			
+	}
+}
+
+faith_advisors_policy = { 
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = diplomatic_ideas
+	}
+	
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = diplomatic_ideas
+	}
+	
+	papal_influence = 1
+	church_power_modifier = 0.15
+	monthly_fervor_increase = 1
+	yearly_patriarch_authority = 0.5
+	yearly_harmony = 0.5
+	yearly_karma_decay = 0.5
+	monthly_piety = 0.1
+	diplomatic_reputation = 1
+
+	ai_will_do = {
+		factor = 1	
+	}
+}
+
+one_and_true = { 
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = influence_ideas
+	}
+	
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = influence_ideas
+	}
+	
+	reduced_liberty_desire = 10
+	global_missionary_strength = 0.01
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+maritime_scribes = { 
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = maritime_ideas
+	}
+	
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = maritime_ideas
+	}
+	
+	naval_tradition_from_battle = 0.5
+	prestige_from_naval = 0.5
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+
+solidarity_policy = { #change name
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = trade_ideas
+	}
+	
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	improve_relation_modifier = 0.15
+	trade_efficiency = 0.15
+
+	ai_will_do = {
+		factor = 1.2
+		modifier = {
+			factor = 0
+			NOT = { trade_income_percentage = 0.1 }
+		}			
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.5
+		}
+	}
+}
+
+appeal_to_old_powers_policy = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = indigenous_ideas
+		has_idea_group = trade_ideas
+	}
+	
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.15
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+indirect_approach_policy = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = indigenous_ideas
+		has_idea_group = spy_ideas
+	}
+	
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = spy_ideas
+	}
+	
+	movement_speed = 0.1
+	land_attrition = -0.1
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+loyalty_to_the_land_policy = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = indigenous_ideas
+		has_idea_group = influence_ideas
+	}
+	
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = influence_ideas
+	}
+	
+	diplomatic_upkeep = 1
+	liberty_desire_from_subject_development = -0.15
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+commercial_tribes_policy = { 
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = indigenous_ideas
+		has_idea_group = trade_ideas
+	}
+	
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	trade_range_modifier = 0.15
+	range = 0.25
+
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -74,26 +74,26 @@ country_decisions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#add_permanent_claim = 441 #Khiva
-			#add_permanent_claim = 444 #Charjuy
-			#add_permanent_claim = 453 #Qarshi
-			#add_permanent_claim = 454 #Samarkand
-			#add_permanent_claim = 457 #Tashkent
-			#add_permanent_claim = 1967 #Khujand
-			#add_permanent_claim = 1973 #Urgench
-			#add_permanent_claim = 2363 #Khujand
+			add_permanent_claim = 441 #Khiva
+			add_permanent_claim = 444 #Charjuy
+			add_permanent_claim = 453 #Qarshi
+			add_permanent_claim = 454 #Samarkand
+			add_permanent_claim = 457 #Tashkent
+			add_permanent_claim = 1967 #Khujand
+			add_permanent_claim = 1973 #Urgench
+			add_permanent_claim = 2363 #Khujand
 
-			#if = {
-			#	limit = { 
-			#		NOT = { government = monarchy }
-			#		is_revolutionary = no
-			#	}
-			#	change_government_to_monarchy = yes
-			#}
-			#if = {
-			#	limit = { is_revolutionary = no }
-			#	add_government_reform = iqta
-			#}
+			if = {
+				limit = { 
+					NOT = { government = monarchy }
+					is_revolutionary = no
+				}
+				change_government_to_monarchy = yes
+			}
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = iqta
+			}
 			change_technology_group = muslim
 			change_unit_type = muslim
 			set_global_flag = bukhara_formed

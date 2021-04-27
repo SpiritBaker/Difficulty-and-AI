@@ -50,7 +50,7 @@ marketplace = {
 	}
 	
 	ai_will_do = {
-		factor = 5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
 			factor = 0
 			NOT = { province_has_center_of_trade_of_level = 1 }
@@ -148,7 +148,7 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 15
+		factor = 5
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -271,18 +271,64 @@ temple = {
 	}
 	
 	on_built = {
-		FROM = {
-			if = {
-				limit = {
-					uses_karma = yes
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion = buddhism
+						religion = mahayana
+						religion = vajrayana
+					}
+					has_estate_privilege = estate_church_karma_temples
 				}
-				add_karma = 1
+			}
+			FROM = {
+				add_karma = 3
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+					has_estate_privilege = estate_church_influence_temples
+				}
+			}
+			FROM = {
+				add_papal_influence = 3
+			}
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion = buddhism
+						religion = mahayana
+						religion = vajrayana
+					}
+					has_estate_privilege = estate_church_karma_temples
+				}
+			}
+			FROM = {
+				add_karma = -3
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+					has_estate_privilege = estate_church_influence_temples
+				}
+			}
+			FROM = {
+				add_papal_influence = -3
 			}
 		}
 	}
 	
 	ai_will_do = {
-		factor = 15
+		factor = 5
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -343,8 +389,33 @@ barracks = {
 		local_manpower_modifier = 0.5
 	}
 	
+	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_manpower = 1
+			}
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_manpower = -1
+			}
+		}
+	}
+
 	ai_will_do = {
-		factor = 15
+		factor = 5
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -638,6 +709,7 @@ coastal_defence = {
 	modifier = {
 		blockade_force_required = 0.5
 		hostile_disembark_speed = 1.0
+		block_slave_raid = yes
 	}
 
 	ai_will_do = {
@@ -689,7 +761,7 @@ courthouse = {
 	}
 	
 	ai_will_do = {
-		factor = 5
+		factor = 4
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -798,7 +870,33 @@ dock = {
 		has_port = yes
 	}
 	modifier = {
-		local_sailors_modifier = 0.75
+		local_sailors_modifier = 0.5
+	}
+
+	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_sailors = 200
+			}
+		}
+	}
+	
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_sailors = -200
+			}
+		}
 	}
 	
 	ai_will_do = {
@@ -1040,7 +1138,7 @@ fort_16th = {
 naval_battery = {
 
 	make_obsolete = coastal_defence
-	cost = 300
+	cost = 200
 	time = 12
 	build_trigger = {
 		has_port = yes
@@ -1049,6 +1147,7 @@ naval_battery = {
 		blockade_force_required = 1.0
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 5
+		block_slave_raid = yes
 	}
 
 	ai_will_do = {
@@ -1100,18 +1199,64 @@ cathedral = {
 	}
 	
 	on_built = {
-		FROM = {
-			if = {
-				limit = {
-					uses_karma = yes
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion = buddhism
+						religion = mahayana
+						religion = vajrayana
+					}
+					has_estate_privilege = estate_church_karma_temples
 				}
-				add_karma = 1
+			}
+			FROM = {
+				add_karma = 3
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+					has_estate_privilege = estate_church_influence_temples
+				}
+			}
+			FROM = {
+				add_papal_influence = 3
+			}
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion = buddhism
+						religion = mahayana
+						religion = vajrayana
+					}
+					has_estate_privilege = estate_church_karma_temples
+				}
+			}
+			FROM = {
+				add_karma = -3
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+					has_estate_privilege = estate_church_influence_temples
+				}
+			}
+			FROM = {
+				add_papal_influence = -3
 			}
 		}
 	}
 	
 	ai_will_do = {
-		factor = 15
+		factor = 5
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -1278,7 +1423,7 @@ trade_depot = {
 	}
 	
 	ai_will_do = {
-		factor = 5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
 			factor = 0
 			NOT = { province_has_center_of_trade_of_level = 1 }
@@ -1476,8 +1621,33 @@ training_fields = {
 		local_manpower_modifier = 1
 	}
 	
+	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_manpower = 1
+			}
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_manpower = -1
+			}
+		}
+	}
+
 	ai_will_do = {
-		factor = 15
+		factor = 5
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -1673,7 +1843,7 @@ stock_exchange = {
 	}
 	
 	ai_will_do = {
-		factor = 5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
 			factor = 0
 			NOT = { province_has_center_of_trade_of_level = 1 }
@@ -1778,7 +1948,7 @@ counting_house = {
 	allow_in_gold_provinces = no
 	
 	ai_will_do = {
-		factor = 15
+		factor = 5
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -1905,7 +2075,7 @@ town_hall = {
 	}
 	
 	ai_will_do = {
-		factor = 5
+		factor = 4
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -2012,8 +2182,34 @@ drydock = {
 		has_port = yes
 	}
 	modifier = {
-		local_sailors_modifier = 1.25
-	}	
+		local_sailors_modifier = 1
+	}
+	
+	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_sailors = 200
+			}
+		}
+	}
+	
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_sailors = -200
+			}
+		}
+	}
 	
 	ai_will_do = {
 		factor = 1
@@ -2282,7 +2478,7 @@ wharf = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 7.5
+		factor = 4
 		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
@@ -2346,7 +2542,7 @@ weapons = {
 	onmap = yes	
 	
 	ai_will_do = {
-		factor = 7.5
+		factor = 4
 		modifier = {
 			factor = 2
 			OR = {
@@ -2391,7 +2587,7 @@ textile = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 7.5
+		factor = 4
 		modifier = {
 			factor = 0.8
 			NOT = { development = 3 }
@@ -2448,7 +2644,7 @@ plantations = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 7.5
+		factor = 4
 		modifier = {
 			factor = 2
 			OR = {
@@ -2481,6 +2677,7 @@ tradecompany = {
 		spices
 		fur
 		incense
+		cloves
 	}
 	keep_trigger = {
 		OR = { 
@@ -2489,12 +2686,13 @@ tradecompany = {
 			trade_goods = spices
 			trade_goods = fur
 			trade_goods = incense
+			trade_goods = cloves
 		}
 	}
 	onmap = yes
 
 	ai_will_do = {
-		factor = 7.5
+		factor = 4
 		modifier = {
 			factor = 0.75
 			trade_goods = incense
@@ -2540,7 +2738,7 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 4
+		factor = 3
 		modifier = { 
 			factor = 0.4
 			NOT = { base_production = 3 }
@@ -2612,7 +2810,7 @@ mills = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 7.5
+		factor = 4
 		modifier = {
 			factor = 0.8
 			NOT = { base_production = 3 }
@@ -2723,7 +2921,7 @@ ramparts = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 5
+		factor = 4
 		modifier = {
 			factor = 0
 			NOT = {
@@ -2791,9 +2989,9 @@ soldier_households = {
 		all
 	}
 
-	keep_trigger = {
-		NOT = { trade_goods = coal }
-	}
+	#keep_trigger = {
+	#	NOT = { trade_goods = coal }
+	#}
 
 	bonus_manufactory = { # Will apply an extra modifier if these goods
 		grain
@@ -2812,7 +3010,7 @@ soldier_households = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 20
+		factor = 7.5
 		modifier = {
 			factor = 0
 			NOT = {
@@ -2902,9 +3100,9 @@ impressment_offices = {
 	build_trigger = {
 		has_port = yes
 	}
-	keep_trigger = {
-		NOT = { trade_goods = coal }
-	}
+	#keep_trigger = {
+	#	NOT = { trade_goods = coal }
+	#}
 	modifier = {
 		local_sailors = 250
 	}

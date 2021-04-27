@@ -11,6 +11,7 @@ country_event = {
 	trigger = {
 		ai = yes
 		primitives = no
+		always = no
 		
 		NOT = { num_of_loans = 1 }
 		treasury = 1500
@@ -593,7 +594,7 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		always = yes
+		always = no
 	}
 
 	immediate = {

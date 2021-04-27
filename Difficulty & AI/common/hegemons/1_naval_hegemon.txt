@@ -4,7 +4,6 @@ naval_hegemon = {
 		num_of_heavy_ship = 250
 		NOT = { any_other_great_power = { num_of_heavy_ship = root } }
 		NOT = { has_country_modifier = lost_hegemony }
-		#is_at_war = no
 	}
 	
 	base = {

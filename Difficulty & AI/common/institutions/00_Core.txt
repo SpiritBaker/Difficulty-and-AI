@@ -92,19 +92,6 @@ feudalism = {
 				culture_group = hindusthani
 				NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
 			}
-			#AND = {
-			#	OR = {
-			#		culture_group = altaic
-			#		culture_group = tartar
-			#	}
-			#	owner = { NOT = { tag = SHY } }
-				#owner = { NOT = { tag = OIR } }
-				#owner = { NOT = { tag = CHG } }
-			#	owner = { NOT = { tag = NOG } }
-				#owner = { NOT = { tag = SYG } }
-				#owner = { NOT = { tag = HMI } }
-				#owner = { NOT = { tag = KAS } }
-			#}
 			owner = { technology_group = high_american }
 			owner = {
 				NOT = {
@@ -1382,7 +1369,6 @@ global_trade = {
 		is_year = 1600
 		is_island = no
 		highest_value_trade_node = yes
-		printing_press = 100
 		OR = {
 			province_has_center_of_trade_of_level = 3
 			province_has_center_of_trade_of_level = 2
@@ -2030,6 +2016,7 @@ manufactories = {
 					trade_goods = ivory
 					trade_goods = slaves
 					trade_goods = spices
+					trade_goods = cloves
 					trade_goods = fur
 					trade_goods = incense
 				}
@@ -2247,6 +2234,7 @@ manufactories = {
 					trade_goods = ivory
 					trade_goods = slaves
 					trade_goods = spices
+					trade_goods = cloves
 					trade_goods = fur
 					trade_goods = incense
 				}
@@ -3308,6 +3296,7 @@ industrialization = {
 					trade_goods = ivory
 					trade_goods = slaves
 					trade_goods = spices
+					trade_goods = cloves
 					trade_goods = fur
 					trade_goods = incense
 				}
@@ -3441,6 +3430,7 @@ industrialization = {
 					trade_goods = ivory
 					trade_goods = slaves
 					trade_goods = spices
+					trade_goods = cloves
 					trade_goods = fur
 					trade_goods = incense
 				}

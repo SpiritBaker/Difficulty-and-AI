@@ -174,7 +174,7 @@ country_event = {
 			country_event = { id = french_revolution.2 }
 		}
 		ai_chance = {
-			factor = 2
+			factor = 10
 			modifier = {
 				factor = 5
 				revolution_target_exists = no
@@ -1089,14 +1089,7 @@ country_event = {
 			country_event = { id = french_revolution.8 days = 1460 random = 2190 }
 		}
 		ai_chance = {
-			factor = 2
-			modifier = {
-				factor = 5
-				OR = {
-					is_revolution_target = yes
-					is_great_power = yes
-				}
-			}
+			factor = 100
 		}
 	}
 	option = {		# We don't want a new Ceasar
@@ -1164,6 +1157,9 @@ country_event = {
 					win = yes
 				}
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 }

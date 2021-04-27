@@ -5265,6 +5265,100 @@ land_shaped_by_fire = {
 	local_production_efficiency = 0.1
 }
 
+#Iroquois Events
+
+iroquoian_iron_fist = {
+	land_morale = 0.05
+	discipline = 0.025
+}
+
+mother_of_nations = {
+	local_autonomy = 0.05
+	culture_conversion_cost = -0.25
+	local_missionary_strength = 0.02
+}
+
+# Navajo
+
+nah_helping_hand = {
+	technology_cost = -0.05
+}
+
+nah_the_changing_girl = {
+	diplomatic_reputation = 1
+	global_unrest = -2
+}
+
+nah_pueblo_merchants = {
+	trade_efficiency = 0.1
+}
+
+# Pueblo
+
+pue_popes_rebellion = {
+	land_morale = 0.10
+	infantry_cost = -0.05
+}
+
+pue_spider_grandmother = {
+	technology_cost = -0.05
+}
+
+pue_kachinas = {
+	global_missionary_strength = 0.01
+	religion = yes
+}
+
+pue_end_of_the_revolt = {
+	global_unrest = -2
+	army_tradition = 0.5
+}
+
+# Sioux
+
+sio_foreigner_trade = {
+	production_efficiency = 0.05
+	province_trade_power_modifier = 0.05
+}
+
+sio_legacy = {
+	global_autonomy = -0.02
+	global_unrest = -1
+}
+
+sio_feast = {
+	diplomatic_upkeep = 1
+	ae_impact = -0.05
+}
+
+sio_wolf_attacks = {
+	supply_limit_modifier = -0.2
+}
+
+# Cherokee
+
+che_sacred_lake = {
+	religious_unity = 0.2
+	tolerance_own = 1
+}
+
+che_blood_revenge = {
+	local_manpower_modifier = -0.25
+}
+
+che_foreigner_trade = {
+	province_trade_power_value = 0.25
+}
+
+# Powhatan
+
+pow_first_contact = {
+	technology_cost = -0.15
+}
+
+pow_indigenous_trade_goods = {
+	local_production_efficiency = 0.25
+}
 
 ##################################################
 # Trade Companies
@@ -7130,7 +7224,7 @@ cleansing_of_monasteries = {
 }
 
 lacking_monastic_discipline = {
-	local_tax_modifier = -0.03
+	local_tax_modifier = -0.25
 	trade_goods_size = -0.25
 }
 
@@ -7748,7 +7842,6 @@ fought_back_the_hungarians = {
 
 #China:
 uniter_of_the_manchus = {
-	#horde_unity = 1
 	manpower_recovery_speed = 0.1
 	land_morale = 0.1
 }
@@ -10768,10 +10861,12 @@ borgia_diplomacy = {
 #Estate Privileges
 
 estate_dhimmi_lighter_dhimmi_taxes_privilege_mod = {
+	religion = yes
 	local_tax_modifier = 0.15
 }
 
 estate_dhimmi_manpower_mod = {
+	religion = yes
 	local_manpower_modifier = 0.3
 }
 
@@ -10780,6 +10875,7 @@ estate_maratha_levies_for_muslims_mod = {
 }
 
 estate_dhimmi_guaranteed_autonomy_mod = {
+	religion = yes
 	local_religious_unity_contribution = -1
 	local_missionary_strength = -1
 }
@@ -11284,4 +11380,419 @@ protected_markets_modifier = {
 medici_pope_modifier = {
 	diplomatic_reputation = 1
 	papal_influence = 2
+}
+
+# Joan of Arc event chain modifiers
+
+rebuilt_joan_of_arc_statue_catholic = {
+	tolerance_own = 1
+	tolerance_heretic = -1
+}
+
+rebuilt_joan_of_arc_statue_protestant = {
+	tolerance_own = -1
+	tolerance_heretic = 1
+}
+
+destroyed_joan_of_arc_statue_catholic = {
+	tolerance_own = -1
+}
+
+destroyed_joan_of_arc_statue_protestant = {
+	tolerance_heretic = 1
+}
+
+joan_of_arc_catholic_league_symbol = {
+	land_morale = 0.05
+}
+
+joan_of_arc_beatified = {
+	defensiveness = 0.2
+	tolerance_own = 1
+}
+
+sisters_takeover = {
+	may_recruit_female_generals = yes
+	female_advisor_chance = 1.0
+	tolerance_own = 1
+	tolerance_heretic = -3
+	fire_damage = 0.1
+	discipline = 0.05
+}
+
+# Mandala Modifiers
+
+siamese_revolution = {
+	tolerance_own = 1
+	global_spy_defence = 0.15
+}
+
+siamese_age_of_openness = {
+	global_institution_spread = 0.15
+	global_spy_defence = -0.15
+}
+
+emerald_buddha = {
+	prestige = 0.5
+	monthly_karma = 0.1
+}
+
+emerald_buddha_alternate = {
+	prestige = 0.5
+	monthly_karma = -0.1
+}
+
+estate_burghers_tropical_mod = {
+	local_colonial_growth = 10
+	local_development_cost = -0.05
+}
+
+estate_church_lao_animism_mod = {
+	local_missionary_strength = -1
+	local_religious_unity_contribution = -1
+}
+
+maj_harmed_trade_relations = {
+	global_trade_power = -0.25
+	diplomatic_reputation = -1
+}
+	
+# Horde Ideas Modifiers
+
+a_moving_city = {
+	horde_unity = 0.5
+	caravan_power = 0.1
+	trade_range_modifier = 0.25
+}
+
+ancestral_temple = {
+	local_autonomy = 0.05
+	local_unrest = -1
+}
+
+blue_dragon = {
+	raze_power_gain = 0.20
+	loot_amount = 0.15
+}
+
+white_tiger = {
+	raze_power_gain = 0.20
+	available_province_loot = 0.15
+}
+
+the_silence_of_the_lambs = {
+	global_manpower_modifier = -0.15
+}
+
+seat_of_power = {
+	local_defensiveness = 0.25
+}
+
+taming_provinces = {
+	reduced_liberty_desire	= 10
+	movement_speed = 0.15
+	horde_unity = 1
+}
+
+# Theocracy Modifiers
+
+its_not_gold = { 
+	global_missionary_strength = 0.02
+	tolerance_heretic = -1
+}
+
+the_rule_of_god = {
+	land_morale = 0.25
+	discipline = 0.03
+}
+
+le_prophete = {
+	stability_cost_modifier = -0.1
+	tolerance_heretic = 2
+	tolerance_own = -1
+}
+
+the_unfortunate_traveller = {
+	tolerance_heretic = -2
+	tolerance_own = 1
+}
+
+avert_thy_mortal_eyes = {
+	mil_tech_cost_modifier = -0.1
+}
+
+the_dying_of_the_light = {
+	land_morale = -0.05
+	discipline = -0.03
+}
+
+an_eye_for_an_eye = {
+	mercenary_manpower = 0.5
+	global_manpower_modifier = -0.25
+}
+
+promised_land = {
+	defensiveness = 0.25
+	fort_maintenance_modifier = -0.10
+}
+
+lo_and_behold = {
+	infantry_cost = -0.1
+	cavalry_cost = -0.1
+}
+
+# Indigenous Modifiers
+
+blessing_of_the_land = {
+	local_development_cost = -0.1
+}
+
+defensive_stance = {
+	defensiveness = 0.15
+	global_spy_defence = 0.15
+}
+
+peace_kept = {
+	global_unrest = -2
+}
+
+disrespecting_the_ancestors = {
+	tolerance_own = -1
+}
+
+overconfidence = {
+	fire_damage_received = 0.1
+	prestige_from_land = 1
+}
+
+traditions_respected = {
+	local_autonomy = 0.1
+	local_unrest = -2
+}
+
+traditions_disrespected = {
+	local_autonomy = -0.1
+	local_unrest = 4
+}
+
+#Native American Modifiers
+
+potlatch_held = {
+	prestige_decay = -0.01
+}
+
+shame_pole = {
+	prestige_decay = 0.02
+}
+
+honour_pole = {
+	prestige_decay = -0.01
+}
+
+travois_no_dogs = {
+	#migration_cost = 1 TODO
+}
+
+travois_no_horses = {
+	#migration_cost = 1 TODO
+}
+
+lovely_place = {
+	development_cost = -0.10
+}
+
+rock_art_dec = {
+	prestige_decay = -0.01
+}
+
+# Totemism
+
+tot_didnt_look_back = {
+	global_unrest = -2
+}
+
+tot_hoarse_ruler = {
+	tolerance_own = -1
+}
+
+tot_legendary_location = {
+	local_autonomy = 0.1
+	local_unrest = -2
+	prestige = 0.25
+}
+
+tot_legend_abandoned = {
+	religious_unity = -0.25
+}
+
+tot_legendary_location_maintained = {
+	local_unrest = -3
+	prestige = 0.5
+	prestige_decay = -0.01
+}
+
+tot_ceramics_discovered = {
+	technology_cost = -0.1
+}
+
+tot_dedicated_ruler = {
+	tribal_development_growth = 0.02
+}
+
+tot_shameful_ruler = {
+	stability_cost_modifier = 0.05
+}
+
+tot_great_famine = {
+	local_manpower_modifier = -0.25
+}
+
+# Polynesian Modifiers
+
+menehune_blessing_mod = {
+	monarch_admin_power = 1
+	monarch_diplomatic_power = 1
+	monarch_military_power = 1
+}
+
+lonos_blessing_mod = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+kaitiakitanga_mod = {
+	development_cost = 0.50
+}
+
+matariki_mod = {
+	all_power_cost = -0.10
+}
+
+makahiki_mod = {
+	stability_cost_modifier = -0.25
+	stability_cost_to_declare_war = 1
+	development_cost = 1
+	global_unrest = -2
+}
+
+historic_ava_mod = {
+	global_unrest = -1
+	burghers_loyalty_modifier = 0.05
+	church_loyalty_modifier = 0.05
+	nobles_loyalty_modifier = 0.05
+}
+
+respect_faamatai_mod = {
+	stability_cost_modifier = -0.25
+}
+
+end_faamatai_mod = {
+	technology_cost = -0.05
+	global_unrest = 1
+}
+
+tongan_fijian_trade_mod = {
+	mercantilism_cost = -0.1
+}
+
+warlord_mod = {
+	land_morale = 0.10
+}
+
+fijian_canoes_good_mod = {
+	naval_maintenance_modifier = 0.25
+}
+
+fijian_canoes_bad_mod = {
+	naval_forcelimit_modifier = -0.50
+}
+
+good_kava_mod = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.2
+}
+
+quality_tapa_mod = {
+	global_tax_income = 12
+}
+
+pig_sides_mod = {
+	global_unrest = 2
+}
+
+pig_neutral_mod = {
+	stability_cost_modifier = 0.10
+}
+
+sugarcane_lost_mod = {
+	production_efficiency = -0.05
+}
+
+no_tattoo_mod = {
+	prestige_decay = 0.01
+}
+
+# Estate led regencies
+
+religious_intolerance_mod = {
+	tolerance_heathen = -1
+	tolerance_heretic = -1
+}
+
+loyalist_leader_mod = {
+	stability_cost_modifier = -0.10
+}
+
+# Special Regencies
+
+chateau_de_chenonceau = {
+	local_defensiveness = 0.25
+}
+
+#Native Federations
+leadership_pays_off_mod = {
+	monthly_federation_favor_growth = 0.05
+}
+grow_in_harmony_mod = {
+	development_cost = -0.05
+}
+primus_inter_pares_mod = {
+	tribal_development_growth = 0.02
+}
+stand_the_ground_mod = {
+	defensiveness = 0.10
+}
+lost_respect_mod = {
+	monthly_federation_favor_growth = -0.05
+}
+
+# New Colonial Types
+
+colonist_incentives = {
+	tolerance_own = 3
+	tolerance_heathen = 2
+	tolerance_heretic = 2
+	trade_efficiency = 0.1
+}
+
+colonial_corrupted_governor = {
+	stability_cost_modifier = 0.05
+}
+
+colonial_missionaries = {
+	local_missionary_strength = 0.03
+}
+
+miraculous_colony = {
+	local_unrest = -3
+	prestige = 0.5
+}
+
+# Monuments
+
+monument_boost = {
+	great_project_upgrade_cost = -0.25
+}
+
+shwedagon_pilgrimage = {
+	trade_efficiency = 0.15
 }

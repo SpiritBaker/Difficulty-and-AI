@@ -5,7 +5,6 @@ military_hegemon = {
 		
 		NOT = { any_other_great_power = { army_size = root } }
 		NOT = { has_country_modifier = lost_hegemony }
-		#is_at_war = no
 	}
 	
 	base = {

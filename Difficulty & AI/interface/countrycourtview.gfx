@@ -7,14 +7,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_no_personality_chart_overlay"
 		texturefile = "gfx/interface/provinceView_chart_overlay.dds"
-		allwaystransparent = yes
+		alwaystransparent = yes
 	}
 	
 	spriteType = {
 		name = "GFX_no_provinceView_chart_overlay_0.9"
 		texturefile = "gfx/interface/provinceView_chart_overlay_0.9.dds"
-		allwaystransparent = yes
-	}
+		alwaystransparent = yes
+	}	
 	
 	spriteType = {
 		name = "GFX_government_upgrade_strip"
@@ -54,7 +54,7 @@ spriteTypes = {
 		name = "GFX_statist_vs_orangist_frame"
 		texturefile = "gfx/interface/statist_vs_orangist_frame.dds"
 	}
-
+	
 	spriteType = {
 		name = "GFX_dismiss_advisor"
 		texturefile = "gfx/interface/dismiss_advisor.dds"
@@ -74,8 +74,8 @@ spriteTypes = {
 		name = "GFX_advisor_indicator_culture"
 		texturefile = "gfx/interface/advisor_indicator_culture.dds"
 		noOfFrames = 5
-	}
-
+	}	
+	
 	spriteType = {
 		name = "GFX_statist_vs_orangist_overlay"
 		texturefile = "gfx/interface/statist_vs_orangist_overlay.dds"
@@ -85,11 +85,11 @@ spriteTypes = {
 		name = "GFX_support_heir_button"
 		texturefile = "gfx/interface/support_heir_button.dds"
 	}
-
+	
 	spriteType = {
 		name = "GFX_abdicate_button"
 		texturefile = "gfx/interface/abdicate_button.dds"
-	}
+	}	
 	spriteType = {
 		name = "GFX_disinherit_button"
 		texturefile = "gfx/interface/abdicate_button.dds"
@@ -103,7 +103,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_court_banner_green"
 		texturefile = "gfx/interface/court_banner_green.dds"
-	}
+	}	
 	
 	spriteType = {
 		name = "GFX_country_modifier_frame"
@@ -115,7 +115,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_eligible_noneligible_strip"
 		texturefile = "gfx//interface//eligible_noneligible_strip.dds"
-		transparencecheck = yes
+		transparencecheck = yes	
 		noOfFrames = 2
 	}
 
@@ -130,38 +130,38 @@ spriteTypes = {
 		name = "GFX_monarch_cultures_icon"
 		texturefile = "gfx//interface//monarch_cultures_icon.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
-	}
+		transparencecheck = yes	
+	}	
 	spriteType = {
 		name = "GFX_policies_icon"
 		texturefile = "gfx//interface//policies_icon.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
+		transparencecheck = yes	
 	}
 	spriteType = {
 		name = "GFX_mapmode_acceptedculture_icon"
 		texturefile = "gfx//interface//mapmode_acceptedculture_icon.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
-	}
+		transparencecheck = yes	
+	}	
 
 	spriteType = {
 		name = "GFX_national_focus"
 		texturefile = "gfx//interface//icon_national_focus.dds"
 		noOfFrames = 2
-	}
+	}	
 	
 	spriteType = {
 		name = "GFX_icon_national_focus_adm"
 		texturefile = "gfx//interface//icon_national_focus_adm.dds"
 		noOfFrames = 2
-	}
+	}	
 	
 	spriteType = {
 		name = "GFX_icon_national_focus_mil"
 		texturefile = "gfx//interface//icon_national_focus_mil.dds"
 		noOfFrames = 2
-	}
+	}		
 
 	spriteType = {
 		name = "GFX_icon_national_focus_dip"
@@ -182,8 +182,8 @@ spriteTypes = {
 		name = "GFX_choose_rivals_bg"
 		texturefile = "gfx//interface//choose_rivals_bg.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
-	}
+		transparencecheck = yes	
+	}	
 	
 	spriteType = {
 		name = "GFX_court_view_bg"
@@ -202,27 +202,27 @@ spriteTypes = {
 		name = "GFX_local_government_view_bg"
 		texturefile = "gfx//interface//country_local_government_view_bg.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
-	}
+		transparencecheck = yes	
+	}	
 	
 	spriteType = {
 		name = "GFX_local_government_view_bg_large"
 		texturefile = "gfx//interface//country_local_government_view_bg_large.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
+		transparencecheck = yes	
 	}
 
 	spriteType = {
 		name = "GFX_local_government_view_bg_huge"
 		texturefile = "gfx//interface//country_local_government_view_bg_huge.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
-	}
+		transparencecheck = yes	
+	}	
 
 	spriteType = {
 		name = "GFX_primary_culture_icon"
 		texturefile = "gfx//interface//primary_culture_icon.dds"
-	}
+	}	
 
 	spriteType = {
 		name = "GFX_culture_slot"
@@ -233,7 +233,7 @@ spriteTypes = {
 		name = "GFX_demote_button"
 		texturefile = "gfx//interface//demote_culture_button.dds"
 		noOfFrames = 2
-	}
+	}	
 
 	spriteType = {
 		name = "GFX_select_button"
@@ -268,28 +268,28 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_culture_slot_mughals_assimilated"
 		texturefile = "gfx//interface//culture_slot_mughals_assimilated.dds"
-	}
+	}	
 	
 	
 	spriteType = {
 		name = "GFX_culture_dev_sort"
 		texturefile = "gfx//interface//culture_dev_sort.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_culture_dev_sort_big"
 		texturefile = "gfx//interface//culture_dev_sort_big.dds"
-	}
+	}	
 	
 	spriteType = {
 		name = "GFX_monarch_heir_crown_icon"
 		texturefile = "gfx//interface//monarch_heir_crown_icon.dds"
-	}
+	}		
 	
 	spriteType = {
 		name = "GFX_culture_star_sort"
 		texturefile = "gfx//interface//culture_star_sort.dds"
-	}
+	}		
 
 	spriteType = {
 		name = "GFX_culture_star"
@@ -301,7 +301,7 @@ spriteTypes = {
 		name = "GFX_court_union"
 		texturefile = "gfx//interface//icon_diplomacy_inunion.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
+		transparencecheck = yes	
 	}
 		
 	progressbartype = {
@@ -310,7 +310,7 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		size = { x = 120 y = 16 }
 		effectFile = "gfx//FX//progress.lua"
-	}
+	}	
 	
 	spriteType = {
 		name = "GFX_gender_icon"
