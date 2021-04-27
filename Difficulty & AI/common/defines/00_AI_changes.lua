@@ -236,7 +236,7 @@ NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.10 --
 
 --NEconomy
 
-NDefines.NEconomy.EDICTS_COST_INCREASE = 0 --% increase on state maintenance.
+NDefines.NEconomy.EDICTS_COST_INCREASE = 0.5 --% increase on state maintenance.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 6 --Months lasting at least.
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35 --Development is divided by this factor, do not set to zero!
 NDefines.NEconomy.CARAVAN_FACTOR = 6.0							
