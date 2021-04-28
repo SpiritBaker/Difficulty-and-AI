@@ -180,9 +180,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					check_variable = {
-						which = baseCost
-						value = 999
+					OR = {
+						is_migratory_tribe = yes
+						check_variable = {
+							which = baseCost
+							value = 999
+						}
 					}
 				}
 				if = {
@@ -266,9 +269,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					check_variable = {
-						which = baseCost
-						value = 999
+					OR = {
+						is_migratory_tribe = yes
+						check_variable = {
+							which = baseCost
+							value = 999
+						}
 					}
 				}
 				dip_power_cost = 100
@@ -342,9 +348,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					check_variable = {
-						which = baseCost
-						value = 999
+					OR = {
+						is_migratory_tribe = yes
+						check_variable = {
+							which = baseCost
+							value = 999
+						}
 					}
 				}
 				if = {
