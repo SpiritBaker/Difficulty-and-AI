@@ -36,8 +36,10 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in p
 --NDefines.NAI.MAX_AI_ADMIRALS_WANTED_WARTIME = 4
 --NDefines.NAI.MAX_AI_ADMIRALS_WANTED_PEACETIME = 2
 --NDefines.NAI.BONUS_ADMIRAL_SCORE_SHIP_COUNT_START = 50
+--NDefines.NAI.REGIMENTS_PER_GENERAL = 15
+--NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 10
 
---NDefines.AI_TOTAL_DEV_CULTURE_MULTIPLIER = 6			-- Multiplier for how much the AI values having much development in accepted cultures.
+NDefines.AI_TOTAL_DEV_CULTURE_MULTIPLIER = 10			-- Multiplier for how much the AI values having much development in accepted cultures.
 --NDefines.AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER = 30	-- Multiplier for how much the AI wants to convert brother cultures in terms of percentage of the nation. Essentially we compare the total dev of the non-promoted culture * AI_TOTAL_DEV_CULTURE_MULTIPLIER with the proportion of dev of the country * AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER and choose the larger of the two as our desire to add an accepted culture.
 --NDefines.AI_BROTHER_CULTURE_MULTIPLIER = 0.75			-- How much multiplier for how much the AI wants to convert brother cultures (there's less penalty on them not being the same culture because they're at least close).
 
@@ -54,17 +56,16 @@ NDefines.NAI.ARTILLERY_FRACTION = 0.25
 NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16
 NDefines.NAI.TRANSPORT_FRACTION = 0.35
 NDefines.NAI.BIGSHIP_FRACTION = 0.4
+--NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on state maintenance
+--NDefines.NAI.CORRUPTION_BUDGET_FRACTION = 0.25 -- AI will spend a maximum of this fraction of monthly income on rooting out corruption
 NDefines.NAI.COLONY_BUDGET_FRACTION = 0.4
 --NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
-NDefines.NAI.REGIMENTS_PER_GENERAL = 20
-NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 25
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 20 -- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
 NDefines.NAI.DEVELOPMENT_CAP_MULT = 2
 NDefines.NAI.EDICT_VALUE_THRESHOLD = 20
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 2	--Change to above threshold in case of running deficit
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 1.5	--Change to above threshold in case of low income
 NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5  --AI will only call in allies in an offensive war if their military power ratio to the enemy is less than this.
-NDefines.NAI.AI_WANT_ACCEPT_CULTURES = 300	--How much the AI values having much development in accepted cultures.
 --NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 50	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 
 NDefines.NAI.DIPLOMATIC_ACTION_GUARANTEE_POWERBALANCE_FACTOR = 25

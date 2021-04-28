@@ -783,3 +783,36 @@ country_event = {
 		name = estate_privileges_and_agendas_events.4.a
 	}
 }
+
+country_event = {
+	id = estate_privileges_and_agendas_events.5 #Tropical City Planning Update
+	title = estate_privileges_and_agendas_events.5.name
+	desc = estate_privileges_and_agendas_events.5.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		has_estate_privilege = estate_burghers_tropical_nation
+	}
+
+	immediate = {
+		every_owned_province = {
+			limit = {
+				has_climate = tropical
+				NOT = {
+					has_province_modifier = estate_burghers_tropical_mod
+				}
+			}
+			add_province_modifier = {
+				name = estate_burghers_tropical_mod
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = estate_privileges_and_agendas_events.4.a
+	}
+}

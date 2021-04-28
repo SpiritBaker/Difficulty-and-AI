@@ -1516,7 +1516,7 @@ esprit_de_corps_policy = {
 	}
 	
 	years_of_nationalism = -5
-	global_missionary_strength = 1
+	global_missionary_strength = 0.01
 	
 	ai_will_do = {
 		factor = 1

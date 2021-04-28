@@ -1527,8 +1527,11 @@ cb_push_back_colonizers = {
 		is_native_tribe = yes
 		FROM = {
 			is_native_tribe = no
-			any_owned_province = {
-				tribal_land_of = ROOT
+			OR = {
+				is_neighbor_of = ROOT
+				any_owned_province = {
+					tribal_land_of = ROOT
+				}
 			}
 		}
 	}

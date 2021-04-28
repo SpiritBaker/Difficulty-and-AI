@@ -820,6 +820,7 @@ religion_in_one_country_reform = {
 religious_permanent_revolution_reform = {
 	icon = "religious_permanent_revolution_reform"
 	allow_normal_conversion = yes
+	force_conversion_gives_global_holy_war_released_modifier = yes
 	potential = {
 		NOT = {
 			religion = confucianism
