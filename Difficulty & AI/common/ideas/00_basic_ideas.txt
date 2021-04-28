@@ -13,14 +13,19 @@ aristocracy_ideas = {
 	bonus = {
 		leader_siege = 1
 		nobles_loyalty_modifier = 0.1
-		nomadic_aristocracy_loyalty_modifier = 0.1
+		nomadic_aristocracy_loyalty_modifier = 0.05
 	}
 
 	trigger = {
 		OR = {
 			has_government_attribute = enables_aristocratic_idea_group
-			government = theocracy
 			government = tribal
+		}
+		NOT = { government = theocracy }
+		NOT = {
+			has_reform = steppe_horde
+			has_reform = khanate_monarchy
+			has_reform = nomad_empire 
 		}
 	}
 	
@@ -188,7 +193,7 @@ horde_gov_ideas = {
 	
 	bonus = {
 		cavalry_power = 0.25
-		nomadic_tribes_loyalty_modifier = 0.1
+		nomadic_aristocracy_loyalty_modifier = 0.05
 	}
 	
 	trigger = {
@@ -200,7 +205,7 @@ horde_gov_ideas = {
 	}
 	
 	horse_lords = {
-		cavalry_cost = -0.33
+		cavalry_cost = -0.2
 	}
 	beyond_the_sun = {
 		ae_impact = -0.1
@@ -213,6 +218,7 @@ horde_gov_ideas = {
 	}
 	horde_loyalty = {
 		global_unrest = -1
+		nomadic_tribes_loyalty_modifier = 0.1
 	}
 	watchers_of_the_silk_road = {	
 		caravan_power = 0.20
