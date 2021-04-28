@@ -157,7 +157,7 @@ NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 85.0
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 
-NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 25.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
+--NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 25.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
 --NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 5				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2 -- How many times the cost of the investment must be in the treasury to consider buying it

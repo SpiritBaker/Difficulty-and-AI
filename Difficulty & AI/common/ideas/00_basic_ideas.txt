@@ -272,6 +272,44 @@ theocracy_gov_ideas = {
 	}
 }
 
+indigenous_ideas = {
+	category = MIL
+
+	bonus = {
+		global_institution_spread = 0.25
+	}
+
+	trigger = {
+		has_government_attribute = enables_natives_idea_group
+	}
+
+	indigenous_bountiful_land = {
+		tribal_development_growth = 0.05
+		development_cost = -0.05
+	}
+	indigenous_irregular_warfare = {
+		hostile_attrition = 1
+	}
+	indigenous_constitution = {
+		monthly_reform_progress_modifier = 0.25
+	}
+	indigenous_braves = {
+		land_morale = 0.10
+	}
+	indigenous_controlled_burns = {
+		global_manpower_modifier = 0.2
+	}
+	indigenous_trade_with_foreigners = {
+		idea_cost = -0.1
+	}
+	indigenous_treaties = {
+		province_warscore_cost = -0.2
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
 
 innovativeness_ideas = {
 	category = ADM
