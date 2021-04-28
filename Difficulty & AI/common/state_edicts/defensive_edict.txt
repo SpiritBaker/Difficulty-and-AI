@@ -18,40 +18,29 @@ edict_defensive_edict = {
         factor = 2
         modifier = {
             factor = 0
-            any_province_in_state = {
-                owner = {
-                    is_at_war = no
-                }   
-            }
+            owner = {
+				is_at_war = no
+			}
         }
         modifier = {
             factor = 1000
-            FROM = {
-                any_province_in_state = {
-                    fort_level = 1
-                    controlled_by = ROOT
-                    has_siege = yes
-                    num_of_units_in_province = {
-                        amount = 3
-                    }
-                }
-            }  
-        } 
+			any_province_in_state = {
+				fort_level = 1
+				controlled_by = owner
+				has_siege = yes
+				num_of_units_in_province = {
+					amount = 3
+				}
+            }
+        }
         modifier = {
             factor = 5
             any_province_in_state = {
-				AND = {
-					OR = {
-						has_building = fort_15th
-						has_building = fort_16th
-						has_building = fort_17th
-						has_building = fort_18th
-					}
-					owner = {
-						is_at_war = yes
-					}
-				}
-            }   
+				fort_level = 1
+            }
+			owner = {
+				is_at_war = yes
+			}
         }
     }
 }
