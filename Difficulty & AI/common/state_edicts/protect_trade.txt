@@ -24,24 +24,24 @@ edict_protect_trade = {
 				NOT = { province_trade_power = 25 }
 			}
 		}
-		modifier= {
+		modifier = {
 			factor = 10
-			#capital_trade_node = FROM
+			#capital_trade_node = owner
 			is_in_capital_area = yes
 			OR = {
 				province_has_center_of_trade_of_level = 1
 				province_trade_power = 25
 			}
 		}
-		modifier= {
+		modifier = {
 			factor = 2
 			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
 			factor = 6
-			FROM = {
+			owner = {
 				home_trade_node = {
-					owned_by = FROM
+					owned_by = PREV
 					OR = {
 						province_has_center_of_trade_of_level = 1
 						province_trade_power = 50
@@ -52,7 +52,7 @@ edict_protect_trade = {
 		modifier = {
 			factor = 5
 			any_province_in_state = {
-				has_merchant = FROM
+				has_merchant = owner
 				OR = {
 					province_has_center_of_trade_of_level = 1
 					province_trade_power = 50
