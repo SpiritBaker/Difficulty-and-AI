@@ -381,11 +381,14 @@ nomadic_aristocracy_build_army_building_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -1002,11 +1005,14 @@ nomadic_aristocracy_build_fort_building_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -1183,11 +1189,14 @@ nomadic_aristocracy_build_manufactory_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -1297,11 +1306,14 @@ nomadic_aristocracy_build_university_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -1427,11 +1439,14 @@ nomadic_aristocracy_develop_x = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -1462,11 +1477,14 @@ nomadic_aristocracy_hire_advisor = {
 		}
     }
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -1515,11 +1533,14 @@ nomadic_aristocracy_fire_advisor = {
 		NOT = { has_country_flag = just_fired_mil_advisor }
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
 		clr_country_flag = need_to_fire_mil_advisor
     }
@@ -1701,11 +1722,14 @@ nomadic_aristocracy_befriend_rival_of_rival = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -1757,11 +1781,14 @@ nomadic_aristocracy_restore_legitimacy = {
 		}
     }
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -1869,11 +1896,14 @@ nomadic_aristocracy_break_coalition = {
 		add_dip_power = 50
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -2023,11 +2053,14 @@ nomadic_aristocracy_condottieri_rivals = {
 		add_mil_power = 50
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -2122,11 +2155,14 @@ nomadic_aristocracy_support_independence = {
 		add_dip_power = 50
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -2258,11 +2294,14 @@ nomadic_aristocracy_retake_core = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -2312,11 +2351,14 @@ nomadic_aristocracy_crush_revolts = {
 		add_prestige = 10
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -2373,11 +2415,14 @@ nomadic_aristocracy_regain_liberty = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -2490,11 +2535,14 @@ nomadic_aristocracy_convert_province_culture = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
 		event_target:agenda_province = {
 			clear_random_development_bonus_flags_effect = yes
@@ -2698,12 +2746,15 @@ nomadic_aristocracy_protect_our_culture = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-		}
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+        }
 		event_target:agenda_province = {
 			if = {
 				limit = {
@@ -2895,12 +2946,15 @@ nomadic_aristocracy_vassalise_vulnerable_country = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-		}
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+        }
 		if = {
 			limit = {
 				has_casus_belli = {
@@ -3128,11 +3182,14 @@ nomadic_aristocracy_expand_into_x = {
 		add_adm_power = 50
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
 		if = {
 			limit = {
@@ -3395,11 +3452,14 @@ nomadic_aristocracy_complete_conquest_of_x = {
 		add_adm_power = 50
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
 		if = {
 			limit = {
@@ -3524,12 +3584,15 @@ nomadic_aristocracy_annex_subject = {
 		custom_tooltip = no_penalties_annexing_tt
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-		}
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+        }
 		hidden_effect = {
 			event_target:agenda_country = {
 				remove_country_modifier = to_be_agenda_annexed_timer
@@ -3603,11 +3666,14 @@ nomadic_aristocracy_build_an_army = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -3678,11 +3744,14 @@ nomadic_aristocracy_bigger_army_than_rival = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -3789,11 +3858,14 @@ nomadic_aristocracy_build_up_manpower_reserves = {
 		clear_random_military_advisor_generation_flags = yes
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
 		clear_random_military_advisor_generation_flags = yes
     }
@@ -3853,11 +3925,14 @@ nomadic_aristocracy_recover_abysmal_prestige = {
 		add_stability_or_adm_power = yes
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }
@@ -3944,11 +4019,14 @@ nomadic_aristocracy_improve_prestige = {
 		add_adm_power = 50
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = nomadic_aristocracy
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = nomadic_aristocracy
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
         }
     }
 }

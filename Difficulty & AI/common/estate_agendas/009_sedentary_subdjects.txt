@@ -322,12 +322,15 @@ sedentary_subdjects_build_trade_building_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -637,12 +640,15 @@ sedentary_subdjects_build_port_building_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -895,12 +901,15 @@ sedentary_subdjects_build_production_building_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = estate_sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1076,12 +1085,15 @@ sedentary_subdjects_build_manufactory_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1190,12 +1202,15 @@ sedentary_subdjects_build_university_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1320,12 +1335,15 @@ sedentary_subdjects_develop_x = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1356,12 +1374,15 @@ sedentary_subdjects_hire_advisor = {
 		}
     }
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1409,12 +1430,15 @@ sedentary_subdjects_fire_advisor = {
 		NOT = { has_country_flag = just_fired_dip_advisor }
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
 		clr_country_flag = need_to_fire_dip_advisor
     }
 }
@@ -1465,12 +1489,15 @@ sedentary_subdjects_pay_off_loans = {
 		}
     }
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1508,12 +1535,15 @@ sedentary_subdjects_restore_currency = {
 		}
     }
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1537,12 +1567,15 @@ sedentary_subdjects_recovery_from_hyperinflation = {
 		add_inflation = -10
     }
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1814,12 +1847,15 @@ sedentary_subdjects_increase_trade_power_in_X = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -1963,12 +1999,15 @@ sedentary_subdjects_access_sea = {
 		add_sailors = 500
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
 		event_target:agenda_province = {
 			if = {
 				limit = {
@@ -2001,12 +2040,15 @@ sedentary_subdjects_improve_dip_rep = {
 		add_prestige = 10
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -2051,12 +2093,15 @@ sedentary_subdjects_get_cash = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -2116,12 +2161,15 @@ sedentary_subdjects_silk_trade = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -2181,12 +2229,15 @@ sedentary_subdjects_spice_trade = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -2249,12 +2300,15 @@ sedentary_subdjects_tea_trade = {
 		}
 	}
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
@@ -2353,11 +2407,14 @@ sedentary_subdjects_reduce_corruption = {
 		}
     }
     failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = sedentary_subdjects
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = { ai = no }
+			add_estate_loyalty_modifier = {
+				estate = sedentary_subdjects
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }

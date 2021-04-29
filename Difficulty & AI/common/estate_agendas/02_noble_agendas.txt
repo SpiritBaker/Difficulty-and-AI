@@ -1,510 +1,184 @@
 
 #This one or the next one will always be valid
-#
-
-#Raze a province
-estate_nomadic_tribes_raze_a_province = {
+estate_nobles_hire_advisor = {
 	can_select = {
-		is_nomad = yes
-		OR = {
-			has_reform = great_mongol_state_reform
-			has_reform = steppe_horde
-			has_dlc = "The Cossacks"
-		}
-		OR = {
-			NOT = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-				}
-			}
-			AND = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-				}
-				NOT = {
-					any_known_country = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-						}
-						NOT = {
-							has_opinion_modifier = {
-								who = root
-								modifier = razed_province
-								value = -190
-							}
-						}
-					}
-				}
+		NOT = {
+			employed_advisor = {
+				category = MIL
 			}
 		}
-		NOT = { has_country_modifier = agenda_looting_zeal }
 	}
-	provinces_to_highlight = {
-		is_capital = yes
-		owner = {
-			has_opinion_modifier = {
-				who = root
-				modifier = razed_province
+	selection_weight = {
+		factor = 1
+	}
+	task_requirements = {
+		employed_advisor = {
+			category = MIL
+		}
+		is_in_deficit = no
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+    }
+    failing_effect = {
+		if = {
+			limit = {
+				ai = no
 			}
+			add_estate_loyalty_modifier = {
+				estate = estate_nobles
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
+    }
+}
+
+estate_nobles_fire_advisor = {
+	can_select = {
+		employed_advisor = {
+			category = MIL
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	immediate_effect = {
+		hidden_effect = {
+			set_country_flag = need_to_fire_mil_advisor
+		}
+	}
+	on_invalid = {
+		clr_country_flag = need_to_fire_mil_advisor
+	}
+	task_requirements = {
+		custom_trigger_tooltip = {
+			tooltip = fire_mil_advisor_tooltip
+			has_country_flag = just_fired_mil_advisor
+		}
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		clr_country_flag = just_fired_mil_advisor
+		clr_country_flag = need_to_fire_mil_advisor
+	}
+	invalid_trigger = {
+		NOT = {
+			employed_advisor = {
+				category = MIL
+			}
+		}
+		NOT = { has_country_flag = just_fired_mil_advisor }
+	}
+    failing_effect = {
+		if = {
+			limit = {
+				ai = no
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_nobles
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
+		clr_country_flag = need_to_fire_mil_advisor
+    }
+}
+
+#Get allies
+estate_nobles_get_allies = {
+	can_select = {
+		NOT = { num_of_allies = 3 }
+		NOT = { num_of_subjects = 3 }
+		is_at_war = no
+		num_of_free_diplomatic_relations = 1
+		NOT = { has_country_modifier = foreign_contacts }
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { num_of_allies = 1 }
+			NOT = { num_of_subjects = 1 }
 		}
 	}
 	pre_effect = {
 		set_variable = {
-			which = estate_nomadic_tribes_raze_a_province_var
+			which = estate_nobles_get_allies_variable
 			value = 0
 		}
 		if = {
 			limit = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
+				OR = {
+					NOT = { num_of_allies = 1 }
+					AND = {
+						num_of_subjects = 2
+						NOT = { num_of_allies = 2 }
 					}
-				}
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -174
-						}
+					AND = {
+						NOT = { num_of_allies = 2 }
+						NOT = { num_of_free_diplomatic_relations = 2 }
 					}
 				}
 			}
 			set_variable = {
-				which = estate_nomadic_tribes_raze_a_province_var
-				value = 8
-			}
-		}
-		else_if = {
-			limit = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-				}
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -149
-						}
-					}
-				}
-			}
-			set_variable = {
-				which = estate_nomadic_tribes_raze_a_province_var
-				value = 7
-			}
-		}
-		else_if = {
-			limit = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-				}
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -124
-						}
-					}
-				}
-			}
-			set_variable = {
-				which = estate_nomadic_tribes_raze_a_province_var
-				value = 6
-			}
-		}
-		else_if = {
-			limit = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-				}
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -99
-						}
-					}
-				}
-			}
-			set_variable = {
-				which = estate_nomadic_tribes_raze_a_province_var
-				value = 5
-			}
-		}
-		else_if = {
-			limit = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-				}
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -74
-						}
-					}
-				}
-			}
-			set_variable = {
-				which = estate_nomadic_tribes_raze_a_province_var
-				value = 4
-			}
-		}
-		else_if = {
-			limit = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-				}
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -49
-						}
-					}
-				}
-			}
-			set_variable = {
-				which = estate_nomadic_tribes_raze_a_province_var
-				value = 3
-			}
-		}
-		else_if = {
-			limit = {
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-				}
-				any_known_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -24
-						}
-					}
-				}
-			}
-			set_variable = {
-				which = estate_nomadic_tribes_raze_a_province_var
-				value = 2
-			}
-		}
-		else = {
-			set_variable = {
-				which = estate_nomadic_tribes_raze_a_province_var
+				which = estate_nobles_get_allies_variable
 				value = 1
 			}
 		}
-	}
-	task_requirements = {
-		if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 8
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_200_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -199
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 7
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_175_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -174
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 6
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_150_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -149
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 5
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_125_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -124
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 4
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_100_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -99
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 3
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_75_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -74
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 2
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_50_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -49
-						}
-					}
-				}
-			}
-		}
 		else = {
-			custom_trigger_tooltip = {
-				tooltip = someone_has_25_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -24
-						}
-					}
-				}
+			set_variable = {
+				which = estate_nobles_get_allies_variable
+				value = 2
 			}
-		}
-	}
-    task_completed_effect = {
-		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
-			loyalty = 10
-		}
-		add_country_modifier = {
-			name = agenda_looting_zeal
-			duration = 3650
-		}
-    }
-    failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
-    }
-}
-
-#Restore horde unity
-estate_nomadic_tribes_restore_horde_unity = {
-	can_select = {
-		NOT = { horde_unity = 65 }
-		is_nomad = yes
-		NOT = { has_ruler_modifier = legitimacy_defended }
-	}
-	selection_weight = {
-		factor = 2
-		modifier = {
-			factor = 1.5
-			NOT = { horde_unity = 50 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { horde_unity = 35 }
 		}
 	}
 	fail_if = {
-		is_nomad = no
+		is_free_or_tributary_trigger = no
 	}
 	task_requirements = {
-		horde_unity = 90
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_get_allies_variable
+					value = 2
+				}
+			}
+			num_of_allies = 3
+		}
+		else = {
+			num_of_allies = 2
+		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
-		add_ruler_modifier = {
-			name = horde_unity_defended
+		add_country_modifier = {
+			name = foreign_contacts
+			duration = 3650
 		}
-    }
+	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -513,8 +187,9 @@ estate_nomadic_tribes_restore_horde_unity = {
     }
 }
 
+
 #Befriend Rival of Rival
-estate_nomadic_tribes_befriend_rival_of_rival = {
+estate_nobles_befriend_rival_of_rival = {
 	can_select = {
 		any_rival_country = {
 			any_rival_country = {
@@ -676,7 +351,7 @@ estate_nomadic_tribes_befriend_rival_of_rival = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		generate_scaled_advisor_of_type_and_religion_effect = {
@@ -687,9 +362,11 @@ estate_nomadic_tribes_befriend_rival_of_rival = {
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -698,11 +375,72 @@ estate_nomadic_tribes_befriend_rival_of_rival = {
     }
 }
 
-#Improve Relations with X tribe
-estate_nomadic_tribes_relations_with_X = {
+#Restore legitimacy
+estate_nobles_restore_legitimacy = {
+	can_select = {
+		NOT = { legitimacy_equivalent = 65 }
+		government = monarchy
+		NOT = { has_ruler_modifier = legitimacy_defended }
+		NOT = { has_regency = yes }
+	}
+	selection_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			NOT = { legitimacy_equivalent = 50 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { legitimacy_equivalent = 35 }
+		}
+	}
+	fail_if = {
+		OR = {
+			NOT = { government = monarchy }
+			has_regency = yes
+		}
+	}
+	task_requirements = {
+		legitimacy_equivalent = 90
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		if = {
+			limit = {
+				has_reform = celestial_empire
+				has_dlc = "Mandate of Heaven"
+			}
+			add_prestige = 10
+		}
+		else = {
+			add_ruler_modifier = {
+				name = legitimacy_defended
+			}
+		}
+    }
+    failing_effect = {
+		if = {
+			limit = {
+				ai = no
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_nobles
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
+    }
+}
+
+
+#Improve Relations with X
+estate_nobles_relations_with_X = {
 	can_select = {
 		any_known_country = {
-			is_nomad = yes
 			NOT = { is_rival = root }
 			ROOT = { NOT = { is_rival = prev } }
 			OR = {
@@ -731,7 +469,6 @@ estate_nomadic_tribes_relations_with_X = {
 		modifier = {
 			factor = 1.5
 			any_known_country = {
-				is_nomad = yes
 				OR = {
 					army_size = root
 					alliance_with = root
@@ -775,12 +512,11 @@ estate_nomadic_tribes_relations_with_X = {
 	}
 	pre_effect = {
 		set_variable = {
-			which = estate_nomadic_tribes_relations_with_X
+			which = estate_nobles_relations_with_X
 			value = 0
 		}
 		random_known_country = {
 			limit = {
-				is_nomad = yes
 				NOT = { is_rival = root }
 				ROOT = { NOT = { is_rival = prev } }
 				OR = {
@@ -807,7 +543,6 @@ estate_nomadic_tribes_relations_with_X = {
 		}
 		random_known_country = {
 			limit = {
-				is_nomad = yes
 				OR = {
 					army_size = root
 					alliance_with = root
@@ -843,13 +578,13 @@ estate_nomadic_tribes_relations_with_X = {
 				}
 			}
 			set_variable = {
-				which = estate_nomadic_tribes_relations_with_X
+				which = estate_nobles_relations_with_X
 				value = 1
 			}
 		}
 		else = {
 			set_variable = {
-				which = estate_nomadic_tribes_relations_with_X
+				which = estate_nobles_relations_with_X
 				value = 2
 			}
 		}
@@ -861,7 +596,7 @@ estate_nomadic_tribes_relations_with_X = {
 		if = {
 			limit = {
 				check_variable = {
-					which = estate_nomadic_tribes_relations_with_X
+					which = estate_nobles_relations_with_X
 					value = 2
 				}
 			}
@@ -883,15 +618,17 @@ estate_nomadic_tribes_relations_with_X = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 15
 		}
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -900,8 +637,390 @@ estate_nomadic_tribes_relations_with_X = {
     }
 }
 
+
+
+#Get AE down (if there is a coalition) 
+estate_nobles_break_coalition = {
+	can_select = {
+		any_country = {
+			coalition_target = root
+			has_opinion_modifier = {
+				who = root
+				modifier = aggressive_expansion
+			}
+			NOT = {
+				has_opinion_modifier = {
+					who = root
+					modifier = aggressive_expansion
+					value = -15
+				}
+			}
+		}
+		is_at_war = no
+	}
+	selection_weight = {
+		factor = 5
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 5
+				all_country = {
+					coalition_target = root
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				any_country = {
+					coalition_target = root
+					army_size = root
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		is_capital = yes
+		owner = {
+			OR = {
+				coalition_target = root
+				AND = {
+					has_opinion_modifier = {
+						who = root
+						modifier = aggressive_expansion
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = aggressive_expansion
+							value = -15
+						}
+					}
+				}
+			}
+		}
+	}
+	fail_if = {
+		has_country_modifier = just_lost_war_timer
+	}
+	task_requirements = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = no_coalition_against_us_tooltip
+				NOT = {
+					any_country = {
+						coalition_target = root
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = no_one_has_15_ae_on_us_tooltip
+				NOT = {
+					any_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = aggressive_expansion
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = aggressive_expansion
+								value = -15
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_dip_power = 50
+	}
+    failing_effect = {
+		if = {
+			limit = {
+				ai = no
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_nobles
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
+    }
+}
+
+
+#Condottieri against rival (with Mare Nostrum)
+estate_nobles_condottieri_rivals = {
+	can_select = {
+		has_dlc = "Mare Nostrum"
+		is_at_war = no
+		NOT = {
+			any_country = {
+				root = { is_renting_condottieri_to = prev }
+			}
+		}
+		any_rival_country = {
+			is_at_war = yes
+			NOT = {
+				is_in_war = {
+					duration = 1095
+				}
+			}
+			any_country = {
+				war_with = prev
+				num_of_cities = 5
+				NOT = {
+					border_distance = {
+						who = root
+						distance = 200
+					}
+				}
+				NOT = { is_rival = root }
+				NOT = { root = { is_rival = prev } }
+				has_opinion = {
+					who = root
+					value = -50
+				}
+				is_free_or_tributary_trigger = yes
+			}
+		}
+		manpower_percentage = 0.5
+		army_size_percentage = 0.5
+	}
+	selection_weight = {
+		factor = 2
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 5
+				all_country = {
+					coalition_target = root
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				any_country = {
+					coalition_target = root
+					army_size = root
+				}
+			}
+		}
+	}
+	pre_effect = {
+		random_rival_country = {
+			limit = {
+				is_at_war = yes
+				NOT = {
+					is_in_war = {
+						duration = 1095
+					}
+				}
+				any_country = {
+					war_with = prev
+					num_of_cities = 5
+					NOT = {
+						border_distance = {
+							who = root
+							distance = 200
+						}
+					}
+					NOT = { is_rival = root }
+					NOT = { root = { is_rival = prev } }
+					has_opinion = {
+						who = root
+						value = -50
+					}
+					is_free_or_tributary_trigger = yes
+				}
+			}
+			save_event_target_as = agenda_country
+			random_country = {
+				limit = {
+					war_with = prev
+					num_of_cities = 5
+					NOT = {
+						border_distance = {
+							who = root
+							distance = 200
+						}
+					}
+					NOT = { is_rival = root }
+					NOT = { root = { is_rival = prev } }
+					has_opinion = {
+						who = root
+						value = -50
+					}
+					is_free_or_tributary_trigger = yes
+				}
+				save_event_target_as = agenda_enemy_country
+			}
+		}
+	}
+	fail_if = {
+		OR = {
+			is_subject = yes
+			is_at_war = yes
+			event_target:agenda_country = {
+				OR = {
+					is_at_war = no
+					NOT = { num_of_cities = 1 }
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		is_capital = yes
+		owner = {
+			war_with = event_target:agenda_country
+		}
+	}
+	task_requirements = {
+		any_country = {
+			war_with = event_target:agenda_country
+			custom_trigger_tooltip = {
+				tooltip = sending_condottieri_to_them
+				ROOT = { is_renting_condottieri_to = prev }
+			}
+		}
+	}
+	task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_mil_power = 50
+	}
+    failing_effect = {
+		if = {
+			limit = {
+				ai = no
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_nobles
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
+    }
+}
+
+
+#Support independence of X (subject of rival)
+estate_nobles_support_independence = {
+	can_select = {
+		OR = {
+			has_dlc = "Conquest of Paradise"
+			has_dlc = "El Dorado"
+		}
+		is_at_war = no
+		is_subject = no
+		any_rival_country = {
+			NOT = { ROOT = { truce_with = prev } }
+			any_subject_country = {
+				NOT = { has_reform = daimyo }
+				is_subject_other_than_tributary_trigger = yes
+				liberty_desire = 50
+				has_opinion = {
+					who = root
+					value = -100
+				}
+				ROOT = {
+					NOT = { is_supporting_independence_of = prev }
+				}
+			}
+		}
+	}
+	selection_weight = {
+		factor = 2
+	}
+	pre_effect = {
+		random_rival_country = {
+			limit = {
+				NOT = { ROOT = { truce_with = prev } }
+				any_subject_country = {
+					NOT = { has_reform = daimyo }
+					is_subject_other_than_tributary_trigger = yes
+					liberty_desire = 50
+					has_opinion = {
+						who = root
+						value = -100
+					}
+					ROOT = {
+						NOT = { is_supporting_independence_of = prev }
+					}
+				}
+			}
+			save_event_target_as = agenda_rival_country
+			random_subject_country = {
+				limit = {
+					NOT = { has_reform = daimyo }
+					is_subject_other_than_tributary_trigger = yes
+					liberty_desire = 50
+					has_opinion = {
+						who = root
+						value = -100
+					}
+					ROOT = {
+						NOT = { is_supporting_independence_of = prev }
+					}
+				}
+				save_event_target_as = agenda_country
+			}
+		}
+	}
+	fail_if = {
+		OR = {
+			is_subject = yes
+			event_target:agenda_country = {
+				OR = {
+					NOT = { is_subject_of = event_target:agenda_rival_country }
+					NOT = { num_of_cities = 1 }
+					war_with = root
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		is_capital_of = event_target:agenda_country
+	}
+	task_requirements = {
+		is_supporting_independence_of = event_target:agenda_country
+	}
+	task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_dip_power = 50
+	}
+    failing_effect = {
+		if = {
+			limit = {
+				ai = no
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_nobles
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
+    }
+}
+
+
 #Retake Core
-estate_nomadic_tribes_retake_core = {
+estate_nobles_retake_core = {
 	can_select = {
 		is_free_or_tributary_trigger = yes
 		OR = {
@@ -1017,7 +1136,7 @@ estate_nomadic_tribes_retake_core = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		add_country_modifier = {
@@ -1027,9 +1146,11 @@ estate_nomadic_tribes_retake_core = {
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -1038,11 +1159,19 @@ estate_nomadic_tribes_retake_core = {
     }
 }
 
-#Crush Revolts
-estate_nomadic_tribes_crush_revolts = {
+#Crush Revolts (not heretics)
+estate_nobles_crush_revolts = {
 	can_select = {
 		num_of_rebel_armies = 1
-		NOT = { has_spawned_rebels = tribal_rebels }
+		NOT = {
+			OR = {
+				has_spawned_rebels = noble_rebels
+				has_spawned_rebels = polish_noble_rebels
+				#Clergy agenda covers heretic rebels
+				has_spawned_rebels = heretic_rebels
+				has_spawned_rebels = lollard_rebels
+			}
+		}
 	}
 	selection_weight = {
 		factor = 2
@@ -1069,16 +1198,18 @@ estate_nomadic_tribes_crush_revolts = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		add_prestige = 10
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -1089,10 +1220,17 @@ estate_nomadic_tribes_crush_revolts = {
 
 
 #Regain liberty
-estate_nomadic_tribes_regain_liberty = {
+estate_nobles_regain_liberty = {
 	can_select = {
 		is_subject = yes
 		is_at_war = no
+		OR = {
+			liberty_desire = 50
+			AND = {
+				ai = no
+				liberty_desire = 35
+			}
+		}
 	}
 	selection_weight = {
 		factor = 5
@@ -1101,15 +1239,15 @@ estate_nomadic_tribes_regain_liberty = {
 			is_subject_of_type = tributary_state
 		}
 	}
+	pre_effect = {
+		overlord = {
+			save_event_target_as = agenda_country
+		}
+	}
 	provinces_to_highlight = {
 		is_capital = yes
 		owner = {
 			overlord_of = root
-		}
-	}
-	pre_effect = {
-		overlord = {
-			save_event_target_as = agenda_country
 		}
 	}
 	task_requirements = {
@@ -1123,19 +1261,21 @@ estate_nomadic_tribes_regain_liberty = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		create_general = {
 			tradition = 60
-			add_shock = 1
+			add_siege = 1
 		}
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -1144,8 +1284,9 @@ estate_nomadic_tribes_regain_liberty = {
     }
 }
 
+
 #Convert province culture
-estate_nomadic_tribes_convert_province_culture = {
+estate_nobles_convert_province_culture = {
 	can_select = {
 		any_owned_province = {
 			NOT = { culture = root }
@@ -1161,7 +1302,7 @@ estate_nomadic_tribes_convert_province_culture = {
 	selection_weight = {
 		factor = 1
 		modifier = {
-			factor = 0.65
+			factor = 0.75
 			always = yes
 		}
 	}
@@ -1194,7 +1335,7 @@ estate_nomadic_tribes_convert_province_culture = {
 		event_target:agenda_province = {
 			add_province_modifier = {
 				name = agenda_cultural_conversion_help
-				duration = 3650
+				duration = 7300
 			}
 		}
 	}
@@ -1233,18 +1374,30 @@ estate_nomadic_tribes_convert_province_culture = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		event_target:agenda_province = {
 			apply_random_development_bonus_bonus_effect = yes
 		}
+		hidden_effect = {
+			event_target:agenda_province = {
+				if = {
+					limit = {
+						has_province_modifier = agenda_cultural_conversion_help
+					}
+					remove_province_modifier = agenda_cultural_conversion_help
+				}
+			}
+		}
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -1263,7 +1416,7 @@ estate_nomadic_tribes_convert_province_culture = {
 }
 
 #Protect our Culture in X
-estate_nomadic_tribes_protect_our_culture = {
+estate_nobles_protect_our_culture = {
 	can_select = {
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1271,26 +1424,19 @@ estate_nomadic_tribes_protect_our_culture = {
 			NOT = { culture_group = root }
 			any_owned_province = {
 				culture = root
-				OR = {
-					religion = root
-					root = { secondary_religion = prev }
-				}
+				religion = root
 			}
 		}
 		any_owned_province = {
 			any_neighbor_province = {
 				is_city = yes
-				OR = {
-					religion = root
-					root = { secondary_religion = prev }
-				}
+				religion = root
 				culture = root
 				has_owner_culture = no
 				has_owner_accepted_culture = no
 				has_discovered = root
 				owner = {
 					is_free_or_tributary_trigger = yes
-					is_nomad = no
 					NOT = { culture_group = prev }
 					NOT = { is_subject_of = root }
 					NOT = { overlord_of = root }
@@ -1319,17 +1465,13 @@ estate_nomadic_tribes_protect_our_culture = {
 			limit = {
 				any_neighbor_province = {
 					is_city = yes
-					OR = {
-						religion = root
-						root = { secondary_religion = prev }
-					}
+					religion = root
 					culture = root
 					has_owner_culture = no
 					has_owner_accepted_culture = no
 					has_discovered = root
 					owner = {
 						is_free_or_tributary_trigger = yes
-						is_nomad = no
 						NOT = { culture_group = prev }
 						NOT = { is_subject_of = root }
 						NOT = { overlord_of = root }
@@ -1346,17 +1488,13 @@ estate_nomadic_tribes_protect_our_culture = {
 			random_neighbor_province = {
 				limit = {
 					is_city = yes
-					OR = {
-						religion = root
-						root = { secondary_religion = prev }
-					}
+					religion = root
 					culture = root
 					has_owner_culture = no
 					has_owner_accepted_culture = no
 					has_discovered = root
 					owner = {
 						is_free_or_tributary_trigger = yes
-						is_nomad = no
 						NOT = { culture_group = prev }
 						NOT = { is_subject_of = root }
 						NOT = { overlord_of = root }
@@ -1462,15 +1600,17 @@ estate_nomadic_tribes_protect_our_culture = {
 		}
 		else = { custom_tooltip = estate_nobles_protect_our_culture_effect_tooltip }
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 15
 		}
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -1500,7 +1640,7 @@ estate_nomadic_tribes_protect_our_culture = {
 
 
 #Vassalise X country (less than 3 provinces, you have at least 12)
-estate_nomadic_tribes_vassalise_vulnerable_country = {
+estate_nobles_vassalise_vulnerable_country = {
 	can_select = {
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1652,7 +1792,7 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		add_country_modifier = {
@@ -1668,9 +1808,11 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -1693,7 +1835,7 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 
 
 #Conquer X area from country you don't have great relations with
-estate_nomadic_tribes_expand_into_x = {
+estate_nobles_expand_into_x = {
 	can_select = {
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1897,16 +2039,18 @@ estate_nomadic_tribes_expand_into_x = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 15
 		}
 		add_adm_power = 50
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -1935,7 +2079,7 @@ estate_nomadic_tribes_expand_into_x = {
 }
 
 #Complete conquest of X area from country you don't have great relations with
-estate_nomadic_tribes_complete_conquest_of_x = {
+estate_nobles_complete_conquest_of_x = {
 	can_select = {
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -2151,7 +2295,12 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 		event_target:agenda_province = {
 			area_for_scope_province = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				OR = {
+					owned_by = root
+					owner = {
+						is_subject_of = root
+					}
+				}
 			}
 		}
 	}
@@ -2167,16 +2316,18 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 15
 		}
 		add_adm_power = 50
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -2206,7 +2357,7 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 
 
 #Annex vassal
-estate_nomadic_tribes_annex_subject = {
+estate_nobles_annex_subject = {
 	can_select = {
 		is_at_war = no
 		diplomatic_reputation = 0
@@ -2299,16 +2450,18 @@ estate_nomadic_tribes_annex_subject = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		custom_tooltip = no_penalties_annexing_tt
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -2324,7 +2477,7 @@ estate_nomadic_tribes_annex_subject = {
 
 
 #Bigger Army
-estate_nomadic_tribes_build_an_army = {
+estate_nobles_build_an_army = {
 	can_select = {
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 0.5 }
@@ -2371,7 +2524,7 @@ estate_nomadic_tribes_build_an_army = {
 			limit = {
 				is_emperor = yes
 			}
-			army_size_percentage = 0.65
+			army_size_percentage = 0.5
 		}
 		else = {
 			army_size_percentage = 0.75
@@ -2379,19 +2532,20 @@ estate_nomadic_tribes_build_an_army = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		create_general = {
 			tradition = 40
-			add_manuever = 1
 		}
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -2402,7 +2556,7 @@ estate_nomadic_tribes_build_an_army = {
 
 
 #Bigger Army than Rival
-estate_nomadic_tribes_bigger_army_than_rival = {
+estate_nobles_bigger_army_than_rival = {
 	can_select = {
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 1 }
@@ -2457,7 +2611,7 @@ estate_nomadic_tribes_bigger_army_than_rival = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		add_country_modifier = {
@@ -2467,9 +2621,11 @@ estate_nomadic_tribes_bigger_army_than_rival = {
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -2479,7 +2635,7 @@ estate_nomadic_tribes_bigger_army_than_rival = {
 }
 
 #Manpower reserves
-estate_nomadic_tribes_build_up_manpower_reserves = {
+estate_nobles_build_up_manpower_reserves = {
 	can_select = {
 		is_at_war = no
 		NOT = { manpower_percentage = 0.40 }
@@ -2509,7 +2665,7 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 	}
 	pre_effect = {
 		set_variable = {
-			which = estate_nomadic_tribes_build_up_manpower_reserves_variable
+			which = estate_nobles_build_up_manpower_reserves_variable
 			value = 0
 		}
 		if = {
@@ -2519,7 +2675,7 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 				}
 			}
 			set_variable = {
-				which = estate_nomadic_tribes_build_up_manpower_reserves_variable
+				which = estate_nobles_build_up_manpower_reserves_variable
 				value = 1
 			}
 		}
@@ -2530,13 +2686,13 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 				}
 			}
 			set_variable = {
-				which = estate_nomadic_tribes_build_up_manpower_reserves_variable
+				which = estate_nobles_build_up_manpower_reserves_variable
 				value = 2
 			}
 		}
 		else = {
 			set_variable = {
-				which = estate_nomadic_tribes_build_up_manpower_reserves_variable
+				which = estate_nobles_build_up_manpower_reserves_variable
 				value = 3
 			}
 		}
@@ -2549,7 +2705,7 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 		if = {
 			limit = {
 				check_variable = {
-					which = estate_nomadic_tribes_build_up_manpower_reserves_variable
+					which = estate_nobles_build_up_manpower_reserves_variable
 					value = 3
 				}
 			}
@@ -2558,7 +2714,7 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 		else_if = {
 			limit = {
 				check_variable = {
-					which = estate_nomadic_tribes_build_up_manpower_reserves_variable
+					which = estate_nobles_build_up_manpower_reserves_variable
 					value = 2
 				}
 			}
@@ -2570,7 +2726,7 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
 		generate_scaled_military_advisor_of_religion_effect = {
@@ -2581,9 +2737,11 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -2593,40 +2751,35 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
     }
 }
 
-#Give us 3 privileges
-estate_nomadic_tribes_three_privileges = {
+
+#Recover bad prestige
+estate_nobles_recover_abysmal_prestige = {
 	can_select = {
-		NOT = {
-			num_of_estate_privileges = {
-				estate = estate_nomadic_tribes
-				value = 2
-			}
-		}
+		NOT = { prestige = -30 }
 	}
 	selection_weight = {
-		factor = 1
+		factor = 8
 	}
 	pre_effect = {
 		set_variable = {
-			which = estate_nomadic_tribes_three_privileges_var
+			which = estate_nobles_improve_prestige_var
 			value = 0
 		}
 		if = {
 			limit = {
-				num_of_estate_privileges = {
-					estate = estate_nomadic_tribes
-					value = 1
+				NOT = {
+					prestige = -75
 				}
 			}
 			set_variable = {
-				which = estate_nomadic_tribes_three_privileges_var
-				value = 2
+				which = estate_nobles_improve_prestige_var
+				value = 1
 			}
 		}
 		else = {
 			set_variable = {
-				which = estate_nomadic_tribes_three_privileges_var
-				value = 1
+				which = estate_nobles_improve_prestige_var
+				value = 2
 			}
 		}
 	}
@@ -2634,103 +2787,30 @@ estate_nomadic_tribes_three_privileges = {
 		if = {
 			limit = {
 				check_variable = {
-					which = estate_nomadic_tribes_three_privileges_var
+					which = estate_nobles_improve_prestige_var
 					value = 2
 				}
 			}
-			num_of_estate_privileges = {
-				estate = estate_nomadic_tribes
-				value = 3
-			}
+			prestige = 0
 		}
 		else = {
-			num_of_estate_privileges = {
-				estate = estate_nomadic_tribes
-				value = 2
-			}
+			prestige = -30
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
-			loyalty = 20
-		}
-    }
-    failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
-    }
-}
-
-#Stabilise Country
-estate_nomadic_tribes_recover_stability = {
-	can_select = {
-		NOT = { stability = 0 }
-	}
-	selection_weight = {
-		factor = 2
-		modifier = {
-			factor = 1.5
-			NOT = { stability = -1 }
-		}
-	}
-	task_requirements = {
-		stability = 1
-	}
-    task_completed_effect = {
-		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
-		add_prestige = 10
-    }
+		add_stability_or_adm_power = yes
+	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
+			limit = {
+				ai = no
 			}
-		}
-    }
-}
-
-#Stabilise Country II
-estate_nomadic_tribes_increase_stability = {
-	can_select = {
-		NOT = { stability = 2 }
-		stability = 1
-	}
-	selection_weight = {
-		factor = 1
-	}
-	fail_if = {
-		NOT = { stability = 0 }
-	}
-	task_requirements = {
-		stability = 3
-	}
-    task_completed_effect = {
-		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
-			loyalty = 10
-		}
-		add_prestige = 10
-    }
-    failing_effect = {
-		if = {
-			limit = { ai = no }
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -2740,124 +2820,93 @@ estate_nomadic_tribes_increase_stability = {
 }
 
 
-#Loot X province with at least 12 development ("Despoil X")
-estate_nomadic_tribes_despoil_x = {
+#Get good prestige
+
+estate_nobles_improve_prestige = {
 	can_select = {
-		is_at_war = yes
-		NOT = {
-			is_in_war = {
-				duration = 1825
-			}
-		}
-		any_neighbor_country = {
-			war_with = root
-			any_owned_province = {
-				development = 12
-				is_looted = no
-				continent = root
-				controlled_by = owner
-				area_for_scope_province = {
-					type = all
-					owned_by = prev
-				}
-			}
-		}
-		NOT = { has_country_modifier = agenda_looting_zeal }
+		prestige = -30
+		NOT = { prestige = 20 }
 	}
 	selection_weight = {
 		factor = 2.5
+		modifier = {
+			factor = 2
+			NOT = {
+				prestige = 0
+			}
+		}
 	}
 	pre_effect = {
-		random_neighbor_country = {
+		set_variable = {
+			which = estate_nobles_improve_prestige_var
+			value = 0
+		}
+		if = {
 			limit = {
-				war_with = root
-				any_owned_province = {
-					development = 12
-					is_looted = no
-					continent = root
-					controlled_by = owner
-					area_for_scope_province = {
-						type = all
-						owned_by = prev
-					}
+				NOT = {
+					prestige = -10
 				}
 			}
-			random_owned_province = {
-				limit = {
-					development = 12
-					is_looted = no
-					continent = root
-					controlled_by = owner
-					area_for_scope_province = {
-						type = all
-						owned_by = prev
-					}
-				}
-				save_event_target_as = agenda_province
-			}
-			random_owned_province = {
-				limit = {
-					development = 16
-					is_looted = no
-					continent = root
-					controlled_by = owner
-					area_for_scope_province = {
-						type = all
-						owned_by = prev
-					}
-				}
-				save_event_target_as = agenda_province
-			}
-			random_owned_province = {
-				limit = {
-					development = 20
-					is_looted = no
-					continent = root
-					controlled_by = owner
-					area_for_scope_province = {
-						type = all
-						owned_by = prev
-					}
-				}
-				save_event_target_as = agenda_province
+			set_variable = {
+				which = estate_nobles_improve_prestige_var
+				value = 1
 			}
 		}
-	}
-	provinces_to_highlight = {
-		province_id = event_target:agenda_province
+		else_if = {
+			limit = {
+				NOT = {
+					prestige = 15
+				}
+			}
+			set_variable = {
+				which = estate_nobles_improve_prestige_var
+				value = 2
+			}
+		}
+		else = {
+			set_variable = {
+				which = estate_nobles_improve_prestige_var
+				value = 3
+			}
+		}
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			area_for_scope_province = {
-				type = all
-				is_looted = yes
-			}
-		}
-	}
-	fail_if = {
-		event_target:agenda_province = {
-			owner = {
-				NOT = {
-					war_with = root
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_improve_prestige_var
+					value = 3
 				}
 			}
+			prestige = 50
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nobles_improve_prestige_var
+					value = 2
+				}
+			}
+			prestige = 30
+		}
+		else = {
+			prestige = 10
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
+			estate = estate_nobles
 			loyalty = 10
 		}
-		add_country_modifier = {
-			name = agenda_looting_zeal
-			duration = 3650
-		}
-    }
+		add_adm_power = 50
+	}
     failing_effect = {
 		if = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+			}
 			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
+				estate = estate_nobles
 				desc = EST_VAL_AGENDA_DENIED
 				loyalty = -5
 				duration = 7300
@@ -2865,3 +2914,5 @@ estate_nomadic_tribes_despoil_x = {
 		}
     }
 }
+
+

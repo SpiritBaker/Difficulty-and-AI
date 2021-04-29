@@ -38,6 +38,9 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in p
 --NDefines.NAI.BONUS_ADMIRAL_SCORE_SHIP_COUNT_START = 50
 --NDefines.NAI.REGIMENTS_PER_GENERAL = 15
 --NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 10
+NDefines.NAI.BASE_CAN_MAKE_CORE_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it straight away
+NDefines.NAI.BASE_CAN_MAKE_CORE_IN_AREA_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it soon
+	
 
 NDefines.AI_TOTAL_DEV_CULTURE_MULTIPLIER = 10			-- Multiplier for how much the AI values having much development in accepted cultures.
 --NDefines.AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER = 30	-- Multiplier for how much the AI wants to convert brother cultures in terms of percentage of the nation. Essentially we compare the total dev of the non-promoted culture * AI_TOTAL_DEV_CULTURE_MULTIPLIER with the proportion of dev of the country * AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER and choose the larger of the two as our desire to add an accepted culture.
@@ -164,7 +167,7 @@ NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2 -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
-NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 0.1	-- AI scoring for becoming defender of faith, multiplied by budget/cost
+--NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 0.1	-- AI scoring for becoming defender of faith, multiplied by budget/cost
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
