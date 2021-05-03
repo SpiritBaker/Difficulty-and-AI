@@ -305,6 +305,11 @@ cb_humiliate = {
 		is_revolutionary = no
 	}
 
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_become_vassal
+	}
+
 	war_goal = humiliate
 }
 

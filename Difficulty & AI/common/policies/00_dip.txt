@@ -240,23 +240,23 @@ restrictions_for_colonies = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { colony = 1 }
+			NOT = { num_of_colonies = 1 }
 		}
 		modifier = {
 			factor = 1.25
-			colony = 2
+			num_of_colonies = 2
 		}
 		modifier = {
 			factor = 1.25
-			colony = 3
+			num_of_colonies = 3
 		}			
 		modifier = {
 			factor = 1.25
-			colony = 4
+			num_of_colonies = 4
 		}
 		modifier = {
 			factor = 1.25
-			colony = 5
+			num_of_colonies = 5
 		}
 		modifier = {
 			factor = 0

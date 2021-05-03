@@ -777,7 +777,9 @@ estate_dhimmi_increase_autonomy_in_province_x = {
 				NOT = { has_province_modifier = autonomy_decreased }
 			}
 			save_event_target_as = agenda_province
-
+			choose_random_development_bonus_effect = yes
+		}
+		event_target:agenda_province = {
 			if = {
 				limit = {
 					local_autonomy = 60
@@ -830,7 +832,6 @@ estate_dhimmi_increase_autonomy_in_province_x = {
 					}
 				}
 			}
-			choose_random_development_bonus_effect = yes
 		}
 	}
 	on_invalid = {

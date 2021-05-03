@@ -263,6 +263,7 @@ republic = {
 				veche_republic
 				american_republic
 				federal_republic
+				colonial_government
 				crown_colony_government
 				private_enterprise_colony_government
 				self_governing_colony_government

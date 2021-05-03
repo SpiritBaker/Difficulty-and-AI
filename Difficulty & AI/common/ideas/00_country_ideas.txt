@@ -15858,7 +15858,7 @@ tongan_ideas = { #Credit to James Beaumont
 samoan_ideas = { #Credit to James Beaumont
 	start = {
 		advisor_pool = 1
-		advisor_cost = -0.5
+		same_culture_advisor_cost = -0.25
 	}
 
 	bonus = {
@@ -15871,7 +15871,7 @@ samoan_ideas = { #Credit to James Beaumont
 	free = yes		#will be added at load.
 	
 	samoa_musical = {
-			global_unrest = -2
+		global_unrest = -2
 	}
 	samoa_faa = {
 		administrative_efficiency = 0.05

@@ -4376,7 +4376,8 @@ carribean = {
 }
 
 eskaleut = {
-	graphical_culture = northamericagfx
+	graphical_culture = inuitgfx
+	second_graphical_culture = northamericagfx
 
 	aleutian = {
 		male_names = {
@@ -6561,7 +6562,7 @@ burman = {
 
 pacific = {
 	graphical_culture = polynesiangfx
-	second_graphical_culture = asiangfx
+	second_graphical_culture = northamericagfx
 
 	papuan = {
 		male_names = {
@@ -8703,9 +8704,10 @@ sudanese = {
 }
 
 evenks = {
-	graphical_culture = asiangfx
+	graphical_culture = inuitgfx
+	second_graphical_culture = asiangfx
 	evenk = {
-		graphical_culture = inuitgfx
+		second_graphical_culture = asiangfx
 		primary = SOL
 		dynasty_names = {
 			Badarhan Tabangut 
@@ -8720,7 +8722,6 @@ evenks = {
 		}
 	}
 	yakut = {
-		graphical_culture = inuitgfx
 		dynasty_names = {
 			Badarhan Tabangut 
 		}
@@ -8734,7 +8735,6 @@ evenks = {
 		}
 	}
 	yukagyr = {
-		graphical_culture = inuitgfx
 		primary = HOD
 		dynasty_names = {
 			Uygulaan Khorints
@@ -8749,7 +8749,6 @@ evenks = {
 		}
 	}
 	tungus = {
-		graphical_culture = inuitgfx
 		dynasty_names = {
 			Bulagat Ekhirit Khongodor
 		}
@@ -8764,6 +8763,7 @@ evenks = {
 		}
 	}
 	manchu = {
+		graphical_culture = asiangfx
 		country = { has_banners = 1}
 		province = { local_has_banners = 1}
 		primary = MJZ
@@ -8791,6 +8791,7 @@ evenks = {
 
 kamchatkan_g = {
 	graphical_culture = inuitgfx
+	second_graphical_culture = asiangfx
 	
 	ainu = {
 		primary = ANU

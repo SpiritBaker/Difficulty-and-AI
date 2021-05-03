@@ -1781,14 +1781,14 @@ naval_ideas = {
 
 	bonus = {
 		naval_forcelimit_modifier = 0.25
-		allowed_marine_fraction = 0.05
+		allowed_marine_fraction = 0.1
 	}
 
 	boarding_parties = {
 		leader_naval_shock = 1
 	}
 	improved_rams = {
-		galley_power = 0.15
+		galley_power = 0.25
 	}
 	naval_cadets = {
 		leader_naval_fire = 1
