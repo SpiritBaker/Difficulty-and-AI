@@ -1470,7 +1470,7 @@ JAP_ideas = {
 MAM_ideas = {
 	start = {
 		trade_steering = 0.25
-		cavalry_power = 0.10
+		cavalry_power = 0.15
 	}
 	
 	bonus = {

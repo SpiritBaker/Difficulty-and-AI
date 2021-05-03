@@ -5882,6 +5882,7 @@ jokhang_temple = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
+			#local_development_cost = -0.1
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -5912,10 +5913,12 @@ jokhang_temple = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
+			local_development_cost = -0.10
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
+			#local_tax_modifier = 0.25
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier
@@ -5943,10 +5946,13 @@ jokhang_temple = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
+			local_development_cost = -0.2
+			allowed_num_of_buildings = 1
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
+			#local_tax_modifier = 0.5
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier

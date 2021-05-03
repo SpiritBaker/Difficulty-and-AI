@@ -3,14 +3,8 @@ country_decisions = {
 	construct_kiel_canal = {
 		major = yes
 		potential = {
-			OR = {
-				ai = no
-				AND = {
-					treasury = 20000
-					owns_or_vassal_of = 1775
-					owns_or_vassal_of = 4141
-				}
-			}
+			#owns_or_vassal_of = 1775
+			#owns_or_vassal_of = 4141
 			has_discovered = 1775
 			has_discovered = 4141
 			1775 = {
@@ -61,19 +55,17 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 10000 }
+			}
 		}
 	}
 	
 	construct_suez_canal = {
 		major = yes
 		potential = {
-			OR = {
-				ai = no
-				AND = {
-					treasury = 40000
-					owns_or_vassal_of = 4316
-				}
-			}
+			#owns_or_vassal_of = 4316
 			has_discovered = 4316
 			4316 = {
 				range = ROOT
@@ -112,6 +104,10 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 20000 }
+			}
 		}
 	}
 	
@@ -119,13 +115,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			is_random_new_world = no
-			OR = {
-				ai = no
-				AND = {
-					treasury = 60000
-					owns_or_vassal_of = 835
-				}
-			}
+			#owns_or_vassal_of = 835
 			has_discovered = 835
 			835 = {
 				range = ROOT
@@ -160,6 +150,10 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 30000 }
+			}
 		}
 	}
 
