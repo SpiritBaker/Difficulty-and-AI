@@ -6290,12 +6290,17 @@ estate_jains_build_production_building_in_y = {
 				}
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = estate_jains
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
+		if = {
+			limit = {
+				ai = no
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_jains
+				desc = EST_VAL_AGENDA_DENIED
+				loyalty = -5
+				duration = 7300
+			}
+		}
     }
 }
 
