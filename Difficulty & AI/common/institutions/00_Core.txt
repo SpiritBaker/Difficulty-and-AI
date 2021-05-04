@@ -637,7 +637,7 @@ new_world_i = {
 				continent = europe
 				OR = {
 					owner = { has_idea = quest_for_the_new_world }
-					owner = { colony = 1 }
+					owner = { num_of_colonies = 1 }
 				}
 			}
 			AND = {
@@ -803,7 +803,7 @@ new_world_i = {
 					is_capital = yes
 				}
 				owner = {
-					colony = 1
+					num_of_colonies = 1
 					any_subject_country = {
 						is_colonial_nation = yes
 						OR = {
