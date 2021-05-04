@@ -424,7 +424,7 @@ country_event = {
 	trigger = {
 		ai = yes
 		is_at_war = no
-		primitives = no
+		NOT = { is_migratory_tribe = yes }
 		dip_power = 100
 		any_owned_province = {
 			is_state_core = ROOT
