@@ -6405,7 +6405,6 @@ estate_nobles_build_manufactory_in_y = {
 								trade_goods = silk
 								trade_goods = dyes
 							}
-
 						}
 						has_building = textile
 					}

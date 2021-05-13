@@ -5938,7 +5938,7 @@ east_asian = {	# Chinese Group
 	vietnamese = {
 		primary = DAI
 		dynasty_names = {
-			"Lê" "Tran" "Hau Le" "Mac" "Tay Son" "Nguyen" "Trinh"
+			"Lê" "Tran" "Mac" "Nguyen" "Trinh" "Vu" "Nguyen Phuc" "Nguyen Quang"
 		}
 		male_names = {
 			"An" "Quy Ly" "Han Thuong" "Ngoi" "Quy Khoang" "Loi" "Nguyen Long" "Bang Co" "Nghi Dan" "Tu Thanh" "Tranh" 
@@ -6592,6 +6592,11 @@ pacific = {
 		}
 		female_names = {
 			Aaria Amaia Ana Anahera Aroha Ataahua Awhina Hana Kahurangi Kaia Kara Kora Maia Manaia Manawa Moana Rui Te-Ao Te-Aroha Tia Tui
+		}
+		dynasty_names = {
+			"Ngati Kahu" "Ngati Kuri" "Ngai Takoto" "Whaingaroa" "Muriwhenua" "Ngati Hine" "Ngapuhi" "Ngati Whatua" "Ngati Manuhiri"
+			"Ngati Tamaoho" "Waikato" "Maniapoto" "Ngati Maru" "Ngati Paoa" "Ngai Ta ki Tamaki" "Ngati Tamatera" "Ngati Whanaunga" "Ngati Te Ata"
+			"Ngati Pukenga" "Ngati Te Rangi" "Ngati Toa" "Ngati Makino" "Ngati Pikiao"
 		}
 	}
 	melanesian = {

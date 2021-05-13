@@ -1376,7 +1376,7 @@ quantity_ideas = {
 			army_size = 300
 		}		
 		modifier = {
-			factor = 1.2
+			factor = 1.6
 			is_great_power = yes
 		}
 		modifier = {

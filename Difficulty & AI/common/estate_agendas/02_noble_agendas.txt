@@ -105,6 +105,7 @@ estate_nobles_get_allies = {
 		is_at_war = no
 		num_of_free_diplomatic_relations = 1
 		NOT = { has_country_modifier = foreign_contacts }
+		is_free_or_tributary_trigger = yes
 	}
 	selection_weight = {
 		factor = 1

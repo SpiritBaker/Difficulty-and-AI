@@ -94,7 +94,7 @@ libertas_ecclesiae = {
 
 dei_gratia_rex = {
     modifier = {
-        yearly_absolutism = +0.5
+        yearly_absolutism = 0.5
         unrest_catholic_provinces = -2
         drill_decay_modifier = -0.25
     }

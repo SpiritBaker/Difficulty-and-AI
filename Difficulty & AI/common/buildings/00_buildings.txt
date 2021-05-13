@@ -2738,7 +2738,7 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 3
+		factor = 2.5
 		modifier = { 
 			factor = 0.4
 			NOT = { base_production = 3 }

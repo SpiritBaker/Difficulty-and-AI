@@ -38,9 +38,10 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in p
 --NDefines.NAI.BONUS_ADMIRAL_SCORE_SHIP_COUNT_START = 50
 --NDefines.NAI.REGIMENTS_PER_GENERAL = 15
 --NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 10
-NDefines.NAI.BASE_CAN_MAKE_CORE_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it straight away
-NDefines.NAI.BASE_CAN_MAKE_CORE_IN_AREA_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it soon
-	
+--NDefines.NAI.BASE_CAN_MAKE_CORE_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it straight away
+--NDefines.NAI.BASE_CAN_MAKE_CORE_IN_AREA_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it soon
+NDefines.NAI.GOVERNING_CAPACITY_OVER_PERCENTAGE_TOLERATED = 0.5
+NDefines.NAI.DANGEROUS_OVEREXTENSION_PERCENTAGE = 1	
 
 NDefines.AI_TOTAL_DEV_CULTURE_MULTIPLIER = 10			-- Multiplier for how much the AI values having much development in accepted cultures.
 --NDefines.AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER = 30	-- Multiplier for how much the AI wants to convert brother cultures in terms of percentage of the nation. Essentially we compare the total dev of the non-promoted culture * AI_TOTAL_DEV_CULTURE_MULTIPLIER with the proportion of dev of the country * AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER and choose the larger of the two as our desire to add an accepted culture.
@@ -59,15 +60,15 @@ NDefines.NAI.ARTILLERY_FRACTION = 0.25
 NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16
 NDefines.NAI.TRANSPORT_FRACTION = 0.35
 NDefines.NAI.BIGSHIP_FRACTION = 0.4
---NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on state maintenance
+NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on state maintenance
 --NDefines.NAI.CORRUPTION_BUDGET_FRACTION = 0.25 -- AI will spend a maximum of this fraction of monthly income on rooting out corruption
 NDefines.NAI.COLONY_BUDGET_FRACTION = 0.4
 --NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 20 -- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
 NDefines.NAI.DEVELOPMENT_CAP_MULT = 2
-NDefines.NAI.EDICT_VALUE_THRESHOLD = 20
-NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 2	--Change to above threshold in case of running deficit
-NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 1.5	--Change to above threshold in case of low income
+NDefines.NAI.EDICT_VALUE_THRESHOLD = 10 -- The higher this value, the less the AI will use Edicts
+NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 0	--Change to above threshold in case of running deficit
+NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 0	--Change to above threshold in case of low income
 NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5  --AI will only call in allies in an offensive war if their military power ratio to the enemy is less than this.
 --NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 50	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 
@@ -96,7 +97,9 @@ NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_BASE_FACTOR = 40 -- AI scoring fo
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_NOT_ADJACENT_FACTOR = 0.5 -- AI scoring for fabricating claims if the province is not adjacent
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_HRE_FACTOR = 0.75 -- AI scoring for fabricating claims if both parts are HRE
 --NDefines.NAI.DIPLOMATIC_ACTION_FABRICATE_CLAIM_HRE_EMPEROR_FACTOR = 0.5 -- AI scoring for fabricating claims if province is HRE and they are emperor (does not stack with the above penalty)
-NDefines.NAI.WANT_TRIBUTARY_LOST_MANDATE = 7.5 --How important it is for Celestial Emperor to make tributaries out of neighbors.
+NDefines.NAI.WANT_TRIBUTARY_LOST_MANDATE = 5 --How important it is for Celestial Emperor to make tributaries out of neighbors.
+NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 4	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
+NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_ACCEPTANCE_PER_DEVELOPMENT = -0.75	-- AI scoring for accepting becoming a tributary state per raw development
 
 
 --NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 3
@@ -130,7 +133,7 @@ NDefines.NAI.PEACE_ALLY_WAR_DIRECTION_MULT = 0.5 -- Multiplies PEACE_WAR_DIRECTI
 --NDefines.NAI.PEACE_ALLY_WARGOAL_MULT = 0.25 -- Multiplies PEACE_WARGOAL_FACTOR for allies in a war
 --NDefines.NAI.PEACE_FORCE_BALANCE_FACTOR = 0.2 -- AI willingness to peace based on strength estimation of both sides
 
-NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 3.0 --Max AI desire for humiliating its enemy.
+NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 5.0 --Max AI desire for humiliating its enemy.
 NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 2.0
 NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 1.25	
 NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1.5
@@ -143,16 +146,14 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 0.35	--AI desire for war reparations through peace.
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 1 -- AI only wants war reparations if other country has at least this % of their income
 --NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.05  --AI desire for a province is multiplied by this if it is not on their conquest list.
-NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 10.0 -- AI desire for a province is multiplied by this if it has a core on it
-NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 7.5	--AI desire for a province is multiplied by this if it has a claim on it.
+NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 25.0 -- AI desire for a province is multiplied by this if it has a core on it
+NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 10.0	--AI desire for a province is multiplied by this if it has a claim on it.
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 5.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
 NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 1	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
 NDefines.NAI.PEACE_TERMS_PROVINCE_NOT_ADJACENT_MULT	= 0.25	--AI desire for a province is multiplied by this if it is not adjacent at all (including vassals and other provinces being taken in peace).
 NDefines.NAI.PEACE_TERMS_TAKE_MANDATE_BASE_MULT = 0
 NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 4  --Multiplies with strategic interest of making them our Tributary.
-
-NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 6	--AI scoring for establishing Tributary States is increased by this if actor is Celestial Emperor or has horde government with rank Empire.
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5
@@ -167,7 +168,7 @@ NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2 -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
-NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 5	-- AI scoring for becoming defender of faith, multiplied by budget/cost
+NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 100	-- AI scoring for becoming defender of faith, multiplied by budget/cost
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)

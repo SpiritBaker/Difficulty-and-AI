@@ -48,6 +48,7 @@ monastic_order_reform = {
 	allow_normal_conversion = yes
 	legacy_equivalent = monastic_order_government
 	monastic = yes
+	fixed_rank = 2	
 }
 
 papacy_reform = {
@@ -663,7 +664,7 @@ commander_king_reform = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
-		full_idea_group = aristocracy_ideas
+		full_idea_group = theocracy_gov_ideas
 	}
 	modifiers = {
 		devotion = 0.1

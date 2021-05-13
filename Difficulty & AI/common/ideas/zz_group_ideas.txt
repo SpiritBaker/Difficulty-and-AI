@@ -130,7 +130,13 @@ pirate_ideas = {
 		unjustified_demands = -0.25
 	}
 	trigger = {
-		has_reform = pirate_republic_reform
+		OR = {
+			has_reform = pirate_republic_reform
+			tag = NSS
+			tag = PRY
+			tag = TOR
+			tag = LIB
+		}
 		NOT = { culture_group = maghrebi }
 		NOT = { tag = TET }
 		NOT = { tag = SLE }
@@ -2664,7 +2670,7 @@ maori_ideas = { #Credit to James Beaumont
 		global_sailors_modifier = 0.10
 		range = 0.10
 	}
-	kaikiakitanga = {
+	kaitiakitanga = {
 		tolerance_own = 1
 	}
 	kaumatua = {
@@ -2687,7 +2693,7 @@ maori_ideas = { #Credit to James Beaumont
 
 nw_native_ideas = {
 	start = {
-		development_cost = -0.10
+		land_morale = 0.10
 		heir_chance = 0.5
 	}
 	
@@ -2755,15 +2761,15 @@ plains_native_ideas = {
 	}
 	free = yes
 	
-	bison_hunters = {
-		development_cost = -0.10	
-		land_attrition = -0.10
+	dwellers_of_tipis = {
+		migration_cost = -0.20
 	}
 	bow_archery = {
 		fire_damage = 0.10
 	}
-	dwellers_of_tipis = {
-		migration_cost = -0.20
+	bison_hunters = {
+		development_cost = -0.10	
+		land_attrition = -0.10
 	}
 	peaceful_people = {
 		diplomatic_reputation = 1
@@ -2992,11 +2998,12 @@ fijian_ideas = { #Credit to James Beaumont
 		global_missionary_strength = 0.02
 	}
 	fijian_waqa = {
-		prestige_from_naval = 0.4
+		prestige_from_naval = 1
+		naval_tradition_from_battle = 0.5
 	}
 	fijian_warlords = {
-		army_tradition_from_battle = 0.25
-		prestige_from_land = 0.4
+		army_tradition = 0.5
+		land_morale = 0.1
 	}
 	fijian_kai = {
 		land_attrition = -0.25
@@ -3015,6 +3022,7 @@ hawaiian_ideas = { #Credit to James Beaumont
 
 	bonus = {
 		may_explore = yes
+		global_colonial_growth = 20
 	}
 	
 	trigger = {
@@ -3033,7 +3041,7 @@ hawaiian_ideas = { #Credit to James Beaumont
 		tolerance_own = 2
 	}
 	alii_nui = {
-		legitimacy = 2
+		legitimacy = 1
 	}
 	hula_idea = {
 		prestige = 1
@@ -3047,7 +3055,6 @@ hawaiian_ideas = { #Credit to James Beaumont
 	}
 	naha_prophecy = {
 		core_creation = -0.15
-		enemy_core_creation = 0.25
 	}
 	legendary_voyagers = {
 		range = 0.4

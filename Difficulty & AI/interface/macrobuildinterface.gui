@@ -367,7 +367,7 @@ guiTypes = {
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
 			text = ""	
-			maxWidth = 36
+			maxWidth = 50
 			maxHeight = 20	
 			format = center
 			alwaystransparent = yes

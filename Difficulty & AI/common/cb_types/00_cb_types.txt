@@ -167,7 +167,9 @@ cb_trade_war_triggered = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -188,8 +190,10 @@ cb_trade_conflict = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_form_personal_union
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_transfer_vassals
 	}
 }
@@ -212,7 +216,9 @@ cb_trade_league_conflict = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -308,6 +314,7 @@ cb_humiliate = {
 	attacker_disabled_po = {
 		po_demand_provinces
 		po_become_vassal
+		po_subjugate_vassal
 	}
 
 	war_goal = humiliate
@@ -350,6 +357,7 @@ cb_independence_war = {
 		is_subject_other_than_tributary_trigger = yes
 		is_subject_of = FROM
 		NOT = { is_colonial_nation_of = FROM }
+		NOT = { has_country_flag = burgundy_during_imperial_incident }
 		OR = {
 			AND = {
 				NOT = { has_reform = daimyo }
@@ -865,7 +873,9 @@ cb_trade_war = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -890,7 +900,9 @@ cb_trade_league_dispute = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -1183,7 +1195,9 @@ cb_humiliate_rotw = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -1521,6 +1535,13 @@ cb_native_american_tribal_feud = {
 		}
 	}
 	war_goal = take_native_american_land
+
+	attacker_disabled_po = {
+		po_become_vassal
+		po_subjugate_vassal
+		po_become_tributary_state
+		po_subjugate_tributary_state
+	}
 }
 
 # Burn European Colonies

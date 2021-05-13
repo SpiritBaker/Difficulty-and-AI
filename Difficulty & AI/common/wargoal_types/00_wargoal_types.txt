@@ -21,6 +21,7 @@
 # po_form_personal_union
 # po_gold
 # po_become_vassal
+# po_subjugate_vassal (same as become vassal, but for subjugate CB so it's always available and for a fixed war score)
 # po_concede_defeat
 # po_annul_treaties
 # po_change_government
@@ -234,10 +235,10 @@ take_capital_vassalize = {
 	
 	badboy_factor = 1
 	prestige_factor = 2
-	peace_cost_factor = 0.5
+	peace_cost_factor = 1
 	
 	peace_options = {
-		po_become_vassal
+		po_subjugate_vassal
 	}
 	
 	war_name = VASSAL_MISSION_WAR_NAME
@@ -1710,7 +1711,7 @@ take_capital_force_tributary = {
 	
 	peace_options = {
 		po_become_tributary_state
-		po_become_vassal
+		po_subjugate_vassal
 		po_revoke_cores
 		po_release_vassals
 		po_release_annexed
@@ -1783,13 +1784,13 @@ superiority_reichskrieg = {
 take_capital_vassalize_maj = {
 	type = take_capital
 	
-	badboy_factor = 1
+	badboy_factor = 0.8
 	prestige_factor = 1.5
-	peace_cost_factor = 0.75
+	peace_cost_factor = 0.8
 	
 	peace_options = {
-		po_become_vassal
-		po_become_tributary_state
+		po_subjugate_vassal
+		po_subjugate_tributary_state
 	}
 	
 	war_name = VASSAL_MISSION_WAR_NAME_MAJ
