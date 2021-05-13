@@ -38,10 +38,11 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in p
 --NDefines.NAI.BONUS_ADMIRAL_SCORE_SHIP_COUNT_START = 50
 --NDefines.NAI.REGIMENTS_PER_GENERAL = 15
 --NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 10
+
 --NDefines.NAI.BASE_CAN_MAKE_CORE_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it straight away
 --NDefines.NAI.BASE_CAN_MAKE_CORE_IN_AREA_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it soon
 NDefines.NAI.GOVERNING_CAPACITY_OVER_PERCENTAGE_TOLERATED = 0.5
-NDefines.NAI.DANGEROUS_OVEREXTENSION_PERCENTAGE = 1	
+NDefines.NAI.DANGEROUS_OVEREXTENSION_PERCENTAGE = 0	
 
 NDefines.AI_TOTAL_DEV_CULTURE_MULTIPLIER = 10			-- Multiplier for how much the AI values having much development in accepted cultures.
 --NDefines.AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER = 30	-- Multiplier for how much the AI wants to convert brother cultures in terms of percentage of the nation. Essentially we compare the total dev of the non-promoted culture * AI_TOTAL_DEV_CULTURE_MULTIPLIER with the proportion of dev of the country * AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER and choose the larger of the two as our desire to add an accepted culture.
