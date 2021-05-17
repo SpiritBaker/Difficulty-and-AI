@@ -982,7 +982,7 @@ cb_horde_vs_civ = {
 		}
 		is_nomad = yes
 		is_revolutionary = no
-		ai = no
+		#ai = no
 	}
 
 	war_goal = superiority_horde
@@ -999,7 +999,7 @@ cb_tribal_feud = {
 		}
 		is_neighbor_of = FROM
 		is_revolutionary = no
-		ai = no
+		#ai = no
 	}
 
 	war_goal = take_province_tribal_feud

@@ -67,9 +67,9 @@ NDefines.NAI.COLONY_BUDGET_FRACTION = 0.4
 --NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 20 -- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
 NDefines.NAI.DEVELOPMENT_CAP_MULT = 2
-NDefines.NAI.EDICT_VALUE_THRESHOLD = 10 -- The higher this value, the less the AI will use Edicts
-NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 0	--Change to above threshold in case of running deficit
-NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 0	--Change to above threshold in case of low income
+NDefines.NAI.EDICT_VALUE_THRESHOLD = 20 -- The higher this value, the less the AI will use Edicts
+NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 2	--Change to above threshold in case of running deficit
+NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 1.5	--Change to above threshold in case of low income
 NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5  --AI will only call in allies in an offensive war if their military power ratio to the enemy is less than this.
 --NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 50	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 
@@ -147,8 +147,8 @@ NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_MAX_MULT =	0.5	--Max AI desire mult for
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_BASE_MULT = 0.35	--AI desire for war reparations through peace.
 --NDefines.NAI.PEACE_TERMS_WAR_REPARATIONS_MIN_INCOME_RATIO = 1 -- AI only wants war reparations if other country has at least this % of their income
 --NDefines.NAI.PEACE_TERMS_PROVINCE_NO_INTEREST_MULT = 0.05  --AI desire for a province is multiplied by this if it is not on their conquest list.
-NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 25.0 -- AI desire for a province is multiplied by this if it has a core on it
-NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 10.0	--AI desire for a province is multiplied by this if it has a claim on it.
+NDefines.NAI.PEACE_TERMS_PROVINCE_CORE_MULT = 10.0 -- AI desire for a province is multiplied by this if it has a core on it
+NDefines.NAI.PEACE_TERMS_PROVINCE_CLAIM_MULT = 7.5	--AI desire for a province is multiplied by this if it has a claim on it.
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_HRE_MULT = 5.0 -- AI desire for releasing a country is multiplied by this if both are HRE members
 NDefines.NAI.PEACE_TERMS_CHANGE_GOVERNMENT_BASE_MULT = 100.0 -- only applied if CB is valid for it
 NDefines.NAI.PEACE_TERMS_PROVINCE_OVEREXTENSION_MIN_MULT = 1	--AI desire for a province is multiplied by this if it has 99% overextension (not applied to cores).
@@ -169,7 +169,7 @@ NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2 -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
-NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 100	-- AI scoring for becoming defender of faith, multiplied by budget/cost
+--NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 100	-- AI scoring for becoming defender of faith, multiplied by budget/cost
 
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
