@@ -1,0 +1,32 @@
+edict_protect_trade2 = {
+	potential = {
+		ai = yes		#we support "potential" if modders want to have lots and just show some.
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		province_trade_power_modifier = 0.50
+		local_state_maintenance_modifier = 0.5
+	}
+	
+	color = {  113 11 43 }
+	
+	
+	ai_will_do = {
+		factor = 300
+		
+		modifier = {
+			factor = 0
+			
+			all_province_in_state = {
+				OR = {
+					NOT = { controlled_by = owner }
+					NOT = { province_trade_power = 10 }
+				}
+			}
+		}
+	}
+}

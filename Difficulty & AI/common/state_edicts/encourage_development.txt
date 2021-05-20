@@ -1,4 +1,4 @@
-edict_centralization_effort = {
+edict_encourage_development = {
 	potential = {
 		ai = no		#we support "potential" if modders want to have lots and just show some.
 	}
@@ -8,10 +8,10 @@ edict_centralization_effort = {
 	}
 	
 	modifier = {
-		local_autonomy = -0.03
+		local_development_cost = -0.1
 	}
 	
-	color = {  220 178 155 }
+	color = {  244 184 12  }
 	
 	
 	ai_will_do = {
