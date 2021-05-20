@@ -1,0 +1,19 @@
+edict_religious_unity = {
+	potential = {
+		ai = no		#we support "potential" if modders want to have lots and just show some.
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_missionary_strength = 0.01
+	}
+	
+	color = { 117 38 143 }
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

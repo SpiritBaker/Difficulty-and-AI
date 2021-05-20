@@ -1,0 +1,20 @@
+edict_protect_trade = {
+	potential = {
+		ai = no		#we support "potential" if modders want to have lots and just show some.
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		province_trade_power_modifier = 0.50
+	}
+	
+	color = {  113 11 43 }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -1,0 +1,20 @@
+edict_promote_military_recruitment = {
+	potential = {
+		ai = no		#we support "potential" if modders want to have lots and just show some.
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_manpower_modifier = 0.25
+	}
+	
+	color = {  188 90 27  }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
