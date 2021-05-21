@@ -620,6 +620,8 @@ tributary_state = {
 				}
 				AND = {
 					ai = yes
+					num_of_cities = 10
+					government_rank = 2
 					NOT = { has_reform = celestial_empire }
 					NOT = { 
 						primary_culture = manchu
@@ -665,6 +667,7 @@ tributary_state = {
 	overlord_can_fabricate_for = no
 	does_overlord_size_count_for_warscore_cost = no
 	can_concentrate_development = no
+	gets_help_with_rebels = no							# Only for AI. Bidirectional.	
 	
 	liberty_desire_development_ratio = 0.175
 	trust_on_start = 0
