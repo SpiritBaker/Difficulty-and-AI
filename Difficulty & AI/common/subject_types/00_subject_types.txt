@@ -624,6 +624,7 @@ tributary_state = {
 					NOT = { 
 						primary_culture = manchu
 						primary_culture = manchu_new
+						culture_group = east_asian
 				 	}
 					OR = {
 						is_nomad = yes
