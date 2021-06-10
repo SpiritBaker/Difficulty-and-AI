@@ -146,36 +146,50 @@ country_event = {
 		release = event_target:cc0
 		
 		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { is_capital = yes }
+					any_neighbor_province = {
+						owned_by = event_target:cc0
+					}
+				}
+				cede_province = event_target:cc0
+				add_core = event_target:cc0
+			}
 			event_target:cc0 = {
 				every_owned_province = {
 					add_core = ROOT
 				}
+				every_neighbor_country = {
+					add_truce_with = PREV
+				}
+			}
+			
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					is_capital = no
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					leader = upstart_pretender
+					size = 1
+					win = yes
+				}
+				add_local_autonomy = 25
+				
+				save_event_target_as = rebel_province
 			}
 		}
 		
-		random_owned_province = {
-			limit = {
-				is_core = ROOT
-				is_capital = no
-			}
-			spawn_rebels = {
-				type = pretender_rebels
-				leader = upstart_pretender
-				size = 1
-				win = yes
-			}
-			add_local_autonomy = 25
-
-			hidden_effect = { save_event_target_as = rebel_province }
-		}
 		set_country_flag = had_civil_war
 	}
-	
 	
 	option = {
 		name = "EVTOPTA3091"			# Crush them!
 		add_prestige = -10
 	}
+	
 	after = {
 		clear_saved_name = upstart_pretender
 	}
