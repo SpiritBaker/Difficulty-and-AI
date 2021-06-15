@@ -143,28 +143,37 @@ country_event = {
 			}
 		}
 		
-		release = event_target:cc0
-		
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					NOT = { is_capital = yes }
-					any_neighbor_province = {
-						owned_by = event_target:cc0
-					}
-				}
-				cede_province = event_target:cc0
-				add_core = event_target:cc0
-			}
-			event_target:cc0 = {
-				every_owned_province = {
-					add_core = ROOT
-				}
-				every_neighbor_country = {
-					add_truce_with = PREV
-				}
+		if = {
+			limit = {
+				has_saved_event_target = cc0
 			}
 			
+			hidden_effect = {
+				release = event_target:cc0
+				
+				random_owned_province = {
+					limit = {
+						NOT = { is_capital = yes }
+						any_neighbor_province = {
+							owned_by = event_target:cc0
+						}
+					}
+					cede_province = event_target:cc0
+					add_core = event_target:cc0
+				}
+				event_target:cc0 = {
+					every_owned_province = {
+						add_core = ROOT
+					}
+					every_neighbor_country = {
+						add_truce_with = PREV
+					}
+				}
+			}
+		}
+		
+		
+		hidden_effect = {
 			random_owned_province = {
 				limit = {
 					is_core = ROOT
@@ -217,134 +226,6 @@ country_event = {
 		add_stability = 3
 	}
 }
-
-country_event = {
-	id = steppe_civil_war.200
-	title = "EVTNAME3096"
-	desc = "EVTDESC3096"
-	picture = ANGRY_MOB_eventPicture
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			set_variable = {
-				pDev = 0
-			}
-			set_variable = {
-				cc1 = 0
-			}
-			set_variable = {
-				cc2 = 0
-			}
-			set_variable = {
-				cc3 = 0
-			}
-			
-			every_owned_province = {
-				limit = {
-					is_capital = no
-				}
-				ROOT = {
-					export_to_variable = {
-						which = pDev
-						value = development
-						who = PREV
-					}
-				}
-				every_core_country = {
-					limit = {
-						exists = no
-					}
-					if = {
-						limit = {
-							OR = {
-								NOT = { has_saved_event_target = cc1 }
-								tag = event_target:cc1
-							}
-						}
-						save_event_target_as = cc1
-						ROOT = {
-							change_variable = {
-								which = cc1
-								which = pDev
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							OR = {
-								NOT = { has_saved_event_target = cc2 }
-								tag = event_target:cc2
-							}
-						}
-						save_event_target_as = cc2
-						ROOT = {
-							change_variable = {
-								which = cc2
-								which = pDev
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							OR = {
-								NOT = { has_saved_event_target = cc3 }
-								tag = event_target:cc3
-							}
-						}
-						save_event_target_as = cc3
-						ROOT = {
-							change_variable = {
-								which = cc3
-								which = pDev
-							}
-						}
-					}
-				}
-			}
-			
-			if = {
-				limit = {
-					check_variable = {
-						which = cc3
-						which = cc1
-					}
-					check_variable = {
-						which = cc2
-						which = cc1
-					}
-				}
-				event_target:cc1 = {
-					save_event_target_as = cc0
-				}
-			}
-			else_if = {
-				limit = {
-					check_variable = {
-						which = cc3
-						which = cc2
-					}
-				}
-				event_target:cc2 = {
-					save_event_target_as = cc0
-				}
-			}
-			else = {
-				event_target:cc3 = {
-					save_event_target_as = cc0
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA3096"
-		
-		release = event_target:cc0
-	}
-}
-
 
 # A cry for help
 country_event = {

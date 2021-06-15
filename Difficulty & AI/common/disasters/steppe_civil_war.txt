@@ -59,6 +59,7 @@ steppe_civil_war = {
 	
 	modifier = {
 		global_unrest = 1
+		reduced_liberty_desire = -15
 	}
 	
 	on_start = steppe_civil_war.1
