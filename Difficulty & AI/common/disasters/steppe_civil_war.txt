@@ -1,0 +1,88 @@
+steppe_civil_war = {
+	potential = {
+		total_development = 100
+		any_owned_province = {
+			any_core_country = {
+				exists = no
+			}
+			is_capital = no
+		}
+		has_government_attribute = nomad
+		is_free_or_tributary_trigger = yes
+		NOT = { has_ruler_flag = steppe_civil_war }
+	}
+	
+	can_start = {
+		has_any_disaster = no
+		has_regency = no
+		NOT = { months_of_ruling = 120 }
+	}
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			has_regency = yes
+			months_of_ruling = 120
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2
+			is_at_war = no
+		}
+		modifier = {
+			factor = 1
+			NOT = { ADM = 1 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { DIP = 1 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { MIL = 1 }
+		}
+		modifier = {
+			factor = 1
+			overextension_percentage = 0.10
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 0 }
+		}
+	}
+	
+	can_end = {
+		NOT = { has_spawned_rebels = pretender_rebels }
+	}
+	
+	modifier = {
+		global_unrest = 1
+		reduced_liberty_desire = -15
+	}
+	
+	on_start = steppe_civil_war.1
+	on_end = steppe_civil_war.100
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1000 = 0
+			100 = steppe_civil_war.2
+			100 = steppe_civil_war.3
+			100 = steppe_civil_war.5
+			100 = steppe_civil_war.6
+			100 = steppe_civil_war.7
+			100 = steppe_civil_war.8
+			100 = steppe_civil_war.9
+			100 = steppe_civil_war.10
+			100 = steppe_civil_war.11
+			100 = steppe_civil_war.12
+			100 = steppe_civil_war.13
+		
+		}
+	}
+}
+
