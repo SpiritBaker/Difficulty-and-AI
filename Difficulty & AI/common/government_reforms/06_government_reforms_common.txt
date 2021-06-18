@@ -66,9 +66,9 @@ parliamentary_reform = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-	}
-	custom_attributes = {
-		blocked_call_diet = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 	ai = {
 		factor = 1
@@ -96,10 +96,6 @@ parliamentary_reform = {
 	}
 	post_removed_effect = {
 		give_estate_land_share_init = { estate = estate_nobles }
-	}
-
-	custom_attributes = {
-		blocked_call_diet = yes
 	}
 }
 

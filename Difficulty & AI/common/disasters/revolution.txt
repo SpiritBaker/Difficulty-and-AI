@@ -3,17 +3,16 @@ revolution = {
 	potential = {
 		NOT = { has_country_flag = had_revolution }
 		NOT = { tag = PAP }
-		NOT = { tag = FRA }
 		OR = {
-			government = monarchy
-			has_reform = ottoman_government # Not a monarhy for some reason 
-			revolution_spread = 0.5
+			NOT = { government = monarchy }
+			NOT = { tag = FRA }
 		}
-		#NOT = { has_reform = celestial_empire }
+		NOT = { has_reform = celestial_empire }
 		is_free_or_tributary_trigger = yes
 		uses_doom = no
 		current_age = age_of_revolutions
 		is_revolutionary = no
+
 		if = {
 			limit = {
 				has_dlc = "Emperor"
@@ -38,6 +37,7 @@ revolution = {
 	
 	
 	can_start = {
+		current_age = age_of_revolutions
 		has_any_disaster = no
 		OR = {
 			incompetent_monarch = yes

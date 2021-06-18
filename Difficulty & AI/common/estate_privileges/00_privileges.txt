@@ -8055,7 +8055,7 @@ estate_church_karma_temples = {
 		OR = {
 			religion = buddhism
 			religion = mahayana
-			religion = theravada
+			religion = vajrayana
 		}
 	}
 	can_select = {

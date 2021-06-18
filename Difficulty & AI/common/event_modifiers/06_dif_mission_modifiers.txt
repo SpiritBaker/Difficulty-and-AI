@@ -48,3 +48,6 @@ reconquest_of_xian = {
 reconquest_of_luoyang = {
 	imperial_mandate = 0.05
 }
+esen_taishi = {
+ reduced_liberty_desire = 20
+}

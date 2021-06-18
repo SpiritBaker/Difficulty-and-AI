@@ -1742,10 +1742,6 @@ stora_kopparberget_modifier = { #Great Copper Mountain
 	trade_goods_size = 5.0
 }
 
-cerro_rico_modifier = { #Mountain of Riches - Potosí Silver Mines
-	trade_goods_size = 3.0
-}
-
 spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for a large portion of the worlds spices
 	trade_goods_size = 3.0
 }
@@ -6397,6 +6393,7 @@ royal_fires_modifier = {
 	prestige = 0.5
 	legitimacy = 0.5
 	devotion = 0.5
+	manpower_in_true_faith_provinces= 0.2
 	religion = yes
 }
 
@@ -11590,11 +11587,11 @@ honour_pole = {
 }
 
 travois_no_dogs = {
-	#migration_cost = 1 TODO
+	migration_cost = -0.1
 }
 
 travois_no_horses = {
-	#migration_cost = 1 TODO
+	migration_cost = -0.1
 }
 
 lovely_place = {
@@ -11789,8 +11786,17 @@ miraculous_colony = {
 
 # Monuments
 
+monumental_pride = {
+	stability_cost_modifier = -0.1
+}
+
 monument_boost = {
 	great_project_upgrade_cost = -0.25
+}
+
+monument_church_of_the_people = {
+	tolerance_own = 1
+	global_unrest = -1
 }
 
 shwedagon_pilgrimage = {

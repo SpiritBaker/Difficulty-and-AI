@@ -1190,9 +1190,10 @@ naval_battery = {
 # Tier 3, 17th Century Buildings
 ################################################
 cathedral = {
+	make_obsolete = temple
+
 	cost = 300
 	time = 12
-	make_obsolete = temple
 	modifier = {
 		local_missionary_strength = 0.03
 		local_tax_modifier = 0.6
@@ -2182,7 +2183,7 @@ drydock = {
 		has_port = yes
 	}
 	modifier = {
-		local_sailors_modifier = 1
+		local_sailors_modifier = 1.0
 	}
 	
 	on_built = {
@@ -3105,9 +3106,13 @@ impressment_offices = {
 	#}
 	modifier = {
 		local_sailors = 250
+		ship_recruit_speed = -0.1
+		local_ship_cost = -0.05
 	}
 	bonus_modifier = {
 		local_sailors = 250
+		ship_recruit_speed = -0.1
+		local_ship_cost = -0.05
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -3205,6 +3210,7 @@ state_house = {
 
 	modifier = {
 		statewide_governing_cost = -0.25
+		
 		min_local_autonomy = -5
 	}
 	#bonus_modifier = {
