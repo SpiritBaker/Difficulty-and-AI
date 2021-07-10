@@ -112,12 +112,12 @@ on_hre_wins_defensive_war = {
 	add_imperial_influence = 5
 }
 
-on_general_recruited = {
-	add_army_professionalism = 0.005
-}
+#on_general_recruited = {
+#	add_army_professionalism = 0.005
+#}
 
-on_mercenary_recruited = {
-	FROM = {
-		add_army_professionalism = -0.025
-	}
-}
+#on_mercenary_recruited = {
+#	FROM = {
+#		add_army_professionalism = -0.025
+#	}
+#}

@@ -157,7 +157,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {		# No let us marry a local talent instead
 		name = "flavor_spa.EVTOPTB3716"
 		ai_chance = { factor = 0 }

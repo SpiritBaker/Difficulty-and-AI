@@ -315,6 +315,10 @@ interaction = {
 						loyalty = 30
 					}
 				}
+				estate_influence = {
+					estate = all
+					influence = 1
+				}				
 			}
 			spawn_rebels_seize_land_switch = yes
 		}

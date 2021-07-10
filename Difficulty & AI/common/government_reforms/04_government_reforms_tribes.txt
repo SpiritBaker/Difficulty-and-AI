@@ -318,7 +318,7 @@ horde_barbaric_despoilers_reform = {
 		has_dlc = "The Cossacks"
 	}
 	modifiers = {
-		raze_power_gain = 0.33
+		raze_power_gain = 0.25
 		
 	}
 	ai = {

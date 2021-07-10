@@ -363,3 +363,16 @@ luck = {
 	ae_impact = -0.1
 
 }
+
+in_capital_state = {
+	local_institution_spread = 0.05
+	local_state_maintenance_modifier = -0.25
+	local_governing_cost = -0.25
+}
+
+expanded_infrastructure = {
+	allowed_num_of_buildings = 1
+	allowed_num_of_manufactories = 1
+	local_governing_cost_increase = 50
+	local_governing_cost = 0.25
+}

@@ -1456,7 +1456,7 @@ to_the_ground_policy = {
 		full_idea_group = horde_gov_ideas
 	}
 	
-	raze_power_gain = 0.33
+	raze_power_gain = 0.25
 	horde_unity = 1
 	
 	ai_will_do = {

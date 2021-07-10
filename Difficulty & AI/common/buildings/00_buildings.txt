@@ -268,6 +268,7 @@ temple = {
 	time = 12
 	modifier = {
 		local_tax_modifier = 0.4
+		local_governing_cost = -0.05
 	}
 	
 	on_built = {
@@ -328,7 +329,7 @@ temple = {
 	}
 	
 	ai_will_do = {
-		factor = 5
+		factor = 5.5
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -415,7 +416,7 @@ barracks = {
 	}
 
 	ai_will_do = {
-		factor = 5
+		factor = 5.5
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -767,7 +768,7 @@ courthouse = {
 			NOT = { is_state = yes }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			area_for_scope_province = {
 				owner = { tag = ROOT }
 				is_capital = yes
@@ -790,54 +791,24 @@ courthouse = {
 			development = 40
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 10 }
+			factor = 0.5
+			FROM = {
+				NOT = {
+					governing_capacity_percentage = 0.5
+				}
+			}
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 15 }
+			factor = 2
+			FROM = { governing_capacity_percentage = 0.8 }
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 20 }
-		}
-		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 25 }
-		}
-		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 30 }
+			factor = 3
+			FROM = { governing_capacity_percentage = 1 }
 		}
 		modifier = {
 			factor = 5
-			FROM = { 
-				num_of_owned_provinces_with = {
-					value = 5
-					
-					NOT = { is_state_core = FROM  }
-					is_territorial_core = FROM 
-					is_owned_by_trade_company = no
-					is_overseas = no
-					NOT = { has_construction = core }
-				}
-			}
-		}
-		modifier = {
-			factor = 0.75
-			NOT = {
-				FROM = { 
-					num_of_owned_provinces_with = {
-						value = 3
-						
-						NOT = { is_state_core = FROM  }
-						is_territorial_core = FROM 
-						is_owned_by_trade_company = no
-						is_overseas = no
-						NOT = { has_construction = core }
-					}
-				}
-			}
+			FROM = { governing_capacity_percentage = 1.1 }
 		}
 		modifier = {
 			factor = 0
@@ -982,7 +953,7 @@ regimental_camp = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 0.8
+			factor = 1
 			has_port = yes
 		}
 		modifier = {
@@ -1197,6 +1168,7 @@ cathedral = {
 	modifier = {
 		local_missionary_strength = 0.03
 		local_tax_modifier = 0.6
+		local_governing_cost = -0.10
 	}
 	
 	on_built = {
@@ -1257,7 +1229,7 @@ cathedral = {
 	}
 	
 	ai_will_do = {
-		factor = 5
+		factor = 5.5
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -1648,7 +1620,7 @@ training_fields = {
 	}
 
 	ai_will_do = {
-		factor = 5
+		factor = 5.5
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -2082,7 +2054,7 @@ town_hall = {
 			NOT = { is_state = yes }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			area_for_scope_province = {
 				owner = { tag = ROOT }
 				is_capital = yes
@@ -2105,50 +2077,24 @@ town_hall = {
 			development = 40
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 15 }
+			factor = 0.5
+			FROM = {
+				NOT = {
+					governing_capacity_percentage = 0.5
+				}
+			}
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 20 }
+			factor = 2
+			FROM = { governing_capacity_percentage = 0.8 }
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 25 }
-		}
-		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 30 }
+			factor = 3
+			FROM = { governing_capacity_percentage = 1 }
 		}
 		modifier = {
 			factor = 5
-			FROM = { 
-				num_of_owned_provinces_with = {
-					value = 5
-					
-					NOT = { is_state_core = FROM  }
-					is_territorial_core = FROM 
-					is_owned_by_trade_company = no
-					is_overseas = no
-					NOT = { has_construction = core }
-				}
-			}
-		}
-		modifier = {
-			factor = 0.75
-			NOT = {
-				FROM = { 
-					num_of_owned_provinces_with = {
-						value = 3
-						
-						NOT = { is_state_core = FROM  }
-						is_territorial_core = FROM 
-						is_owned_by_trade_company = no
-						is_overseas = no
-						NOT = { has_construction = core }
-					}
-				}
-			}
+			FROM = { governing_capacity_percentage = 1.1 }
 		}
 		modifier = {
 			factor = 0
@@ -2297,7 +2243,7 @@ conscription_center = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 0.8
+			factor = 1
 			has_port = yes
 		}
 		modifier = {
@@ -2739,7 +2685,7 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 2.5
+		factor = 2
 		modifier = { 
 			factor = 0.4
 			NOT = { base_production = 3 }
@@ -3011,7 +2957,7 @@ soldier_households = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 7.5
+		factor = 8.5
 		modifier = {
 			factor = 0
 			NOT = {
@@ -3239,36 +3185,24 @@ state_house = {
 			is_owned_by_trade_company = yes
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 10 }
+			factor = 0.5
+			FROM = {
+				NOT = {
+					governing_capacity_percentage = 0.5
+				}
+			}
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 15 }
+			factor = 2
+			FROM = { governing_capacity_percentage = 0.8 }
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 20 }
+			factor = 3
+			FROM = { governing_capacity_percentage = 1 }
 		}
 		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 25 }
-		}
-		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 30 }
-		}
-		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 35 }
-		}
-		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 40 }
-		}
-		modifier = {
-			factor = 1.2
-			FROM = { num_of_states = 50 }
+			factor = 5
+			FROM = { governing_capacity_percentage = 1.1 }
 		}
 		modifier = {
 			factor = 5
@@ -3282,37 +3216,6 @@ state_house = {
 		modifier = {
 			factor = 2
 			development = 20
-		}
-		modifier = {
-			factor = 5
-			FROM = { 
-				num_of_owned_provinces_with = {
-					value = 5
-					
-					NOT = { is_state_core = FROM  }
-					is_territorial_core = FROM 
-					is_owned_by_trade_company = no
-					is_overseas = no
-					NOT = { has_construction = core }
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			is_owned_by_trade_company = no
-			NOT = {
-				FROM = { 
-					num_of_owned_provinces_with = {
-						value = 3
-						
-						NOT = { is_state_core = FROM  }
-						is_territorial_core = FROM 
-						is_owned_by_trade_company = no
-						is_overseas = no
-						NOT = { has_construction = core }
-					}
-				}
-			}
 		}
 		modifier = {
 			factor = 0.1

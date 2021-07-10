@@ -735,7 +735,10 @@ feudal_theocracy = {
 					religion_group = muslim
 					religion_group = zoroastrian_group
 				}
-				has_reform = feudal_theocracy
+				OR = {
+					has_reform = feudal_theocracy
+					have_had_reform = feudal_theocracy
+				}
 			}
 			AND = {
 				is_playing_custom_nation = yes

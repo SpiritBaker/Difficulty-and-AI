@@ -12,3 +12,23 @@ opposed_unification = {
 	opinion = -100
 	yearly_decay = 2
 }
+
+aggressive_expansion = {
+    opinion = -1
+    months = 0
+    yearly_decay = 2
+    min = -100
+}
+
+hre_province_left = {
+    opinion = -50
+    yearly_decay = 2
+    min = -100
+}
+
+opinion_annex_vassal = {
+    opinion = -30
+    years = 20
+    yearly_decay = 1
+    min = -100
+}

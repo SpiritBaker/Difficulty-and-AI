@@ -441,11 +441,6 @@ age_of_reformation = {
 		}
 	
 	}
-	
-	
-	
-
-	
 }
 
 
