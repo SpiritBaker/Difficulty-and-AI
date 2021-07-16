@@ -79,7 +79,8 @@
  steppe_mountains_desc:0 "Steppe Mountains terrain represents areas rugged mountain ranges and narrow passes that are surrounded by steppes."
  oasis:0 "Oasis"
  oasis_desc:0 "Oasis terrain represents fertile areas of freshwater surrounded by desert or semi-desert areas."
-
+ himalayas:0 "The Himalayas"
+ himalayas_desc:0 "The Himalayas mountain range represents areas in extreme elevation, with little vegetation and harsh climate."
 
 
  #County Ideas
@@ -405,9 +406,15 @@
 
 
  #Rebels
- #shun_rebels_name:0 "Shun Rebels"
- #shun_rebels_desc:0 "Shun Rebels"
- #shun_rebels_army:0 "Shun Rebels"
+ chinese_peasant_rebels_name:0 "Peasant Rebels"
+ chinese_peasant_rebels_desc:0 "Peasant Rebels"
+ chinese_peasant_rebels_army:0 "Peasant Rebels"
+
+ #Vassals 
+ warlord_vassal_title:0 "Warlord"
+ warlord_vassal_title_plural:0 "Warlords"
+ warlord_vassal_long_desc:0 "A Warlord subject must follow their overlord to war, cannot make certain diplomatic actions and will pay a fraction of his income to his overlord. Warlords can also fight each other and Declare external ofensive wars."
+ warlord_vassal_is_our:0 "$NAME|Y$ is our Warlord Vassal."
 
  #Opinion modifiers
  opposed_unification:0 "Opposed Unification"

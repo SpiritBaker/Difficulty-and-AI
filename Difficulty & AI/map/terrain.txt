@@ -334,7 +334,7 @@ categories =  {
 			808 814 2825 #South America
 			452 2073 #Tibet
 			1078
-			4198 4201 4205 4210 4214 4216 4211 4222 #Greater China
+			4198 4201 4210 4214 4216 4211 4222 #Greater China
 			
 			1787 1788
 			
@@ -355,7 +355,7 @@ categories =  {
 
 			680 689 693 694 697 702 2136 2169 2177 2178 2179 2180 2181 
 			716 718 719 1066 2189  739 2125 2127 
-			565 676 677 2129 2130
+			 2129
 			
 			2103 1048 729 1850 2108 222 223
 			732 734 2743 4232 #Korea
@@ -368,7 +368,7 @@ categories =  {
 			
 			4348
 			4404 # Burma
-			4514 4515 4516 4517 4518 4519 4520 4521 #tibet
+		
 			4546 # new provinces 1.28
 			829 
 			4601 4602 #new provinces 1.28 mesoamerica
@@ -377,7 +377,7 @@ categories =  {
 			# 1.30
 			4750 4754
 
-			436 4345 2074 2128
+			436 4345 
 		}
 	}
 
@@ -720,6 +720,7 @@ categories =  {
 			4561 4553 # new provinces 1.28
 			4701 4699 4780 # 1.30 Greece and Bulgaria
 			2223 4330 4329 4579 4649 # DIf&AI 
+			4518 4519 4205 2130 677 #DIf&AI tibet
 		}
 	}
 
@@ -950,6 +951,24 @@ categories =  {
 			2327 380 383
 			384 386 390 2332  4280 4281 4282 #Hejaz Range
 			878 880 2491 2494 2495 4631 4632 4634 #New World
+		}
+	}
+
+	himalayas = {
+		color = { 207 207 207 }		
+
+		type = mountain
+		sound_type = mountain
+
+		movement_cost = 2
+		defence = 2
+		local_defensiveness = 0.4
+		local_development_cost = 0.6
+		nation_designer_cost_multiplier = 0.6		
+		supply_limit = 3
+
+		terrain_override = {
+			4521 2074 4520 2128 4514 4515 4516 4517 676 565 4481 4482 
 		}
 	}
 

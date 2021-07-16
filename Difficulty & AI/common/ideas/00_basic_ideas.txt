@@ -205,6 +205,7 @@ horde_gov_ideas = {
 	}
 	
 	horse_lords = {
+		#cav_to_inf_ratio = 0.10
 		cavalry_cost = -0.2
 	}
 	beyond_the_sun = {
@@ -228,7 +229,7 @@ horde_gov_ideas = {
 	}
 	
 	ai_will_do = {
-		factor = 20
+		factor = 25
 	}
 }
 
@@ -631,7 +632,7 @@ offensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.6
 
 		modifier = {
 			factor = 1.5
@@ -702,7 +703,7 @@ defensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.6
 
 		modifier = {
 			factor = 1.5
@@ -746,6 +747,7 @@ defensive_ideas = {
 					has_terrain = mountain
 					has_terrain = hills
 					has_terrain = highlands
+					has_terrain = himalayas
 				}
 			}  
 		}
@@ -1284,7 +1286,7 @@ quality_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.6
 		modifier = {
 			factor = 1.5
 			OR = {
@@ -1361,7 +1363,7 @@ quantity_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.6
 
 		modifier = {
 			factor = 1.2

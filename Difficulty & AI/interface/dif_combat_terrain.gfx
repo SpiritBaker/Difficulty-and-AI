@@ -23,4 +23,8 @@ spriteTypes = {
 		name = "GFX_combat_terrain_floodplains"
 		texturefile = "gfx/interface/floodplains.dds"
 	}
+	spriteType = {
+		name = "GFX_combat_terrain_himalayas"
+		texturefile = "gfx/interface/himalayas.dds"
+	}
 }

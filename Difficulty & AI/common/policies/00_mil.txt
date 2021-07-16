@@ -836,6 +836,7 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
+	cavalry_flanking = 0.5
 	cavalry_power = 0.10
 	
 	ai_will_do = {
@@ -1014,35 +1015,23 @@ war_horses_policy = {
 	monarch_power = MIL
 
 	potential = {
+		has_idea_group = administrative_ideas
 		has_idea_group = horde_gov_ideas
-		has_idea_group = expansion_ideas
 	}
 	
 	allow = {
+		full_idea_group = administrative_ideas
 		full_idea_group = horde_gov_ideas
-		full_idea_group = expansion_ideas
 	}
 
 	army_tradition = 0.5
 	shock_damage = 0.1
 	
 	ai_will_do = {
-		factor = 0.75
-		modifier = {
-			factor = 0
-			NOT = { army_tradition = 2 }
-		}			
+		factor = 10
 		modifier = {
 			factor = 1.5
-			army_tradition = 30
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 50
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 80
+			is_at_war = yes
 		}
 	}
 }
@@ -1060,11 +1049,11 @@ the_best_defense_policy = {
 		full_idea_group = innovativeness_ideas
 	}
 
-	shock_damage_received = -0.05
-	fire_damage_received = -0.05
+	movement_speed = 0.10
+	fire_damage_received = -0.1
 	
 	ai_will_do = {
-		factor = 1.0
+		factor = 10
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
@@ -1241,7 +1230,7 @@ psychological_warfare_policy = {
 	ai_will_do = {
 		factor = 1.0
 		modifier = {
-			factor = 1.5
+			factor = 5
 			is_at_war = yes
 		}
 	}

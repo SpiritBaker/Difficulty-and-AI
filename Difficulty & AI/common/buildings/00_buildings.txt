@@ -24,21 +24,6 @@
 # AI will consider each building to be worth 0.01 ducats per year as a base, so making ai_will_do above cost will have them build it at some point.
 # It will still check whether it can afford a building before doing so though, but may save up to it.
 
-###############
-#Sometimes has_building = manufactory doesn't work
-#OR = { 
-#	has_building = mills
-#	has_building = farm_estate
-#	has_building = tradecompany
-#	has_building = plantations
-#	has_building = textile
-#	has_building = weapons
-#	has_building = wharf
-#	has_building = furnace 
-#}
-
-
-
 ################################################
 # Tier 1, 15th Century Buildings
 ################################################
@@ -148,7 +133,7 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 5
+		factor = 5.25
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -267,8 +252,8 @@ temple = {
 	cost = 100
 	time = 12
 	modifier = {
+		#local_governing_cost = -0.05
 		local_tax_modifier = 0.4
-		local_governing_cost = -0.05
 	}
 	
 	on_built = {
@@ -329,7 +314,7 @@ temple = {
 	}
 	
 	ai_will_do = {
-		factor = 5.5
+		factor = 5.25
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -416,7 +401,7 @@ barracks = {
 	}
 
 	ai_will_do = {
-		factor = 5.5
+		factor = 6.5
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -515,7 +500,7 @@ shipyard = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
+		factor = 0.4
 		modifier = {
 			factor = 1.2
 			NOT = { has_owner_accepted_culture = yes }
@@ -683,6 +668,10 @@ fort_15th = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
 			}
+		}
+		modifier = {
+			factor = 4
+			has_terrain = himalayas
 		}
 		modifier = {
 			factor = 1.25
@@ -953,10 +942,6 @@ regimental_camp = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 1
-			has_port = yes
-		}
-		modifier = {
 			factor = 1.2
 			NOT = { development = 10 }
 		}
@@ -1095,6 +1080,10 @@ fort_16th = {
 			}
 		}
 		modifier = {
+			factor = 4
+			has_terrain = himalayas
+		}
+		modifier = {
 			factor = 1.25
 			OR = {
 				has_province_modifier = arid
@@ -1166,9 +1155,9 @@ cathedral = {
 	cost = 300
 	time = 12
 	modifier = {
+		#local_governing_cost = -0.10
 		local_missionary_strength = 0.03
 		local_tax_modifier = 0.6
-		local_governing_cost = -0.10
 	}
 	
 	on_built = {
@@ -1229,7 +1218,7 @@ cathedral = {
 	}
 	
 	ai_will_do = {
-		factor = 5.5
+		factor = 5.25
 		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
@@ -1501,7 +1490,7 @@ grand_shipyard = {
 	}
 	
 	ai_will_do = {
-		factor = 0.5
+		factor = 0.4
 		modifier = {
 			factor = 1.2
 			NOT = { has_owner_accepted_culture = yes }
@@ -1620,7 +1609,7 @@ training_fields = {
 	}
 
 	ai_will_do = {
-		factor = 5.5
+		factor = 6.5
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
@@ -1793,6 +1782,10 @@ fort_17th = {
 			}
 		}
 		modifier = {
+			factor = 4
+			has_terrain = himalayas
+		}
+		modifier = {
 			factor = 1.25
 			OR = {
 				has_province_modifier = arid
@@ -1921,7 +1914,7 @@ counting_house = {
 	allow_in_gold_provinces = no
 	
 	ai_will_do = {
-		factor = 5
+		factor = 5.25
 		modifier = {
 			factor = 0.5
 			NOT = { is_state = yes }
@@ -2243,10 +2236,6 @@ conscription_center = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 1
-			has_port = yes
-		}
-		modifier = {
 			factor = 1.2
 			NOT = { development = 10 }
 		}
@@ -2384,6 +2373,10 @@ fort_18th = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
 			}
+		}
+		modifier = {
+			factor = 4
+			has_terrain = himalayas
 		}
 		modifier = {
 			factor = 1.25
@@ -2682,10 +2675,13 @@ farm_estate = {
 			trade_goods = wine
 		}
 	}
+	#modifier = {
+	#	local_manpower_modifier = 0.25
+	#}
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 2
+		factor = 1.5
 		modifier = { 
 			factor = 0.4
 			NOT = { base_production = 3 }
@@ -2696,24 +2692,10 @@ farm_estate = {
 		}
 		modifier = {
 			factor = 0.75
-			FROM = {
-				has_idea_group = quantity_ideas
-			}
+
 		}
 		modifier = {
-			factor = 0.75
-			FROM = {
-				has_idea_group = aristocracy_ideas
-			}
-		}
-		modifier = {
-			factor = 0.75
-			FROM = {
-				religion = orthodox
-			}
-		}
-		modifier = {
-			factor = 2
+			factor = 1.5
 			OR = {
 				has_building = workshop
 				has_building = counting_house
@@ -2729,8 +2711,12 @@ farm_estate = {
 				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_latent_trade_goods = coal
+		}
+		modifier = {
+			factor = 0.5
+			adm_tech = 15
 		}
 	}
 }

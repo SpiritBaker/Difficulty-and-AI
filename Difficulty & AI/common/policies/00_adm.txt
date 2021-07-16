@@ -1421,22 +1421,22 @@ steppe_supplies_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = administrative_ideas
 		has_idea_group = horde_gov_ideas
+		has_idea_group = expansion_ideas
 	}
 	
 	allow = {
-		full_idea_group = administrative_ideas
 		full_idea_group = horde_gov_ideas
+		full_idea_group = expansion_ideas
 	}
 	
 	global_manpower_modifier = 0.1
 	manpower_recovery_speed = 0.15
 	
 	ai_will_do = {
-		factor = 1
+		factor = 2.5
 		modifier = {
-			factor = 1.5
+			factor = 2
 			is_at_war = yes
 		}
 	}
@@ -1456,8 +1456,12 @@ to_the_ground_policy = {
 		full_idea_group = horde_gov_ideas
 	}
 	
-	raze_power_gain = 0.25
+	available_province_loot = 1
+	legitimacy = 1
+	republican_tradition = 0.1
+	devotion = 1
 	horde_unity = 1
+	meritocracy = 0.5
 	
 	ai_will_do = {
 		factor = 1

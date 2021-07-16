@@ -19,7 +19,7 @@ country_event = {
 					superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels 
+					type = chinese_peasant_rebels 
 					size = 3
 					unrest = 5
 				}
@@ -30,7 +30,7 @@ country_event = {
 					superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels 
+					type = chinese_peasant_rebels
 					size = 3
 					unrest = 5
 				}
@@ -41,7 +41,7 @@ country_event = {
 					superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels 
+					type = chinese_peasant_rebels
 					size = 3
 					unrest = 5
 				}
@@ -52,7 +52,7 @@ country_event = {
 					superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels 
+					type = chinese_peasant_rebels
 					size = 3
 					unrest = 5
 				}
@@ -63,7 +63,7 @@ country_event = {
 					superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels 
+					type = chinese_peasant_rebels
 					size = 3
 					unrest = 5
 				}
@@ -74,7 +74,7 @@ country_event = {
 					superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels 
+					type = chinese_peasant_rebels 
 					size = 3
 					unrest = 5
 				}
@@ -189,6 +189,14 @@ country_event = {
 						artillery = 0.1
 					}
 					PREV = {
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
+						infantry = PREV
 						infantry = PREV
 						infantry = PREV
 						infantry = PREV
@@ -338,7 +346,10 @@ country_event = {
 				clear_rebels = yes
 			}
 			release = CDL
-			create_march = CDL
+			create_subject = {
+				subject_type = warlord_vassal
+				subject = CDL
+			}
 			CDL = {
 				capital_scope = {
 					build_to_forcelimit = {
@@ -434,7 +445,10 @@ country_event = {
 						clear_rebels = yes
 					}
 					release = WUU
-					create_march = WUU
+					create_subject = {
+						subject_type = warlord_vassal
+						subject = WUU
+					}
 					WUU = {
 						capital_scope = {
 							build_to_forcelimit = {
@@ -477,7 +491,10 @@ country_event = {
 						clear_rebels = yes
 					}
 					release = YUE
-					create_march = YUE
+					create_subject = {
+						subject_type = warlord_vassal
+						subject = YUE
+					}
 					YUE = {
 						capital_scope = {
 							build_to_forcelimit = {
@@ -585,7 +602,7 @@ country_event = {
 		add_mandate = 1
 		event_target:ming_disaster_rebel_province = {
 			spawn_rebels = {
-				type = anti_tax_rebels 
+				type = chinese_peasant_rebels
 				size = 3
 			}
 		}
@@ -841,7 +858,7 @@ country_event = { # Start of Shun rebelion
 					#superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels
+					type = chinese_peasant_rebels
 					size = 3
 					leader = "Li Zicheng"
 					leader_dynasty = "Shun"
@@ -856,7 +873,7 @@ country_event = { # Start of Shun rebelion
 					#superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels
+					type = chinese_peasant_rebels
 					size = 3
 					unrest = 5
 				}
@@ -868,7 +885,7 @@ country_event = { # Start of Shun rebelion
 					#superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels
+					type = chinese_peasant_rebels
 					size = 3
 					unrest = 5
 				}
@@ -880,7 +897,7 @@ country_event = { # Start of Shun rebelion
 					#superregion = china_superregion
 				}
 				spawn_rebels = {
-					type = anti_tax_rebels
+					type = chinese_peasant_rebels
 					size = 3
 					unrest = 5
 				}
@@ -980,10 +997,10 @@ country_event = {
 		ai_chance = { factor = 65 }
 		random_owned_province = { 
 			limit = { is_core = ROOT }
-			anti_tax_rebels = 3 
+			chinese_peasant_rebels = 3 
 		}
 		capital_scope = { 
-			anti_tax_rebels = 2
+			chinese_peasant_rebels = 2
 		}
 		add_mandate = 5
 		if = {
@@ -1043,11 +1060,11 @@ country_event = {
 		ai_chance = { factor = 55 }
 		random_owned_province = {
 			limit = { is_core = ROOT }
-			anti_tax_rebels = 3
+			chinese_peasant_rebels = 3
 		}
 		random_owned_province = {
 			limit = { is_core = ROOT }
-			anti_tax_rebels = 3
+			chinese_peasant_rebels = 3
 		}
 		
 		add_country_modifier = {

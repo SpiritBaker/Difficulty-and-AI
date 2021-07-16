@@ -1,0 +1,78 @@
+warlord_vassal = {
+	copy_from = vassal
+	count = vassal
+	
+	# Properties:
+	has_power_projection = yes
+	takes_diplo_slot = yes
+	#gives_daimyo_bonuses = yes
+	gets_help_with_rebels = no
+	separatists_become_subjects = no
+	allows_taking_land_without_independence = yes
+	overlord_can_attack = yes
+	can_fight_independence_war = yes
+	can_use_claims = no
+	forms_trade_companies = no
+	can_concentrate_development = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	can_have_subjects_of_other_types = no
+	can_be_annexed = yes
+	overlord_protects_external = yes
+	share_rebel_popup = no	
+
+	max_government_rank = 1
+
+	trust_on_start = 0
+	
+	base_liberty_desire = 10.0
+	military_focus = 1.2
+
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	can_fight = {
+		independent_nations = yes
+		other_overlord = all
+		same_overlord = warlord_vassal
+	}
+	can_rival = {
+		#independent_nations = yes
+		#other_overlord = all
+		#same_overlord = warlord_vassal
+	}
+	can_ally = {
+		same_overlord = warlord_vassal
+	}
+	can_marry = {
+		same_overlord = warlord_vassal
+	}
+	
+	# Subject Interactions:
+	scutage = yes
+	place_relative_on_throne = yes
+	sacrifice_ruler = yes
+	sacrifice_heir = yes
+	divert_trade = yes
+	seize_territory = yes
+
+	
+	# Modifiers
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = {
+		modifier = daimyo_subject
+	}
+	
+	
+	modifier_overlord = {
+		modifier = overlord_sword_hunt
+		trigger = {
+			has_country_modifier = subject_sword_hunt
+		}
+	}
+}
