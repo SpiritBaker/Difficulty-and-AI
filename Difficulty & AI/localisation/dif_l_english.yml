@@ -143,7 +143,11 @@
  patronize_learning_and_arts: "Patronize Scholars and Artists"
  patronize_learning_and_arts_desc: "Much like our old self, Bukhara is blossoming into a place of artistic brilliance and scholarly wonder. From madrasahs to mosques to temples to palatial estates, we have a myriad of places that are attracting great people from not only the Islamic world, but also other places too. From poets to physicians to traders and more, Bukhara is once again becoming a source of life and light for the entirety of Central Asia."
  
-
+ #Generic ideas
+ centralized_administration:0 "Centralized Administration"
+ centralized_administration_desc:0 ""
+ domestic_trade:0 "Domestic Trade"
+ domestic_trade_desc:0 ""
 
  #Modifiers
  religious_fervor:0 "Religious Fervor"
@@ -403,6 +407,12 @@
  nomad_reform_dif_desc:0 ""
  tribe_becomes_khanate_monarchy_reform:0 "Reform Khantate into a Monarchy"
  tribe_becomes_khanate_monarchy_reform_desc:0 "Form a Monarchy were traditional Nomadic lifestyle continues to play a major role."
+ warring_state:0 "Warring State"
+ warring_state_desc:0 "A Warring State is a lesser polity in the superregion of China, often left behind from the collapse of a previous Chinese dynasty. It is a contender to claim the Mandate of Heaven in order to form a new dynasty that will reunite China."
+ united_shogunate:0 "Shogunate"
+ united_shogunate_desc:0 ""
+ imperial_japan:0 "Imperial Japan"
+ imperial_japan_desc:0 ""
 
 
  #Rebels
@@ -448,3 +458,7 @@
  edict_religion_enforced2:0 "Religion Enforced"
  edict_of_absolutism2:0 "Edict of Absolutism"
  state_edict_cost:0 "State Edict Cost"
+
+ #japan
+ UNITED_SHOGUNATE:0 "Shogunate"
+ UNITED_SHOGUNATE_ADJ:0 "Shogunate"

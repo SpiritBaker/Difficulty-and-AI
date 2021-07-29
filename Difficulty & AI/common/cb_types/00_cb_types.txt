@@ -500,7 +500,12 @@ cb_daimyo_annex = {
 				}
 			}
 		}
-		from = { has_reform = shogunate }
+		from = {
+			OR = {
+				has_reform = shogunate 
+				has_reform = united_shogunate
+			} 
+		}
 		is_revolutionary = no
 	}
 
@@ -537,7 +542,12 @@ cb_independent_daimyo_annex = {
 				}
 			}
 		}
-		from = { has_reform = shogunate }
+		from = { 
+			OR = {
+				has_reform = shogunate 
+				has_reform = united_shogunate
+			} 
+		}
 		is_revolutionary = no
 	}
 
@@ -548,7 +558,10 @@ cb_shogun_annex = {
 	valid_for_subject = no
 
 	prerequisites = {
-		has_reform = shogunate
+		OR = { 
+			has_reform = shogunate 
+			has_reform = united_shogunate
+		}
 		from = {
 			OR = {
 				has_reform = daimyo
@@ -653,6 +666,7 @@ cb_revolutionary = {
 			has_reform = mamluk_government
 			has_reform = daimyo
 			has_reform = shogunate
+			has_reform = united_shogunate
 			has_reform = colonial_government
 			government = native
 		}
@@ -666,6 +680,7 @@ cb_revolutionary = {
 				has_reform = mamluk_government
 				has_reform = daimyo
 				has_reform = shogunate
+				has_reform = united_shogunate
 				has_reform = colonial_government
 				government = native
 			}

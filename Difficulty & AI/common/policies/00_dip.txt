@@ -1682,3 +1682,65 @@ canoe_expertise_policy = {
 		factor = 1
 	}
 }
+
+the_tenures_abolition_act = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = diplomatic_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	
+	allow = {
+		full_idea_group = diplomatic_ideas
+		full_idea_group = aristocracy_ideas
+	}
+
+	free_leader_pool = 1
+	diplomats = 1
+		
+	ai_will_do = {
+		factor = 0.6
+	}	
+}
+
+autonomous_estates = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = influence_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	
+	allow = {
+		full_idea_group = influence_ideas
+		full_idea_group = aristocracy_ideas
+	}	
+	
+	global_unrest = -1
+	vassal_forcelimit_bonus = 1
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { vassal = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 2
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
+		}			
+		modifier = {
+			factor = 1.5
+			vassal = 4
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 5
+		}	
+	}
+}

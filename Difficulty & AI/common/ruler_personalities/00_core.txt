@@ -4015,7 +4015,7 @@ ambitious_personality = {
 	#underestimate_ae = yes
 	knowledge_sharing = yes
 	
-	unjustified_demands = -0.10
+	unjustified_demands = -0.25
 	nation_designer_cost = 10
 }
 

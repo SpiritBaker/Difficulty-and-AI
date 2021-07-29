@@ -79,13 +79,13 @@ is_great_power = {						#Only works with Rights of Man DLC enabled
 	free_leader_pool = 1
 }
 
-gov_rank_2 = {
-	free_leader_pool = 1
-}
+#gov_rank_2 = {
+	#free_leader_pool = 1
+#}
 
-gov_rank_3 = {
-	free_leader_pool = 1
-}
+#gov_rank_3 = {
+	#free_leader_pool = 1
+#}
 
 corruption = {
 	global_spy_defence = -0.25
@@ -128,10 +128,10 @@ development = {
 	local_amount_of_banners = 0.05
 }
 
-#provincial_tax_income = {
-#	regiment_recruit_speed = -0.01
-	#governing_capacity = 0.5
-#}
+provincial_tax_income = {
+	regiment_recruit_speed = -0.01
+	governing_capacity = 0.5
+}
 
 #provincial_production_size = {
 #	trade_goods_size = 0.2

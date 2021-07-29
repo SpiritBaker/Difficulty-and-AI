@@ -1385,6 +1385,7 @@ annex_country_japan = {
 				has_reform = daimyo
 				has_reform = indep_daimyo
 				has_reform = shogunate
+				has_reform = united_shogunate
 			}
 		}
 	}

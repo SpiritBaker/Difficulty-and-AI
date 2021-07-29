@@ -35,7 +35,9 @@ monarchy = {
 				
 				#Dif&AI 
 				khanate_monarchy
-				nomad_empire 
+				nomad_empire
+				warring_state
+				united_shogunate
 			}
 		}
 		hereditary_vs_nobility = {

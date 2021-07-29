@@ -170,7 +170,7 @@ technology = { #University
 	year = 1622
 
 	university = yes	
-	governing_capacity = 250
+	governing_capacity = 100 #250
 	
 	administrative_efficiency = 0.1
 	development_efficiency = 0.1
@@ -197,7 +197,7 @@ technology = { #Absolute Rulership
 
 	
 	republican_dictatorship = yes
-	governing_capacity = 250
+	governing_capacity = 100 #250
 }
 
 technology = { #Land Clearance
@@ -233,7 +233,7 @@ technology = { #Bonds and Tontines
 
 	allowed_idea_groups = 8
 	counting_house = yes
-	governing_capacity = 250 
+	governing_capacity = 200 #from 250
 }
 
 technology = { #Improved Production
@@ -259,7 +259,7 @@ technology = { #Modern Bureaucracy
 	allowed_idea_groups = 9
 	administrative_efficiency = 0.1
 	development_efficiency = 0.1	
-	governing_capacity = 250
+	governing_capacity = 200
 }
 
 technology = { #Rotherham Plough
@@ -293,7 +293,7 @@ technology = { #Revolutionary Ideals
 	
 	revolutionary_republic = yes
 	revolutionary_empire = yes
-	governing_capacity = 500
+	governing_capacity = 400
 }
 
 technology = { #Four Field Rotation

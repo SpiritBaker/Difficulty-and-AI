@@ -253,7 +253,7 @@ temple = {
 	time = 12
 	modifier = {
 		#local_governing_cost = -0.05
-		local_tax_modifier = 0.4
+		local_tax_modifier = 0.45
 	}
 	
 	on_built = {
@@ -695,8 +695,15 @@ coastal_defence = {
 	time = 12
 	build_trigger = {
 		has_port = yes
+		OR = {
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+		}
 	}
 	modifier = {
+		allowed_num_of_buildings = 1
 		blockade_force_required = 0.5
 		hostile_disembark_speed = 1.0
 		block_slave_raid = yes
@@ -1102,8 +1109,15 @@ naval_battery = {
 	time = 12
 	build_trigger = {
 		has_port = yes
+		OR = {
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+		}
 	}
 	modifier = {
+		allowed_num_of_buildings = 1
 		blockade_force_required = 1.0
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 5
@@ -1157,7 +1171,7 @@ cathedral = {
 	modifier = {
 		#local_governing_cost = -0.10
 		local_missionary_strength = 0.03
-		local_tax_modifier = 0.6
+		local_tax_modifier = 0.70
 	}
 	
 	on_built = {
@@ -2675,9 +2689,10 @@ farm_estate = {
 			trade_goods = wine
 		}
 	}
-	#modifier = {
-	#	local_manpower_modifier = 0.25
-	#}
+	modifier = {
+		trade_goods_size = 0.6
+		local_manpower_modifier = 0.25
+	}
 	onmap = yes
 	
 	ai_will_do = {
@@ -2714,10 +2729,10 @@ farm_estate = {
 			factor = 0.5
 			has_latent_trade_goods = coal
 		}
-		modifier = {
-			factor = 0.5
-			adm_tech = 15
-		}
+		#modifier = {
+		#	factor = 0.5
+		#	FROM = { adm_tech = 15 }
+		#}
 	}
 }
 

@@ -215,7 +215,7 @@ country_event = {
 					}
 				}
 				change_government = monarchy
-				add_government_reform = autocracy_reform
+				add_government_reform = warring_state
 				adopt_reform_progress = ROOT
 				north_china_region = { add_permanent_claim = CSH }
 			}
@@ -359,7 +359,7 @@ country_event = {
 					}
 				}
 				change_government = monarchy
-				add_government_reform = autocracy_reform
+				#add_government_reform = warring_state
 				adopt_reform_progress = ROOT
 			}
 		}
@@ -458,7 +458,7 @@ country_event = {
 							}
 						}
 						change_government = monarchy
-						add_government_reform = autocracy_reform
+						add_government_reform = warring_state
 						adopt_reform_progress = ROOT
 					}
 				}
@@ -504,7 +504,7 @@ country_event = {
 							}
 						}
 						change_government = monarchy
-						add_government_reform = autocracy_reform
+						add_government_reform = warring_state
 						adopt_reform_progress = ROOT
 					}
 				}

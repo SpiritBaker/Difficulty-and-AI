@@ -1,6 +1,6 @@
 ﻿l_english:
  #emperor_estates_l_english.yml
- estate_burghers_indebted_to_burghers_effect_tooltip:2 "Take §Y3§! five-year loans at §Y1.0%§! interest. The privilege will be removed automatically when repaid."
+ estate_burghers_indebted_to_burghers_effect_tooltip:2 "Take §Y5§! five-year loans at §Y1.0%§! interest. The privilege will be removed automatically when repaid."
  
  #EU4_l_english.yml
  obj_disc_army_desc:0 "Have least 115% discipline in your armies."
@@ -12,13 +12,17 @@
  #SHY:0 "Shaybanids"
  CHG:0 "Moghulistan"
  CHG_ADJ:0 "Moghul Khanate"
- TRS:0 "Samarkand"
- TRS_ADJ:0 "Samarkand"
+ #TRS:0 "Samarkand"
+ #TRS_ADJ:0 "Samarkand"
  KOR:1 "Joseon"
 
  #Policies
  superior_fortification_act:0 "Field Fortifications"
  desc_superior_fortification_act:0 "We shall make sure that our positions are always fortified with state-of-the-art technologies."
+
+ #decision
+ unite_japan_title:0 "Unite the Realm"
+ unite_japan_desc:0 "The time has come to strengthen the power of Shogun. All damio must pledge their loyalty to our clan."
 
  #Simple Peace terms
  PEACE_OFFER_POWER_PROJECTION_POS:0 "$TAG$ gains §G$VAL$§! Power Projection. \n"

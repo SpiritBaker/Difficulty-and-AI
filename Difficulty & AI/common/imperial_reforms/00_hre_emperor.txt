@@ -150,7 +150,7 @@ emperor_landfriede = {
 
 emperor_reichstag_collegia = {
 	empire = hre
-	required_reform = emperor_perpetual_diet
+	required_reform = emperor_landfriede
 	disabled_by = emperor_hofgericht
 	gui_container = left_branch
 
@@ -239,7 +239,7 @@ emperor_hofgericht = {
 	emperor = {
 		core_creation = -0.10
 	}
-	required_reform = emperor_perpetual_diet
+	required_reform = emperor_landfriede
 	disabled_by = emperor_reichstag_collegia
 	gui_container = right_branch
 }

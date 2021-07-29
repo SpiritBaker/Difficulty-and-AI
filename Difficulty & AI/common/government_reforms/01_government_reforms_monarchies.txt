@@ -202,6 +202,7 @@ shogunate = {
 	allow_normal_conversion = yes
 	potential = {
 		NOT = { has_country_flag = formed_japan_flag }
+		NOT = { has_country_flag = formed_united_shogunate_flag }
 		OR = {
 			AND = {
 				capital_scope = {
@@ -247,7 +248,12 @@ daimyo = {
 	allow_normal_conversion = no
 	potential = {
 		NOT = { has_country_flag = formed_japan_flag }
-		overlord = { has_reform = shogunate }
+		overlord = { 
+			OR = {
+				has_reform = shogunate
+				has_reform = united_shogunate
+			} 
+		}
 	}
 	replacement_on_independence_war = indep_daimyo
 	legacy_equivalent = daimyo_legacy
@@ -279,7 +285,12 @@ indep_daimyo = {
 			AND = {
 				OR = {
 					is_subject = no
-					overlord = { NOT = { has_reform = shogunate } }
+					overlord = {
+						OR = {
+							NOT = { has_reform = shogunate }
+							NOT = { has_reform = united_shogunate }
+						}
+					}  
 				}
 				capital_scope = { region = japan_region }
 				culture_group = japanese_g

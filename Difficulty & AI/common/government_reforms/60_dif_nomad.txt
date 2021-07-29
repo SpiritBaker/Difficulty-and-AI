@@ -186,3 +186,91 @@ tribe_becomes_khanate_monarchy_reform = {
 		}
 	}
 }
+
+warring_state = {
+	icon = "soldiers_7"
+	allow_normal_conversion = no
+	potential = {
+		is_emperor_of_china = no
+		OR = {
+			AND = {
+				capital_scope = {
+					superregion = china_superregion
+				}
+				culture_group = east_asian
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = warring_state
+			}
+		}
+	}
+	lock_level_when_selected = yes
+	fixed_rank = 2
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	nation_designer_trigger = {
+		culture_group = east_asian
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				superregion = china_superregion
+			}
+		}
+	}
+	legacy_equivalent = despotic_monarchy
+	maintain_dynasty = yes
+
+	modifiers = {
+		core_creation = -0.1
+		infantry_cost = -0.15
+		governing_capacity = 100
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+united_shogunate = {
+	icon = "united_shogunate"
+	allow_normal_conversion = no
+	potential = {
+		#has_country_flag = formed_united_shogunate_flag
+		#NOT = { has_country_flag = formed_japan_flag }
+		OR = {
+			AND = {
+				capital_scope = {
+					province_id = 1020
+				}
+				culture_group = japanese_g
+				NOT = { exists = JAP }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = united_shogunate
+			}
+		}
+	}
+	valid_for_nation_designer = no
+
+	legacy_equivalent = shogunate_legacy
+	fixed_rank = 2
+	maintain_dynasty = yes
+	allow_vassal_war = no
+	allow_vassal_alliance = no
+	lock_level_when_selected = yes
+
+	modifiers = {
+		diplomatic_upkeep = -1
+		#land_morale = 0.1
+		monarch_military_power = 2
+		max_absolutism = 10
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}

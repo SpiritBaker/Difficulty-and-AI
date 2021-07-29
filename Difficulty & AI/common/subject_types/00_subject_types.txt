@@ -333,9 +333,9 @@ daimyo_vassal = {
 	
 	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
 	modifier_subject = clear #Ditto
-	modifier_subject = {
-		modifier = subject_nation
-	}
+	#modifier_subject = {
+	#	modifier = subject_nation
+	#}
 	modifier_overlord = {
 		modifier = daimyo_subject
 	}

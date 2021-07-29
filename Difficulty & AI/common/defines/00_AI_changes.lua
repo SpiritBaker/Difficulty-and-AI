@@ -6,7 +6,8 @@ NDefines.NMilitary.BANNER_DISCIPLINE_BONUS = 0.05
 NDefines.NMilitary.BANNER_MANPOWER_USAGE = 0.75	
 NDefines.NMilitary.BANNER_REINFORCE_SPEED = 0
 NDefines.NMilitary.BANNER_MAINTENANCE_COST = 0.75	
-NDefines.NMilitary.BANNER_AGE_MULTIPLIER =	0.50	
+NDefines.NMilitary.BANNER_AGE_MULTIPLIER =	0.50
+NDefines.NMilitary.CREATE_JANISSARIES_MIL_COST = 2				-- Cost to create janissaries (per unit)	
 NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.10	
 NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0.10
 --NDefines.NMilitary.ARMY_ATTRITION_AT_COAST = 1					-- How many percent attrition units take while loaded onto ships along the coast
@@ -54,7 +55,7 @@ NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
 NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
 NDefines.NAI.AI_CONVERT_CULTURES = 0	--If set to 0 AI will not convert cultures.
 
-NDefines.NAI.MAX_CAV_PERCENTAGE = 50
+NDefines.NAI.MAX_CAV_PERCENTAGE = 65
 NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.15	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
 NDefines.NAI.ARMY_BUDGET_FRACTION = 0.7
 NDefines.NAI.ARTILLERY_FRACTION = 0.25
@@ -119,7 +120,7 @@ NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 6 --Homeland priorization w
 NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.05 --AI will try to defend provinces under threat worth more than this percentage of total development
 
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	--Army <-> province distance impact on province evaluation / divides total score by this amount
-NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	15 --Border <-> province distance impact on province evaluation / actual distance penalty
+NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	20 --Border <-> province distance impact on province evaluation / actual distance penalty
 NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
 --NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10 --Influence on assimilation interest from number of provinces left to conquer
 --NDefines.NAI.PURSUE_DISTANCE = 100
