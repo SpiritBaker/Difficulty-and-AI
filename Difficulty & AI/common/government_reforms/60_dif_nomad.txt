@@ -31,7 +31,7 @@ nomad_empire = {
 }
 
 khanate_monarchy = {
-	icon = "horde_riding_highlighted"
+	icon = "khanate_reformed_dif"
 	allow_normal_conversion = yes
 	#lock_level_when_selected = yes
 	potential = {
@@ -241,32 +241,24 @@ united_shogunate = {
 		#has_country_flag = formed_united_shogunate_flag
 		#NOT = { has_country_flag = formed_japan_flag }
 		OR = {
-			AND = {
-				capital_scope = {
-					province_id = 1020
-				}
-				culture_group = japanese_g
-				NOT = { exists = JAP }
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = united_shogunate
-			}
+			culture_group = japanese_g
+			have_had_reform = united_shogunate
 		}
 	}
 	valid_for_nation_designer = no
 
 	legacy_equivalent = shogunate_legacy
-	fixed_rank = 2
+	#fixed_rank = 2
 	maintain_dynasty = yes
-	allow_vassal_war = no
-	allow_vassal_alliance = no
+	#allow_vassal_war = no
+	#allow_vassal_alliance = no
 	lock_level_when_selected = yes
 
 	modifiers = {
 		diplomatic_upkeep = -1
 		#land_morale = 0.1
-		monarch_military_power = 2
+		autonomy_change_time = 0.025
+		monarch_military_power = 1
 		max_absolutism = 10
 	}
 

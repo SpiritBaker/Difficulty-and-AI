@@ -286,10 +286,8 @@ indep_daimyo = {
 				OR = {
 					is_subject = no
 					overlord = {
-						OR = {
-							NOT = { has_reform = shogunate }
-							NOT = { has_reform = united_shogunate }
-						}
+						NOT = { has_reform = shogunate }
+						NOT = { has_reform = united_shogunate }
 					}  
 				}
 				capital_scope = { region = japan_region }
@@ -370,11 +368,12 @@ celestial_empire = {
 
 	modifiers = {
 		prestige = 0.5
+		max_absolutism = 10
 		church_influence_modifier = -0.1
 		nobles_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
 		nomadic_tribes_influence_modifier = -0.1
-		governing_capacity = 300
+		governing_capacity = 200
 	}
 	
 	ai = {

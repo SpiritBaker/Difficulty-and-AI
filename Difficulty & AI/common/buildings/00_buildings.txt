@@ -316,6 +316,10 @@ temple = {
 	ai_will_do = {
 		factor = 5.25
 		modifier = {
+			factor = 0.3
+			NOT = { development = 10 }
+		}
+		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
 			NOT = { trade_goods = gold }
@@ -401,11 +405,7 @@ barracks = {
 	}
 
 	ai_will_do = {
-		factor = 6.5
-		modifier = {
-			factor = 0.25
-			NOT = { is_state = yes }
-		}
+		factor = 6.6
 		modifier = {
 			factor = 0.2
 			NOT = { base_manpower = 3 }
@@ -1234,6 +1234,10 @@ cathedral = {
 	ai_will_do = {
 		factor = 5.25
 		modifier = {
+			factor = 0.3
+			NOT = { development = 10 }
+		}
+		modifier = {
 			factor = 0
 			NOT = { base_tax = 4 }
 			NOT = { trade_goods = gold }
@@ -1623,11 +1627,7 @@ training_fields = {
 	}
 
 	ai_will_do = {
-		factor = 6.5
-		modifier = {
-			factor = 0.25
-			NOT = { is_state = yes }
-		}
+		factor = 6.6
 		modifier = {
 			factor = 0.2
 			NOT = { base_manpower = 3 }
@@ -2689,14 +2689,18 @@ farm_estate = {
 			trade_goods = wine
 		}
 	}
-	modifier = {
-		trade_goods_size = 0.6
-		local_manpower_modifier = 0.25
-	}
+	#modifier = {
+	#	trade_goods_size = 0.6
+	#	local_manpower_modifier = 0.25
+	#}
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.4
+		modifier = { 
+			factor = 0.4
+			NOT = { development = 10 }
+		}
 		modifier = { 
 			factor = 0.4
 			NOT = { base_production = 3 }

@@ -86,7 +86,7 @@ mesoamerican_reforms = {
 		is_at_war = no
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		stability = 1
-		num_of_cities = 20
+		num_of_cities = 10
 		NOT = { overextension_percentage = 0.01 }
 	}
 	

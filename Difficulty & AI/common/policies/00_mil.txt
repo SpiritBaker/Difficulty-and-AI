@@ -12,17 +12,16 @@ privy_council_establishment_act = {
 		full_idea_group = defensive_ideas
 	}
 
+	army_tradition = 0.5
 	defensiveness = 0.10
-	yearly_corruption = -0.1
 	
 	ai_will_do = {
-		factor = 0.6
+		factor = 1
 		modifier = {
 			factor = 0.2
 			is_at_war = yes
 		}
 	}
-
 }
 
 the_mercenary_registration_act = {
@@ -92,7 +91,7 @@ the_liquor_act = {
 	
 	land_morale = 0.1
 	#recover_army_morale_speed = 0.05
-	reinforce_speed = 0.15
+	reinforce_speed = 0.10
 
 	ai_will_do = {
 		factor = 5
@@ -285,14 +284,17 @@ military_zeal_act = {
 		full_idea_group = religious_ideas
 	}
 	
-	land_morale = 0.05
-	siege_ability = 0.1
+	discipline = 0.03
 
 	ai_will_do = {
-		factor = 2
+		factor = 10
 		modifier = {
-			factor = 1.5
+			factor = 5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 1000
+			is_in_important_war = yes
 		}
 	}
 }
@@ -407,8 +409,8 @@ underhanded_diplomacy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	mercenary_manpower = 0.5
-	diplomatic_reputation = 1
+	mercenary_manpower = 0.25
+	mercenary_discipline = 0.03
 
 	ai_will_do = {
 		factor = 1
@@ -760,7 +762,7 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_flanking = 0.5
+	cavalry_flanking = 0.25
 	cavalry_power = 0.10
 	
 	ai_will_do = {
@@ -930,7 +932,8 @@ the_witchcraft_act = {
 		full_idea_group = aristocracy_ideas
 	}
 	
-	cav_to_inf_ratio = 0.10
+	land_morale = 0.05
+	cav_to_inf_ratio = 0.15
 
 	ai_will_do = {
 		factor = 5
@@ -1101,13 +1104,17 @@ war_on_our_terms_policy = {
 	}
 
 	discipline = 0.025
-	land_morale = 0.1
+	land_morale = 0.05
 	
 	ai_will_do = {
-		factor = 1.0
+		factor = 10
 		modifier = {
-			factor = 2.5
+			factor = 5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 1000
+			is_in_important_war = yes
 		}
 	}
 }
@@ -1150,7 +1157,7 @@ psychological_warfare_policy = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_flanking = 0.5
+	cavalry_flanking = 0.25
 	cavalry_power = 0.1
 
 	ai_will_do = {
@@ -1249,7 +1256,7 @@ vassal_taxation_policy = {
 		full_idea_group = administrative_ideas
 	}
 
-	siege_ability = 0.1
+	artillery_bonus_vs_fort = 1
 	fire_damage = 0.05
 
 	ai_will_do = {

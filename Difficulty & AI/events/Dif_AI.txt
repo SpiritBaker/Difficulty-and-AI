@@ -85,3 +85,29 @@ country_event = {
 		}
 	}
 }
+
+country_event = { 
+	id = dif_ai.4
+	title = "dif_ai.EVTNAME4"
+	desc = "dif_ai.EVTDESC4"
+	picture = LAND_MILITARY_eventPicture
+	
+	#fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		NOT = { manpower_percentage = 0.5 }
+		#exists = MDA
+	}
+
+	immediate = {
+		add_yearly_manpower = 3
+	}
+	#mean_time_to_happen = {
+	#	months = 1
+	#}
+
+	
+	option = {
+	}
+}

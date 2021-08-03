@@ -4107,14 +4107,18 @@ talented_statesman_personality = { # Talented Statesman
 
 	chance = {
 		modifier = {
-			factor = 1
+			factor = 5
+			ai = yes
+		}
+		modifier = {
+			factor = 2
 			OR = {
 				has_idea_group = influence_ideas
 				has_idea_group = diplomatic_ideas
 			}
 		}
 		modifier = {
-			factor = 1
+			factor = 2
 			is_great_power = yes
 		}
 		modifier = {

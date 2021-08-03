@@ -232,7 +232,7 @@ edict_of_resistance = {
 
 
 	global_unrest = -2
-	hostile_attrition = 1
+	warscore_cost_vs_other_religion = -0.15
 
 	ai_will_do = {
 		factor = 1
@@ -271,8 +271,8 @@ public_welfare_act = {
 		full_idea_group = economic_ideas
 	}
 
+	global_tax_modifier = 0.1
 	global_unrest = -2
-	stability_cost_modifier = -0.1
 
 	ai_will_do = {
 		factor = 1

@@ -162,7 +162,10 @@ feudalism = {
 			potential = {
 				owner = { 
 					OR = {
-						has_estate = estate_nobles 
+						AND = {
+							has_estate = estate_nobles
+							is_tribal = no
+						}
 						has_estate = nomadic_aristocracy
 					}
 				}

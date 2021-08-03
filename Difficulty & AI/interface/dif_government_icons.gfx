@@ -7,4 +7,12 @@ spriteTypes = {
 		name = "government_reform_united_shogunate"
 		texturefile = "gfx//interface//government_reform_icons//united_shogunate.dds"
 	}
+	spriteType = {
+		name = "government_reform_khanate_reformed_dif"
+		texturefile = "gfx//interface//government_reform_icons//khanate_reformed_dif.dds"
+	}
+	spriteType = {
+		name = "government_reform_horde_dif"
+		texturefile = "gfx//interface//government_reform_icons//horde_dif.dds"
+	}
 }

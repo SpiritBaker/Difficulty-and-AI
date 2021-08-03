@@ -14,6 +14,7 @@ difficulty_very_hard_ai = {
 	global_manpower_modifier = 0.25
 	land_forcelimit_modifier = 0.25
 	naval_forcelimit_modifier = 0.25
+	land_maintenance_modifier = -0.1
 	inflation_reduction = 0.05
 	global_unrest = -2
 	build_cost = -0.1
@@ -50,7 +51,7 @@ base_values = {
 	tolerance_heathen = -3
 	tolerance_heretic = -2
 	global_missionary_strength = 0.02
-	global_manpower = 10.0
+	global_manpower = 8.0
 	advisor_pool = 4
 	colonist_placement_chance = 0.05
 	free_leader_pool = 1
@@ -375,4 +376,21 @@ expanded_infrastructure = {
 	allowed_num_of_manufactories = 1
 	local_governing_cost_increase = 50
 	local_governing_cost = 0.25
+}
+
+daimyo_subject = {
+	land_forcelimit	= 1
+	land_maintenance_modifier = -0.1
+}
+
+all_nations = {
+	global_tax_income = 12
+	land_forcelimit	= 5 #from 6
+	naval_forcelimit = 12
+}
+
+subject_nation = {
+	global_tax_income = -6
+	land_forcelimit	= -2 #from 3
+	naval_forcelimit = -6
 }

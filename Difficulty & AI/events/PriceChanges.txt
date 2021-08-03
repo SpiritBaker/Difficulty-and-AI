@@ -1106,6 +1106,7 @@ country_event = {
 		dip_tech = 8
 		OR = {
 			has_reform = shogunate
+			has_reform = united_shogunate
 			tag = JAP
 		}
 		NOT = { has_global_flag = japanese_tea_happened }

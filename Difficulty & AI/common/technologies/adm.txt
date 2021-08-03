@@ -67,7 +67,7 @@ technology = { #Temples
 technology = { #National Ideas
 	# Tech 5
 	year = 1466
-	governing_capacity = 50
+	governing_capacity = 25
 	production_efficiency	 =	0.02
 }
 
@@ -93,7 +93,7 @@ technology = { #Courthouse
 
 	year = 1505
 	courthouse = yes
-	governing_capacity = 50
+	governing_capacity = 25
 
 }
 
@@ -127,7 +127,7 @@ technology = { #Early Modern Administration
 	year = 1557
 
 	allowed_idea_groups	= 4
-	governing_capacity = 100
+	governing_capacity = 50
 	state_house = yes
 }
 
@@ -170,7 +170,7 @@ technology = { #University
 	year = 1622
 
 	university = yes	
-	governing_capacity = 100 #250
+	governing_capacity = 50 #250
 	
 	administrative_efficiency = 0.1
 	development_efficiency = 0.1
@@ -233,7 +233,7 @@ technology = { #Bonds and Tontines
 
 	allowed_idea_groups = 8
 	counting_house = yes
-	governing_capacity = 200 #from 250
+	governing_capacity = 100 #from 250
 }
 
 technology = { #Improved Production
@@ -293,7 +293,7 @@ technology = { #Revolutionary Ideals
 	
 	revolutionary_republic = yes
 	revolutionary_empire = yes
-	governing_capacity = 400
+	governing_capacity = 200
 }
 
 technology = { #Four Field Rotation

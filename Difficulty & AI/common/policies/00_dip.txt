@@ -438,14 +438,14 @@ naval_secrecy_act = {
 	naval_morale = 0.1
 
 	ai_will_do = {
-		factor = 0.8
+		factor = 1
 		modifier = {
 			factor = 0
 			NOT = { navy_size = 20 }
 		}	
 		modifier = {
-			factor = 10
-			navy_size = 250
+			factor = 1000
+			navy_size = 25
 			is_in_important_war = yes
 		}
 	}

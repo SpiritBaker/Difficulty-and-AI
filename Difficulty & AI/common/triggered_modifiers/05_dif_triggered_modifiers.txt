@@ -29,3 +29,16 @@ AI_OPM_penalty = {
 	monarch_diplomatic_power = -1 
 	monarch_military_power = -1
 }
+
+AI_keep_starting_troops = {
+	potential = {
+		#always = no
+		ai = yes
+		NOT = { is_year = 1454 }
+	}
+	trigger = {
+		ai = yes
+		NOT = { is_year = 1454 }
+	}
+	land_maintenance_modifier = -0.10
+}

@@ -56,10 +56,11 @@ NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embr
 NDefines.NAI.AI_CONVERT_CULTURES = 0	--If set to 0 AI will not convert cultures.
 
 NDefines.NAI.MAX_CAV_PERCENTAGE = 65
-NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.15	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
-NDefines.NAI.ARMY_BUDGET_FRACTION = 0.7
-NDefines.NAI.ARTILLERY_FRACTION = 0.25
+NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.25	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
+NDefines.NAI.ARMY_BUDGET_FRACTION = 0.80
+NDefines.NAI.ARTILLERY_FRACTION = 0.15
 NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16
+NDefines.NAI.NAVY_BUDGET_FRACTION = 0.4 -- AI will spend a maximum of this fraction of monthly income on navy maintenance (based off wartime costs)
 NDefines.NAI.TRANSPORT_FRACTION = 0.35
 NDefines.NAI.BIGSHIP_FRACTION = 0.4
 NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on state maintenance
@@ -177,9 +178,9 @@ NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what re
 --NDefines.NAIEconomy.MILITARY_FOCUS_DEFAULT = 1.0
 --NDefines.NAIEconomy.MILITARY_FOCUS_LOWER_BOUND = 0.25
 --NDefines.NAIEconomy.MILITARY_FOCUS_UPPER_BOUND = 1.75
---NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.5
---NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 0.9
---NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.25
+NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.6
+NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 1.0
+NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.3
 
 NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 0.8
 NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 0.8
@@ -198,10 +199,10 @@ NDefines.NGovernment.RUSSIAN_ABILITY_STRELTSY_SPAWN_SIZE = 0.1
 
 --NReligion
 
---NDefines.NReligion.YEARLY_DOOM_INCREASE = 0.5 --Multiplied by number of provinces.
---NDefines.NReligion.MAYA_COLLAPSE_PROVINCES_PER_REFORM = 1 --Maya keeps this many extra provinces per reform.
---NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 15
---NDefines.NReligion.YEARLY_PAPAL_INFLUENCE_CATHOLIC = 1 
+NDefines.NReligion.YEARLY_DOOM_INCREASE = 0.5 --Multiplied by number of provinces.
+NDefines.NReligion.MAYA_COLLAPSE_PROVINCES_PER_REFORM = 1 --Maya keeps this many extra provinces per reform.
+NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 5
+NDefines.NReligion.YEARLY_PAPAL_INFLUENCE_CATHOLIC = 1 
 NDefines.NReligion.PIETY_ACTION_COOLDOWN = 10
 NDefines.NReligion.KARMA_FOR_OFFENSIVE_WAR = -5 --base -10
 NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = -25 --from 25
@@ -232,6 +233,14 @@ NDefines.NCountry.PS_BUY_IDEA = 380
 NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.35 --Horde unity gained per ducat looted.
 NDefines.NCountry.NOMAD_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
 NDefines.NCountry.CORRUPTION_FROM_BANNERS = 2.5
+
+--Natives
+NDefines.NCountry.COHESION_NEIGHBOURING_COLONIZER = 1
+NDefines.NCountry.COHESION_FEDERATION_ADVANCEMENT = -0.05
+
+NDefines.NCountry.ANCESTOR_PERSONALITY_LEVEL_1 = 6				-- Roof of first level of ancestor personality
+NDefines.NCountry.ANCESTOR_PERSONALITY_LEVEL_2 = 12				-- Roof of second level of ancestor personality
+NDefines.NCountry.ANCESTOR_COST = 300							-- Cost to integrate an ancestor into the faith.
 
 --NDiplomacy
 
