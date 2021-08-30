@@ -727,6 +727,7 @@ categories =  {
 	savannah = {
 		color = { 248 199 23  }
 
+		type = plains
 		sound_type = plains
 
 		supply_limit = 6

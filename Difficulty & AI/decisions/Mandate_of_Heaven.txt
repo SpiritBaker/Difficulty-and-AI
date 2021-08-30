@@ -140,6 +140,13 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_reform = shogunate
+					has_reform = united_shogunate
+				}
+			}
 		}
 		ai_importance = 500
 	}

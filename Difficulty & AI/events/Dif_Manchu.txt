@@ -269,7 +269,7 @@ country_event = { #AI only event
 			}
 			declare_war_with_cb = {
 				who = MHX
-				casus_belli = cb_tribal_feud_ai
+				casus_belli = cb_tribal_feud
 				war_goal_province = 730
 			}
 		}

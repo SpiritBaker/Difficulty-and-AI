@@ -2329,6 +2329,8 @@ estate_nobles_french_strong_duchies = {
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
+		NOT = { has_reform = shogunate }
+		NOT = { has_reform = united_shogunate }
 		OR = {
 			has_estate_privilege = estate_nobles_french_strong_duchies
 			AND = {

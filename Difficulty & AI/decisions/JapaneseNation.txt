@@ -28,6 +28,7 @@ country_decisions = {
 			owns = 1028
 		}
 		effect = {
+			set_country_flag = formed_united_shogunate_flag
 			override_country_name = UNITED_SHOGUNATE
 			remove_government_reform = shogunate
 			add_prestige = 15
@@ -41,14 +42,14 @@ country_decisions = {
 			#set_legacy_government = despotic_monarchy
 			#set_government_rank = 3
 			#custom_tooltip = unite_japan_subject_tooltip
-			set_country_flag = formed_united_shogunate_flag
 			japan_region = { 
 				limit = {
 					NOT = { is_core = ROOT }
 					is_city = yes
 				}
 				add_permanent_claim = ROOT 
-			} 
+			}
+			set_global_flag = shogunate_reformed_flag 
 		}
 		ai_will_do = {
 			factor = 1

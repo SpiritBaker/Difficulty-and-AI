@@ -405,7 +405,7 @@ barracks = {
 	}
 
 	ai_will_do = {
-		factor = 6.6
+		factor = 6.75
 		modifier = {
 			factor = 0.2
 			NOT = { base_manpower = 3 }
@@ -1627,7 +1627,7 @@ training_fields = {
 	}
 
 	ai_will_do = {
-		factor = 6.6
+		factor = 6.75
 		modifier = {
 			factor = 0.2
 			NOT = { base_manpower = 3 }
@@ -2696,7 +2696,7 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 1.4
+		factor = 1.2
 		modifier = { 
 			factor = 0.4
 			NOT = { development = 10 }
@@ -2733,10 +2733,10 @@ farm_estate = {
 			factor = 0.5
 			has_latent_trade_goods = coal
 		}
-		#modifier = {
-		#	factor = 0.5
-		#	FROM = { adm_tech = 15 }
-		#}
+		modifier = {
+			factor = 0.5
+			FROM = { adm_tech = 15 }
+		}
 	}
 }
 

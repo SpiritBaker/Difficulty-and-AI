@@ -61,11 +61,24 @@ cb_manchu_unification = {
 	war_goal = superiority_chinese_unification
 }
 
-cb_horde_invasion = {
+#cb_horde_invasion = {
+#	valid_for_subject = no
+#
+#	is_triggered_only = yes
+#	months = 180
+#	war_goal = horde_invasion
+#}
+
+cb_vassalize_principality = {
 	valid_for_subject = no
 
-	is_triggered_only = yes
-	months = 180
+	prerequisites = {
+		mission_completed = tr_subjugate_novgorod
+		FROM = {
+			is_free_or_tributary_trigger = yes
+			culture_group = east_slavic
+		}
+	}
 
-	war_goal = horde_invasion
+	war_goal = take_capital_vassalize_principality
 }

@@ -248,6 +248,7 @@ daimyo = {
 	allow_normal_conversion = no
 	potential = {
 		NOT = { has_country_flag = formed_japan_flag }
+		NOT = { has_country_flag = formed_united_shogunate_flag }
 		overlord = { 
 			OR = {
 				has_reform = shogunate

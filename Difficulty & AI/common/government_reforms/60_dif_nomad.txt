@@ -236,13 +236,16 @@ warring_state = {
 
 united_shogunate = {
 	icon = "united_shogunate"
-	allow_normal_conversion = no
+	allow_normal_conversion = yes
 	potential = {
-		#has_country_flag = formed_united_shogunate_flag
+		has_country_flag = formed_united_shogunate_flag
 		#NOT = { has_country_flag = formed_japan_flag }
 		OR = {
 			culture_group = japanese_g
-			have_had_reform = united_shogunate
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = united_shogunate
+			}
 		}
 	}
 	valid_for_nation_designer = no
@@ -250,14 +253,14 @@ united_shogunate = {
 	legacy_equivalent = shogunate_legacy
 	#fixed_rank = 2
 	maintain_dynasty = yes
-	#allow_vassal_war = no
+	allow_vassal_war = no
 	#allow_vassal_alliance = no
 	lock_level_when_selected = yes
 
 	modifiers = {
 		diplomatic_upkeep = -1
 		#land_morale = 0.1
-		autonomy_change_time = 0.025
+		global_autonomy = -0.025
 		monarch_military_power = 1
 		max_absolutism = 10
 	}

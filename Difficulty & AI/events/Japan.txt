@@ -77,6 +77,7 @@ province_event = {
 						OR = {
 							has_reform = daimyo
 							has_reform = indep_daimyo
+							NOT = { has_global_flag = shogunate_reformed_flag  }
 						}
 					}
 					add_core = 1020
@@ -85,6 +86,22 @@ province_event = {
 					#I couldn't replicate it though, so I hope the line below might fix it - in the worst case it does nothing
 					grant_independence = yes
 					add_government_reform = shogunate
+					save_event_target_as = new_shogunate
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_reform = daimyo
+							has_reform = indep_daimyo
+							has_global_flag = shogunate_reformed_flag
+						}
+					}
+					add_core = 1020
+					set_capital = 1020
+					#There was a bug, which made it possible that the new shogun remained a daimyo despite having Kyoto
+					#I couldn't replicate it though, so I hope the line below might fix it - in the worst case it does nothing
+					grant_independence = yes
+					add_government_reform = united_shogunate
 					save_event_target_as = new_shogunate
 				}
 			}
