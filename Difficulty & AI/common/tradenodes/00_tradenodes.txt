@@ -1,4 +1,3 @@
-
 african_great_lakes={
 	location=4064
 	color={

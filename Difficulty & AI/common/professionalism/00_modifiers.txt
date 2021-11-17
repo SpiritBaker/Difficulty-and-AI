@@ -60,9 +60,8 @@ general_cost_modifier = {
 	trigger = {
 		always = yes
 	}
-	
+
 	reserves_organisation = 0.5
-	drill_gain_modifier = 0.25
 }
 
 reserves_organisation_modifier = {
@@ -77,5 +76,5 @@ reserves_organisation_modifier = {
 	}
 
 	general_cost = -0.5
-	drill_gain_modifier = 0.50
+	drill_gain_modifier = 1
 }

@@ -27,7 +27,7 @@ economic_hegemon = {
 	}
 	
 	max = {
-		global_trade_power = 0.25
+		governing_capacity_modifier = 0.20
 	}
 	
 }

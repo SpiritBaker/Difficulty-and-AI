@@ -105,7 +105,7 @@ just_personality = {
 	easy_war_chance_multiplier = 0.5
 	fair_fights = yes
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 
 	global_unrest = -2
@@ -170,7 +170,7 @@ righteous_personality = {
 	
 	easy_war_chance_multiplier = 0.75
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	legitimacy = 1
 	republican_tradition = 0.5
@@ -230,7 +230,7 @@ tolerant_personality = {
 	heretic_ally_acceptance = 10
 	heathen_ally_acceptance = 20
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 
 	tolerance_heretic = 1
@@ -271,7 +271,7 @@ kind_hearted_personality = {
 	gift_chance = 65
 	alliance_acceptance = 10
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	war_exhaustion = -0.05
 	nation_designer_cost = 5
 } # 1 better
@@ -461,7 +461,7 @@ calm_personality = {
 	war_chance_multiplier = 0.5
 	easy_war_chance_multiplier = 0.75
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	stability_cost_modifier = -0.10
 	nation_designer_cost = 2
@@ -526,7 +526,7 @@ careful_personality = {
 	war_chance_multiplier = 0.9
 	enemy_strength_multiplier = 1.1
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 
 	ae_impact = -0.10
@@ -586,7 +586,7 @@ secretive_personality = {
 	wants_condottieri = yes
 	easy_war_chance_multiplier = 1.2
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	
 	global_spy_defence = 0.2
@@ -653,7 +653,7 @@ intricate_web_weaver_personality = {
 	wants_condottieri = yes
 	easy_war_chance_multiplier = 1.2
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	
 	spy_offence = 0.3
@@ -715,7 +715,7 @@ fertile_personality = {
 	
 	royal_marriage_acceptance = 20
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	heir_chance = 0.5
 	nation_designer_cost = 2
@@ -767,7 +767,7 @@ well_advised_personality = {
 	
 	war_chance_multiplier = 0.8
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	
 	advisor_pool = 1
@@ -839,7 +839,7 @@ benevolent_personality = {
 	
 	gift_chance = 25
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	
 	reduced_liberty_desire = 5
@@ -909,7 +909,7 @@ zealot_personality = {
 	wants_heathen_land = yes
 	wants_heretic_land = yes
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	
 	global_missionary_strength = 0.01
@@ -948,7 +948,7 @@ pious_personality = {
 	wants_excommunicate = yes
 	heretic_ally_acceptance = -30
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	
 	devotion = 1
@@ -1009,7 +1009,7 @@ lawgiver_personality = {
 	
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	global_autonomy = -0.05
 	nation_designer_cost = 5
@@ -1139,7 +1139,7 @@ incorruptible_personality = {
 	
 	gift_chance = -50
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	
 	yearly_corruption = -0.05
@@ -1196,9 +1196,9 @@ architectural_visionary_personality = {
 	chance = {
 	}
 	
-	building_budget_multiplier = 1.1
+	building_budget_multiplier = 1.25
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	
 	build_cost = -0.1
@@ -1319,7 +1319,7 @@ entrepreneur_personality = {
 	
 	building_budget_multiplier = 1.05
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	trade_efficiency = 0.1
 	nation_designer_cost = 2
@@ -1375,7 +1375,7 @@ industrious_personality = {
 	building_budget_multiplier = 1.05
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	global_trade_goods_size_modifier = 0.1
 	nation_designer_cost = 2
@@ -1458,7 +1458,7 @@ expansionist_personality = {
 		}
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_colonies = yes
 	wants_gold = yes
 	
@@ -1529,7 +1529,7 @@ charismatic_negotiator_personality = {
 	other_ai_peace_term_bonus = 10
 	wants_condottieri = yes
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	diplomatic_reputation = 1
 	nation_designer_cost = 2
@@ -1596,7 +1596,7 @@ silver_tongue_personality = {
 		
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_condottieri = yes
 	other_ai_war_chance_multiplier = 0.5
 	
@@ -1671,7 +1671,7 @@ conqueror_personality = {
 	years_of_nationalism = -5
 	nation_designer_cost = 2
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 
 	easy_war_chance_multiplier = 2
@@ -1752,7 +1752,7 @@ tactical_genius_personality = {
 	chance = {
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	easy_war_chance_multiplier = 1.4
 	
 	leader_land_manuever = 1
@@ -1826,7 +1826,7 @@ bold_fighter_personality = {
 	chance = {
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	war_chance_multiplier = 1.3
 	enemy_strength_multiplier = 0.85
 	
@@ -1895,7 +1895,7 @@ strict_personality = {
 	chance = {
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_avoid_loans = yes
 	
 	discipline = 0.03
@@ -1959,7 +1959,7 @@ inspiring_leader_personality = {
 	chance = {
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	land_morale = 0.05
 	nation_designer_cost = 5
@@ -2029,7 +2029,7 @@ martial_educator_personality = {
 		}
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	easy_war_chance_multiplier = 1.2
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	
@@ -2109,7 +2109,7 @@ navigator_personality = {
 	custom_ai_explanation = "AI_RULER_PICK_IDEA_GROUPS"
 	wants_explorers = yes
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	ship_durability = 0.1
 	nation_designer_cost = 2
@@ -2163,7 +2163,7 @@ fierce_negotiator_personality = {
 		
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_condottieri = yes
 	peace_desire = -10
 	
@@ -2291,7 +2291,7 @@ babbling_buffoon_personality = {
 	diplomatic_reputation = -1
 	nation_designer_cost = -2
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	random_insults = yes
 	wants_disclose_attack = yes
@@ -2414,7 +2414,7 @@ embezzler_personality = {
 	chance = {
 	}
 
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_debase = yes
 	#wants_sell_ships = yes
 	wants_sell_provinces = yes
@@ -2524,7 +2524,7 @@ infertile_personality = {
 		
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	royal_marriage_acceptance = -20
 	
 	heir_chance = -0.25
@@ -2653,7 +2653,7 @@ drunkard_personality = {
 	#random_troop_moves = yes Commenting out since often indistinguishable from a bug.
 	#wants_loans = yes
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	trade_efficiency = -0.10
 	nation_designer_cost = -2
@@ -2758,7 +2758,7 @@ sinner_personality = {
 	different_religion_war_multiplier = 0.8
 	razing = yes
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_to_appoint_cardinals_in_his_own_land = yes
 	
 	tolerance_own = -2
@@ -2917,7 +2917,7 @@ greedy_personality = {
 		}
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_land = yes
 	underestimate_ae = yes
 
@@ -3044,7 +3044,7 @@ cruel_personality = {
 	wants_betray_allies = yes
 	wants_land = yes
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	razing = yes
 	lower_autonomy = yes
@@ -3181,7 +3181,7 @@ naive_personality = {
 	chance = {
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	underestimate_ae = yes
 	fair_fights = yes
 	gift_chance = 90
@@ -3318,7 +3318,7 @@ craven_personality = {
 	}
 	enemy_strength_multiplier = 1.25
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	land_morale = -0.05
 	nation_designer_cost = -2
@@ -3439,7 +3439,7 @@ loose_lips_personality = {
 	chance = {
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_disclose_attack = yes
 
 	global_spy_defence = -0.2
@@ -3537,7 +3537,7 @@ obsessive_perfectionist_personality = {
 	wants_avoid_ugly_borders = yes
 	underestimate_ae = yes
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	build_cost = 0.1
 	nation_designer_cost = -2
@@ -3662,7 +3662,7 @@ malevolent_personality = {
 	war_chance_multiplier = 1.25
 
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	wants_betray_allies = yes
 	wants_threaten_war = yes
 	wants_disclose_attack = yes
@@ -3775,7 +3775,7 @@ humane_personality = {
 		}
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	fair_fights = yes
 	gift_chance = 30
 	alliance_acceptance = 5
@@ -4013,7 +4013,7 @@ ambitious_personality = {
 	wants_land = yes
 	wants_avoid_ugly_borders = yes
 	#underestimate_ae = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	
 	unjustified_demands = -0.25
 	nation_designer_cost = 10
@@ -4130,7 +4130,7 @@ talented_statesman_personality = { # Talented Statesman
 		}
 	}
 	#wants_avoid_debase = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 	gift_chance = 25
 	different_religion_war_multiplier = 2
 	heretic_ally_acceptance = -50
@@ -4226,7 +4226,7 @@ ruthless_ruler_personality = {
 	easy_war_chance_multiplier = 1.25
 
 	wants_land = yes
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	razing = yes
 	lower_autonomy = yes
@@ -4327,7 +4327,7 @@ born_to_the_saddle_ruler_personality = {
 	war_chance_multiplier = 1.25
 	easy_war_chance_multiplier = 1.25
 	razing = yes 
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	cavalry_power = 0.1
 	nation_designer_cost = 5
@@ -4410,7 +4410,7 @@ defensive_planner_ruler_personality = {
 
 	
 
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	defensiveness = 0.15
 	nation_designer_cost = 5
@@ -4483,7 +4483,7 @@ fascinated_by_artillery_personality = {
 	chance = {
 	}
 
-	knowledge_sharing = yes
+	#knowledge_sharing = yes
 
 	artillery_cost = -0.1
 	nation_designer_cost = 5

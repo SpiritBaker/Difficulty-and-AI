@@ -11,5 +11,5 @@ tags={
 }
 name="Difficulty & AI (1.31)"
 picture="thumbnail.png"
-supported_version="1.31.5"
+supported_version="1.32.*"
 remote_file_id="2453967654"

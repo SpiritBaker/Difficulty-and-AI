@@ -89,15 +89,19 @@ the_liquor_act = {
 		full_idea_group = administrative_ideas
 	}	
 	
-	land_morale = 0.1
+	land_morale = 0.05
 	#recover_army_morale_speed = 0.05
-	reinforce_speed = 0.10
+	reinforce_speed = 0.15
 
 	ai_will_do = {
 		factor = 5
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 10
+			is_in_important_war = yes
 		}
 	}
 }
@@ -312,17 +316,17 @@ field_priests = {
 		full_idea_group = quantity_ideas
 	}
 
-	land_morale = 0.1
+	land_morale = 0.05
 	recover_army_morale_speed = 0.05
 	
 	ai_will_do = {
 		factor = 5
 		modifier = {
-			factor = 10
+			factor = 1.5
 			is_at_war = yes
 		}
 		modifier = {
-			factor = 1000
+			factor = 10
 			is_in_important_war = yes
 		}
 	}
@@ -385,13 +389,13 @@ local_army_organisation = {
 	land_maintenance_modifier = -0.1
 
 	ai_will_do = {
-		factor = 2
+		factor = 5
 		modifier = {
 			factor = 2
 			is_at_war = yes
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			is_in_important_war = yes
 		}
 	}
@@ -937,6 +941,14 @@ the_witchcraft_act = {
 
 	ai_will_do = {
 		factor = 5
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 10
+			is_in_important_war = yes
+		}
 	}
 }
 
@@ -1032,10 +1044,14 @@ wielders_of_the_flaming_sword_policy = {
 	shock_damage = 0.05
 	
 	ai_will_do = {
-		factor = 1.0
+		factor = 5.0
 		modifier = {
-			factor = 1.5
+			factor = 5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 10
+			is_in_important_war = yes
 		}
 	}
 }
@@ -1057,10 +1073,14 @@ the_three_sisters_policy = {
 	infantry_cost = -0.15
 	
 	ai_will_do = {
-		factor = 1.0
+		factor = 5.0
 		modifier = {
-			factor = 1.5
+			factor = 2.5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 10
+			is_in_important_war = yes
 		}
 	}
 }
@@ -1113,7 +1133,7 @@ war_on_our_terms_policy = {
 			is_at_war = yes
 		}
 		modifier = {
-			factor = 1000
+			factor = 10
 			is_in_important_war = yes
 		}
 	}
@@ -1186,10 +1206,14 @@ kharash_policy = {
 	vassal_forcelimit_bonus = 1.0
 
 	ai_will_do = {
-		factor = 1.0
+		factor = 5.0
 		modifier = {
 			factor = 1.5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 10
+			is_in_important_war = yes
 		}
 	}
 }

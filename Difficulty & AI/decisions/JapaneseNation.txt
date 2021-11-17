@@ -23,7 +23,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			num_of_cities = 15
+			num_of_cities = 20
 			owns = 1020
 			owns = 1028
 		}
@@ -49,7 +49,7 @@ country_decisions = {
 				}
 				add_permanent_claim = ROOT 
 			}
-			set_global_flag = shogunate_reformed_flag 
+			set_global_flag = shogunate_reformed_flag
 		}
 		ai_will_do = {
 			factor = 1

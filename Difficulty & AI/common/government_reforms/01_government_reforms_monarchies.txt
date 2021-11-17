@@ -231,6 +231,7 @@ shogunate = {
 	allow_vassal_war = yes
 	allow_vassal_alliance = yes
 	lock_level_when_selected = yes
+	can_change_primary_culture = no
 
 	modifiers = {
 		diplomats = 1
@@ -374,7 +375,7 @@ celestial_empire = {
 		nobles_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
 		nomadic_tribes_influence_modifier = -0.1
-		governing_capacity = 200
+		governing_capacity = 300
 	}
 	
 	ai = {
@@ -623,7 +624,7 @@ principality = {
 			}
 		}
 	}
-	fixed_rank = 2
+	fixed_rank = 1
 	legacy_equivalent = principality_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 5

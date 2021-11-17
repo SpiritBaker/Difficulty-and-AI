@@ -49,5 +49,8 @@ reconquest_of_luoyang = {
 	imperial_mandate = 0.05
 }
 esen_taishi = {
- reduced_liberty_desire = 20
+ 	reduced_liberty_desire = 20
+}
+jap_sengoku_jidai_shogun = {
+	reduced_liberty_desire = -10	
 }

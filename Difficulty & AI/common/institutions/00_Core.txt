@@ -15,10 +15,9 @@
 #######################################
 
 feudalism = {
-	penalty = 0.5
+
 	bonus = {
 		free_leader_pool = 1
-		cavalry_flanking = 0.25
 	}
 
 	trade_company_efficiency = 0.2
@@ -160,48 +159,22 @@ feudalism = {
 			scale = yes
 			force_potential = yes	# Hide the this modifier when potential is false
 			potential = {
-				owner = { 
-					OR = {
-						AND = {
-							has_estate = estate_nobles
-							is_tribal = no
-						}
-						has_estate = nomadic_aristocracy
-					}
-				}
+				owner = { has_estate = estate_nobles }
 			}
 			custom_trigger_tooltip = {
 				tooltip = FEUDALISM_AND_NOBLES
-				OR = {
-					any_neighbor_province = {
-						feudalism = 100
-					}
-					is_capital = yes
+				any_neighbor_province = {
+					feudalism = 100
 				}
 				owner = {
-					OR = {
-						AND = {
-							has_estate = estate_nobles
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 40
-							}
-							estate_territory = {
-								estate = estate_nobles
-								territory = 15
-							}
-						}
-						AND = {
-							has_estate = nomadic_aristocracy
-							estate_loyalty = {
-								estate = nomadic_aristocracy
-								loyalty = 40
-							}
-							estate_territory = {
-								estate = nomadic_aristocracy
-								territory = 15
-							}
-						}
+					has_estate = estate_nobles
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+					estate_territory = {
+						estate = estate_nobles
+						territory = 30
 					}
 				}
 			}
@@ -262,28 +235,6 @@ feudalism = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.25
-			scale = yes
-			potential = {
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = OVERLORD_INFLUENCE
-				is_capital = yes
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-					overlord = { 
-						is_emperor_of_china = yes
-						has_institution = feudalism
-					}
-				}
-			}
-		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -319,7 +270,6 @@ feudalism = {
 #######################################
 
 renaissance = {
-	penalty = 0.5
 
 	bonus = {
 		development_cost = -0.05
@@ -548,44 +498,6 @@ renaissance = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.25
-			scale = yes
-			potential = {
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = OVERLORD_INFLUENCE
-				is_capital = yes
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-					overlord = { 
-						is_emperor_of_china = yes
-						has_institution = renaissance
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 0.25
-			scale = yes
-			potential = {
-				owner = {
-					has_country_modifier = byzantine_influx
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = byzantine_influx_spread_of_renaissance
-				is_capital = yes
-				owner = {
-					has_country_modifier = byzantine_influx
-				}
-			}
-		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -621,7 +533,6 @@ renaissance = {
 # Colonising is good.. mkay.-.
 #######################################
 new_world_i = {
-	penalty = 0.5
 
 	bonus = {
 		global_prov_trade_power_modifier = 0.10
@@ -881,28 +792,6 @@ new_world_i = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.2
-			scale = yes
-			potential = {
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = OVERLORD_INFLUENCE
-				is_capital = yes
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-					overlord = { 
-						is_emperor_of_china = yes
-						has_institution = new_world_i
-					}
-				}
-			}
-		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -937,7 +826,6 @@ new_world_i = {
 # Printing Press
 #######################################
 printing_press = {
-	penalty = 0.5
 
 	bonus = {
 		stability_cost_modifier = -0.05
@@ -1246,32 +1134,10 @@ printing_press = {
 			}
 			
 			custom_trigger_tooltip = {
-				tooltip = tooltip_global_trade_embraced_other_continent
+				tooltip = tooltip_printing_press_embraced
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = printing_press
-				}
-			}
-		}
-		modifier = {
-			factor = 0.2
-			scale = yes
-			potential = {
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = OVERLORD_INFLUENCE
-				is_capital = yes
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-					overlord = { 
-						is_emperor_of_china = yes
-						has_institution = printing_press
-					}
 				}
 			}
 		}
@@ -1311,7 +1177,6 @@ printing_press = {
 # Global Trade
 #######################################
 global_trade = {
-	penalty = 0.5
 
 	bonus = {
 		merchants = 1
@@ -1366,7 +1231,6 @@ global_trade = {
 			}
 			AND = {
 				is_year = 1700
-				is_capital = no
 				OR = {
 					region = maghreb_region
 					region = egypt_region
@@ -1377,7 +1241,6 @@ global_trade = {
 			AND = {
 				is_year = 1720
 				has_port = yes
-				is_capital = no
 				OR = {
 					superregion = india_superregion
 					superregion = persia_superregion
@@ -1387,7 +1250,6 @@ global_trade = {
 			AND = {
 				is_year = 1750
 				has_port = yes
-				is_capital = no
 				superregion = africa_superregion
 			}
 		}
@@ -1429,164 +1291,44 @@ global_trade = {
 	
 		modifier = {
 			factor = 0.4 #Not scaled
-			potential = {
-				owner = {
-					OR = {
-						any_core_province = { 
-							global_trade = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								global_trade = 100
-							}
-						}
-					}
-				}
-			}
 			province_trade_power = 15
 		}
 		modifier = {
 			factor = 0.8 #Not Scaled
-			potential = {
-				owner = {
-					OR = {
-						any_core_province = { 
-							global_trade = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								global_trade = 100
-							}
-						}
-					}
-				}
-			}
 			province_trade_power = 25
 		}
 		modifier = {
 			factor = 1.2 #Not Scaled
-			potential = {
-				owner = {
-					OR = {
-						any_core_province = { 
-							global_trade = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								global_trade = 100
-							}
-						}
-					}
-				}
-			}
 			province_trade_power = 35
 		}
 		modifier = {
 			factor = 1.6 #Not Scaled
-			potential = {
-				owner = {
-					OR = {
-						any_core_province = { 
-							global_trade = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								global_trade = 100
-							}
-						}
-					}
-				}
-			}
 			province_trade_power = 45
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.4
 			scale = yes
 			potential = {
-				province_has_center_of_trade_of_level = 3
+				province_has_center_of_trade_of_level = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_center_of_trade_3_spread
 				province_has_center_of_trade_of_level = 3
-				OR = {
-					any_trade_node_member_province = {
-						global_trade = 100
-					}
-					owner = {
-						OR = {
-							any_core_province = { 
-								global_trade = 100
-							}
-							any_neighbor_country = {
-								any_core_province = { 
-									global_trade = 100
-								}
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.1
 			scale = yes
 			potential = {
-				province_has_center_of_trade_of_level = 2
-				NOT = { province_has_center_of_trade_of_level = 3 }
+				province_has_center_of_trade_of_level = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_center_of_trade_spread
 				province_has_center_of_trade_of_level = 2
-				OR = {
-					any_trade_node_member_province = {
-						global_trade = 100
-					}
-					owner = {
-						OR = {
-							any_core_province = { 
-								global_trade = 100
-							}
-							any_neighbor_country = {
-								any_core_province = { 
-									global_trade = 100
-								}
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
-			factor = 0.15
-			scale = yes
-			potential = {
-				province_has_center_of_trade_of_level = 1
-				NOT = { province_has_center_of_trade_of_level = 2 }
-			}
-			custom_trigger_tooltip = {
-				tooltip = tooltip_center_of_trade_spread
-				province_has_center_of_trade_of_level = 1
-				OR = {
-					any_trade_node_member_province = {
-						global_trade = 100
-					}
-					owner = {
-						OR = {
-							any_core_province = { 
-								global_trade = 100
-							}
-							any_neighbor_country = {
-								any_core_province = { 
-									global_trade = 100
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 0.2
+			factor = 0.1
 			scale = yes
 			force_potential = yes	# Hide the this modifier when potential is false
 			potential = {
@@ -1594,6 +1336,9 @@ global_trade = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_global_trade_burghers
+				any_neighbor_province = {
+					global_trade = 100
+				}
 				owner = {
 					has_estate = estate_burghers
 					estate_loyalty = {
@@ -1604,17 +1349,12 @@ global_trade = {
 						estate = estate_burghers
 						territory = 30
 					}
-					any_neighbor_country = {
-						any_core_province = { 
-							global_trade = 100
-						}
-					}
 				}
 			}
 		}
 
 		modifier = {
-			factor = 0.3
+			factor = 0.25
 			scale = yes
 			potential = {
 				has_port = no
@@ -1624,6 +1364,7 @@ global_trade = {
 				has_port = no
 				any_neighbor_province = {
 					global_trade = 100
+					
 				}
 			}
 		}
@@ -1637,12 +1378,13 @@ global_trade = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_neighbor_port_province_global_trade
 				has_port = yes
-				any_friendly_coast_border_province = {
+				any_neighbor_province = {
 					global_trade = 100
+					
 				}
 			}
 		}
-
+		
 		modifier = {
 			factor = 5
 			scale = yes
@@ -1667,11 +1409,6 @@ global_trade = {
 		modifier = {
 			factor = 0.5
 			printing_press = 100
-			potential = {
-				any_friendly_coast_border_province = {
-					global_trade = 100
-				}
-			}
 		}
 		modifier = {
 			factor = 2
@@ -1709,28 +1446,6 @@ global_trade = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.15
-			scale = yes
-			potential = {
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = OVERLORD_INFLUENCE
-				is_capital = yes
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-					overlord = { 
-						is_emperor_of_china = yes
-						has_institution = global_trade
-					}
-				}
-			}
-		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -1764,7 +1479,6 @@ global_trade = {
 # Manufactories
 #######################################
 manufactories = {
-	penalty = 0.5
 
 	bonus = {
 		global_trade_goods_size_modifier = 0.1
@@ -1895,7 +1609,7 @@ manufactories = {
 			}
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.15
 			scale = yes
 			potential = {
 				NOT = {
@@ -1929,18 +1643,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_wharf_on_institution_continent
 				has_building = wharf
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -1958,18 +1660,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_weapons_on_institution_continent
 				has_building = weapons
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -1989,18 +1679,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_on_institution_continent
 				has_building = textile
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2022,18 +1700,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_plantations_on_institution_continent
 				has_building = plantations
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2055,18 +1721,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_tradecompany_on_institution_continent
 				has_building = tradecompany
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2085,18 +1739,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_farm_estate_on_institution_continent
 				has_building = farm_estate
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2117,18 +1759,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_mills_on_institution_continent
 				has_building = mills
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2147,18 +1777,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_wharf_not_institution_continent
 				has_building = wharf
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2176,18 +1794,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_weapons_not_institution_continent
 				has_building = weapons
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2207,18 +1813,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_textile_not_institution_continent
 				has_building = textile
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2240,18 +1834,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_plantations_not_institution_continent
 				has_building = plantations
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2273,18 +1855,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_tradecompany_not_institution_continent
 				has_building = tradecompany
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2303,18 +1873,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_farm_estate_not_institution_continent
 				has_building = farm_estate
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2335,18 +1893,6 @@ manufactories = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_mills_not_institution_continent
 				has_building = mills
-				owner = {
-					OR = {
-						any_core_province = { 
-							manufactories = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								manufactories = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
@@ -2405,28 +1951,6 @@ manufactories = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.15
-			scale = yes
-			potential = {
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = OVERLORD_INFLUENCE
-				is_capital = yes
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-					overlord = { 
-						is_emperor_of_china = yes
-						has_institution = manufactories
-					}
-				}
-			}
-		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -2461,7 +1985,6 @@ manufactories = {
 # Enlightenment
 #######################################
 enlightenment = {
-	penalty = 0.5
 
 	bonus = {
 		culture_conversion_cost = -0.25
@@ -2560,7 +2083,7 @@ enlightenment = {
 	
 	embracement_speed = {
 		modifier = {
-			factor = 0.5
+			factor = 0.4
 			scale = yes
 			custom_trigger_tooltip = {
 				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_enlightenment
@@ -2570,7 +2093,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.2
 			scale = yes
 			potential = {
 				NOT = {
@@ -2604,7 +2127,7 @@ enlightenment = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.4
 			potential = {
 				enlightenment_origin = {
 					same_continent = PREV
@@ -2614,22 +2137,10 @@ enlightenment = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_university_on_institution_continent
 				has_building = university
-				owner = {
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			potential = {
 				enlightenment_origin = {
 					NOT = { same_continent = PREV }
@@ -2639,22 +2150,10 @@ enlightenment = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_university_not_institution_continent
 				has_building = university
-				owner = {
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.4
 			potential = {
 				owner = {
 					has_parliament = yes
@@ -2667,22 +2166,10 @@ enlightenment = {
 				enlightenment_origin = {
 					same_continent = PREV
 				}
-				owner = {
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
-				}
 			}
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			potential = {
 				owner = {
 					has_parliament = yes
@@ -2693,18 +2180,6 @@ enlightenment = {
 				has_seat_in_parliament = yes
 				enlightenment_origin = {
 					NOT = { same_continent = PREV }
-				}
-				owner = {
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
 				}
 			}
 		}
@@ -2721,28 +2196,6 @@ enlightenment = {
 				owner = {
 					advisor = philosopher
 					dip_tech = 20
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
-				}
-				owner = {
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
 				}
 			}
 		}
@@ -2759,16 +2212,6 @@ enlightenment = {
 				owner = {
 					advisor = philosopher
 					dip_tech = 20
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
 				}
 			}
 		}
@@ -2785,16 +2228,6 @@ enlightenment = {
 				owner = {
 					advisor = natural_scientist
 					dip_tech = 20
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
 				}
 			}
 		}
@@ -2811,21 +2244,11 @@ enlightenment = {
 				owner = {
 					advisor = natural_scientist
 					dip_tech = 20
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
 				}
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 5
 			potential = {
 				enlightenment_origin = {
 					same_continent = PREV
@@ -2836,16 +2259,6 @@ enlightenment = {
 				is_capital = yes
 				owner = {
 					full_idea_group = innovativeness_ideas
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
 				}
 			}
 		}
@@ -2861,16 +2274,6 @@ enlightenment = {
 				is_capital = yes
 				owner = {
 					full_idea_group = innovativeness_ideas
-					OR = {
-						any_core_province = { 
-							enlightenment = 100
-						}
-						any_neighbor_country = {
-							any_core_province = { 
-								enlightenment = 100
-							}
-						}
-					}
 				}
 			}
 		}
@@ -2930,28 +2333,6 @@ enlightenment = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.1
-			scale = yes
-			potential = {
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = OVERLORD_INFLUENCE
-				is_capital = yes
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-					overlord = { 
-						is_emperor_of_china = yes
-						has_institution = enlightenment
-					}
-				}
-			}
-		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -2986,7 +2367,6 @@ enlightenment = {
 # Industrialisation
 #######################################
 industrialization = {
-	penalty = 0.5
 	
 	trade_company_efficiency = 2.0
 
@@ -3156,7 +2536,7 @@ industrialization = {
 		}
 		#Rule Britannia specific
 		modifier = {
-			factor = 2
+			factor = 1
 			force_potential = yes
 			potential = {
 				has_dlc = "Rule Britannia"
@@ -3171,7 +2551,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1
 			force_potential = yes
 			potential = {
 				has_dlc = "Rule Britannia"
@@ -3186,7 +2566,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1
 			force_potential = yes
 			potential = {
 				has_dlc = "Rule Britannia"
@@ -3609,28 +2989,6 @@ industrialization = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = industrialization
-				}
-			}
-		}
-		modifier = {
-			factor = 0.1
-			scale = yes
-			potential = {
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = OVERLORD_INFLUENCE
-				is_capital = yes
-				owner = {
-					is_subject = yes
-					is_subject_of_type = tributary_state
-					overlord = { 
-						is_emperor_of_china = yes
-						has_institution = industrialization
-					}
 				}
 			}
 		}

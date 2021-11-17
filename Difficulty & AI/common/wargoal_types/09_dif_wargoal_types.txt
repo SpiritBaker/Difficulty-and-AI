@@ -84,3 +84,17 @@ horde_invasion = {
 	
 	war_name = PRIMITIVE_WAR_NAME	
 }
+
+take_capital_vassalize_principality = {
+	type = take_capital
+	
+	badboy_factor = 1
+	prestige_factor = 1
+	peace_cost_factor = 0.75
+	
+	peace_options = {
+		po_subjugate_vassal
+	}
+	
+	war_name = VASSAL_MISSION_WAR_NAME
+}

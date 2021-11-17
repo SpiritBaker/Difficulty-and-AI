@@ -449,9 +449,9 @@ country_event = {
 				NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
-				mil = -2
-				adm = -2
-				dip = -2
+				change_mil = -2
+				change_adm = -2
+				change_dip = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -615,9 +615,9 @@ country_event = {
 				NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
-				mil = -2
-				adm = -2
-				dip = -2
+				change_mil = -2
+				change_adm = -2
+				change_dip = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -649,9 +649,9 @@ country_event = {
 		}
 		else = {
 			define_ruler = {
-				mil = -2
-				adm = -2
-				dip = -2
+				change_mil = -2
+				change_adm = -2
+				change_dip = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -690,7 +690,6 @@ country_event = {
 				adm = 4
 				mil = 2
 				dip = 2
-				fixed = yes
 			}
 			set_ruler_flag = appointed_by_overlord
 		}
@@ -703,7 +702,6 @@ country_event = {
 				adm = 2
 				dip = 4
 				mil = 2
-				fixed = yes
 			}
 			set_ruler_flag = appointed_by_overlord
 		}
@@ -716,7 +714,6 @@ country_event = {
 				adm = 2
 				dip = 2
 				mil = 4
-				fixed = yes
 			}	
 			set_ruler_flag = appointed_by_overlord
 		}
@@ -1431,9 +1428,9 @@ country_event = {
 			define_ruler = {
 				min_age = 30
 				max_age = 50
-				mil = -1
-				adm = -1
-				dip = -1
+				change_mil = -1
+				change_adm = -1
+				change_dip = -1
 				name = "lastname"
 				random_gender = yes # Allows random gender for republics
 			}
@@ -1465,9 +1462,9 @@ country_event = {
 			define_ruler = {
 				min_age = 30
 				max_age = 50
-				mil = -1
-				adm = -1
-				dip = -1
+				change_mil = -1
+				change_adm = -1
+				change_dip = -1
 				name = "lastname"
 			}
 		}

@@ -178,6 +178,9 @@ country_decisions = {
 			#owns = 723		# Xilin Gol
 			owns = 726		# Liaodong
 			owns = 1816		# Beijing
+			1816 = {		# Beijing
+				is_state = yes
+			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			NOT = {

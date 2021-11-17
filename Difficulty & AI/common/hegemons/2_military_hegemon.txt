@@ -17,11 +17,11 @@ military_hegemon = {
 	scale = {
 		movement_speed = 0.1
 		land_attrition = -0.2
-		siege_ability = 0.2
+		global_unrest = -3
 	}
 	
 	max = {
-		governing_capacity_modifier = 0.20
+		siege_ability = 0.2
 	}
 	
 }

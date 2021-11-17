@@ -59,7 +59,7 @@ country_event = {
 		tag = MCH
 		exists = MNG
 		NOT = { vassal_of = MNG }
-		is_year = 1500
+		is_year = 1600
 		NOT = {
 			is_year = 1700
 		}
@@ -113,7 +113,7 @@ country_event = {
 				}
 			}
 		}
-		is_year = 1500
+		is_year = 1600
 		NOT = { is_year = 1700 }
 	}
 	

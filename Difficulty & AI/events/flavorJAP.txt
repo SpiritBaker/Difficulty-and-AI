@@ -127,7 +127,7 @@ country_event = {
 		}
 		custom_tooltip = shogunate_mechanic_explanation
 		add_country_modifier = {
-			name = jap_sengoku_jidai
+			name = jap_sengoku_jidai_shogun
 			duration = 10950
 		}
 		add_legitimacy = -20
@@ -2021,7 +2021,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_jap.EVTOPTA28" # Follow the noble's advice
-		kill_heir = yes
+		kill_heir = {}
 		add_legitimacy = 20
 	}
 	option = {
@@ -2998,7 +2998,6 @@ country_event = {
 			age = 15
 			dip = 4
 			dynasty = ROOT
-			fixed = yes
 		}
 	}
 	
@@ -3012,7 +3011,6 @@ country_event = {
 			age = 15
 			adm = 4
 			dynasty = ROOT
-			fixed = yes
 		}
 	}
 	option = {
@@ -3026,7 +3024,6 @@ country_event = {
 			age = 15
 			mil = 4
 			dynasty = ROOT
-			fixed = yes
 		}
 	}
 }
@@ -3546,4 +3543,35 @@ province_event = {
 		change_trade_goods = gold
 	}
 	
+}
+
+#End of Onin war 
+country_event = {
+	id = flavor_jap.62
+	title = flavor_jap.62.t
+	desc = flavor_jap.62.d
+	picture = BATTLE_eventPicture
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			has_country_modifier = jap_sengoku_jidai_shogun
+			has_country_modifier = jap_sengoku_jidai
+		}
+		has_global_flag = shogunate_reformed_flag
+	}
+	option = {
+		if = {
+			limit = {
+				has_country_modifier = jap_sengoku_jidai_shogun
+			}
+			remove_country_modifier = jap_sengoku_jidai_shogun
+		}
+		if = {
+			limit = {
+				has_country_modifier = jap_sengoku_jidai
+			}
+			remove_country_modifier = jap_sengoku_jidai
+		}
+	}
 }

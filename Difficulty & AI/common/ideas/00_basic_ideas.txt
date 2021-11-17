@@ -57,7 +57,6 @@ aristocracy_ideas = {
 
 	ai_will_do = {
 		factor = 1.2
-		
 		modifier = {
 			factor = 0.5
 			is_subject = yes
@@ -634,7 +633,11 @@ offensive_ideas = {
 
 	ai_will_do = {
 		factor = 1.75
-
+		modifier = {
+			factor = 2
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
+		}
 		modifier = {
 			factor = 1.5
 			has_idea_group = aristocracy_ideas
@@ -705,7 +708,11 @@ defensive_ideas = {
 
 	ai_will_do = {
 		factor = 1.75
-
+		modifier = {
+			factor = 2
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
+		}
 		#modifier = {
 		#	factor = 1.5
 		#	has_idea_group = trade_ideas
@@ -1297,6 +1304,11 @@ quality_ideas = {
 	ai_will_do = {
 		factor = 1.75
 		modifier = {
+			factor = 2
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
+		}
+		modifier = {
 			factor = 1.5
 			OR = {
 				religion = anglican
@@ -1373,7 +1385,11 @@ quantity_ideas = {
 
 	ai_will_do = {
 		factor = 1.75
-
+		modifier = {
+			factor = 2
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
+		}
 		modifier = {
 			factor = 1.2
 			army_size = 100

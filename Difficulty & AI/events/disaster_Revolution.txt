@@ -1326,7 +1326,6 @@ country_event = {
 			adm = 5
 			dip = 2
 			mil = 2
-			fixed = yes
 		}
 	}
 }
@@ -1417,7 +1416,6 @@ country_event = {
 			adm = 5
 			dip = 3
 			mil = 0
-			fixed = yes
 		}
 	}
 	option = {
@@ -1487,7 +1485,6 @@ country_event = {
 			adm = 5
 			dip = 3
 			mil = 1
-			fixed = yes
 		}
 	}
 }
@@ -1609,7 +1606,6 @@ country_event = {
 			adm = 6
 			dip = 5
 			mil = 6
-			fixed = yes
 		}
 		if = {
 			limit = {

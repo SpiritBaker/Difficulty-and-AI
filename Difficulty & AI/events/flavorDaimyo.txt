@@ -80,7 +80,6 @@ country_event = {
 				adm = 4
 				dip = 4
 				mil = 5
-				fixed = yes
 			}
 		}
 	}
@@ -162,7 +161,6 @@ country_event = {
 				adm = 5
 				dip = 4
 				mil = 5
-				fixed = yes
 			}
 		}
 	}
@@ -250,7 +248,6 @@ country_event = {
 				adm = 5
 				dip = 6
 				mil = 4
-				fixed = yes
 			}
 		}
 	}
@@ -394,7 +391,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_daimyo.5.b #Support Mochitomi's claim.
-		remove_heir = yes
+		remove_heir = {}
 		define_heir = {
 			name = "Mochitomi"
 			dynasty = ROOT
@@ -592,9 +589,9 @@ country_event = {
 		define_ruler = {
 			name = "Nagayoshi"
 			dynasty = "Miyoshi"
-			adm = 3
-			dip = 3
-			mil = 3
+			change_adm = 3
+			change_dip = 3
+			change_mil = 3
 		}
 	}
 }
@@ -1158,7 +1155,6 @@ country_event = {
 		define_ruler = {
 			name = "Shingen"
 			dynasty = "Takeda"
-			fixed = yes
 			adm = 5
 			dip = 5
 			mil = 5
@@ -1336,7 +1332,6 @@ country_event = {
 		define_ruler = {
 			name = "Nobunaga"
 			dynasty = "Oda"
-			fixed = yes
 			adm = 5
 			dip = 5
 			mil = 6
@@ -1398,7 +1393,6 @@ country_event = {
 			adm = 5
 			dip = 6
 			mil = 5
-			fixed = yes
 		}
 	}
 }
