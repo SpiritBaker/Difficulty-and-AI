@@ -167,7 +167,7 @@ technology = { #Early Modern Administration
 		renaissance = 0.5
 		new_world_i = 0.5
 	}
-	allowed_idea_groups	= 4
+	allowed_idea_groups = 4
 	#governing_capacity = 50
 	state_house = yes
 }
@@ -386,7 +386,7 @@ technology = { #Separation of Powers
 		enlightenment = 0.5
 	}
 	
-	allowed_idea_groups 	= 	7
+	governing_capacity = 250
 }
 
 technology = { #Modern Bureaucracy
@@ -405,7 +405,6 @@ technology = { #Modern Bureaucracy
 	allowed_idea_groups = 9
 	administrative_efficiency = 0.1
 	development_efficiency = 0.1	
-	governing_capacity = 250
 }
 
 technology = { #Rotherham Plough

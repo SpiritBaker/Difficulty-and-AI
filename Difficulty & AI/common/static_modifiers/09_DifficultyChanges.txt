@@ -129,10 +129,10 @@ development = {
 	local_amount_of_banners = 0.05
 }
 
-provincial_tax_income = {
-	regiment_recruit_speed = -0.01
-	governing_capacity = 0.5
-}
+#provincial_tax_income = {
+#	regiment_recruit_speed = -0.01
+#	governing_capacity = 0.5
+#}
 
 #provincial_production_size = {
 #	trade_goods_size = 0.2
@@ -376,21 +376,4 @@ expanded_infrastructure = {
 	allowed_num_of_manufactories = 1
 	local_governing_cost_increase = 50
 	local_governing_cost = 0.25
-}
-
-daimyo_subject = {
-	land_forcelimit	= 1
-	land_maintenance_modifier = -0.1
-}
-
-all_nations = {
-	global_tax_income = 12
-	land_forcelimit	= 5 #from 6
-	naval_forcelimit = 12
-}
-
-subject_nation = {
-	global_tax_income = -6
-	land_forcelimit	= -2 #from 3
-	naval_forcelimit = -6
 }
