@@ -32,7 +32,7 @@ AI_OPM_penalty = {
 
 AI_keep_starting_troops = {
 	potential = {
-		#always = no
+		always = no
 		ai = yes
 		NOT = { is_year = 1454 }
 	}

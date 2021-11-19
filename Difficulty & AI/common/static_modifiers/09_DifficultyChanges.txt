@@ -36,6 +36,7 @@ ai_nation = {
 	#state_maintenance_modifier = -0.1
 	#war_exhaustion = -0.02
 	#fort_maintenance_modifier = -0.2
+	advisor_cost = -0.25
 }
 
 base_values = {
