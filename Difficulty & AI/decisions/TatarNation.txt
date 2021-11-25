@@ -74,7 +74,11 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = GLH }
-			has_reform = steppe_horde
+			OR = {
+				has_reform = steppe_horde
+				has_reform = nomad_empire
+				has_reform = khanate_monarchy
+			}
 			owns_core_province = 284 #Crimea
 			owns_core_province = 302 #Tambov
 			owns_core_province = 464 #Astrakhan

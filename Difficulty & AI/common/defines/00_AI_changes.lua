@@ -55,10 +55,11 @@ NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
 NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
 NDefines.NAI.AI_CONVERT_CULTURES = 0	--If set to 0 AI will not convert cultures.
 
-NDefines.NAI.MAX_CAV_PERCENTAGE = 65
+NDefines.NAI.MAX_CAV_PERCENTAGE = 60
+NDefines.NAI.MIN_CAV_PERCENTAGE = 0
 NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.25	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
 --NDefines.NAI.ARMY_BUDGET_FRACTION = 0.80
-NDefines.NAI.ARTILLERY_FRACTION = 0.15
+NDefines.NAI.ARTILLERY_FRACTION = 0.18
 NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16
 NDefines.NAI.NAVY_BUDGET_FRACTION = 0.4 -- AI will spend a maximum of this fraction of monthly income on navy maintenance (based off wartime costs)
 NDefines.NAI.TRANSPORT_FRACTION = 0.35

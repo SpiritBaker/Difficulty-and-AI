@@ -56,7 +56,7 @@ aristocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.2
+		factor = 1.4
 		modifier = {
 			factor = 0.5
 			is_subject = yes
@@ -183,7 +183,7 @@ plutocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 1.8
 	}
 }
 
@@ -284,7 +284,7 @@ indigenous_ideas = {
 	}
 
 	indigenous_bountiful_land = {
-		tribal_development_growth = 0.02
+		tribal_development_growth = 0.015
 		development_cost = -0.05
 	}
 	indigenous_irregular_warfare = {
@@ -400,6 +400,11 @@ religious_ideas = {
 		devotion = 0.5
 		monthly_fervor_increase = 0.25
 		church_power_modifier = 0.1
+		monthly_piety = 0.001
+		yearly_karma_decay = 0.1
+		yearly_doom_reduction = 1
+		yearly_authority = 0.15
+		yearly_patriarch_authority = 0.005
 	}
 	religious_tradition = {
 		prestige = 1
@@ -632,7 +637,7 @@ offensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.75
+		factor = 2
 		modifier = {
 			factor = 2
 			adm_tech = 4
@@ -677,7 +682,6 @@ defensive_ideas = {
 	category = MIL
 
 	bonus = {
-		
 		hostile_attrition = 1
 	}
 
@@ -707,7 +711,7 @@ defensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.75
+		factor = 2
 		modifier = {
 			factor = 2
 			adm_tech = 4
@@ -1302,7 +1306,7 @@ quality_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.75
+		factor = 2
 		modifier = {
 			factor = 2
 			adm_tech = 4
@@ -1384,7 +1388,7 @@ quantity_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.75
+		factor = 2
 		modifier = {
 			factor = 2
 			adm_tech = 4
@@ -1622,6 +1626,7 @@ humanist_ideas = {
 	}
 	local_traditions = {
 		global_unrest = -2
+		harmonization_speed = 0.25
 	}
 	ecumenism = {
 		tolerance_heretic = 2
@@ -1827,7 +1832,7 @@ naval_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
+		factor = 0.6
 		modifier = {
 			factor = 0
 			is_tribal = yes

@@ -370,7 +370,7 @@ temple = {
 			NOT = { trade_goods = gold }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.3
 			NOT = { base_tax = 5 }
 			NOT = { trade_goods = gold }
 		}
@@ -623,6 +623,15 @@ shipyard = {
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
+		}
+		modifier = {
+			factor = 0.7
+			OR = {
+				trade_goods = grain
+				trade_goods = fish
+				trade_goods = livestock
+				trade_goods = wine
+			}
 		}	
 		modifier = {
 			factor = 0.5
@@ -783,7 +792,7 @@ coastal_defence = {
 	}
 
 	ai_will_do = {
-		factor = 3
+		factor = 4
 		modifier = {
 			factor = 0
 			NOT = {
@@ -792,25 +801,6 @@ coastal_defence = {
 					has_building = fort_16th
 					has_building = fort_17th
 					has_building = fort_18th
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
 				}
 			}
 		}
@@ -1244,7 +1234,7 @@ naval_battery = {
 	}
 
 	ai_will_do = {
-		factor = 3
+		factor = 4
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1253,26 +1243,6 @@ naval_battery = {
 					has_building = fort_16th
 					has_building = fort_17th
 					has_building = fort_18th
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = { has_building = coastal_defence }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
 				}
 			}
 		}
@@ -1746,7 +1716,16 @@ grand_shipyard = {
 		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
-		}	
+		}
+		modifier = {
+			factor = 0.7
+			OR = {
+				trade_goods = grain
+				trade_goods = fish
+				trade_goods = livestock
+				trade_goods = wine
+			}
+		}		
 		modifier = {
 			factor = 0.5
 			FROM = {
@@ -3138,7 +3117,7 @@ farm_estate = {
 			has_latent_trade_goods = coal
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.35
 			FROM = { adm_tech = 15 }
 		}
 	}
@@ -3415,7 +3394,7 @@ soldier_households = {
 	ai_will_do = {
 		factor = 8.5
 		modifier = {
-			factor = 0
+			factor = 0.3
 			NOT = {
 				OR = {
 					trade_goods = gold

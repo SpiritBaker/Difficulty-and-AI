@@ -638,3 +638,58 @@ country_event = {
 		#hidden
 	}
 }
+
+country_event = {
+	# delete temples
+	id = build_events.3
+	title = build_events.3.t
+	desc = build_events.3.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		primitives = no
+		#always = no
+		
+		NOT = { num_of_loans = 1 }
+		treasury = 1000
+		is_in_deficit = no
+		
+		any_owned_province = {
+			is_state_core = ROOT
+			OR = {
+				has_building = temple
+				has_building = cathedral
+			}
+			NOT = { num_free_building_slots = 1 }
+			NOT = { base_tax = 5 }
+			NOT = { trade_goods = gold }
+		}	
+	}
+	immediate = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				NOT = { num_free_building_slots = 1 }
+				NOT = { base_tax = 5 }
+			}
+			save_event_target_as = delete_temple
+		}	
+		event_target:delete_temple = {
+			if = {
+				limit = { has_building = temple }
+				remove_building = temple
+			}
+			else_if = {
+				limit = { has_building = cathedral }
+				remove_building = cathedral
+			}
+		}
+	}
+	option = {
+	}
+}

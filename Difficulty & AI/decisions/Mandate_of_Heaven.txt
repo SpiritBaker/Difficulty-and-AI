@@ -147,6 +147,16 @@ country_decisions = {
 					has_reform = united_shogunate
 				}
 			}
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_owned_provinces_with = {
+						superregion = china_superregion
+						is_core = root
+						value = 35 #107 
+					}
+				}
+			}
 		}
 		ai_importance = 500
 	}

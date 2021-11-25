@@ -230,7 +230,7 @@ warring_state = {
 		locked_government_type = yes
 	}
 	ai = {
-		factor = 10
+		factor = 25
 	}
 }
 
