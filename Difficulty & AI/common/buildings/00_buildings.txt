@@ -1437,10 +1437,6 @@ university = {
 			}			
 		}
 		modifier = {
-			factor = 0.7
-			NOT = { is_state = yes }
-		}
-		modifier = {
 			factor = 0.4
 			has_climate = arctic
 		}

@@ -157,7 +157,7 @@ estate_church =
 		trigger = {
 			is_nomad = yes
 		}	
-		influence = -5
+		influence = -10
 	}
 	custom_name = {
 		desc = estate_ogboni
