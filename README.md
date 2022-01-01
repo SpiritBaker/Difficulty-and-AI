@@ -1,22 +1,6 @@
 # Difficulty-and-AI
 EU4 mod. https://steamcommunity.com/sharedfiles/filedetails/?id=2053238435
 
-Overview:
-This mod primarily focused on Difficulty, AI and Balance, as well as adding bits of content that are in line with a base game. The goal is to push Difficulty as much as possible while still keeping the game fun and balanced.
-
-Generally AI Difficulty bonuses are halved, instead Difficulty Ramps up over the course of the game. AI logic is overhauled in every possible aspect of the game. Using Multiplayer meta as a reference point.
-
-
-On Normal difficulty the game will feel similar to vanilla but harder, on Very Hard the game escalates over time and looks like a player game. I'm recommending Very Hard if you are looking for a challenge, or if it's a Coop game.
-
-This project started a year ago as my private test ground for various AI issues. A product of very hard work, hundreds of test games and collaborations with different modding teams.    
-
-
-Incompatible with most mods. 
-
-https://github.com/SpiritBaker/Difficulty-and-AI/releases
-https://discord.gg/DP6FvXaVj4
-
 Content:
 - Added optional Development click decision, that develops the cheapest province at monarch point cap. Works for both the Players and AI. Big thanks to LoStack for implementing it. ( https://github.com/stackpoint/Dev-Click )
 - Added 5 terrain types to the game, replacing most of the vanilla ones, reworking problem areas of the map. The source of the Images is CK3 and I:R.
@@ -50,6 +34,7 @@ Asia:
 - Reworking and fixing bugs in Chineses disasters.
 - Laying down ground work for AI to form Qing and fully conquer China.
 - Changing names for several countries in the region to more appropriate historical counterparts.
+- Decision to reform Shogunate to simulate centralized nature of Tokugawa Shogunate a bit better.
 
 
 Gameplay and Balance changes:
@@ -84,6 +69,7 @@ Gameplay and Balance changes:
 
 
 Everything AI:
+- AI is more aggressive on higher difficulty.
 - Stopping AI from releasing a bunch of vassals when it exceeds governing capacity.   
 - No debase currency.
 - Restricting AI army movements a bit, AI should behave more defensively.
@@ -95,12 +81,12 @@ Everything AI:
 - Added AI scripting that upgrades Forts and deletes redundant Forts.
 - War Enthusiasm changes, secondary participants are affected by balance of forces.
 - Fix for logic behind Religious interaction. Orthodox Icons and Anglican aspects.
-- AI should use knowledge sharing more often.
+- AI should use knowledge sharing more often. (Removed, affects the game to much)
 - Some AI personalities can dev push institisions.
 - Increased AI budget fraction for missionary maintenance.
 - Lowering early game cannons ratio for AI.
 - Lowering AI transport ship ratio.
--AI should use guarantee less often.
+- AI should use guarantee less often.
 - Changed AI reasons for giving subsidies, AI will prioritize sending it to Allies in debt.
 - Increasing AI score for accepting cultures.
 - Enabling various decisions for AI. For example building canals.
