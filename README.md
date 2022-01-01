@@ -100,12 +100,6 @@ Known problems
 - AI doesn't like using Edicts, same issues as in 1.30.  
 
 
-
-Light and more compatible version of this mod. Only slightly improves AI as a result. ( Not updating it for 1.30.*, the game have too many issues )
-https://steamcommunity.com/sharedfiles/filedetails/?id=1813320386
-
-
-
 Special thanks to ppl who helped us test development build and provided feedback along the way: 
 Atwix
 Derrurak
