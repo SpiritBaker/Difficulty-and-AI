@@ -201,7 +201,7 @@ interaction = {
         }
     }
 	ai_will_do = {
-		factor = 50 # AI won't do agendas
+		factor = 0 # AI won't do agendas
 		modifier = {
 			factor = 0
 			estate_influence = {
