@@ -100,6 +100,13 @@
  #vajrayana_tengri_syncretism_desc:0 ""
  #dzungar_centralized_bureaucracy:0 "Direct Control of Huntaiji"
  #dzungar_centralized_bureaucracy_desc:0 ""
+ NOG_ideas:0 "Nogai Ideas"
+ NOG_ideas_start:0 "Nogai Traditions"
+ NOG_ideas_bonus:0 "Nogai Ambition"
+ NOG_devastating_raids:0 "Envoys of "
+ NOG_devastating_raids_desc:0 ""
+ NOG_steppe_wolf:0 ""
+ NOG_steppe_wolf_desc:0 ""
  
  descendants_of_shiban:0 "Descendants of Shiban"
  descendants_of_shiban_desc:0 "Your ruler is descendant of Shiban, the Grandson of Chinggis Khan. As a member of royal Chinggisid bloodline we have the Right to Rule as legitimate descendants of the Great Khan."

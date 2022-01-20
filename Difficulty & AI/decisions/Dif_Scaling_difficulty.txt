@@ -1,0 +1,47 @@
+country_decisions = {
+	scaling_difficulty_on = {
+		major = yes
+		
+		potential = {
+			ai = no
+			has_global_flag = scaling_difficulty_flag	
+			NOT = { had_global_flag = { flag = janYear	days = 365 } }
+			has_global_flag = janYear
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = scaling_difficulty_flag
+				}
+				country_event = { id = dif_ai.7 }
+			}
+			else = {
+				country_event = { id = dif_ai.6 }
+			}
+		}
+	}
+	
+	scaling_difficulty_off = {
+		major = yes
+		
+		potential = {
+			ai = no
+			NOT = { has_global_flag = scaling_difficulty_flag }
+			NOT = { had_global_flag = { flag = janYear	days = 365 } }
+			has_global_flag = janYear
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = scaling_difficulty_flag
+				}
+				country_event = { id = dif_ai.7 }
+			}
+			else = {
+				country_event = { id = dif_ai.6 }
+			}
+		}
+	}
+}

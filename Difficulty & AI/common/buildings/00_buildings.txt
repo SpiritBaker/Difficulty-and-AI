@@ -2753,7 +2753,7 @@ wharf = {
 			}
 		}
 		modifier = { 
-			factor = 0.5
+			factor = 0.3
 			trade_goods = fish
 		}
 		modifier = { 

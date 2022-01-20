@@ -547,11 +547,11 @@ mindanao_ideas = {
 horde_ideas = {
 	start = {
 		ae_impact = -0.10
-		years_of_nationalism = -5
+		core_creation = -0.15
 	}
 	
 	bonus = {
-		stability_cost_modifier = -0.10
+		shock_damage = 0.1
 	}
 	
 	trigger = {
