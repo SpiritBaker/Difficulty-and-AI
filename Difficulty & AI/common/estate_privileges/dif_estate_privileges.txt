@@ -455,13 +455,30 @@ sedentary_subjects_guarantee_religious_freedom = {
 	}
 }
 
+sedentary_subjects_protection_of_trade_routes = {
+	icon = privilege_make_generous_donation
+	#max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	penalties = {
+	}
+	benefits = {
+		trade_efficiency = 0.10
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
 sedentary_subjects_weapons_tribute = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -5
 	loyalty = -0.05
 	influence = 0.05
 	can_select = {
-		is_nomad = no
+		#is_nomad = yes
 		any_owned_province = {
 			trade_goods = iron
 		}
@@ -510,6 +527,59 @@ estate_nomadic_tribes_great_games = {
 	}
 }
 
+estate_nomadic_tribes_raise_tribal_levies = {
+	icon = privilege_raise_host
+	#land_share = 5
+	#max_absolutism = -5
+	loyalty = -0.1
+	influence = 0.05
+	#can_select = {
+	#	horde_unity = 5
+	#}
+	on_granted = {
+		add_horde_unity = -5
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 4
+				speed = 1
+				cost = 0.5
+			}
+		}
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = dif_nomad_events.3 }
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_in_deficit = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { army_size_percentage = 0.5 }
+		}
+		modifier = {
+			factor = 0
+			army_size_percentage = 0.90
+		}
+	}
+}
+
 estate_nomadic_aristocracy_greater_war_support = {
 	icon = privilege_conscript_cossack_elite
 	max_absolutism = -10
@@ -525,6 +595,35 @@ estate_nomadic_aristocracy_greater_war_support = {
 	}
 	benefits = {
 		war_taxes_cost_modifier = -0.5
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_nomadic_aristocracy_share_of_tribute = {
+	icon = privilege_diplo_power
+	max_absolutism = -10
+	#land_share = 0
+	influence = 0.1
+	loyalty = 0.05
+	can_select = {
+		vassal = 1
+	}
+	is_valid = {
+		vassal = 1
+	}
+	on_granted = {
+	}
+	penalties = {
+		vassal_income = -0.25
+	}
+	benefits = {
+		vassal_forcelimit_bonus = 0.5
 	}
 	ai_will_do = {
 		factor = 10

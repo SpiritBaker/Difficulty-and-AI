@@ -23,15 +23,15 @@ shun_rebellion = {
 	land_maintenance_modifier = 0.10
 }
 uzbek_grand_host = {
-	land_morale = 0.05
-	land_maintenance_modifier = -0.10
+	shock_damage = 0.1
+	manpower_recovery_speed = 0.15
 }
 amur_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
 papal_investigate_heresy = {
-	unjustified_demands = -0.1
+	unjustified_demands = -0.25
 }
 reconquest_of_beijing = {
 	imperial_mandate = 0.05

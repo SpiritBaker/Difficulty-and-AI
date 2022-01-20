@@ -321,6 +321,13 @@ horde_development = {
 	horde_unity = -2
 }
 
+tribal_allegiance = {
+	nomadic_tribes_loyalty_modifier = 0.1
+	nomadic_tribes_influence_modifier = 0.1
+	manpower_recovery_speed = 0.33
+	global_unrest = -3
+}
+
 army_tradition = {
 	recover_army_morale_speed = 0.1
 	land_morale = 0.25

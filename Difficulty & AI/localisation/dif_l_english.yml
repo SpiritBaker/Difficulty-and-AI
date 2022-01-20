@@ -242,6 +242,8 @@
  estate_nomadic_aristocracy_statutory_rights:0 "Estates Statutory Rights"
  estate_nomadic_aristocracy_statutory_rights_desc:0 "In return for their support in a moment of need, the [Root.Monarch.GetTitle] has agreed to grant the Estates considerable rights that place stringent limitations on [Root.Monarch.GetHerHis] authority."
  estate_nomadic_aristocracy_primacy:0 "Primacy of the Noyans"
+ estate_nomadic_aristocracy_share_of_tribute:0 "Share of Tribute"
+ estate_nomadic_aristocracy_share_of_tribute_desc:0 "By letting noble families collect the tribute in the name of the Khan we can insure their loyalty and support in times of war."
  sedentary_subdjects:0 "City States"
  sedentary_subdjects_desc:0 "This estate represents City States and Farming communities that are nominally ruled by our Khan."
  sedentary_subdjects_influence_modifier:0 "City States Influence"
@@ -259,6 +261,8 @@
  sedentary_subjects_guarantee_religious_freedom_desc:0 "Discrimination and prejudice based on religious divisions cause our subjects great suffering. We must cast off our differences and come together to truly unite the state if we are to unlock our people's full potential."
  sedentary_subjects_weapons_tribute:0 "Levy a tax for Wepaons and Armor"
  sedentary_subjects_weapons_tribute_desc:0 "Our armies require a constant supply of Weapons and Armour; we can force our subjects to pay a special tax in the form of already made goods."
+ sedentary_subjects_protection_of_trade_routes:0 "Protection of Trade Routes"
+ sedentary_subjects_protection_of_trade_routes_desc:0 "By providing protection to merchant caravans we can promote trade in our lands."
  estate_nomadic_aristocracy_unrestricted_looting:0 "Unrestricted Looting"
  estate_nomadic_aristocracy_unrestricted_looting_desc:0 ""
  EST_VAL_ARISTOCRATIC_ARMY:0 "Traditional Ways: §Y$VAL$%§!"
@@ -268,6 +272,8 @@
  estate_nomadic_tribes_great_games_desc:0 "By supporting traditional Great Games and Great Hunts, we can use them as exercise for upcoming campaigns."
  estate_nomadic_aristocracy_greater_war_support:0 "Greater War Support"
  estate_nomadic_aristocracy_greater_war_support_desc:0 "By making alliances with powerful Noble families, we can secure their support at times of war."
+ estate_nomadic_tribes_raise_tribal_levies:0 "Raise Tribal Levies"
+ estate_nomadic_tribes_raise_tribal_levies_desc:0 "We can push additional tribal horsemen into our service. Nomadic lifestyle creates hardy warriors, but Clans might take this act as threat to their autonomy."
  
  #Agendas
  nomadic_aristocracy_build_army_building_in_y:0 "Expand Military Infrastructure in [agenda_province.GetName]"

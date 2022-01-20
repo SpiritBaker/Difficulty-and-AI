@@ -77,3 +77,23 @@ country_event = {
 		#custom_tooltip = increased_tribute_privileges.1.b.tooltip 
 	}
 }
+
+country_event = {
+	id = dif_nomad_events.3
+	title = dif_nomad_events.3.t
+	desc = dif_nomad_events.3.d
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_estate_privilege = estate_nomadic_tribes_rise_tribal_levies
+		}
+	}
+
+	option = {
+		#custom_tooltip = increased_tributeprivileges.1.b.tooltip 
+	}
+}

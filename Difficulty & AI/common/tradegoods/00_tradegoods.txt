@@ -1230,7 +1230,7 @@ cotton = {
 sugar = {
 	color = { 0.74 0.95 0.68 }
 	modifier = {
-		war_exhaustion_cost = -0.2
+		idea_cost = -0.05
 	}
 	province = {
 		local_unrest = -1
