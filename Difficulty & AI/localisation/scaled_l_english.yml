@@ -1,0 +1,18 @@
+﻿l_english:
+ 
+ scaling_difficulty_on_title:0 "Scaling Difficulty is §GON§!"
+ scaling_difficulty_on_desc:0 ""
+ scaling_difficulty_off_title:0 "Scaling Difficulty is §ROFF§!"
+ scaling_difficulty_off_desc:0 ""
+  
+ dif_ai.EVTNAME6:0 "Scaling Difficulty"
+ dif_ai.EVTDESC6:0 "The AI is fundamentally bad at certain areas of the game. This option allows you to enable additional AI bonuses that will increase with every subsequent Age. \n Doesn't give AI combat bonuses."
+ dif_ai.EVTOPTA6.a:0 "§GEnable§!"
+ dif_ai.EVTOPTA6.b:0 "§RDisable§!"
+ dif_ai.EVTOPTA6.c:0 "Close"
+ 
+ scaling_difficulty_AoDis:0 "Scaling Difficulty"
+ scaling_difficulty_AoRef:0 "Scaling Difficulty"
+ scaling_difficulty_AoAbs:0 "Scaling Difficulty"
+ scaling_difficulty_AoRev:0 "Scaling Difficulty"
+ 
