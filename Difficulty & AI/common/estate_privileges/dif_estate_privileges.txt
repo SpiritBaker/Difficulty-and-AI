@@ -549,7 +549,7 @@ estate_nomadic_tribes_raise_tribal_levies = {
 	}
 	cooldown_years = 10
 	on_cooldown_expires = {
-		country_event = { id = dif_nomad_events.3 }
+		remove_estate_privilege = estate_nomadic_tribes_raise_tribal_levies
 	}
 	penalties = {
 	}
