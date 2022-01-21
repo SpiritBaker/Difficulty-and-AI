@@ -1,5 +1,5 @@
 # Difficulty-and-AI
-EU4 mod. https://steamcommunity.com/sharedfiles/filedetails/?id=2053238435
+EU4 mod. https://steamcommunity.com/sharedfiles/filedetails/?id=2453967654
 
 Content:
 - Added optional Development click decision, that develops the cheapest province at monarch point cap. Works for both the Players and AI. Big thanks to LoStack for implementing it. ( https://github.com/stackpoint/Dev-Click )
