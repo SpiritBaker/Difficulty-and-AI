@@ -1342,6 +1342,10 @@ cb_force_tributary = {
 		is_neighbor_of = FROM
 	}
 	
+	attacker_disabled_po = {
+		po_demand_provinces
+	}
+	
 	war_goal = take_capital_force_tributary
 }
 

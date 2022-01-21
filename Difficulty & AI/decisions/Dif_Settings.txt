@@ -1,5 +1,5 @@
 country_decisions = {
-	scaling_difficulty_on = {
+	dif_settings_on = {
 		major = yes
 		
 		potential = {
@@ -8,21 +8,25 @@ country_decisions = {
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
 		}
+
+		allow = {
+			NOT = { has_global_flag = locked_settings_flag }
+		}
 		
 		effect = {
 			if = {
 				limit = {
 					has_global_flag = scaling_difficulty_flag
 				}
-				country_event = { id = dif_ai.7 }
+				country_event = { id = dif_settings.2 }
 			}
 			else = {
-				country_event = { id = dif_ai.6 }
+				country_event = { id = dif_settings.1 }
 			}
 		}
 	}
 	
-	scaling_difficulty_off = {
+	dif_settings_off = {
 		major = yes
 		
 		potential = {
@@ -31,16 +35,20 @@ country_decisions = {
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
 		}
+
+		allow = {
+			NOT = { has_global_flag = locked_settings_flag }
+		}
 		
 		effect = {
 			if = {
 				limit = {
 					has_global_flag = scaling_difficulty_flag
 				}
-				country_event = { id = dif_ai.7 }
+				country_event = { id = dif_settings.2 }
 			}
 			else = {
-				country_event = { id = dif_ai.6 }
+				country_event = { id = dif_settings.1 }
 			}
 		}
 	}

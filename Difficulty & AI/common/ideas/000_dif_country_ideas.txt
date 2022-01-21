@@ -91,7 +91,7 @@ NOG_ideas = {
 	}
 	
 	bonus = {
-		land_forcelimit_modifier = 0.1
+		land_forcelimit_modifier = 0.15
 	}
 	
 	trigger = {
@@ -99,11 +99,11 @@ NOG_ideas = {
 	}
 	free = yes
 	
-	life_of_steppe_warrior = {
-		#land_attrition = -0.20 (effect taken in OIR_ideas)
+	NOG_life_of_steppe_warrior = {
+		land_attrition = -0.20 #(effect taken in OIR_ideas)
 		#leader_land_manuever = 1
 	}
-	traditions_of_the_great_khan = {
+	NOG_traditions_of_the_great_khan = {
 		cavalry_power = 0.20
 	}
 	NOG_devastating_raids = {
@@ -113,14 +113,14 @@ NOG_ideas = {
 	NOG_steppe_wolf = {
 		land_morale = 0.1
 	}
-	tradition_of_conquest = {
-		#core_creation = -0.25 (effect taken in CHG_ideas)
+	NOG_tradition_of_conquest = {
+		core_creation = -0.25 #(effect taken in CHG_ideas)
 	}
-	logistics_of_khan = {
-		#manpower_recovery_speed = 0.2 (effect taken in GLH_ideas)
+	NOG_logistics_of_khan = {
+		manpower_recovery_speed = 0.2 #(effect taken in GLH_ideas)
 	}
-	glory_of_conquest = {
-		#global_manpower_modifier = 0.25 (effect taken in OIR_ideas)
+	NOG_glory_of_conquest = {
+		global_manpower_modifier = 0.25 #(effect taken in OIR_ideas)
 	}
 }
 

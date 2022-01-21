@@ -72,12 +72,12 @@ ai_capitalist = {
 			factor = 1.5
 			tag = MNG
 		}	
+		#modifier = {
+		#	factor = 1.5
+		#	tag = MAM
+		#}
 		modifier = {
-			factor = 1.5
-			tag = MAM
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.2
 			tag = FRA
 		}	
 		modifier = {
@@ -592,6 +592,7 @@ ai_balanced = {
 				tag = FRA
 				tag = PLC
 				tag = SPA
+				tag = MAM
 			}
 		}	
 		modifier = {

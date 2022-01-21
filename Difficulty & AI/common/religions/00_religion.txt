@@ -946,7 +946,7 @@ muslim = {
 			picture = "GFX_icon_muslim_school_hanafi"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			adm_tech_cost_modifier = -0.05
+			adm_tech_cost_modifier = -0.1
 		}
 		hanbali_school = {
 			potential_invite_scholar = {

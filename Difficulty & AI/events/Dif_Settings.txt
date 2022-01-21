@@ -1,0 +1,151 @@
+namespace = dif_settings
+country_event = { 
+	id = dif_settings.1
+	title = "dif_settings.1.t"
+	desc = "dif_settings.1.d"
+	#picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+	#hidden = yes
+
+	immediate = {
+	}
+
+	option = { #Enable
+	name = "opt.dif_settings.enable"
+		if = {
+			limit = {
+				NOT = { has_global_flag = scaling_difficulty_flag }
+			}
+			set_global_flag = scaling_difficulty_flag
+			country_event = { id = dif_settings.2 }
+		}
+	}
+	option = { #dev-click
+	name = "opt.dif_settings.devclick"
+		country_event = { id = dif_settings.3 }
+	}
+	option = { #Lock changes
+	name = "opt.dif_settings.lock"
+		country_event = { id = dif_settings.4 }
+	}
+	option = { #Exit
+	name = "opt.dif_settings.exit"
+	}
+}
+
+country_event = { 
+	id = dif_settings.2
+	title = "dif_settings.1.t"
+	desc = "dif_settings.1.d"
+	#picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+	#hidden = yes
+
+	immediate = {
+	}
+
+	option = { #Disable
+	name = "opt.dif_settings.disable"
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			clr_global_flag = scaling_difficulty_flag
+			country_event = { id = dif_settings.1 }
+		}
+	}
+	option = { #dev-click
+	name = "opt.dif_settings.devclick"
+		country_event = { id = dif_settings.3 }
+	}
+	option = { #Lock changes
+	name = "opt.dif_settings.lock"
+		country_event = { id = dif_settings.4 }
+	}
+	option = { #Exit
+	name = "opt.dif_settings.exit"
+	}
+}
+
+country_event = { 
+	id = dif_settings.3
+	title = "dif_settings.3.t"
+	desc = "dif_settings.3.d"
+	#picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+	#hidden = yes
+
+	immediate = {
+	}
+
+	option = { #
+	name = "opt.dif_settings.enable.dev"
+		if = {
+			limit = {
+				has_global_flag = dev_click_disabled_flag
+			}
+			clr_global_flag = dev_click_disabled_flag
+		}
+	}
+	option = { #
+	name = "opt.dif_settings.disable.dev"
+		if = {
+			limit = {
+				NOT = { has_global_flag = dev_click_disabled_flag }
+			}
+			set_global_flag = dev_click_disabled_flag
+		}	
+	}
+
+	option = { #back
+	name = "opt.dif_settings.back"
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
+	}
+}
+
+country_event = { 
+	id = dif_settings.4
+	title = "dif_settings.4.t"
+	desc = "dif_settings.4.d"
+	#picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+	#hidden = yes
+
+	immediate = {
+	}
+
+	option = { #
+	name = "opt.dif_settings.confirm"
+		if = {
+			limit = { 
+				NOT = { has_global_flag = locked_settings_flag }
+			}
+			set_global_flag = locked_settings_flag
+		}
+	}
+
+	option = { #back
+	name = "opt.dif_settings.back"
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
+	}
+}
