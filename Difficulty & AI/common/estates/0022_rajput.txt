@@ -194,6 +194,9 @@ estate_rajput = {
 		estate_rajput_improve_prestige
 		estate_rajput_hire_advisor
 		estate_rajput_fire_advisor
+
+		AI_expansion_area
+		AI_expansion_finish_area
 	}
 
 	color = { 220 20 20 }

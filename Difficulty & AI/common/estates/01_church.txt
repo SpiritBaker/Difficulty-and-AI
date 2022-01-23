@@ -390,6 +390,10 @@ estate_church =
 		estate_church_relations_with_dotf
 		estate_church_hire_advisor
 		estate_church_fire_advisor
+
+		AI_expansion_protect_culture
+		AI_expansion_protect_brethren
+		AI_expansion_religion
 	}
 	influence_from_dev_modifier = 1.0
 }

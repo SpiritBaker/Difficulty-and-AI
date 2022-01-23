@@ -146,6 +146,9 @@ estate_jains = {
 		estate_jains_protect_against_piracy
 		estate_jains_hire_advisor
 		estate_jains_fire_advisor
+
+		AI_expansion_sea_access
+		AI_expansion_trade_interest
 	}
 
 	color = { 65 115 240 }

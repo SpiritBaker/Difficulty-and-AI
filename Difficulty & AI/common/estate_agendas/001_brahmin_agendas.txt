@@ -2,6 +2,7 @@
 #This one or the next one will always be valid
 estate_brahmins_hire_advisor = {
 	can_select = {
+		ai = no
 		NOT = {
 			employed_advisor = {
 				category = ADM
@@ -40,6 +41,7 @@ estate_brahmins_hire_advisor = {
 
 estate_brahmins_fire_advisor = {
 	can_select = {
+		ai = no
 		employed_advisor = {
 			category = ADM
 		}
@@ -117,6 +119,7 @@ estate_brahmins_fire_advisor = {
 #Convert a province
 estate_brahmins_convert_province_x = {
 	can_select = {
+		ai = no
 		religion = hinduism
 		num_of_missionaries = 1
 		any_owned_province = {
@@ -281,6 +284,7 @@ estate_brahmins_convert_province_x = {
 #Stop Converting a province
 estate_brahmins_stop_converting_province_x = {
 	can_select = {
+		ai = no
 		NOT = { religion = hinduism }
 		num_of_missionaries = 1
 		any_owned_province = {
@@ -350,6 +354,7 @@ estate_brahmins_stop_converting_province_x = {
 #Reduce War Exhaustion
 estate_brahmins_reduce_war_exhaustion = {
 	can_select = {
+		ai = no
 		war_exhaustion = 5
 		is_at_war = no
 		NOT = { has_country_modifier = national_recovery }
@@ -399,6 +404,7 @@ estate_brahmins_reduce_war_exhaustion = {
 #Stabilise Country
 estate_brahmins_recover_stability = {
 	can_select = {
+		ai = no
 		NOT = { stability = 0 }
 	}
 	selection_weight = {
@@ -436,6 +442,7 @@ estate_brahmins_recover_stability = {
 #Stabilise Country II
 estate_brahmins_increase_stability = {
 	can_select = {
+		ai = no
 		NOT = { stability = 2 }
 		stability = 1
 	}
@@ -473,6 +480,7 @@ estate_brahmins_increase_stability = {
 #Reduce overextension
 estate_brahmins_reduce_overextension = {
 	can_select = {
+		ai = no
 		overextension_percentage = 0.50
 	}
 	selection_weight = {
@@ -518,6 +526,7 @@ estate_brahmins_reduce_overextension = {
 #Restore devotion
 estate_brahmins_restore_devotion = {
 	can_select = {
+		ai = no
 		NOT = { legitimacy_equivalent = 65 }
 		government = theocracy
 		religion = hinduism
@@ -570,6 +579,7 @@ estate_brahmins_restore_devotion = {
 #Crush Revolts (heretics)
 estate_brahmins_crush_religious_revolts = {
 	can_select = {
+		ai = no
 		num_of_rebel_armies = 1
 		OR = {
 			has_spawned_rebels = heretic_rebels
@@ -628,6 +638,7 @@ estate_brahmins_crush_religious_revolts = {
 #Get allies
 estate_brahmins_get_allies = {
 	can_select = {
+		ai = no
 		religion = hinduism
 		NOT = { num_of_allies = 3 }
 		NOT = { num_of_subjects = 3 }
@@ -720,6 +731,7 @@ estate_brahmins_get_allies = {
 #Befriend Rival of Rival
 estate_brahmins_befriend_rival_of_rival = {
 	can_select = {
+		ai = no
 		religion = hinduism
 		any_rival_country = {
 			any_rival_country = {
@@ -914,6 +926,7 @@ estate_brahmins_befriend_rival_of_rival = {
 #Improve Relations with X
 estate_brahmins_relations_with_X = {
 	can_select = {
+		ai = no
 		any_known_country = {
 			NOT = { is_rival = root }
 			ROOT = { NOT = { is_rival = prev } }
@@ -1117,6 +1130,7 @@ estate_brahmins_relations_with_X = {
 #Get AE down (if there is a coalition) 
 estate_brahmins_break_coalition = {
 	can_select = {
+		ai = no
 		religion = hinduism
 		any_country = {
 			coalition_target = root
@@ -1234,6 +1248,7 @@ estate_brahmins_break_coalition = {
 #Protect Brethren in X (religion)
 estate_brahmins_protect_brethren = {
 	can_select = {
+		ai = no
 		religion = hinduism
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1464,6 +1479,7 @@ estate_brahmins_protect_brethren = {
 #Restore legitimacy
 estate_brahmins_restore_legitimacy = {
 	can_select = {
+		ai = no
 		NOT = { legitimacy_equivalent = 65 }
 		government = monarchy
 		NOT = { has_ruler_modifier = legitimacy_defended }

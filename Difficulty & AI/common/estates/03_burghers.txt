@@ -305,6 +305,9 @@ estate_burghers =
 		estate_burghers_protect_against_piracy
 		estate_burghers_hire_advisor
 		estate_burghers_fire_advisor
+
+		AI_expansion_sea_access
+		AI_expansion_trade_interest
 	}
 
 	influence_from_dev_modifier = 1.0

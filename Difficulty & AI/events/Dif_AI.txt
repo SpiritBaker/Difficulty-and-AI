@@ -124,19 +124,9 @@ country_event = {
 	#hidden = yes
 
 	immediate = {
-
 	}
 
 	
 	option = {
-		home_trade_node_effect_scope = {
-			random_trade_node_member_province = {
-				limit = {
-					NOT = { country_or_subject_holds = ROOT }
-					NOT = { }
-				}
-				save_event_target_as = reward_province
-			}
-		}
 	}
 }

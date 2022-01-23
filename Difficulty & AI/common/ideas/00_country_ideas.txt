@@ -232,7 +232,7 @@ MOS_ideas = {
 	}
 	pomestnoe_voisko = {
 		army_tradition = 0.5
-		cavalry_cost = 0.1
+		cavalry_cost = -0.1
 	}
 	strength_of_the_boyars = {
 		stability_cost_modifier = -0.2
@@ -15577,7 +15577,7 @@ SIA_ideas = {
 	}
 	sia_advanced_elephant_warfare = {
 		cavalry_power = 0.15
-		cavalry_fire = 1
+		cavalry_fire = 0.5
 	}
 	sia_experienced_ambassadors = {
 		diplomatic_reputation = 2

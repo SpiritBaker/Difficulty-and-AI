@@ -2,6 +2,7 @@
 #This one or the next one will always be valid
 estate_jains_hire_advisor = {
 	can_select = {
+		ai = no
 		NOT = {
 			employed_advisor = {
 				category = DIP
@@ -40,6 +41,7 @@ estate_jains_hire_advisor = {
 
 estate_jains_fire_advisor = {
 	can_select = {
+		ai = no
 		employed_advisor = {
 			category = DIP
 		}
@@ -101,6 +103,7 @@ estate_jains_fire_advisor = {
 #Pay off loans
 estate_jains_pay_off_loans = {
 	can_select = {
+		ai = no
 		num_of_loans = 5
 		is_bankrupt = no
 	}
@@ -161,6 +164,7 @@ estate_jains_pay_off_loans = {
 #Restore republican tradition
 estate_jains_restore_republican_tradition = {
 	can_select = {
+		ai = no
 		NOT = { republican_tradition = 65 }
 		republican_tradition = 20
 		OR = {
@@ -215,6 +219,7 @@ estate_jains_restore_republican_tradition = {
 #Reduce Inflation
 estate_jains_restore_currency = {
 	can_select = {
+		ai = no
 		inflation = 10
 		NOT = {
 			inflation = 30
@@ -262,6 +267,7 @@ estate_jains_restore_currency = {
 #Recover Abysmal Inflation
 estate_jains_recovery_from_hyperinflation = {
 	can_select = {
+		ai = no
 		inflation = 30
 	}
 	selection_weight = {
@@ -297,6 +303,7 @@ estate_jains_recovery_from_hyperinflation = {
 #Improve trade power in node X
 estate_jains_increase_trade_power_in_X = {
 	can_select = {
+		ai = no
 		any_active_trade_node = {
 			trade_share = {
 				country = root
@@ -579,6 +586,7 @@ estate_jains_increase_trade_power_in_X = {
 #Access to the Sea
 estate_jains_access_sea = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		NOT = {
 			any_owned_province = {
@@ -732,6 +740,7 @@ estate_jains_access_sea = {
 #Bigger Fleet
 estate_jains_build_a_fleet = {
 	can_select = {
+		ai = no
 		primitives = no
 		any_owned_province = {
 			has_port = yes
@@ -811,6 +820,7 @@ estate_jains_build_a_fleet = {
 #Bigger Fleet than Rival
 estate_jains_bigger_fleet_than_rival = {
 	can_select = {
+		ai = no
 		primitives = no
 		any_owned_province = {
 			has_port = yes
@@ -906,6 +916,7 @@ estate_jains_bigger_fleet_than_rival = {
 #Improve dip rep
 estate_jains_improve_dip_rep = {
 	can_select = {
+		ai = no
 		NOT = { diplomatic_reputation = -2 }
 	}
 	selection_weight = {
@@ -940,6 +951,7 @@ estate_jains_improve_dip_rep = {
 #Get a treasury
 estate_jains_get_cash = {
 	can_select = {
+		ai = no
 		NOT = { years_of_income = 0.5 }
 		NOT = { num_of_loans = 1 }
 		is_at_war = no
@@ -995,6 +1007,7 @@ estate_jains_get_cash = {
 #Reduce corruption
 estate_jains_reduce_corruption = {
 	can_select = {
+		ai = no
 		corruption = 5
 		is_bankrupt = no
 		NOT = { has_country_modifier = freedom_from_corruption }
@@ -1104,6 +1117,7 @@ estate_jains_reduce_corruption = {
 #Protect minority rights
 estate_jains_stop_converting_province_x = {
 	can_select = {
+		ai = no
 		num_of_missionaries = 1
 		any_owned_province = {
 			has_missionary = yes
@@ -1173,6 +1187,7 @@ estate_jains_stop_converting_province_x = {
 #Give us 3 privileges
 estate_jains_three_privileges = {
 	can_select = {
+		ai = no
 		NOT = {
 			num_of_estate_privileges = {
 				estate = estate_jains
@@ -1252,6 +1267,7 @@ estate_jains_three_privileges = {
 #Protect against Piracy
 estate_jains_protect_against_piracy = {
 	can_select = {
+		ai = no
 		any_active_trade_node = {
 			trade_share = {
 				country = root

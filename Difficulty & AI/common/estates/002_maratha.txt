@@ -190,6 +190,10 @@ estate_maratha = {
 		estate_maratha_develop_x
 		estate_maratha_hire_advisor
 		estate_maratha_fire_advisor
+
+
+		AI_expansion_area
+		AI_expansion_finish_area
 	}
 
 	color = { 230 145 20 }

@@ -2,6 +2,7 @@
 #This one or the next one will always be valid
 estate_dhimmi_hire_advisor = {
 	can_select = {
+		ai = no
 		NOT = {
 			employed_advisor = {
 				category = ADM
@@ -40,6 +41,7 @@ estate_dhimmi_hire_advisor = {
 
 estate_dhimmi_fire_advisor = {
 	can_select = {
+		ai = no
 		employed_advisor = {
 			category = ADM
 		}
@@ -100,6 +102,7 @@ estate_dhimmi_fire_advisor = {
 
 estate_dhimmi_develop_x = {
 	can_select = {
+		ai = no
 		any_owned_province = {
 			NOT = { religion_group = muslim }
 			is_state_core = root
@@ -322,6 +325,7 @@ estate_dhimmi_develop_x = {
 
 estate_dhimmi_build_temple_in_y = {
 	can_select = {
+		ai = no
 		adm_tech = 4
 		any_owned_province = {
 			NOT = { religion_group = root }
@@ -560,6 +564,7 @@ estate_dhimmi_build_temple_in_y = {
 
 estate_dhimmi_build_university_in_y = {
 	can_select = {
+		ai = no
 		adm_tech = 17
 		any_owned_province = {
 			NOT = { religion_group = root }
@@ -681,6 +686,7 @@ estate_dhimmi_build_university_in_y = {
 #Stop Converting a province
 estate_dhimmi_stop_converting_province_x = {
 	can_select = {
+		ai = no
 		num_of_missionaries = 1
 		any_owned_province = {
 			has_missionary = yes
@@ -750,6 +756,7 @@ estate_dhimmi_stop_converting_province_x = {
 #Increase autonomy in X
 estate_dhimmi_increase_autonomy_in_province_x = {
 	can_select = {
+		ai = no
 		any_owned_province = {
 			is_state_core = root
 			NOT = { local_autonomy = 75 }
@@ -987,6 +994,7 @@ estate_dhimmi_increase_autonomy_in_province_x = {
 #Give us three privileges
 estate_dhimmi_three_privileges = {
 	can_select = {
+		ai = no
 		NOT = {
 			num_of_estate_privileges = {
 				estate = estate_dhimmi
@@ -1066,6 +1074,7 @@ estate_dhimmi_three_privileges = {
 #Befriend X Dhimmi nation that is a neighbour
 estate_dhimmi_relations_with_X = {
 	can_select = {
+		ai = no
 		any_owned_province = {
 			is_state_core = root
 			NOT = { religion_group = root }

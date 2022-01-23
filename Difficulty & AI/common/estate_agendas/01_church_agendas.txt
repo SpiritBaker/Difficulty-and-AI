@@ -2,6 +2,7 @@
 #This one or the next one will always be valid
 estate_church_hire_advisor = {
 	can_select = {
+		ai = no
 		NOT = {
 			employed_advisor = {
 				category = ADM
@@ -40,6 +41,7 @@ estate_church_hire_advisor = {
 
 estate_church_fire_advisor = {
 	can_select = {
+		ai = no
 		employed_advisor = {
 			category = ADM
 		}
@@ -117,6 +119,7 @@ estate_church_fire_advisor = {
 #Convert a province
 estate_church_convert_province_x = {
 	can_select = {
+		ai = no
 		num_of_missionaries = 1
 		NOT = { religion = confucianism }
 		any_owned_province = {
@@ -287,6 +290,7 @@ estate_church_convert_province_x = {
 #Reduce War Exhaustion
 estate_church_reduce_war_exhaustion = {
 	can_select = {
+		ai = no
 		war_exhaustion = 5
 		is_at_war = no
 		NOT = { has_country_modifier = national_recovery }
@@ -336,6 +340,7 @@ estate_church_reduce_war_exhaustion = {
 #Stabilise Country
 estate_church_recover_stability = {
 	can_select = {
+		ai = no
 		NOT = { stability = 0 }
 	}
 	selection_weight = {
@@ -373,6 +378,7 @@ estate_church_recover_stability = {
 #Stabilise Country II
 estate_church_increase_stability = {
 	can_select = {
+		ai = no
 		NOT = { stability = 2 }
 		stability = 1
 	}
@@ -410,6 +416,7 @@ estate_church_increase_stability = {
 #Reduce overextension
 estate_church_reduce_overextension = {
 	can_select = {
+		ai = no
 		overextension_percentage = 0.50
 	}
 	selection_weight = {
@@ -455,6 +462,7 @@ estate_church_reduce_overextension = {
 #Restore devotion
 estate_church_restore_devotion = {
 	can_select = {
+		ai = no
 		has_dlc = "Common Sense"
 		NOT = { legitimacy_equivalent = 65 }
 		government = theocracy
@@ -506,6 +514,7 @@ estate_church_restore_devotion = {
 #Root out heresy in X
 estate_church_root_out_heresy = {
 	can_select = {
+		ai = no
 		cb_on_religious_enemies = yes
 		is_free_or_tributary_trigger = yes
 		num_of_cities = 10
@@ -673,6 +682,7 @@ estate_church_root_out_heresy = {
 #Improve Relations with Pope
 estate_church_relations_with_pope = {
 	can_select = {
+		ai = no
 		religion = catholic
 		NOT = { tag = PAP }
 		exists = PAP
@@ -736,6 +746,7 @@ estate_church_relations_with_pope = {
 #Restore the Pope
 estate_church_restore_the_holy_see = {
 	can_select = {
+		ai = no
 		religion = catholic
 		normal_or_historical_nations = yes
 		NOT = { has_country_modifier = restored_holy_see_mission }
@@ -852,6 +863,7 @@ estate_church_restore_the_holy_see = {
 #Crush Revolts (heretics)
 estate_church_crush_religious_revolts = {
 	can_select = {
+		ai = no
 		num_of_rebel_armies = 1
 		OR = {
 			has_spawned_rebels = heretic_rebels
@@ -908,6 +920,7 @@ estate_church_crush_religious_revolts = {
 #Protect Brethren in X (religion)
 estate_church_protect_brethren = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		any_neighbor_country = {
@@ -1116,6 +1129,7 @@ estate_church_protect_brethren = {
 #Ulema: Propagate religion in trade node (if you have CoC)
 estate_church_propagate_religion = {
 	can_select = {
+		ai = no
 		has_dlc = "Cradle of Civilization"
 		religion_group = muslim
 		dominant_religion = root
@@ -1236,6 +1250,7 @@ estate_church_propagate_religion = {
 #Relations with DotF
 estate_church_relations_with_dotf = {
 	can_select = {
+		ai = no
 		any_country = {
 			religion = root
 			NOT = { tag = root }

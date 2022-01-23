@@ -173,6 +173,10 @@ estate_brahmins = {
 		estate_brahmins_stop_converting_province_x
 		estate_brahmins_hire_advisor
 		estate_brahmins_fire_advisor
+
+		AI_expansion_protect_culture
+		AI_expansion_protect_brethren
+		AI_expansion_religion
 	}
 
 	color = { 229 160 172 }

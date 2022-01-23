@@ -192,6 +192,8 @@ sedentary_subdjects = {
 		sedentary_subdjects_spice_trade
 		sedentary_subdjects_tea_trade
 		sedentary_subdjects_reduce_corruption
+
+		AI_expansion_trade_interest
 	}
 
 	influence_from_dev_modifier = 1.0

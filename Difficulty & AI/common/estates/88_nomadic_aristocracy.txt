@@ -150,6 +150,9 @@ nomadic_aristocracy = {
 		nomadic_aristocracy_build_up_manpower_reserves
 		nomadic_aristocracy_recover_abysmal_prestige
 		nomadic_aristocracy_improve_prestige
+
+		AI_expansion_area
+		AI_expansion_finish_area
 	}
 
 	color = { 190 150 150 }

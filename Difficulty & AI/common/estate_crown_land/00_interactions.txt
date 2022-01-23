@@ -201,13 +201,21 @@ interaction = {
         }
     }
 	ai_will_do = {
-		factor = 0 # AI won't do agendas
+		factor = 50 # AI won't do agendas
 		modifier = {
 			factor = 0
 			estate_influence = {
 				estate = all
 				influence = 90 
 			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
 		}
 	}
 }

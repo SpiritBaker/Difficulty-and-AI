@@ -476,6 +476,9 @@ estate_nobles =
 		estate_nobles_improve_prestige
 		estate_nobles_hire_advisor
 		estate_nobles_fire_advisor
+
+		AI_expansion_area
+		AI_expansion_finish_area
 	}
 	
 	influence_from_dev_modifier = 1.0

@@ -5,6 +5,7 @@
 #Raze a province
 estate_nomadic_tribes_raze_a_province = {
 	can_select = {
+		ai = no
 		is_nomad = yes
 		OR = {
 			has_reform = great_mongol_state_reform
@@ -470,6 +471,7 @@ estate_nomadic_tribes_raze_a_province = {
 #Restore horde unity
 estate_nomadic_tribes_restore_horde_unity = {
 	can_select = {
+		ai = no
 		NOT = { horde_unity = 65 }
 		is_nomad = yes
 		NOT = { has_ruler_modifier = legitimacy_defended }
@@ -516,6 +518,7 @@ estate_nomadic_tribes_restore_horde_unity = {
 #Befriend Rival of Rival
 estate_nomadic_tribes_befriend_rival_of_rival = {
 	can_select = {
+		ai = no
 		any_rival_country = {
 			any_rival_country = {
 				NOT = { tag = root }
@@ -701,6 +704,7 @@ estate_nomadic_tribes_befriend_rival_of_rival = {
 #Improve Relations with X tribe
 estate_nomadic_tribes_relations_with_X = {
 	can_select = {
+		ai = no
 		any_known_country = {
 			is_nomad = yes
 			NOT = { is_rival = root }
@@ -903,6 +907,7 @@ estate_nomadic_tribes_relations_with_X = {
 #Retake Core
 estate_nomadic_tribes_retake_core = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		OR = {
 			is_part_of_hre = no
@@ -1041,6 +1046,7 @@ estate_nomadic_tribes_retake_core = {
 #Crush Revolts
 estate_nomadic_tribes_crush_revolts = {
 	can_select = {
+		ai = no
 		num_of_rebel_armies = 1
 		NOT = { has_spawned_rebels = tribal_rebels }
 	}
@@ -1091,6 +1097,7 @@ estate_nomadic_tribes_crush_revolts = {
 #Regain liberty
 estate_nomadic_tribes_regain_liberty = {
 	can_select = {
+		ai = no
 		is_subject = yes
 		is_at_war = no
 	}
@@ -1147,6 +1154,7 @@ estate_nomadic_tribes_regain_liberty = {
 #Convert province culture
 estate_nomadic_tribes_convert_province_culture = {
 	can_select = {
+		ai = no
 		any_owned_province = {
 			NOT = { culture = root }
 			has_owner_accepted_culture = no
@@ -1265,6 +1273,7 @@ estate_nomadic_tribes_convert_province_culture = {
 #Protect our Culture in X
 estate_nomadic_tribes_protect_our_culture = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		any_neighbor_country = {
@@ -1502,6 +1511,7 @@ estate_nomadic_tribes_protect_our_culture = {
 #Vassalise X country (less than 3 provinces, you have at least 12)
 estate_nomadic_tribes_vassalise_vulnerable_country = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		num_of_cities = 12
@@ -1695,6 +1705,7 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 #Conquer X area from country you don't have great relations with
 estate_nomadic_tribes_expand_into_x = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		any_neighbor_country = {
@@ -1937,6 +1948,7 @@ estate_nomadic_tribes_expand_into_x = {
 #Complete conquest of X area from country you don't have great relations with
 estate_nomadic_tribes_complete_conquest_of_x = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		any_neighbor_country = {
@@ -2208,6 +2220,7 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 #Annex vassal
 estate_nomadic_tribes_annex_subject = {
 	can_select = {
+		ai = no
 		is_at_war = no
 		diplomatic_reputation = 0
 		any_subject_country = {
@@ -2326,6 +2339,7 @@ estate_nomadic_tribes_annex_subject = {
 #Bigger Army
 estate_nomadic_tribes_build_an_army = {
 	can_select = {
+		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 0.5 }
 		if = {
@@ -2404,6 +2418,7 @@ estate_nomadic_tribes_build_an_army = {
 #Bigger Army than Rival
 estate_nomadic_tribes_bigger_army_than_rival = {
 	can_select = {
+		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 1 }
 		any_rival_country = {
@@ -2481,6 +2496,7 @@ estate_nomadic_tribes_bigger_army_than_rival = {
 #Manpower reserves
 estate_nomadic_tribes_build_up_manpower_reserves = {
 	can_select = {
+		ai = no
 		is_at_war = no
 		NOT = { manpower_percentage = 0.40 }
 	}
@@ -2596,6 +2612,7 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 #Give us 3 privileges
 estate_nomadic_tribes_three_privileges = {
 	can_select = {
+		ai = no
 		NOT = {
 			num_of_estate_privileges = {
 				estate = estate_nomadic_tribes
@@ -2672,6 +2689,7 @@ estate_nomadic_tribes_three_privileges = {
 #Stabilise Country
 estate_nomadic_tribes_recover_stability = {
 	can_select = {
+		ai = no
 		NOT = { stability = 0 }
 	}
 	selection_weight = {
@@ -2707,6 +2725,7 @@ estate_nomadic_tribes_recover_stability = {
 #Stabilise Country II
 estate_nomadic_tribes_increase_stability = {
 	can_select = {
+		ai = no
 		NOT = { stability = 2 }
 		stability = 1
 	}
@@ -2743,6 +2762,7 @@ estate_nomadic_tribes_increase_stability = {
 #Loot X province with at least 12 development ("Despoil X")
 estate_nomadic_tribes_despoil_x = {
 	can_select = {
+		ai = no
 		is_at_war = yes
 		NOT = {
 			is_in_war = {

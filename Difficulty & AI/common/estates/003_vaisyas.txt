@@ -200,6 +200,9 @@ estate_vaisyas = {
 		estate_vaisyas_protect_against_piracy
 		estate_vaisyas_hire_advisor
 		estate_vaisyas_fire_advisor
+
+		AI_expansion_sea_access
+		AI_expansion_trade_interest
 	}
 
 	color = { 230 230 15 }

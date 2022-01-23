@@ -683,11 +683,64 @@ country_event = {
 			if = {
 				limit = { has_building = temple }
 				remove_building = temple
+				log = "[This.GetName] delete temple"
 			}
 			else_if = {
 				limit = { has_building = cathedral }
 				remove_building = cathedral
+				log = "[This.GetName] delete cathedral"
 			}
+		}
+	}
+	option = {
+	}
+}
+
+country_event = {
+	# delete farmestates 
+	id = build_events.4
+	title = build_events.4.t
+	desc = build_events.4.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		primitives = no
+		#always = no
+		is_at_war = no
+		NOT = { num_of_loans = 1 }
+		treasury = 2000
+		is_in_deficit = no
+		adm_tech = 20
+		OR = {
+			is_great_power = yes
+			has_idea_group = quantity_ideas
+		}
+		any_owned_province = {
+			NOT = { can_build = soldier_households }
+			has_building = farm_estate
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+			}
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = { can_build = soldier_households }
+				has_building = farm_estate
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+			}
+			save_event_target_as = delete_farm_estate
+		}	
+		event_target:delete_farm_estate = {
+			remove_building = farm_estate
+			log = "[This.GetName] delete farm estate"
 		}
 	}
 	option = {

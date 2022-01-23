@@ -2,6 +2,7 @@
 #This one or the next one will always be valid
 estate_cossacks_hire_advisor = {
 	can_select = {
+		ai = no
 		NOT = {
 			employed_advisor = {
 				category = MIL
@@ -40,6 +41,7 @@ estate_cossacks_hire_advisor = {
 
 estate_cossacks_fire_advisor = {
 	can_select = {
+		ai = no
 		employed_advisor = {
 			category = MIL
 		}
@@ -100,6 +102,7 @@ estate_cossacks_fire_advisor = {
 #Give us 3 privileges
 estate_cossacks_three_privileges = {
 	can_select = {
+		ai = no
 		NOT = {
 			num_of_estate_privileges = {
 				estate = estate_cossacks
@@ -178,6 +181,7 @@ estate_cossacks_three_privileges = {
 #Insult X rival
 estate_cossacks_reply_of_the_zaporozhian = {
 	can_select = {
+		ai = no
 		any_rival_country = {
 			NOT = { has_estate = estate_cossacks }
 			army_balance = {
@@ -298,6 +302,7 @@ estate_cossacks_reply_of_the_zaporozhian = {
 #Conquer X steppe area from country you don't have great relations with
 estate_cossacks_expand_into_x = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		any_neighbor_country = {
@@ -559,6 +564,7 @@ estate_cossacks_expand_into_x = {
 #Complete conquest of X steppe area from country you don't have great relations with
 estate_cossacks_complete_conquest_of_x = {
 	can_select = {
+		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		any_neighbor_country = {
@@ -849,6 +855,7 @@ estate_cossacks_complete_conquest_of_x = {
 #Settle random neighbouring steppe province
 estate_cossacks_colonise_X = {
 	can_select = {
+		ai = no
 		OR = {
 			num_of_colonists = 1
 			has_idea = siberian_frontier
@@ -970,6 +977,7 @@ estate_cossacks_colonise_X = {
 #Privateer
 estate_cossacks_go_privateering = {
 	can_select = {
+		ai = no
 		OR = {
 			has_dlc = "Mare Nostrum"
 			has_dlc = "Golden Century"
@@ -1023,6 +1031,7 @@ estate_cossacks_go_privateering = {
 #Privateer Better
 estate_cossacks_go_privateering_2 = {
 	can_select = {
+		ai = no
 		OR = {
 			has_dlc = "Mare Nostrum"
 			has_dlc = "Golden Century"
@@ -1151,6 +1160,7 @@ estate_cossacks_go_privateering_2 = {
 #Loot X province with at least 12 development ("Despoil X")
 estate_cossacks_despoil_x = {
 	can_select = {
+		ai = no
 		is_at_war = yes
 		NOT = {
 			is_in_war = {
@@ -1280,6 +1290,7 @@ estate_cossacks_despoil_x = {
 #Recruit more cossacks
 estate_cossacks_recruit_more_cossacks = {
 	can_select = {
+		ai = no
 		has_estate_privilege = estate_cossacks_establish_the_cossack_regiments
 		OR = {
 			NOT = { cossacks_percentage = 0.1 }
