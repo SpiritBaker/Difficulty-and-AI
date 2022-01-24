@@ -194,6 +194,7 @@ sedentary_subdjects = {
 		sedentary_subdjects_reduce_corruption
 
 		AI_expansion_trade_interest
+		#AI_expansion_trade_company
 	}
 
 	influence_from_dev_modifier = 1.0

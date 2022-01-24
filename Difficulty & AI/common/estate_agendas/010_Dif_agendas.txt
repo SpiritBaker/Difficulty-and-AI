@@ -4,13 +4,14 @@
 #AI_expansion_protect_brethren
 #AI_expansion_sea_access
 #AI_expansion_trade_interest
+#AI_expansion_trade_company
+#AI_expansion_gold 
 
 #Protect our Culture in X
 AI_expansion_protect_culture = {
 	can_select = {
 		ai = yes
 		is_free_or_tributary_trigger = yes
-		ai = yes
 		any_neighbor_country = {
 			NOT = { culture_group = root }
 			any_owned_province = {
@@ -43,7 +44,23 @@ AI_expansion_protect_culture = {
 		}
 	}
 	selection_weight = {
-		factor = 1.5
+		factor = 2
+		modifier = {
+			factor = 0.5
+			has_non_generic_missions = yes
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 2
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 30
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 50
+		}
 		modifier = {
 			factor = 0.25
 			any_country = {
@@ -142,25 +159,6 @@ AI_expansion_protect_culture = {
 		}
 	}
 	on_invalid = {
-		event_target:agenda_province = {
-			if = {
-				limit = {
-					is_claim = root
-					NOT = { is_permanent_claim = root }
-				}
-				remove_claim = root
-			}
-			every_neighbor_province = {
-				if = {
-					limit = {
-						owned_by = event_target:agenda_country
-						NOT = { is_permanent_claim = root }
-						is_claim = root
-					}
-					remove_claim = root
-				}
-			}
-		}
 	}
 	provinces_to_highlight = {
 		province_id = event_target:agenda_province
@@ -190,7 +188,6 @@ AI_expansion_area = {
 	can_select = {
 		ai = yes
 		is_free_or_tributary_trigger = yes
-		ai = yes
 		any_neighbor_country = {
 			num_of_cities = 6
 			is_free_or_tributary_trigger = yes
@@ -243,19 +240,11 @@ AI_expansion_area = {
 		}
 		modifier = {
 			factor = 1.5
-			num_of_cities = 20
-		}
-		modifier = {
-			factor = 1.5
-			num_of_cities = 25
+			government_rank = 2
 		}
 		modifier = {
 			factor = 1.5
 			num_of_cities = 30
-		}
-		modifier = {
-			factor = 1.5
-			num_of_cities = 40
 		}
 		modifier = {
 			factor = 1.5
@@ -401,7 +390,6 @@ AI_expansion_finish_area = {
 	can_select = {
 		ai = yes
 		is_free_or_tributary_trigger = yes
-		ai = yes
 		any_neighbor_country = {
 			num_of_cities = 6
 			is_free_or_tributary_trigger = yes
@@ -452,26 +440,18 @@ AI_expansion_finish_area = {
 		}
 	}
 	selection_weight = {
-		factor = 2.5
+		factor = 3
 		modifier = {
 			factor = 0.5
 			has_non_generic_missions = yes
 		}
 		modifier = {
 			factor = 1.5
-			num_of_cities = 20
-		}
-		modifier = {
-			factor = 1.5
-			num_of_cities = 25
+			government_rank = 2
 		}
 		modifier = {
 			factor = 1.5
 			num_of_cities = 30
-		}
-		modifier = {
-			factor = 1.5
-			num_of_cities = 40
 		}
 		modifier = {
 			factor = 1.5
@@ -584,25 +564,6 @@ AI_expansion_finish_area = {
 		}
 	}
 	on_invalid = {
-		if = {
-			limit = {
-				event_target:agenda_province = {
-					area_for_scope_province = {
-						is_claim = root
-						NOT = { is_permanent_claim = root }
-					}
-				}
-			}
-			event_target:agenda_province = {
-				area = {
-					limit = {
-						is_claim = root
-						NOT = { is_permanent_claim = root }
-					}
-					remove_claim = root
-				}
-			}
-		}
 	}
 	provinces_to_highlight = {
 		area_for_scope_province = {
@@ -640,11 +601,11 @@ AI_expansion_finish_area = {
     }
 }
 
+#Protect brethren
 AI_expansion_protect_brethren = {
 	can_select = {
 		ai = yes
 		is_free_or_tributary_trigger = yes
-		ai = yes
 		any_neighbor_country = {
 			NOT = { religion = root }
 		}
@@ -677,6 +638,10 @@ AI_expansion_protect_brethren = {
 		modifier = {
 			factor = 2
 			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 2
+			government = theocracy
 		}
 		modifier = {
 			factor = 0.25
@@ -776,25 +741,6 @@ AI_expansion_protect_brethren = {
 		}
 	}
 	on_invalid = {
-		event_target:agenda_province = {
-			if = {
-				limit = {
-					is_claim = root
-					NOT = { is_permanent_claim = root }
-				}
-				remove_claim = root
-			}
-			every_neighbor_province = {
-				if = {
-					limit = {
-						owned_by = event_target:agenda_country
-						is_claim = root
-						NOT = { is_permanent_claim = root }
-					}
-					remove_claim = root
-				}
-			}
-		}
 	}
 	provinces_to_highlight = {
 		province_id = event_target:agenda_province
@@ -822,15 +768,24 @@ AI_expansion_protect_brethren = {
 	}
 }
 
+#Religion
 AI_expansion_religion = {
 	can_select = {
 		ai = yes
 		is_free_or_tributary_trigger = yes
-		ai = yes
 		any_neighbor_country = {
 			NOT = { religion = root }
 		}
-		has_idea_group = religious_ideas
+		OR = {
+			religion = shiite
+			religion = ibadi
+			religion = orthodox
+			religion = catholic
+			religion = coptic
+			religion = sikhism
+			religion = vajrayana
+			religion = sunni
+		}
 		any_owned_province = {
 			any_neighbor_province = {
 				NOT = { owned_by = root }
@@ -866,6 +821,10 @@ AI_expansion_religion = {
 		modifier = {
 			factor = 2
 			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 2
+			government = theocracy
 		}
 		modifier = {
 			factor = 0.25
@@ -977,25 +936,6 @@ AI_expansion_religion = {
 		}
 	}
 	on_invalid = {
-		event_target:agenda_province = {
-			if = {
-				limit = {
-					is_claim = root
-					NOT = { is_permanent_claim = root }
-				}
-				remove_claim = root
-			}
-			every_neighbor_province = {
-				if = {
-					limit = {
-						owned_by = event_target:agenda_country
-						is_claim = root
-						NOT = { is_permanent_claim = root }
-					}
-					remove_claim = root
-				}
-			}
-		}
 	}
 	provinces_to_highlight = {
 		province_id = event_target:agenda_province
@@ -1031,7 +971,6 @@ AI_expansion_sea_access = {
 	can_select = {
 		ai = yes
 		is_free_or_tributary_trigger = yes
-		ai = yes
 		NOT = {
 			any_owned_province = {
 				has_port = yes
@@ -1149,15 +1088,6 @@ AI_expansion_sea_access = {
 		}
 	}
 	on_invalid = {
-		event_target:agenda_province = {
-			if = {
-				limit = {
-					is_claim = root
-					NOT = { is_permanent_claim = root }
-				}
-				remove_claim = root
-			}
-		}
 	}
 	task_completed_effect = {
 		log = "[This.GetName] expansion sea access"
@@ -1166,6 +1096,7 @@ AI_expansion_sea_access = {
     }
 }
 
+#Trade interest
 AI_expansion_trade_interest = {
 	can_select = {
 		is_free_or_tributary_trigger = yes
@@ -1197,6 +1128,10 @@ AI_expansion_trade_interest = {
 			any_owned_province = {
 				any_neighbor_province = {
 					owned_by = root
+				}
+				OR = {
+					province_has_center_of_trade_of_level = 1
+					province_trade_power = 10
 				}
 				has_merchant = root
 				NOT = {
@@ -1271,6 +1206,10 @@ AI_expansion_trade_interest = {
 						owned_by = root
 					}
 					has_merchant = root
+					OR = {
+						province_has_center_of_trade_of_level = 1
+						province_trade_power = 10
+					}
 					NOT = {
 						area_for_scope_province = {
 							owned_by = root
@@ -1286,6 +1225,10 @@ AI_expansion_trade_interest = {
 			random_owned_province = {
 				limit = {
 					has_merchant = root
+					OR = {
+						province_has_center_of_trade_of_level = 1
+						province_trade_power = 10
+					}
 					any_neighbor_province = {
 						owned_by = root
 					}
@@ -1365,6 +1308,355 @@ AI_expansion_trade_interest = {
 	}
 	task_completed_effect = {
 		log = "[This.GetName] expansion trade interest"
+	}
+    failing_effect = {
+    }
+}
+
+#Trade company
+AI_expansion_trade_company = {
+	can_select = {
+		is_free_or_tributary_trigger = yes
+		ai = yes
+		#is_at_war = no
+		any_neighbor_country = {
+			is_free_or_tributary_trigger = yes
+			NOT = { is_subject_of = root }
+			NOT = { overlord_of = root }
+			NOT = { alliance_with = root }
+			NOT = { ROOT = { truce_with = prev } }
+			NOT = { 
+				has_opinion = {
+					who = root
+					value = 50
+				}
+			}
+			NOT = {
+				any_owned_province = { #No need for this agenda if covered by a mission
+					OR = {
+						is_permanent_claim = root
+						is_core = root
+					}
+				}
+			}
+			ROOT = {
+				knows_country = prev
+			}
+			any_owned_province = {
+				any_neighbor_province = {
+					owned_by = root
+				}
+				OR = {
+					has_port = yes
+					province_has_center_of_trade_of_level = 1
+					province_trade_power = 10
+				}
+				has_merchant = root
+				is_node_in_trade_company_region = yes
+				NOT = {
+					area_for_scope_province = {
+						OR = {
+							is_empty = yes
+							owned_by = root
+						}
+					}
+				}
+			}
+			OR = {
+				is_part_of_hre = no
+				NOT = { hre_reform_passed = landfriede }
+				ROOT = { is_part_of_hre = no }
+			}
+		}
+	}
+	selection_weight = {
+		factor = 2
+		modifier = {
+			factor = 0.5
+			has_non_generic_missions = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = trade_ideas
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.33
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 30
+		}
+		modifier = {
+			factor = 0.25
+			any_country = {
+				coalition_target = root
+			}
+		}
+	}
+	pre_effect = {
+		random_neighbor_country = {
+			limit = {
+				#num_of_cities = 6
+				is_free_or_tributary_trigger = yes
+				NOT = { is_subject_of = root }
+				NOT = { overlord_of = root }
+				NOT = { alliance_with = root }
+				NOT = { ROOT = { truce_with = prev } }
+				NOT = { 
+					has_opinion = {
+						who = root
+						value = 50
+					}
+				}
+				NOT = {
+					any_owned_province = { #No need for this agenda if covered by a mission
+						OR = {
+							is_permanent_claim = root
+							is_core = root
+						}
+					}
+				}
+				ROOT = {
+					knows_country = prev
+				}
+				any_owned_province = {
+					any_neighbor_province = {
+						owned_by = root
+					}
+					OR = {
+						has_port = yes
+						province_has_center_of_trade_of_level = 1
+						province_trade_power = 10
+					}
+					has_merchant = root
+					is_node_in_trade_company_region = yes
+					NOT = {
+						area_for_scope_province = {
+							owned_by = root
+						}
+					}
+				}
+				OR = {
+					is_part_of_hre = no
+					NOT = { hre_reform_passed = landfriede }
+					ROOT = { is_part_of_hre = no }
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_port = yes
+						province_has_center_of_trade_of_level = 1
+						province_trade_power = 10
+					}
+					has_merchant = root
+					is_node_in_trade_company_region = yes
+					any_neighbor_province = {
+						owned_by = root
+					}
+					area_for_scope_province = {
+						type = all
+						NOT = { owned_by = root }
+						is_empty = no
+					}
+				}
+				save_event_target_as = agenda_province
+			}
+		}
+	}
+	immediate_effect = {
+		if = {
+			limit = {
+				event_target:agenda_province = {
+					area_for_scope_province = {
+						NOT = { is_claim = root }
+						NOT = { is_core = root }
+					}
+				}
+			}
+			event_target:agenda_province = {
+				area = {
+					limit = {
+						NOT = { is_claim = root }
+						NOT = { is_core = root }
+					}
+					add_claim = root
+				}
+			}
+		}
+	}
+	on_invalid = {
+		if = {
+			limit = {
+				event_target:agenda_province = {
+					area_for_scope_province = {
+						is_claim = root
+						NOT = { is_permanent_claim = root }
+					}
+				}
+			}
+			event_target:agenda_province = {
+				area = {
+					limit = {
+						is_claim = root
+						NOT = { is_permanent_claim = root }
+					}
+					remove_claim = root
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		area_for_scope_province = {
+			province_id = event_target:agenda_province
+		}
+	}
+	task_requirements = {
+		event_target:agenda_province = {
+			area_for_scope_province = {
+				owned_by = root
+			}
+		}
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			area_for_scope_province = {
+				type = all
+				NOT = { is_claim = root }
+				NOT = { is_core = root }
+				NOT = { owned_by = root }
+			}
+		}
+	}
+	task_completed_effect = {
+		log = "[This.GetName] expansion trade company"
+	}
+    failing_effect = {
+    }
+}
+
+
+#Gold
+AI_expansion_gold = {
+	can_select = {
+		ai = yes
+		is_free_or_tributary_trigger = yes
+		any_owned_province = {
+			any_neighbor_province = {
+				trade_goods = gold
+				owner = {
+					NOT = { overlord_of = root }
+					NOT = { is_subject_of = root }
+					NOT = { alliance_with = root }
+					NOT = { ROOT = { truce_with = prev } }
+					NOT = {
+						has_opinion = {
+							who = root
+							value = 50
+						}
+					}
+					OR = {
+						is_part_of_hre = no
+						NOT = { hre_reform_passed = landfriede }
+						ROOT = { is_part_of_hre = no }
+					}
+				}
+			}
+		}
+	}
+	selection_weight = {
+		factor = 2.5
+		modifier = {
+			factor = 0.25
+			any_country = {
+				coalition_target = root
+			}
+		}
+	}
+	pre_effect = {
+		random_owned_province = {
+			limit = {
+				any_neighbor_province = {
+					trade_goods = gold
+					owner = {
+						NOT = { overlord_of = root }
+						NOT = { is_subject_of = root }
+						NOT = { alliance_with = root }
+						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							has_opinion = {
+								who = root
+								value = 50
+							}
+						}
+						OR = {
+							is_part_of_hre = no
+							NOT = { hre_reform_passed = landfriede }
+							ROOT = { is_part_of_hre = no }
+						}
+					}
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					trade_goods = gold
+					owner = {
+						NOT = { overlord_of = root }
+						NOT = { is_subject_of = root }
+						NOT = { alliance_with = root }
+						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							has_opinion = {
+								who = root
+								value = 50
+							}
+						}
+						OR = {
+							is_part_of_hre = no
+							NOT = { hre_reform_passed = landfriede }
+							ROOT = { is_part_of_hre = no }
+						}
+					}
+				}
+				save_event_target_as = agenda_province
+			}
+		}
+	}
+	provinces_to_highlight = {
+		OR = {
+			province_id = event_target:agenda_province
+			AND = {
+				OR = {
+					is_claim = root
+					is_core = root
+				}
+				has_port = yes
+			}
+		}
+	}
+	task_requirements = {
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+	immediate_effect = {
+		if = {
+			limit = {
+				event_target:agenda_province = {
+					NOT = { is_core = root }
+					NOT = { is_claim = root }
+				}
+			}
+			event_target:agenda_province = {
+				add_claim = root
+			}
+		}
+	}
+	on_invalid = {
+	}
+	task_completed_effect = {
+		log = "[This.GetName] expansion gold"
 	}
     failing_effect = {
     }

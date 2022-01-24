@@ -11,15 +11,16 @@ country_event = {
 	trigger = {
 		ai = yes
 		primitives = no
-		always = no
-		
+		#always = no
+		NOT = { has_global_flag = build_event_disabled_flag }
+
 		NOT = { num_of_loans = 1 }
-		treasury = 1500
+		treasury = 2500
 		is_in_deficit = no
 		
 		OR = {
 			is_at_war = no
-			treasury = 2500
+			treasury = 5000
 		}
 		
 		any_owned_province = {
@@ -95,16 +96,7 @@ country_event = {
 				AND = { #government
 					has_building = courthouse
 					can_build = town_hall
-					
-					num_of_owned_provinces_with = {
-						value = 5
-						
-						NOT = { is_state_core = ROOT }
-						is_territorial_core = ROOT
-						is_owned_by_trade_company = no
-						is_overseas = no
-						NOT = { has_construction = core }
-					}
+					ROOT = { governing_capacity_percentage = 0.95 }
 				}
 				AND = { #shipyard
 					has_building = shipyard
@@ -219,7 +211,7 @@ country_event = {
 							trade_goods = grain
 							trade_goods = fish
 							trade_goods = livestock
-							trade_goods = wine
+							#trade_goods = wine
 						}
 					}
 					add_building_construction = { building = soldier_households }
@@ -475,16 +467,7 @@ country_event = {
 								is_state_core = ROOT
 								has_building = courthouse
 								can_build = town_hall
-								
-								num_of_owned_provinces_with = {
-									value = 5
-									
-									NOT = { is_state_core = ROOT }
-									is_territorial_core = ROOT
-									is_owned_by_trade_company = no
-									is_overseas = no
-									NOT = { has_construction = core }
-								}
+								ROOT = { governing_capacity_percentage = 0.95 }
 							}
 						}
 						random_owned_province = {
@@ -719,6 +702,7 @@ country_event = {
 		}
 		any_owned_province = {
 			NOT = { can_build = soldier_households }
+			NOT = { has_building = soldier_households }
 			has_building = farm_estate
 			OR = {
 				trade_goods = grain
@@ -730,6 +714,7 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				NOT = { can_build = soldier_households }
+				NOT = { has_building = soldier_households }
 				has_building = farm_estate
 				OR = {
 					trade_goods = grain

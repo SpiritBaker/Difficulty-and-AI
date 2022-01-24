@@ -127,7 +127,7 @@ NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign arm
 --NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10 --Influence on assimilation interest from number of provinces left to conquer
 --NDefines.NAI.PURSUE_DISTANCE = 100
 
-NDefines.NAI.PEACE_WAR_DIRECTION_FACTOR = 0.6 -- AI willingness to peace based on who's making gains in the war
+NDefines.NAI.PEACE_WAR_DIRECTION_FACTOR = 0.55 -- AI willingness to peace based on who's making gains in the war
 --NDefines.NAI.PEACE_WAR_DIRECTION_WINNING_MULT = 4 -- Multiplies AI emphasis on war direction if it's the one making gains
 --NDefines.NAI.PEACE_STALLED_WAR_THRESHOLD = 5 -- If the warscore has changed by this amount or less in the last year, the war is stalled
 NDefines.NAI.PEACE_OTHER_WAR_FORCE_BALANCE_MULT = 0.33 -- Multiplies the force balance of other countries who are involved in a different war with either side
@@ -138,7 +138,7 @@ NDefines.NAI.PEACE_ALLY_WAR_DIRECTION_MULT = 0.5 -- Multiplies PEACE_WAR_DIRECTI
 --NDefines.NAI.PEACE_FORCE_BALANCE_FACTOR = 0.2 -- AI willingness to peace based on strength estimation of both sides
 
 NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 5.0 --Max AI desire for humiliating its enemy.
-NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 2.0
+NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 3.0
 NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 1.25	
 NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1.5
 NDefines.NAI.PEACE_TERMS_RELEASE_ANNEXED_BASE_MULT = 0.75

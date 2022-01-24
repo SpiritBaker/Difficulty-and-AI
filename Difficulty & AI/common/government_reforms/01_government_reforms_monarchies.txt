@@ -480,7 +480,7 @@ english_monarchy = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-
+		ai = no
 		custom_attributes = {
 			blocked_call_diet = yes
 		}

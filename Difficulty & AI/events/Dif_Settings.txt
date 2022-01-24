@@ -3,7 +3,7 @@ country_event = {
 	id = dif_settings.1
 	title = "dif_settings.1.t"
 	desc = "dif_settings.1.d"
-	#picture = LAND_MILITARY_eventPicture
+	picture = WAR_OF_THE_ROSES_eventPicture
 	is_triggered_only = yes
 	#fire_only_once = yes
 	#hidden = yes
@@ -21,9 +21,17 @@ country_event = {
 			country_event = { id = dif_settings.2 }
 		}
 	}
+	option = { #expansion planer
+	name = "opt.dif_settings.expansion"
+		country_event = { id = dif_settings.6 }
+	}
 	option = { #dev-click
 	name = "opt.dif_settings.devclick"
 		country_event = { id = dif_settings.3 }
+	}
+	option = { #build event
+	name = "opt.dif_settings.build"
+		country_event = { id = dif_settings.5 }
 	}
 	option = { #Lock changes
 	name = "opt.dif_settings.lock"
@@ -38,7 +46,7 @@ country_event = {
 	id = dif_settings.2
 	title = "dif_settings.1.t"
 	desc = "dif_settings.1.d"
-	#picture = LAND_MILITARY_eventPicture
+	picture = WAR_OF_THE_ROSES_eventPicture
 	is_triggered_only = yes
 	#fire_only_once = yes
 	#hidden = yes
@@ -56,9 +64,17 @@ country_event = {
 			country_event = { id = dif_settings.1 }
 		}
 	}
+	option = { #expansion planer
+	name = "opt.dif_settings.expansion"
+		country_event = { id = dif_settings.6 }
+	}
 	option = { #dev-click
 	name = "opt.dif_settings.devclick"
 		country_event = { id = dif_settings.3 }
+	}
+	option = { #build event
+	name = "opt.dif_settings.build"
+		country_event = { id = dif_settings.5 }
 	}
 	option = { #Lock changes
 	name = "opt.dif_settings.lock"
@@ -73,7 +89,7 @@ country_event = {
 	id = dif_settings.3
 	title = "dif_settings.3.t"
 	desc = "dif_settings.3.d"
-	#picture = LAND_MILITARY_eventPicture
+	picture = WAR_OF_THE_ROSES_eventPicture
 	is_triggered_only = yes
 	#fire_only_once = yes
 	#hidden = yes
@@ -118,7 +134,7 @@ country_event = {
 	id = dif_settings.4
 	title = "dif_settings.4.t"
 	desc = "dif_settings.4.d"
-	#picture = LAND_MILITARY_eventPicture
+	picture = WAR_OF_THE_ROSES_eventPicture
 	is_triggered_only = yes
 	#fire_only_once = yes
 	#hidden = yes
@@ -134,6 +150,96 @@ country_event = {
 			}
 			set_global_flag = locked_settings_flag
 		}
+	}
+
+	option = { #back
+	name = "opt.dif_settings.back"
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
+	}
+}
+
+country_event = { 
+	id = dif_settings.5
+	title = "dif_settings.5.t"
+	desc = "dif_settings.5.d"
+	picture = WAR_OF_THE_ROSES_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+	#hidden = yes
+
+	immediate = {
+	}
+
+	option = { #
+	name = "opt.dif_settings.enable.build"
+		if = {
+			limit = {
+				has_global_flag = build_event_disabled_flag
+			}
+			clr_global_flag = build_event_disabled_flag
+		}
+	}
+	option = { #
+	name = "opt.dif_settings.disable.build"
+		if = {
+			limit = {
+				NOT = { has_global_flag = build_event_disabled_flag }
+			}
+			set_global_flag = build_event_disabled_flag
+		}	
+	}
+
+	option = { #back
+	name = "opt.dif_settings.back"
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
+	}
+}
+
+country_event = { 
+	id = dif_settings.6
+	title = "dif_settings.6.t"
+	desc = "dif_settings.6.d"
+	picture = WAR_OF_THE_ROSES_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+	#hidden = yes
+
+	immediate = {
+	}
+
+	option = { #
+	name = "opt.dif_settings.enable.expansion"
+		if = {
+			limit = {
+				has_global_flag = expansion_planer_disabled_flag
+			}
+			clr_global_flag = expansion_planer_disabled_flag
+		}
+	}
+	option = { #
+	name = "opt.dif_settings.disable.expansion"
+		if = {
+			limit = {
+				NOT = { has_global_flag = expansion_planer_disabled_flag }
+			}
+			set_global_flag = expansion_planer_disabled_flag
+		}	
 	}
 
 	option = { #back

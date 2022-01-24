@@ -428,19 +428,31 @@ country_event = {
 		NOT = { has_global_flag = dev_click_disabled_flag }
 		ai = yes
 		is_at_war = no
+		primitives = no
+		is_lacking_institutions = no
 		NOT = { is_migratory_tribe = yes }
 		OR = {
+			primitives = no
+			is_lacking_institutions = no
 			dip_power = 100
 			any_owned_province = {
 				is_state_core = ROOT
 				trade_goods = gold
 				NOT = { base_production = 8 }
 			}
-			dip_power = 600
+			primitives = no
+			is_lacking_institutions = no
+			dip_power = 900
 			any_owned_province = {
 				is_state_core = ROOT
 				trade_goods = gold
 				NOT = { base_production = 11 }
+			}
+			dip_power = 100
+			any_owned_province = {
+				is_state_core = ROOT
+				trade_goods = gold
+				NOT = { base_production = 7 }
 			}
 		}
 	}

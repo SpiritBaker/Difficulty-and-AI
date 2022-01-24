@@ -217,6 +217,14 @@ interaction = {
 			factor = 0
 			is_at_war = yes
 		}
+		modifier = {
+			factor = 0
+			tag = MNG
+		}
+		modifier = {
+			factor = 0
+			has_global_flag = expansion_planer_disabled_flag
+		}
 	}
 }
 

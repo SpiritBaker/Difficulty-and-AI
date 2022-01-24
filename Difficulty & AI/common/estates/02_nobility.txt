@@ -479,6 +479,7 @@ estate_nobles =
 
 		AI_expansion_area
 		AI_expansion_finish_area
+		AI_expansion_gold 
 	}
 	
 	influence_from_dev_modifier = 1.0

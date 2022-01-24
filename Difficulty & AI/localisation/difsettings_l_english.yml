@@ -13,15 +13,26 @@
  opt.dif_settings.exit:0 "Close"
  opt.dif_settings.back:0 "Back"
  opt.dif_settings.confirm:0 "§RConfirm§!"
- opt.dif_settings.devclick:0 "AI Deving"
  dif_settings.4.t:0 "Make the changes permanent"
  dif_settings.4.d:0 ""
 
+ dif_settings.6.t:0 "AI Expansion Planer"
+ dif_settings.6.d:0 "Script that gives AI direction for expansion by generating claims. Works similarly to estates agendas that give claims."
+ opt.dif_settings.expansion:0 "AI Expansion Planer (Enabled by Default)"
+ opt.dif_settings.enable.expansion:0 "§GEnabled by Default§!"
+ opt.dif_settings.disable.expansion:0 "§RDISABLE§!"
+
+ dif_settings.5.t:0 "AI Building Script"
+ dif_settings.5.d:0 "Base game AI is only able to build several buildings at a time and can't build while at war. This script forces AI to spend money on buildings ignoring this limit."
+ opt.dif_settings.build:0 "AI Building (Enabled by Default)"
+ opt.dif_settings.enable.build:0 "§GEnabled by Default§!"
+ opt.dif_settings.disable.build:0 "§RDISABLE§!"
  
  dif_settings.3.t:0 "Feature Setting: AI Auto Development"
  dif_settings.3.d:0 "The AI is really bad at developing their provinces. They will often sit at the monarch point cap for no reason instead of developing. This feature will allow the AI to develop their lowest cost province when the AI hits a predefined threshold of monarch points (scaled to institution penalties)"
+ opt.dif_settings.devclick:0 "AI Deving (Enabled by Default)"
  opt.dif_settings.enable.dev:0 "§GEnabled by Default§! (Recommended)"
- opt.dif_settings.disable.dev:0 "§RDISABLE§! "
+ opt.dif_settings.disable.dev:0 "§RDISABLE§!"
  
  scaling_difficulty_AoDis:0 "Scaling Difficulty"
  scaling_difficulty_AoRef:0 "Scaling Difficulty"

@@ -149,6 +149,7 @@ estate_jains = {
 
 		AI_expansion_sea_access
 		AI_expansion_trade_interest
+		AI_expansion_trade_company
 	}
 
 	color = { 65 115 240 }

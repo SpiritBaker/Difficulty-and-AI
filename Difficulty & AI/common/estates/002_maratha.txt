@@ -194,6 +194,7 @@ estate_maratha = {
 
 		AI_expansion_area
 		AI_expansion_finish_area
+		AI_expansion_gold 
 	}
 
 	color = { 230 145 20 }

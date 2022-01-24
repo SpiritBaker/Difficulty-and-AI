@@ -203,6 +203,7 @@ estate_vaisyas = {
 
 		AI_expansion_sea_access
 		AI_expansion_trade_interest
+		AI_expansion_trade_company
 	}
 
 	color = { 230 230 15 }
