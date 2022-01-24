@@ -6,7 +6,7 @@
  dif_settings_off_desc:0 ""
   
  dif_settings.1.t:0 "Dificulty&AI Settings"
- dif_settings.1.d:0 "The AI is fundamentally bad at certain areas of the game. This option allows you to enable additional AI bonuses that will increase with every subsequent Age. \n Doesn't give AI combat bonuses. \n Limited to AI's with at least 10 provinces."
+ dif_settings.1.d:0 "The AI is fundamentally bad at certain areas of the game. To compensate for that mod introduces several AI scripts.\n\nScaling Difficulty option allows you to enable additional AI bonuses that will increase with every subsequent Age.\nDoesn't give AI combat bonuses.\nLimited to AI's with at least 10 provinces to avoid excessive deving."
  opt.dif_settings.enable:0 "§GEnable Scaling Difficulty§!"
  opt.dif_settings.disable:0 "§RDisable Scaling Difficulty§!"
  opt.dif_settings.lock:0 "§RLock Settings§!"
