@@ -75,4 +75,132 @@ on_startup = {
 			set_country_flag = ayu_monarch_flag
 		}
 	}
+	every_country = {
+		if = {
+			limit = {
+				check_variable = {
+					which = admClicks
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = admClicks
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = dipClicks
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = dipClicks
+				value = 0
+			}
+		}	
+		if = {
+			limit = {
+				check_variable = {
+					which = milClicks
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = milClicks
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = devsumClicks
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = devsumClicks
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = loanRepaid
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = loanRepaid
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = warsWon
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = warsWon
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = warsLost
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = warsLost
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = battlesWon
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = battlesWon
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = battlesLost
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = battlesLost
+				value = 0
+			}
+		}
+	}
 }

@@ -3,7 +3,7 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			ai = no
+			#ai = no
 			has_global_flag = scaling_difficulty_flag	
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
@@ -24,13 +24,16 @@ country_decisions = {
 				country_event = { id = dif_settings.1 }
 			}
 		}
+		ai_will_do = {
+			factor = 0
+		}
 	}
 	
 	dif_settings_off = {
 		major = yes
 		
 		potential = {
-			ai = no
+			#ai = no
 			NOT = { has_global_flag = scaling_difficulty_flag }
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
@@ -50,6 +53,9 @@ country_decisions = {
 			else = {
 				country_event = { id = dif_settings.1 }
 			}
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

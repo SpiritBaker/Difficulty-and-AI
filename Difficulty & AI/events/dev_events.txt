@@ -221,6 +221,14 @@ country_event = {
 					which = admClicks
 					value = 1
 				}
+				change_variable = {
+					which = devsumClicks
+					value = 1
+				}
+				change_variable = {
+					which = autoDev
+					value = 1
+				}
 			}
 		}
 	}
@@ -299,6 +307,14 @@ country_event = {
 				}
 				change_variable = {
 					which = dipClicks
+					value = 1
+				}
+				change_variable = {
+					which = devsumClicks
+					value = 1
+				}
+				change_variable = {
+					which = autoDev
 					value = 1
 				}
 			}
@@ -401,6 +417,14 @@ country_event = {
 				}
 				change_variable = {
 					which = milClicks
+					value = 1
+				}
+				change_variable = {
+					which = devsumClicks
+					value = 1
+				}
+				change_variable = {
+					which = autoDev
 					value = 1
 				}
 			}

@@ -6,13 +6,15 @@
  dev_info.5:0 "stabCost [This.stabCost.GetValue]"
  
  dev_click_on_title:0 "Auto-Development is §GON§!"
- dev_click_on_desc:0 "§RTURN OFF:§! Automatically increase the development of your cheapest province when at the monarch power cap.\n\n£adm£ Development Gained: [This.admLoc]\n£dip£ Development Gained: [This.dipLoc]\n£mil£ Development Gained: [This.milLoc]"
+ dev_click_on_desc:0 "§RTURN OFF:§! Automatically increase the development of your cheapest province when at the monarch power cap.\n\n£adm£ Development Gained: [This.admLoc]\n£dip£ Development Gained: [This.dipLoc]\n£mil£ Development Gained: [This.milLoc] \n\n§WTotal Development Gained: [This.devsumLoc]\n§WFrom Auto Development: [This.autoDevLoc]"
  dev_click_off_title:0 "Auto-Development is §ROFF§!"
- dev_click_off_desc:0 "§GTURN ON:§! Automatically increase the development of your cheapest province when at the monarch power cap.\n\n£adm£ Development Gained: [This.admLoc]\n£dip£ Development Gained: [This.dipLoc]\n£mil£ Development Gained: [This.milLoc]"
+ dev_click_off_desc:0 "§GTURN ON:§! Automatically increase the development of your cheapest province when at the monarch power cap.\n\n£adm£ Development Gained: [This.admLoc]\n£dip£ Development Gained: [This.dipLoc]\n£mil£ Development Gained: [This.milLoc] \n\n§WTotal Development Gained: [This.devsumLoc]\n§WFrom Auto Development: [This.autoDevLoc]"
  
  admLocKey:0 "§G[This.admClicks.GetValue]§!"
  dipLocKey:0 "§G[This.dipClicks.GetValue]§!"
  milLocKey:0 "§G[This.milClicks.GetValue]§!"
+ devsumLocKey:0 "§G[This.devsumClicks.GetValue]§!"
+ autoDevLocKey:0 "§G[This.autoDev.GetValue]§!"
  zeroLocKey:0 "§R0§!"
  
  recent_growth:0 "Recent Growth"

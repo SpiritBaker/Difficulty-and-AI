@@ -3,7 +3,7 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			ai = no
+			#ai = no
 			has_country_flag = dev_click
 			
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
@@ -13,13 +13,16 @@ country_decisions = {
 		effect = {
 			clr_country_flag = dev_click
 		}
+		ai_will_do = {
+			factor = 0
+		}
 	}
 	
 	dev_click_off = {
 		major = yes
 		
 		potential = {
-			ai = no
+			#ai = no
 			NOT = { has_country_flag = dev_click }
 			
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
@@ -28,6 +31,9 @@ country_decisions = {
 		
 		effect = {
 			set_country_flag = dev_click
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	

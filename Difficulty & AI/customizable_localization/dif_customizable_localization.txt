@@ -1,14 +1,14 @@
 defined_text = {
-	name = admLoc
+	name = loanRepaidLoc
 	random = no
 	text = {
         trigger = {
 			check_variable = {
-				which = admClicks
+				which = loanRepaid
 				value = 1
 			}
         }
-        localisation_key = admLocKey
+        localisation_key = loanRepaidLocKey
 	}
 	text = {
 		trigger = {
@@ -19,16 +19,16 @@ defined_text = {
 }
 
 defined_text = {
-	name = dipLoc
+	name = warsWonLoc
 	random = no
 	text = {
         trigger = {
 			check_variable = {
-				which = dipClicks
+				which = warsWon
 				value = 1
 			}
         }
-        localisation_key = dipLocKey
+        localisation_key = warsWonLocKey
 	}
 	text = {
 		trigger = {
@@ -39,16 +39,16 @@ defined_text = {
 }
 
 defined_text = {
-	name = milLoc
+	name = warsLostLoc
 	random = no
 	text = {
         trigger = {
 			check_variable = {
-				which = milClicks
+				which = warsLost
 				value = 1
 			}
         }
-        localisation_key = milLocKey
+        localisation_key = warsLostLocKey
 	}
 	text = {
 		trigger = {
@@ -59,16 +59,16 @@ defined_text = {
 }
 
 defined_text = {
-	name = devsumLoc
+	name = battlesWonLoc
 	random = no
 	text = {
         trigger = {
 			check_variable = {
-				which = devsumClicks
+				which = battlesWon
 				value = 1
 			}
         }
-        localisation_key = devsumLocKey
+        localisation_key = battlesWonLocKey
 	}
 	text = {
 		trigger = {
@@ -79,16 +79,16 @@ defined_text = {
 }
 
 defined_text = {
-	name = autoDevLoc
+	name = battlesLostLoc
 	random = no
 	text = {
         trigger = {
 			check_variable = {
-				which = autoDev
+				which = battlesLost
 				value = 1
 			}
         }
-        localisation_key = autoDevLocKey
+        localisation_key = battlesLostLocKey
 	}
 	text = {
 		trigger = {
