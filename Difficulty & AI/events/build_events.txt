@@ -37,14 +37,17 @@ country_event = {
 						can_build = textile
 						can_build = plantations
 						can_build = tradecompany
-						#can_build = farm_estate
+						AND = {
+							can_build = farm_estate
+							trade_goods = wine
+						}
 						AND = {
 							can_build = soldier_households
 							OR = {
 								trade_goods = grain
 								trade_goods = fish
 								trade_goods = livestock
-								trade_goods = wine
+								#trade_goods = wine
 							}
 						}
 						can_build = mills
@@ -128,14 +131,17 @@ country_event = {
 					can_build = textile
 					can_build = plantations
 					can_build = tradecompany
-					#can_build = farm_estate
+					AND = {
+						can_build = farm_estate
+						trade_goods = wine
+					}
 					AND = {
 						can_build = soldier_households
 						OR = {
 							trade_goods = grain
 							trade_goods = fish
 							trade_goods = livestock
-							trade_goods = wine
+							#trade_goods = wine
 						}
 					}
 					can_build = mills
@@ -145,6 +151,7 @@ country_event = {
 			trigger_switch = {
 				on_trigger = trade_goods
 				coal = { goods_check = { goods = coal } }
+				cloves = { goods_check = { goods = cloves } }
 				cocoa = { goods_check = { goods = cocoa } }
 				dyes = { goods_check = { goods = dyes } }
 				gems = { goods_check = { goods = gems } }
@@ -205,6 +212,13 @@ country_event = {
 				}
 				else_if = {
 					limit = {
+						can_build = farm_estate
+						trade_goods = wine
+					}
+					add_building_construction = { building = farm_estate }
+				}
+				else_if = {
+					limit = {
 						#can_build = farm_estate
 						can_build = soldier_households
 						OR = {
@@ -245,6 +259,7 @@ country_event = {
 				trigger_switch = {
 					on_trigger = trade_goods
 					coal = { value_check = { goods = coal } }
+					cloves = { value_check = { goods = cloves } }
 					cocoa = { value_check = { goods = cocoa } }
 					dyes = { value_check = { goods = dyes } }
 					gems = { value_check = { goods = gems } }
@@ -463,11 +478,11 @@ country_event = {
 					}
 					else_if = { #government
 						limit = {
+							governing_capacity_percentage = 0.95
 							any_owned_province = {
 								is_state_core = ROOT
 								has_building = courthouse
 								can_build = town_hall
-								ROOT = { governing_capacity_percentage = 0.95 }
 							}
 						}
 						random_owned_province = {
@@ -577,13 +592,14 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		always = no
+		always = yes
 	}
 
 	immediate = {
 		log = "set prices"
 		REB = {
 			set_variable = { coal_price = 10 }
+			set_variable = { cloves_price = 8 }
 			set_variable = { cocoa_price = 4 }
 			set_variable = { dyes_price = 4 }
 			set_variable = { gems_price = 4 }
