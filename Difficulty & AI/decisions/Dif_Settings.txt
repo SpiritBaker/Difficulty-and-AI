@@ -3,13 +3,13 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			#ai = no
 			has_global_flag = scaling_difficulty_flag	
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
 		}
 
 		allow = {
+			ai = no
 			NOT = { has_global_flag = locked_settings_flag }
 		}
 		
@@ -33,13 +33,13 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			#ai = no
 			NOT = { has_global_flag = scaling_difficulty_flag }
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
 		}
 
 		allow = {
+			ai = no
 			NOT = { has_global_flag = locked_settings_flag }
 		}
 		

@@ -105,6 +105,15 @@ country_event = {
 			}
 			clr_global_flag = dev_click_disabled_flag
 		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
 	}
 	option = { #
 	name = "opt.dif_settings.disable.dev"
@@ -113,6 +122,15 @@ country_event = {
 				NOT = { has_global_flag = dev_click_disabled_flag }
 			}
 			set_global_flag = dev_click_disabled_flag
+		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
 		}	
 	}
 
@@ -186,6 +204,15 @@ country_event = {
 			}
 			clr_global_flag = build_event_disabled_flag
 		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
 	}
 	option = { #
 	name = "opt.dif_settings.disable.build"
@@ -195,6 +222,15 @@ country_event = {
 			}
 			set_global_flag = build_event_disabled_flag
 		}	
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
 	}
 
 	option = { #back
@@ -231,6 +267,15 @@ country_event = {
 			}
 			clr_global_flag = expansion_planer_disabled_flag
 		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
 	}
 	option = { #
 	name = "opt.dif_settings.disable.expansion"
@@ -239,7 +284,16 @@ country_event = {
 				NOT = { has_global_flag = expansion_planer_disabled_flag }
 			}
 			set_global_flag = expansion_planer_disabled_flag
-		}	
+		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			country_event = { id = dif_settings.2 }
+		}
+		else = {
+			country_event = { id = dif_settings.1 }
+		}
 	}
 
 	option = { #back

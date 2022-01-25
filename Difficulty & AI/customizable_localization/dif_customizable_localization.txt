@@ -97,3 +97,22 @@ defined_text = {
 		localisation_key = zeroLocKey
 	}
 }
+defined_text = {
+	name = bankruptcyNumLoc
+	random = no
+	text = {
+        trigger = {
+			check_variable = {
+				which = bankruptcyNum
+				value = 1
+			}
+        }
+        localisation_key = bankruptcyNumLocKey
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = zeroLocKey
+	}
+}

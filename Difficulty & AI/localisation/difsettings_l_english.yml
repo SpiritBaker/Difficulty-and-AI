@@ -1,15 +1,16 @@
 ﻿l_english:
  
  dif_settings_on_title:0 "Settings // Difficulty Scaling is §GON§!"
- dif_settings_on_desc:0 "£dip£ Wars Won: [This.warsWonLoc]\n£dip£ Wars Lost: [This.warsLostLoc]\n£mil£ Battles Won: [This.battlesWonLoc]\n£mil£ Battles Lost: [This.battlesLostLoc]\n ¤ Loans Repaid: [This.loanRepaidLoc]" 
+ dif_settings_on_desc:0 "£dip£ Wars Won: [This.warsWonLoc]\n£dip£ Wars Lost: [This.warsLostLoc]\n£mil£ Battles Won: [This.battlesWonLoc]\n£mil£ Battles Lost: [This.battlesLostLoc]\n¤ Loans Repaid: [This.loanRepaidLoc]\n¤ Bankruptcy: [This.bankruptcyNumLoc]" 
  dif_settings_off_title:0 "Settings // Difficulty Scaling is §ROFF§!"
- dif_settings_off_desc:0 "£dip£ Wars Won: [This.warsWonLoc]\n£dip£ Wars Lost: [This.warsLostLoc]\n£mil£ Battles Won: [This.battlesWonLoc]\n£mil£ Battles Lost: [This.battlesLostLoc]\n¤ Loans Repaid: [This.loanRepaidLoc]"
+ dif_settings_off_desc:0 "£dip£ Wars Won: [This.warsWonLoc]\n£dip£ Wars Lost: [This.warsLostLoc]\n£mil£ Battles Won: [This.battlesWonLoc]\n£mil£ Battles Lost: [This.battlesLostLoc]\n¤ Loans Repaid: [This.loanRepaidLoc]\n¤ Bankruptcy: [This.bankruptcyNumLoc]" 
 
  loanRepaidLocKey:0 "§G[This.loanRepaid.GetValue]§!"
  warsWonLocKey:0 "§G[This.warsWon.GetValue]§!"
  warsLostLocKey:0 "§R[This.warsLost.GetValue]§!"
  battlesWonLocKey:0 "§G[This.battlesWon.GetValue]§!"
  battlesLostLocKey:0 "§R[This.battlesLost.GetValue]§!"
+ bankruptcyNumLocKey:0 "§R[This.bankruptcyNum.GetValue]§!"
   
  dif_settings.1.t:0 "Dificulty&AI Settings"
  dif_settings.1.d:0 "The AI is fundamentally bad at certain areas of the game. To compensate for that mod introduces several AI scripts.\n\nScaling Difficulty option allows you to enable additional AI bonuses that will increase with every subsequent Age.\nDoesn't give AI combat bonuses.\nLimited to AI's with at least 10 provinces to avoid excessive deving."

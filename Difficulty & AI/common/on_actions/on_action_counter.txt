@@ -3,7 +3,7 @@ on_adm_development = {
 	hidden_effect = {
 		owner = {
 			change_variable = {
-				which = milClicks
+				which = admClicks
 				value = 1
 			}
 			change_variable = {
@@ -131,11 +131,9 @@ on_war_won = {
 		add_church_power = 10
 	}
 	hidden_effect = {
-		owner = {
-			change_variable = {
-				which = warsWon
-				value = 1
-			}
+		change_variable = {
+			which = warsWon
+			value = 1
 		}
 	}
 }
@@ -181,11 +179,9 @@ on_war_lost = {
 		add_mandate = -5
     }
 	hidden_effect = {
-		owner = {
-			change_variable = {
-				which = warsLost
-				value = 1
-			}
+		change_variable = {
+			which = warsLost
+			value = 1
 		}
 	}
 }
@@ -216,17 +212,10 @@ on_battle_won_country = {
 			add_war_exhaustion = -0.05
 		}
 	}
-	if = {
-		limit = {
-			ai = yes
-		}
-		hidden_effect = {
-			owner = {
-				change_variable = {
-					which = battlesWon
-					value = 1
-				}
-			}
+	hidden_effect = {
+		change_variable = {
+			which = battlesWon
+			value = 1
 		}
 	}
 }
@@ -239,17 +228,10 @@ on_battle_lost_country = {
 		90 = 0
 		10 = friendship_events.1 #Historical Friendship Broken
 	}
-	if = {
-		limit = {
-			ai = yes
-		}
-		hidden_effect = {
-			owner = {
-				change_variable = {
-					which = battlesLost
-					value = 1
-				}
-			}
+	hidden_effect = {
+		change_variable = {
+			which = battlesLost
+			value = 1
 		}
 	}
 }
@@ -257,11 +239,18 @@ on_battle_lost_country = {
 on_loan_repaid = {
 	on_loan_repaid_estate_privileges_effect = yes
 	hidden_effect = {
-		owner = {
-			change_variable = {
-				which = loanRepaid
-				value = 1
-			}
+		change_variable = {
+			which = loanRepaid
+			value = 1
+		}
+	}
+}
+
+on_bankruptcy = {
+	hidden_effect = {
+		change_variable = {
+			which = bankruptcyNum
+			value = 1
 		}
 	}
 }

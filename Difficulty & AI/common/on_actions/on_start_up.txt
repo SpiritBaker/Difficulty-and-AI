@@ -202,5 +202,19 @@ on_startup = {
 				value = 0
 			}
 		}
+		if = {
+			limit = {
+				check_variable = {
+					which = bankruptcyNum
+					value = 1
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				which = bankruptcyNum
+				value = 0
+			}
+		}
 	}
 }

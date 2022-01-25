@@ -3,11 +3,13 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			#ai = no
 			has_country_flag = dev_click
 			
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
+		}
+		allow = {
+			ai = no
 		}
 		
 		effect = {
@@ -22,11 +24,13 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			#ai = no
 			NOT = { has_country_flag = dev_click }
 			
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
+		}
+		allow = {
+			ai = no
 		}
 		
 		effect = {
