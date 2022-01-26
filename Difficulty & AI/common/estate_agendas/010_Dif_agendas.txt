@@ -2,6 +2,7 @@
 #AI_expansion_area
 #AI_expansion_finish_area
 #AI_expansion_protect_brethren
+#AI_expansion_religion
 #AI_expansion_sea_access
 #AI_expansion_trade_interest
 #AI_expansion_trade_company

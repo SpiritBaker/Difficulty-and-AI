@@ -457,9 +457,9 @@ country_event = {
 		NOT = { is_migratory_tribe = yes }
 		OR = {
 			AND = {
-				primitives = no
-				is_lacking_institutions = no
+				has_institution = feudalism 
 				dip_power = 100
+				NOT = { government = tribal }
 				any_owned_province = {
 					is_state_core = ROOT
 					trade_goods = gold
@@ -467,9 +467,9 @@ country_event = {
 				}
 			}
 			AND = {
-				primitives = no
-				is_lacking_institutions = no
+				has_institution = feudalism 
 				dip_power = 900
+				NOT = { government = tribal }
 				any_owned_province = {
 					is_state_core = ROOT
 					trade_goods = gold
@@ -477,10 +477,6 @@ country_event = {
 				}
 			}
 			AND = {
-				OR = {
-					primitives = yes
-					is_lacking_institutions = yes 
-				}
 				dip_power = 100
 				any_owned_province = {
 					is_state_core = ROOT
@@ -497,9 +493,9 @@ country_event = {
 				OR = {
 					AND = {
 						ROOT = { 
-							primitives = no
-							is_lacking_institutions = no 
+							has_institution = feudalism 
 							dip_power = 100
+							NOT = { government = tribal }
 						}
 						is_state_core = ROOT
 						trade_goods = gold
@@ -507,9 +503,9 @@ country_event = {
 					}
 					AND = {
 						ROOT = { 
-							primitives = no
-							is_lacking_institutions = no 
+							has_institution = feudalism  
 							dip_power = 900
+							NOT = { government = tribal }
 						}
 						is_state_core = ROOT
 						trade_goods = gold
@@ -517,10 +513,6 @@ country_event = {
 					}
 					AND = {
 						ROOT = {
-							OR = {
-								primitives = yes
-								is_lacking_institutions = yes 
-							}
 							dip_power = 100
 						}
 						is_state_core = ROOT
