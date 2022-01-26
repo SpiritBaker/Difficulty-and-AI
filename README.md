@@ -69,14 +69,15 @@ Gameplay and Balance changes:
 
 
 Everything AI:
+- Added difficulty scaling and settings screen. 
+- Added AI expansion planer.
+- Enabled and updated AI building script.
 - AI is more aggressive on higher difficulty.
 - Stopping AI from releasing a bunch of vassals when it exceeds governing capacity.   
 - No debase currency.
 - Restricting AI army movements a bit, AI should behave more defensively.
 - Improved AI building logic, AI should build manufactory in every province.
-- More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.
-- A way for AI to get access to agendas.   
-- Major Fix to AI economy.
+- More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.  
 - Added AI events that disbands Mercenary Companies. ( Temporary workaround )
 - Added AI scripting that upgrades Forts and deletes redundant Forts.
 - War Enthusiasm changes, secondary participants are affected by balance of forces.
