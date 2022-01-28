@@ -169,7 +169,7 @@ NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
 --NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 25.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
 --NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 5				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
-NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2 -- How many times the cost of the investment must be in the treasury to consider buying it
+--NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1 -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
 --NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 100	-- AI scoring for becoming defender of faith, multiplied by budget/cost

@@ -59,39 +59,7 @@ marketplace = {
 		}
 		modifier = {
 			factor = 1.5
-			province_trade_power = 15
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 25
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 50
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 75
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 100
-		}
-		modifier = {
-			factor = 1.5
 			is_in_capital_area = yes
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 1
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 2
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
 			factor = 2.5
@@ -117,22 +85,7 @@ marketplace = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -168,11 +121,6 @@ workshop = {
 	ai_will_do = {
 		factor = 5.25
 		modifier = {
-			factor = 0.5
-			NOT = { is_state = yes }
-			is_owned_by_trade_company = no
-		}
-		modifier = {
 			factor = 0.75
 			NOT = { base_production = 3 }
 		}
@@ -190,50 +138,7 @@ workshop = {
 			}
 		}
 		modifier = {
-			factor = 3
-			OR = { 
-				has_building = mills
-				has_building = farm_estate
-				has_building = tradecompany
-				has_building = plantations
-				has_building = textile
-				has_building = weapons
-				has_building = wharf
-				has_building = furnace 
-			}
-		}
-		modifier = {
 			factor = 2
-			OR = {
-				trade_goods = paper
-				trade_goods = gems
-				trade_goods = glass
-				trade_goods = chinaware
-				trade_goods = copper
-				trade_goods = iron
-				trade_goods = ivory
-				trade_goods = slaves
-				trade_goods = spices
-				trade_goods = fur
-				trade_goods = incense
-				trade_goods = coffee
-				trade_goods = cotton
-				trade_goods = sugar
-				trade_goods = tobacco
-				trade_goods = tea
-				trade_goods = cocoa
-				trade_goods = cloth
-				trade_goods = silk
-				trade_goods = dyes
-				trade_goods = salt
-			}
-		}
-		modifier = {
-			factor = 4
-			trade_goods = coal
-		}
-		modifier = {
-			factor = 5
 			OR = {
 				has_province_modifier = stora_kopparberget_modifier
 				has_province_modifier = granary_of_the_mediterranean
@@ -258,23 +163,8 @@ workshop = {
 			NOT = { num_free_building_slots = 2 }
 			#NOT = { trade_goods = gold }
 			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
+				has_building = manufactory
 			}
-		}
-		modifier = {
-			factor = 0.7
-				NOT = { tolerance_to_this = 0 }
 		}
 	}
 }
@@ -385,7 +275,7 @@ temple = {
 			NOT = { culture_group = ROOT }
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			NOT = { is_state = yes }
 		}
 		modifier = {
@@ -394,23 +284,7 @@ temple = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-					has_building = state_house
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -478,30 +352,6 @@ barracks = {
 			is_in_capital_area = yes
 		}	
 		modifier = {
-			factor = 1.25
-			FROM = {
-				has_idea_group = offensive_ideas
-			}
-		}
-		modifier = {
-			factor = 1.5
-			FROM = {
-				has_idea_group = quantity_ideas
-			}
-		}
-		modifier = {
-			factor = 1.3
-			FROM = {
-				has_idea_group = aristocracy_ideas
-			}
-		}
-		modifier = {
-			factor = 1.3
-			FROM = {
-				religion = orthodox
-			}
-		}
-		modifier = {
 			factor = 1.5
 			area_for_scope_province = {
 				owner = { tag = ROOT }
@@ -509,33 +359,12 @@ barracks = {
 			}
 		}
 		modifier = {
-			factor = 8
+			factor = 2
 			has_building = soldier_households
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
-		}
-		modifier = {
-			factor = 0.7
-			NOT = { has_owner_accepted_culture = yes }
-			NOT = { has_owner_culture = yes }
-			NOT = { culture_group = ROOT }
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }		
@@ -644,22 +473,7 @@ shipyard = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -731,7 +545,10 @@ fort_15th = {
 			}
 			NOT = { is_capital = yes }
 		}
-
+		modifier = {
+			factor = 5
+			province_id = 365
+		}
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -840,33 +657,6 @@ courthouse = {
 	ai_will_do = {
 		factor = 4
 		modifier = {
-			factor = 0.25
-			NOT = { is_state = yes }
-		}
-		modifier = {
-			factor = 0.9
-			area_for_scope_province = {
-				owner = { tag = ROOT }
-				is_capital = yes
-			}
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { development = 10 }
-		}
-		modifier = {
-			factor = 1.5
-			development = 20
-		}
-		modifier = {
-			factor = 1.5
-			development = 30
-		}
-		modifier = {
-			factor = 1.5
-			development = 40
-		}
-		modifier = {
 			factor = 0.5
 			FROM = {
 				NOT = {
@@ -888,22 +678,7 @@ courthouse = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -1008,22 +783,7 @@ dock = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -1087,22 +847,7 @@ regimental_camp = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -1175,7 +920,10 @@ fort_16th = {
 			}
 			NOT = { is_capital = yes }
 		}
-
+		modifier = {
+			factor = 5
+			province_id = 365
+		}
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -1370,23 +1118,7 @@ cathedral = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-					has_building = state_house
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -1546,39 +1278,7 @@ trade_depot = {
 		}
 		modifier = {
 			factor = 1.5
-			province_trade_power = 15
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 25
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 50
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 75
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 100
-		}
-		modifier = {
-			factor = 1.5
 			is_in_capital_area = yes
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 1
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 2
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 3
 		}
 		modifier = {
 			factor = 2.5
@@ -1604,23 +1304,8 @@ trade_depot = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
 			NOT = { has_building = marketplace }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -1733,23 +1418,8 @@ grand_shipyard = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
 			NOT = { has_building = shipyard }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -1814,36 +1484,11 @@ training_fields = {
 			factor = 0.4
 			NOT = { base_manpower = 4 }
 			NOT = { has_building = soldier_households }
-			NOT = { has_building = barracks }
 		}
 		modifier = {
 			factor = 1.2
 			is_in_capital_area = yes
 		}	
-		modifier = {
-			factor = 1.25
-			FROM = {
-				has_idea_group = offensive_ideas
-			}
-		}
-		modifier = {
-			factor = 1.5
-			FROM = {
-				has_idea_group = quantity_ideas
-			}
-		}
-		modifier = {
-			factor = 1.3
-			FROM = {
-				has_idea_group = aristocracy_ideas
-			}
-		}
-		modifier = {
-			factor = 1.3
-			FROM = {
-				religion = orthodox
-			}
-		}
 		modifier = {
 			factor = 1.5
 			area_for_scope_province = {
@@ -1852,34 +1497,13 @@ training_fields = {
 			}
 		}
 		modifier = {
-			factor = 8
+			factor = 2
 			has_building = soldier_households
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
 			NOT = { has_building = barracks }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
-		}
-		modifier = {
-			factor = 0.7
-			NOT = { has_owner_accepted_culture = yes }
-			NOT = { has_owner_culture = yes }
-			NOT = { culture_group = ROOT }
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -1952,7 +1576,10 @@ fort_17th = {
 			}
 			NOT = { is_capital = yes }
 		}
-
+		modifier = {
+			factor = 5
+			province_id = 365
+		}
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -2046,42 +1673,6 @@ stock_exchange = {
 			NOT = {	province_trade_power = 10 }
 		}
 		modifier = {
-			factor = 1.5
-			province_trade_power = 15
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 25
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 50
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 75
-		}
-		modifier = {
-			factor = 1.5
-			province_trade_power = 100
-		}
-		modifier = {
-			factor = 1.5
-			is_in_capital_area = yes
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 1
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 2
-		}
-		modifier = {
-			factor = 2.5
-			province_has_center_of_trade_of_level = 3
-		}
-		modifier = {
 			factor = 2.5
 			FROM = {
 				home_trade_node = {
@@ -2105,28 +1696,13 @@ stock_exchange = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
 			NOT = {
 				OR = {
 					has_building = trade_depot
 					has_building = marketplace
 				}
 			}
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -2165,11 +1741,6 @@ counting_house = {
 	ai_will_do = {
 		factor = 5.25
 		modifier = {
-			factor = 0.5
-			NOT = { is_state = yes }
-			is_owned_by_trade_company = no
-		}
-		modifier = {
 			factor = 0.75
 			NOT = { base_production = 3 }
 		}
@@ -2187,50 +1758,7 @@ counting_house = {
 			}
 		}
 		modifier = {
-			factor = 3
-			OR = { 
-				has_building = mills
-				has_building = farm_estate
-				has_building = tradecompany
-				has_building = plantations
-				has_building = textile
-				has_building = weapons
-				has_building = wharf
-				has_building = furnace 
-			}
-		}
-		modifier = {
 			factor = 2
-			OR = {
-				trade_goods = paper
-				trade_goods = gems
-				trade_goods = glass
-				trade_goods = chinaware
-				trade_goods = copper
-				trade_goods = iron
-				trade_goods = ivory
-				trade_goods = slaves
-				trade_goods = spices
-				trade_goods = fur
-				trade_goods = incense
-				trade_goods = coffee
-				trade_goods = cotton
-				trade_goods = sugar
-				trade_goods = tobacco
-				trade_goods = tea
-				trade_goods = cocoa
-				trade_goods = cloth
-				trade_goods = silk
-				trade_goods = dyes
-				trade_goods = salt
-			}
-		}
-		modifier = {
-			factor = 4
-			trade_goods = coal
-		}
-		modifier = {
-			factor = 5
 			OR = {
 				has_province_modifier = stora_kopparberget_modifier
 				has_province_modifier = granary_of_the_mediterranean
@@ -2254,24 +1782,10 @@ counting_house = {
 			factor = 0.1
 			NOT = { num_free_building_slots = 2 }
 			#NOT = { trade_goods = gold }
+			NOT = { has_building = workshop }
 			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
+				has_building = manufactory
 			}
-		}
-		modifier = {
-			factor = 0.7
-				NOT = { tolerance_to_this = 0 }
 		}
 	}
 }
@@ -2311,33 +1825,6 @@ town_hall = {
 	ai_will_do = {
 		factor = 4
 		modifier = {
-			factor = 0.25
-			NOT = { is_state = yes }
-		}
-		modifier = {
-			factor = 0.9
-			area_for_scope_province = {
-				owner = { tag = ROOT }
-				is_capital = yes
-			}
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { development = 10 }
-		}
-		modifier = {
-			factor = 1.5
-			development = 20
-		}
-		modifier = {
-			factor = 1.5
-			development = 30
-		}
-		modifier = {
-			factor = 1.5
-			development = 40
-		}
-		modifier = {
 			factor = 0.5
 			FROM = {
 				NOT = {
@@ -2359,23 +1846,8 @@ town_hall = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
 			NOT = { has_building = courthouse }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -2483,23 +1955,8 @@ drydock = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
 			NOT = { has_building = dock }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -2566,23 +2023,8 @@ conscription_center = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
 			NOT = { has_building = regimental_camp }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }
@@ -2655,7 +2097,10 @@ fort_18th = {
 			}
 			NOT = { is_capital = yes }
 		}
-
+		modifier = {
+			factor = 5
+			province_id = 365
+		}
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -2737,13 +2182,16 @@ wharf = {
 	ai_will_do = {
 		factor = 4
 		modifier = {
+			factor = 1.2
+			OR = {
+				has_building = workshop
+				has_building = counting_house
+			}
+		}
+		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
-		}
-		modifier = { 
-			factor = 0.8
-			NOT = { base_production = 3 }
 		}
 		modifier = { 
 			factor = 0.6
@@ -2755,25 +2203,6 @@ wharf = {
 		modifier = { 
 			factor = 0.3
 			trade_goods = fish
-		}
-		modifier = { 
-			factor = 2
-			OR = {
-				has_province_modifier = skanemarket
-				has_province_modifier = comet_ore_modifier
-				has_province_modifier = paradise_modifier
-			}
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_building = workshop
-				has_building = counting_house
-			}
-		}
-		modifier = {
-			factor = 0.8
-				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
 			factor = 0.8
@@ -2817,7 +2246,7 @@ weapons = {
 	ai_will_do = {
 		factor = 4
 		modifier = {
-			factor = 2
+			factor = 1.2
 			OR = {
 				has_building = workshop
 				has_building = counting_house
@@ -2827,10 +2256,6 @@ weapons = {
 			factor = 0.75
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
-		}
-		modifier = {
-			factor = 0.8
-				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
 			factor = 0.8
@@ -2878,15 +2303,11 @@ textile = {
 	ai_will_do = {
 		factor = 4
 		modifier = {
-			factor = 0.8
-			NOT = { development = 3 }
-		}
-		modifier = {
 			factor = 0.6
 			trade_goods = wool
 		}
 		modifier = {
-			factor = 2
+			factor = 1.2
 			OR = {
 				has_building = workshop
 				has_building = counting_house
@@ -2896,10 +2317,6 @@ textile = {
 			factor = 0.75
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
-		}
-		modifier = {
-			factor = 0.8
-				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
 			factor = 0.8
@@ -2951,7 +2368,7 @@ plantations = {
 	ai_will_do = {
 		factor = 4
 		modifier = {
-			factor = 2
+			factor = 1.2
 			OR = {
 				has_building = workshop
 				has_building = counting_house
@@ -2961,10 +2378,6 @@ plantations = {
 			factor = 0.75
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
-		}
-		modifier = {
-			factor = 0.8
-				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
 			factor = 0.8
@@ -3019,7 +2432,7 @@ tradecompany = {
 			trade_goods = incense
 		}
 		modifier = {
-			factor = 2
+			factor = 1.2
 			OR = {
 				has_building = workshop
 				has_building = counting_house
@@ -3029,10 +2442,6 @@ tradecompany = {
 			factor = 0.75
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
-		}
-		modifier = {
-			factor = 0.8
-				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
 			factor = 0.8
@@ -3075,25 +2484,13 @@ farm_estate = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 1.2
-		modifier = { 
-			factor = 0.4
-			NOT = { development = 10 }
-		}
-		modifier = { 
-			factor = 0.4
-			NOT = { base_production = 3 }
-		}
-		modifier = { 
-			factor = 0.6
-			NOT = { base_production = 4 }
-		}
+		factor = 0.8
 		modifier = {
 			factor = 0.75
-
+			NOT = { development = 10 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			OR = {
 				has_building = workshop
 				has_building = counting_house
@@ -3103,10 +2500,6 @@ farm_estate = {
 			factor = 0.75
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
-		}
-		modifier = {
-			factor = 0.8
-				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
 			factor = 0.5
@@ -3159,8 +2552,11 @@ mills = {
 	ai_will_do = {
 		factor = 4
 		modifier = {
-			factor = 0.8
-			NOT = { base_production = 3 }
+			factor = 1.2
+			OR = {
+				has_building = workshop
+				has_building = counting_house
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -3170,20 +2566,9 @@ mills = {
 			}
 		}
 		modifier = {
-			factor = 2
-			OR = {
-				has_building = workshop
-				has_building = counting_house
-			}
-		}
-		modifier = {
 			factor = 0.75
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
-		}
-		modifier = {
-			factor = 0.8
-				NOT = { tolerance_to_this = 0 }
 		}
 		modifier = {
 			factor = 0.8
@@ -3227,6 +2612,13 @@ furnace = {
 
 	ai_will_do = {
 		factor = 100
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_building = workshop
+				has_building = counting_house
+			}
+		}
 		modifier = {
 			factor = 0.1
 			NOT = { is_state = yes }
@@ -3398,6 +2790,7 @@ soldier_households = {
 					trade_goods = fish
 					trade_goods = livestock
 					trade_goods = wine
+					trade_goods = wool
 				}
 			}
 		}
@@ -3680,21 +3073,8 @@ state_house = {
 			development = 20
 		}
 		modifier = {
-			factor = 0.1
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			AND = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
-			}
+			factor = 0.25
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }

@@ -49,14 +49,14 @@ interaction = {
 				NOT = { crown_land_share = 25 }
 				AND = {
 					is_absolutism_active = yes
-					NOT = { crown_land_share = 50 }
+					NOT = { crown_land_share = 40 }
 				}
 			}
 		}
-		modifier = {
-			factor = 0.8
-			NOT = { crown_land_share = 30 }
-		}
+		#modifier = {
+		#	factor = 0.8
+		#	NOT = { crown_land_share = 30 }
+		#}
 		modifier = {
 			factor = 0.8
 			current_age = age_of_reformation
@@ -77,17 +77,9 @@ interaction = {
 				}
 			}
 		}
-		#modifier = {
-		#	factor = 0
-		#	NOT = { num_of_loans = 1 }
-		#}
-		#modifier = {
-		#	factor = 0.5
-		#	is_in_deficit = no
-		#}
 		modifier = {
-			factor = 1.2
-			has_any_disaster = yes
+			factor = 2
+			crown_land_share = 30
 		}
 		modifier = {
 			factor = 2
@@ -96,21 +88,6 @@ interaction = {
 		modifier = {
 			factor = 2
 			num_of_loans = 5
-			crown_land_share = 25
-		}
-		modifier = {
-			factor = 2
-			num_of_loans = 10
-			crown_land_share = 25 
-		}
-		modifier = {
-			factor = 2
-			num_of_loans = 15
-			crown_land_share = 25
-		}
-		modifier = {
-			factor = 2
-			num_of_loans = 20
 			crown_land_share = 25
 		}
 		modifier = {
@@ -133,6 +110,7 @@ interaction = {
 		}
 		modifier = {
 			factor = 0.8
+			NOT = { crown_land_share = 30 }
 			has_country_flag = recent_land_distribution
 			NOT = {
 				had_country_flag = {
@@ -150,6 +128,7 @@ interaction = {
 		}
 		modifier = {
 			factor = 0.6
+			NOT = { crown_land_share = 30 }
 			has_country_flag = recent_land_seizure
 			NOT = {
 				had_country_flag = {
@@ -308,6 +287,7 @@ interaction = {
             loyalty = -20
             short = yes
         }
+
 		custom_tooltip = seize_land_rebels_tt
 		if = {
 			limit = {
@@ -384,7 +364,6 @@ interaction = {
 			#	NOT = { army_size = 50 }
 			#}
 			NOT = { num_of_cities = 5 }
-			NOT = { army_size_percentage = 0.25 }
 			NOT = { army_size = 15 }
 			NOT = { #sorry, scripted triggers glitched out
 				OR = {
@@ -458,6 +437,10 @@ interaction = {
 			NOT = { num_of_rebel_armies = 1 }
 		}
 		modifier = {
+			factor = 4
+			NOT = { crown_land_share = 10 }
+		}	
+		modifier = {
 			factor = 2
 			NOT = { crown_land_share = 20 }
 		}
@@ -494,7 +477,18 @@ interaction = {
 			average_unrest = 3
 		}
 		modifier = {
+			factor = 2
+			has_country_flag = sell_and_revoke_flag
+			NOT = {
+				had_country_flag = {
+					flag = sell_and_revoke_flag
+					days = 730
+				}
+			}
+		}
+		modifier = {
 			factor = 0.5
+			crown_land_share = 30
 			has_country_flag = recent_land_seizure
 			NOT = {
 				had_country_flag = {
@@ -505,6 +499,7 @@ interaction = {
 		}
 		modifier = {
 			factor = 0.75
+			crown_land_share = 30
 			has_country_flag = recent_land_seizure
 			NOT = {
 				had_country_flag = {
@@ -515,6 +510,7 @@ interaction = {
 		}
 		modifier = {
 			factor = 0.5
+			crown_land_share = 30
 			has_country_flag = recent_land_distribution
 			NOT = {
 				had_country_flag = {
@@ -523,30 +519,13 @@ interaction = {
 				}
 			}
 		}
-		#modifier = {
-		#	factor = 0.8
-		#	NOT = {
-		#		estate_loyalty = {
-		#			estate = all
-		#			loyalty = 50
-		#		}
-		#	}
-		#}
 		modifier = {
 			factor = 0.35
+			crown_land_share = 30
 			NOT = {
 				estate_loyalty = {
 					estate = all
-					loyalty = 40
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 30 # Estate is basically disloyal
+					loyalty = 30
 				}
 			}
 		}

@@ -4039,7 +4039,7 @@ AFG_ideas = {
 	free = yes
 	
 	pashtunwali = {
-		war_exhaustion_cost = -0.10
+		land_morale = 0.1
 	}
 	shadows_of_the_hindu_kush = {
 		defensiveness = 0.25

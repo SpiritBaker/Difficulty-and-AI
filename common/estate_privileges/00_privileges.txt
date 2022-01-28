@@ -2149,18 +2149,10 @@ estate_nobles_officer_corp = {
 		army_tradition_decay = -0.005
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 7.5
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			is_absolutism_active = yes
-		}
-		modifier = {
-			factor = 1.25
-			has_idea_group = aristocracy_ideas
-		}
-		modifier = {
-			factor = 1.25
-			government = monarchy
 		}
 	}
 }
@@ -2417,7 +2409,7 @@ estate_church_religious_state = {
 		country_admin_power = 1
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0
 			OR = {
@@ -2917,7 +2909,7 @@ estate_burghers_land_of_commerce = {
 		country_diplomatic_power = 1
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0
 			OR = {
@@ -3752,7 +3744,7 @@ estate_brahmins_brahmin_governance = {
 		country_admin_power = 1
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0
 			OR = {
@@ -4012,7 +4004,7 @@ estate_jains_diplomacy = {
 		country_diplomatic_power = 1
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0
 			OR = {
@@ -4209,7 +4201,7 @@ estate_maratha_military = {
 		country_military_power = 1
 	}
 	ai_will_do = {
-		factor = 12
+		factor = 15
 		modifier = {
 			factor = 0
 			OR = {
@@ -4538,7 +4530,7 @@ estate_rajput_military = {
 		country_military_power = 1
 	}
 	ai_will_do = {
-		factor = 12
+		factor = 15
 		modifier = {
 			factor = 0
 			OR = {
