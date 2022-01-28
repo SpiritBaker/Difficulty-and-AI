@@ -627,10 +627,15 @@ tributary_state = {
 					num_of_cities = 10
 					government_rank = 2
 					NOT = { has_reform = celestial_empire }
-					NOT = { 
-						primary_culture = manchu
-						primary_culture = manchu_new
-						culture_group = east_asian
+					OR = {
+						NOT = { 
+							primary_culture = manchu
+							primary_culture = manchu_new
+							culture_group = east_asian
+						}
+						capital_scope = {
+							NOT = { region = japan_region }
+						}
 				 	}
 					OR = {
 						is_nomad = yes

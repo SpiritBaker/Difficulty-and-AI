@@ -53,7 +53,7 @@ marketplace = {
 	ai_will_do = {
 		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
-			factor = 0
+			factor = 0.1
 			NOT = { province_has_center_of_trade_of_level = 1 }
 			NOT = {	province_trade_power = 10 }
 		}
@@ -546,7 +546,7 @@ fort_15th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			province_id = 365
 		}
 		modifier = {
@@ -816,7 +816,7 @@ regimental_camp = {
 	}
 	
 	ai_will_do = {
-		factor = 1
+		factor = 1.1
 		modifier = {
 			factor = 1.2
 			NOT = { development = 10 }
@@ -921,7 +921,7 @@ fort_16th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			province_id = 365
 		}
 		modifier = {
@@ -1272,7 +1272,7 @@ trade_depot = {
 	ai_will_do = {
 		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
-			factor = 0
+			factor = 0.1
 			NOT = { province_has_center_of_trade_of_level = 1 }
 			NOT = {	province_trade_power = 10 }
 		}
@@ -1577,7 +1577,7 @@ fort_17th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			province_id = 365
 		}
 		modifier = {
@@ -1668,7 +1668,7 @@ stock_exchange = {
 	ai_will_do = {
 		factor = 3.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 		modifier = {
-			factor = 0
+			factor = 0.1
 			NOT = { province_has_center_of_trade_of_level = 1 }
 			NOT = {	province_trade_power = 10 }
 		}
@@ -1992,7 +1992,7 @@ conscription_center = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.1
 		modifier = {
 			factor = 1.2
 			NOT = { development = 10 }
@@ -2098,7 +2098,7 @@ fort_18th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			province_id = 365
 		}
 		modifier = {

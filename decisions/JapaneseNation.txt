@@ -69,6 +69,7 @@ country_decisions = {
 			NOT = { exists = JAP }
 		}
 		allow = {
+			adm_tech = 10
 			NOT = { exists = JAP }
 			is_free_or_tributary_trigger = yes
 			owns = 1020

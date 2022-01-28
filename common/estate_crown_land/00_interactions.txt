@@ -198,6 +198,10 @@ interaction = {
 		}
 		modifier = {
 			factor = 0
+			NOT = { is_year = 1446 }
+		}
+		modifier = {
+			factor = 0
 			tag = MNG
 		}
 		modifier = {

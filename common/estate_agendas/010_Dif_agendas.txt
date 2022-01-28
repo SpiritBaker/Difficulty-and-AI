@@ -22,6 +22,7 @@ AI_expansion_protect_culture = {
 		}
 		any_owned_province = {
 			any_neighbor_province = {
+				not_core_or_claim = yes
 				is_city = yes
 				religion = root
 				culture = root
@@ -73,6 +74,7 @@ AI_expansion_protect_culture = {
 		random_owned_province = {
 			limit = {
 				any_neighbor_province = {
+					not_core_or_claim = yes
 					is_city = yes
 					religion = root
 					culture = root
@@ -96,6 +98,7 @@ AI_expansion_protect_culture = {
 			}
 			random_neighbor_province = {
 				limit = {
+					not_core_or_claim = yes
 					is_city = yes
 					religion = root
 					culture = root
@@ -158,6 +161,7 @@ AI_expansion_protect_culture = {
 				}
 			}
 		}
+		log = "[This.GetName] AItask protect culture"
 	}
 	on_invalid = {
 	}
@@ -240,8 +244,18 @@ AI_expansion_area = {
 			has_non_generic_missions = yes
 		}
 		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { government_rank = 3 }
+				is_great_power = no
+			}
+		}
+		modifier = {
 			factor = 1.5
-			government_rank = 2
+			OR = {
+				government_rank = 3
+				is_great_power = yes
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -335,6 +349,7 @@ AI_expansion_area = {
 				}
 			}
 		}
+		log = "[This.GetName] AItask area"
 	}
 	on_invalid = {
 		if = {
@@ -563,6 +578,7 @@ AI_expansion_finish_area = {
 				}
 			}
 		}
+		log = "[This.GetName] AItask finish area"
 	}
 	on_invalid = {
 	}
@@ -612,6 +628,7 @@ AI_expansion_protect_brethren = {
 		}
 		any_owned_province = {
 			any_neighbor_province = {
+				not_core_or_claim = yes
 				NOT = { owned_by = root }
 				is_city = yes
 				religion = root
@@ -619,6 +636,7 @@ AI_expansion_protect_brethren = {
 				owner = {
 					is_free_or_tributary_trigger = yes
 					NOT = { religion = root }
+					NOT = { core_claim = root }
 					NOT = { religion = confucianism }
 					NOT = { is_subject_of = root }
 					NOT = { overlord_of = root }
@@ -655,6 +673,7 @@ AI_expansion_protect_brethren = {
 		random_owned_province = {
 			limit = {
 				any_neighbor_province = {
+					not_core_or_claim = yes
 					NOT = { owned_by = root }
 					is_city = yes
 					religion = root
@@ -662,6 +681,7 @@ AI_expansion_protect_brethren = {
 					owner = {
 						is_free_or_tributary_trigger = yes
 						NOT = { religion = root }
+						NOT = { core_claim = root }
 						NOT = { religion = confucianism }
 						NOT = { is_subject_of = root }
 						NOT = { overlord_of = root }
@@ -678,6 +698,7 @@ AI_expansion_protect_brethren = {
 			}
 			random_neighbor_province = {
 				limit = {
+					not_core_or_claim = yes
 					NOT = { owned_by = root }
 					is_city = yes
 					religion = root
@@ -685,6 +706,7 @@ AI_expansion_protect_brethren = {
 					owner = {
 						is_free_or_tributary_trigger = yes
 						NOT = { religion = root }
+						NOT = { core_claim = root }
 						NOT = { religion = confucianism }
 						NOT = { is_subject_of = root }
 						NOT = { overlord_of = root }
@@ -740,6 +762,7 @@ AI_expansion_protect_brethren = {
 				}
 			}
 		}
+		log = "[This.GetName] AItask protect brethren"
 	}
 	on_invalid = {
 	}
@@ -789,6 +812,7 @@ AI_expansion_religion = {
 		}
 		any_owned_province = {
 			any_neighbor_province = {
+				not_core_or_claim = yes
 				NOT = { owned_by = root }
 				is_city = yes
 				NOT = { religion = root }
@@ -802,6 +826,7 @@ AI_expansion_religion = {
 					}
 					is_free_or_tributary_trigger = yes
 					NOT = { religion = root }
+					NOT = { core_claim = root }
 					NOT = { religion = confucianism }
 					NOT = { is_subject_of = root }
 					NOT = { overlord_of = root }
@@ -838,6 +863,7 @@ AI_expansion_religion = {
 		random_owned_province = {
 			limit = {
 				any_neighbor_province = {
+					not_core_or_claim = yes
 					NOT = { owned_by = root }
 					is_city = yes
 					NOT = { religion = root }
@@ -851,6 +877,7 @@ AI_expansion_religion = {
 						}
 						is_free_or_tributary_trigger = yes
 						NOT = { religion = root }
+						NOT = { core_claim = root }
 						NOT = { religion = confucianism }
 						NOT = { is_subject_of = root }
 						NOT = { overlord_of = root }
@@ -867,6 +894,7 @@ AI_expansion_religion = {
 			}
 			random_neighbor_province = {
 				limit = {
+					not_core_or_claim = yes
 					NOT = { owned_by = root }
 					is_city = yes
 					NOT = { religion = root }
@@ -880,6 +908,7 @@ AI_expansion_religion = {
 						}
 						is_free_or_tributary_trigger = yes
 						NOT = { religion = root }
+						NOT = { core_claim = root }
 						NOT = { religion = confucianism }
 						NOT = { is_subject_of = root }
 						NOT = { overlord_of = root }
@@ -934,6 +963,7 @@ AI_expansion_religion = {
 					add_claim = root
 				}
 			}
+			log = "[This.GetName] AItask religion"
 		}
 	}
 	on_invalid = {
@@ -979,6 +1009,7 @@ AI_expansion_sea_access = {
 		}
 		any_owned_province = {
 			any_neighbor_province = {
+				not_core_or_claim = yes
 				has_port = yes
 				owner = {
 					NOT = { overlord_of = root }
@@ -1014,6 +1045,7 @@ AI_expansion_sea_access = {
 			limit = {
 				any_neighbor_province = {
 					has_port = yes
+					not_core_or_claim = yes
 					owner = {
 						NOT = { overlord_of = root }
 						NOT = { is_subject_of = root }
@@ -1036,6 +1068,7 @@ AI_expansion_sea_access = {
 			random_neighbor_province = {
 				limit = {
 					has_port = yes
+					not_core_or_claim = yes
 					owner = {
 						NOT = { overlord_of = root }
 						NOT = { is_subject_of = root }
@@ -1087,6 +1120,7 @@ AI_expansion_sea_access = {
 				add_claim = root
 			}
 		}
+		log = "[This.GetName] AItask sea access"
 	}
 	on_invalid = {
 	}
@@ -1263,6 +1297,7 @@ AI_expansion_trade_interest = {
 				}
 			}
 		}
+		log = "[This.GetName] AItask trade interest"
 	}
 	on_invalid = {
 		if = {
@@ -1486,6 +1521,7 @@ AI_expansion_trade_company = {
 				}
 			}
 		}
+		log = "[This.GetName] AItask trade company"
 	}
 	on_invalid = {
 		if = {
@@ -1546,6 +1582,7 @@ AI_expansion_gold = {
 		any_owned_province = {
 			any_neighbor_province = {
 				trade_goods = gold
+				not_core_or_claim = yes
 				owner = {
 					NOT = { overlord_of = root }
 					NOT = { is_subject_of = root }
@@ -1580,6 +1617,7 @@ AI_expansion_gold = {
 			limit = {
 				any_neighbor_province = {
 					trade_goods = gold
+					not_core_or_claim = yes
 					owner = {
 						NOT = { overlord_of = root }
 						NOT = { is_subject_of = root }
@@ -1601,7 +1639,9 @@ AI_expansion_gold = {
 			}
 			random_neighbor_province = {
 				limit = {
+					FROM = { NOT = { core_claim = root } }
 					trade_goods = gold
+					not_core_or_claim = yes
 					owner = {
 						NOT = { overlord_of = root }
 						NOT = { is_subject_of = root }
@@ -1653,6 +1693,7 @@ AI_expansion_gold = {
 				add_claim = root
 			}
 		}
+		log = "[This.GetName] AItask gold"
 	}
 	on_invalid = {
 	}

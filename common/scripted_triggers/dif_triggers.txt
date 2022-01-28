@@ -57,3 +57,8 @@ building_slot_for_manufactory_trigger = {
 	NOT = { trade_goods = gold }
 	NOT = { has_building = manufactory }
 }
+
+not_core_or_claim = {
+	NOT = { is_claim = root }
+	NOT = { is_core = root }
+}
