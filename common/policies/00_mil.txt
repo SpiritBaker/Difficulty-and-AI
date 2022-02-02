@@ -316,7 +316,7 @@ field_priests = {
 		full_idea_group = quantity_ideas
 	}
 
-	land_morale = 0.05
+	manpower_in_true_faith_provinces = 0.15
 	recover_army_morale_speed = 0.05
 	
 	ai_will_do = {
@@ -965,7 +965,7 @@ war_horses_policy = {
 		full_idea_group = horde_gov_ideas
 	}
 
-	army_tradition = 0.5
+	#army_tradition = 0.5
 	shock_damage = 0.1
 	
 	ai_will_do = {
@@ -1040,8 +1040,8 @@ wielders_of_the_flaming_sword_policy = {
 		full_idea_group = religious_ideas
 	}
 
-	land_morale = 0.05
-	shock_damage = 0.05
+	#land_morale = 0.05
+	shock_damage = 0.1
 	
 	ai_will_do = {
 		factor = 5.0
@@ -1123,8 +1123,8 @@ war_on_our_terms_policy = {
 		full_idea_group = exploration_ideas
 	}
 
-	discipline = 0.025
-	land_morale = 0.05
+	discipline = 0.03
+	#land_morale = 0.05
 	
 	ai_will_do = {
 		factor = 10
@@ -1189,34 +1189,7 @@ psychological_warfare_policy = {
 	}
 }
 
-kharash_policy = { 
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = horde_gov_ideas
-		has_idea_group = influence_ideas
-	}
-	
-	allow = {
-		full_idea_group = horde_gov_ideas
-		full_idea_group = influence_ideas
-	}
-
-	land_morale = 0.05
-	vassal_forcelimit_bonus = 1.0
-
-	ai_will_do = {
-		factor = 5.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-		modifier = {
-			factor = 10
-			is_in_important_war = yes
-		}
-	}
-}
+# kharash_policy
 
 my_word_is_my_bond_policy = { 
 	monarch_power = MIL
@@ -1289,5 +1262,33 @@ vassal_taxation_policy = {
 			factor = 2
 			is_at_war = yes
 		}	
+	}
+}
+
+anti_heresy_act = {
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = offensive_ideas
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = offensive_ideas
+	}
+	
+	land_morale = 0.1
+
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 5
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 10
+			is_in_important_war = yes
+		}
 	}
 }

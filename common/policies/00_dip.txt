@@ -1744,3 +1744,44 @@ autonomous_estates = {
 		}	
 	}
 }
+
+kharash_policy = { 
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = influence_ideas
+	}
+	
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = influence_ideas
+	}
+
+	land_morale = 0.05
+	vassal_forcelimit_bonus = 1.0
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { vassal = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 2
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
+		}			
+		modifier = {
+			factor = 1.5
+			vassal = 4
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 5
+		}	
+	}
+}

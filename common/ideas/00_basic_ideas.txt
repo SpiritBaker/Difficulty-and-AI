@@ -690,7 +690,7 @@ defensive_ideas = {
 		army_tradition = 0.5
 	}
 	military_drill = {
-		land_morale = 0.15
+		land_morale = 0.10
 	}
 	improved_manuever = {
 		shock_damage_received = -0.1
