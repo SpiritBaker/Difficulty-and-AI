@@ -74,34 +74,17 @@ province_event = {
 		NOT = { has_province_modifier = religious_center }
 	}
 	mean_time_to_happen = {
-		years = 100
+		years = 600
 		modifier = {
-			factor = 4
+			factor = 20
 			NOT = { continent = europe }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.75
 			is_capital = yes
 		}
 		modifier = {
-			factor = 0.8
-			owner = { tag = FRA }
-		}
-		modifier = {
-			factor = 1.2
-			NOT = { owner = { religion_group = christian } }
-		}
-		modifier = {
-			factor = 3
-			owner = { 
-				OR = { 
-					has_reform = parliamentary_reform 
-					government = republic 
-				}
-			} 
-		}
-		modifier = {
-			factor = 2.5
+			factor = 1.5
 			owner = {
 				capital_scope = {
 					NOT = { region = root }
@@ -118,7 +101,7 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			is_in_capital_area = no
 		}
 		modifier = {
@@ -128,16 +111,12 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			is_institution_enabled = industrialization
 		}
 		modifier = {
-			factor = 0.75
-			industrialization = 100
-		}
-		modifier = {
 			factor = 0.9
-			has_building = university
+			industrialization = 100
 		}
 		modifier = {
 			factor = 1.2
@@ -404,14 +383,6 @@ province_event = {
 		}
 		#Time-based checks
 		modifier = {
-			factor = 1.5
-			NOT = { is_year = 1700 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { is_year = 1725 }
-		}
-		modifier = {
 			factor = 0.8
 			is_year = 1750
 		}
@@ -492,6 +463,7 @@ province_event = {
 			has_institution = enlightenment
 			is_free_or_tributary_trigger = yes
 			NOT = { tag = PAP }
+			NOT = { has_reform = celestial_empire }
 		}
 		NOT = { has_province_modifier = religious_center }
 		NOT = { has_province_flag = first_revolution_center }

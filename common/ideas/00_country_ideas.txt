@@ -1059,7 +1059,7 @@ BRA_ideas = {
 POR_ideas = {
 	start = {
 		range = 0.25
-		trade_efficiency = 0.15
+		infantry_power = 0.1
 	}
 	
 	bonus = {
@@ -1072,7 +1072,7 @@ POR_ideas = {
 	free = yes		#will be added at load.
 	
 	legacy_of_the_navigator = {
-		sunk_ship_morale_hit_recieved = -0.33
+		naval_morale = 0.1
 		disengagement_chance = 0.05
 	}
 	afonsine_ordinances = {
@@ -1085,7 +1085,7 @@ POR_ideas = {
 		global_colonial_growth = 15
 	}
 	the_bandeirantes = {
-		merchants = 1
+		trade_efficiency = 0.15
 	}
 	royal_absolutism = {
 		build_cost = -0.15
@@ -1093,7 +1093,7 @@ POR_ideas = {
 	}
 	por_royal_military_academy = {
 		defensiveness = 0.1
-		artillery_power = 0.1
+		artillery_fire = 1
 	}
 }
 
@@ -2006,7 +2006,7 @@ KOR_ideas = {
 	free = yes
 	
 	hanguel_alphabet = {
-		technology_cost = -0.05
+		technology_cost = -0.1
 	}
 	grand_code = {
 		stability_cost_modifier = -0.10
@@ -2330,7 +2330,7 @@ ETH_ideas = {
 	}
 	
 	bonus = {
-		legitimacy = 1
+		discipline = 0.05
 	}
 	
 	trigger = {
@@ -2343,9 +2343,11 @@ ETH_ideas = {
 	}
 	nagusa_negast = {
 		heir_chance = 0.5
+		legitimacy = 1
 	}
 	hostile_borders = {
 		defensiveness = 0.20
+		war_exhaustion = -0.03
 	}
 	diplomatic_demeanor = {
 		diplomatic_reputation = 1
@@ -2357,7 +2359,7 @@ ETH_ideas = {
 		core_creation = -0.10
 	}
 	eth_reformed_armies = {
-		infantry_power = 0.1
+		army_tradition = 0.5
 	}
 }
 
@@ -4894,10 +4896,7 @@ mossi_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			TAG = MSI
-			TAG = YAT
-		}
+		primary_culture = mossi
 	}
 	
 	free = yes		#will be added at load.
@@ -8336,6 +8335,8 @@ ROM_ideas = {
 	start = {
 		discipline = 0.05
 		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
 	}
 	
 	bonus = {
@@ -8348,7 +8349,7 @@ ROM_ideas = {
 	free = yes
 	
 	pax_romana = {
-		global_unrest = -1
+		global_unrest = -2
 	}
 	legacy_of_rome = {
 		diplomatic_reputation = 2
@@ -8365,9 +8366,11 @@ ROM_ideas = {
 	}
 	imperial_bureaucracy = {
 		global_tax_modifier = 0.1
+		administrative_efficiency = 0.05
 	}
 	imperium_sine_fine = {
-		core_creation = -0.20
+		core_creation = -0.25
+		years_of_nationalism = -5
 	}
 }
 

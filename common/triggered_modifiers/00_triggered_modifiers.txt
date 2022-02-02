@@ -610,6 +610,30 @@ the_mandate_of_heaven_lost = {
 	global_unrest = 10
 }
 
+ai_wants_chinese_capitals = {
+	potential = {
+		ai = yes
+		OR = {
+			owns = 1816
+			owns = 1821
+			owns = 667
+		}
+		has_dlc = "Mandate of Heaven"
+		capital_scope = {
+			superregion = china_superregion
+		}
+	}
+	trigger = {
+		owns = 1816
+		owns = 1821
+		owns = 667
+	}
+
+	ai_weight = {
+		factor = 100 # Makes AI try to conquer the cities
+	}
+}
+
 lost_control_of_beijing = {
 	potential = {
 		has_reform = celestial_empire
@@ -617,16 +641,14 @@ lost_control_of_beijing = {
 	}
 
 	trigger = {
-		NOT = {
-			1816 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+		OR = {
+			NOT = { owns = 1816 }
+			NOT = { controls = 1816 }
 		}
+	}
 
-		#OR = {
-		#	NOT = { owns = 1816 }
-		#	NOT = { controls = 1816 }
-		#}
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
 	}
 
 	imperial_mandate = -0.05
@@ -639,15 +661,14 @@ lost_control_of_nanjing = {
 	}
 
 	trigger = {
-		NOT = {
-			1821 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+		OR = {
+			NOT = { owns = 1821 }
+			NOT = { controls = 1821 }
 		}
-		#OR = {
-		#	NOT = { owns = 1821 }
-		#	NOT = { controls = 1821 }
-		#}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
 	}
 
 	imperial_mandate = -0.05
@@ -660,49 +681,14 @@ lost_control_of_canton = {
 	}
 
 	trigger = {
-		NOT = {
-			667 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		#OR = {
-		#	NOT = { owns = 667 }
-		#	NOT = { controls = 667 }
-		#}
-	}
-
-	imperial_mandate = -0.05
-}
-
-lost_control_of_xian = {
-	potential = {
-		has_reform = celestial_empire
-		has_dlc = "Mandate of Heaven"
-	}
-
-	trigger = {
-		NOT = {
-			700 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+		OR = {
+			NOT = { owns = 667 }
+			NOT = { controls = 667 }
 		}
 	}
 
-	imperial_mandate = -0.05
-}
-
-lost_control_of_luoyang = {
-	potential = {
-		has_reform = celestial_empire
-		has_dlc = "Mandate of Heaven"
-	}
-
-	trigger = {
-		NOT = {
-			1836 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
 	}
 
 	imperial_mandate = -0.05

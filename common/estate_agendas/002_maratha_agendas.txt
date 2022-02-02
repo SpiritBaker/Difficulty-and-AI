@@ -25,17 +25,12 @@ estate_maratha_hire_advisor = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -84,17 +79,12 @@ estate_maratha_fire_advisor = {
 		NOT = { has_country_flag = just_fired_mil_advisor }
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		clr_country_flag = need_to_fire_mil_advisor
     }
 }
@@ -234,17 +224,12 @@ estate_maratha_condottieri_rivals = {
 		add_mil_power = 50
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -339,17 +324,12 @@ estate_maratha_support_independence = {
 		add_dip_power = 50
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -481,17 +461,12 @@ estate_maratha_retake_core = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -541,17 +516,12 @@ estate_maratha_crush_revolts = {
 		add_prestige = 10
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -608,17 +578,12 @@ estate_maratha_regain_liberty = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -733,17 +698,12 @@ estate_maratha_convert_province_culture = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		event_target:agenda_province = {
 			clear_random_development_bonus_flags_effect = yes
 			if = {
@@ -948,16 +908,11 @@ estate_maratha_protect_our_culture = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
 		}
 		event_target:agenda_province = {
 			if = {
@@ -1151,16 +1106,11 @@ estate_maratha_vassalise_vulnerable_country = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
 		}
 		if = {
 			limit = {
@@ -1390,17 +1340,12 @@ estate_maratha_expand_into_x = {
 		add_adm_power = 50
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		if = {
 			limit = {
 				event_target:agenda_province = {
@@ -1641,9 +1586,9 @@ estate_maratha_complete_conquest_of_x = {
 		event_target:agenda_province = {
 			area_for_scope_province = {
 				type = all
-				OR = {
-					owned_by = root
-					owner = {
+				owner = {
+					OR = {
+						tag = root
 						is_subject_of = root
 					}
 				}
@@ -1668,17 +1613,12 @@ estate_maratha_complete_conquest_of_x = {
 		add_adm_power = 50
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		if = {
 			limit = {
 				event_target:agenda_province = {
@@ -1803,17 +1743,12 @@ estate_maratha_annex_subject = {
 		custom_tooltip = no_penalties_annexing_tt
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		hidden_effect = {
 			event_target:agenda_country = {
 				remove_country_modifier = to_be_agenda_annexed_timer
@@ -1889,17 +1824,12 @@ estate_maratha_build_an_army = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1970,17 +1900,12 @@ estate_maratha_bigger_army_than_rival = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -2087,16 +2012,11 @@ estate_maratha_build_up_manpower_reserves = {
 		clear_random_military_advisor_generation_flags = yes
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
 		}
 		clear_random_military_advisor_generation_flags = yes
     }
@@ -2157,17 +2077,12 @@ estate_maratha_recover_abysmal_prestige = {
 		add_stability_or_adm_power = yes
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -2254,16 +2169,11 @@ estate_maratha_improve_prestige = {
 		add_adm_power = 50
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_maratha
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }

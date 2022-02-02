@@ -40,6 +40,33 @@ cb_restore_personal_union = {
 	war_goal = take_capital_personal_union
 }
 
+#Hundred Years War
+cb_hundred_years_war = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 240
+
+	prerequisites = {
+		OR = {
+			government = monarchy
+			has_reform = dutch_republic
+		}
+		is_revolutionary = no
+		FROM = {
+			OR = {
+				government = monarchy
+				has_reform = ambrosian_republic
+				# has_reform = military_dictatorship_reform
+				has_country_flag = neapolitan_republic
+			}
+			is_subject = no
+		}
+	}
+
+	war_goal = take_capital_hundred_years_war
+}
+
 # Defected province
 cb_defection = {
 	valid_for_subject = no
@@ -1229,14 +1256,7 @@ cb_chinese_unification = {
 		OR = {
 			AND = {
 				has_dlc = "Mandate of Heaven"
-				OR = {
-					is_emperor_of_china = yes
-					OR = {
-						owns_core_province = 1816	# Beijing
-						owns_core_province = 1821	# Nanjing
-						owns_core_province = 667	# Canton
-					}
-				}
+				is_emperor_of_china = yes
 			}
 			AND = {
 				NOT = { has_dlc = "Mandate of Heaven" }
@@ -1247,6 +1267,7 @@ cb_chinese_unification = {
 					NOT = { primary_culture = manchu }
 				}
 			}
+			has_government_attribute = has_unify_china_cb
 		}
 		
 		FROM = { #Applies against other powers in China unless they have the Mandate of Heaven
@@ -1263,12 +1284,16 @@ cb_chinese_unification = {
 				}
 			}
 			NOT = { has_country_modifier = the_mandate_of_heaven }
+			is_emperor_of_china = no
 		}
 		is_neighbor_of = FROM
 	}
+
 	attacker_disabled_po = {
 		po_become_tributary_state
+		po_subjugate_tributary_state
 	}
+
 	war_goal = superiority_chinese_unification
 }
 
@@ -1300,6 +1325,7 @@ cb_take_mandate = {
 
 	attacker_disabled_po = {
 		po_become_tributary_state
+		po_subjugate_tributary_state
 	}
 
 	war_goal = take_capital_take_mandate
@@ -1322,28 +1348,27 @@ cb_force_tributary = {
 	prerequisites = {
 		has_dlc = "Mandate of Heaven"
 		is_emperor_of_china = yes
-		FROM = { 
-			is_subject = no
-			OR = {
-				NOT = { primary_culture = zhuang }
-				NOT = { primary_culture = yi }
-				NOT = { primary_culture = bai }
-				NOT = { culture_group = east_asian } #Chinese
-				AND = {
-					ai = yes
-					NOT = { 
-						any_owned_province = {
-							superregion = china_superregion
-						}
+		FROM = { is_subject = no }
+		is_neighbor_of = FROM
+		OR = {
+			ai = no
+			AND = {
+				OR = {
+					NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+					AND = {
+						ROOT = { capital_scope = { superregion = china_superregion } }
+						NOT = { FROM = { any_owned_province = { superregion = china_superregion } } }
+					}
+				}
+				OR = {
+					NOT = { ROOT = { capital_scope = { region = japan_region } } }
+					AND = {
+						ROOT = { capital_scope = { region = japan_region } }
+						NOT = { FROM = { any_owned_province = { region = japan_region } } }
 					}
 				}
 			}
 		}
-		is_neighbor_of = FROM
-	}
-	
-	attacker_disabled_po = {
-		po_demand_provinces
 	}
 	
 	war_goal = take_capital_force_tributary

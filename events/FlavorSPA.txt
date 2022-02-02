@@ -32,6 +32,7 @@ country_event = {
 					is_neighbor_of = ROOT
 					NOT = { is_in_war = { attacker_leader = ARA } }
 					NOT = { is_in_war = { defender_leader = ARA } }
+					NOT = { is_in_war = { casus_belli = cb_independence_war } }
 				}
 				num_of_cities = 25
 			}
@@ -48,6 +49,7 @@ country_event = {
 					is_neighbor_of = ROOT
 					NOT = { is_in_war = { attacker_leader = CAS } }
 					NOT = { is_in_war = { defender_leader = CAS } }
+					NOT = { is_in_war = { casus_belli = cb_independence_war } }
 				}
 				num_of_cities = 16
 			}
@@ -236,7 +238,7 @@ country_event = {
 		name = "flavor_spa.EVTOPTA3150"
 		define_advisor = {
 			type = inquisitor
-			name = "Tom·s de Torquemada"
+			name = "Tom√°s de Torquemada"
 			location = 215 # Castilla La Vieja 
 			discount = yes
 			skill = 1
@@ -601,7 +603,7 @@ country_event = {
 }
 
 
-# Casa de ContrataciÛn
+# Casa de Contrataci√≥n
 country_event = {
 	id = flavor_spa.1003
 	title = "flavor_spa.EVTNAME1003"
@@ -1408,7 +1410,7 @@ country_event = {
 	}
 }
 
-# Tom·s Luis de Victoria
+# Tom√°s Luis de Victoria
 country_event = {
 	id = flavor_spa.1101
 	title = "flavor_spa.EVTNAME1101"
@@ -1636,7 +1638,7 @@ country_event = {
 	
 	
 
-	option = {		# Allow Sep˙lveda's arguments to shape our policies
+	option = {		# Allow Sep√∫lveda's arguments to shape our policies
 		name = "flavor_spa.2.a"
 		ai_chance = {
 			factor = 15
@@ -1914,7 +1916,7 @@ country_event = {
 	}
 }
 
-# SÛlo Madrid es corte
+# S√≥lo Madrid es corte
 country_event = {
 	id = flavor_spa.6
 	title = "flavor_spa.6.t"

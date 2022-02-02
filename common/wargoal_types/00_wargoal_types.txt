@@ -262,6 +262,7 @@ defend_country_faith = {
 		po_revoke_cores
 		po_gold
 		po_concede_defeat
+		po_demand_provinces
 	}
 	
 	war_name = DOF_WAR_NAME
@@ -303,6 +304,7 @@ defend_country = {
 		po_revoke_cores
 		po_gold
 		po_concede_defeat
+		po_demand_provinces
 	}
 	
 	war_name = INTERVENTION_WAR_NAME
@@ -371,6 +373,39 @@ take_capital_personal_union = {
 	war_name = UNION_WAR_NAME
 }
 
+take_capital_hundred_years_war = {
+	type = take_capital
+	
+	attacker = 	{
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		peace_options = {
+			po_form_personal_union
+		}
+	}
+	
+	defender = 	{
+		badboy_factor = 0.25
+		prestige_factor = 1
+		peace_cost_factor = 0.75
+
+		allowed_provinces = {
+			is_core = FROM
+		}
+		
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+		
+		prov_desc = ALL_CORES	
+	}
+	
+	war_name = HUNDRED_YEARS_WAR_NAME
+}
+
 
 take_capital_fabricated_claims = {
 	type = take_capital
@@ -381,6 +416,7 @@ take_capital_fabricated_claims = {
 	
 	peace_options = {
 		po_form_personal_union
+		po_demand_provinces
 	}
 	
 	war_name = UNION_WAR_NAME
@@ -538,7 +574,10 @@ take_claim = {
 		prestige_factor = 1
 		peace_cost_factor = 1.0	
 		allowed_provinces = {
-			is_claim = ROOT
+			OR = {
+				is_claim = ROOT
+				is_core = ROOT
+			}
 		}
 		peace_options = {
 			po_demand_provinces
@@ -1534,6 +1573,7 @@ humiliate_rotw = {
 	allowed_provinces_are_eligible = yes
 	
 	peace_options = {
+		po_demand_provinces
 		po_revoke_cores
 		po_release_vassals
 		po_release_annexed
@@ -1628,7 +1668,7 @@ superiority_chinese_unification = {
 	type = superiority
 	
 	attacker = {
-		badboy_factor = 0.5
+		badboy_factor = 0.25
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
 		
@@ -1645,7 +1685,7 @@ superiority_chinese_unification = {
 	}
 	
 	defender = {
-		badboy_factor = 0.5
+		badboy_factor = 0.25
 		prestige_factor = 1.5
 		peace_cost_factor = 0.5
 		
@@ -1983,6 +2023,7 @@ push_back_colonizers = {
 	attacker = {
 		peace_options = {
 			po_force_out_colonizers
+			po_demand_provinces
 		}
 	}
 	

@@ -53,18 +53,21 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no			
+			owns_core_province = 2108		#Huncun	
 			owns_core_province = 730		#Girin
-			owns_core_province = 2108		#Huncun			
-			custom_trigger_tooltip = {
-				tooltip = manchu_manchuria_decision.tooltip
-				num_of_owned_provinces_with = {
+			730 = {							#Girin
+				is_state = yes
+			}		
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					tooltip = manchu_manchuria_decision.tooltip
 					is_core = ROOT
 					OR = {
 						culture = manchu_new
 						culture = manchu
 					}
-					value = 20
 				}
+				value = 20
 			}
 		}
 		effect = {
@@ -110,6 +113,21 @@ country_decisions = {
 						set_consort_culture = manchu_new
 					}
 				}
+				if = {
+					limit = {
+						KOR = { 
+							exists = yes
+							is_subject = yes
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					KOR = {
+						country_event = {
+							id = flavor_kor.13
+							days = 20
+						}
+					}
+				}
 			}
 			custom_tooltip = manchu_culture_tt
 			730 = {
@@ -137,10 +155,7 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 500		
+		ai_importance = 5000
 	}
 
 	form_manchu_dynasty = {
@@ -213,12 +228,7 @@ country_decisions = {
 			}
 			change_tag = QNG
 			swap_non_generic_missions = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 3 }
-				}
-				set_government_rank = 3
-			}
+			set_government_rank = 3
 			south_china_region = {
 				limit = {
 					NOT = { owned_by = ROOT }

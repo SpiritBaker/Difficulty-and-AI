@@ -18,8 +18,7 @@
 # It will also require higher yearly return if the economy in not in prime shape.
 # Forts' value also get converted to a yearly return based on terrain and strategic position, as well as available budget for fort maintenance.
 
-# AI can still be modded though; it will multiply the yearly return with the
-# value of ai_will_do.
+# AI can still be modded though; it will multiply the yearly return with the value of ai_will_do.
 # If you don't want the AI to build a building at all, make ai_will_do become 0.
 # AI will consider each building to be worth 0.01 ducats per year as a base, so making ai_will_do above cost will have them build it at some point.
 # It will still check whether it can afford a building before doing so though, but may save up to it.
@@ -1040,7 +1039,7 @@ cathedral = {
 		}
 		add_development_from_upgrading_or_building = {
 			building = cathedral
-			obsolete_building = church
+			obsolete_building = temple
 			type = tax
 			value = 2
 			upgrade_value = 1
@@ -1446,7 +1445,7 @@ training_fields = {
 			}
 		}
 		add_development_from_upgrading_or_building = {
-			building = training_field
+			building = training_fields
 			obsolete_building = barracks
 			type = manpower
 			value = 2
@@ -1467,7 +1466,7 @@ training_fields = {
 	}
 	on_obsolete = {
 		remove_development_from_building = {
-			building = training_field
+			building = training_fields
 			type = manpower
 			value = 2
 		}
@@ -1639,7 +1638,7 @@ stock_exchange = {
 		}
 		else_if = {
 			limit = {
-				has_province_flag = build_dev_marketplace
+				has_province_flag = built_dev_marketplace
 			}
 			add_development_from_building = {
 				building = stock_exchange

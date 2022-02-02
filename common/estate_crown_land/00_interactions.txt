@@ -4,7 +4,7 @@ interaction = {
 	cooldown_months = 60
 
     trigger = {
-        crown_land_share = 0.1
+        crown_land_share = 10
         NOT = { num_of_rebel_armies = 1 }
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		hidden_trigger = { has_any_estates = yes }
