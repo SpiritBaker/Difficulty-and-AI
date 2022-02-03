@@ -2268,7 +2268,7 @@ estate_nobles_advisors = {
 		mil_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 12
 		modifier = {
 			factor = 0.75
 			is_absolutism_active = yes
@@ -2288,6 +2288,10 @@ estate_nobles_advisors = {
 		modifier = {
 			factor = 0.75
 			mil = 5
+		}
+		modifier = {
+			factor = 2
+			uses_meritocracy = yes
 		}
 	}
 }
@@ -2474,7 +2478,7 @@ estate_church_independent_inquisition = {
 		adm_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 12
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -2486,6 +2490,10 @@ estate_church_independent_inquisition = {
 		modifier = {
 			factor = 0.8
 			adm = 5
+		}
+		modifier = {
+			factor = 2
+			uses_meritocracy = yes
 		}
 	}
 }
@@ -3006,7 +3014,7 @@ estate_burghers_commercial_board_of_advice = {
 		dip_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 12
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -3018,6 +3026,10 @@ estate_burghers_commercial_board_of_advice = {
 		modifier = {
 			factor = 0.8
 			dip = 5
+		}
+		modifier = {
+			factor = 2
+			uses_meritocracy = yes
 		}
 	}
 }
@@ -3868,7 +3880,7 @@ estate_brahmins_brahmin_leadership = {
 		adm_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 12
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -3880,6 +3892,10 @@ estate_brahmins_brahmin_leadership = {
 		modifier = {
 			factor = 0.8
 			adm = 5
+		}
+		modifier = {
+			factor = 2
+			uses_meritocracy = yes
 		}
 	}
 }
@@ -4277,7 +4293,7 @@ estate_maratha_advisor = {
 		mil_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 12
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -4289,6 +4305,10 @@ estate_maratha_advisor = {
 		modifier = {
 			factor = 0.8
 			mil = 5
+		}
+		modifier = {
+			factor = 2
+			uses_meritocracy = yes
 		}
 	}
 }
@@ -4613,7 +4633,7 @@ estate_rajput_advisor = {
 		mil_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 12
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -4625,6 +4645,10 @@ estate_rajput_advisor = {
 		modifier = {
 			factor = 0.8
 			mil = 5
+		}
+		modifier = {
+			factor = 2
+			uses_meritocracy = yes
 		}
 	}
 }
@@ -4779,7 +4803,7 @@ estate_vaisyas_advisor = {
 		dip_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 12
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
@@ -4791,6 +4815,10 @@ estate_vaisyas_advisor = {
 		modifier = {
 			factor = 0.8
 			dip = 5
+		}
+		modifier = {
+			factor = 2
+			uses_meritocracy = yes
 		}
 	}
 }

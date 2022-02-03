@@ -1,4 +1,4 @@
-version="2.1.2"
+version="2.1.3"
 tags={
 	"Balance"
 	"Gameplay"
@@ -9,7 +9,7 @@ tags={
 	"Missions and Decisions"
 	"National Ideas"
 }
-name="Difficulty & AI (1.32)"
+name="Difficulty & AI (1.33)"
 picture="thumbnail.png"
-supported_version="1.32.*"
+supported_version="1.33.*"
 path="mod/Difficulty-and-AI"

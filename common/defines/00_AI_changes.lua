@@ -30,52 +30,63 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in p
 --NDefines.NAI.GREAT_PROJECT_DESIRE_CAPITAL_MODIFIER = 10
 --NDefines.NAI.GREAT_PROJECT_DESIRE_CAPITAL_BASE = 10
 
---NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on state maintenance
-
---NDefines.NAI.MIN_SHIPS_FOR_TEST_MONARCH_MILITARY_SKILL = 25
---NDefines.NAI.MIN_AI_ADMIRALS_WANTED = 1
---NDefines.NAI.MAX_AI_ADMIRALS_WANTED_WARTIME = 4
---NDefines.NAI.MAX_AI_ADMIRALS_WANTED_PEACETIME = 2
---NDefines.NAI.BONUS_ADMIRAL_SCORE_SHIP_COUNT_START = 50
---NDefines.NAI.REGIMENTS_PER_GENERAL = 15
---NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 10
-
+--OE
 --NDefines.NAI.BASE_CAN_MAKE_CORE_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it straight away
 --NDefines.NAI.BASE_CAN_MAKE_CORE_IN_AREA_DESIRE_TO_RETURN_PROVINCE = 1 --score to add to desire to keep province rather than returning it to someone or creating a trading city if you can core it soon
 NDefines.NAI.GOVERNING_CAPACITY_OVER_PERCENTAGE_TOLERATED = 0.5
 NDefines.NAI.DANGEROUS_OVEREXTENSION_PERCENTAGE = 0	
 
-NDefines.AI_TOTAL_DEV_CULTURE_MULTIPLIER = 10			-- Multiplier for how much the AI values having much development in accepted cultures.
---NDefines.AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER = 30	-- Multiplier for how much the AI wants to convert brother cultures in terms of percentage of the nation. Essentially we compare the total dev of the non-promoted culture * AI_TOTAL_DEV_CULTURE_MULTIPLIER with the proportion of dev of the country * AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER and choose the larger of the two as our desire to add an accepted culture.
---NDefines.AI_BROTHER_CULTURE_MULTIPLIER = 0.75			-- How much multiplier for how much the AI wants to convert brother cultures (there's less penalty on them not being the same culture because they're at least close).
 
-NDefines.NAI.SUBSIDY_YEARS = 20
-NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
-
-NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
-NDefines.NAI.AI_CONVERT_CULTURES = 0	--If set to 0 AI will not convert cultures.
-
+--Composition
 NDefines.NAI.MAX_CAV_PERCENTAGE = 60
 NDefines.NAI.MIN_CAV_PERCENTAGE = 0
-NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.25	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
-NDefines.NAI.ARMY_BUDGET_FRACTION = 0.80
 NDefines.NAI.ARTILLERY_FRACTION = 0.2
 NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16
-NDefines.NAI.NAVY_BUDGET_FRACTION = 0.4 -- AI will spend a maximum of this fraction of monthly income on navy maintenance (based off wartime costs)
 NDefines.NAI.TRANSPORT_FRACTION = 0.35
 NDefines.NAI.BIGSHIP_FRACTION = 0.4
-NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on state maintenance
+
+
+
+--Budget
+NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.25	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
+NDefines.NAI.ARMY_BUDGET_FRACTION = 0.80
+NDefines.NAI.NAVY_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on navy maintenance (based off wartime costs)
+--NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
+NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
 --NDefines.NAI.CORRUPTION_BUDGET_FRACTION = 0.25 -- AI will spend a maximum of this fraction of monthly income on rooting out corruption
 NDefines.NAI.COLONY_BUDGET_FRACTION = 0.4
---NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
+--NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.15 -- AI will spend a maximum of this fraction of monthly income on state maintenance
+--NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 50	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
+
+
+--State
+NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
+NDefines.NAI.AI_CONVERT_CULTURES = 0	--If set to 0 AI will not convert cultures.
+NDefines.NAI.DEBASE_THRESHOLD = -5000 -- AI will not debase if it has more gold than this.
+--NDefines.NAI.CORRUPTION_BUDGET_FRACTION = 0.25, -- AI will spend a maximum of this fraction of monthly income on rooting out corruption
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 20 -- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
 NDefines.NAI.DEVELOPMENT_CAP_MULT = 2
 NDefines.NAI.EDICT_VALUE_THRESHOLD = 20 -- The higher this value, the less the AI will use Edicts
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_DEFICIT	= 2	--Change to above threshold in case of running deficit
 NDefines.NAI.EDICT_VALUE_THRESHOLD_MULTIPLY_LOW_INCOME = 1.5	--Change to above threshold in case of low income
-NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5  --AI will only call in allies in an offensive war if their military power ratio to the enemy is less than this.
---NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 50	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
+NDefines.NAI.SUBSIDY_YEARS = 20
+NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 50
+NDefines.AI_TOTAL_DEV_CULTURE_MULTIPLIER = 10			-- Multiplier for how much the AI values having much development in accepted cultures.
+--NDefines.AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER = 30	-- Multiplier for how much the AI wants to convert brother cultures in terms of percentage of the nation. Essentially we compare the total dev of the non-promoted culture * AI_TOTAL_DEV_CULTURE_MULTIPLIER with the proportion of dev of the country * AI_PROPORTION_OF_DEV_CULTURE_MULTIPLIER and choose the larger of the two as our desire to add an accepted culture.
+--NDefines.AI_BROTHER_CULTURE_MULTIPLIER = 0.75			-- How much multiplier for how much the AI wants to convert brother cultures (there's less penalty on them not being the same culture because they're at least close).
 
+
+--Advisers
+--NDefines.NAI.ADVISOR_BUDGET_FRACTION_MAX = 0.35 -- AI will spend a maximum of this fraction of monthly income on advisor maintenance
+--NDefines.NAI.ADVISOR_BUDGET_FRACTION_MIN = 0.15 -- AI will spend a minimum of this fraction of monthly income on advisor maintenance
+--NDefines.NAI.ADVISOR_BUDGET_FRACTION_MERITOCRACY_MAX = 0.5 -- If the AI has meritocracy enabled
+--NDefines.NAI.ADVISOR_BUDGET_FRACTION_MERITOCRACY_MIN = 0.25 -- If the AI has meritocracy enabled
+--NDefines.NAI.ADVISOR_BUDGET_THRESHOLD = 1.25 -- The AI will only hire an advisor if it can afford this much maintenance increase (+25%)
+--NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
+
+
+--Diplo
+NDefines.NAI.CALL_IN_ALLIES_POWER_RATIO = 2.5  --AI will only call in allies in an offensive war if their military power ratio to the enemy is less than this.
 NDefines.NAI.DIPLOMATIC_ACTION_GUARANTEE_POWERBALANCE_FACTOR = 25
 NDefines.NAI.POWERFUL_ALLY_PENALTY = 60	--Penalty on alliance for them already having a powerful ally if much stronger.
 NDefines.NAI.DIPLOMATIC_ACTION_VASSALIZE_DEVELOPMENT_FACTOR	= 25	--AI scoring for vassalize is increased by this for each development in target's provinces.
@@ -106,27 +117,7 @@ NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_EMPIRE_FACTOR = 4	--AI scoring for esta
 NDefines.NAI.DIPLOMATIC_ACTION_TRIBUTARY_ACCEPTANCE_PER_DEVELOPMENT = -0.75	-- AI scoring for accepting becoming a tributary state per raw development
 
 
---NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 3
-NDefines.NAI.DEBASE_THRESHOLD = -5000 -- AI will not debase if it has more gold than this.
-NDefines.NAI.INVADING_BRAVERY =	1.2	--If (defender strength) / (invader strength) >
-NDefines.NAI.INVADING_MAX_AWAY_RATIO = 0.5
-NDefines.NAI.HOME_FLEET_MAX_RATIO = 0.5
-NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
-NDefines.NAI.ADVISOR_BUDGET_FRACTION = 1 -- AI will spend a maximum of this fraction of monthly income on advisor maintenance
-NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
-NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.75
-NDefines.NAI.ACCEPTABLE_BALANCE_FRIEND_IN_COMBAT = 0.85
-
---Note that armies prefer the province with the lowest score. Also applies to homeland prioritization.
-NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 6 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
-NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.05 --AI will try to defend provinces under threat worth more than this percentage of total development
-
-NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	--Army <-> province distance impact on province evaluation / divides total score by this amount
-NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	20 --Border <-> province distance impact on province evaluation / actual distance penalty
-NDefines.NAI.MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.1	--AI will only assign armies larger that this to a region
---NDefines.NAI.ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10 --Influence on assimilation interest from number of provinces left to conquer
---NDefines.NAI.PURSUE_DISTANCE = 100
-
+--Peace
 NDefines.NAI.PEACE_WAR_DIRECTION_FACTOR = 0.55 -- AI willingness to peace based on who's making gains in the war
 --NDefines.NAI.PEACE_WAR_DIRECTION_WINNING_MULT = 4 -- Multiplies AI emphasis on war direction if it's the one making gains
 --NDefines.NAI.PEACE_STALLED_WAR_THRESHOLD = 5 -- If the warscore has changed by this amount or less in the last year, the war is stalled
@@ -161,6 +152,7 @@ NDefines.NAI.PEACE_TERMS_TRIBUTARY_BASE_MULT = 4  --Multiplies with strategic in
 
 NDefines.NAI.ESTATE_PRIVILEGE_REVOKE_THRESHOLD = 5.1
 NDefines.NAI.ESTATE_PRIVILEGE_GRANT_THRESHOLD = 7.5
+NDefines.NAI.ESTATE_PRIVILEGE_LAST_PENALTY = 3	
 NDefines.NAI.ESTATE_INTERACTION_THRESHOLD = 49.9
 NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 85.0
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 20.0
@@ -174,6 +166,8 @@ NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, mu
 
 --NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 100	-- AI scoring for becoming defender of faith, multiplied by budget/cost
 
+
+--NAIEconomy
 --NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
 --NDefines.NAIEconomy.MILITARY_FOCUS_DEFAULT = 1.0
@@ -183,18 +177,24 @@ NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.6
 NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 1.0
 NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.3
 
-NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 0.8
-NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 0.8
+NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1
+NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 1.25
 
-NDefines.NAIEconomy.FORT_FRACTION_MILITARIZE = 1.5
+NDefines.NAIEconomy.FORT_FRACTION_MILITARIZE = 1.33
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25
-NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.25
+NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.5
 --MISSIONARY_FRACTION = 0.15
 NDefines.NAIEconomy.STATE_MAINTENANCE_FRACTION = 0.25
-NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 0.7 --from 1.5
-NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY_WARTIME = 0.4
+NDefines.NAIEconomy.BASE_SAVINGS_PRIORITY = 0.5
+NDefines.NAIEconomy.BASE_SAVINGS_PRIORITY_WARTIME = 0.0
+NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 1.0		    -- Per loan
+NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY_WARTIME = 0.5	-- Per loan
 --SUBSIDY_PRIORITY_CONSIDERATION_THRESHOLD = 50.0
 --SUBSIDY_DESIRE_TO_PRIORITY_RATIO = 0.05
+--SUBSIDY_MAX_BUDGET_FRACTION = 0.05
+
+
+
 
 NDefines.NGovernment.RUSSIAN_ABILITY_STRELTSY_SPAWN_SIZE = 0.1
 

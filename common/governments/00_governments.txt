@@ -41,7 +41,7 @@ monarchy = {
 				#Dif&AI 
 				khanate_monarchy
 				nomad_empire
-				warring_state
+				#warring_state
 				united_shogunate
 			}
 		}
