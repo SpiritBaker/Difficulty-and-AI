@@ -176,6 +176,7 @@ master_of_mint = {
 ######################################################
 inquisitor = {
 	monarch_power = ADM
+	allow_only_owner_religion = yes
 	
 	# Bonus
 	global_missionary_strength = 0.02

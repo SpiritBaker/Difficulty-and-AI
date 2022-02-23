@@ -235,6 +235,9 @@ NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.35 --Horde unity gained per ducat loo
 NDefines.NCountry.NOMAD_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
 NDefines.NCountry.CORRUPTION_FROM_BANNERS = 2.5
 
+NDefines.NMilitary.MARINE_SHOCK_DAMAGE_TAKEN = -0.10
+NDefines.NMilitary.MARINE_DISEMBARK_SPEED_BONUS = 1.0			-- marine disembark speed bonus
+
 --Natives
 NDefines.NCountry.COHESION_NEIGHBOURING_COLONIZER = 1
 NDefines.NCountry.COHESION_FEDERATION_ADVANCEMENT = -0.05
