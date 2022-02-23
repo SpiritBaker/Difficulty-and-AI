@@ -9,7 +9,7 @@ tags={
 	"Missions and Decisions"
 	"National Ideas"
 }
-name="Difficulty & AI (1.32)"
+name="Difficulty & AI Dev(1.32)"
 picture="thumbnail.png"
 supported_version="1.32.*"
 path="mod/Difficulty-and-AI"
