@@ -8,3 +8,29 @@ can_claim_defender_of_faith = {
 		}
 	}
 }
+
+can_increase_autonomy = {
+	condition = {
+		potential = {
+			FROM = {
+					ai = yes
+			}	
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+can_harsh_treatment = {
+	condition = {
+		potential = {
+			FROM = {
+				ai = yes
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
