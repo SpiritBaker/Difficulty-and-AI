@@ -25,17 +25,12 @@ estate_church_hire_advisor = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -101,17 +96,12 @@ estate_church_fire_advisor = {
 		NOT = { has_country_flag = just_fired_adm_advisor }
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		clr_country_flag = need_to_fire_adm_advisor
     }
 }
@@ -273,17 +263,12 @@ estate_church_convert_province_x = {
 				remove_province_modifier = agenda_conversion_zeal
 			}
 		}
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -323,17 +308,12 @@ estate_church_reduce_war_exhaustion = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -361,17 +341,12 @@ estate_church_recover_stability = {
 		add_prestige = 10
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -399,17 +374,12 @@ estate_church_increase_stability = {
 		add_prestige = 10
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -445,17 +415,12 @@ estate_church_reduce_overextension = {
 		add_adm_power = 50
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -496,17 +461,12 @@ estate_church_restore_devotion = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -665,17 +625,12 @@ estate_church_root_out_heresy = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -729,17 +684,12 @@ estate_church_relations_with_pope = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -838,17 +788,12 @@ estate_church_restore_the_holy_see = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		if = {
 			limit = {
 				is_claim = 118
@@ -901,17 +846,12 @@ estate_church_crush_religious_revolts = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1092,17 +1032,12 @@ estate_church_protect_brethren = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		event_target:agenda_province = {
 			if = {
 				limit = {
@@ -1232,17 +1167,12 @@ estate_church_propagate_religion = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1359,16 +1289,11 @@ estate_church_relations_with_dotf = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_church
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_church
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }

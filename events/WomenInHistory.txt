@@ -751,7 +751,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1000
+		months = 200
 	}
 	
 	option = {
@@ -2590,9 +2590,14 @@ country_event = {
 			is_year = 1510
 		}
 		is_female = no
-		has_regency = yes
+		OR = {
+			AND = {
+				has_regency = yes
+				government = monarchy
+			}
+			government = tribal
+		}
 		is_lesser_in_union = no
-		government = monarchy
 		NOT = {
 			has_global_flag = wih_mandukhaikhatun_flag
 		}

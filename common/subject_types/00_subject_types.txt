@@ -36,6 +36,9 @@ personal_union = {}
 client_vassal = {}
 client_march = {}
 colony = {}
+crown_colony = {}
+private_enterprise = {}
+self_governing_colony = {}
 tributary_state = {}
 
 default = {
@@ -88,6 +91,8 @@ default = {
 	is_march = no
 	forms_trade_companies = yes
 	can_concentrate_development = yes
+	can_have_great_projects_moved_by_overlord = yes
+	extend_trading_range = no
 
 	max_government_rank = 0								# 0 means no limit
 	cities_required_for_bonuses = 0						# How many cities the subject needs before giving bonuses to overlord
@@ -368,6 +373,7 @@ personal_union = {
 	can_union_break = yes
 	transfer_subjects_when_made = yes
 	can_concentrate_development = no
+	extend_trading_range = yes
 
 	liberty_desire_negative_prestige = 1.0
 	military_focus = 0.66
@@ -402,6 +408,7 @@ client_vassal = {
 
 	# Properties:
 	created_by_overlord = yes
+	extend_trading_range = yes
 
 	base_liberty_desire = -25.0
 	liberty_desire_revolution = 0
@@ -420,6 +427,7 @@ client_march = {
 
 	# Properties:
 	created_by_overlord = yes
+	extend_trading_range = yes
 
 	base_liberty_desire = -40.0
 	liberty_desire_revolution = 0
@@ -452,7 +460,8 @@ colony = {
 	press_sailors = yes
 	transfer_trade_power = yes
 	can_concentrate_development = no
-	
+	extend_trading_range = yes
+
 	liberty_desire_development_ratio = 0.1
 
 	max_government_rank = 1
@@ -460,6 +469,11 @@ colony = {
 
 	relative_power_class = 0
 	should_quit_wars_on_activation = yes
+
+	forcelimit_bonus = 0.5
+	manpower_bonus = 0.5
+	naval_forcelimit_bonus = 0.5
+	sailors_bonus = 0.5
 
 	can_fight = {
 		other_overlord = colony
@@ -603,6 +617,7 @@ tributary_state = {
 	#is_subject_except_tributary_trigger
 	#is_free_or_tributary_trigger
 	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
 
 	# Triggers:
 	is_potential_overlord = {
@@ -611,7 +626,7 @@ tributary_state = {
 			is_subject_of_type = tributary_state
 		}
 		OR = {
-			has_reform = celestial_empire
+
 			OR = {
 				AND = {
 					ai = no
@@ -621,6 +636,10 @@ tributary_state = {
 						technology_group = chinese
 						technology_group = polynesian_tech
 					}
+					has_reform = celestial_empire
+					has_government_attribute = has_tributaries
+					has_country_flag = can_create_tributaries_flag
+					has_country_flag = can_create_tributaries_flag_estate
 				}
 				AND = {
 					ai = yes
@@ -639,6 +658,10 @@ tributary_state = {
 						technology_group = chinese
 						technology_group = polynesian_tech
 					}
+					has_reform = celestial_empire
+					has_government_attribute = has_tributaries
+					has_country_flag = can_create_tributaries_flag
+					has_country_flag = can_create_tributaries_flag_estate
 				}
 			}
 		}
@@ -672,7 +695,6 @@ tributary_state = {
 	overlord_can_fabricate_for = no
 	does_overlord_size_count_for_warscore_cost = no
 	can_concentrate_development = no
-	gets_help_with_rebels = no							# Only for AI. Bidirectional.	
 	
 	liberty_desire_development_ratio = 0.175
 	trust_on_start = 0

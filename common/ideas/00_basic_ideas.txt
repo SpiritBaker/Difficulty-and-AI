@@ -17,16 +17,7 @@ aristocracy_ideas = {
 	}
 
 	trigger = {
-		OR = {
-			has_government_attribute = enables_aristocratic_idea_group
-			government = tribal
-		}
-		NOT = { government = theocracy }
-		NOT = {
-			has_reform = steppe_horde
-			has_reform = khanate_monarchy
-			has_reform = nomad_empire 
-		}
+		has_government_attribute = enables_aristocratic_idea_group
 	}
 	
 	noble_knights = {
@@ -196,11 +187,7 @@ horde_gov_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			has_reform = steppe_horde
-			has_reform = khanate_monarchy
-			has_reform = nomad_empire 
-		}
+		has_government_attribute = enables_horde_idea_group
 	}
 	
 	horse_lords = {
@@ -243,10 +230,11 @@ theocracy_gov_ideas = {
 	}
 	
 	trigger = {
-		government = theocracy
+		has_government_attribute = enables_divine_idea_group
 	}
 	servants_of_god = {
 		devotion = 1
+		legitimacy = 0.5
 	}
 	by_the_grace_of_god = {
 		fire_damage_received = -0.1
@@ -400,7 +388,7 @@ religious_ideas = {
 		devotion = 0.5
 		monthly_fervor_increase = 0.25
 		church_power_modifier = 0.1
-		monthly_piety = 0.001
+		monthly_piety_accelerator = 0.001
 		yearly_karma_decay = 0.1
 		yearly_doom_reduction = 1
 		yearly_authority = 0.15
@@ -690,7 +678,7 @@ defensive_ideas = {
 		army_tradition = 0.5
 	}
 	military_drill = {
-		land_morale = 0.15
+		land_morale = 0.10
 	}
 	improved_manuever = {
 		shock_damage_received = -0.1
@@ -990,7 +978,7 @@ exploration_ideas = {
  		envoy_travel_time = -0.20
  	}
 	free_colonies = {
-		expel_minorities_cost = -0.5
+		expel_minorities_cost = -1.0
 	}
 	global_empire = {
 		naval_forcelimit_modifier = 0.25
@@ -1280,7 +1268,7 @@ quality_ideas = {
 	category = MIL
 
 	bonus = {
-		yearly_army_professionalism = 0.002
+		yearly_army_professionalism = 0.0025
 	}
 
 	private_to_marshal = {

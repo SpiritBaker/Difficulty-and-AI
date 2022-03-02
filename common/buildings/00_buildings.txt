@@ -18,8 +18,7 @@
 # It will also require higher yearly return if the economy in not in prime shape.
 # Forts' value also get converted to a yearly return based on terrain and strategic position, as well as available budget for fort maintenance.
 
-# AI can still be modded though; it will multiply the yearly return with the
-# value of ai_will_do.
+# AI can still be modded though; it will multiply the yearly return with the value of ai_will_do.
 # If you don't want the AI to build a building at all, make ai_will_do become 0.
 # AI will consider each building to be worth 0.01 ducats per year as a base, so making ai_will_do above cost will have them build it at some point.
 # It will still check whether it can afford a building before doing so though, but may save up to it.
@@ -492,9 +491,9 @@ fort_15th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
-			factor = 25
+			factor = 5
 			is_capital = yes
 			FROM = { num_of_cities = 2 }
 			OR = {
@@ -534,7 +533,7 @@ fort_15th = {
 			NOT = { is_capital = yes }			
 		}
 		modifier = {
-			factor = 0.6
+			factor = 0.5
 			any_neighbor_province = {
 				OR = {
 					has_building = fort_15th
@@ -546,8 +545,24 @@ fort_15th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 10
+			factor = 2.5
 			province_id = 365
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { is_capital = yes }
+			OR = {
+				has_terrain = grasslands
+				has_terrain = farmlands
+				has_terrain = desert
+				has_terrain = drylands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = coastal_desert
+				has_terrain = coastline
+				has_terrain = oasis
+				has_terrain = semi_desert
+			}
 		}
 		modifier = {
 			factor = 1.667
@@ -562,14 +577,14 @@ fort_15th = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			OR = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 2.5
 			has_terrain = himalayas
 		}
 		modifier = {
@@ -867,9 +882,9 @@ fort_16th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
-			factor = 25
+			factor = 5
 			is_capital = yes
 			FROM = { num_of_cities = 2 }
 			OR = {
@@ -909,7 +924,7 @@ fort_16th = {
 			NOT = { is_capital = yes }			
 		}
 		modifier = {
-			factor = 0.6
+			factor = 0.5
 			any_neighbor_province = {
 				OR = {
 					has_building = fort_15th
@@ -921,8 +936,24 @@ fort_16th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 10
+			factor = 2.5
 			province_id = 365
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { is_capital = yes }
+			OR = {
+				has_terrain = grasslands
+				has_terrain = farmlands
+				has_terrain = desert
+				has_terrain = drylands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = coastal_desert
+				has_terrain = coastline
+				has_terrain = oasis
+				has_terrain = semi_desert
+			}
 		}
 		modifier = {
 			factor = 1.667
@@ -937,14 +968,14 @@ fort_16th = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			OR = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 2.5
 			has_terrain = himalayas
 		}
 		modifier = {
@@ -1040,7 +1071,7 @@ cathedral = {
 		}
 		add_development_from_upgrading_or_building = {
 			building = cathedral
-			obsolete_building = church
+			obsolete_building = temple
 			type = tax
 			value = 2
 			upgrade_value = 1
@@ -1446,7 +1477,7 @@ training_fields = {
 			}
 		}
 		add_development_from_upgrading_or_building = {
-			building = training_field
+			building = training_fields
 			obsolete_building = barracks
 			type = manpower
 			value = 2
@@ -1467,7 +1498,7 @@ training_fields = {
 	}
 	on_obsolete = {
 		remove_development_from_building = {
-			building = training_field
+			building = training_fields
 			type = manpower
 			value = 2
 		}
@@ -1523,9 +1554,9 @@ fort_17th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
-			factor = 25
+			factor = 5
 			is_capital = yes
 			FROM = { num_of_cities = 2 }
 			OR = {
@@ -1565,7 +1596,7 @@ fort_17th = {
 			NOT = { is_capital = yes }			
 		}
 		modifier = {
-			factor = 0.6
+			factor = 0.5
 			any_neighbor_province = {
 				OR = {
 					has_building = fort_15th
@@ -1577,8 +1608,24 @@ fort_17th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 10
+			factor = 2.5
 			province_id = 365
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { is_capital = yes }
+			OR = {
+				has_terrain = grasslands
+				has_terrain = farmlands
+				has_terrain = desert
+				has_terrain = drylands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = coastal_desert
+				has_terrain = coastline
+				has_terrain = oasis
+				has_terrain = semi_desert
+			}
 		}
 		modifier = {
 			factor = 1.667
@@ -1593,14 +1640,14 @@ fort_17th = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			OR = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 2.5
 			has_terrain = himalayas
 		}
 		modifier = {
@@ -1639,7 +1686,7 @@ stock_exchange = {
 		}
 		else_if = {
 			limit = {
-				has_province_flag = build_dev_marketplace
+				has_province_flag = built_dev_marketplace
 			}
 			add_development_from_building = {
 				building = stock_exchange
@@ -2044,9 +2091,9 @@ fort_18th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
-			factor = 25
+			factor = 5
 			is_capital = yes
 			FROM = { num_of_cities = 2 }
 			OR = {
@@ -2086,7 +2133,7 @@ fort_18th = {
 			NOT = { is_capital = yes }			
 		}
 		modifier = {
-			factor = 0.6
+			factor = 0.5
 			any_neighbor_province = {
 				OR = {
 					has_building = fort_15th
@@ -2098,8 +2145,24 @@ fort_18th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 10
+			factor = 2.5
 			province_id = 365
+		}
+		modifier = {
+			factor = 0.6
+			NOT = { is_capital = yes }
+			OR = {
+				has_terrain = grasslands
+				has_terrain = farmlands
+				has_terrain = desert
+				has_terrain = drylands
+				has_terrain = steppe
+				has_terrain = savannah
+				has_terrain = coastal_desert
+				has_terrain = coastline
+				has_terrain = oasis
+				has_terrain = semi_desert
+			}
 		}
 		modifier = {
 			factor = 1.667
@@ -2114,14 +2177,14 @@ fort_18th = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2
 			OR = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
 			}
 		}
 		modifier = {
-			factor = 4
+			factor = 2.5
 			has_terrain = himalayas
 		}
 		modifier = {

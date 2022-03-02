@@ -1,4 +1,3 @@
-
 #This one or the next one will always be valid
 estate_burghers_hire_advisor = {
 	can_select = {
@@ -25,17 +24,12 @@ estate_burghers_hire_advisor = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -84,17 +78,12 @@ estate_burghers_fire_advisor = {
 		NOT = { has_country_flag = just_fired_dip_advisor }
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		clr_country_flag = need_to_fire_dip_advisor
     }
 }
@@ -146,17 +135,12 @@ estate_burghers_pay_off_loans = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -201,17 +185,12 @@ estate_burghers_restore_republican_tradition = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -249,17 +228,12 @@ estate_burghers_restore_currency = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -284,17 +258,12 @@ estate_burghers_recovery_from_hyperinflation = {
 		add_inflation = -10
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -567,17 +536,12 @@ estate_burghers_increase_trade_power_in_X = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -722,17 +686,12 @@ estate_burghers_access_sea = {
 		add_sailors = 500
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		event_target:agenda_province = {
 			if = {
 				limit = {
@@ -810,17 +769,12 @@ estate_burghers_build_a_fleet = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -906,17 +860,12 @@ estate_burghers_bigger_fleet_than_rival = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -941,17 +890,12 @@ estate_burghers_improve_dip_rep = {
 		add_prestige = 10
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -997,17 +941,12 @@ estate_burghers_get_cash = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1118,17 +1057,12 @@ estate_burghers_discover_X_in_america = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1321,17 +1255,12 @@ estate_burghers_colonise_X = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1498,17 +1427,12 @@ estate_burghers_colonise_more_X = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1632,17 +1556,12 @@ estate_burghers_colonial_nation = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1765,17 +1684,12 @@ estate_burghers_expand_trade_company = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1873,17 +1787,12 @@ estate_burghers_trade_post_in_india = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1980,17 +1889,12 @@ estate_burghers_trade_post_in_malacca = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -2081,17 +1985,12 @@ estate_burghers_trade_post_in_china = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -2152,17 +2051,12 @@ estate_burghers_silk_trade = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -2223,17 +2117,12 @@ estate_burghers_spice_trade = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -2297,17 +2186,12 @@ estate_burghers_tea_trade = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -2407,17 +2291,12 @@ estate_burghers_reduce_corruption = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -2571,16 +2450,11 @@ estate_burghers_protect_against_piracy = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_burghers
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }

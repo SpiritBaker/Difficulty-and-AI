@@ -2,10 +2,6 @@ establish_gaituguiliu_decision = {
 	empire = celestial_empire
 	emperor = {
 		meritocracy = 0.5
-		governing_capacity_modifier = 0.1
-	}
-	ai_will_do = {
-		is_at_war = no
 	}
 }
 
@@ -16,9 +12,6 @@ seaban_decision = {
 		trade_efficiency = 0.1
 	}
 	required_reform = establish_gaituguiliu_decision
-	ai_will_do = {
-		is_at_war = no
-	}
 }
 
 reform_land_tax_decision = {
@@ -28,9 +21,6 @@ reform_land_tax_decision = {
 		state_maintenance_modifier = -0.25
 	}
 	required_reform = seaban_decision
-	ai_will_do = {
-		is_at_war = no
-	}
 }
 
 military_governors_decision = {
@@ -39,9 +29,6 @@ military_governors_decision = {
 		core_creation = -0.1
 	}
 	required_reform = reform_land_tax_decision
-	ai_will_do = {
-		is_at_war = no
-	}
 }
 
 centralizing_top_government_decision = {
@@ -50,7 +37,21 @@ centralizing_top_government_decision = {
 		monarch_admin_power = 1
 	}
 	required_reform = military_governors_decision
-	ai_will_do = {
-		is_at_war = no
+}
+
+vassalize_tributaries_decision = {
+	empire = celestial_empire
+	emperor = {
+		imperial_mandate = 0.05
+		liberty_desire_from_subject_development = -0.33
 	}
+	on_effect = {
+		custom_tooltip = vassalize_tributaries_decision_tt
+		set_global_flag = eoc_vassalize_tributaries
+	}
+	off_effect = {
+		custom_tooltip = vassalize_tributaries_decision_ct
+		clr_global_flag = eoc_vassalize_tributaries
+	}
+	required_reform = centralizing_top_government_decision
 }

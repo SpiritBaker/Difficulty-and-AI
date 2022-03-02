@@ -91,7 +91,7 @@ NOG_ideas = {
 	}
 	
 	bonus = {
-		land_forcelimit_modifier = 0.15
+		ae_impact = -0.10
 	}
 	
 	trigger = {
@@ -100,7 +100,7 @@ NOG_ideas = {
 	free = yes
 	
 	NOG_life_of_steppe_warrior = {
-		land_attrition = -0.20 #(effect taken in OIR_ideas)
+		land_attrition = -0.20 
 		#leader_land_manuever = 1
 	}
 	NOG_traditions_of_the_great_khan = {
@@ -114,19 +114,19 @@ NOG_ideas = {
 		land_morale = 0.1
 	}
 	NOG_tradition_of_conquest = {
-		core_creation = -0.25 #(effect taken in CHG_ideas)
+		core_creation = -0.20 
 	}
 	NOG_logistics_of_khan = {
-		manpower_recovery_speed = 0.2 #(effect taken in GLH_ideas)
+		manpower_recovery_speed = 0.2 
 	}
 	NOG_glory_of_conquest = {
-		global_manpower_modifier = 0.25 #(effect taken in OIR_ideas)
+		global_manpower_modifier = 0.25 
 	}
 }
 
 SHY_ideas = {
 	start = {
-		ae_impact = -0.15
+		ae_impact = -0.10
 		land_morale = 0.1
 		
 	}

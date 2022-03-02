@@ -96,26 +96,6 @@ ai_capitalist = {
 			factor = 5
 			has_reform = free_city
 		}
-		modifier = {
-			factor = 1.5
-			num_of_loans = 3
-		}
-		modifier = {
-			factor = 2
-			num_of_loans = 5
-		}
-		modifier = {
-			factor = 2
-			num_of_loans = 7
-		}
-		modifier = {
-			factor = 2
-			num_of_loans = 10
-		}
-		modifier = {
-			factor = 2
-			num_of_loans = 15
-		}
 	}
 	icon = 2
 }
@@ -168,14 +148,14 @@ ai_diplomat = {
 			NOT = { total_development = 30 }
 		}	
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			is_emperor = yes
-			total_development = 300
+			total_development = 50
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			is_emperor = yes
-			total_development = 800
+			total_development = 100
 		}
 		modifier = {
 			factor = 1.5
@@ -227,19 +207,7 @@ ai_militarist = {
 		modifier = {
 			factor = 0
 			has_regency = yes
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { mil_tech = 9 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { mil_tech = 11 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { mil_tech = 16 }
-		}			
+		}	
 		modifier = {
 			factor = 0.5
 			government = republic
@@ -336,7 +304,7 @@ ai_militarist = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 100
 			OR = {
 				has_reform = daimyo
 				has_reform = indep_daimyo
@@ -344,7 +312,11 @@ ai_militarist = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 100
+			has_reform = chinese_warlord
+		}
+		modifier = {
+			factor = 2
 			is_march = yes
 		}
 		modifier = {
@@ -372,7 +344,7 @@ ai_militarist = {
 			tag = KOR
 		}	
 		modifier = {
-			factor = 3
+			factor = 100
 			religion = nahuatl
 			is_religion_reformed = no
 		}
@@ -392,24 +364,6 @@ ai_militarist = {
 			factor = 0.5
 			num_of_loans = 7
 		}
-		modifier = {
-			factor = 0.5
-			num_of_loans = 10
-		}
-		modifier = {
-			factor = 0.5
-			num_of_loans = 15
-		}
-		modifier = {
-			factor = 5
-			is_revolution_target = yes
-		}
-		modifier = {
-			factor = 1.5
-			any_neighbor_country = { 
-				is_revolution_target = yes
-			}
-		}
 	}
 	icon = 4
 }
@@ -420,11 +374,7 @@ ai_colonialist = {
 		modifier = {
 			factor = 0.5
 			has_regency = yes
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { dip_tech = 10 }
-		}			
+		}		
 		modifier = {
 			factor = 0.5
 			NOT = { adm = 1 }
@@ -470,7 +420,7 @@ ai_colonialist = {
 			NOT = { num_of_colonists = 1 }
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			tag = POR
 		}
 		modifier = {
@@ -481,30 +431,6 @@ ai_colonialist = {
 			factor = 2
 			tag = SPA
 		}
-		modifier = {
-			factor = 0.5
-			tag = FRA
-		}
-		modifier = {
-			factor = 0.5
-			num_of_loans = 3
-		}
-		modifier = {
-			factor = 0.5
-			num_of_loans = 5
-		}
-		modifier = {
-			factor = 0.25
-			num_of_loans = 7
-		}
-		modifier = {
-			factor = 0.25
-			num_of_loans = 10
-		}
-		modifier = {
-			factor = 0.25
-			num_of_loans = 15
-		}	
 	}
 	icon = 5
 }

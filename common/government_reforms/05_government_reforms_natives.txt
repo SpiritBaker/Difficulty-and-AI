@@ -10,16 +10,20 @@ native_basic_reform = {
 	custom_attributes = {
 		enables_plutocratic_idea_group = no
 		enables_aristocratic_idea_group = no
+		enables_divine_idea_group = no
 		enables_natives_idea_group = yes
 	}
 	modifiers = {
-		reform_progress_growth = -0.75
-		#monthly_reform_progress = 0.5
-		land_maintenance_modifier = -0.1
+		reform_progress_growth = -1.0
+		monthly_reform_progress = 0.5
+		land_maintenance_modifier = -0.25
 		diplomatic_upkeep = -2
 		global_institution_spread = -0.5
 		global_regiment_cost = -0.5
 		province_warscore_cost = 4
+		manpower_recovery_speed = 0.25
+		land_forcelimit_modifier = -0.3
+		development_cost = 0.2
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -27,6 +31,7 @@ native_basic_reform = {
 		OR = {
 			technology_group = north_american
 			technology_group = south_american
+			technology_group = aboriginal_tech
 		}
 		NOT = { religion = nahuatl }
 		NOT = { religion = mesoamerican_religion }
@@ -36,6 +41,7 @@ native_basic_reform = {
 				continent = north_america
 				continent = south_america
 				continent = new_world
+				region = australia_region
 			}
 		}
 	}
@@ -70,6 +76,7 @@ native_clan_council_reform = {
 	nation_designer_cost = 20
 	modifiers = {
 		diplomatic_upkeep = 1
+		diplomats = 1
 	}
 }
 
@@ -381,7 +388,7 @@ native_becomes_monarchy_reform = {
 		change_government_reform_progress = -450 # Doing it like this to avoid that migration code triggers
 	}
 	ai = {
-		factor = 2
+		factor = 0
 	}
 }
 
@@ -411,11 +418,7 @@ native_becomes_republic_reform = {
 			}
 		}
 		modifier = {
-			factor = 1.5
-			OR = {
-				num_of_centers_of_trade = 5
-				trade_income_percentage = 0.4
-			}
+			factor = 0
 		}
 	}
 }
@@ -436,15 +439,7 @@ native_becomes_theocracy_reform = {
 		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
 	}
 	ai = {
-		factor = 1
-		modifier = {
-			factor = 0
-			OR = {
-				has_reform = steppe_horde
-				has_reform = great_mongol_state_reform
-				NOT = { religion_group = muslim }
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -468,7 +463,7 @@ native_becomes_horde_reform = {
 		custom_tooltip = STEPPE_HORDE_BENEFITS
 	}
 	ai = {
-		factor = 1
+		factor = 0
 	}
 }
 

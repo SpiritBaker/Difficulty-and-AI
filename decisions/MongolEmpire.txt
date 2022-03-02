@@ -90,6 +90,15 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 		}
 		effect = {
+			hidden_effect = {
+				set_global_flag = is_forming_the_mongol_empire
+				1 = {
+					province_event = {
+						id = passive_effects_events.13
+						days = 10
+					}
+				}
+			}
 			change_tag = MGE
 			if = {
 				limit = {
