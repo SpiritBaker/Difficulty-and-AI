@@ -1,0 +1,300 @@
+estate_mamluks_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.25
+			num_of_states = 25
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 35
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 20 }
+				estate_influence = {
+					estate = estate_mamluks
+					influence = 80
+				}
+			}
+			NOT = { has_estate_privilege = estate_mamluks_land_rights }
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_territories = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_mamluks_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_mamluks_land_rights }
+		}
+	}
+}
+
+estate_mamluks_royal_guard = {
+	icon = privilege_military_power
+	land_share = 5
+	max_absolutism = -5
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		has_reform = mamluk_government
+	}
+	can_select = {
+		has_reform = mamluk_government
+	}
+	on_granted = {
+		custom_tooltip = estate_mamluks_royal_guard_tooltip
+	}
+	penalties = {
+		stability_cost_modifier = 0.1
+	}
+	benefits = {
+		merc_maintenance_modifier = -0.1 
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_mamluks_autonomy = {
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+		#mercenary_manpower = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_mamluks_promote_leadership = {
+	icon = privilege_promote_purbias
+	max_absolutism = -5
+	influence = 0.1
+	can_select = {
+		army_tradition = 30
+	}
+	on_granted = {
+		add_army_tradition = -15
+	}
+	penalties = {
+	}
+	benefits = {
+		army_tradition_decay = -0.005
+		leader_land_shock = 1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_mamluks_rotate_palace_guard = {
+	icon = privilege_royal_authority
+	max_absolutism = 5
+	loyalty = -0.1
+	influence = -0.05
+	is_valid = {
+		has_reform = mamluk_government
+	}
+	can_select = {
+	}
+	penalties = {
+		land_maintenance_modifier = 0.1
+	}
+	benefits = {
+		stability_cost_modifier = -0.25
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_mamluks_mamluk_rule_in_egypt = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -10
+	influence = 0.1
+	is_valid = {
+		has_estate_privilege = estate_mamluks_mamluk_rule_in_egypt
+		NOT = {
+			tag = MAM
+			tag = EGY
+			primary_culture = al_misr_arabic
+		}
+		any_owned_province = {
+			region = egypt_region
+		}
+	}
+	can_select = {
+		always = no
+	}
+	can_revoke = {
+		OR = {
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+		stability = 3
+		legitimacy = 100
+	}
+	penalties = {
+		yearly_corruption = 0.1
+	}
+	benefits = {
+	}
+	on_granted = {
+		custom_tooltip = estate_mamluks_mamluk_rule_in_egypt_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { region = egypt_region }
+				add_province_modifier = {
+					name = estate_mamluks_mamluk_rule_in_egypt_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_mamluks_mamluk_rule_in_egypt_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_mamluks_mamluk_rule_in_egypt_mod
+				}
+				remove_province_modifier = estate_mamluks_mamluk_rule_in_egypt_mod
+			}
+		}
+		add_stability = -2
+	}
+	on_invalid = {
+		custom_tooltip = estate_mamluks_mamluk_rule_in_egypt_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_mamluks_mamluk_rule_in_egypt_mod
+				}
+				remove_province_modifier = estate_mamluks_mamluk_rule_in_egypt_mod
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_mamluks_entrenched_syrian_governors = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -10
+	influence = 0.1
+	is_valid = {
+		has_estate_privilege = estate_mamluks_entrenched_syrian_governors
+	}
+	can_select = {
+		always = no
+	}
+	can_revoke = {
+		OR = {
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+		stability = 3
+		legitimacy = 100
+	}
+	penalties = {
+		yearly_corruption = 0.1
+	}
+	benefits = {
+	}
+	on_granted = {
+		custom_tooltip = estate_mamluks_entrenched_syrian_governors_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					area = aleppo_area
+					area = syria_area
+				}
+				add_province_modifier = {
+					name = estate_mamluks_entrenched_syrian_governors_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_mamluks_entrenched_syrian_governors_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = estate_mamluks_entrenched_syrian_governors_mod }
+				remove_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+			}
+		}
+		add_stability = -2
+	}
+	on_invalid = {
+		custom_tooltip = estate_mamluks_entrenched_syrian_governors_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = estate_mamluks_entrenched_syrian_governors_mod }
+				remove_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

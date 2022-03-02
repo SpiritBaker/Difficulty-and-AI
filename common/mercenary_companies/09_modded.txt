@@ -1,0 +1,207 @@
+merc_royal_mamluks = {
+    regiments_per_development = 0.025
+    cavalry_weight = 0.5
+    #artillery_weight = 0.1
+	#cavalry_cap = 6
+	home_province = 361
+	cost_modifier = 0.5
+	sprites = { dlc080_alh_sprite_pack muslimgfx_sprite_pack }
+	trigger = {
+		#has_reform = mamluk_government
+		has_estate_privilege = estate_mamluks_royal_guard
+	}
+    modifier = {
+        cavalry_power = 0.2
+		discipline = 0.03	
+    }
+}
+
+merc_landsknechts = {
+    regiments_per_development = 0.035
+    artillery_weight = 0.3
+	#cavalry_cap = 6
+	home_province = 67
+	cost_modifier = 0.75
+	sprites = { dlc061_wur_sprite_pack dlc028_wur_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		NOT = { current_age = age_of_discovery }
+		OR = {
+			is_emperor = yes
+			emperor = {
+				NOT = { war_with = ROOT }
+				NOT = { is_enemy = ROOT }
+				alliance_with = ROOT
+			}
+		}
+	}
+    modifier = {
+        discipline = 0.05
+		infantry_power = 0.1
+    }
+}
+
+merc_nogai_company = {
+    regiments_per_development = 0.03
+    home_province = 465 
+	cavalry_weight = 1
+	#cost_modifier = 1.2
+	sprites = { dlc047_cri_sprite_pack muslimgfx_sprite_pack }
+	trigger = {
+		OR = {
+			465 = { country_or_non_sovereign_subject_holds = ROOT }
+			465 = {
+				owner = {
+					is_nomad = yes
+					NOT = { war_with = ROOT }
+					NOT = { is_enemy = ROOT }
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+					OR = {
+						alliance_with = ROOT
+						is_neighbor_of = ROOT
+					}
+				}
+			}
+		}
+	}
+    modifier = {
+		cavalry_power = 0.10
+		cav_to_inf_ratio = 0.5
+	}
+}
+
+merc_khorasani_company = {
+    regiments_per_development = 0.03
+    home_province = 2221 # Lahijan
+	sprites = { dlc079_tab_sprite_pack muslimgfx_sprite_pack }
+	cost_modifier = 1.2
+	trigger = {
+		capital_scope = { 
+			OR = {
+				superregion = persia_superregion
+				region = central_asia_region 
+			}
+		}
+		OR = {
+			417 = { country_or_non_sovereign_subject_holds = ROOT }
+			417 = {
+				owner = {
+					NOT = { war_with = ROOT }
+					NOT = { is_enemy = ROOT }
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+					OR = {
+						alliance_with = ROOT
+						is_neighbor_of = ROOT
+					}
+				}
+			}
+		}
+	}
+    modifier = {
+		infantry_power = 0.1
+	}
+}
+
+merc_tunisian_janissaries_company = {
+    regiments_per_development = 0.025
+    home_province = 341
+	cost_modifier = 0.75
+	artillery_weight = 0.2
+	sprites = { dlc002_tur_sprite_pack dlc042_tur_sprite_pack tur_base_sprite_pack }
+	trigger = {
+		religion_group = muslim
+		capital_scope = {
+			region = maghreb_region
+		}
+		OR = {
+			is_subject_of = TUR
+			alliance_with = TUR
+			is_subject_of = RUM
+			alliance_with = RUM
+		}
+		341 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+    modifier = {
+		discipline = 0.05
+		fire_damage_received = -0.1
+	}
+}
+
+merc_yemen_company = {
+    regiments_per_development = 0.03
+    cavalry_weight = 0.2
+    artillery_weight = 0
+	cavalry_cap = 4
+    home_province = 4280
+	cost_modifier = 1.1
+	sprites = { dlc080_shm_sprite_pack muslimgfx_sprite_pack }
+	trigger = {
+		capital_scope = {
+			region = arabia_region
+		}
+		OR = {
+			4280 = { country_or_non_sovereign_subject_holds = ROOT }
+			4280 = {
+				owner = {
+					NOT = { war_with = ROOT }
+					NOT = { is_enemy = ROOT }
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+					OR = {
+						alliance_with = ROOT
+						is_neighbor_of = ROOT
+					}
+				}
+			}
+		}
+	}
+    modifier = {
+		land_morale = 0.1
+	}
+}
+
+merc_baluchi_auxiliaries = {
+    regiments_per_development = 0.03
+    cavalry_weight = 0.4
+    artillery_weight = 0
+	cavalry_cap = 6
+    home_province = 576 # Tabuk
+	cost_modifier = 0.8
+	sprites = { dlc080_shm_sprite_pack muslimgfx_sprite_pack }
+	trigger = {
+		capital_scope = {
+			OR = {
+				superregion = persia_superregion
+				region = west_india_region
+				region = hindusthan_region
+			}
+		}
+		OR = {
+			576 = { country_or_non_sovereign_subject_holds = ROOT }
+			576 = {
+				owner = {
+					NOT = { war_with = ROOT }
+					NOT = { is_enemy = ROOT }
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+					OR = {
+						alliance_with = ROOT
+						is_neighbor_of = ROOT
+					}
+				}
+			}
+		}
+	}
+    modifier = {
+		attrition = -0.15
+	}
+}

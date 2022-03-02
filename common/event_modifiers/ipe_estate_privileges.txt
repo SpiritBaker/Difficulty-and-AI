@@ -1,0 +1,8 @@
+
+estate_mamluks_mamluk_rule_in_egypt_mod = {
+	min_local_autonomy = 25
+}
+
+estate_mamluks_entrenched_syrian_governors_mod = {
+	min_local_autonomy = 25
+}
