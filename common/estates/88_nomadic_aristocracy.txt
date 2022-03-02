@@ -1,5 +1,5 @@
 nomadic_aristocracy = {
-	icon = 2
+	icon = 12
 	
 	# Used for when declaring independence
 	independence_government = tribal

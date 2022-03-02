@@ -293,6 +293,7 @@
  estate_nomadic_aristocracy_greater_war_support_desc:0 "By making alliances with powerful Noble families, we can secure their support at times of war."
  estate_nomadic_tribes_raise_tribal_levies:0 "Raise Tribal Levies"
  estate_nomadic_tribes_raise_tribal_levies_desc:0 "We can push additional tribal horsemen into our service. Nomadic lifestyle creates hardy warriors, but Clans might take this act as threat to their autonomy."
+ estate_ghulams:0 "Ghulams"
  
  #Agendas
  nomadic_aristocracy_build_army_building_in_y:0 "Expand Military Infrastructure in [agenda_province.GetName]"
@@ -489,3 +490,12 @@
  #japan
  UNITED_SHOGUNATE:0 "Shogunate"
  UNITED_SHOGUNATE_ADJ:0 "Shogunate"
+
+ #mercs
+ merc_royal_mamluks:0 "Royal Mamluks"
+ merc_landsknechts:0 "Landsknechts"
+ merc_nogai_company:0 "Nogai Company"
+ merc_khorasani_company:0 "Khorasani Company"
+ merc_tunisian_janissaries_company:0 "Janissary Company"
+ merc_yemen_company:0 "Yemen Company"
+ merc_baluchi_auxiliaries:0 "Baluchi Auxiliaries"

@@ -1,0 +1,243 @@
+estate_janissaries = {
+	
+	icon = 16
+	
+	trigger = {
+		has_reform = ottoman_government
+		is_nomad = no
+		is_colonial_nation = no
+		NOT = {
+			has_country_flag = yoklama
+		}
+	}
+	
+	country_modifier_happy = {
+		yearly_army_professionalism = 0.0025
+		drill_decay_modifier = -0.5
+		legitimacy = 1
+	}
+	
+	country_modifier_neutral = {
+		drill_decay_modifier = -0.5
+	}
+	
+	country_modifier_angry = {
+		discipline = -0.025
+		yearly_corruption = 0.05
+		global_unrest = 4
+	}
+	
+	land_ownership_modifier = {
+		janissaries_loyalty_modifier = 0.2
+		global_tax_modifier = -0.5
+        liberty_desire_from_subject_development = 1.0
+		yearly_corruption = 0.1
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+		modifier = {
+			factor = 2
+			region = anatolia_region
+		}
+		modifier = {
+			factor = 2
+			region = balkan_region
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 10
+	influence_from_dev_modifier = 1.0
+	influence_modifier = {
+		desc = EST_VAL_HIGH_JANISSARY_PERCENTAGE_INF
+		trigger = {
+			janissary_percentage = 0.5
+			ai = no
+			NOT = {
+				has_country_modifier = tur_janissary
+			}
+		}
+		influence = 20
+	}
+	influence_modifier = {
+		desc = EST_VAL_MEDIUM_JANISSARY_PERCENTAGE_INF
+		trigger = {
+			janissary_percentage = 0.25
+			ai = no
+			NOT = {
+				janissary_percentage = 0.5
+				has_country_modifier = tur_janissary
+			}
+		}
+		influence = 15
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_JANISSARY_PERCENTAGE_INF
+		trigger = {
+			janissary_percentage = 0.1
+			ai = no
+			NOT = {
+				janissary_percentage = 0.25
+				has_country_modifier = tur_janissary
+			}
+		}
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_LOW_JANISSARY_PERCENTAGE_INF
+		trigger = {
+			ai = no
+			NOT = {
+				janissary_percentage = 0.1
+				has_country_modifier = tur_janissary
+			}
+		}
+		influence = -10
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				#has_disaster = estate_mamluks_disaster
+			}
+		}
+		influence = -40
+	}
+	
+	#Loyalty Modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				#has_disaster = estate_mamluks_disaster
+			}
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_EMPLOYED_ARMY_REFORMER
+		trigger = {
+			advisor = army_reformer
+		}
+		loyalty = -5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_HIGH_CAVALRY_FRACTION_LOY
+		trigger = {
+			cavalry_fraction = 0.5
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_MEDIUM_CAVALRY_FRACTION_LOY
+		trigger = {
+			cavalry_fraction = 0.25
+			NOT = {
+				cavalry_fraction = 0.5
+			}
+		}
+		loyalty = -10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_HIGH_JANISSARY_PERCENTAGE_LOY
+		trigger = {
+			janissary_percentage = 0.5
+			ai = no
+		}
+		loyalty = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_MEDIUM_JANISSARY_PERCENTAGE_LOY
+		trigger = {
+			janissary_percentage = 0.25
+			ai = no
+			NOT = {
+				janissary_percentage = 0.5
+			}
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_VERY_LOW_JANISSARY_PERCENTAGE_LOY
+		trigger = {
+			ai = no
+			NOT = {
+				janissary_percentage = 0.1
+			}
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_MEDIUM_MAINTENANCE
+		trigger = {
+			land_maintenance = 0.5
+			ai = no
+			NOT = {
+				land_maintenance = 0.75
+			}
+		}
+		loyalty = -10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_LOW_MAINTENANCE
+		trigger = {
+			ai = no
+			NOT = {
+				land_maintenance = 0.5
+			}
+		}
+		loyalty = -20
+	}
+
+	color = { 51 153 51 }
+	
+	privileges = {
+		estate_janissaries_land_rights
+		estate_janissaries_janissary_primacy
+		estate_janissaries_autonomy
+		estate_janissaries_share_of_the_spoils
+		estate_janissaries_increase_wages
+		estate_janissaries_tolerate_the_bektashi_order
+	}
+	
+	agendas = {
+		estate_janissaries_build_army_building_in_y # done
+		estate_janissaries_build_fort_building_in_y # done
+		estate_janissaries_build_an_army # done
+		estate_janissaries_bigger_army_than_rival # done
+		estate_janissaries_hire_advisor # done
+		estate_janissaries_fire_advisor # done
+		estate_janissaries_expand_into_x
+		estate_janissaries_complete_conquest_of_x
+	}
+}

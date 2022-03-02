@@ -30,3 +30,37 @@ sedentary_subdjects = {
 		}
 	}
 }
+estate_janissaries = {
+	modifier_definition = {
+		type = loyalty
+		key = janissaries_loyalty_modifier
+		trigger = {
+			has_estate = estate_janissaries
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = janissaries_influence_modifier
+		trigger = {
+			has_estate = estate_janissaries
+		}
+	}
+}
+estate_mamluks = {
+	modifier_definition = {
+		type = loyalty
+		key = mamluks_loyalty_modifier
+		trigger = {
+			has_estate = estate_mamluks
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = mamluks_influence_modifier
+		trigger = {
+			has_estate = estate_mamluks
+		}
+	}
+}

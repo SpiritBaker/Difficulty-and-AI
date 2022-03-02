@@ -10,6 +10,7 @@ tags={
 	"National Ideas"
 }
 name="Difficulty & AI (1.33)"
+
 picture="thumbnail.png"
 supported_version="1.33.*"
 path="mod/Difficulty-and-AI"
