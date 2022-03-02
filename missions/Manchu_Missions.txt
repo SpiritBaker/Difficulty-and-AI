@@ -1235,7 +1235,7 @@ manchu_missions_3_b = {
 		position = 7
 		trigger = {
 			stability = 2
-			NOT = { average_autonomy = 35 }
+			NOT = { average_home_autonomy = 35 }
 		}
 		effect = {
 			if = {

@@ -82,7 +82,7 @@ merc_black_army = {
 			has_reform = black_army_reform
 		}
 	}
-	cost_modifier = 0.4
+	cost_modifier = 0.5
 	modifier = {
 		discipline = 0.05
 	}
@@ -99,7 +99,7 @@ merc_black_army_2 = {
 	trigger = {
 		has_reform = black_army_reform
 	}
-	cost_modifier = 0.4
+	cost_modifier = 0.5
 	modifier = {
 		discipline = 0.05
 	}

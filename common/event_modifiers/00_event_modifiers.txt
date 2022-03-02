@@ -3168,7 +3168,7 @@ governor_de_sousa = {
 }
 
 earthquake = {
-	trade_goods_size = -0.66
+	trade_goods_size_modifier = -0.25
 	local_manpower_modifier = -0.66
 }
 
@@ -4378,7 +4378,7 @@ ven_recover_from_plague = {
 }
 
 ven_arsenal_marines = {
-	allowed_marine_fraction = 0.05
+	allowed_marine_fraction = 0.25
 }
 
 venice_ghetto = {

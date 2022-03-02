@@ -3058,7 +3058,7 @@ state_house = {
 
 	modifier = {
 		statewide_governing_cost = -0.25
-		
+		min_local_autonomy = -10
 		min_local_autonomy = -5
 	}
 	#bonus_modifier = {

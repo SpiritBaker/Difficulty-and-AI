@@ -404,14 +404,18 @@ chinese_warlord = {
 		}
 		OR = {
 			AND = {
-				NOT = { primary_culture = manchu_new }
-				NOT = { primary_culture = vietnamese_new }
-				NOT = { primary_culture = korean_new }
-				NOT = { primary_culture = tibetan_new }
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = animist
 			}
-			is_playing_custom_nation = yes
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
 		}
-		religion = confucianism
 		technology_group = chinese
 		capital_scope = {
 			OR = {
@@ -427,9 +431,27 @@ chinese_warlord = {
 	nation_designer_cost = 10
 	lock_level_when_selected = yes
 	nation_designer_trigger = {
-		culture_group = east_asian
+		OR = {
+			primary_culture = bai
+			primary_culture = miao
+			primary_culture = yi
+			culture_group = east_asian
+		}
 		technology_group = chinese
-		religion = confucianism
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = animist
+			}
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
+		}
 		capital_scope = {
 			OR = {
 				region = north_china_region
@@ -442,7 +464,8 @@ chinese_warlord = {
 
 	modifiers = {
 		manpower_recovery_speed = 0.1
-		relation_with_same_religion = -100
+		relation_with_same_culture = -100
+		relation_with_same_culture_group = -100
 		governing_capacity = 100
 	}
 	
@@ -451,7 +474,6 @@ chinese_warlord = {
 	}
 
 	custom_attributes = {
-		locked_government_type = yes
 		has_unify_china_cb = yes
 	}
 }

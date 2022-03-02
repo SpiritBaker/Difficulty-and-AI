@@ -38,7 +38,7 @@ natural_scientist = {
 	# Bonus
 	production_efficiency = 0.10
 
-	skill_scaled_modifier = { meritocracy = 0.5 }	
+	skill_scaled_modifier = { meritocracy = 0.25 }	
 
 	chance = {
 		factor = 1

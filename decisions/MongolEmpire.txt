@@ -12,6 +12,7 @@ country_decisions = {
 			}
 			OR = {
 				culture_group = altaic
+				primary_culture = altaic_new 
 				culture_group = tartar
 			}
 			NOT = { has_country_flag = mongol_empire_flag }
@@ -200,16 +201,13 @@ country_decisions = {
 			}
 			OR = {
 				culture_group = tartar
+				primary_culture = altaic_new 
 				culture_group = altaic
 			}
 			capital_scope = {
 				region = persia_region
 			}
-			OR = {
-				has_reform = steppe_horde
-				has_reform = nomad_empire
-				has_reform = khanate_monarchy
-			}
+			is_nomad = yes
 			NOT = { tag = TIM }
 			NOT = { tag = PER }
 			NOT = { tag = PAP }

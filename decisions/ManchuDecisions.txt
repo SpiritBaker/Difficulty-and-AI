@@ -71,6 +71,15 @@ country_decisions = {
 			}
 		}
 		effect = {
+			add_prestige = 25
+			change_tag = MCH
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
 			change_primary_culture = manchu_new
 			set_ruler_culture = manchu_new
 			if = {
@@ -85,6 +94,17 @@ country_decisions = {
 					consort_culture = manchu
 				}
 				set_consort_culture = manchu_new
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord = {
+					country_event = {
+						id = flavor_mch.8
+					}
+				}
+				grant_independence = yes
 			}
 			hidden_effect = {
 				every_province = {
@@ -140,18 +160,12 @@ country_decisions = {
 				}
 				add_core = MCH
 			}
-			add_prestige = 25
-			change_tag = MCH
-			swap_non_generic_missions = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
 			set_country_flag = formed_manchu_flag
 			if = {
-				limit = { has_custom_ideas = no }
+				limit = { 
+					has_custom_ideas = no
+					NOT = { has_idea_group = MCH_ideas }
+				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}

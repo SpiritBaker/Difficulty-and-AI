@@ -293,14 +293,14 @@ country_event = {
 				}
 				country_event = { id = institution_events.300 }
 			}
-			#every_country = {
-			#	limit = {
-			#		ai = no
-			#		NOT = { tag = ROOT }
-			#		NOT = { knows_country = ROOT }
-			#	}
-			#	country_event = { id = institution_events.301 }
-			#}
+			every_country = {
+				limit = {
+					ai = no
+					NOT = { tag = ROOT }
+					NOT = { knows_country = ROOT }
+				}
+				country_event = { id = institution_events.301 }
+			}
 		}
 	}
 }

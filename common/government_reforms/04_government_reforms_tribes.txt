@@ -18,11 +18,11 @@ steppe_horde = {
 			has_reform = steppe_horde
 			culture_group = altaic
 			culture_group = tartar
+			primary_culture = altaic_new 
 		}
 		has_reform = steppe_horde
 		NOT = { has_reform = great_mongol_state_reform }
 	}
-	maintain_dynasty = yes
 	legacy_equivalent = steppe_horde_legacy
 	nomad = yes
 	raze_province = yes

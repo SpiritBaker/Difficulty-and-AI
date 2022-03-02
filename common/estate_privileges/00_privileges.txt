@@ -2154,7 +2154,7 @@ estate_nobles_officer_corp = {
 
 estate_nobles_levies = {
 	icon = privilege_demand_more_troops
-	max_absolutism = -10
+	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
@@ -2169,6 +2169,9 @@ estate_nobles_levies = {
 	}
 	penalties = {
 		global_tax_modifier = -0.10
+	}
+	mechanics = {
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 10
@@ -2797,6 +2800,7 @@ estate_church_inwards_perfection = {
 	mechanics = {
 		exempt_from_seize_land
 	}
+	cooldown_years = 25
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -3112,54 +3116,24 @@ estate_burghers_indebted_to_burghers = {
 			}
 		}
 	}
-	can_select = {
-		NOT = { is_bankrupt = yes }
-	}
-	can_revoke = {
-		NOT = { num_of_loans = 1 }
-	}
-	is_valid = {
-		NOT = { is_bankrupt = yes }
-	}
 	penalties = {
 		trade_efficiency = -0.05
 	}
 	benefits = {
 	}
+	can_select = {
+		if = {
+			limit = {
+				has_estate_privilege = estate_burghers_indebted_to_burghers
+			}
+			has_estate_loan = yes
+		}
+	}
+	can_revoke = {
+		has_estate_loan = no
+	}
 	ai_will_do = {
-		factor = 7.5
-		modifier = {
-			factor = 0
-			NOT = { num_of_loans = 1 }
-			NOT = { has_estate_privilege = estate_burghers_indebted_to_burghers }
-		}
-		modifier = {
-			factor = 10
-			has_estate_privilege = estate_burghers_indebted_to_burghers
-		}
-		modifier = {
-			factor = 1.5
-			num_of_loans = 10
-		}
-		modifier = {
-			factor = 1.5
-			num_of_loans = 20
-		}
-		modifier = {
-			factor = 1.5
-			is_in_deficit = yes
-			NOT = { treasury = 25 }
-		}
-		modifier = {
-			factor = 1.5
-			is_at_war =  yes
-			is_in_deficit = yes
-			NOT = { treasury = 25 }
-		}
-		modifier = {
-			factor = 0.75
-			is_absolutism_active = yes
-		}
+		factor = 0
 	}
 }
 
@@ -3662,6 +3636,14 @@ estate_dhimmi_guaranteed_autonomy = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+			overlord = {
+				religion = ROOT
+				has_idea_group = religious_ideas
+			}
+		}
 	}
 }
 
@@ -4013,6 +3995,14 @@ estate_brahmins_guaranteed_autonomy = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+			overlord = {
+				religion = ROOT
+				has_idea_group = religious_ideas
+			}
+		}
 	}
 }
 
@@ -4143,54 +4133,24 @@ estate_jains_indebted_to_jains = {
 			}
 		}
 	}
-	can_select = {
-		NOT = { is_bankrupt = yes }
-	}
-	can_revoke = {
-		NOT = { num_of_loans = 1 }
-	}
-	is_valid = {
-		NOT = { is_bankrupt = yes }
-	}
 	penalties = {
 		trade_efficiency = -0.05
 	}
 	benefits = {
 	}
+	can_select = {
+		if = {
+			limit = {
+				has_estate_privilege = estate_jains_indebted_to_jains
+			}
+			has_estate_loan = yes
+		}
+	}
+	can_revoke = {
+		has_estate_loan = no
+	}
 	ai_will_do = {
-		factor = 7.5
-		modifier = {
-			factor = 0
-			NOT = { num_of_loans = 1 }
-			NOT = { has_estate_privilege = estate_burghers_indebted_to_burghers }
-		}
-		modifier = {
-			factor = 10
-			has_estate_privilege = estate_burghers_indebted_to_burghers
-		}
-		modifier = {
-			factor = 1.5
-			num_of_loans = 10
-		}
-		modifier = {
-			factor = 1.5
-			num_of_loans = 20
-		}
-		modifier = {
-			factor = 1.5
-			is_in_deficit = yes
-			NOT = { treasury = 25 }
-		}
-		modifier = {
-			factor = 1.5
-			is_at_war =  yes
-			is_in_deficit = yes
-			NOT = { treasury = 25 }
-		}
-		modifier = {
-			factor = 0.75
-			is_absolutism_active = yes
-		}
+		factor = 0
 	}
 }
 
@@ -10234,7 +10194,7 @@ estate_brahmins_religious_diplomats = {
 estate_church_one_faith_one_culture = {
 	icon = privilege_one_faith_one_culture
 	max_absolutism = -5
-	influence = 0.25
+	influence = 0.2
 	loyalty = 0.1
 	land_share = 5
 	is_valid = {
@@ -11189,7 +11149,7 @@ estate_dhimmi_grant_liberties = {
 
 estate_jains_grant_liberties = {
 	icon = privilege_tolerance_heathen
-	max_absolutism = -5
+	max_absolutism = -10
 	influence = 0.1
 	loyalty = 0.1
 	is_valid = {

@@ -2699,13 +2699,28 @@ country_event = {
 	option = {
 		name = women_history_events.38.a
 		add_meritocracy_effect = yes
-		define_advisor = {
-			female = yes
-			type = philosopher
-			discount = yes
-			culture = vietnamese
-			skill = 2
-			name = "Ho Xuan Huong"
+		if = {
+			limit = {
+				primary_culture = vietnamese_new
+			}
+			define_advisor = {
+				female = yes
+				type = philosopher
+				discount = yes
+				culture = vietnamese_new
+				skill = 2
+				name = "Ho Xuan Huong"
+			}
+		}
+		else = {
+			define_advisor = {
+				female = yes
+				type = philosopher
+				discount = yes
+				culture = vietnamese
+				skill = 2
+				name = "Ho Xuan Huong"
+			}
 		}
 	}
 	option = {
@@ -3241,6 +3256,10 @@ country_event = {
 		OR = {
 			tag = QNG
 			tag = MNG
+			AND = {
+				has_reform = celestial_empire
+				culture_group = east_asian
+			}
 		}
 		is_year = 1613
 		NOT = {
@@ -3662,6 +3681,10 @@ country_event = {
 		OR = {
 			tag = QNG
 			tag = MNG
+			AND = {
+				has_reform = celestial_empire
+				culture_group = east_asian
+			}
 		}
 		is_year = 1768
 		NOT = {
@@ -6703,13 +6726,28 @@ country_event = {
 	option = {
 		name = women_history_events.98.a
 		add_meritocracy_effect = yes
-		define_advisor = {
-			name = "Heo Nanseolheon"
-			discount = yes
-			culture = korean
-			type = artist
-			skill = 2
-			female = yes
+		if = {
+			limit = {
+				primary_culture = korean_new
+			}
+			define_advisor = {
+				name = "Heo Nanseolheon"
+				discount = yes
+				culture = korean_new
+				type = artist
+				skill = 2
+				female = yes
+			}
+		}
+		else = {
+			define_advisor = {
+				name = "Heo Nanseolheon"
+				discount = yes
+				culture = korean
+				type = artist
+				skill = 2
+				female = yes
+			}
 		}
 	}
 	option = {
