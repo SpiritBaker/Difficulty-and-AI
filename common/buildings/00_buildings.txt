@@ -2699,40 +2699,27 @@ ramparts = {
 	#	all
 	#}
 	build_trigger = {
-		NOT = {
-			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = ramparts
-					has_construction = ramparts
-				}
-			}
+		OR = {
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+			fort_level = 1
 		}
 	}
 	
 	keep_trigger = {
-		NOT = {
-			area_for_scope_province = {
-				NOT = { province_id = root }
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = ramparts
-					has_construction = ramparts
-				}
-			}
-		}
 		OR = {
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
 			fort_level = 1
-			FROM = { ai = no }
 		}
 	}	
 
 	modifier = {
-		local_hostile_attrition = 1
+		fort_level = 1
 		local_defensiveness = 0.25
 	}
 	onmap = no
@@ -2740,17 +2727,6 @@ ramparts = {
 
 	ai_will_do = {
 		factor = 4
-		modifier = {
-			factor = 0
-			NOT = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
-			}
-		}
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -2780,22 +2756,7 @@ ramparts = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			NOT = {
-				OR = {
-					has_building = wharf 
-					has_building = weapons 
-					has_building = textile 
-					has_building = tradecompany 
-					has_building = farm_estate 
-					has_building = mills 
-					has_building = plantations 
-					has_building = furnace 
-					has_building = soldier_households 
-					has_building = impressment_offices
-				}
-			}
+			building_slot_for_manufactory_trigger = yes
 		}
 	}
 }

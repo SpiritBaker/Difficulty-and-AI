@@ -456,10 +456,7 @@ estate_janissaries_build_army_building_in_y = {
 		}
 		else = {
 			event_target:agenda_province = {
-				add_province_modifier = {
-					name = encouraged_growth_manpower
-					duration = 18250
-				}
+				add_base_manpower = 1
 			}
 		}
     }
@@ -1082,10 +1079,7 @@ estate_janissaries_build_fort_building_in_y = {
 			loyalty = 10
 		}
 		event_target:agenda_province = {
-			add_province_modifier = {
-				name = encouraged_growth_manpower
-				duration = 18250
-			}
+			add_base_manpower = 1
 		}
     }
     failing_effect = {

@@ -8,6 +8,10 @@ province = {
             modifier = {
                 is_in_capital_area = yes
                 owned_by = ROOT
+                OR = {
+                    NOT = { controlled_by = owner }
+                    has_siege = yes
+                }
             }
         }
     }

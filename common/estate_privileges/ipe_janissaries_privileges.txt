@@ -73,11 +73,24 @@ estate_janissaries_land_rights = {
 
 estate_janissaries_janissary_primacy = {
 	icon = privilege_military_power
+	max_absolutism = -10
 	land_share = 10
-	loyalty = -0.05
+	influence = 0.05
+	loyalty = 0.05
 	can_select = {
 	}
 	on_granted = {
+		custom_tooltip = estate_janissaries_janissary_primacy_mod
+		add_country_modifier = {
+			name = estate_janissaries_janissary_primacy_mod
+			duration = -1
+		}
+	}
+	on_invalid = {
+		remove_country_modifier = estate_janissaries_janissary_primacy_mod
+	}
+	on_revoked = {
+		remove_country_modifier = estate_janissaries_janissary_primacy_mod
 	}
 	penalties = {
 	}
@@ -85,26 +98,6 @@ estate_janissaries_janissary_primacy = {
 	}
 	ai_will_do = {
 		factor = 12
-		modifier = {
-			factor = 0
-			OR = {
-				NOT = { crown_land_share = 40 }
-				estate_influence = {
-					estate = estate_janissaries
-					influence = 80
-				}
-			}
-			NOT = { has_estate_privilege = estate_janissaries_janissary_primacy }
-		}
-		modifier = {
-			factor = 0.8
-			NOT = { crown_land_share = 30 }
-			NOT = { has_estate_privilege = estate_janissaries_janissary_primacy }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { mil = 2 }
-		}
 	}
 }
 

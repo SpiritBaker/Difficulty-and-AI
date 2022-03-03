@@ -292,7 +292,6 @@ daimyo_vassal = {
 	base_liberty_desire = 10.0
 	military_focus = 1.2
 
-	forcelimit_bonus = 0.25
 	#forcelimit_to_overlord = 0.1
 	
 	relative_power_class = 1

@@ -6,23 +6,6 @@ estate_mamluks = {
 		OR = {
 			has_reform = mamluk_government
 			tag = PER
-			AND = {
-				OR = {
-					technology_group = muslim
-					technology_group = ottoman
-				}
-				OR = {
-					NOT = {
-						exists = MAM
-					}
-					calc_true_if = {
-						all_owned_province = {
-							region = egypt_region
-						}
-						amount = 10
-					}
-				}
-			}
 		}
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = cossacks_reform }
@@ -32,9 +15,6 @@ estate_mamluks = {
 		NOT = { is_revolutionary_republic_trigger = yes }
 		NOT = { has_reform = revolutionary_empire_reform }
 		NOT = { has_reform = peasants_republic }
-		NOT = {
-			tag = EGY
-		}
 		is_nomad = no
 		is_colonial_nation = no
 		OR = {

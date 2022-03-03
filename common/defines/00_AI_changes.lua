@@ -12,8 +12,11 @@ NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.10
 NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0.10
 --NDefines.NMilitary.ARMY_ATTRITION_AT_COAST = 1					-- How many percent attrition units take while loaded onto ships along the coast
 NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 5					-- How many percent attrition units take while loaded onto ships traveling open sea
+NDefines.NMilitary.MERCENARY_COMPANY_MAX_REGIMENTS = 40	-- Maximum regiments
 
 NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in percent for leader to gain a trait after combat (modified by tradition gained).
+NDefines.NMilitary.SUPPLY_DEPOT_DURATION_MONTHS = 120		-- Time until supply depot is removed.
+NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 10				-- Mil power cost to build a supply depot in an area.
 --NDefines.NMilitary.COMBAT_DICE_SIDE = 6 
 --NDefines.NMilitary.LEADER_MAX_PIPS = 5	--Max general/admiral pips (per skill).
 --NDefines.NMilitary.REGULAR_LEADER_POWER	= 0.8	--Used for generals & admirals (affects total pips).
@@ -40,7 +43,7 @@ NDefines.NAI.DANGEROUS_OVEREXTENSION_PERCENTAGE = 0
 --Composition
 NDefines.NAI.MAX_CAV_PERCENTAGE = 60
 NDefines.NAI.MIN_CAV_PERCENTAGE = 0
-NDefines.NAI.ARTILLERY_FRACTION = 0.2
+NDefines.NAI.ARTILLERY_FRACTION = 0.25
 NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16
 NDefines.NAI.TRANSPORT_FRACTION = 0.35
 NDefines.NAI.BIGSHIP_FRACTION = 0.4
@@ -287,7 +290,7 @@ NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER =  10
 --NDefines.NEconomy.TRADE_PROPAGATE_THRESHOLD  =  2
 NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.03	--% each tech increases it. 96% increase at tech 32
 NDefines.NEconomy.NAVAL_TECH_MAINTENANCE_IMPACT = 0.03 			-- % each tech increases it.
-
+NDefines.NEconomy.LAND_TECH_MERC_MAINTENANCE_IMPACT = 0.04
 --NDefines.NGovernment.CONCENTRATE_DEVELOPMENT_CAPITAL_PROPORTION = 0.25
 --NDefines.NGovernment.CONCENTRATE_DEVELOPMENT_OTHER_STATE_PROVINCES_PROPORTION = 0.45
 --NDefines.NGovernment.FREE_CONCENTRATE_DEVELOPMENT_CAPITAL_PROPORTION = 0.25

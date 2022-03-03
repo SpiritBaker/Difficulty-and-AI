@@ -6,6 +6,7 @@ province = {
         eval_multiply = {
             factor = 0.4
             modifier = {
+                owner = { war_with = ROOT }
 				has_province_modifier = arctic
             }
         }

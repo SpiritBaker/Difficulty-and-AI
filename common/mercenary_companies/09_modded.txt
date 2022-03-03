@@ -1,5 +1,5 @@
 merc_royal_mamluks = {
-    regiments_per_development = 0.025
+    regiments_per_development = 0.035
     cavalry_weight = 0.5
     #artillery_weight = 0.1
 	#cavalry_cap = 6
@@ -18,7 +18,7 @@ merc_royal_mamluks = {
 
 merc_landsknechts = {
     regiments_per_development = 0.035
-    artillery_weight = 0.3
+    artillery_weight = 0.1
 	#cavalry_cap = 6
 	home_province = 67
 	cost_modifier = 0.75
@@ -41,7 +41,7 @@ merc_landsknechts = {
 }
 
 merc_nogai_company = {
-    regiments_per_development = 0.03
+    regiments_per_development = 0.035
     home_province = 465 
 	cavalry_weight = 1
 	#cost_modifier = 1.2
@@ -73,10 +73,10 @@ merc_nogai_company = {
 }
 
 merc_khorasani_company = {
-    regiments_per_development = 0.03
+    regiments_per_development = 0.035
     home_province = 2221 # Lahijan
 	sprites = { dlc079_tab_sprite_pack muslimgfx_sprite_pack }
-	cost_modifier = 1.2
+	cost_modifier = 1.1
 	trigger = {
 		capital_scope = { 
 			OR = {
@@ -108,10 +108,10 @@ merc_khorasani_company = {
 }
 
 merc_tunisian_janissaries_company = {
-    regiments_per_development = 0.025
+    regiments_per_development = 0.035
     home_province = 341
 	cost_modifier = 0.75
-	artillery_weight = 0.2
+	artillery_weight = 0.1
 	sprites = { dlc002_tur_sprite_pack dlc042_tur_sprite_pack tur_base_sprite_pack }
 	trigger = {
 		religion_group = muslim
@@ -133,7 +133,7 @@ merc_tunisian_janissaries_company = {
 }
 
 merc_yemen_company = {
-    regiments_per_development = 0.03
+    regiments_per_development = 0.035
     cavalry_weight = 0.2
     artillery_weight = 0
 	cavalry_cap = 4
@@ -168,7 +168,7 @@ merc_yemen_company = {
 }
 
 merc_baluchi_auxiliaries = {
-    regiments_per_development = 0.03
+    regiments_per_development = 0.035
     cavalry_weight = 0.4
     artillery_weight = 0
 	cavalry_cap = 6
