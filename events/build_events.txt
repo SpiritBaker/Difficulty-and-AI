@@ -322,16 +322,22 @@ country_event = {
 							can_build = training_fields
 						}
 					}
+					export_to_variable = {
+						which = lmVar
+						value = modifier:local_manpower
+					}
+					export_to_variable = {
+						which = bmVar
+						value = base_manpower
+					}
 					ROOT = {
-						export_to_variable = {
+						set_variable = {
 							which = lmVar
-							value = modifier:local_manpower
-							who = PREV
+							which = PREV
 						}
-						export_to_variable = {
+						set_variable = {
 							which = bmVar
-							value = base_manpower
-							who = PREV
+							which = PREV
 						}
 						multiply_variable = {
 							bmVar = 0.25
@@ -539,11 +545,14 @@ country_event = {
 								is_state_core = ROOT
 								can_build = university
 							}
+							export_to_variable = {
+								which = pDev
+								value = development
+							}
 							ROOT = {
-								export_to_variable = {
+								set_variable = {
 									which = pDev
-									value = development
-									who = PREV
+									which = PREV
 								}
 							}
 							if = {
