@@ -31,16 +31,22 @@ goods_check = {
 }
 
 value_check = {
+	export_to_variable = {
+		which = tgsVar
+		value = modifier:trade_goods_size
+	}
+	export_to_variable = {
+		which = tgsmVar
+		value = modifier:trade_goods_size_modifier
+	}
 	ROOT = {
-		export_to_variable = {
+		set_variable = {
 			which = tgsVar
-			value = modifier:trade_goods_size
-			who = PREV
+			which = PREV
 		}
-		export_to_variable = {
+		set_variable = {
 			which = tgsmVar
-			value = modifier:trade_goods_size_modifier
-			who = PREV
+			which = PREV
 		}
 		set_variable = {
 			tvVar = 1
