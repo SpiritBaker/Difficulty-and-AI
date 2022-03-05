@@ -143,36 +143,6 @@ estate_ghilman_promote_leadership = {
 	}
 }
 
-estate_ghilman_ghilman_royal_guard = {
-	icon = privilege_military_power
-	land_share = 5
-	max_absolutism = -5
-	influence = 0.05
-	loyalty = 0.05
-	is_valid = {
-		#tag = PER
-	}
-	can_select = {
-		#tag = PER
-	}
-	on_granted = {
-		custom_tooltip = estate_ghilman_ghilman_royal_guard_tooltip
-	}
-	penalties = {
-		stability_cost_modifier = 0.1
-	}
-	benefits = {
-		merc_maintenance_modifier = -0.1 
-	}
-	ai_will_do = {
-		factor = 12
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
-	}
-}
-
 estate_ghilman_recruit_from_tribes = {
 	icon = privilege_raise_host
 	#land_share = 5
