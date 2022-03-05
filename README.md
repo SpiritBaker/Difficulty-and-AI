@@ -63,6 +63,8 @@ Gameplay and Balance changes:
 - Fixes and tweaks to Hegemon’s. Preventing AI from claiming Eco hegemon after getting some cash in a peace deal.
 - Small touch to Muslim faith, reworking old convert decisions and enabling it for AI.
 - Increasing duration of Muslim Schools bonuses by 10 years.
+- Buff to Marines, marines will have -10% shock damage received.
+- Changing naval doctrines a bit. 
 - Small changes to trade regions, Bordeaux is an end node, white sea flows into Novgorod.
 - Nerf to trade propagation, from 20% to 10%. 
 - Naval attrition is reduced to 5%, as it’s currently bugged and ticks 2 times per month.
