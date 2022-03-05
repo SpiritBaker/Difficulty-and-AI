@@ -215,6 +215,10 @@
  desc_esen_taishi:0 ""
  jap_sengoku_jidai_shogun:0 "Onin War"
  desc_jap_sengoku_jidai_shogun:0 ""
+ lost_control_of_xian:1 "Emperor does not own and control Xian"
+ desc_lost_control_of_xian:0 "It bodes poorly for our claim to the Mandate of Heaven if we cannot hold Xian, one of China's major cities."
+ lost_control_of_luoyang:1 "Emperor does not own and control Luoyang"
+ desc_lost_control_of_luoyang:0 "It bodes poorly for our claim to the Mandate of Heaven if we cannot hold Luoyang, one of China's major cities."
 
 
  #Mission

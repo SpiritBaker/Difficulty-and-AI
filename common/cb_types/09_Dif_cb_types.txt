@@ -69,16 +69,16 @@ cb_manchu_unification = {
 #	war_goal = horde_invasion
 #}
 
-cb_vassalize_principality = {
-	valid_for_subject = no
-
-	prerequisites = {
-		mission_completed = tr_subjugate_novgorod
-		FROM = {
-			is_free_or_tributary_trigger = yes
-			culture_group = east_slavic
-		}
-	}
-
-	war_goal = take_capital_vassalize_principality
-}
+#cb_vassalize_principality = {
+#	valid_for_subject = no
+#
+#	prerequisites = {
+#		mission_completed = tr_subjugate_novgorod
+#		FROM = {
+#			is_free_or_tributary_trigger = yes
+#			culture_group = east_slavic
+#		}
+#	}
+#
+#	war_goal = take_capital_vassalize_principality
+#}

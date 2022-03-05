@@ -617,6 +617,8 @@ ai_wants_chinese_capitals = {
 			owns = 1816
 			owns = 1821
 			owns = 667
+			owns = 700
+			owns = 1836
 		}
 		has_dlc = "Mandate of Heaven"
 		capital_scope = {
@@ -627,6 +629,8 @@ ai_wants_chinese_capitals = {
 		owns = 1816
 		owns = 1821
 		owns = 667
+		owns = 700
+		owns = 1836
 	}
 
 	ai_weight = {
@@ -694,6 +698,46 @@ lost_control_of_canton = {
 	imperial_mandate = -0.04
 }
 
+lost_control_of_xian = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 700 }
+			NOT = { controls = 700 }
+		}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+
+	imperial_mandate = -0.04
+}
+
+lost_control_of_luoyang = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 1836 }
+			NOT = { controls = 1836 }
+		}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+
+	imperial_mandate = -0.04
+}
+
 waging_war_for_china = {
 	potential = {
 		has_reform = celestial_empire
@@ -707,7 +751,7 @@ waging_war_for_china = {
 		}
 	}
 	
-	imperial_mandate = 0.04
+	imperial_mandate = 0.05
 }
 
 ##################################################
