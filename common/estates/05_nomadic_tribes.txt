@@ -10,10 +10,14 @@ estate_nomadic_tribes = {
 		#NOT = { has_reform = veche_republic }
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = cossacks_reform }
+		NOT = { has_estate = estate_janissary }
+		NOT = { has_estate = estate_mamluks }
+		NOT = { has_estate = estate_ghilman }
 		OR = {
 			has_reform = nomad_empire
 			has_reform = khanate_monarchy
 			has_reform = tribal_federation
+			tag = ARL
 			is_nomad = yes
 			AND = {
 				has_reform = celestial_empire
@@ -166,6 +170,12 @@ estate_nomadic_tribes = {
 			has_reform = celestial_empire
 		}
 	}
+	custom_name = {
+		desc = estate_qizilbash
+		trigger = {
+			culture_group = iranian
+		}
+	}	
 
 	privileges = {
 		estate_nomadic_tribes_land_rights

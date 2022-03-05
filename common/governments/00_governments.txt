@@ -43,6 +43,7 @@ monarchy = {
 				nomad_empire
 				#warring_state
 				united_shogunate
+				feudal_theocracy_per
 			}
 		}
 		hereditary_vs_nobility = {

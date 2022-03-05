@@ -43,15 +43,31 @@
 
  estate_privileges_and_agendas_events.3.l: "The Proposal of the Janissaries"
 
+ #Janissaries
+ estate_janissaries_land_rights: "Janissary Land Rights"
+ estate_janissaries_land_rights_desc: "Janissaries, despite their ultimate loyalty to the Sultan, face a harsh early life that might give seed to wrong ideas about their status compared to the Ümera. If we allow some of the older units to become landed aristocrats, they will forget future squabbles about their rights."
+ estate_janissaries_janissary_primacy: "Primacy of the Janissaries"
+ estate_janissaries_janissary_primacy_desc: "Giving the Janissaries free rein over the military would strengthen our capacities considerably, even if it may cost us dearly in compensating their contributions."
+ estate_janissaries_autonomy: "Secure Audiences with Sultan"
+ estate_janissaries_autonomy_desc: "By tradition, the Sultan himself, after authorizing the payments to the Janissaries, visited the barracks dressed as a janissary trooper, and received his pay alongside the other men of the First Division. Securing this tradition for all new Sultans will strengthen the units' relation with the Sultan and make them happier."
+ estate_janissaries_share_of_the_spoils: "Share the Spoils"
+ estate_janissaries_share_of_the_spoils_desc: "Janissary troops are always led to the battle by the Sultan himself, obtaining a share of the loot, thus expecting this to be a standard. However, if we sacrifice some of our own share to increase theirs, they would be even more satisfied while campaigning."
+ estate_janissaries_increase_wages: "Increase Janissary Wages"
+ estate_janissaries_increase_wages_desc: "A Janissary is paid a regular salary that covers everything from uniform to weaponry, plus bonuses. But despite this, wages have always been a touchy subject for them, especially during wartime. To avoid problematic thoughts seeding their heads, we should increase their wages."
+ janissaries_increased_wages_tooltip: "§RThe Janissaries will demand greater amounts of money in salary events.§!"
+ estate_janissaries_tolerate_the_bektashi_order: "Tolerate the Bektashi Order"
+ estate_janissaries_tolerate_the_bektashi_order_desc: "Many Janissaries have joined the Bektashi Order, a Sufi Order found throughout Anatolia and the Balkans. With the Bektashi Order holding an increasing influence over the Janissaries and other members of the Ottoman elite, we should considering tolerating the movement in order to ingratiate ourselves with its followers."
+ estate_janissaries_janissary_primacy_mod: "Janissary Primacy"
+
  # Dhimmi
  EST_VAL_EMPLOYED_INQUISITOR: "Has Inquisitor advisor"
 
  # Mamluks
  estate_mamluks: "Mamluks"
- estate_mamluks_desc: "This estate represents the Slave Solders caste, members of one of the armies established during the Abbasid era, which later won political control of several Muslim states. Typically of foreign origin, they form a distinct military and political class, and through their martial skills and ruthlessness, they have been able to become powerful assets, as well as wealthy landowners. Their reputation for rebelliousness and infighting makes others quite wary of their influence."
- estate_mamluks_ownership: "Land Ownership"
- mamluks_loyalty_modifier: "Loyalty Equilibrium"
- mamluks_influence_modifier: "Influence"
+ estate_mamluks_desc: "This estate represents the Mamluks caste, members of one of the armies established during the Abbasid era, which later won political control of several Muslim states. Typically of foreign origin, they form a distinct military and political class, and through their martial skills and ruthlessness, they have been able to become powerful assets, as well as wealthy landowners. Their reputation for rebelliousness and infighting makes others quite wary of their influence."
+ estate_mamluks_ownership: "Mamluks Land Ownership"
+ mamluks_loyalty_modifier: "MamluksLoyalty Equilibrium"
+ mamluks_influence_modifier: "Mamluks Influence"
 
  EST_VAL_HIGH_CAVALRY_FRACTION_INF: "Has Cavalry units comprising at least 50% of the force limit: §Y$VAL$%§!"
  EST_VAL_MEDIUM_CAVALRY_FRACTION_INF: "Has Cavalry units comprising at least 25% of the force limit: §Y$VAL$%§!"
@@ -85,32 +101,13 @@
 
  estate_privileges_and_agendas_events.3.m: "The Proposal of the Mamluks"
 
- # Nomadic Tribes
- estate_qizilbash: "Qizilbash"
- estate_cumans: "Cumans"
-
  # Privileges
- # Janissaries
- estate_janissaries_land_rights: "Janissary Land Rights"
- estate_janissaries_land_rights_desc: "Janissaries, despite their ultimate loyalty to the Sultan, face a harsh early life that might give seed to wrong ideas about their status compared to the Ümera. If we allow some of the older units to become landed aristocrats, they will forget future squabbles about their rights."
- estate_janissaries_janissary_primacy: "Primacy of the Janissaries"
- estate_janissaries_janissary_primacy_desc: "Giving the Janissaries free rein over the military would strengthen our capacities considerably, even if it may cost us dearly in compensating their contributions."
- estate_janissaries_autonomy: "Secure Audiences with Sultan"
- estate_janissaries_autonomy_desc: "By tradition, the Sultan himself, after authorizing the payments to the Janissaries, visited the barracks dressed as a janissary trooper, and received his pay alongside the other men of the First Division. Securing this tradition for all new Sultans will strengthen the units' relation with the Sultan and make them happier."
- estate_janissaries_share_of_the_spoils: "Share the Spoils"
- estate_janissaries_share_of_the_spoils_desc: "Janissary troops are always led to the battle by the Sultan himself, obtaining a share of the loot, thus expecting this to be a standard. However, if we sacrifice some of our own share to increase theirs, they would be even more satisfied while campaigning."
- estate_janissaries_increase_wages: "Increase Janissary Wages"
- estate_janissaries_increase_wages_desc: "A Janissary is paid a regular salary that covers everything from uniform to weaponry, plus bonuses. But despite this, wages have always been a touchy subject for them, especially during wartime. To avoid problematic thoughts seeding their heads, we should increase their wages."
- janissaries_increased_wages_tooltip: "§RThe Janissaries will demand greater amounts of money in salary events.§!"
- estate_janissaries_tolerate_the_bektashi_order: "Tolerate the Bektashi Order"
- estate_janissaries_tolerate_the_bektashi_order_desc: "Many Janissaries have joined the Bektashi Order, a Sufi Order found throughout Anatolia and the Balkans. With the Bektashi Order holding an increasing influence over the Janissaries and other members of the Ottoman elite, we should considering tolerating the movement in order to ingratiate ourselves with its followers."
-
- # Mamluks
  estate_mamluks_land_rights: "$ESTATE_NAME$ Land Rights"
  estate_mamluks_land_rights_desc: "The different Mamluk factions are as greedy as they are scheming. To keep them in line they all need to have their own piece of land to operate in."
  estate_mamluks_royal_guard: "Mamluk Royal Guard"
  estate_mamluks_royal_guard_desc: "By promoting a group of selected Mamluks, we can create an elite force fiercely loyal only to the Sultan."
  estate_mamluks_royal_guard_tooltip: "§TUnlocks Royal Mamluk mercenray company.§!"
+ estate_mamluks_ghilman_royal_guard_tooltip: "§TUnlocks Royal Ghilman mercenray company.§!"
  estate_mamluks_autonomy: "Patronage $ESTATE_NAME$ Factions"
  estate_mamluks_autonomy_desc: "The $ESTATE_NAME$ are extremely influential in our realm, and while conflicts between $ESTATE_NAME$ groups and with other state actors abound, promising to maintain their historic privileges will go a long way towards making them more cooperative."
  estate_mamluks_promote_leadership: "Promote $ESTATE_NAME$ Leadership"
@@ -129,3 +126,66 @@
  estate_mamluks_entrenched_syrian_governors_revoke_effect_tooltip: "The modifier §YEntrenched Syrian Governors§! is removed from all owned provinces in the §YMashriq§! region."
  estate_mamluks_entrenched_syrian_governors_mod: "Entrenched Syrian Governors"
  desc_estate_mamluks_entrenched_syrian_governors_mod: "The governors of Syria continue to perpetuate corruption and separatism throughout Syria, acting with a high degree of autonomy from the central government. It is difficult for us to exercise direct control in this area."
+
+
+ # Ghilman
+ estate_ghilman: "Ghulams"
+ estate_ghilman_desc: "This estate represents the Slave Solders caste, members of one of the armies established during the Abbasid era, which later won political control of several Muslim states. Typically of foreign origin, they form a distinct military and political class, and through their martial skills and ruthlessness, they have been able to become powerful assets, as well as wealthy landowners. Their reputation for rebelliousness and infighting makes others quite wary of their influence."
+ estate_ghilman_ownership: "Ghulams Land Ownership"
+ Ghilman_loyalty_modifier: "Ghulams Loyalty Equilibrium"
+ Ghilman_influence_modifier: "Ghulams Influence"
+
+ EST_VAL_HIGH_CAVALRY_FRACTION_INF: "Has Cavalry units comprising at least 50% of the force limit: §Y$VAL$%§!"
+ EST_VAL_MEDIUM_CAVALRY_FRACTION_INF: "Has Cavalry units comprising at least 25% of the force limit: §Y$VAL$%§!"
+ EST_VAL_LOW_CAVALRY_FRACTION_INF: "Has Cavalry units comprising at least 10% of the force limit: §Y$VAL$%§!"
+ EST_VAL_VERY_LOW_CAVALRY_FRACTION_INF: "Has Cavalry units comprising less than 10% of the force limit: §Y$VAL$%§!"
+ 
+ EST_VAL_HIGH_CAVALRY_FRACTION_MAM_LOY: "Has Cavalry units comprising at least 50% of the force limit: §G$VAL$§!"
+ EST_VAL_MEDIUM_CAVALRY_FRACTION_MAM_LOY: "Has Cavalry units comprising at least 25% of the force limit: §G$VAL$§!"
+ EST_VAL_VERY_LOW_CAVALRY_FRACTION_MAM_LOY: "Has Cavalry units comprising less than 10% of the force limit: §R$VAL$§!"
+
+ estate_ghilman_develop_x: "Increase Manpower in [agenda_province.GetName]"
+ estate_ghilman_develop_x_desc: "The Ghulams request that we invest in the prosperity of their lands in [agenda_province.GetName]."
+ estate_ghilman_build_army_building_in_y: "Expand Military Infrastructure in [agenda_province.GetName]"
+ estate_ghilman_build_army_building_in_y_desc: "The Ghulams of [agenda_province.GetName] urge us to build new army training and recruitment centers in the province so that our supply of high-quality recruits to the army may be made more secure."
+ estate_ghilman_build_fort_building_in_y: "Fortify [agenda_province.GetName]"
+ estate_ghilman_build_fort_building_in_y_desc: "The Ghulams call for us to strengthen our fortifications in [agenda_province.GetName]. They argue that it is imperative we protect this key strategic position from attack."
+ estate_ghilman_build_an_army: "Build an Army for our Nation"
+ estate_ghilman_build_an_army_desc: "The Ghulams consider our army to be an embarrassment to our nation. They urgently call for it to be expanded, so that our forces may present sufficient deterrence to enemies that may covet our lands."
+ estate_ghilman_bigger_army_than_rival: "Protect against [agenda_country.GetUsableName]"
+ estate_ghilman_bigger_army_than_rival_desc: "The Ghulams are worried that our army would fare poorly against the [agenda_country.GetAdjective] in a war. They insist that we must increase our recruitment so that our armed forces are no longer outmatched by our rivals."
+ estate_ghilman_hire_advisor: "Hire a Military Advisor"
+ estate_ghilman_hire_advisor_desc: "The Ghulams desire the [Root.Monarch.GetTitle] to hire a new military advisor."
+ estate_ghilman_fire_advisor: "Fire our Military Advisor"
+ estate_ghilman_fire_advisor_desc: "[Root.Mil_Advisor.GetTitle] [Root.Mil_Advisor.GetName] has insulted the Ghulams. They demand that we fire [Root.Mil_Advisor.GetHerHim]!"
+ estate_ghilman_expand_into_x: "Expand into [agenda_province.GetAreaName]"
+ estate_ghilman_expand_into_x_desc: "The Ghulams have been casting a jealous eye on [agenda_province.GetAreaName], an area they claim would make a fine addition to our nation. They call for a military campaign to secure part of it for ourselves."
+ estate_ghilman_complete_conquest_of_x: "Complete the Conquest of [agenda_province.GetAreaName]"
+ estate_ghilman_complete_conquest_of_x_desc: "The Ghulams see [agenda_province.GetAreaName] as an integral part of [Root.GetUsableName] and resent the fact that it is not entirely our own. They exhort us to secure the rest of the area for ourselves!"
+
+ local_Ghilman_displeased: "Local Ghulams Displeased"
+
+ estate_privileges_and_agendas_events.3.n: "The Proposal of the Ghulams"
+
+ # Privileges
+ estate_ghilman_land_rights: "$ESTATE_NAME$ Land Rights"
+ estate_ghilman_land_rights_desc: "The different Mamluk factions are as greedy as they are scheming. To keep them in line they all need to have their own piece of land to operate in."
+ estate_ghilman_royal_guard: "Mamluk Royal Guard"
+ estate_ghilman_royal_guard_desc: "By promoting a group of selected Ghulams, we can create an elite force fiercely loyal only to the Sultan."
+ estate_ghilman_royal_guard_tooltip: "§TUnlocks Royal Mamluk mercenray company.§!"
+ estate_ghilman_ghilman_royal_guard_tooltip: "§TUnlocks Royal Ghulams mercenray company.§!"
+ estate_ghilman_autonomy: "Patronage $ESTATE_NAME$ Factions"
+ estate_ghilman_autonomy_desc: "The $ESTATE_NAME$ are extremely influential in our realm, and while conflicts between $ESTATE_NAME$ groups and with other state actors abound, promising to maintain their historic privileges will go a long way towards making them more cooperative."
+ estate_ghilman_promote_leadership: "Promote $ESTATE_NAME$ Leadership"
+ estate_ghilman_promote_leadership_desc: "There are many $ESTATE_NAME$ factions in our realm, most of them in direct competition with one another. By promoting their most capable leaders to the highest ranks in the military, we will increase the capabilities of our armies."
+ estate_ghilman_rotate_palace_guard: "Rotate Palace Guard"
+ estate_ghilman_rotate_palace_guard_desc: "The $ESTATE_NAME$ that are part of the palace guard do an essential job in safeguarding the Sultan, but their loyalty and tendency to look after their own interests has long been worrying for our government. As much as they may see it as an affront, perhaps it's best if we were to rotate the guards so that none of them could get too used to being in the palace as opposed to guarding it."
+ estate_ghilman_ghilman_royal_guard: "Ghulams Royal Guard"
+ estate_ghilman_ghilman_royal_guard_desc: "By promoting a group of selected Ghulams, we can create an elite force fiercely loyal only to the Shahanshah."
+ estate_ghilman_recruit_from_tribes: "Recruit from the Turkoman Tribes"
+ estate_ghilman_recruit_from_tribes_desc: "Turkoman tribesmen make for great warriors, we can push them into your service. Which they will surely resent. "
+ estate_ghilman_caucasus_recruits: "Caucasian Ghulams"
+ estate_ghilman_caucasus_recruits_desc: "We can expand Ghulams ranks by pressing heathens into our service and converting them to Islam."
+ estate_ghilman_caucasus_recruits_mod: "Caucasian Recruits"
+ 
+ EST_CONTROL_OVER_CAUCASIA: "Control over Caucasus"

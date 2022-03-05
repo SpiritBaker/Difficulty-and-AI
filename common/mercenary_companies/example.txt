@@ -3,7 +3,7 @@
 #
 
 merc__local_free_company = {
-    regiments_per_development = 0.025
+    regiments_per_development = 0.04
     artillery_weight = 0
     cavalry_cap = 0
     #cost_modifier = 0.75
@@ -66,7 +66,7 @@ merc__local_independent_army = {
 }
 
 merc_local_all_female_company = {
-	regiments_per_development = 0.025
+	regiments_per_development = 0.04
     artillery_weight = 0.1
     cavalry_cap = 0
 	trigger = {

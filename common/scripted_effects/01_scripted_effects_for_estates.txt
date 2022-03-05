@@ -407,6 +407,127 @@ reduce_estate_rajput_loyalty_effect = {
 	}
 }
 
+#Janissaries
+add_estate_janissaries_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_janissaries
+		}
+		add_estate_loyalty = {
+			estate = estate_janissaries
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_janissaries_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_janissaries
+		}
+		add_estate_loyalty = {
+			estate = estate_janissaries
+			loyalty = -10
+		}
+	}
+}
+
+#Mamluks
+add_estate_mamluks_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_mamluks
+		}
+		add_estate_loyalty = {
+			estate = estate_mamluks
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_mamluks_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_mamluks
+		}
+		add_estate_loyalty = {
+			estate = estate_mamluks
+			loyalty = -10
+		}
+	}
+}
+
+#Ghilman
+add_estate_ghilman_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_ghilman
+		}
+		add_estate_loyalty = {
+			estate = estate_ghilman
+			loyalty = 10
+		}
+	}
+}
+reduce_estate_ghilman_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_ghilman
+		}
+		add_estate_loyalty = {
+			estate = estate_ghilman
+			loyalty = -10
+		}
+	}
+}
+
+#Nomadic Aristocracy
+add_nomadic_aristocracy_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = nomadic_aristocracy
+		}
+		add_estate_loyalty = {
+			estate = nomadic_aristocracy
+			loyalty = 10
+		}
+	}
+}
+reduce_nomadic_aristocracy_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = nomadic_aristocracy
+		}
+		add_estate_loyalty = {
+			estate = nomadic_aristocracy
+			loyalty = -10
+		}
+	}
+}
+
+#Sedentary Subdjects
+add_sedentary_subdjects_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = sedentary_subdjects
+		}
+		add_estate_loyalty = {
+			estate = sedentary_subdjects
+			loyalty = 10
+		}
+	}
+}
+reduce_sedentary_subdjects_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = sedentary_subdjects
+		}
+		add_estate_loyalty = {
+			estate = sedentary_subdjects
+			loyalty = -10
+		}
+	}
+}
+
+
 
 #Estate Privilege on_action effects
 
@@ -2609,6 +2730,36 @@ pick_random_estate_if_present = {
 			set_country_flag = estate_rajput_$flag$
 			[[estate_action]
 			$estate_action$ = estate_rajput
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_janissaries
+				NOT = { has_country_flag = estate_janissaries_$flag$ }
+			}
+			set_country_flag = estate_janissaries_$flag$
+			[[estate_action]
+			$estate_action$ = estate_janissaries
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_mamluks
+				NOT = { has_country_flag = estate_mamluks_$flag$ }
+			}
+			set_country_flag = estate_mamluks_$flag$
+			[[estate_action]
+			$estate_action$ = estate_mamluks
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_ghilman
+				NOT = { has_country_flag = estate_ghilman_$flag$ }
+			}
+			set_country_flag = estate_ghilman_$flag$
+			[[estate_action]
+			$estate_action$ = estate_ghilman
 			]
 		}
 	}

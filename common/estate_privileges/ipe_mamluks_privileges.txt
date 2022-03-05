@@ -249,14 +249,13 @@ estate_mamluks_entrenched_syrian_governors = {
 	}
 	can_revoke = {
 		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
+			NOT = { current_age = age_of_discovery }
+			stability = 3
 		}
-		stability = 3
 		legitimacy = 100
 	}
 	penalties = {
-		yearly_corruption = 0.1
+		legitimacy = -0.5
 	}
 	benefits = {
 	}
@@ -265,8 +264,10 @@ estate_mamluks_entrenched_syrian_governors = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					area = aleppo_area
-					area = syria_area
+					OR = {
+						area = aleppo_area
+						area = syria_area
+					}
 				}
 				add_province_modifier = {
 					name = estate_mamluks_entrenched_syrian_governors_mod
@@ -296,5 +297,140 @@ estate_mamluks_entrenched_syrian_governors = {
 	}
 	ai_will_do = {
 		factor = 0
+	}
+}
+
+estate_mamluks_ghilman_royal_guard = {
+	icon = privilege_military_power
+	land_share = 5
+	max_absolutism = -5
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		tag = PER
+	}
+	can_select = {
+		tag = PER
+	}
+	on_granted = {
+		custom_tooltip = estate_mamluks_ghilman_royal_guard_tooltip
+	}
+	penalties = {
+		stability_cost_modifier = 0.1
+	}
+	benefits = {
+		merc_maintenance_modifier = -0.1 
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_mamluks_recruit_from_tribes = {
+	icon = privilege_raise_host
+	#land_share = 5
+	#max_absolutism = -5
+	loyalty = -0.1
+	influence = 0.05
+	is_valid = {
+		tag = PER
+	}
+	can_select = {
+		tag = PER
+	}
+	on_granted = {
+		if = {
+			limit = {
+				land_forcelimit = 200
+			}
+			add_legitimacy = -10
+			capital_scope = {
+				add_unit_construction = {
+					type = cavalry
+					amount = 20
+					speed = 0.1
+					cost = 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				land_forcelimit = 100
+				NOT = { land_forcelimit = 200 }
+			}
+			add_legitimacy  = -8
+			capital_scope = {
+				add_unit_construction = {
+					type = cavalry
+					amount = 12
+					speed = 0.2
+					cost = 0.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				land_forcelimit = 50
+				NOT = { land_forcelimit = 100 }
+			}
+			add_legitimacy  = -6
+			capital_scope = {
+				add_unit_construction = {
+					type = cavalry
+					amount = 8
+					speed = 0.5
+					cost = 0.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { land_forcelimit = 50 }
+			}
+			add_legitimacy  = -5
+			capital_scope = {
+				add_unit_construction = {
+					type = cavalry
+					amount = 4
+					speed = 1
+					cost = 0.5
+				}
+			}
+		}
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_mamluks_recruit_from_tribes
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_in_deficit = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { army_size_percentage = 0.5 }
+		}
+		modifier = {
+			factor = 0
+			army_size_percentage = 0.90
+		}
 	}
 }

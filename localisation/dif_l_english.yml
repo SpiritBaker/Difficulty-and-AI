@@ -305,13 +305,14 @@
  EST_VAL_ARISTOCRATIC_ARMY:0 "Traditional Ways: §Y$VAL$%§!"
  EST_VAL_UNHAPPY_SUBJECTS:0 "Old Ways: §Y$VAL$%§!"
  estate_banners:0 "Banners"
+ estate_qizilbash:0 "Qizilbash"
  estate_nomadic_tribes_great_games:0 "Anual Great Games"
  estate_nomadic_tribes_great_games_desc:0 "By supporting traditional Great Games and Great Hunts, we can use them as exercise for upcoming campaigns."
  estate_nomadic_aristocracy_greater_war_support:0 "Greater War Support"
  estate_nomadic_aristocracy_greater_war_support_desc:0 "By making alliances with powerful Noble families, we can secure their support at times of war."
  estate_nomadic_tribes_raise_tribal_levies:0 "Raise Tribal Levies"
  estate_nomadic_tribes_raise_tribal_levies_desc:0 "We can push additional tribal horsemen into our service. Nomadic lifestyle creates hardy warriors, but Clans might take this act as threat to their autonomy."
- estate_ghulams:0 "Ghulams"
+ 
  
  #Agendas
  nomadic_aristocracy_build_army_building_in_y:0 "Expand Military Infrastructure in [agenda_province.GetName]"
@@ -459,6 +460,8 @@
  united_shogunate_desc:0 ""
  imperial_japan:0 "Imperial Japan"
  imperial_japan_desc:0 ""
+ feudal_theocracy_per:0 "Feudal Theocracy"
+ feudal_theocracy_per_desc:0 "This state is ruled by a religious leader with the throne passing on within his divinely sanctioned family."
 
 
  #Rebels
@@ -517,3 +520,4 @@
  merc_tunisian_janissaries_company:0 "Janissary Company"
  merc_yemen_company:0 "Yemen Company"
  merc_baluchi_auxiliaries:0 "Baluchi Auxiliaries"
+ merc_ghilman_royal_guard:0 "Ghilman Royal Guard"

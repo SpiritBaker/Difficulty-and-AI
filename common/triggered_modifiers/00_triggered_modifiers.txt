@@ -651,7 +651,7 @@ lost_control_of_beijing = {
 		factor = -1000 # Do what you can to avoid this modifier
 	}
 
-	imperial_mandate = -0.05
+	imperial_mandate = -0.04
 }
 
 lost_control_of_nanjing = {
@@ -671,7 +671,7 @@ lost_control_of_nanjing = {
 		factor = -1000 # Do what you can to avoid this modifier
 	}
 
-	imperial_mandate = -0.05
+	imperial_mandate = -0.04
 }
 
 lost_control_of_canton = {
@@ -691,7 +691,7 @@ lost_control_of_canton = {
 		factor = -1000 # Do what you can to avoid this modifier
 	}
 
-	imperial_mandate = -0.05
+	imperial_mandate = -0.04
 }
 
 waging_war_for_china = {
@@ -707,7 +707,7 @@ waging_war_for_china = {
 		}
 	}
 	
-	imperial_mandate = 0.05
+	imperial_mandate = 0.04
 }
 
 ##################################################

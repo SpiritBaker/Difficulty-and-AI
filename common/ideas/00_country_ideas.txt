@@ -112,7 +112,7 @@ ENG_ideas = {
 	}
 	eng_red_coats = {
 		fire_damage = 0.1
-		allowed_marine_fraction = 0.05
+		allowed_marine_fraction = 0.1
 	}
 	sick_and_hurt_board = {
 		sailors_recovery_speed = 0.10
@@ -335,7 +335,7 @@ SPA_ideas = {
 CAS_ideas = {
 	start = {
 		land_morale = 0.15
-		allowed_marine_fraction = 0.05
+		allowed_marine_fraction = 0.1
 	}
 	bonus = {
 		global_colonial_growth = 25
@@ -400,7 +400,7 @@ NED_ideas = {
 	}
 	instructie_voor_de_admiraliteiten = {
 		leader_naval_fire = 2
-		allowed_marine_fraction = 0.05
+		allowed_marine_fraction = 0.1
 	}
 	embrace_humanism = {
 		tolerance_heretic = 3
@@ -2218,7 +2218,7 @@ QNG_ideas = {
 		cavalry_power = 0.10
 	}
 	the_green_standard_army = {
-		manpower_recovery_speed = 0.10
+		manpower_recovery_speed = 0.15
 		global_manpower_modifier = 0.15
 	}
 	pigtail_or_death = {
@@ -10427,7 +10427,7 @@ RFR_ideas = { # Nanbu clan
 
 TKD_ideas = {
 	start = {
-		cavalry_power = 0.1
+		cavalry_power = 0.15
 		cavalry_cost = -0.1
 	}
 	
@@ -10458,6 +10458,7 @@ TKD_ideas = {
 	}
 	tkd_twentyfour_generals = {
 		free_leader_pool = 1
+		leader_land_shock = 1
 	}
 	tkd_koyo_gunkan = {
 		army_tradition = 0.5

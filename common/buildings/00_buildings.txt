@@ -565,7 +565,7 @@ fort_15th = {
 			}
 		}
 		modifier = {
-			factor = 1.667
+			factor = 1.4
 			OR = {
 				has_terrain = forest
 				has_terrain = hills
@@ -577,18 +577,15 @@ fort_15th = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1.8
 			OR = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
+				has_terrain = himalayas
 			}
 		}
 		modifier = {
-			factor = 2.5
-			has_terrain = himalayas
-		}
-		modifier = {
-			factor = 1.25
+			factor = 1.2
 			OR = {
 				has_province_modifier = arid
 				has_province_modifier = tropical
@@ -956,7 +953,7 @@ fort_16th = {
 			}
 		}
 		modifier = {
-			factor = 1.667
+			factor = 1.4
 			OR = {
 				has_terrain = forest
 				has_terrain = hills
@@ -968,18 +965,15 @@ fort_16th = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1.8
 			OR = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
+				has_terrain = himalayas
 			}
 		}
 		modifier = {
-			factor = 2.5
-			has_terrain = himalayas
-		}
-		modifier = {
-			factor = 1.25
+			factor = 1.2
 			OR = {
 				has_province_modifier = arid
 				has_province_modifier = tropical
@@ -1628,7 +1622,7 @@ fort_17th = {
 			}
 		}
 		modifier = {
-			factor = 1.667
+			factor = 1.4
 			OR = {
 				has_terrain = forest
 				has_terrain = hills
@@ -1640,18 +1634,15 @@ fort_17th = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1.8
 			OR = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
+				has_terrain = himalayas
 			}
 		}
 		modifier = {
-			factor = 2.5
-			has_terrain = himalayas
-		}
-		modifier = {
-			factor = 1.25
+			factor = 1.2
 			OR = {
 				has_province_modifier = arid
 				has_province_modifier = tropical
@@ -2165,7 +2156,7 @@ fort_18th = {
 			}
 		}
 		modifier = {
-			factor = 1.667
+			factor = 1.4
 			OR = {
 				has_terrain = forest
 				has_terrain = hills
@@ -2177,18 +2168,15 @@ fort_18th = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1.8
 			OR = {
 				has_terrain = desert_mountains
 				has_terrain = mountain
+				has_terrain = himalayas
 			}
 		}
 		modifier = {
-			factor = 2.5
-			has_terrain = himalayas
-		}
-		modifier = {
-			factor = 1.25
+			factor = 1.2
 			OR = {
 				has_province_modifier = arid
 				has_province_modifier = tropical
@@ -3020,7 +3008,6 @@ state_house = {
 	modifier = {
 		statewide_governing_cost = -0.25
 		min_local_autonomy = -10
-		min_local_autonomy = -5
 	}
 	#bonus_modifier = {
 	#	statewide_governing_cost = -0.2

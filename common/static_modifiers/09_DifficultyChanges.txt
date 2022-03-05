@@ -114,6 +114,8 @@ corruption = {
 	rajput_loyalty_modifier = 0.1
 	nomadic_aristocracy_loyalty_modifier = 0.1
 	sedentary_subdjects_loyalty_modifier = 0.1
+	#mamluks_loyalty_modifier = 0.1
+	#janissaries_loyalty_modifier = 0.1
 
 	monthly_heir_claim_increase = 0.025
 }
@@ -206,6 +208,9 @@ legitimacy = {
 	max_absolutism = 20
 	nobles_loyalty_modifier = 0.1
 	nomadic_aristocracy_loyalty_modifier = 0.1
+	mamluks_loyalty_modifier = 0.1
+	janissaries_loyalty_modifier = 0.1
+	ghilman_loyalty_modifier = 0.1
 }
 
 mercantilism = {
@@ -245,6 +250,9 @@ prestige = {
 	rajput_loyalty_modifier = 0.05
 	nomadic_aristocracy_loyalty_modifier = 0.05
 	sedentary_subdjects_loyalty_modifier = 0.05
+	mamluks_loyalty_modifier = 0.05
+	janissaries_loyalty_modifier = 0.05
+	ghilman_loyalty_modifier = 0.05
 }
 
 ########################################
@@ -331,6 +339,9 @@ army_tradition = {
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
 	nomadic_aristocracy_loyalty_modifier = 0.05
+	mamluks_loyalty_modifier = 0.05
+	janissaries_loyalty_modifier = 0.05
+	ghilman_loyalty_modifier = 0.05
 }
 
 

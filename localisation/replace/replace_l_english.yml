@@ -15,6 +15,11 @@
  #TRS:0 "Samarkand"
  #TRS_ADJ:0 "Samarkand"
  KOR:1 "Joseon"
+ #PER:0 "Iran"
+ #PER_ADJ:0 "Iranian"
+ #PER_ideas:0 "Iranian Ideas"
+ #PER_ideas_start:0 "Iranian Traditions"
+ #PER_ideas_bonus:0 "Iranian Ambition"
 
  #Policies
  superior_fortification_act:0 "Field Fortifications"

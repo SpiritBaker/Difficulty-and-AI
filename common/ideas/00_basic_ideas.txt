@@ -671,6 +671,7 @@ defensive_ideas = {
 
 	bonus = {
 		hostile_attrition = 1
+		leader_land_manuever = 1
 	}
 
 	battlefield_commisions = {
@@ -682,7 +683,6 @@ defensive_ideas = {
 	}
 	improved_manuever = {
 		shock_damage_received = -0.1
-		leader_land_manuever = 1
 	}
 	regimental_system = {
 		land_maintenance_modifier = -0.1
@@ -1163,23 +1163,25 @@ maritime_ideas = {
 
 	bonus = {
 		sea_repair = yes
+		merchants = 1
 	}
 
 	merchant_traditions = {
-		naval_tradition_from_trade = 1.0
+		naval_tradition_from_trade = 0.5
+		merchants = 1
 	}
 	merchant_marine = {
-		global_sailors_modifier = 0.5
+		global_sailors_modifier = 0.33
 	}
 	sheltered_ports = {
 		global_ship_repair = 0.1
 		naval_maintenance_modifier = -0.1
 	}
 	grand_navy = {
-		naval_forcelimit_modifier = 0.5
+		naval_forcelimit_modifier = 0.25
 	}
 	ships_penny = {
-		light_ship_power = 0.2
+		light_ship_power = 0.15
 		global_ship_cost = -0.1
 	}
 	sea_hawks = {
@@ -1552,7 +1554,7 @@ administrative_ideas = {
 	}
 	centralized_administration = { #organised recruitment benefits_for_mercenaries
 		max_absolutism = 5
-		reinforce_cost_modifier = -0.10
+		yearly_absolutism = 0.5
 	}
 	administrative_efficiency_idea = {
 		#advisor_pool = 1
@@ -1717,7 +1719,7 @@ influence_ideas = {
 	
 	additional_loyalist_recruitment = {
 		reduced_liberty_desire = 15
-		global_manpower_modifier = 0.15
+		mercenary_cost = -0.15
 	}
 	
 	integrated_elites = {

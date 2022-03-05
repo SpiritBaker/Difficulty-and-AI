@@ -1,0 +1,320 @@
+estate_ghilman_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.25
+			num_of_states = 25
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 35
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 20 }
+				estate_influence = {
+					estate = estate_ghilman
+					influence = 80
+				}
+			}
+			NOT = { has_estate_privilege = estate_ghilman_land_rights }
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_territories = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_ghilman_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_ghilman_land_rights }
+		}
+	}
+}
+
+estate_ghilman_royal_guard = {
+	icon = privilege_military_power
+	land_share = 5
+	max_absolutism = -5
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = estate_ghilman_royal_guard_tooltip
+	}
+	penalties = {
+		stability_cost_modifier = 0.1
+	}
+	benefits = {
+		merc_maintenance_modifier = -0.1 
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_ghilman_autonomy = {
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+		#mercenary_manpower = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_ghilman_promote_leadership = {
+	icon = privilege_promote_purbias
+	max_absolutism = -5
+	influence = 0.1
+	can_select = {
+		army_tradition = 30
+	}
+	on_granted = {
+		add_army_tradition = -15
+	}
+	penalties = {
+	}
+	benefits = {
+		army_tradition_decay = -0.005
+		leader_land_shock = 1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_ghilman_ghilman_royal_guard = {
+	icon = privilege_military_power
+	land_share = 5
+	max_absolutism = -5
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		#tag = PER
+	}
+	can_select = {
+		#tag = PER
+	}
+	on_granted = {
+		custom_tooltip = estate_ghilman_ghilman_royal_guard_tooltip
+	}
+	penalties = {
+		stability_cost_modifier = 0.1
+	}
+	benefits = {
+		merc_maintenance_modifier = -0.1 
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_ghilman_recruit_from_tribes = {
+	icon = privilege_raise_host
+	#land_share = 5
+	#max_absolutism = -5
+	loyalty = -0.1
+	influence = 0.05
+	is_valid = {
+		#tag = PER
+	}
+	can_select = {
+		#tag = PER
+	}
+	on_granted = {
+		if = {
+			limit = {
+				land_forcelimit = 200
+			}
+			add_legitimacy = -10
+			capital_scope = {
+				add_unit_construction = {
+					type = cavalry
+					amount = 20
+					speed = 0.1
+					cost = 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				land_forcelimit = 100
+				NOT = { land_forcelimit = 200 }
+			}
+			add_legitimacy  = -8
+			capital_scope = {
+				add_unit_construction = {
+					type = cavalry
+					amount = 12
+					speed = 0.2
+					cost = 0.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				land_forcelimit = 50
+				NOT = { land_forcelimit = 100 }
+			}
+			add_legitimacy  = -6
+			capital_scope = {
+				add_unit_construction = {
+					type = cavalry
+					amount = 8
+					speed = 0.5
+					cost = 0.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { land_forcelimit = 50 }
+			}
+			add_legitimacy  = -5
+			capital_scope = {
+				add_unit_construction = {
+					type = cavalry
+					amount = 4
+					speed = 1
+					cost = 0.5
+				}
+			}
+		}
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_ghilman_recruit_from_tribes
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_in_deficit = yes
+		}
+		modifier = {
+			factor = 0.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { army_size_percentage = 0.5 }
+		}
+		modifier = {
+			factor = 0
+			army_size_percentage = 0.90
+		}
+	}
+}
+
+estate_ghilman_caucasus_recruits = {
+	icon = privilege_military_power
+	land_share = 10
+	max_absolutism = -5
+	influence = 0.05
+	#loyalty = 0.05
+	is_valid = {
+		religion_group = muslim
+	}
+	can_select = {
+		any_owned_province = {
+			region = caucasia_region
+			NOT = { religion_group = ROOT }
+		}
+	}
+	on_granted = {
+		add_country_modifier = {
+			name = estate_ghilman_caucasus_recruits_mod
+			duration = -1
+		}
+	}
+	penalties = {
+		dhimmi_loyalty_modifier = -0.05
+	}
+	benefits = {
+	}
+	on_invalid = {
+		remove_country_modifier = estate_ghilman_caucasus_recruits_mod
+	}
+	on_revoked = {
+		remove_country_modifier = estate_ghilman_caucasus_recruits_mod
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}

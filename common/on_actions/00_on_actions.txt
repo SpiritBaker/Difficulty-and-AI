@@ -4212,6 +4212,41 @@ on_province_owner_change = {
 	if = {
 		limit = {
 			OR = {
+				area = aleppo_area
+				area = syria_area
+			}
+			has_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+			owner = {
+				NOT = {
+					has_estate_privilege = estate_mamluks_entrenched_syrian_governors
+				}
+			}
+		}
+		remove_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+	}
+
+	if = {
+		limit = {
+			OR = {
+				area = aleppo_area
+				area = syria_area
+			}
+			NOT = {
+				has_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+			}
+			owner = {
+				has_estate_privilege = estate_mamluks_entrenched_syrian_governors
+			}
+		}
+		add_province_modifier = {
+			name = estate_mamluks_entrenched_syrian_governors_mod
+			duration = -1
+		}
+	}
+
+	if = {
+		limit = {
+			OR = {
 				has_province_modifier = wine_bonus_prod
 				has_province_modifier = grain_bonus_prod
 			}

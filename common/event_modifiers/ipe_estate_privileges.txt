@@ -4,9 +4,17 @@ estate_mamluks_mamluk_rule_in_egypt_mod = {
 }
 
 estate_mamluks_entrenched_syrian_governors_mod = {
-	min_local_autonomy = 25
+	min_local_autonomy = 15
 }
 
 estate_janissaries_janissary_primacy_mod = {
 	is_janissary_modifier = yes
+	infantry_power = 0.1
+	land_maintenance_modifier = 0.20
+}
+
+estate_ghilman_caucasus_recruits_mod = {
+	is_janissary_modifier = yes
+	discipline = 0.05
+	land_maintenance_modifier = 0.20
 }

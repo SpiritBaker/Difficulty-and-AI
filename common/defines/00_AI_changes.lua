@@ -12,7 +12,8 @@ NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.10
 NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0.10
 --NDefines.NMilitary.ARMY_ATTRITION_AT_COAST = 1					-- How many percent attrition units take while loaded onto ships along the coast
 NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 5					-- How many percent attrition units take while loaded onto ships traveling open sea
-NDefines.NMilitary.MERCENARY_COMPANY_MAX_REGIMENTS = 40	-- Maximum regiments
+--NDefines.NMilitary.MERCENARY_COMPANY_MAX_REGIMENTS = 50	-- Maximum regiments
+NDefines.NMilitary.CREATE_JANISSARIES_MIL_COST = 5
 
 NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in percent for leader to gain a trait after combat (modified by tradition gained).
 NDefines.NMilitary.SUPPLY_DEPOT_DURATION_MONTHS = 120		-- Time until supply depot is removed.
