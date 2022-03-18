@@ -2692,7 +2692,6 @@ ramparts = {
 			has_building = fort_16th
 			has_building = fort_17th
 			has_building = fort_18th
-			fort_level = 1
 		}
 	}
 	
@@ -2702,7 +2701,6 @@ ramparts = {
 			has_building = fort_16th
 			has_building = fort_17th
 			has_building = fort_18th
-			fort_level = 1
 		}
 	}	
 

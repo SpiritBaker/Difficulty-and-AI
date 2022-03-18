@@ -128,6 +128,13 @@ interaction = {
 		}
 		modifier = {
 			factor = 0.6
+			OR = {
+				NOT = { num_of_cities = 5 }
+				NOT = { army_size = 6 }
+			}
+		}
+		modifier = {
+			factor = 0.6
 			NOT = { crown_land_share = 30 }
 			has_country_flag = recent_land_seizure
 			NOT = {
@@ -367,8 +374,10 @@ interaction = {
 			#	limit = { is_emperor = yes }
 			#	NOT = { army_size = 50 }
 			#}
-			NOT = { num_of_cities = 5 }
-			NOT = { army_size = 15 }
+			OR = {
+				NOT = { num_of_cities = 5 }
+				NOT = { army_size = 10 }
+			}
 			NOT = { #sorry, scripted triggers glitched out
 				OR = {
 					has_disaster = estate_brahmins_disaster

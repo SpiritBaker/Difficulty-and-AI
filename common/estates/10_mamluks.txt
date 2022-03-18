@@ -21,7 +21,7 @@ estate_mamluks = {
 	}
 	
 	country_modifier_happy = {
-		army_tradition = 0.25
+		cavalry_power = 0.15
 		cavalry_cost = -0.2
 		state_maintenance_modifier = -0.25
 	}
