@@ -51,7 +51,7 @@ country_event = {
 		name = "dif_ai.EVTOPTA2"
 		set_ai_personality = {
 			personality = ai_balanced
-			#locked = yes
+			locked = no
 		}
 	}
 }
@@ -114,19 +114,61 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = { # Autonomy decreased
 	id = dif_ai.5
 	title = "dif_ai.EVTNAME5"
 	desc = "dif_ai.EVTDESC5"
 	picture = LAND_MILITARY_eventPicture
-	is_triggered_only = yes
-	#fire_only_once = yes
-	#hidden = yes
-
-	immediate = {
+	
+	
+	trigger = {
+		ai = yes
+		#is_free_or_tributary_trigger = yes
+		is_at_war = no
+		is_bankrupt = no
+		num_of_cities = 8
+		manpower_percentage = 0.2
+		army_size = 15
+		NOT = { overextension_percentage = 0.1 }
+		NOT = { num_of_rebel_armies = 1 }
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		any_owned_province = {
+			OR = {
+				development = 10
+				trade_goods = gold
+			}
+			controlled_by = ROOT
+			is_island = no
+			is_state_core = ROOT
+			local_autonomy_above_min = 25
+			NOT = { 
+				has_province_modifier = autonomy_decreased
+			}
+		}
 	}
 
-	
+	immediate = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					development = 8
+					trade_goods = gold
+				}
+				controlled_by = ROOT
+				is_island = no
+				is_state_core = ROOT
+				local_autonomy_above_min = 25
+				NOT = { 
+					has_province_modifier = autonomy_decreased
+				}
+			}
+			add_province_modifier = {
+				name = autonomy_decreased
+				duration = 10950
+			}
+			add_local_autonomy = -25
+		}
+	}	
 	option = {
 	}
 }
