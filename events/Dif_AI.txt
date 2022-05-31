@@ -123,6 +123,16 @@ country_event = { # Autonomy decreased
 	
 	trigger = {
 		ai = yes
+		OR = {
+			average_autonomy = 50
+			personality = ai_militarist
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = cruel_personality
+			ruler_has_personality = conqueror_personality
+			ruler_has_personality = ruthless_ruler_personality
+			ruler_has_personality = ambitious_personality
+			ruler_has_personality = strict_personality
+		}
 		#is_free_or_tributary_trigger = yes
 		is_at_war = no
 		is_bankrupt = no
@@ -134,7 +144,7 @@ country_event = { # Autonomy decreased
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		any_owned_province = {
 			OR = {
-				development = 10
+				development = 8
 				trade_goods = gold
 			}
 			controlled_by = ROOT

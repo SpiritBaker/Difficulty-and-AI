@@ -1633,6 +1633,7 @@ conqueror_personality = {
 	gift_chance = -50
 	wants_land = yes
 	razing = yes
+	lower_autonomy = yes
 	chance = {
 		
 	}
@@ -1848,6 +1849,7 @@ strict_personality = {
 	wants_avoid_debase = yes
 	wants_avoid_loans = yes
 	wants_ecumenical_council = yes
+	lower_autonomy = yes
 	
 	discipline = 0.03
 
@@ -3251,6 +3253,7 @@ craven_personality = {
 		
 	}
 	enemy_strength_multiplier = 1.25
+	lower_autonomy = yes
 	
 	land_morale = -0.05
 	nation_designer_cost = -2
@@ -3465,6 +3468,7 @@ obsessive_perfectionist_personality = {
 	enemy_strength_multiplier = 0.9
 
 	wants_land = yes
+	lower_autonomy = yes
 	wants_avoid_ugly_borders = yes
 	underestimate_ae = yes
 	
@@ -3937,6 +3941,7 @@ ambitious_personality = {
 	wants_threaten_war = yes
 	wants_land = yes
 	wants_avoid_ugly_borders = yes
+	lower_autonomy = yes
 	#underestimate_ae = yes
 	#knowledge_sharing = yes
 	
