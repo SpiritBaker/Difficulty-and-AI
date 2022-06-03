@@ -613,13 +613,10 @@ horde_tribal_unity_reform = {
 	}
 	modifiers = {
 		horde_unity = 2
+		raze_power_gain = -1
 	}
 	ai = {
-		factor = 1
-		modifier = {
-			factor = 2
-			is_nomad = yes
-		}
+		factor = 5
 	}
 }
 
@@ -627,7 +624,6 @@ tribe_becomes_monarchy_reform = {
 	icon = "king_highlighted"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = steppe_horde }
 		NOT = { 
 			has_reform = stateless_society
 		}
@@ -947,8 +943,12 @@ tribe_becomes_horde_reform = {
 	icon = "horde_riding_highlighted"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { 
-			has_reform = stateless_society
+		NOT = {
+			OR = {
+				has_reform = stateless_society
+				has_reform = steppe_horde
+				has_reform = great_mongol_state_reform
+			}
 		}
 	}
 	effect = {
@@ -975,35 +975,35 @@ tribe_remain_tribal_reform = {
 	icon = "rioting_burning_2"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_reform = steppe_horde }
-				NOT = { has_reform = great_mongol_state_reform }
-			}
-			NOT = { has_dlc = "The Cossacks" }
-		}
 	}
 	modifiers = {
+		max_absolutism = 5
 		legitimacy = 0.5
 		war_exhaustion = -0.02
+	}
+	ai = {
+		factor = 2.5
 	}
 }
 
 tribe_tribal_unity = {
-	icon = "fist_in_air"
+	icon = "strength_of_the_khalsa"
 	allow_normal_conversion = yes
 	potential = {
-		has_reform = tribal_federation
+		#has_reform = tribal_federation
 		has_dlc = "Cradle of Civilization"
 	}
 	modifiers = {
+		state_maintenance_modifier = -0.25
 		yearly_tribal_allegiance = 1
 		church_loyalty_modifier = 0.05
 		nobles_loyalty_modifier = 0.05
 		dhimmi_loyalty_modifier = 0.05
 		burghers_loyalty_modifier = 0.05
+		nomadic_aristocracy_loyalty_modifier = 0.05
+		nomadic_tribes_loyalty_modifier = 0.05
 	}
 	ai = {
-		factor = 2
+		factor = 2.5
 	}
 }

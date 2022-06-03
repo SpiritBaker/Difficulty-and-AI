@@ -4,7 +4,7 @@ estate_nomadic_aristocracy_primacy = {
 	max_absolutism = -5
 	loyalty = -0.05
 	can_select = {
-		is_nomad = no
+		has_reform = horde_tribal_unity_reform
 		custom_trigger_tooltip = {
 			tooltip = no_other_mil_privilege
 			NOT = { has_estate_privilege = estate_rajput_military }
@@ -154,7 +154,7 @@ sedentary_subdjects_land_of_commerce = {
 	max_absolutism = -5
 	loyalty = -0.05
 	can_select = {
-		is_nomad = no
+		has_reform = horde_tribal_unity_reform
 	}
 	on_granted = {
 	}

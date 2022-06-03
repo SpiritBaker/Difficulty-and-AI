@@ -487,10 +487,18 @@ tribal = {
 				nomad_reform_dif
 			}
 		}
+		tribal_centralization = {
+			reforms = {
+				#horde_barbaric_despoilers_reform
+				horde_tribal_unity_reform
+				centralize_reform
+				decentralize_reform
+			}
+		}
 		tribal_reformation = {
 			reforms = {
-				horde_barbaric_despoilers_reform
-				horde_tribal_unity_reform
+				#horde_barbaric_despoilers_reform
+				#horde_tribal_unity_reform
 				tribe_becomes_monarchy_reform
 				tribe_becomes_republic_reform
 				tribe_becomes_theocracy_reform
@@ -499,7 +507,7 @@ tribal = {
 				tribe_tribal_unity
 				
 				#Dif&AI
-				tribe_becomes_khanate_monarchy_reform 
+				#tribe_becomes_khanate_monarchy_reform 
 			}
 		}
 	}

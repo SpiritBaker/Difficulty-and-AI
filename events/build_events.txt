@@ -720,7 +720,7 @@ country_event = {
 		NOT = { num_of_loans = 1 }
 		treasury = 2000
 		is_in_deficit = no
-		adm_tech = 20
+		adm_tech = 16
 		OR = {
 			is_great_power = yes
 			has_idea_group = quantity_ideas
@@ -746,12 +746,9 @@ country_event = {
 					trade_goods = livestock
 				}
 			}
-			save_event_target_as = delete_farm_estate
-		}	
-		event_target:delete_farm_estate = {
 			remove_building = farm_estate
 			log = "[This.GetName] delete farm estate"
-		}
+		}	
 	}
 	option = {
 	}

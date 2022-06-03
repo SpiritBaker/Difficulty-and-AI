@@ -80,3 +80,7 @@
 #Naval doctrines
  portuguese_marines:0 "Marines"
  portuguese_marines_desc:0 "To establish a truly global empire we must be skilled at launching assaults on enemy forts from the sea."
+
+ #Gov reforms
+ horde_tribal_unity_reform:0 "Unified Horde Identity"
+ horde_tribal_unity_reform_desc:0 "We must put aside old tribal allegiances in the name of the Horde. We are one people under one Khan.\n§MUnlocks additional Estate Privileges§!"

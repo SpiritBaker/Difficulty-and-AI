@@ -47,7 +47,11 @@ aristocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.4
+		factor = 7.5
+		modifier = {
+			factor = 2
+			mil = 4
+		}
 		modifier = {
 			factor = 0.5
 			is_subject = yes
@@ -105,23 +109,12 @@ aristocracy_ideas = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			cav_nation_trigger = no
+		}
+		modifier = {
 			factor = 2
-			OR = {
-				tag = POL
-				tag = PLC
-				tag = HUN
-				tag = AKK
-				tag = QAR
-				tag = LIT
-				tag = MAM
-				tag = TUR
-				tag = MUG
-				tag = PER
-				#tag = RUS
-				#tag = MOS
-				tag = TRS
-				tag = BUK
-			}
+			cav_nation_trigger = yes
 		}
 		modifier = {
 			factor = 6
@@ -174,7 +167,7 @@ plutocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.8
+		factor = 7.5
 	}
 }
 
@@ -216,6 +209,10 @@ horde_gov_ideas = {
 	
 	ai_will_do = {
 		factor = 25
+		modifier = {
+			factor = 1.5
+			mil = 4
+		}
 	}
 }
 
@@ -257,6 +254,10 @@ theocracy_gov_ideas = {
 	}
 	ai_will_do = {
 		factor = 20
+		modifier = {
+			factor = 1.5
+			mil = 4
+		}
 	}
 }
 
@@ -296,6 +297,10 @@ indigenous_ideas = {
 
 	ai_will_do = {
 		factor = 20
+		modifier = {
+			factor = 1.5
+			mil = 4
+		}
 	}
 }
 
@@ -625,7 +630,11 @@ offensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 10
+		modifier = {
+			factor = 2
+			mil = 4
+		}
 		modifier = {
 			factor = 2
 			adm_tech = 4
@@ -699,7 +708,11 @@ defensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 10
+		modifier = {
+			factor = 2
+			mil = 4
+		}
 		modifier = {
 			factor = 2
 			adm_tech = 4
@@ -1296,7 +1309,11 @@ quality_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 10
+		modifier = {
+			factor = 2
+			mil = 4
+		}
 		modifier = {
 			factor = 2
 			adm_tech = 4
@@ -1378,7 +1395,11 @@ quantity_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 10
+		modifier = {
+			factor = 2
+			mil = 4
+		}
 		modifier = {
 			factor = 2
 			adm_tech = 4
@@ -1822,7 +1843,7 @@ naval_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.6
+		factor = 6
 		modifier = {
 			factor = 0
 			is_tribal = yes
