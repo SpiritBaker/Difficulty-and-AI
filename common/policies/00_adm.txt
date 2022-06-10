@@ -753,7 +753,7 @@ enlightened_aristocracy = {
 	}	
 	
 	production_efficiency = 0.1
-	religious_unity = 0.2
+	core_creation = -0.05
 	
 	ai_will_do = {
 		factor = 1

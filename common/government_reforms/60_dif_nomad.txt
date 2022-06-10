@@ -267,8 +267,8 @@ united_shogunate = {
 
 	modifiers = {
 		diplomatic_upkeep = -1
-		#land_morale = 0.1
-		global_autonomy = -0.025
+		land_forcelimit_modifier = 0.2
+		#global_autonomy = -0.025
 		monarch_military_power = 1
 		max_absolutism = 10
 	}

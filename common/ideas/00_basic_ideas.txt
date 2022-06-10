@@ -47,10 +47,15 @@ aristocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 7.5
+		factor = 10
 		modifier = {
 			factor = 2
 			mil = 4
+		}
+		modifier = {
+			factor = 1.5
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
 		}
 		modifier = {
 			factor = 0.5
@@ -167,7 +172,16 @@ plutocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 7.5
+		factor = 25
+		modifier = {
+			factor = 1.5
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			mil = 4
+		}
 	}
 }
 
@@ -208,10 +222,15 @@ horde_gov_ideas = {
 	}
 	
 	ai_will_do = {
-		factor = 25
+		factor = 30
 		modifier = {
 			factor = 1.5
 			mil = 4
+		}
+		modifier = {
+			factor = 1.5
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
 		}
 	}
 }
@@ -253,10 +272,15 @@ theocracy_gov_ideas = {
 		manpower_in_true_faith_provinces  = 0.2
 	}
 	ai_will_do = {
-		factor = 20
+		factor = 25
 		modifier = {
 			factor = 1.5
 			mil = 4
+		}
+		modifier = {
+			factor = 1.5
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
 		}
 	}
 }
@@ -296,10 +320,15 @@ indigenous_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 20
+		factor = 25
 		modifier = {
 			factor = 1.5
 			mil = 4
+		}
+		modifier = {
+			factor = 1.5
+			adm_tech = 4
+			NOT = { adm_tech = 5 }
 		}
 	}
 }
@@ -636,7 +665,7 @@ offensive_ideas = {
 			mil = 4
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			adm_tech = 4
 			NOT = { adm_tech = 5 }
 		}
@@ -714,7 +743,7 @@ defensive_ideas = {
 			mil = 4
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			adm_tech = 4
 			NOT = { adm_tech = 5 }
 		}
@@ -844,7 +873,7 @@ trade_ideas = {
 			NOT = { adm_tech = 7 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.3
 			NOT = { adm_tech = 10 }
 		}
 		modifier = {
@@ -1315,11 +1344,6 @@ quality_ideas = {
 			mil = 4
 		}
 		modifier = {
-			factor = 2
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
-		}
-		modifier = {
 			factor = 1.5
 			OR = {
 				religion = anglican
@@ -1399,11 +1423,6 @@ quantity_ideas = {
 		modifier = {
 			factor = 2
 			mil = 4
-		}
-		modifier = {
-			factor = 2
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
 		}
 		modifier = {
 			factor = 1.2

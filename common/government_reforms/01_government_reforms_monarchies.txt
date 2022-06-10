@@ -235,6 +235,7 @@ shogunate = {
 
 	modifiers = {
 		diplomats = 1
+		land_forcelimit_modifier = 0.1
 		envoy_travel_time = -0.25
 		max_absolutism = 5
 	}

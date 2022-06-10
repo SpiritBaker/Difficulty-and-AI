@@ -53,7 +53,7 @@ NDefines.NAI.BIGSHIP_FRACTION = 0.4
 
 --Budget
 NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.25	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
-NDefines.NAI.ARMY_BUDGET_FRACTION = 0.80
+NDefines.NAI.ARMY_BUDGET_FRACTION = 0.9
 NDefines.NAI.NAVY_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on navy maintenance (based off wartime costs)
 --NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
