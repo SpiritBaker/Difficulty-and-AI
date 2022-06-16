@@ -149,7 +149,10 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_global_flag = dev_click_disabled_flag }
+		OR = {
+			ai = no
+			NOT = { has_global_flag = dev_click_disabled_flag }
+		}
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		
@@ -247,7 +250,10 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_global_flag = dev_click_disabled_flag }
+		OR = {
+			ai = no
+			NOT = { has_global_flag = dev_click_disabled_flag }
+		}
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		
@@ -335,7 +341,10 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_global_flag = dev_click_disabled_flag }
+		OR = {
+			ai = no
+			NOT = { has_global_flag = dev_click_disabled_flag }
+		}
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		

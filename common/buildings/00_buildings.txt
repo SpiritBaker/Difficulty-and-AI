@@ -512,12 +512,15 @@ fort_15th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			OR = {
-				owner = { government = tribal }
 				owner = { government = native }
 				FROM = { NOT = { num_of_cities = 2 } }
 			}
+		}
+		modifier = {
+			factor = 0.2
+			owner = { government = tribal }
 		}
 		modifier = {
 			factor = 0
@@ -900,12 +903,15 @@ fort_16th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			OR = {
-				owner = { government = tribal }
 				owner = { government = native }
 				FROM = { NOT = { num_of_cities = 2 } }
 			}
+		}
+		modifier = {
+			factor = 0.2
+			owner = { government = tribal }
 		}
 		modifier = {
 			factor = 0
@@ -1569,12 +1575,15 @@ fort_17th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			OR = {
-				owner = { government = tribal }
 				owner = { government = native }
 				FROM = { NOT = { num_of_cities = 2 } }
 			}
+		}
+		modifier = {
+			factor = 0.2
+			owner = { government = tribal }
 		}
 		modifier = {
 			factor = 0
@@ -2103,12 +2112,15 @@ fort_18th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0
 			OR = {
-				owner = { government = tribal }
 				owner = { government = native }
 				FROM = { NOT = { num_of_cities = 2 } }
 			}
+		}
+		modifier = {
+			factor = 0.2
+			owner = { government = tribal }
 		}
 		modifier = {
 			factor = 0

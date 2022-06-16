@@ -116,3 +116,67 @@ defined_text = {
 		localisation_key = zeroLocKey
 	}
 }
+defined_text = {
+	name = ExpansionPlaner
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = expansion_planer_disabled_flag
+        }
+        localisation_key = expDisabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = expansion_planer_disabled_flag }
+		}
+		localisation_key = expEnabled
+	}
+}
+defined_text = {
+	name = DevClickLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = dev_click_disabled_flag
+        }
+        localisation_key = devclDisabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = dev_click_disabled_flag }
+		}
+		localisation_key = devclEnabled
+	}
+}
+defined_text = {
+	name = BuildEventLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = build_event_disabled_flag
+        }
+        localisation_key = bevDisabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = build_event_disabled_flag }
+		}
+		localisation_key = bevEnabled
+	}
+}
+defined_text = {
+	name = ScalingDifficultyLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = scaling_difficulty_flag
+        }
+        localisation_key = scadifDisabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = scaling_difficulty_flag }
+		}
+		localisation_key = scadifEnabled
+	}
+}

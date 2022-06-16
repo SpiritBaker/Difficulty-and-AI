@@ -9,29 +9,94 @@ country_event = {
 	#hidden = yes
 
 	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = REB }
+				}
+				export_to_variable = { which = devTotalvar value = total_development }
+			}
+			REB = {
+				set_variable = { which = devsumClicks value = 0 }
+				set_variable = { which = autoDev value = 0 }
+				set_variable = { which = devTotalvar value = 0 }
+				every_country = {
+					limit = {
+						NOT = { tag = REB }
+					}
+					PREV = {
+						change_variable = { which = devsumClicks which = PREV }
+						change_variable = { which = autoDev which = PREV }
+						change_variable = { which = devTotalvar which = PREV }
+					}
+				}
+			}
+		} 
 	}
 
-	option = { #Enable
-	name = "opt.dif_settings.enable"
+	option = { #Scaling Difficulty
+	name = "opt.dif_settings.Scaling"
 		if = {
 			limit = {
 				NOT = { has_global_flag = scaling_difficulty_flag }
 			}
 			set_global_flag = scaling_difficulty_flag
-			country_event = { id = dif_settings.2 }
 		}
+		else_if = {
+			limit = {
+				has_global_flag = scaling_difficulty_flag
+			}
+			clr_global_flag = scaling_difficulty_flag
+		}
+		country_event = { id = dif_settings.2 }
 	}
 	option = { #expansion planer
 	name = "opt.dif_settings.expansion"
-		country_event = { id = dif_settings.6 }
+		if = {
+			limit = {
+				NOT = { has_global_flag = expansion_planer_disabled_flag }
+			}
+			set_global_flag = expansion_planer_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = expansion_planer_disabled_flag
+			}
+			clr_global_flag = expansion_planer_disabled_flag
+		}
+		country_event = { id = dif_settings.2 }
 	}
 	option = { #dev-click
 	name = "opt.dif_settings.devclick"
-		country_event = { id = dif_settings.3 }
+	    if = {
+			limit = {
+				NOT = { has_global_flag = dev_click_disabled_flag }
+			}
+			set_global_flag = dev_click_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = dev_click_disabled_flag
+			}
+			clr_global_flag = dev_click_disabled_flag
+		}
+		country_event = { id = dif_settings.2 }
 	}
 	option = { #build event
 	name = "opt.dif_settings.build"
-		country_event = { id = dif_settings.5 }
+		if = {
+			limit = {
+				NOT = { has_global_flag = build_event_disabled_flag }
+			}
+			set_global_flag = build_event_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = build_event_disabled_flag
+			}
+			clr_global_flag = build_event_disabled_flag
+		}
+		country_event = { id = dif_settings.2 }
 	}
 	option = { #Lock changes
 	name = "opt.dif_settings.lock"
@@ -54,27 +119,69 @@ country_event = {
 	immediate = {
 	}
 
-	option = { #Disable
-	name = "opt.dif_settings.disable"
+	option = { #Scaling Difficulty
+	name = "opt.dif_settings.Scaling"
 		if = {
+			limit = {
+				NOT = { has_global_flag = scaling_difficulty_flag }
+			}
+			set_global_flag = scaling_difficulty_flag
+		}
+		else_if = {
 			limit = {
 				has_global_flag = scaling_difficulty_flag
 			}
 			clr_global_flag = scaling_difficulty_flag
-			country_event = { id = dif_settings.1 }
 		}
+		country_event = { id = dif_settings.1 }
 	}
 	option = { #expansion planer
 	name = "opt.dif_settings.expansion"
-		country_event = { id = dif_settings.6 }
+		if = {
+			limit = {
+				NOT = { has_global_flag = expansion_planer_disabled_flag }
+			}
+			set_global_flag = expansion_planer_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = expansion_planer_disabled_flag
+			}
+			clr_global_flag = expansion_planer_disabled_flag
+		}
+		country_event = { id = dif_settings.1 }
 	}
 	option = { #dev-click
 	name = "opt.dif_settings.devclick"
-		country_event = { id = dif_settings.3 }
+	    if = {
+			limit = {
+				NOT = { has_global_flag = dev_click_disabled_flag }
+			}
+			set_global_flag = dev_click_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = dev_click_disabled_flag
+			}
+			clr_global_flag = dev_click_disabled_flag
+		}
+		country_event = { id = dif_settings.1 }
 	}
 	option = { #build event
 	name = "opt.dif_settings.build"
-		country_event = { id = dif_settings.5 }
+		if = {
+			limit = {
+				NOT = { has_global_flag = build_event_disabled_flag }
+			}
+			set_global_flag = build_event_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = build_event_disabled_flag
+			}
+			clr_global_flag = build_event_disabled_flag
+		}
+		country_event = { id = dif_settings.1 }
 	}
 	option = { #Lock changes
 	name = "opt.dif_settings.lock"
@@ -82,69 +189,6 @@ country_event = {
 	}
 	option = { #Exit
 	name = "opt.dif_settings.exit"
-	}
-}
-
-country_event = { 
-	id = dif_settings.3
-	title = "dif_settings.3.t"
-	desc = "dif_settings.3.d"
-	picture = WAR_OF_THE_ROSES_eventPicture
-	is_triggered_only = yes
-	#fire_only_once = yes
-	#hidden = yes
-
-	immediate = {
-	}
-
-	option = { #
-	name = "opt.dif_settings.enable.dev"
-		if = {
-			limit = {
-				has_global_flag = dev_click_disabled_flag
-			}
-			clr_global_flag = dev_click_disabled_flag
-		}
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
-		}
-	}
-	option = { #
-	name = "opt.dif_settings.disable.dev"
-		if = {
-			limit = {
-				NOT = { has_global_flag = dev_click_disabled_flag }
-			}
-			set_global_flag = dev_click_disabled_flag
-		}
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
-		}	
-	}
-
-	option = { #back
-	name = "opt.dif_settings.back"
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
-		}
 	}
 }
 
@@ -167,132 +211,6 @@ country_event = {
 				NOT = { has_global_flag = locked_settings_flag }
 			}
 			set_global_flag = locked_settings_flag
-		}
-	}
-
-	option = { #back
-	name = "opt.dif_settings.back"
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
-		}
-	}
-}
-
-country_event = { 
-	id = dif_settings.5
-	title = "dif_settings.5.t"
-	desc = "dif_settings.5.d"
-	picture = WAR_OF_THE_ROSES_eventPicture
-	is_triggered_only = yes
-	#fire_only_once = yes
-	#hidden = yes
-
-	immediate = {
-	}
-
-	option = { #
-	name = "opt.dif_settings.enable.build"
-		if = {
-			limit = {
-				has_global_flag = build_event_disabled_flag
-			}
-			clr_global_flag = build_event_disabled_flag
-		}
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
-		}
-	}
-	option = { #
-	name = "opt.dif_settings.disable.build"
-		if = {
-			limit = {
-				NOT = { has_global_flag = build_event_disabled_flag }
-			}
-			set_global_flag = build_event_disabled_flag
-		}	
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
-		}
-	}
-
-	option = { #back
-	name = "opt.dif_settings.back"
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
-		}
-	}
-}
-
-country_event = { 
-	id = dif_settings.6
-	title = "dif_settings.6.t"
-	desc = "dif_settings.6.d"
-	picture = WAR_OF_THE_ROSES_eventPicture
-	is_triggered_only = yes
-	#fire_only_once = yes
-	#hidden = yes
-
-	immediate = {
-	}
-
-	option = { #
-	name = "opt.dif_settings.enable.expansion"
-		if = {
-			limit = {
-				has_global_flag = expansion_planer_disabled_flag
-			}
-			clr_global_flag = expansion_planer_disabled_flag
-		}
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
-		}
-	}
-	option = { #
-	name = "opt.dif_settings.disable.expansion"
-		if = {
-			limit = {
-				NOT = { has_global_flag = expansion_planer_disabled_flag }
-			}
-			set_global_flag = expansion_planer_disabled_flag
-		}
-		if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			country_event = { id = dif_settings.2 }
-		}
-		else = {
-			country_event = { id = dif_settings.1 }
 		}
 	}
 
