@@ -10,9 +10,7 @@ scaling_difficulty_AoDis = {
 		current_age = age_of_discovery
 		has_global_flag = scaling_difficulty_flag
 	}
-	country_military_power = 1
-	country_diplomatic_power = 1
-	country_admin_power = 1
+	free_mil_policy = 1
 	advisor_cost = -0.1
 	war_taxes_cost_modifier = -1
 }
@@ -28,9 +26,7 @@ scaling_difficulty_AoRef = {
 		current_age = age_of_reformation
 		has_global_flag = scaling_difficulty_flag
 	}
-	country_military_power = 1
-	country_diplomatic_power = 1
-	country_admin_power = 1
+	free_mil_policy = 1
 	build_cost = -0.05
 	all_power_cost = -0.05
 	advisor_cost = -0.15
@@ -50,9 +46,7 @@ scaling_difficulty_AoAbs = {
 		current_age = age_of_absolutism
 		has_global_flag = scaling_difficulty_flag
 	}
-	country_military_power = 1
-	country_diplomatic_power = 1
-	country_admin_power = 1
+	free_mil_policy = 1
 	build_cost = -0.075
 	all_power_cost = -0.075
 	advisor_cost = -0.2
@@ -72,9 +66,7 @@ scaling_difficulty_AoRev = {
 		current_age = age_of_revolutions
 		has_global_flag = scaling_difficulty_flag
 	}
-	country_military_power = 1
-	country_diplomatic_power = 1
-	country_admin_power = 1
+	free_mil_policy = 2
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.25
