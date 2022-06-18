@@ -171,12 +171,13 @@ defined_text = {
         trigger = {
 			has_global_flag = scaling_difficulty_flag
         }
-        localisation_key = scadifDisabled
+        localisation_key = scadifEnabled
+		
 	}
 	text = {
 		trigger = {
 			NOT = { has_global_flag = scaling_difficulty_flag }
 		}
-		localisation_key = scadifEnabled
+		localisation_key = scadifDisabled
 	}
 }
