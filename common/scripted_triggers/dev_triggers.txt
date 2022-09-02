@@ -1,88 +1,327 @@
 power_tech = {
 	$power$_power = $value$
 	
-	REB = {
+	OR = {
+		$power$_tech = 32
+		
 		variable_arithmetic_trigger = {
 			export_to_variable = {
-				variable_name = power
+				which = power
 				value = trigger_value:$power$_power
-				who = PREV
 			}
 			export_to_variable = {
-				variable_name = powerCost
+				which = powerCost
 				value = modifier:all_power_cost
-				who = PREV
+			}
+			export_to_variable = {
+				which = $power$_flag
+				value = 1
 			}
 			change_variable = {
 				which = powerCost
 				value = 1
 			}
 			OR = {
-				PREV = { has_institution = feudalism }
+				has_institution = feudalism
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						which = feudalismNo
+						value = 0.5
 					}
 				}
 			}
 			OR = {
-				NOT = { is_institution_enabled = renaissance }
-				PREV = { has_institution = renaissance }
+				has_institution = renaissance
+				NOT = { $power$_tech = 4 }
+				AND = {
+					NOT = { $power$_tech = 5 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 6 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						which = renaissanceNo
+						value = 0.5
 					}
 				}
 			}
 			OR = {
-				NOT = { is_institution_enabled = new_world_i }
-				PREV = { has_institution = new_world_i }
+				has_institution = new_world_i
+				NOT = { $power$_tech = 8 }
+				AND = {
+					NOT = { $power$_tech = 9 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 10 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						which = newWorldINo
+						value = 0.5
 					}
 				}
 			}
 			OR = {
-				NOT = { is_institution_enabled = printing_press }
-				PREV = { has_institution = printing_press }
+				has_institution = printing_press
+				NOT = { $power$_tech = 12 }
+				AND = {
+					NOT = { $power$_tech = 13 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 14 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						which = printingPressNo
+						value = 0.5
 					}
 				}
 			}
 			OR = {
-				NOT = { is_institution_enabled = global_trade }
-				PREV = { has_institution = global_trade }
+				has_institution = global_trade
+				NOT = { $power$_tech = 16 }
+				AND = {
+					NOT = { $power$_tech = 17 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 18 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
+				AND = {
+					$power$_tech = 31
+					check_variable = {
+						which = dip_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						which = globalTradeNo
+						value = 0.5
 					}
 				}
 			}
 			OR = {
-				NOT = { is_institution_enabled = manufactories }
-				PREV = { has_institution = manufactories }
+				has_institution = manufactories
+				NOT = { $power$_tech = 20 }
+				AND = {
+					NOT = { $power$_tech = 21 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 22 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 31 }
+					$power$_tech = 30
+					check_variable = {
+						which = dip_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
+				AND = {
+					$power$_tech = 31
+					check_variable = {
+						which = mil_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						which = manufactoriesNo
+						value = 0.5
 					}
 				}
 			}
 			OR = {
-				NOT = { is_institution_enabled = enlightenment }
-				PREV = { has_institution = enlightenment }
+				has_institution = enlightenment
+				NOT = { $power$_tech = 23 }
+				AND = {
+					NOT = { $power$_tech = 24 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 25 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
+				AND = {
+					$power$_tech = 31
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							NOT = { $power$_tech = 29 }
+							$power$_tech = 28
+						}
+						AND = {
+							NOT = { $power$_tech = 31 }
+							$power$_tech = 30
+						}
+					}
+					check_variable = {
+						which = adm_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 30 }
+					$power$_tech = 29
+					check_variable = {
+						which = mil_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						which = enlightenmentNo
+						value = 0.5
+					}
+				}
+			}
+			OR = {
+				has_institution = industrialization
+				NOT = { $power$_tech = 27 }
+				AND = {
+					NOT = { $power$_tech = 28 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.25
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 29 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.5
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 30 }
+					$power$_tech = 29
+					check_variable = {
+						which = mil_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.5
+						}
+					}
+				}
+				variable_arithmetic_trigger = {
+					change_variable = {
+						which = powerCost
+						value = 1
 					}
 				}
 			}
@@ -97,3 +336,1163 @@ power_tech = {
 		}
 	}
 }
+
+dev_check = {
+	owned_by = ROOT
+	is_state_core = ROOT
+	controlled_by = ROOT
+	NOT = { has_siege = yes }
+	
+	OR = {
+		is_capital = yes
+		trade_goods = gold
+		
+		NOT = {
+			any_province = {
+				owned_by = ROOT
+				is_state_core = ROOT
+				controlled_by = ROOT
+				NOT = { has_siege = yes }
+				NOT = { province_id = PREV }
+				
+				if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0 } } } }
+					if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.64 } } } }
+						if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.96 } } } }
+							if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.98 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.99 } } } }
+									NOT = { has_local_modifier_value = { which = local_development_cost value = -1 } }
+								}
+								else = {
+									NOT = { has_local_modifier_value = { which = local_development_cost value = -0.99 } }
+								}
+							}
+							else = {
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.97 } } } }
+									NOT = { has_local_modifier_value = { which = local_development_cost value = -0.98 } }
+								}
+								else = {
+									NOT = { has_local_modifier_value = { which = local_development_cost value = -0.97 } }
+								}
+							}
+						}
+						else = {
+							if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.8 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.88 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.92 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.94 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.95 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.96 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.95 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.93 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.94 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.93 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.9 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.91 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.92 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.91 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.89 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.9 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.89 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.84 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.86 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.87 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.88 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.87 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.85 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.86 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.85 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.82 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.83 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.84 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.83 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.81 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.82 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.81 } }
+											}
+										}
+									}
+								}
+							}
+							else = {
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.72 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.76 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.78 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.79 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.8 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.79 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.77 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.78 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.77 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.74 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.75 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.76 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.75 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.73 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.74 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.73 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.68 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.7 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.71 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.72 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.71 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.69 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.7 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.69 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.66 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.67 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.68 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.67 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.65 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.66 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.65 } }
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					else = {
+						if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.32 } } } }
+							if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.48 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.56 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.6 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.62 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.63 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.64 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.63 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.61 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.62 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.61 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.58 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.59 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.6 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.59 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.57 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.58 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.57 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.52 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.54 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.55 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.56 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.55 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.53 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.54 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.53 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.5 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.51 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.52 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.51 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.49 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.5 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.49 } }
+											}
+										}
+									}
+								}
+							}
+							else = {
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.4 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.44 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.46 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.47 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.48 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.47 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.45 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.46 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.45 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.42 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.43 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.44 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.43 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.41 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.42 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.41 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.36 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.38 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.39 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.4 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.39 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.37 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.38 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.37 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.34 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.35 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.36 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.35 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.33 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.34 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.33 } }
+											}
+										}
+									}
+								}
+							}
+						}
+						else = {
+							if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.16 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.24 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.28 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.3 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.31 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.32 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.31 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.29 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.3 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.29 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.26 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.27 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.28 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.27 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.25 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.26 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.25 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.2 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.22 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.23 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.24 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.23 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.21 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.22 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.21 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.18 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.19 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.2 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.19 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.17 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.18 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.17 } }
+											}
+										}
+									}
+								}
+							}
+							else = {
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.08 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.12 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.14 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.15 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.16 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.15 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.13 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.14 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.13 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.1 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.11 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.12 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.11 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.09 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.1 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.09 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.04 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.06 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.07 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.08 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.07 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.05 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.06 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.05 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.02 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.03 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.04 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.03 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.01 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.02 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = -0.01 } }
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.64 } } } }
+						if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.32 } } } }
+							if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.16 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.08 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.04 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.02 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.01 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.01 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.03 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.02 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.03 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.06 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.05 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.04 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.05 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.07 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.06 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.07 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.12 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.1 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.09 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.08 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.09 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.11 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.1 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.11 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.14 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.13 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.12 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.13 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.15 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.14 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.15 } }
+											}
+										}
+									}
+								}
+							}
+							else = {
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.24 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.2 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.18 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.17 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.16 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.17 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.19 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.18 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.19 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.22 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.21 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.2 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.21 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.23 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.22 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.23 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.28 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.26 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.25 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.24 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.25 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.27 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.26 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.27 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.3 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.29 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.28 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.29 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.31 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.3 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.31 } }
+											}
+										}
+									}
+								}
+							}
+						}
+						else = {
+							if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.48 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.4 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.36 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.34 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.33 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.32 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.33 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.35 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.34 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.35 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.38 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.37 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.36 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.37 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.39 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.38 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.39 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.44 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.42 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.41 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.4 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.41 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.43 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.42 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.43 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.46 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.45 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.44 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.45 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.47 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.46 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.47 } }
+											}
+										}
+									}
+								}
+							}
+							else = {
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.56 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.52 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.5 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.49 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.48 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.49 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.51 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.5 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.51 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.54 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.53 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.52 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.53 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.55 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.54 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.55 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.6 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.58 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.57 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.56 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.57 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.59 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.58 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.59 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.62 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.61 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.6 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.61 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.63 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.62 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.63 } }
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					else = {
+						if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.96 } } } }
+							if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.8 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.72 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.68 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.66 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.65 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.64 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.65 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.67 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.66 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.67 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.7 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.69 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.68 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.69 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.71 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.7 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.71 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.76 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.74 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.73 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.72 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.73 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.75 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.74 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.75 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.78 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.77 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.76 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.77 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.79 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.78 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.79 } }
+											}
+										}
+									}
+								}
+							}
+							else = {
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.88 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.84 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.82 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.81 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.8 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.81 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.83 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.82 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.83 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.86 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.85 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.84 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.85 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.87 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.86 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.87 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.92 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.9 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.89 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.88 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.89 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.91 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.9 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.91 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.94 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.93 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.92 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.93 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.95 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.94 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.95 } }
+											}
+										}
+									}
+								}
+							}
+						}
+						else = {
+							if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.12 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.04 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.98 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.97 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.96 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.97 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.99 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.98 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 0.99 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.02 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.01 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.01 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.03 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.02 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.03 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.08 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.06 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.05 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.04 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.05 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.07 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.06 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.07 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.1 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.09 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.08 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.09 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.11 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.1 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.11 } }
+											}
+										}
+									}
+								}
+							}
+							else = {
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.2 } } } }
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.16 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.14 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.13 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.12 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.13 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.15 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.14 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.15 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.18 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.17 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.16 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.17 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.19 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.18 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.19 } }
+											}
+										}
+									}
+								}
+								else = {
+									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.24 } } } }
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.22 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.21 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.2 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.21 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.23 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.22 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.23 } }
+											}
+										}
+									}
+									else = {
+										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.26 } } } }
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.25 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.24 } }
+											}
+											else = {
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.25 } }
+											}
+										}
+										else = {
+											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 1.27 } } } }
+												NOT = { has_local_modifier_value = { which = local_development_cost value = 1.26 } }
+											}
+											else = {
+												always = yes
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
