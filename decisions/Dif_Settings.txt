@@ -4,8 +4,6 @@ country_decisions = {
 		
 		potential = {
 			has_global_flag = scaling_difficulty_flag	
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 		}
 
 		allow = {
@@ -34,8 +32,6 @@ country_decisions = {
 		
 		potential = {
 			NOT = { has_global_flag = scaling_difficulty_flag }
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 		}
 
 		allow = {
