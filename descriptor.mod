@@ -1,4 +1,4 @@
-version="2.2.2"
+version="2.2.3"
 tags={
 	"Balance"
 	"Gameplay"
@@ -12,4 +12,5 @@ tags={
 name="Difficulty & AI Dev(1.33)"
 picture="thumbnail.png"
 supported_version="1.33.*"
+path="mod/Difficulty-and-AI"
 remote_file_id="2453967654"

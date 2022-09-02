@@ -1,4 +1,4 @@
-version="2.2.2"
+version="2.2.3"
 tags={
 	"Balance"
 	"Gameplay"
@@ -9,7 +9,7 @@ tags={
 	"Missions and Decisions"
 	"National Ideas"
 }
-name="Difficulty & AI (1.33)"
+name="Difficulty & AI Dev(1.33)"
 
 picture="thumbnail.png"
 supported_version="1.33.*"
