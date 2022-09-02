@@ -4,12 +4,12 @@ country_decisions = {
 		
 		potential = {
 			has_country_flag = dev_click
-			
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 		}
 		allow = {
 			ai = no
+		}
+		provinces_to_highlight = {
+			dev_check = yes
 		}
 		
 		effect = {
@@ -25,12 +25,12 @@ country_decisions = {
 		
 		potential = {
 			NOT = { has_country_flag = dev_click }
-			
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 		}
 		allow = {
 			ai = no
+		}
+		provinces_to_highlight = {
+			dev_check = yes
 		}
 		
 		effect = {
@@ -44,8 +44,12 @@ country_decisions = {
 	spawn_click = {
 		major = yes
 		potential = {
-			#always = no
+			has_global_flag = ai_dev_click
 			ai = yes
+			OR = {
+				had_country_flag = { flag = institution_flag	days = 365 }
+				NOT = { has_country_flag = institution_flag }
+			}
 			is_lacking_institutions = yes
 			is_at_war = no
 			primitives = no
@@ -55,9 +59,8 @@ country_decisions = {
 			}
 			num_of_cities = 5
 			OR = {
+				NOT = { has_dlc = "Rights of Man" }
 				ruler_has_personality = free_thinker_personality
-				#ruler_has_personality = well_connected_personality
-				#ruler_has_personality = well_advised_personality
 				ruler_has_personality = scholar_personality
 				ruler_has_personality = entrepreneur_personality
 				ruler_has_personality = industrious_personality
@@ -101,6 +104,9 @@ country_decisions = {
 		}
 		effect = {
 			hidden_effect = {
+				set_country_flag = institution_flag
+				log = "[Root.GetName] trying to spawn institution"
+				
 				if = {
 					limit = {
 						NOT = { has_institution = feudalism }
