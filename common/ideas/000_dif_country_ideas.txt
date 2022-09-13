@@ -44,46 +44,6 @@ ZUN_ideas = {  #Zunghar
 	}
 }
 
-BUK_ideas = {  #Bukhara, from NIE
-	start = {
-		trade_steering = 0.15
-		cavalry_power = 0.20
-	}
-	
-	bonus = {
-		advisor_cost = -0.15
-	}
-	
-	trigger = {
-		tag = BUK
-	}
-	free = yes
-	
-	recovery_from_the_mongol_invasion = {
-		development_cost = -0.10
-	}
-	intellect_center_of_the_islamic_world = {
-		religious_unity = 0.15
-		technology_cost = -0.075
-	}
-	improve_public_education = {
-		global_institution_spread = 0.20
-	}
-	settling_from_the_steppe = {
-		free_adm_policy = 1
-	}
-	utilizing_fire_and_shock = {
-		shock_damage = 0.05
-		fire_damage = 0.05
-	}
-	persian_cannoneer_experience = {
-		artillery_power = 0.10
-	}
-	patronize_learning_and_arts = {
-		idea_cost = -0.10
-	}
-}
-
 NOG_ideas = {
 	start = {
 		cavalry_cost = -0.1

@@ -106,6 +106,10 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
@@ -296,7 +300,15 @@ country_decisions = {
 			set_country_flag = formed_timurids_flag
 		}
 		ai_will_do = {
-			factor = 400
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { exists = MUG }	#Mughals should appear instead first
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = PER }	#Same goes for Persia
+			}
 		}
 		ai_importance = 600
 	}

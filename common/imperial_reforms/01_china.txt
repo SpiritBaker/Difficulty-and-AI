@@ -17,8 +17,7 @@ seaban_decision = {
 reform_land_tax_decision = {
 	empire = celestial_empire
 	emperor = {
-		global_tax_modifier = 0.15
-		state_maintenance_modifier = -0.25
+		global_autonomy = -0.05
 	}
 	required_reform = seaban_decision
 }

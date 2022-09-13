@@ -231,7 +231,7 @@ modern_firearm_techniques = {
 		full_idea_group = quality_ideas
 	}
 	
-	infantry_power = 0.1
+	infantry_power = 0.15
 
 	ai_will_do = {
 		factor = 10		
@@ -766,8 +766,7 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_flanking = 0.25
-	cavalry_power = 0.10
+	cavalry_power = 0.15
 	
 	ai_will_do = {
 		factor = 10

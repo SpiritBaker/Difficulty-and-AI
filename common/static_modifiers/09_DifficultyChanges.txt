@@ -65,21 +65,13 @@ base_values = {
 	governing_capacity = 200
 	num_accepted_cultures = 2
 	monthly_splendor = 1
-	artillery_bonus_vs_fort = 5
+	artillery_levels_available_vs_fort = 5
 	cav_to_inf_ratio = 0.5
 	merc_maintenance_modifier = 0.5
 	monthly_heir_claim_increase = 0.208
 	tolerance_of_heretics_capacity = 3
 	tolerance_of_heathens_capacity = 3
 
-}
-
-
-is_great_power = {						#Only works with Rights of Man DLC enabled
-	prestige_decay = -0.01
-	embracement_cost = -0.1
-	max_absolutism = 5
-	free_leader_pool = 1
 }
 
 #gov_rank_2 = {
@@ -134,6 +126,8 @@ development = {
 	province_trade_power_value = 0.2
 	local_amount_of_banners = 0.05
 	local_amount_of_cawa = 0.125
+	local_amount_of_carolean = 0.1
+	local_amount_of_hussars = 0.01
 }
 
 #provincial_tax_income = {
@@ -315,9 +309,9 @@ emperor = {
 }
 
 # Caps at 1000
-horde_development = {
-	horde_unity = -2
-}
+#horde_development = {
+#	horde_unity = -2
+#}
 
 tribal_allegiance = {
 	nomadic_tribes_loyalty_modifier = 0.1
@@ -380,4 +374,16 @@ in_capital_state = {
 	local_institution_spread = 0.05
 	local_state_maintenance_modifier = -0.25
 	local_governing_cost = -0.25
+}
+
+banner_regiment = {
+	discipline = 0.05
+	land_maintenance_modifier = -0.25
+	#reinforce_speed = -0.5
+	regiment_manpower_usage = 0.15
+}
+
+marine_regiment = {
+    shock_damage_received = -0.1
+    regiment_disembark_speed = 2 #requires a new country modifier
 }

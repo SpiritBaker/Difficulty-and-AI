@@ -424,9 +424,13 @@ estate_cossacks_expand_into_x = {
 					any_neighbor_province = {
 						owned_by = root
 					}
-					area_for_scope_province = {
-						type = all
-						NOT = { owned_by = root }
+					NOT = {
+						area_for_scope_province = {
+							OR = {
+								is_empty = yes
+								owned_by = root
+							}
+						}
 					}
 				}
 				OR = {
@@ -981,6 +985,7 @@ estate_cossacks_go_privateering = {
 		OR = {
 			has_dlc = "Mare Nostrum"
 			has_dlc = "Golden Century"
+			has_dlc = "Lions of the North"
 		}
 		any_owned_province = {
 			has_port = yes
@@ -1035,6 +1040,7 @@ estate_cossacks_go_privateering_2 = {
 		OR = {
 			has_dlc = "Mare Nostrum"
 			has_dlc = "Golden Century"
+			has_dlc = "Lions of the North"
 		}
 		any_owned_province = {
 			has_port = yes

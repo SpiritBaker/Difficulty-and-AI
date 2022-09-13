@@ -85,8 +85,8 @@ country_decisions = {
 			is_at_war = no
 		}
 		effect = {
-			restore_country_name = yes
 			change_tag = JAP
+			restore_country_name_effect = yes
 			remove_government_reform = shogunate
 			#remove_government_reform = united_shogunate
 			#set_legacy_government = despotic_monarchy
@@ -144,8 +144,8 @@ country_decisions = {
 			is_at_war = no
 		}
 		effect = {
-			restore_country_name = yes
 			change_tag = JAP
+			restore_country_name_effect = yes
 			set_country_flag = formed_japan_flag
 			remove_non_electors_emperors_from_empire_effect = yes
 			remove_government_reform = daimyo
@@ -166,6 +166,7 @@ country_decisions = {
 			factor = 1
 		}
 	}
+
 	
 	# Sakoku
 	enforce_sakoku_law = {

@@ -113,7 +113,6 @@ technology = { #Renaissance Thought
 
 technology = { #Courthouse
 	# Tech 8
-
 	year = 1505
 	expects_institution = {
 		feudalism = 0.5
@@ -136,11 +135,18 @@ technology = { #The Scythe
 	allowed_idea_groups = 3
 	#The Scythe
 	production_efficiency 	=	0.02
+	
+
 }
 
 technology = { #Modern Theocracy
 	# Tech 10
 	year = 1531
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.3
+	}
 	governing_capacity = 100
 	theocratic_government = yes
 }
@@ -154,9 +160,9 @@ technology = { #Textile Manufactory
 		new_world_i = 0.5
 	}
 	
-
 	#Textile Manufactory
 	textile = yes  
+
 }
 
 technology = { #Early Modern Administration
@@ -167,6 +173,9 @@ technology = { #Early Modern Administration
 		renaissance = 0.5
 		new_world_i = 0.5
 	}
+	
+	administrative_monarchy	= yes 
+	administrative_republic	= yes
 	allowed_idea_groups = 4
 	#governing_capacity = 50
 	state_house = yes
@@ -182,8 +191,6 @@ technology = { #Improved Drainage
 		printing_press = 0.15
 	}
 	
-	administrative_monarchy	= yes 
-	administrative_republic	= yes
 	#Improved Drainage
 	production_efficiency 	=	0.02
 }
@@ -227,6 +234,8 @@ technology = { #Metallurgy
 	
 	mills = yes
 	production_efficiency 	=	0.02
+
+
 }
 
 technology = { #University
@@ -244,7 +253,7 @@ technology = { #University
 	governing_capacity = 250
 	
 	administrative_efficiency = 0.1
-	development_efficiency = 0.1
+	development_cost_modifier = -0.1
 }
 
 technology = { #National Sovereignty
@@ -320,6 +329,7 @@ technology = { #The Constitution
 	}
 	constitutional_monarchy = yes
 	constitutional_republic = yes  
+
 	town_hall = yes
 }
 
@@ -336,7 +346,7 @@ technology = { #Measuring the World
 	}
 	
 	administrative_efficiency = 0.1
-	development_efficiency = 0.1
+	development_cost_modifier = -0.1
 }
 
 technology = { #Bonds and Tontines
@@ -404,7 +414,7 @@ technology = { #Modern Bureaucracy
 
 	allowed_idea_groups = 9
 	administrative_efficiency = 0.1
-	development_efficiency = 0.1	
+	development_cost_modifier = -0.1	
 }
 
 technology = { #Rotherham Plough

@@ -3,7 +3,13 @@ estate_ghilman = {
 	icon = 14
 	
 	trigger = {
-		tag = PER
+		government_rank = 3
+		religion_group = muslim
+		OR = {
+			culture_group = iranian
+			culture_group = hindusthani
+			culture_group = caucasian
+		}
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }

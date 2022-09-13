@@ -19,6 +19,7 @@ estate_church_hire_advisor = {
 		is_in_deficit = no
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -80,6 +81,7 @@ estate_church_fire_advisor = {
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -112,6 +114,7 @@ estate_church_convert_province_x = {
 		ai = no
 		num_of_missionaries = 1
 		NOT = { religion = confucianism }
+		NOT = { religion = tengri_pagan_reformed }
 		any_owned_province = {
 			is_state_core = root
 			NOT = { religion = root }
@@ -233,6 +236,7 @@ estate_church_convert_province_x = {
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		hidden_effect = {
 			event_target:agenda_province = {
 				if = {
@@ -298,6 +302,7 @@ estate_church_reduce_war_exhaustion = {
 		NOT = { war_exhaustion = 1 }
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -334,6 +339,7 @@ estate_church_recover_stability = {
 		stability = 1
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -367,6 +373,7 @@ estate_church_increase_stability = {
 		stability = 3
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -408,6 +415,7 @@ estate_church_reduce_overextension = {
 		NOT = { overextension_percentage = 0.01 }
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -450,6 +458,7 @@ estate_church_restore_devotion = {
 		legitimacy_equivalent = 90
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -615,6 +624,7 @@ estate_church_root_out_heresy = {
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect_church = yes
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10

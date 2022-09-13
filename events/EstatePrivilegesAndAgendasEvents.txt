@@ -47,7 +47,14 @@ country_event = {
 	option = { #discard the Elective Monarchy
 		name = estate_privileges_and_agendas_events.1.B
 		
-		remove_government_reform = elective_monarchy
+		if = { 
+			limit = { has_reform = elective_monarchy }
+			remove_government_reform = elective_monarchy
+		}
+		else_if = { 
+			limit = { has_reform = polish_elective_monarchy } 
+			remove_government_reform = polish_elective_monarchy
+		}
 		#set_legacy_government = administrative_monarchy
 		remove_heir = {}
 		add_absolutism = 10
@@ -764,26 +771,31 @@ country_event = {
 		name = estate_privileges_and_agendas_events.3.y
 		trigger = { has_country_flag = nomadic_aristocracy_present_agenda }
 		start_estate_agenda = nomadic_aristocracy
+		goto = nomadic_aristocracy
 	}
 	option = {
 		name = estate_privileges_and_agendas_events.3.z
 		trigger = { has_country_flag = sedentary_subdjects_present_agenda }
 		start_estate_agenda = sedentary_subdjects
+		goto = sedentary_subdjects
 	}
 	option = {
 		name = estate_privileges_and_agendas_events.3.m
 		trigger = { has_country_flag = estate_mamluks_present_agenda }
 		start_estate_agenda = estate_mamluks
+		goto = estate_mamluks
 	}
 	option = {
 		name = estate_privileges_and_agendas_events.3.l
 		trigger = { has_country_flag = estate_janissaries_present_agenda }
 		start_estate_agenda = estate_janissaries
+		goto = estate_janissaries
 	}
 	option = {
 		name = estate_privileges_and_agendas_events.3.n
 		trigger = { has_country_flag = estate_ghilman_present_agenda }
 		start_estate_agenda = estate_ghilman
+		goto = estate_ghilman
 	}
 }
 

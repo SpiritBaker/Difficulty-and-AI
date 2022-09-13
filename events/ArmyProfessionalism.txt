@@ -32,7 +32,7 @@ country_event = {
 					}
 				}
 			}
-			NOT = { army_professionalism = 0.20 } #Salaried Soldiers
+			NOT = { army_professionalism = 0.50 }
 		}
 		NOT = {
 			has_country_modifier = enemies_sacked_city
@@ -331,13 +331,9 @@ province_event = {
 	option = {
 		name = army_professionalism_events.3.a #Barbarians!
 		trigger = {
-			OR = {
-				NOT = {
-					owner = { tag = PAP }
-				}
-				NOT = {
-					has_dlc = "Emperor"
-				}
+			NOT = { 
+				owner = { tag = PAP }
+				has_dlc = "Emperor"
 			}
 		}
 		add_devastation = 100

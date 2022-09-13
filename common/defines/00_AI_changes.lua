@@ -2,12 +2,7 @@
 
 NDefines.NMilitary.SUPPLYLIMIT_BASE_MULTIPLIER = 8.0
 
-NDefines.NMilitary.BANNER_DISCIPLINE_BONUS = 0.05	
-NDefines.NMilitary.BANNER_MANPOWER_USAGE = 0.75	
-NDefines.NMilitary.BANNER_REINFORCE_SPEED = 0
-NDefines.NMilitary.BANNER_MAINTENANCE_COST = 0.75	
-NDefines.NMilitary.BANNER_AGE_MULTIPLIER =	0.50
-NDefines.NMilitary.CREATE_JANISSARIES_MIL_COST = 2				-- Cost to create janissaries (per unit)	
+NDefines.NMilitary.CREATE_JANISSARIES_MIL_COST = 5				-- Cost to create janissaries (per unit)	
 NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.10	
 NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0.10
 --NDefines.NMilitary.ARMY_ATTRITION_AT_COAST = 1					-- How many percent attrition units take while loaded onto ships along the coast
@@ -62,6 +57,13 @@ NDefines.NAI.COLONY_BUDGET_FRACTION = 0.4
 --NDefines.NAI.STATE_MAINTENANCE_BUDGET_FRACTION = 0.15 -- AI will spend a maximum of this fraction of monthly income on state maintenance
 --NDefines.NAI.DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 50	--Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 
+--Forts
+--NDefines.NAI.AI_FORT_PER_DEV_RATIO = 75 -- How much development the AI wants per fort (approximately)
+--NDefines.NAI.FORT_ON_BORDER_MULT = 0.75 -- 
+--NDefines.NAI.FORT_NEXT_TO_FORT_MULT = 0.75 -- 
+--NDefines.NAI.FORT_MAINTENANCE_CHEAT = 0 -- Set to 1 to enable AI fort maintenance cheating. Was once active in vanilla, but no longer
+NDefines.NAI.FORT_MOTHBALL_SAFETY_DISTANCE = 3 -- How far from the border AI will mothball forts
+--NDefines.NAI.FORT_CAPITAL_DESIRE = 0.5 -- How much does the AI want a fort in its capital? (adds to regular reasons)
 
 --State
 NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value
@@ -160,7 +162,7 @@ NDefines.NAI.ESTATE_PRIVILEGE_LAST_PENALTY = 3
 NDefines.NAI.ESTATE_INTERACTION_THRESHOLD = 49.9
 NDefines.NAI.ESTATE_MAX_WANTED_INFLUENCE = 85.0
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 10.0
-NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 4
+NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 6
 
 --NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 25.0				-- AI scoring for upgrade centers of trade, multiplied by budget/cost
 --NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 5				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
@@ -172,7 +174,7 @@ NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, mu
 
 
 --NAIEconomy
---NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.1			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
+--NDefines.NAIEconomy.BUDGETING_ADJUSTMENT_STEP = 0.5			-- Amount in percent to increase/decrease spending on budget posts when adjusting due to surplus/deficit
 NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what rebel threat should the AI militarize (i.e. focus spending on armies)
 --NDefines.NAIEconomy.MILITARY_FOCUS_DEFAULT = 1.0
 --NDefines.NAIEconomy.MILITARY_FOCUS_LOWER_BOUND = 0.25
@@ -204,9 +206,6 @@ NDefines.NGovernment.RUSSIAN_ABILITY_STRELTSY_SPAWN_SIZE = 0.1
 
 --NReligion
 
-NDefines.NReligion.YEARLY_DOOM_INCREASE = 0.5 --Multiplied by number of provinces.
-NDefines.NReligion.MAYA_COLLAPSE_PROVINCES_PER_REFORM = 1 --Maya keeps this many extra provinces per reform.
-NDefines.NReligion.MAYA_COLLAPSE_PROVINCES = 5
 NDefines.NReligion.YEARLY_PAPAL_INFLUENCE_CATHOLIC = 1 
 NDefines.NReligion.PIETY_ACTION_COOLDOWN = 10
 NDefines.NReligion.KARMA_FOR_OFFENSIVE_WAR = -5 --base -10
@@ -236,11 +235,8 @@ NDefines.NCountry.FREE_IDEA_GROUP_COST = 4
 NDefines.NCountry.IDEA_TO_TECH = -0.015
 NDefines.NCountry.PS_BUY_IDEA = 380
 NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.35 --Horde unity gained per ducat looted.
-NDefines.NCountry.NOMAD_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
+NDefines.NCountry.COUNTRY_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
 NDefines.NCountry.CORRUPTION_FROM_BANNERS = 2.5
-
-NDefines.NMilitary.MARINE_SHOCK_DAMAGE_TAKEN = -0.10
-NDefines.NMilitary.MARINE_DISEMBARK_SPEED_BONUS = 1.0			-- marine disembark speed bonus
 
 --Natives
 NDefines.NCountry.COHESION_NEIGHBOURING_COLONIZER = 1

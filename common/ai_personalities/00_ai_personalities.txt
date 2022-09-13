@@ -196,7 +196,7 @@ ai_diplomat = {
 		modifier = {
 			factor = 5
 			has_reform = free_city
-		}	
+		}		
 	}
 	icon = 3
 }

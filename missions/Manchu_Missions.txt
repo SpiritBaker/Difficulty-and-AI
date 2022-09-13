@@ -255,7 +255,7 @@ manchu_missions_1_b = {
 			country_event = { id = mch_missions.3 }
 		}
 	}
-	mch_devastate_china = { # might need a rework
+	mch_devastate_china = {
 		icon = mission_steppe_warriors
 		required_missions = { mch_green_standard_army }
 		completed_by = 1644.4.22
@@ -286,7 +286,7 @@ manchu_missions_1_b = {
 						owned_by = ROOT
 					}
 				}
-			}
+			}			
 		}
 		effect = {
 			add_country_modifier = {
@@ -337,7 +337,6 @@ manchu_missions_1_b = {
 			hidden_effect = {
 				china_superregion = {
 					limit = {
-						#culture_group = east_asian
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
 					}
