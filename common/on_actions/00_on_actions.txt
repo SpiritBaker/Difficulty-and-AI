@@ -494,9 +494,6 @@ on_peace_actor = {
 
 # country
 on_peace_recipient = {
-	events = {
-		native_americans.7		# Appoint Peace Chief
-	}
 }
 
 # country

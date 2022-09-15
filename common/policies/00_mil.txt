@@ -1252,7 +1252,7 @@ vassal_taxation_policy = {
 		full_idea_group = administrative_ideas
 	}
 
-	artillery_bonus_vs_fort = 1
+	artillery_levels_available_vs_fort = 1
 	fire_damage = 0.05
 
 	ai_will_do = {

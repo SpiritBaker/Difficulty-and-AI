@@ -36,7 +36,6 @@
  MODEVTOPTB5089:0 "Deny petition."
 
  #Trigger
- incompetent_monarch:0 "Incompetent Monarch"
  lost_control_of_xian:1 "Emperor does not own and control Xi'an"
  desc_lost_control_of_xian:0 "It bodes poorly for our claim to the Mandate of Heaven if we cannot hold Xi'an, one of China's chief cities."
  lost_control_of_luoyang:1 "Emperor does not own and control Luoyang"

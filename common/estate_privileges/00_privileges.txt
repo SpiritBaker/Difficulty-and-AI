@@ -737,7 +737,7 @@ estate_maratha_land_rights = {
 		}
 		modifier = {
 			factor = 0.75
-			has_estestate_jains_land_rightsate_privilege = estate_church_land_rights
+			has_estate_privilege = estate_church_land_rights
 		}
 		modifier = {
 			factor = 0.75
