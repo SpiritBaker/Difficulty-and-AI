@@ -184,6 +184,17 @@ country_decisions = {
 						log = "[Root.GetName] spawned enlightenment in [This.GetName]"
 					}
 				}
+				else_if = {
+					limit = {
+						NOT = { has_institution = industrialization }
+					}
+					spawn_institution = {
+						institution = industrialization
+					}
+					event_target:base_target = {
+						log = "[Root.GetName] spawned industrialization in [This.GetName]"
+					}
+				}
 			}
 		}
 		ai_will_do = {

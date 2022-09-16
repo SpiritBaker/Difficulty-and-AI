@@ -252,6 +252,7 @@ set_base_target = {
 							has_country_flag = global_trade_flag
 							has_country_flag = manufactories_flag
 							has_country_flag = enlightenment_flag
+							has_country_flag = industrialization_flag
 						}
 					}
 					OR = {

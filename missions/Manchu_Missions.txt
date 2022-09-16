@@ -51,12 +51,6 @@ manchu_missions_1 = {
 		required_missions = { unite_manchu }
 		position = 4
 		completed_by = 1644.4.22
-		ai_weight = {
-			factor = 3
-		}
-		ai_priority = {
-			factor = 3
-		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 726
@@ -111,12 +105,6 @@ manchu_missions_1 = {
 	start_the_conquest_of_ming_china = {
 		icon = mission_chinese_general_riding
 		required_missions = { mch_great_wall }
-		ai_weight = {
-			factor = 3
-		}
-		ai_priority = {
-			factor = 3
-		}
 		provinces_to_highlight = {
 			OR = {
 				area = liaoning_area
@@ -597,12 +585,6 @@ manchu_missions_2 = {
 		icon = mission_manchu_warrior
 		required_missions = { struggle_among_jurchens_mission }
 		completed_by = 1616.1.1
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 730
@@ -643,12 +625,6 @@ manchu_missions_2 = {
 		required_missions = { dominate_jurchens_mission }
 		completed_by = 1616.1.1
 		position = 3
-		ai_weight = {
-			factor = 3
-		}
-		ai_priority = {
-			factor = 3
-		}
 		provinces_to_highlight = {
 			region = manchuria_region
 			NOT = {

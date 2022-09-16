@@ -811,6 +811,7 @@ on_battle_won_country = {
 		change_variable = {
 			which = battlesWon
 			value = 1
+		}
 	}
 }
 
