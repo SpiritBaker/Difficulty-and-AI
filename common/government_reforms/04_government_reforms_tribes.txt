@@ -709,17 +709,13 @@ tribe_becomes_monarchy_reform = {
 		change_government = monarchy
 	}
 	ai = {
-		factor = 1
+		factor = 0
 		modifier = {
 			factor = 2
 			OR = {
 				religion_group = muslim
 				religion_group = eastern
 			} 
-		}
-		modifier = {
-			factor = 10
-			is_nomad = yes
 		}
 	}
 }

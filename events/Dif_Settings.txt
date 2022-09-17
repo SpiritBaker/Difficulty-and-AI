@@ -98,12 +98,21 @@ country_event = {
 		}
 		country_event = { id = dif_settings.2 }
 	}
-	option = { #Lock changes
-	name = "opt.dif_settings.lock"
-		country_event = { id = dif_settings.4 }
+	option = { #Native Settings
+	name = "opt.native_settings"
+		if = {
+			limit = {
+				NOT = { is_year = 1450 }
+			}
+			country_event = { id = dif_settings.5 }
+		}
 	}
+	#option = { #Lock changes
+	#name = "opt.dif_settings.lock"
+	#	country_event = { id = dif_settings.4 }
+	#}
 	option = { #Exit
-	name = "opt.dif_settings.exit"
+		name = "opt.dif_settings.exit"
 	}
 }
 
@@ -183,12 +192,21 @@ country_event = {
 		}
 		country_event = { id = dif_settings.1 }
 	}
-	option = { #Lock changes
-	name = "opt.dif_settings.lock"
-		country_event = { id = dif_settings.4 }
+	option = { #Native Settings
+	name = "opt.native_settings"
+		if = {
+			limit = {
+				NOT = { is_year = 1450 }
+			}
+			country_event = { id = dif_settings.5 }
+		}
 	}
+	#option = { #Lock changes
+	#name = "opt.dif_settings.lock"
+	#	country_event = { id = dif_settings.4 }
+	#}
 	option = { #Exit
-	name = "opt.dif_settings.exit"
+		name = "opt.dif_settings.exit"
 	}
 }
 
@@ -225,5 +243,220 @@ country_event = {
 		else = {
 			country_event = { id = dif_settings.1 }
 		}
+	}
+}
+
+country_event = { 
+	id = dif_settings.5
+	title = "dif_settings.5.t"
+	desc = "dif_settings.5.d"
+	picture = EXPLORERS_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+	#hidden = yes
+
+	trigger = {
+		#NOT = { has_global_flag = remove_natives_event_fired_flag }
+		ai = no
+	}
+
+	option = { #
+	name = "opt.remove_north_american.confirm"
+		if = {
+			limit = {
+				NOT = { has_global_flag = removing_north_american_natives_flag }
+			}
+			set_global_flag = removing_north_american_natives_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = removing_north_american_natives_flag
+			}
+			clr_global_flag = removing_north_american_natives_flag
+		}
+		country_event = { id = dif_settings.6 }
+	}
+	option = { #
+	name = "opt.remove_south_american.confirm"
+		if = {
+			limit = {
+				NOT = { has_global_flag = removing_south_american_natives_flag }
+			}
+			set_global_flag = removing_south_american_natives_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = removing_south_american_natives_flag
+			}
+			clr_global_flag = removing_south_american_natives_flag
+		}
+		country_event = { id = dif_settings.6 }
+	}
+	option = { #
+	name = "opt.remove_aboriginal.confirm"
+		if = {
+			limit = {
+				NOT = { has_global_flag = removing_aboriginal_natives_flag }
+			}
+			set_global_flag = removing_aboriginal_natives_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = removing_aboriginal_natives_flag
+			}
+			clr_global_flag = removing_aboriginal_natives_flag
+		}
+		country_event = { id = dif_settings.6 }
+	}
+	option = { #
+	name = "opt.remove_polynesian.confirm"
+		if = {
+			limit = {
+				NOT = { has_global_flag = removing_polynesian_natives_flag }
+			}
+			set_global_flag = removing_polynesian_natives_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = removing_polynesian_natives_flag
+			}
+			clr_global_flag = removing_polynesian_natives_flag
+		}
+		country_event = { id = dif_settings.6 }
+	}
+
+	option = { #
+	name = "opt.natives.done"
+		set_global_flag = remove_natives_event_fired_flag
+	}
+}
+
+country_event = { 
+	id = dif_settings.6
+	title = "dif_settings.5.t"
+	desc = "dif_settings.5.d"
+	picture = EXPLORERS_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+	#hidden = yes
+
+	trigger = {
+		#NOT = { has_global_flag = remove_natives_event_fired_flag }
+		ai = no
+	}
+
+	option = { #
+	name = "opt.remove_north_american.confirm"
+		if = {
+			limit = {
+				NOT = { has_global_flag = removing_north_american_natives_flag }
+			}
+			set_global_flag = removing_north_american_natives_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = removing_north_american_natives_flag
+			}
+			clr_global_flag = removing_north_american_natives_flag
+		}
+		country_event = { id = dif_settings.5 }
+	}
+	option = { #
+	name = "opt.remove_south_american.confirm"
+		if = {
+			limit = {
+				NOT = { has_global_flag = removing_south_american_natives_flag }
+			}
+			set_global_flag = removing_south_american_natives_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = removing_south_american_natives_flag
+			}
+			clr_global_flag = removing_south_american_natives_flag
+		}
+		country_event = { id = dif_settings.5 }
+	}
+	option = { #
+	name = "opt.remove_aboriginal.confirm"
+		if = {
+			limit = {
+				NOT = { has_global_flag = removing_aboriginal_natives_flag }
+			}
+			set_global_flag = removing_aboriginal_natives_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = removing_aboriginal_natives_flag
+			}
+			clr_global_flag = removing_aboriginal_natives_flag
+		}
+		country_event = { id = dif_settings.5 }
+	}
+	option = { #
+	name = "opt.remove_polynesian.confirm"
+		if = {
+			limit = {
+				NOT = { has_global_flag = removing_polynesian_natives_flag }
+			}
+			set_global_flag = removing_polynesian_natives_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = removing_polynesian_natives_flag
+			}
+			clr_global_flag = removing_polynesian_natives_flag
+		}
+		country_event = { id = dif_settings.5 }
+	}
+
+	option = { #
+	name = "opt.natives.done"
+		set_global_flag = remove_natives_event_fired_flag
+	}
+}
+
+country_event = { 
+	id = dif_settings.7
+	title = "dif_settings.7.t"
+	desc = "dif_settings.7.d"
+	picture = EXPLORERS_eventPicture
+	#is_triggered_only = yes
+	#fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		NOT = { is_year = 1450 }
+
+		OR = {
+			AND = {
+				technology_group = north_american
+				has_global_flag = removing_north_american_natives_flag
+			}
+			AND = {
+				technology_group = south_american
+				has_global_flag = removing_south_american_natives_flag
+			}
+			AND = {
+				technology_group = aboriginal_tech
+				has_global_flag = removing_aboriginal_natives_flag
+			}
+			AND = {
+				technology_group = polynesian_tech
+				has_global_flag = removing_polynesian_natives_flag
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		every_owned_province = {
+			decolonize = yes
+		} 
+	}
+
+	option = {
 	}
 }

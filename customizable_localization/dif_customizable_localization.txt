@@ -181,3 +181,71 @@ defined_text = {
 		localisation_key = scadifDisabled
 	}
 }
+defined_text = {
+	name = RemovingNorthAmericanNativesLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = removing_north_american_natives_flag
+        }
+        localisation_key = removingNorthEnabled
+		
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = removing_north_american_natives_flag }
+		}
+		localisation_key = removingNorthDisabled
+	}
+}
+defined_text = {
+	name = RemovingSouthAmericanNativesLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = removing_south_american_natives_flag
+        }
+        localisation_key = removingSouthEnabled
+		
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = removing_south_american_natives_flag }
+		}
+		localisation_key = removingSouthDisabled
+	}
+}
+defined_text = {
+	name = RemovingAboriginalNativesLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = removing_aboriginal_natives_flag
+        }
+        localisation_key = removingAboriginalEnabled
+		
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = removing_aboriginal_natives_flag }
+		}
+		localisation_key = removingAboriginalDisabled
+	}
+}
+defined_text = {
+	name = RemovingPolynesianNativesLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = removing_polynesian_natives_flag
+        }
+        localisation_key = removingPolynesianEnabled
+		
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = removing_polynesian_natives_flag }
+		}
+		localisation_key = removingPolynesianDisabled
+	}
+}

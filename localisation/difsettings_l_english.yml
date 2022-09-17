@@ -23,15 +23,13 @@
  dif_settings.4.t:0 "Make the changes permanent"
  dif_settings.4.d:0 ""
 
- dif_settings.6.t:0 "AI Expansion Planer"
- dif_settings.6.d:0 "Script that gives AI direction for expansion by generating claims. Works similarly to estates agendas that give claims."
+
  opt.dif_settings.Scaling:0 "Scaling Difficulty ([This.ScalingDifficultyLoc])"
  opt.dif_settings.expansion:0 "AI Expansion Planer ([This.ExpansionPlaner])"
  opt.dif_settings.enable.expansion:0 "§GEnabled by Default§!"
  opt.dif_settings.disable.expansion:0 "§RDisable§!"
 
- dif_settings.5.t:0 "AI Building Script"
- dif_settings.5.d:0 "Base game AI is only able to build several buildings at a time and can't build while at war. This script forces AI to spend money on buildings ignoring this limit."
+
  opt.dif_settings.build:0 "AI Building ([This.BuildEventLoc])"
  opt.dif_settings.enable.build:0 "§GEnabled by Default§!"
  opt.dif_settings.disable.build:0 "§RDisable§!"
@@ -50,6 +48,25 @@
  devclEnabled:0 "§GEnabled§!"
  bevDisabled:0 "§RDisabled§!"
  bevEnabled:0 "§GEnabled§!"
+
+ opt.native_settings:0 "Native Settings (Loked after 1450)"
+ dif_settings.5.t:0 "Native Settings"
+ dif_settings.5.d:0 "Option that allows you to remove Natives from the game. Generally having less countries improves performance.\n\nTags randomly removed at a rate of approximately 1-5 Tags a day.\nKeeping it active for North American Natives for approximately 10-14 days will remove half of the Natives there.\n"
+
+ opt.remove_north_american.confirm:0 "North American Natives ([This.RemovingNorthAmericanNativesLoc])"
+ opt.remove_south_american.confirm:0 "South American Natives ([This.RemovingSouthAmericanNativesLoc])"
+ opt.remove_aboriginal.confirm:0 "Aboriginal Natives ([This.RemovingAboriginalNativesLoc])"
+ opt.remove_polynesian.confirm:0 "Polynesian Natives ([This.RemovingPolynesianNativesLoc])"
+ opt.natives.done:0 "Done"
+ 
+ removingNorthEnabled:0 "§RRemoved§!"
+ removingNorthDisabled:0 "§GKept§!"
+ removingSouthEnabled:0 "§RRemoved§!"
+ removingSouthDisabled:0 "§GKept§!"
+ removingAboriginalEnabled:0 "§RRemoved§!"
+ removingAboriginalDisabled:0 "§GKept§!"
+ removingPolynesianEnabled:0 "§RRemoved§!"
+ removingPolynesianDisabled:0 "§GKept§!"
 
  scaling_difficulty_AoDis:0 "Scaling Difficulty"
  scaling_difficulty_AoRef:0 "Scaling Difficulty"
