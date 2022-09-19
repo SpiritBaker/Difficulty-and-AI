@@ -131,7 +131,7 @@ estate_ghilman_promote_leadership = {
 	penalties = {
 	}
 	benefits = {
-		army_tradition_decay = -0.005
+		drill_gain_modifier = 0.25
 		leader_land_shock = 1
 	}
 	ai_will_do = {

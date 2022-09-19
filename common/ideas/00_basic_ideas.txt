@@ -720,12 +720,12 @@ defensive_ideas = {
 
 	bonus = {
 		hostile_attrition = 1
-		leader_land_manuever = 1
+		max_hostile_attrition = 1 
 	}
 
 	battlefield_commisions = {
 		army_tradition_from_battle = 1.0
-		army_tradition = 0.5
+		army_tradition = 0.25
 	}
 	military_drill = {
 		land_morale = 0.10

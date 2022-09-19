@@ -3436,7 +3436,7 @@ estate_cossacks_establish_the_cossack_regiments = {
 	}
 	mechanics = {
 		enables_cossack_regiments
-		#exempt_from_seize_land
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 10
@@ -4456,6 +4456,10 @@ estate_maratha_advisor = {
 	penalties = {
 		stability_cost_modifier = 0.1
 	}
+	can_select = { 
+		NOT = { has_estate_privilege = estate_nobles_advisors }
+		NOT = { has_estate_privilege = estate_rajput_advisor }
+	}
 	benefits = {
 		mil_advisor_cost = -0.25
 	}
@@ -4752,7 +4756,7 @@ estate_rajput_rajput_regiments = {
 	}
 	mechanics = {
 		enables_rajput_regiments
-		#exempt_from_seize_land
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 10
@@ -4929,7 +4933,7 @@ estate_rajput_officer_corp = {
 		modifier = {
 			factor = 0
 			NOT = { has_estate_privilege = estate_rajput_officer_corp }
-			NOT = { army_tradition = 80 }
+			NOT = { army_tradition = 75 }
 		}
 		modifier = {
 			factor = 0
@@ -4953,9 +4957,6 @@ estate_rajput_look_up_purbias = {
 	influence = 0.05
 	is_valid = {
 		has_estate_privilege = estate_rajput_rajput_regiments
-	}
-	modifier_by_land_ownership = {
-		special_unit_forcelimit = 0.5
 	}
 	can_select = {
 	}
@@ -4999,9 +5000,6 @@ estate_rajput_look_up_purbias = {
 	penalties = {
 	}
 	benefits = {
-	}
-	mechanics = {
-		enables_rajput_regiments
 	}
 	ai_will_do = {
 		factor = 10
@@ -5280,7 +5278,7 @@ estate_nobles_supremacy_over_crown = {
 		can_give_agendas_without_interaction
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
 	}
 }
 
@@ -5322,7 +5320,7 @@ estate_brahmins_supremacy_over_crown = {
 		can_give_agendas_without_interaction
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
 	}
 }
 
@@ -12562,7 +12560,7 @@ estate_nobles_decentralized_tribe = {
 		global_autonomy = 0.05
 	}
 	mechanics = {
-		#exempt_from_seize_land
+		exempt_from_seize_land
 	}
 	on_granted = {
 		add_estate_loyalty = {
@@ -12629,7 +12627,7 @@ estate_nobles_tribe_unification = {
 		}
 	}
 	mechanics = {
-		#exempt_from_seize_land
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 1000
