@@ -689,6 +689,57 @@ estate_nomadic_aristocracy_share_of_tribute = {
 	}
 }
 
+estate_nomadic_aristocracy_landowners = {
+	icon = privilege_better_integration
+	max_absolutism = -5
+	land_share = 10
+	loyalty = 0.1
+	influence = 0.1
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = farm_estate_landowners_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_building = farm_estate
+				}
+				add_province_modifier = {
+					name = farm_estate_manpower_m
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = farm_estate_manpower_m
+				}
+				remove_province_modifier = farm_estate_manpower_m
+			}
+		}
+	}
+	on_invalid = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = farm_estate_manpower_m
+				}
+				remove_province_modifier = farm_estate_manpower_m
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
 estate_nobles_obligated_to_serve = {
 	icon = privilege_promote_purbias
 	#land_share = 0
@@ -708,7 +759,7 @@ estate_nobles_obligated_to_serve = {
 		leader_cost = 0.2
 	}
 	benefits = {
-		cavalry_power = 0.1
+		cavalry_power = 0.05
 		governing_capacity = 50
 	}
 	ai_will_do = {

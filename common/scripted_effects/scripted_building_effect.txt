@@ -1,0 +1,132 @@
+on_province_owner_change_building_area_effect = {
+	if = {
+		limit = {
+			any_province_in_state = {
+				owned_by = ROOT 
+				has_building = university
+			}
+			NOT = { has_province_modifier = dif_university_dev_cost }
+		}
+		add_province_modifier = {
+			name = dif_university_dev_cost
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			any_province_in_state = {
+				owned_by = ROOT 
+				NOT = { has_building = university }
+			} 
+			has_province_modifier = dif_university_dev_cost
+		}
+		remove_province_modifier = dif_university_dev_cost
+	}
+	if = {
+		limit = {
+			has_building = university
+			NOT = { has_province_modifier = dif_university_dev_cost }
+		}
+		every_province_in_state = {
+			limit = {
+				owned_by = ROOT
+				NOT = { has_province_modifier = dif_university_dev_cost }
+			}
+			add_province_modifier = {
+				name = dif_university_dev_cost
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = university
+			any_province_in_state = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_building = university }
+				has_province_modifier = dif_university_dev_cost
+			} 
+		}
+		every_province_in_state = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_building = university }
+				has_province_modifier = dif_university_dev_cost
+			}
+			remove_province_modifier = dif_university_dev_cost
+		}
+	}
+	if = {
+		limit = {
+			any_province_in_state = {	
+				owned_by = ROOT
+				OR = {
+					has_building = coastal_defence
+					has_building = naval_battery
+				} 	
+			}
+			has_port = yes
+			NOT = { has_province_modifier = block_slave_raid_area_m } 
+		}
+		add_province_modifier = {
+			name = block_slave_raid_area_m
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			any_province_in_state = {
+				owned_by = ROOT 
+				NOT = {
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+			}
+			has_province_modifier = block_slave_raid_area_m 
+		}
+		remove_province_modifier = block_slave_raid_area_m
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = coastal_defence
+				has_building = naval_battery
+			} 
+			NOT = { has_province_modifier = block_slave_raid_area_m  }
+		}
+		every_province_in_state = {
+			limit = {
+				owned_by = ROOT
+				NOT = { has_province_modifier = block_slave_raid_area_m  }
+			}
+			add_province_modifier = {
+				name = block_slave_raid_area_m 
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = university
+			any_province_in_state = {
+				NOT = { owned_by = ROOT }
+				NOT = {
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+				has_province_modifier = block_slave_raid_area_m 
+			} 
+		}
+		every_province_in_state = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = {
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+				has_province_modifier = block_slave_raid_area_m 
+			}
+			remove_province_modifier = block_slave_raid_area_m 
+		}
+	}
+}

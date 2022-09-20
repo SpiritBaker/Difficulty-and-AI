@@ -183,6 +183,7 @@ estate_mamluks = {
 		estate_mamluks_entrenched_syrian_governors
 		estate_mamluks_ghilman_royal_guard
 		estate_mamluks_recruit_from_tribes
+		estate_mamluks_landowners
 	}
 	
 	agendas = {

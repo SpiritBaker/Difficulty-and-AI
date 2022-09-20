@@ -38,6 +38,7 @@ marketplace = {
 			type = production
 			value = 1
 		}
+		
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -630,7 +631,7 @@ fort_15th = {
 
 coastal_defence = {
 
-	cost = 100
+	cost = 200
 	time = 12
 	build_trigger = {
 		has_port = yes
@@ -645,9 +646,28 @@ coastal_defence = {
 		allowed_num_of_buildings = 1
 		blockade_force_required = 0.5
 		hostile_disembark_speed = 1.0
-		block_slave_raid = yes
 	}
-
+	on_built = {
+		every_province_in_state = {
+			if = {
+				limit = { has_port = yes }
+				add_province_modifier = {
+					name = block_slave_raid_area_m
+					duration = -1
+				}
+			}
+		}
+	}
+	on_destroyed = {
+		every_province_in_state = {
+			if = {
+				limit = {
+					has_province_modifier = block_slave_raid_area_m
+				}
+				remove_province_modifier = block_slave_raid_area_m
+			}
+		}
+	}
 	ai_will_do = {
 		factor = 4
 		modifier = {
@@ -1062,7 +1082,7 @@ fort_16th = {
 naval_battery = {
 
 	make_obsolete = coastal_defence
-	cost = 200
+	cost = 400
 	time = 12
 	build_trigger = {
 		has_port = yes
@@ -1078,9 +1098,28 @@ naval_battery = {
 		blockade_force_required = 1.0
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 5
-		block_slave_raid = yes
 	}
-
+	on_built = {
+		every_province_in_state = {
+			if = {
+				limit = { has_port = yes }
+				add_province_modifier = {
+					name = block_slave_raid_area_m
+					duration = -1
+				}
+			}
+		}
+	}
+	on_destroyed = {
+		every_province_in_state = {
+			if = {
+				limit = {
+					has_province_modifier = block_slave_raid_area_m
+				}
+				remove_province_modifier = block_slave_raid_area_m
+			}
+		}
+	}
 	ai_will_do = {
 		factor = 4
 		modifier = {
@@ -1206,11 +1245,41 @@ cathedral = {
 ##########################
 
 university = {
-	cost = 300
+	cost = 500
 	time = 12
 	modifier = {
-		local_development_cost = -0.20
+		local_governing_cost_increase = -10
+		local_development_cost = -0.10
 		allowed_num_of_buildings = 1
+	}
+
+	build_trigger = {
+		NOT = {
+			area_for_scope_province = {
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = university
+					has_construction = university
+				}
+			}
+		}
+	}
+	
+	keep_trigger = {
+		NOT = {
+			area_for_scope_province = {
+				NOT = { province_id = root }
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = university
+					has_construction = university
+				}
+			}
+		}
 	}
 
 	on_built = {
@@ -1219,12 +1288,26 @@ university = {
 			type = tax
 			value = 2
 		}
+		every_province_in_state = {
+			add_province_modifier = {
+				name = dif_university_dev_cost
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = university
 			type = tax
 			value = 2
+		}
+		every_province_in_state = {
+			if = {
+				limit = {
+					has_province_modifier = dif_university_dev_cost
+				}
+				remove_province_modifier = dif_university_dev_cost
+			}
 		}
 	}
 	on_obsolete = {
@@ -2363,7 +2446,7 @@ fort_18th = {
 
 manufactory = {
 	cost = 500
-	time = 60
+	time = 1
 	modifier = {
 		trade_goods_size = 1.0
 	}
@@ -2689,6 +2772,20 @@ farm_estate = {
 		}
 	}
 	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						has_estate_privilege = estate_mamluks_landowners
+						has_estate_privilege = estate_nomadic_aristocracy_landowners
+					}
+				}
+			}
+			add_province_modifier = {
+				name = farm_estate_manpower_m
+				duration = -1
+			}
+		}
 		add_development_from_building = {
 			building = manufactory
 			type = production
@@ -2696,12 +2793,17 @@ farm_estate = {
 		}
 	}
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = farm_estate_manpower_m }
+			remove_province_modifier = farm_estate_manpower_m
+		}
 		remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
 	}
+	
 	on_obsolete = {
 	}
 	onmap = yes
@@ -3176,7 +3278,7 @@ state_house = {
 		min_local_autonomy = -10
 		local_governing_cost = -0.15
 		local_governing_cost_increase = -10
-		allowed_num_of_buildings = 1
+		#allowed_num_of_buildings = 1
 	}
 	#bonus_modifier = {
 	#	statewide_governing_cost = -0.2

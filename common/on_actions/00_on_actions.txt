@@ -4513,6 +4513,8 @@ on_province_owner_change = {
 	judaism_on_province_change_religion_or_change_owner_effect = yes
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	
+	on_province_owner_change_building_area_effect = yes
+
 	if = {
 		limit = {
 			region = indo_china_region

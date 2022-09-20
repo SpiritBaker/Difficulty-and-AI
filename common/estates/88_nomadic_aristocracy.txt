@@ -121,6 +121,7 @@ nomadic_aristocracy = {
 		estate_nomadic_aristocracy_statutory_rights
 		estate_nomadic_aristocracy_greater_war_support
 		estate_nomadic_aristocracy_share_of_tribute
+		estate_nomadic_aristocracy_landowners
 	}
 
 	agendas = {

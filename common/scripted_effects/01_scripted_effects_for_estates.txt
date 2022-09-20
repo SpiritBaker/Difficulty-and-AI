@@ -1698,6 +1698,72 @@ on_province_owner_change_estate_privileges_effect = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = sedentary_subdjects_increased_tribute
+			}
+		}
+		if = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+			}
+			add_province_modifier = {
+				name = paying_additional_tribute_m
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = sedentary_subdjects_trade_rights
+			}
+		}
+		if = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+			}
+			add_province_modifier = {
+				name = nomads_special_trade_rights_m
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_estate_privilege = estate_mamluks_landowners
+					has_estate_privilege = estate_nomadic_aristocracy_landowners
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_building = farm_estate
+				NOT = { has_province_modifier = farm_estate_manpower_m } 
+			}
+			add_province_modifier = {
+				name = farm_estate_manpower_m
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				NOT = { has_estate_privilege = estate_mamluks_landowners }
+				NOT = {	has_estate_privilege = estate_nomadic_aristocracy_landowners }
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = farm_estate_manpower_m
+			}
+			remove_province_modifier = farm_estate_manpower_m
+		}
+	}
 }
 
 on_province_tax_building_built_estate_privileges_effect = {
@@ -2507,6 +2573,28 @@ scaled_estate_cossacks_land_share_effect = {
 	scaled_estate_land_share_add_effect = { estate = estate_cossack }
 }
 
+
+
+scaled_estate_mamluks_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_mamluks }
+}
+
+scaled_estate_janissaries_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_janissaries }
+}
+
+scaled_estate_ghilman_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = estate_ghilman }
+}
+
+scaled_estate_nomadic_aristocracy_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = nomadic_aristocracy }
+}
+
+scaled_estate_sedentary_subdjects_land_share_effect = {
+	scaled_estate_land_share_add_effect = { estate = sedentary_subdjects }
+}
+
 #Based on those above, but you can choose which estate you use
 #example of usage: scaled_estate_land_share_add_effect = { estate = estate_nobles }
 scaled_estate_land_share_add_effect = {
@@ -2939,6 +3027,106 @@ spawn_rebels_from_unhappy_estate = {
 					as_if_faction = yes
 				}
 			}
+			1 = {
+				trigger = {
+					owner = {
+						NOT = { disabled_rebels_from_seized_land_for_estate = { estate = estate_mamluks } }
+						has_estate = estate_mamluks
+						NOT = {
+							estate_loyalty = {
+								estate = estate_mamluks
+								loyalty = 30
+							}
+						}
+					}
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					size = $size$
+					estate = estate_mamluks
+					as_if_faction = yes
+				}
+			}
+			1 = {
+				trigger = {
+					owner = {
+						NOT = { disabled_rebels_from_seized_land_for_estate = { estate = estate_janissaries } }
+						has_estate = estate_janissaries
+						NOT = {
+							estate_loyalty = {
+								estate = estate_janissaries
+								loyalty = 30
+							}
+						}
+					}
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					size = $size$
+					estate = estate_janissaries
+					as_if_faction = yes
+				}
+			}
+			1 = {
+				trigger = {
+					owner = {
+						NOT = { disabled_rebels_from_seized_land_for_estate = { estate = estate_ghilman } }
+						has_estate = estate_ghilman
+						NOT = {
+							estate_loyalty = {
+								estate = estate_ghilman
+								loyalty = 30
+							}
+						}
+					}
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					size = $size$
+					estate = estate_ghilman
+					as_if_faction = yes
+				}
+			}
+			1 = {
+				trigger = {
+					owner = {
+						NOT = { disabled_rebels_from_seized_land_for_estate = { estate = nomadic_aristocracy } }
+						has_estate = nomadic_aristocracy
+						NOT = {
+							estate_loyalty = {
+								estate = nomadic_aristocracy
+								loyalty = 30
+							}
+						}
+					}
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					size = $size$
+					estate = nomadic_aristocracy
+					as_if_faction = yes
+				}
+			}
+			1 = {
+				trigger = {
+					owner = {
+						NOT = { disabled_rebels_from_seized_land_for_estate = { estate = sedentary_subdjects } }
+						has_estate = sedentary_subdjects
+						NOT = {
+							estate_loyalty = {
+								estate = sedentary_subdjects
+								loyalty = 30
+							}
+						}
+					}
+				}
+				spawn_rebels = {
+					type = particularist_rebels
+					size = $size$
+					estate = sedentary_subdjects
+					as_if_faction = yes
+				}
+			}
 		}
 	}
 }
@@ -3017,36 +3205,6 @@ pick_random_estate_if_present = {
 		}
 		1 = { 
 			trigger = {
-				has_estate = estate_nomadic_tribes
-				NOT = { has_country_flag = estate_nomadic_tribes_$flag$ }
-			}
-			set_country_flag = estate_nomadic_tribes_$flag$
-			[[estate_action]
-			$estate_action$ = estate_nomadic_tribes
-			]
-		}
-		1 = { 
-			trigger = {
-				has_estate = nomadic_aristocracy
-				NOT = { has_country_flag = nomadic_aristocracy_$flag$ }
-			}
-			set_country_flag = nomadic_aristocracy_$flag$
-			[[estate_action]
-			$estate_action$ = nomadic_aristocracy
-			]
-		}
-		1 = { 
-			trigger = {
-				has_estate = sedentary_subdjects
-				NOT = { has_country_flag = sedentary_subdjects_$flag$ }
-			}
-			set_country_flag = sedentary_subdjects_$flag$
-			[[estate_action]
-			$estate_action$ = sedentary_subdjects
-			]
-		}
-		1 = { 
-			trigger = {
 				has_estate = estate_dhimmi
 				NOT = { has_country_flag = estate_dhimmi_$flag$ }
 			}
@@ -3073,6 +3231,36 @@ pick_random_estate_if_present = {
 			set_country_flag = estate_rajput_$flag$
 			[[estate_action]
 			$estate_action$ = estate_rajput
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_country_flag = estate_nomadic_tribes_$flag$ }
+			}
+			set_country_flag = estate_nomadic_tribes_$flag$
+			[[estate_action]
+			$estate_action$ = estate_nomadic_tribes
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = nomadic_aristocracy
+				NOT = { has_country_flag = nomadic_aristocracy_$flag$ }
+			}
+			set_country_flag = nomadic_aristocracy_$flag$
+			[[estate_action]
+			$estate_action$ = nomadic_aristocracy
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = sedentary_subdjects
+				NOT = { has_country_flag = sedentary_subdjects_$flag$ }
+			}
+			set_country_flag = sedentary_subdjects_$flag$
+			[[estate_action]
+			$estate_action$ = sedentary_subdjects
 			]
 		}
 		1 = { 
@@ -3238,6 +3426,13 @@ re_add_loyalty_from_seized_land = {
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nomadic_tribes } }	add_estate_loyalty = { estate = estate_nomadic_tribes	 loyalty = 15 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_rajput } }			add_estate_loyalty = { estate = estate_rajput			 loyalty = 15 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_vaisyas } }		add_estate_loyalty = { estate = estate_vaisyas			 loyalty = 15 } }
+
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = sedentary_subdjects } }	add_estate_loyalty = { estate = sedentary_subdjects		 loyalty = 15 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = nomadic_aristocracy } }	add_estate_loyalty = { estate = nomadic_aristocracy		 loyalty = 15 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_ghilman } }		add_estate_loyalty = { estate = estate_ghilman	 		 loyalty = 15 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_janissaries } }	add_estate_loyalty = { estate = estate_janissaries		 loyalty = 15 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_mamluks } }		add_estate_loyalty = { estate = estate_mamluks			 loyalty = 15 } }
+
 		}
 		else = {
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nobles } }			add_estate_loyalty = { estate = estate_nobles			 loyalty = 20 } }
@@ -3251,6 +3446,12 @@ re_add_loyalty_from_seized_land = {
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nomadic_tribes } }	add_estate_loyalty = { estate = estate_nomadic_tribes	 loyalty = 20 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_rajput } }			add_estate_loyalty = { estate = estate_rajput			 loyalty = 20 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_vaisyas } }		add_estate_loyalty = { estate = estate_vaisyas			 loyalty = 20 } }
+
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = sedentary_subdjects } }	add_estate_loyalty = { estate = sedentary_subdjects		 loyalty = 20 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = nomadic_aristocracy } }	add_estate_loyalty = { estate = nomadic_aristocracy		 loyalty = 20 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_ghilman } }		add_estate_loyalty = { estate = estate_ghilman	 		 loyalty = 20 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_janissaries } }	add_estate_loyalty = { estate = estate_janissaries		 loyalty = 20 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_mamluks } }		add_estate_loyalty = { estate = estate_mamluks			 loyalty = 20 } }
 		}
 	}
 }
@@ -3429,6 +3630,13 @@ add_estate_loyalty_by_class_dip = {
 			loyalty = $loyalty$
 		}
 	}
+	if = {
+		limit = { has_estate = sedentary_subdjects }
+		add_estate_loyalty = {
+			estate = sedentary_subdjects
+			loyalty = $loyalty$
+		}
+	}
 }
 add_estate_loyalty_by_class_mil = {
 	if = {
@@ -3463,6 +3671,34 @@ add_estate_loyalty_by_class_mil = {
 		limit = { has_estate = estate_rajput }
 		add_estate_loyalty = {
 			estate = estate_rajput
+			loyalty = $loyalty$
+		}
+	}
+	if = {
+		limit = { has_estate = estate_nomadic_aristocracy }
+		add_estate_loyalty = {
+			estate = estate_nomadic_aristocracy
+			loyalty = $loyalty$
+		}
+	}
+	if = {
+		limit = { has_estate = estate_mamluks }
+		add_estate_loyalty = {
+			estate = estate_mamluks
+			loyalty = $loyalty$
+		}
+	}
+	if = {
+		limit = { has_estate = estate_janissaries }
+		add_estate_loyalty = {
+			estate = estate_janissaries
+			loyalty = $loyalty$
+		}
+	}
+	if = {
+		limit = { has_estate = estate_ghilman }
+		add_estate_loyalty = {
+			estate = estate_ghilman
 			loyalty = $loyalty$
 		}
 	}

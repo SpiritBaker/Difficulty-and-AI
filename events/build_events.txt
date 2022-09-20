@@ -753,3 +753,141 @@ country_event = {
 	option = {
 	}
 }
+
+country_event = { # Autonomy decreased
+	id = build_events.5
+	title = build_events.4.t
+	desc = build_events.4.d
+	picture = INVENTION_eventPicture
+	#hidden = yes
+	
+	trigger = {
+		any_owned_province = {
+			OR = {
+				AND = {
+					has_building = university
+					NOT = { has_province_modifier = dif_university_dev_cost }
+				}
+				AND = {
+					area = {
+						owned_by = ROOT
+						has_building = university
+					}
+					NOT = { has_province_modifier = dif_university_dev_cost }
+				}
+				AND = {
+					OR = {
+						has_building = coastal_defence
+						has_building = naval_battery
+					} 
+					NOT = { has_province_modifier = dif_university_dev_cost }
+				}
+				AND = {
+					area = {
+						owned_by = ROOT
+						OR = {
+							has_building = coastal_defence
+							has_building = naval_battery
+						} 
+					}
+					NOT = { has_province_modifier = dif_university_dev_cost }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_building = university
+							NOT = { has_province_modifier = dif_university_dev_cost }
+						}
+						AND = {
+							area = {
+								owned_by = ROOT
+								has_building = university
+							}
+							NOT = { has_province_modifier = dif_university_dev_cost }
+						}
+					}
+				}
+				area = { 
+					limit = {
+						OR = {
+							AND = {
+								has_building = university
+								NOT = { has_province_modifier = dif_university_dev_cost }
+							}
+							AND = {
+								area = {
+									owned_by = ROOT
+									has_building = university
+								}
+								NOT = { has_province_modifier = dif_university_dev_cost }
+							}
+						}
+					}
+					add_province_modifier = {
+						name = dif_university_dev_cost
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							OR = {
+								has_building = coastal_defence
+								has_building = naval_battery
+							} 
+							NOT = { has_province_modifier = dif_university_dev_cost }
+						}
+						AND = {
+							area = {
+								owned_by = ROOT
+								OR = {
+									has_building = coastal_defence
+									has_building = naval_battery
+								} 
+							}
+							NOT = { has_province_modifier = dif_university_dev_cost }
+						}
+					}
+				}
+				area = { 
+					limit = {
+						OR = {
+							AND = {
+								OR = {
+									has_building = coastal_defence
+									has_building = naval_battery
+								} 
+								NOT = { has_province_modifier = dif_university_dev_cost }
+							}
+							AND = {
+								area = {
+									owned_by = ROOT
+									OR = {
+										has_building = coastal_defence
+										has_building = naval_battery
+									} 
+								}
+								NOT = { has_province_modifier = dif_university_dev_cost }
+							}
+						}
+					}
+					add_province_modifier = {
+						name = block_slave_raid_area_m
+						duration = -1
+					}
+				}
+			}
+		}
+	}	
+	option = {
+	}
+}
