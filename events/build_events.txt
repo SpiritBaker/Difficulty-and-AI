@@ -762,6 +762,7 @@ country_event = { # Autonomy decreased
 	#hidden = yes
 	
 	trigger = {
+		always = no
 		any_owned_province = {
 			OR = {
 				AND = {

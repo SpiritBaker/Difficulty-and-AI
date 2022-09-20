@@ -2446,7 +2446,7 @@ fort_18th = {
 
 manufactory = {
 	cost = 500
-	time = 1
+	time = 60
 	modifier = {
 		trade_goods_size = 1.0
 	}
