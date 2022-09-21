@@ -509,12 +509,6 @@ manchu_missions_2 = {
 		icon = mission_unite_home_region
 		required_missions = {  }
 		completed_by = 1616.1.1
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 730

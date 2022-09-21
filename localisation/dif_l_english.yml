@@ -253,6 +253,8 @@
  uzb_invade_herat_desc:0 ""
  struggle_among_jurchens_mission_title:0 "Struggle Among Tribes"
  struggle_among_jurchens_mission_desc:0 "Our Jurchen neighbors are constantly at odds with us. We must become the most powerful Manchu tribe."
+ block_slave_raid_area_m:0 "Local Coastal Defence"
+ new_owner:0 "Owner"
 
  #Events
  dif_nomad_events.1.t:0 "Conversion to Vajrayana"
@@ -286,6 +288,8 @@
  OLD_MONGOLIAN_CULTURAL_CENTER:0 "Mongolian Cultural Center: §Y$VAL$%§!"
  EST_VAL_NOMAD:0 "Nomad Nation: §Y$VAL$%§!"
  farm_estate_landowners_tt:0 "§G+25%§! §YLocal Manpower§! modifier is added upon construction of §YFarm Estate§! buildings."
+ dif_university_dev_cost_tt:0 "Statewide Local Development Cost: §G-10.0%§!"
+ block_slave_raid_area_m_tt:0 "Statewide Block on Slave Raids"
 
 
  #Dif_Formables
@@ -384,3 +388,4 @@
  merc_yemen_company:0 "Yemen Company"
  merc_baluchi_auxiliaries:0 "Baluchi Auxiliaries"
  merc_ghilman_royal_guard:0 "Ghilman Royal Guard"
+

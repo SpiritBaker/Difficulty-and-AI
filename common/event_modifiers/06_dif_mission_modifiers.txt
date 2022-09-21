@@ -55,7 +55,7 @@ jap_sengoku_jidai_shogun = {
 	reduced_liberty_desire = -10	
 }
 dif_university_dev_cost = {
-	local_development_cost_modifier = -0.05
+	local_development_cost = -0.10
 }
 block_slave_raid_area_m = {
 	block_slave_raid = yes
