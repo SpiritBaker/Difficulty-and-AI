@@ -56,6 +56,8 @@ on_province_owner_change_building_area_effect = {
 			remove_province_modifier = dif_university_dev_cost
 		}
 	}
+	
+	owner = { save_event_target_as = new_owner }
 	if = { #block_slave_raid_area_m
 		limit = {
 			OR = {
@@ -63,8 +65,6 @@ on_province_owner_change_building_area_effect = {
 				has_building = naval_battery
 			}
 		}
-		
-		owner = { save_event_target_as = new_owner }
 		area = {
 			if = {
 				limit = {
@@ -105,7 +105,7 @@ on_province_owner_change_building_area_effect = {
 		if = {
 			limit = {
 				area_for_scope_province = {
-					owned_by = FROM
+					owned_by = event_target:new_owner
 					OR = {
 						has_building = coastal_defence
 						has_building = naval_battery
