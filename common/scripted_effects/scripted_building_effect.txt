@@ -101,4 +101,35 @@ on_province_owner_change_building_area_effect = {
 			}
 		}
 	}
+	else = {
+		if = {
+			limit = {
+				area_for_scope_province = {
+					owned_by = FROM
+					OR = {
+						has_building = coastal_defence
+						has_building = naval_battery
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_port = yes
+					NOT = { has_province_modifier = block_slave_raid_area_m }
+				}
+				add_province_modifier = {
+					name = block_slave_raid_area_m
+					duration = -1
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					has_province_modifier = block_slave_raid_area_m
+				}
+				remove_province_modifier = block_slave_raid_area_m
+			}
+		}
+	}
 }
