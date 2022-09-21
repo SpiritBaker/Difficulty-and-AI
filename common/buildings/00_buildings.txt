@@ -668,17 +668,11 @@ coastal_defence = {
 		if = {
 			limit = {
 				NOT = {
-					calc_true_if = {
-						amount = 2 #not sure if the building is destroyed before the on_destroyed effect is triggered
-						
-						area_for_scope_province = {
-							type = all
-							
-							owned_by = event_target:new_owner
-							OR = {
-								has_building = coastal_defence
-								has_building = naval_battery
-							}
+					area_for_scope_province = {
+						owned_by = FROM
+						OR = {
+							has_building = coastal_defence
+							has_building = naval_battery
 						}
 					}
 				}
@@ -1126,9 +1120,14 @@ naval_battery = {
 		hostile_fleet_attrition = 5
 	}
 	on_built = {
-		every_province_in_state = {
+		owner = { save_event_target_as = new_owner }
+		area = {
 			if = {
-				limit = { has_port = yes }
+				limit = {
+					owned_by = event_target:new_owner
+					has_port = yes
+					NOT = { has_province_modifier = block_slave_raid_area_m }
+				}
 				add_province_modifier = {
 					name = block_slave_raid_area_m
 					duration = -1
@@ -1137,12 +1136,27 @@ naval_battery = {
 		}
 	}
 	on_destroyed = {
-		every_province_in_state = {
-			if = {
-				limit = {
-					has_province_modifier = block_slave_raid_area_m
+		owner = { save_event_target_as = new_owner }
+		if = {
+			limit = {
+				NOT = {
+					area_for_scope_province = {
+						owned_by = FROM
+						OR = {
+							has_building = coastal_defence
+							has_building = naval_battery
+						}
+					}
 				}
-				remove_province_modifier = block_slave_raid_area_m
+			}
+			area = {
+				if = {
+					limit = {
+						owned_by = event_target:new_owner
+						has_province_modifier = block_slave_raid_area_m
+					}
+					remove_province_modifier = block_slave_raid_area_m
+				}
 			}
 		}
 	}
