@@ -288,3 +288,55 @@ estate_ghilman_caucasus_recruits = {
 		}
 	}
 }
+
+estate_ghilman_castle_barracks = {
+	icon = privilege_better_integration
+	max_absolutism = -10
+	land_share = 5
+	loyalty = 0.05
+	influence = 0.1
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = fort_barracks_manpower_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_fort_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = fort_barracks_manpower_m
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = fort_barracks_manpower_m
+				}
+				remove_province_modifier = fort_barracks_manpower_m
+			}
+		}
+	}
+	on_invalid = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = fort_barracks_manpower_m
+				}
+				remove_province_modifier = fort_barracks_manpower_m
+			}
+		}
+	}
+	penalties = {
+		nobles_loyalty_modifier = -0.05
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}

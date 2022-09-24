@@ -1764,6 +1764,105 @@ on_province_owner_change_estate_privileges_effect = {
 			remove_province_modifier = farm_estate_manpower_m
 		}
 	}
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_estate_privilege = estate_burghers_dock_trade_power
+					has_estate_privilege = estate_vaisyas_dock_trade_power
+					has_estate_privilege = estate_jains_dock_trade_power
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_dock_building_trigger = yes
+				NOT = { has_province_modifier = dock_trade_power_m } 
+			}
+			add_province_modifier = {
+				name = dock_trade_power_m
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				NOT = { has_estate_privilege = estate_burghers_dock_trade_power }
+				NOT = { has_estate_privilege = estate_vaisyas_dock_trade_power }
+				NOT = { has_estate_privilege = estate_jains_dock_trade_power }
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = dock_trade_power_m
+			}
+			remove_province_modifier = dock_trade_power_m
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_estate_privilege = estate_ghilman_castle_barracks
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_fort_building_trigger = yes
+				NOT = { has_province_modifier = fort_barracks_manpower_m } 
+			}
+			add_province_modifier = {
+				name = fort_barracks_manpower_m
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				NOT = { has_estate_privilege = estate_ghilman_castle_barracks }
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = fort_barracks_manpower_m
+			}
+			remove_province_modifier = fort_barracks_manpower_m
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_sedentary_subjects_marketplace_bonus
+			}
+		}
+		if = {
+			limit = {
+				has_trade_building_trigger = yes
+				NOT = { has_province_modifier = marketplace_bonus_m } 
+				province_has_center_of_trade_of_level = 1
+			}
+			add_province_modifier = {
+				name = marketplace_bonus_m
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				NOT = { has_estate_privilege = estate_sedentary_subjects_marketplace_bonus }
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = marketplace_bonus_m
+			}
+			remove_province_modifier = marketplace_bonus_m
+		}
+	}
 }
 
 on_province_tax_building_built_estate_privileges_effect = {

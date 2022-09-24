@@ -84,6 +84,7 @@ merc_tuscan_free_company = {
 # Black Army (Hungary)
 merc_black_army = {
 	regiments_per_development = 0.04
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	cavalry_weight = 0.4
     artillery_weight = 0.2
 	#cavalry_cap = 4
@@ -105,6 +106,7 @@ merc_black_army = {
 # Black Army Reserves (Hungary)
 merc_black_army_2 = {
 	regiments_per_development = 0.04
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	cavalry_weight = 0.4
     artillery_weight = 0.2
 	#cavalry_cap = 4
@@ -2441,6 +2443,9 @@ merc_frisian_free_company = {
 			has_country_modifier = swedish_mercenary_core
 			has_country_modifier = mercenaries_to_the_standard
 			has_country_modifier = glut_of_mercs
+			has_unlocked_merc_company = {
+				merc_company = merc_frisian_free_company
+			}
 		}
 		OR = {
 			4382 = { country_or_non_sovereign_subject_holds = ROOT }

@@ -63,3 +63,12 @@ block_slave_raid_area_m = {
 farm_estate_manpower_m = {
 	local_manpower_modifier = 0.25
 }
+dock_trade_power_m = {
+	province_trade_power_modifier = 0.25
+}
+fort_barracks_manpower_m = {
+	local_manpower_modifier = 0.25
+}
+marketplace_bonus_m = {
+	local_production_efficiency = 0.25
+}

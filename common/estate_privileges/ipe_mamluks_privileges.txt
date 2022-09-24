@@ -437,9 +437,9 @@ estate_mamluks_recruit_from_tribes = {
 
 estate_mamluks_landowners = {
 	icon = privilege_better_integration
-	max_absolutism = -5
-	land_share = 10
-	loyalty = 0.1
+	max_absolutism = -10
+	land_share = 5
+	loyalty = 0.05
 	influence = 0.1
 	can_select = {
 	}

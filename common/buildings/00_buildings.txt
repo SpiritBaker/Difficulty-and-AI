@@ -33,14 +33,28 @@ marketplace = {
 		province_trade_power_modifier = 0.5
 	}
 	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					has_estate_privilege = estate_sedentary_subjects_marketplace_bonus
+				}
+			}
+			add_province_modifier = {
+				name = marketplace_bonus_m
+				duration = -1
+			}
+		}
 		add_development_from_building = {
 			building = marketplace
 			type = production
 			value = 1
 		}
-		
 	}
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = marketplace_bonus_m }
+			remove_province_modifier = marketplace_bonus_m
+		}
 		remove_development_from_building = {
 			building = marketplace
 			type = production
@@ -471,6 +485,17 @@ fort_15th = {
 	on_built = {
 		if = {
 			limit = {
+				FROM = {
+					has_estate_privilege = estate_ghilman_castle_barracks
+				}
+			}
+			add_province_modifier = {
+				name = fort_barracks_manpower_m
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
 				FROM = { NOT = { mil_tech = 14 } has_government_attribute = on_fort_built_nobles_loyalty }
 			}
 			FROM = {
@@ -501,12 +526,52 @@ fort_15th = {
 						loyalty = 5
 					}
 				}
+				if = {
+					limit = {
+						has_estate = estate_mamluks
+					}
+					add_estate_loyalty = {
+						estate = estate_mamluks
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_janissaries
+					}
+					add_estate_loyalty = {
+						estate = estate_janissaries
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_ghilman
+					}
+					add_estate_loyalty = {
+						estate = estate_ghilman
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = nomadic_aristocracy
+					}
+					add_estate_loyalty = {
+						estate = nomadic_aristocracy
+						loyalty = 5
+					}
+				}
 			}
 		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = fort_barracks_manpower_m }
+			remove_province_modifier = fort_barracks_manpower_m
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
@@ -552,24 +617,14 @@ fort_15th = {
 			factor = 0
 			any_neighbor_province = {
 				owned_by = FROM
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 			NOT = { is_capital = yes }			
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 			NOT = { is_capital = yes }
 		}
@@ -635,12 +690,10 @@ coastal_defence = {
 	time = 12
 	build_trigger = {
 		has_port = yes
-		OR = {
-			has_building = fort_15th
-			has_building = fort_16th
-			has_building = fort_17th
-			has_building = fort_18th
-		}
+		has_fort_building_trigger = yes
+	}
+	keep_trigger = {
+		has_fort_building_trigger = yes
 	}
 	modifier = {
 		blockade_force_required = 0.5
@@ -694,12 +747,7 @@ coastal_defence = {
 		modifier = {
 			factor = 0
 			NOT = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 		}
 	}
@@ -780,6 +828,21 @@ dock = {
 		if = {
 			limit = {
 				FROM = {
+					OR = {
+						has_estate_privilege = estate_burghers_dock_trade_power
+						has_estate_privilege = estate_vaisyas_dock_trade_power
+						has_estate_privilege = estate_jains_dock_trade_power
+					}
+				}
+			}
+			add_province_modifier = {
+				name = dock_trade_power_m
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
 					has_reform = corvee_reform
 				}
 			}
@@ -796,6 +859,10 @@ dock = {
 	
 	on_destroyed = {
 		if = {
+			limit = { has_province_modifier = dock_trade_power_m }
+			remove_province_modifier = dock_trade_power_m
+		}
+		if = {
 			limit = {
 				FROM = {
 					has_reform = corvee_reform
@@ -811,6 +878,7 @@ dock = {
 			value = 1
 		}
 	}
+
 	on_obsolete = {
 	}
 
@@ -946,7 +1014,18 @@ fort_16th = {
 	on_built = {
 		if = {
 			limit = {
-				FROM = { NOT = { mil_tech = 19 } has_government_attribute = on_fort_built_nobles_loyalty }
+				FROM = {
+					has_estate_privilege = estate_ghilman_castle_barracks
+				}
+			}
+			add_province_modifier = {
+				name = fort_barracks_manpower_m
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = { NOT = { mil_tech = 14 } has_government_attribute = on_fort_built_nobles_loyalty }
 			}
 			FROM = {
 				if = {
@@ -976,12 +1055,52 @@ fort_16th = {
 						loyalty = 5
 					}
 				}
+				if = {
+					limit = {
+						has_estate = estate_mamluks
+					}
+					add_estate_loyalty = {
+						estate = estate_mamluks
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_janissaries
+					}
+					add_estate_loyalty = {
+						estate = estate_janissaries
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_ghilman
+					}
+					add_estate_loyalty = {
+						estate = estate_ghilman
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = nomadic_aristocracy
+					}
+					add_estate_loyalty = {
+						estate = nomadic_aristocracy
+						loyalty = 5
+					}
+				}
 			}
 		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = fort_barracks_manpower_m }
+			remove_province_modifier = fort_barracks_manpower_m
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
@@ -1027,24 +1146,14 @@ fort_16th = {
 			factor = 0
 			any_neighbor_province = {
 				owned_by = FROM
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 			NOT = { is_capital = yes }			
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 			NOT = { is_capital = yes }
 		}
@@ -1114,6 +1223,14 @@ naval_battery = {
 			has_building = fort_18th
 		}
 	}
+	keep_trigger = {
+		OR = {
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+		}
+	}
 	modifier = {
 		blockade_force_required = 1.0
 		hostile_disembark_speed = 2.0
@@ -1167,12 +1284,7 @@ naval_battery = {
 		modifier = {
 			factor = 0
 			NOT = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 		}
 	}
@@ -1290,7 +1402,6 @@ university = {
 	cost = 500
 	time = 24
 	modifier = {
-		local_governing_cost_increase = -10
 		local_development_cost_modifier = -0.1
 		allowed_num_of_buildings = 1
 	}
@@ -1478,6 +1589,17 @@ trade_depot = {
 	}
 
 	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					has_estate_privilege = estate_sedentary_subjects_marketplace_bonus
+				}
+			}
+			add_province_modifier = {
+				name = marketplace_bonus_m
+				duration = -1
+			}
+		}
 		add_development_from_upgrading_or_building = {
 			building = trade_depot
 			obsolete_building = marketplace
@@ -1487,6 +1609,10 @@ trade_depot = {
 		}
 	}
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = marketplace_bonus_m }
+			remove_province_modifier = marketplace_bonus_m
+		}
 		remove_development_from_building = {
 			building = trade_depot
 			type = production
@@ -1756,7 +1882,18 @@ fort_17th = {
 	on_built = {
 		if = {
 			limit = {
-				FROM = { NOT = { mil_tech = 19 } has_government_attribute = on_fort_built_nobles_loyalty }
+				FROM = {
+					has_estate_privilege = estate_ghilman_castle_barracks
+				}
+			}
+			add_province_modifier = {
+				name = fort_barracks_manpower_m
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = { NOT = { mil_tech = 14 } has_government_attribute = on_fort_built_nobles_loyalty }
 			}
 			FROM = {
 				if = {
@@ -1786,12 +1923,52 @@ fort_17th = {
 						loyalty = 5
 					}
 				}
+				if = {
+					limit = {
+						has_estate = estate_mamluks
+					}
+					add_estate_loyalty = {
+						estate = estate_mamluks
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_janissaries
+					}
+					add_estate_loyalty = {
+						estate = estate_janissaries
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_ghilman
+					}
+					add_estate_loyalty = {
+						estate = estate_ghilman
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = nomadic_aristocracy
+					}
+					add_estate_loyalty = {
+						estate = nomadic_aristocracy
+						loyalty = 5
+					}
+				}
 			}
 		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = fort_barracks_manpower_m }
+			remove_province_modifier = fort_barracks_manpower_m
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
@@ -1837,24 +2014,14 @@ fort_17th = {
 			factor = 0
 			any_neighbor_province = {
 				owned_by = FROM
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 			NOT = { is_capital = yes }			
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 			NOT = { is_capital = yes }
 		}
@@ -1926,6 +2093,17 @@ stock_exchange = {
 	on_built = {
 		if = {
 			limit = {
+				FROM = {
+					has_estate_privilege = estate_sedentary_subjects_marketplace_bonus
+				}
+			}
+			add_province_modifier = {
+				name = marketplace_bonus_m
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
 				has_province_flag = built_dev_trade_depot
 			}
 			add_development_from_building = {
@@ -1953,6 +2131,10 @@ stock_exchange = {
 		}
 	}
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = marketplace_bonus_m }
+			remove_province_modifier = marketplace_bonus_m
+		}
 		remove_development_from_building = {
 			building = stock_exchange
 			type = production
@@ -2172,6 +2354,21 @@ drydock = {
 		if = {
 			limit = {
 				FROM = {
+					OR = {
+						has_estate_privilege = estate_burghers_dock_trade_power
+						has_estate_privilege = estate_vaisyas_dock_trade_power
+						has_estate_privilege = estate_jains_dock_trade_power
+					}
+				}
+			}
+			add_province_modifier = {
+				name = dock_trade_power_m
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
 					has_reform = corvee_reform
 				}
 			}
@@ -2179,16 +2376,18 @@ drydock = {
 				add_sailors = 200
 			}
 		}
-		add_development_from_upgrading_or_building = {
-			building = drydock
-			obsolete_building = dock
+		add_development_from_building = {
+			building = dock
 			type = production
-			value = 2
-			upgrade_value = 1
+			value = 1
 		}
 	}
 	
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = dock_trade_power_m }
+			remove_province_modifier = dock_trade_power_m
+		}
 		if = {
 			limit = {
 				FROM = {
@@ -2200,9 +2399,9 @@ drydock = {
 			}
 		}
 		remove_development_from_building = {
-			building = drydock
+			building = dock
 			type = production
-			value = 2
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -2351,7 +2550,18 @@ fort_18th = {
 	on_built = {
 		if = {
 			limit = {
-				FROM = { has_government_attribute = on_fort_built_nobles_loyalty }
+				FROM = {
+					has_estate_privilege = estate_ghilman_castle_barracks
+				}
+			}
+			add_province_modifier = {
+				name = fort_barracks_manpower_m
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = { NOT = { mil_tech = 14 } has_government_attribute = on_fort_built_nobles_loyalty }
 			}
 			FROM = {
 				if = {
@@ -2381,12 +2591,52 @@ fort_18th = {
 						loyalty = 5
 					}
 				}
+				if = {
+					limit = {
+						has_estate = estate_mamluks
+					}
+					add_estate_loyalty = {
+						estate = estate_mamluks
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_janissaries
+					}
+					add_estate_loyalty = {
+						estate = estate_janissaries
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_ghilman
+					}
+					add_estate_loyalty = {
+						estate = estate_ghilman
+						loyalty = 5
+					}
+				}
+				if = {
+					limit = {
+						has_estate = nomadic_aristocracy
+					}
+					add_estate_loyalty = {
+						estate = nomadic_aristocracy
+						loyalty = 5
+					}
+				}
 			}
 		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = fort_barracks_manpower_m }
+			remove_province_modifier = fort_barracks_manpower_m
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
@@ -2432,24 +2682,14 @@ fort_18th = {
 			factor = 0
 			any_neighbor_province = {
 				owned_by = FROM
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 			NOT = { is_capital = yes }			
 		}
 		modifier = {
 			factor = 0.5
 			any_neighbor_province = {
-				OR = {
-					has_building = fort_15th
-					has_building = fort_16th
-					has_building = fort_17th
-					has_building = fort_18th
-				}
+				has_fort_building_trigger = yes
 			}
 			NOT = { is_capital = yes }
 		}
@@ -3024,21 +3264,11 @@ ramparts = {
 	#	all
 	#}
 	build_trigger = {
-		OR = {
-			has_building = fort_15th
-			has_building = fort_16th
-			has_building = fort_17th
-			has_building = fort_18th
-		}
+		has_fort_building_trigger = yes
 	}
 	
 	keep_trigger = {
-		OR = {
-			has_building = fort_15th
-			has_building = fort_16th
-			has_building = fort_17th
-			has_building = fort_18th
-		}
+		has_fort_building_trigger = yes
 	}	
 
 	modifier = {

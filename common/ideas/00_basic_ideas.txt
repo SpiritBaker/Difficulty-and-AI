@@ -42,7 +42,7 @@ aristocracy_ideas = {
 	}
 	international_nobility = {
 		diplomats = 1
-		general_cost = -0.25
+		general_cost = -0.1
 	}
 	noble_resilience = {
 		cavalry_shock = 0.1
@@ -261,7 +261,8 @@ theocracy_gov_ideas = {
 		fire_damage_received = -0.1
 	}
 	friends_in_high_places = {
-		leader_cost = -0.2
+		leader_cost = -0.1
+		war_exhaustion_cost = -0.33
 	}
 	flesh_is_weak = {
 		land_morale = 0.1
@@ -1222,8 +1223,7 @@ maritime_ideas = {
 
 	bonus = {
 		sea_repair = yes
-		movement_speed_in_fleet_modifier = 1
-		merchants = 1 
+		movement_speed_in_fleet_modifier = 1 
 	}
 
 	merchant_traditions = {
@@ -1244,7 +1244,7 @@ maritime_ideas = {
 	}
 	ships_penny = {
 		light_ship_power = 0.10
-		global_ship_cost = -0.1
+		merchants = 1 
 	}
 	sea_hawks = {
 		free_leader_pool = 1
@@ -1853,7 +1853,7 @@ naval_ideas = {
 	}
 
 	bonus = {
-		global_naval_barrage_cost = -1
+		global_naval_barrage_cost = -0.5
 		disengagement_chance = 0.15
 	}
 

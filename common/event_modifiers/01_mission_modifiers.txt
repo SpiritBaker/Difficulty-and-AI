@@ -4208,7 +4208,7 @@ hun_hungary_poland = {
 }
 
 hun_supreme_black_army = {
-	mercenary_discipline = 0.03
+	mercenary_discipline = 0.05
 	core_creation = -0.1
 }
 
@@ -6302,7 +6302,7 @@ son_modern_government = {	#Permanent
 #Country modifier
 son_embrace_legalism = {
 	church_loyalty_modifier = 0.25
-	monthly_piety = 0.01
+	monthly_piety = 0.0025
 }
 
 #Country modifier

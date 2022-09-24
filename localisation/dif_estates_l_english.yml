@@ -187,7 +187,9 @@
  estate_ghilman_caucasus_recruits: "Caucasian Ghulams"
  estate_ghilman_caucasus_recruits_desc: "We can expand Ghulams ranks by pressing heathens into our service and converting them to Islam."
  estate_ghilman_caucasus_recruits_mod: "Caucasian Recruits"
- 
+ estate_ghilman_castle_barracks: "Castle Barracks"
+ estate_ghilman_castle_barracks: ""
+
  EST_CONTROL_OVER_CAUCASIA: "Control over Caucasus"
 
  #Estates
@@ -229,6 +231,8 @@
  sedentary_subjects_weapons_tribute_desc:0 "Our armies require a constant supply of Weapons and Armour; we can force our subjects to pay a special tax in the form of already made goods."
  sedentary_subjects_protection_of_trade_routes:0 "Protection of Trade Routes"
  sedentary_subjects_protection_of_trade_routes_desc:0 "By providing protection to merchant caravans we can promote trade in our lands."
+ estate_sedentary_subjects_marketplace_bonus:0 "Patranoge of Artisan"
+ estate_sedentary_subjects_marketplace_bonus_desc:0 ""
  estate_nomadic_aristocracy_unrestricted_looting:0 "Unrestricted Looting"
  estate_nomadic_aristocracy_unrestricted_looting_desc:0 ""
  EST_VAL_ARISTOCRATIC_ARMY:0 "Traditional Ways: §Y$VAL$%§!"
@@ -242,7 +246,13 @@
  estate_nomadic_tribes_raise_tribal_levies:0 "Raise Tribal Levies"
  estate_nomadic_tribes_raise_tribal_levies_desc:0 "We can push additional tribal horsemen into our service. Nomadic lifestyle creates hardy warriors, but Clans might take this act as threat to their autonomy."
  
- 
+ estate_burghers_dock_trade_power:0 "Promote Local Maritime Trade"
+ estate_burghers_dock_trade_power_desc:0 ""
+ estate_vaisyas_dock_trade_power:0 "Promote Local Maritime Trade"
+ estate_vaisyas_dock_trade_power_desc:0 ""
+ estate_jains_dock_trade_power:0 "Promote Local Maritime Trade"
+ estate_jains_dock_trade_power_desc:0 ""
+
  #Agendas
  nomadic_aristocracy_build_army_building_in_y:0 "Expand Military Infrastructure in [agenda_province.GetName]"
  nomadic_aristocracy_build_fort_building_in_y:0 "Fortify [agenda_province.GetName]"

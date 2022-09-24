@@ -17,6 +17,7 @@ norse_ideas = {
 	trigger = {
 		primary_culture = norse
 		religion = norse_pagan_reformed
+		NOT = { has_country_flag = refused_norse_ideas }
 	}
 	free = yes
 	
@@ -156,7 +157,7 @@ ENG_ideas = {
 	}
 	eng_red_coats = {
 		fire_damage = 0.1
-		allowed_marine_fraction = 0.1
+		allowed_marine_fraction = 0.15
 	}
 	sick_and_hurt_board = {
 		sailors_recovery_speed = 0.10
@@ -666,7 +667,7 @@ SPA_ideas = {
 CAS_ideas = {
 	start = {
 		land_morale = 0.15
-		allowed_marine_fraction = 0.1
+		allowed_marine_fraction = 0.15
 	}
 	bonus = {
 		global_colonial_growth = 25
@@ -1229,7 +1230,7 @@ VEN_ideas = {
 	
 	bonus = {
 		galley_power = 0.25
-		allowed_marine_fraction = 0.1
+		allowed_marine_fraction = 0.15
 	}
 	
 	trigger = {

@@ -2223,6 +2223,12 @@ estate_nobles_levies = {
 			}
 			NOT = { has_estate_privilege = estate_maratha_levies }
 		}
+		if = {
+			limit = {
+				has_estate = estate_maratha
+			}
+			NOT = { has_estate_privilege = estate_maratha_levies_for_muslims }
+		}
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.10
@@ -4532,6 +4538,7 @@ estate_maratha_levies = {
 			}
 			NOT = { has_estate_privilege = estate_nobles_levies }
 		}
+		NOT = { has_estate_privilege = estate_maratha_levies_for_muslims }
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.10
@@ -10135,7 +10142,7 @@ estate_church_brahmins_at_court = {
 	on_granted_province = {
 		if = {
 			limit = {
-				religion = hinduism
+				religion_group = dharmic
 			}
 			add_province_modifier = {
 				name = estate_brahmins_guaranteed_autonomy_mod

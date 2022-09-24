@@ -195,6 +195,7 @@ estate_ghilman = {
 		estate_ghilman_promote_leadership
 		estate_ghilman_recruit_from_tribes
 		estate_ghilman_caucasus_recruits
+		estate_ghilman_castle_barracks
 	}
 	
 	agendas = {

@@ -14,7 +14,6 @@ estate_janissaries_janissary_primacy_mod = {
 }
 
 estate_ghilman_caucasus_recruits_mod = {
-	is_janissary_modifier = yes
-	discipline = 0.05
-	land_maintenance_modifier = 0.20
+	discipline = 0.025
+	land_maintenance_modifier = 0.05
 }

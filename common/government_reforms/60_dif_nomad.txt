@@ -28,8 +28,8 @@ nomad_empire = {
 	custom_attributes = {
 		enables_horde_idea_group = yes
 		enables_aristocratic_idea_group = no
-		disables_nobility = yes
-		disables_burghers = yes
+		disables_estate_nobles = yes
+		disables_estate_burghers = yes
 		
 	}
 	ai = {
@@ -76,8 +76,8 @@ khanate_monarchy = {
 	custom_attributes = {
 		enables_horde_idea_group = yes
 		enables_aristocratic_idea_group = no
-		disables_nobility = yes
-		disables_burghers = yes
+		disables_estate_nobles = yes
+		disables_estate_burghers = yes
 	}
 	ai = {
 		factor = 10

@@ -1170,7 +1170,7 @@ army_organiser_boost = {
 }
 
 commandant_boost = {
-	discipline = 0.03
+	discipline = 0.05
 }
 
 quartermaster_boost = {
@@ -1292,7 +1292,7 @@ bad_discipline = {
 }
 
 good_discipline = {
-	discipline = 0.03
+	discipline = 0.025
 }
 
 local_fortress = {
@@ -2914,7 +2914,7 @@ tur_janissaries_salary = {
 }
 
 enderun_academy = {
-	discipline = 0.03
+	discipline = 0.025
 }
 
 expanded_timariot_system = {
@@ -2987,7 +2987,7 @@ janissaries_denied_reward = {
 
 strictly_enforced_janissary_discipline = {
 	is_janissary_modifier = yes
-	discipline = 0.03
+	discipline = 0.025
 }
 
 non_christian_janissaries = {
@@ -3004,7 +3004,7 @@ increased_janissary_recruitment = {
 
 janissary_landholders = {
 	is_janissary_modifier = yes
-	discipline = -0.03
+	discipline = -0.025
 }
 
 janissaries_upset = {
@@ -3025,7 +3025,7 @@ janissary_coup_pay = {
 tur_janissary = {
 	manpower_recovery_speed = 0.1
 	infantry_power = 0.05
-	discipline = 0.03
+	discipline = 0.025
 }
 
 hun_black_army = {
@@ -4627,7 +4627,7 @@ azt_templo_mayor = {
 }
 
 azt_sumptuary_laws = {
-	discipline = 0.03
+	discipline = 0.025
 	war_exhaustion = -0.05
 }
 
@@ -5168,7 +5168,7 @@ medium_laws_usa = {
 }
 
 mild_laws_usa = {
-	discipline = -0.03
+	discipline = -0.025
 	global_unrest = -1
 }
 
@@ -6496,7 +6496,7 @@ inti_shrine_of_virocacha = {
 
 inti_royal_guard = {
 	land_morale = 0.05
-	discipline = 0.03
+	discipline = 0.025
 	global_unrest = 0.5
 }
 
@@ -8406,7 +8406,7 @@ gun_designer_ruler = {
 }
 
 military_perfectionism = {
-	discipline = 0.03
+	discipline = 0.025
 	global_manpower_modifier = -0.15
 }
 
@@ -8654,7 +8654,7 @@ bold_warriors = {
 }
 
 disciplined_warriors = {
-	discipline = 0.03
+	discipline = 0.025
 }
 
 fertility_concerns = {
@@ -8678,7 +8678,7 @@ the_whim_of_anansi = {
 }
 
 warrior_of_the_sun = {
-	discipline = 0.03
+	discipline = 0.025
 }
 
 observatory_building = {
@@ -8710,11 +8710,11 @@ displeased_the_wotan = {
 }
 
 greed_of_freyja = {
-	discipline = -0.03
+	discipline = -0.025
 }
 
 freyjas_chosen = {
-	discipline = 0.03
+	discipline = 0.025
 }
 
 beloved_diplomats = {
@@ -9641,7 +9641,7 @@ standardized_uniforms_modifier = {
 
 elite_revolutionary_guard_modifier = {
 	is_revolutionary_guard_modifier = yes
-	discipline = 0.03
+	discipline = 0.025
 	land_maintenance_modifier = 1.0
 }
 
@@ -10498,7 +10498,7 @@ look_up_purbias = {
 
 look_up_purbias_upgraded = {
 	is_rajput_modifier = yes
-	discipline = 0.03
+	discipline = 0.05
 	fire_damage = 0.1
 }
 
@@ -10834,7 +10834,7 @@ mayan_ufo_support = {
 }
 
 swiss_guard_last_stand = {
-	discipline = 0.03
+	discipline = 0.05
 }
 
 expelled_minority = {
@@ -11713,8 +11713,8 @@ its_not_gold = {
 }
 
 the_rule_of_god = {
-	land_morale = 0.25
-	discipline = 0.03
+	land_morale = 0.05
+	discipline = 0.05
 }
 
 le_prophete = {

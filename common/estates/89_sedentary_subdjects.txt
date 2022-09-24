@@ -170,6 +170,7 @@ sedentary_subdjects = {
 		sedentary_subjects_guarantee_religious_freedom
 		sedentary_subjects_weapons_tribute
 		sedentary_subjects_protection_of_trade_routes
+		estate_sedentary_subjects_marketplace_bonus
 	}
 
 	agendas = {
