@@ -17,6 +17,7 @@ country_decisions = {
 				
 				is_capital = no
 				NOT = { province_group = strait_provinces }
+				NOT = { has_province_flag = removed_fort }
 				NOT = { nationalism = 1 }
 				
 				any_neighbor_province = {
@@ -27,6 +28,7 @@ country_decisions = {
 						has_building = fort_17th
 						has_building = fort_18th
 					}
+					NOT = { has_province_flag = removed_fort }
 					NOT = { nationalism = 1 }
 				}
 			}
@@ -44,6 +46,7 @@ country_decisions = {
 					
 					is_capital = no
 					NOT = { province_group = strait_provinces }
+					NOT = { has_province_flag = removed_fort }
 					NOT = { nationalism = 1 }
 					
 					any_neighbor_province = {
@@ -54,6 +57,7 @@ country_decisions = {
 							has_building = fort_17th
 							has_building = fort_18th
 						}
+						NOT = { has_province_flag = removed_fort }
 						NOT = { nationalism = 1 }
 					}
 				}
@@ -69,6 +73,7 @@ country_decisions = {
 							has_building = fort_17th
 							has_building = fort_18th
 						}
+						NOT = { has_province_flag = removed_fort }
 						NOT = { nationalism = 1 }
 					}
 					
@@ -94,8 +99,10 @@ country_decisions = {
 				if = { #mountain
 					limit = {
 						event_target:fort_one = {
-							has_terrain = mountain
-							has_terrain = desert_mountains
+							OR = {
+								has_terrain = mountain
+								has_terrain = desert_mountains
+							}
 						}
 						event_target:fort_two = {
 							NOT = {
@@ -112,8 +119,10 @@ country_decisions = {
 				else_if = {
 					limit = {
 						event_target:fort_two = {
-							has_terrain = mountain
-							has_terrain = desert_mountains
+							OR = {
+								has_terrain = mountain
+								has_terrain = desert_mountains
+							}
 						}
 						event_target:fort_one = {
 							NOT = {
@@ -410,10 +419,24 @@ country_decisions = {
 			}
 				
 			event_target:fort_delete = {
+				set_province_flag = removed_fort
+				
 				remove_building = fort_15th
 				remove_building = fort_16th
 				remove_building = fort_17th
 				remove_building = fort_18th
+				
+				if = {
+					limit = {
+						OR = {
+							has_construction = fort_15th
+							has_construction = fort_16th
+							has_construction = fort_17th
+							has_construction = fort_18th
+						}
+					}
+					cancel_construction = yes
+				}
 				
 				log = "[Root.GetName] removed fort [This.GetName]"
 			}
