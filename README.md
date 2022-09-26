@@ -42,6 +42,13 @@ Middle East:
 - Persia is getting acces to janissary special unit. Unfortunately there is no way to make the name dynamic.
 - Reducing requirements for Unite Islam decision, turning it on for AI with  exceptions of Ottomans and Mamluks.    
 
+Buildings:
+- Ramparts and State House are no longer considered as manufactries. Both have a limit per state and no special bonus from trade goods.
+- Ramparts gives 1 fort level and 15% for defense. Defence edict was nerfed a bit to compensate.     
+- Reducing flat manpower from Soldiers Households from 750 to 600.
+- Naval Battery provides Statewide Block on Slave Raids, but can only be built in a province with Fort. In addition Provides a minor amount of fort defense 10-15%.
+- University provides Statewide -10% to local development cost, in addition to provincial -10% to local base development cost. Limited to 1 per state, building cost incised to 500.
+
 
 Gameplay and Balance changes:
 - Added 10 Idea slots in a balanced way.
@@ -54,10 +61,6 @@ Gameplay and Balance changes:
 - Effect of corruption was reduced to 1/5 of original game values, and AI is less willing to use debase currency.
 - Increased base supply limit by 2, AI tends to have more troops with this mod.
 - Adds leaders without upkeep from various sources.
-- Ramparts and State House are no longer considered as manufactries. Both have a limit per state and no special bonus from trade goods.
-- Ramparts gives 1 fort level and 25% for defense. Defence edict was nerfed a bit to compensate.     
-- Reducing flat manpower from Soldiers Households from 750 to 600.
-- Naval Battery gets free building slot, but can only be built in a province with Fort. 
 - Custom Ruler traits. Restricting Ruler traits distribution, rulers with high stats are less likely to get negative traits.
 - Reducing the price of Coal, getting Coal in a province should automatically delete existing outdated manufactory.
 - Fixes and tweaks to Hegemon’s. Preventing AI from claiming Eco hegemon after getting some cash in a peace deal.
