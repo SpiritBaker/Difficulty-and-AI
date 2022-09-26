@@ -49,7 +49,7 @@
  bevDisabled:0 "§RDisabled§!"
  bevEnabled:0 "§GEnabled§!"
 
- opt.native_settings:0 "Native Settings (Loked after 1450)"
+ opt.native_settings:0 "Native Settings (Locked after 1450)"
  dif_settings.5.t:0 "Native Settings"
  dif_settings.5.d:0 "Option that allows you to remove Natives from the game. Generally having less countries improves performance.\n\nTags randomly removed at a rate of approximately 1-5 Tags a day.\nKeeping it active for North American Natives for approximately 10-14 days will remove half of the Natives there.\n"
 

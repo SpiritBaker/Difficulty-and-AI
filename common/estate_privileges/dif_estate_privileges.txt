@@ -469,10 +469,10 @@ sedentary_subjects_protection_of_trade_routes = {
 	can_select = {
 	}
 	penalties = {
-		state_maintenance_modifier = 0.25
+		state_maintenance_modifier = 0.15
 	}
 	benefits = {
-		trade_efficiency = 0.10
+		center_of_trade_upgrade_cost = -0.2
 	}
 	ai_will_do = {
 		factor = 10
