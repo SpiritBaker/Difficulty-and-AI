@@ -92,3 +92,75 @@ cav_nation_trigger = {
 		tag = SHY
 	}
 }
+
+maritime_nation_trigger = {
+	OR = { 
+		tag = GBR
+		tag = POR
+		tag = NED
+		tag = MAJ
+		tag = BEI
+		tag = PSA
+		tag = MAS
+		tag = MLC
+		tag = MSA
+		tag = JAP
+		tag = ORM
+		tag = OMA
+		tag = ZAN
+		tag = MOR
+		tag = SPA
+		tag = SCA
+		tag = DAN
+		tag = NOR
+		tag = VEN
+		tag = JAP
+		tag = SWE
+		tag = KNI
+		tag = TTS
+		tag = GEN
+		tag = ARA
+		tag = CUB
+		tag = USA
+		tag = DAL
+		tag = COR
+		tag = RAG
+		tag = MDI
+		tag = LVA
+		tag = JAJ
+		tag = CND
+		tag = OUC
+		tag = CBA
+		tag = MBZ
+		tag = MAS
+		tag = KOI
+		tag = ALA
+		tag = SOO
+		tag = EOR
+		tag = ATJ
+		tag = TUN
+		tag = TLC
+	}
+}
+
+naval_power_nation_trigger = {
+	OR = { 
+		tag = GBR
+		tag = POR
+		tag = NED
+		tag = ORM
+		tag = OMA
+		tag = ZAN
+		tag = MOR
+		tag = SPA
+		tag = SCA
+		tag = DAN
+		tag = NOR
+		tag = VEN
+		tag = GEN
+		tag = ARA
+		tag = CUB
+		tag = USA
+		tag = MSA
+	}
+}

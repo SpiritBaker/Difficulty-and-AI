@@ -41,6 +41,7 @@ estate_rajput = {
 
 	# These scale with loyalty & power
 	country_modifier_happy = {
+		cavalry_power = 0.1
 		manpower_recovery_speed = 0.2 
 		fort_maintenance_modifier = -0.1
 	}

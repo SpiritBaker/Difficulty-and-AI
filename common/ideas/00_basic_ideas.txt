@@ -1227,7 +1227,7 @@ maritime_ideas = {
 	}
 
 	merchant_traditions = {
-		naval_tradition_from_trade = 1.0
+		merchants = 1 
 		trade_range_modifier = 0.25
 	}
 	merchant_marine = {
@@ -1244,7 +1244,7 @@ maritime_ideas = {
 	}
 	ships_penny = {
 		light_ship_power = 0.10
-		merchants = 1 
+		trade_steering = 0.25
 	}
 	sea_hawks = {
 		free_leader_pool = 1
@@ -1305,15 +1305,7 @@ maritime_ideas = {
 		}
 		modifier = {
 			factor = 2.5
-			OR = { 
-				tag = GBR
-				tag = POR
-				tag = NED
-				tag = MAJ
-				tag = BEI
-				tag = MSA
-				tag = JAP
-			}
+			maritime_nation_trigger = yes
 		}
 		modifier = {
 			factor = 5
@@ -1900,14 +1892,13 @@ naval_ideas = {
 			NOT = { is_colonial_nation = yes }
 		}
 		modifier = {
-			factor = 0.31
+			factor = 0.25
 			NOT = { num_of_ports = 10 }
 		}
 		modifier = {
 			factor = 0.75
 			num_of_cities = 50
 		}
-
 		modifier = {
 			factor = 0.33
 			NOT = { adm_tech = 12 }
@@ -1941,41 +1932,12 @@ naval_ideas = {
 			capital_scope = { island = yes }
 		}
 		modifier = {
-			factor = 5
-			OR = { 
-				tag = GBR
-				tag = POR
-				tag = NED
-				#tag = MAJ
-				#tag = BEI
-				#tag = PSA
-				#tag = MAS
-				#tag = MLC
-				tag = ORM
-				tag = OMA
-				tag = ZAN
-				tag = MOR
-				tag = SPA
-				tag = SCA
-				tag = DAN
-				tag = NOR
-				tag = VEN
-			}
+			factor = 3
+			naval_power_nation_trigger = yes
 		}
 		modifier = {
 			factor = 2.5
-			OR = { 
-				tag = MSA
-				tag = JAP
-				tag = SWE
-				tag = KNI
-				tag = TTS
-				tag = GEN
-				tag = FRA
-				tag = ARA
-				tag = CUB
-				tag = USA
-			}
+			maritime_nation_trigger = yes
 		}
 		modifier = {
 			factor = 2.5

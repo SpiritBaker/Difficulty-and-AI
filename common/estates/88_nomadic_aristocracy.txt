@@ -57,7 +57,7 @@ nomadic_aristocracy = {
 	# These scale with loyalty & power
 	country_modifier_happy = {
 		horde_unity = 0.5
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		army_tradition = 0.5
 	}
 	country_modifier_neutral = {

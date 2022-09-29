@@ -38,6 +38,7 @@ marketplace = {
 				FROM = {
 					has_estate_privilege = estate_sedentary_subjects_marketplace_bonus
 				}
+				province_has_center_of_trade_of_level = 1
 			}
 			add_province_modifier = {
 				name = marketplace_bonus_m
@@ -363,7 +364,6 @@ shipyard = {
 	}
 	modifier = {
 		naval_forcelimit = 2
-		ship_recruit_speed = -0.25
 		local_ship_repair = 0.25
 	}
 	on_built = {
@@ -1573,6 +1573,7 @@ trade_depot = {
 				FROM = {
 					has_estate_privilege = estate_sedentary_subjects_marketplace_bonus
 				}
+				province_has_center_of_trade_of_level = 1
 			}
 			add_province_modifier = {
 				name = marketplace_bonus_m
@@ -2070,6 +2071,7 @@ stock_exchange = {
 				FROM = {
 					has_estate_privilege = estate_sedentary_subjects_marketplace_bonus
 				}
+				province_has_center_of_trade_of_level = 1
 			}
 			add_province_modifier = {
 				name = marketplace_bonus_m

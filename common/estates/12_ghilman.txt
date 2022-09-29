@@ -18,6 +18,8 @@ estate_ghilman = {
 		NOT = { is_revolutionary_republic_trigger = yes }
 		NOT = { has_reform = revolutionary_empire_reform }
 		NOT = { has_reform = peasants_republic }
+		NOT = { has_government_attribute = enables_estate_rajput }
+		NOT = { has_government_attribute = enables_estate_maratha }
 		is_nomad = no
 		is_colonial_nation = no
 		OR = {

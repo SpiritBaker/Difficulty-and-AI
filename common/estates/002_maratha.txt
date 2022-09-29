@@ -38,7 +38,7 @@ estate_maratha = {
 
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		cavalry_power = 0.1
+		cavalry_power = 0.10
 		army_tradition = 0.5
 	}
 	country_modifier_neutral = {
