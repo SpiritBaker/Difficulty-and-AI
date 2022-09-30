@@ -2,11 +2,14 @@
 EU4 mod. https://steamcommunity.com/sharedfiles/filedetails/?id=2453967654
 
 Content:
-- Added optional Development click decision, that develops the cheapest province at monarch point cap. Works for both the Players and AI. Big thanks to LoStack for implementing it. ( https://github.com/stackpoint/Dev-Click )
+- Added 10 Idea slots in a balanced way.
+- Tweaks to ideas and policies, to make more idea groups relevant.  
+- 5 New Estates; Mamluks, Janissaries, Ghulam's, City States, Nomadic Aristocracy.
+- Added optional Auto Development decision, that develops the cheapest province at monarch point cap. Works for both the Players and AI. Big thanks to LoStack for implementing it. ( https://github.com/stackpoint/Dev-Click )
 - Added 5 terrain types to the game, replacing most of the vanilla ones, reworking problem areas of the map. The source of the Images is CK3 and I:R.
 - Small map & trade region changes. For example CoT and starting Fort in Paris.
 - Monarch point bonus from Consort if consort skills are higher.
-- 5 New Estates; Mamluks, Janissaries, Ghulam's, City States, Nomadic Aristocracy.  
+
 
 
 Republic Election Changes:
@@ -18,12 +21,11 @@ Republic Election Changes:
 Nomads:
 - Adding 2 new eastes for Nomads and Nomads like government types and cultures. City States and Nomad Aristocracy.
 - Enabling Clergy for Hordes that have organized religion.
-- Tribes estate function similarly to cossacks.
+- Nomads or Tribal Federations always have access to Tribes estate. Steppe cultures still can get acces to Tribes estate as long as they own steppe provinces.    
 - Removing banners reinforcement speed penalty, mainly for gameplay reasons. Reducing the amount of available banners.
 - Hordes combat bonus in plains is reduced to 10% shock damage, and penalty to -10% shock damage.
 - Horde unity should be easier to maintain.
 - Adding Dzungar khanate as possible formable for Oirats with unique NI’s.
-- Adding Bukhara NI’s, borrowed from NIE.
 
 
 Asia:
@@ -39,7 +41,6 @@ Asia:
 Middle East:
 - New Estates for Major powers in the region. Mamluks, Janissaries, Ghulam's.
 - Tribal Governments and Ardabil are getting acces to Tribe estate.
-- Persia is getting acces to janissary special unit. Unfortunately there is no way to make the name dynamic.
 - Reducing requirements for Unite Islam decision, turning it on for AI with  exceptions of Ottomans and Mamluks.    
 
 Buildings:
@@ -68,8 +69,8 @@ Gameplay and Balance changes:
 - Increasing duration of Muslim Schools bonuses by 10 years.
 - Buff to Marines, marines will have -10% shock damage received.
 - Changing naval doctrines a bit. 
-- Small changes to trade regions, Bordeaux is an end node, white sea flows into Novgorod.
-- Nerf to trade propagation, from 20% to 10%. 
+- Small changes to trade regions, Bordeaux is an end node, White sea flows into Novgorod.
+- Nerf to trade propagation, from 20% to 10%. It makes Inland trade nodes much more viable.
 - Naval attrition is reduced to 5%, as it’s currently bugged and ticks 2 times per month.
 - Small Adjustments to Monuments.
 - Various small exploits and bug fixes. If we know about it and it can be fixed.
