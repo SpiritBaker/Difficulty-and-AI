@@ -87,12 +87,10 @@ Everything AI:
 - No debase currency.
 - Restricting AI army movements a bit, AI should behave more defensively.
 - Improved AI building logic, AI should build manufactory in every province.
-- More aggressive AI logic for new Estates, the bottom line for AI is 20% crown land.  
+- More aggressive AI logic for new Estates, the bottom line for AI is 10% crown land.  
 - Added AI events that disbands Mercenary Companies. ( Temporary workaround )
 - Added AI scripting that upgrades Forts and deletes redundant Forts.
-- War Enthusiasm changes, secondary participants are affected by balance of forces.
 - Fix for logic behind Religious interaction. Orthodox Icons and Anglican aspects.
-- AI should use knowledge sharing more often. (Removed, affects the game to much)
 - Some AI personalities can dev push institisions.
 - Increased AI budget fraction for missionary maintenance.
 - Lowering early game cannons ratio for AI.
