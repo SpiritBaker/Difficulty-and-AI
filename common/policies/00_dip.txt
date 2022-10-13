@@ -73,7 +73,7 @@ the_wooden_wall = {
 		full_idea_group = defensive_ideas
 	}
 
-	global_ship_cost = -0.10
+	merchants = 1
 	naval_forcelimit_modifier = 0.15
 	
 	ai_will_do = {
@@ -1066,7 +1066,8 @@ naval_school_act = {
 		full_idea_group = maritime_ideas
 	}
 
-	navy_tradition = 1
+	merchants = 1
+	navy_tradition = 0.5
 
 	ai_will_do = {
 		factor = 1
@@ -1290,7 +1291,7 @@ trained_marines_act = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_morale = 0.2
+	naval_morale = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -1431,8 +1432,8 @@ riverine_navy_policy = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_forcelimit_modifier = 0.1
-	navy_tradition = 1
+	naval_forcelimit_modifier = 0.15
+	navy_tradition = 0.5
 
 	ai_will_do = {
 		factor = 1.0

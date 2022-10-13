@@ -168,17 +168,76 @@ defined_text = {
 	name = ScalingDifficultyLoc
 	random = no
 	text = {
-        trigger = {
-			has_global_flag = scaling_difficulty_flag
-        }
-        localisation_key = scadifEnabled
-		
+		trigger = {
+			scaling_dificlty_trigger = no
+		}
+		localisation_key = scadifDisabled
 	}
 	text = {
 		trigger = {
-			NOT = { has_global_flag = scaling_difficulty_flag }
+			has_global_flag = scaling_difficulty_moderate_flag
 		}
-		localisation_key = scadifDisabled
+		localisation_key = scadifModerate
+	}
+	text = {
+		trigger = {
+			has_global_flag = scaling_difficulty_hard_flag
+		}
+		localisation_key = scadifHard
+	}
+	text = {
+		trigger = {
+			has_global_flag = scaling_difficulty_nightmare_flag
+		}
+		localisation_key = scadifNightmare
+	}
+}
+defined_text = {
+	name = ScalingDifficultyModerate
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = scaling_difficulty_moderate_flag
+        }
+        localisation_key = scadifModerateEnabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = scaling_difficulty_moderate_flag }
+		}
+		localisation_key = scadifModerateDisabled
+	}
+}
+defined_text = {
+	name = ScalingDifficultyHard
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = scaling_difficulty_hard_flag
+        }
+        localisation_key = scadifHardEnabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = scaling_difficulty_hard_flag }
+		}
+		localisation_key = scadifHardDisabled
+	}
+}
+defined_text = {
+	name = ScalingDifficultyNightmare
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = scaling_difficulty_nightmare_flag
+        }
+        localisation_key = scadifNightmareEnabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = scaling_difficulty_nightmare_flag }
+		}
+		localisation_key = scadifNightmareDisabled
 	}
 }
 defined_text = {

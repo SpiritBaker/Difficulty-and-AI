@@ -44,11 +44,13 @@ NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 13
 NDefines.NAI.TRANSPORT_FRACTION = 0.35
 NDefines.NAI.BIGSHIP_FRACTION = 0.4
 
-
+--AGGRESSIVENESS
+NDefines.NAI.AGGRESSIVENESS = 300
+NDefines.NAI.AGGRESSIVENESS_BONUS_EASY_WAR = 400
 
 --Budget
 NDefines.NAI.EXTRA_SURPLUS_WHEN_NEEDING_BUILDINGS = 0.25	--AI will aim for having at least this fraction of their income as additional surplus when they need buildings
-NDefines.NAI.ARMY_BUDGET_FRACTION = 0.9
+NDefines.NAI.ARMY_BUDGET_FRACTION = 1.0
 NDefines.NAI.NAVY_BUDGET_FRACTION = 0.3 -- AI will spend a maximum of this fraction of monthly income on navy maintenance (based off wartime costs)
 --NDefines.NAI.FORT_BUDGET_FRACTION = 0.5 -- AI will spend a maximum of this fraction of monthly income on forts
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.3
@@ -245,6 +247,7 @@ NDefines.NCountry.COHESION_FEDERATION_ADVANCEMENT = -0.05
 NDefines.NCountry.ANCESTOR_PERSONALITY_LEVEL_1 = 6				-- Roof of first level of ancestor personality
 NDefines.NCountry.ANCESTOR_PERSONALITY_LEVEL_2 = 12				-- Roof of second level of ancestor personality
 NDefines.NCountry.ANCESTOR_COST = 300							-- Cost to integrate an ancestor into the faith.
+--NDefines.NCountry.EXPAND_INFRASTRUCTURE_DEV_LIMIT = 20 
 
 --NDiplomacy
 
@@ -292,3 +295,9 @@ NDefines.NEconomy.LAND_TECH_MERC_MAINTENANCE_IMPACT = 0.04
 --NDefines.NGovernment.CONCENTRATE_DEVELOPMENT_OTHER_STATE_PROVINCES_PROPORTION = 0.45
 --NDefines.NGovernment.FREE_CONCENTRATE_DEVELOPMENT_CAPITAL_PROPORTION = 0.25
 --NDefines.NGovernment.FREE_CONCENTRATE_DEVELOPMENT_OTHER_STATE_PROVINCES_PROPORTION = 0.5
+
+
+--NDefines.NMilitary.HEAVY_SHIP_COST = 80				-- _MDEF_HEAVY_SHIP_COST = 10,
+--NDefines.NMilitary.LIGHT_SHIP_COST = 30					-- _MDEF_LIGHT_SHIP_COST = 10,
+--NDefines.NMilitary.GALLEY_COST = 20						-- _MDEF_GALLEY_COST = 10,
+--NDefines.NMilitary.TRANSPORT_COST = 15					-- _MDEF_TRANSPORT_COST = 10,

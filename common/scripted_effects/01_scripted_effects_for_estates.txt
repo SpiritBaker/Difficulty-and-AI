@@ -1878,7 +1878,15 @@ on_province_tax_building_built_estate_privileges_effect = {
 			}
 		}
 		FROM = {
-			add_karma = 3
+			if = {
+				limit = {
+					has_government_attribute = buffed_monastic_temples
+				}
+				add_karma = 5
+			}
+			else = {
+				add_karma = 3
+			}
 		}
 	}
 	if = {
@@ -1948,7 +1956,15 @@ on_province_tax_building_destroyed_estate_privileges_effect = {
 			}
 		}
 		FROM = {
-			add_karma = -3
+			if = {
+				limit = {
+					has_government_attribute = buffed_monastic_temples
+				}
+				add_karma = -5
+			}
+			else = {
+				add_karma = -3
+			}
 		}
 	}
 	if = {
@@ -3304,6 +3320,16 @@ pick_random_estate_if_present = {
 		}
 		1 = { 
 			trigger = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_country_flag = estate_nomadic_tribes_$flag$ }
+			}
+			set_country_flag = estate_nomadic_tribes_$flag$
+			[[estate_action]
+			$estate_action$ = estate_nomadic_tribes
+			]
+		}
+		1 = { 
+			trigger = {
 				has_estate = estate_dhimmi
 				NOT = { has_country_flag = estate_dhimmi_$flag$ }
 			}
@@ -3330,16 +3356,6 @@ pick_random_estate_if_present = {
 			set_country_flag = estate_rajput_$flag$
 			[[estate_action]
 			$estate_action$ = estate_rajput
-			]
-		}
-		1 = { 
-			trigger = {
-				has_estate = estate_nomadic_tribes
-				NOT = { has_country_flag = estate_nomadic_tribes_$flag$ }
-			}
-			set_country_flag = estate_nomadic_tribes_$flag$
-			[[estate_action]
-			$estate_action$ = estate_nomadic_tribes
 			]
 		}
 		1 = { 

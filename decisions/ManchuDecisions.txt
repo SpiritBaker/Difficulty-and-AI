@@ -231,22 +231,9 @@ country_decisions = {
 			NOT = {
 				has_ruler_modifier = tribal_succession_crisis
 			}
-			if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-					any_country = {
-						is_emperor_of_china = yes
-					}
-				}
+			OR = {
 				is_emperor_of_china = yes
-			}
-			else_if = {
-				limit = {
-					has_dlc = "Common Sense"
-				}
 				government_rank = 3
-			}
-			else = {
 				total_development = 1000
 			}
 		}

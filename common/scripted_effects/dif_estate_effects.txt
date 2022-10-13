@@ -1,0 +1,195 @@
+tribal_cav_privilege_effect = {
+	if = {
+		limit = {
+			land_forcelimit = 200
+		}
+		add_horde_unity = -10
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 18
+				speed = 0.15
+				cost = 0.5
+			}
+		}
+	}
+	if = {
+		limit = {
+			land_forcelimit = 160
+			NOT = { land_forcelimit = 200 }
+		}
+		add_horde_unity = -9
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 15
+				speed = 0.2
+				cost = 0.5
+			}
+		}
+	}
+	if = {
+		limit = {
+			land_forcelimit = 140
+			NOT = { land_forcelimit = 160 }
+		}
+		add_horde_unity = -9
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 14
+				speed = 0.25
+				cost = 0.5
+			}
+		}
+	}
+	if = {
+		limit = {
+			land_forcelimit = 120
+			NOT = { land_forcelimit = 140 }
+		}
+		add_horde_unity = -8
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 13
+				speed = 0.3
+				cost = 0.5
+			}
+		}
+	}
+	if = {
+		limit = {
+			land_forcelimit = 100
+			NOT = { land_forcelimit = 120 }
+		}
+		add_horde_unity = -8
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 12
+				speed = 0.35
+				cost = 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			land_forcelimit = 80
+			NOT = { land_forcelimit = 90 }
+		}
+		add_horde_unity = -7
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 11
+				speed = 0.4
+				cost = 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			land_forcelimit = 70
+			NOT = { land_forcelimit = 80 }
+		}
+		add_horde_unity = -7
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 10
+				speed = 0.45
+				cost = 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			land_forcelimit = 60
+			NOT = { land_forcelimit = 70 }
+		}
+		add_horde_unity = -6
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 9
+				speed = 0.5
+				cost = 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			land_forcelimit = 50
+			NOT = { land_forcelimit = 60 }
+		}
+		add_horde_unity = -6
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 8
+				speed = 0.55
+				cost = 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			land_forcelimit = 40
+			NOT = { land_forcelimit = 50 }
+		}
+		add_horde_unity = -5
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 7
+				speed = 0.6
+				cost = 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			land_forcelimit = 30
+			NOT = { land_forcelimit = 40 }
+		}
+		add_horde_unity = -5
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 6
+				speed = 0.65
+				cost = 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			land_forcelimit = 20
+			NOT = { land_forcelimit = 30 }
+		}
+		add_horde_unity = -4
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 5
+				speed = 0.7
+				cost = 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { land_forcelimit = 20 }
+		}
+		add_horde_unity = -4
+		capital_scope = {
+			add_unit_construction = {
+				type = cavalry
+				amount = 4
+				speed = 0.75
+				cost = 0.5
+			}
+		}
+	}
+}

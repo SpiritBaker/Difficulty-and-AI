@@ -15,11 +15,13 @@ country_event = {
 					NOT = { tag = REB }
 				}
 				export_to_variable = { which = devTotalvar value = total_development }
+				export_to_variable = { which = difTotalArmySize value = army_size }
 			}
 			REB = {
 				set_variable = { which = devsumClicks value = 0 }
 				set_variable = { which = autoDev value = 0 }
 				set_variable = { which = devTotalvar value = 0 }
+				set_variable = { which = difTotalArmySize value = 0 }
 				every_country = {
 					limit = {
 						NOT = { tag = REB }
@@ -28,6 +30,7 @@ country_event = {
 						change_variable = { which = devsumClicks which = PREV }
 						change_variable = { which = autoDev which = PREV }
 						change_variable = { which = devTotalvar which = PREV }
+						change_variable = { which = difTotalArmySize which = PREV }
 					}
 				}
 			}
@@ -36,19 +39,8 @@ country_event = {
 
 	option = { #Scaling Difficulty
 	name = "opt.dif_settings.Scaling"
-		if = {
-			limit = {
-				NOT = { has_global_flag = scaling_difficulty_flag }
-			}
-			set_global_flag = scaling_difficulty_flag
-		}
-		else_if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			clr_global_flag = scaling_difficulty_flag
-		}
-		country_event = { id = dif_settings.2 }
+
+		country_event = { id = dif_settings.8 }
 	}
 	option = { #expansion planer
 	name = "opt.dif_settings.expansion"
@@ -126,23 +118,38 @@ country_event = {
 	#hidden = yes
 
 	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = REB }
+				}
+				export_to_variable = { which = devTotalvar value = total_development }
+				export_to_variable = { which = difTotalArmySize value = army_size }
+			}
+			REB = {
+				set_variable = { which = devsumClicks value = 0 }
+				set_variable = { which = autoDev value = 0 }
+				set_variable = { which = devTotalvar value = 0 }
+				set_variable = { which = difTotalArmySize value = 0 }
+				every_country = {
+					limit = {
+						NOT = { tag = REB }
+					}
+					PREV = {
+						change_variable = { which = devsumClicks which = PREV }
+						change_variable = { which = autoDev which = PREV }
+						change_variable = { which = devTotalvar which = PREV }
+						change_variable = { which = difTotalArmySize which = PREV }
+					}
+				}
+			}
+		} 
 	}
+
 
 	option = { #Scaling Difficulty
 	name = "opt.dif_settings.Scaling"
-		if = {
-			limit = {
-				NOT = { has_global_flag = scaling_difficulty_flag }
-			}
-			set_global_flag = scaling_difficulty_flag
-		}
-		else_if = {
-			limit = {
-				has_global_flag = scaling_difficulty_flag
-			}
-			clr_global_flag = scaling_difficulty_flag
-		}
-		country_event = { id = dif_settings.1 }
+		country_event = { id = dif_settings.8 }
 	}
 	option = { #expansion planer
 	name = "opt.dif_settings.expansion"
@@ -458,5 +465,209 @@ country_event = {
 	}
 
 	option = {
+	}
+}
+
+country_event = { 
+	id = dif_settings.8
+	title = "dif_settings.8.t"
+	desc = "dif_settings.8.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	trigger = {
+	}
+
+
+	option = { #Moderate
+	name = "opt.scaling_difficulty.moderate"
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = scaling_difficulty_hard_flag
+					has_global_flag = scaling_difficulty_nightmare_flag
+				}
+			}
+			clr_global_flag = scaling_difficulty_hard_flag
+			clr_global_flag = scaling_difficulty_nightmare_flag
+		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_moderate_flag
+			}
+			clr_global_flag = scaling_difficulty_moderate_flag
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = scaling_difficulty_moderate_flag }
+			}
+			set_global_flag = scaling_difficulty_moderate_flag
+		}
+		country_event = { id = dif_settings.9 }
+	}
+	option = { #Hard
+	name = "opt.scaling_difficulty.hard"
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = scaling_difficulty_moderate_flag
+					has_global_flag = scaling_difficulty_nightmare_flag
+				}
+			}
+			clr_global_flag = scaling_difficulty_moderate_flag
+			clr_global_flag = scaling_difficulty_nightmare_flag
+		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_hard_flag
+			}
+			clr_global_flag = scaling_difficulty_hard_flag
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = scaling_difficulty_hard_flag }
+			}
+			set_global_flag = scaling_difficulty_hard_flag
+		}
+		country_event = { id = dif_settings.9 }
+	}
+	option = { #Nightmare
+	name = "opt.scaling_difficulty.nightmare"
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = scaling_difficulty_moderate_flag
+					has_global_flag = scaling_difficulty_hard_flag
+				}
+			}
+			clr_global_flag = scaling_difficulty_moderate_flag
+			clr_global_flag = scaling_difficulty_hard_flag
+		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_nightmare_flag
+			}
+			clr_global_flag = scaling_difficulty_nightmare_flag
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = scaling_difficulty_nightmare_flag }
+			}
+			set_global_flag = scaling_difficulty_nightmare_flag
+		}
+		country_event = { id = dif_settings.9 }
+	}
+
+
+
+	option = { #Back
+	name = "opt.dif_settings.back"
+	country_event = { id = dif_settings.1 }
+	}
+	option = { #Exit
+	name = "opt.dif_settings.exit"
+	}
+}
+
+country_event = { 
+	id = dif_settings.9
+	title = "dif_settings.8.t"
+	desc = "dif_settings.8.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	trigger = {
+	}
+
+
+	option = { #Moderate
+	name = "opt.scaling_difficulty.moderate"
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = scaling_difficulty_hard_flag
+					has_global_flag = scaling_difficulty_nightmare_flag
+				}
+			}
+			clr_global_flag = scaling_difficulty_hard_flag
+			clr_global_flag = scaling_difficulty_nightmare_flag
+		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_moderate_flag
+			}
+			clr_global_flag = scaling_difficulty_moderate_flag
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = scaling_difficulty_moderate_flag }
+			}
+			set_global_flag = scaling_difficulty_moderate_flag
+		}
+		country_event = { id = dif_settings.8 }
+	}
+	option = { #Hard
+	name = "opt.scaling_difficulty.hard"
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = scaling_difficulty_moderate_flag
+					has_global_flag = scaling_difficulty_nightmare_flag
+				}
+			}
+			clr_global_flag = scaling_difficulty_moderate_flag
+			clr_global_flag = scaling_difficulty_nightmare_flag
+		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_hard_flag
+			}
+			clr_global_flag = scaling_difficulty_hard_flag
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = scaling_difficulty_hard_flag }
+			}
+			set_global_flag = scaling_difficulty_hard_flag
+		}
+		country_event = { id = dif_settings.8 }
+	}
+	option = { #Nightmare
+	name = "opt.scaling_difficulty.nightmare"
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = scaling_difficulty_moderate_flag
+					has_global_flag = scaling_difficulty_hard_flag
+				}
+			}
+			clr_global_flag = scaling_difficulty_moderate_flag
+			clr_global_flag = scaling_difficulty_hard_flag
+		}
+		if = {
+			limit = {
+				has_global_flag = scaling_difficulty_nightmare_flag
+			}
+			clr_global_flag = scaling_difficulty_nightmare_flag
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = scaling_difficulty_nightmare_flag }
+			}
+			set_global_flag = scaling_difficulty_nightmare_flag
+		}
+		country_event = { id = dif_settings.8 }
+	}
+
+
+
+	option = { #Back
+	name = "opt.dif_settings.back"
+	country_event = { id = dif_settings.1 }
+	}
+	option = { #Exit
+	name = "opt.dif_settings.exit"
 	}
 }

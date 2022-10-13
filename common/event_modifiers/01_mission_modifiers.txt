@@ -7294,7 +7294,7 @@ lit_landed_cossack_lords_modifier = {
 	cavalry_power = 0.1
 }
 enable_estate_nomadic_tribes_modifier = { } 
-lit_increased_dev_modifier = { } #These are essentially dummy modifiers as a way to have timed on_actions or interesting rewards like 
+lit_increased_dev_modifier = { } #These are essentially dummy modifiers as a way to have timed on_actions or interesting rewards
 lit_forum_thought_modifier = {  
 	technology_cost = -0.1
 }

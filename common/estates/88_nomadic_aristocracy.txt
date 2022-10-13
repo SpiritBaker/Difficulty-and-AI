@@ -44,6 +44,9 @@ nomadic_aristocracy = {
 		#NOT = { has_reform = veche_republic }
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = cossacks_reform }
+		NOT = { has_estate = estate_maratha }
+		NOT = { has_estate = estate_rajput }
+		NOT = { has_estate = estate_nobles }
 		OR = {
 			has_reform = nomad_empire
 			has_reform = khanate_monarchy

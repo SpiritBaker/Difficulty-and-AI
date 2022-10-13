@@ -721,6 +721,7 @@ country_event = {
 		treasury = 2000
 		is_in_deficit = no
 		adm_tech = 16
+		farm_estate_privilege_trigger = no
 		OR = {
 			is_great_power = yes
 			has_idea_group = quantity_ideas

@@ -3502,8 +3502,10 @@ sco_witchcraft_act = {
 
 # Japan
 jap_sengoku_jidai = {
+	land_forcelimit = 2
 	army_tradition_decay = -0.01
 	global_regiment_cost = -0.15
+	liberty_desire = 10
 }
 jap_wokou = {
 	global_tax_modifier = 0.2

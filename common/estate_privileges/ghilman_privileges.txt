@@ -153,67 +153,13 @@ estate_ghilman_recruit_from_tribes = {
 		#tag = PER
 	}
 	can_select = {
-		#tag = PER
+		is_bankrupt = no
+		capital_scope = {
+			controlled_by = ROOT
+		}
 	}
 	on_granted = {
-		if = {
-			limit = {
-				land_forcelimit = 200
-			}
-			add_legitimacy = -10
-			capital_scope = {
-				add_unit_construction = {
-					type = cavalry
-					amount = 20
-					speed = 0.1
-					cost = 0.5
-				}
-			}
-		}
-		if = {
-			limit = {
-				land_forcelimit = 100
-				NOT = { land_forcelimit = 200 }
-			}
-			add_legitimacy  = -8
-			capital_scope = {
-				add_unit_construction = {
-					type = cavalry
-					amount = 12
-					speed = 0.2
-					cost = 0.5
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				land_forcelimit = 50
-				NOT = { land_forcelimit = 100 }
-			}
-			add_legitimacy  = -6
-			capital_scope = {
-				add_unit_construction = {
-					type = cavalry
-					amount = 8
-					speed = 0.5
-					cost = 0.5
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = { land_forcelimit = 50 }
-			}
-			add_legitimacy  = -5
-			capital_scope = {
-				add_unit_construction = {
-					type = cavalry
-					amount = 4
-					speed = 1
-					cost = 0.5
-				}
-			}
-		}
+		tribal_cav_privilege_effect = yes
 	}
 	cooldown_years = 10
 	on_cooldown_expires = {

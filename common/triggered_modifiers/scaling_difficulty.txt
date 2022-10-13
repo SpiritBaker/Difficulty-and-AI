@@ -1,76 +1,298 @@
-scaling_difficulty_AoDis = {
+scaling_difficulty_moderate_discovery = {
 	potential = {
-		ai = yes
-	}
-	trigger = {
-		is_free_or_tributary_trigger = yes
-		is_primitive = no
-		num_of_cities = 10
-		ai = yes
+		ai_regional_power_trigger = yes
 		current_age = age_of_discovery
-		has_global_flag = scaling_difficulty_flag
-	}
-	free_mil_policy = 1
-	advisor_cost = -0.1
-	war_taxes_cost_modifier = -1
-}
-scaling_difficulty_AoRef = {
-	potential = {
-		ai = yes
+		has_global_flag = scaling_difficulty_moderate_flag
 	}
 	trigger = {
-		is_free_or_tributary_trigger = yes
-		is_primitive = no
-		num_of_cities = 10
-		ai = yes
-		current_age = age_of_reformation
-		has_global_flag = scaling_difficulty_flag
+		ai_regional_power_trigger = yes
+		current_age = age_of_discovery
+		has_global_flag = scaling_difficulty_moderate_flag
 	}
-	free_mil_policy = 1
+	land_maintenance_modifier = -0.025
+	
+	war_taxes_cost_modifier = -0.5
 	build_cost = -0.05
-	all_power_cost = -0.05
-	advisor_cost = -0.15
+	all_power_cost = -0.025
+	advisor_cost = -0.1
+}
+scaling_difficulty_moderate_reformation = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_reformation
+		has_global_flag = scaling_difficulty_moderate_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_reformation
+		has_global_flag = scaling_difficulty_moderate_flag
+	}
 	land_forcelimit_modifier = 0.05
 	naval_forcelimit_modifier = 0.05
-	war_taxes_cost_modifier = -1
-}
-scaling_difficulty_AoAbs = {
-	potential = {
-		ai = yes
-	}
-	trigger = {
-		is_free_or_tributary_trigger = yes
-		is_primitive = no
-		num_of_cities = 10
-		ai = yes
-		current_age = age_of_absolutism
-		has_global_flag = scaling_difficulty_flag
-	}
+	land_maintenance_modifier = -0.05
+
+	war_taxes_cost_modifier = -0.5
 	free_mil_policy = 1
 	build_cost = -0.075
-	all_power_cost = -0.075
-	advisor_cost = -0.2
-	land_forcelimit_modifier = 0.1
-	naval_forcelimit_modifier = 0.1
-	war_taxes_cost_modifier = -1
+	all_power_cost = -0.05
+	advisor_cost = -0.15
 }
-scaling_difficulty_AoRev = {
+scaling_difficulty_moderate_absolutism = {
 	potential = {
-		ai = yes
+		ai_regional_power_trigger = yes
+		current_age = age_of_absolutism
+		has_global_flag = scaling_difficulty_moderate_flag
 	}
 	trigger = {
-		is_free_or_tributary_trigger = yes
-		is_primitive = no
-		num_of_cities = 10
-		ai = yes
-		current_age = age_of_revolutions
-		has_global_flag = scaling_difficulty_flag
+		ai_regional_power_trigger = yes
+		current_age = age_of_absolutism
+		has_global_flag = scaling_difficulty_moderate_flag
 	}
+	land_forcelimit_modifier = 0.075
+	naval_forcelimit_modifier = 0.075
+	land_maintenance_modifier = -0.075
+
+	war_taxes_cost_modifier = -0.5
+	free_mil_policy = 1
+	build_cost = -0.1
+	all_power_cost = -0.075
+	advisor_cost = -0.2
+}
+scaling_difficulty_moderate_revolutions = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_revolutions
+		has_global_flag = scaling_difficulty_moderate_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_revolutions
+		has_global_flag = scaling_difficulty_moderate_flag
+	}
+	land_forcelimit_modifier = 0.10
+	naval_forcelimit_modifier = 0.10
+	land_maintenance_modifier = -0.01
+
+	war_taxes_cost_modifier = -0.5
 	free_mil_policy = 2
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.25
+}
+
+
+scaling_difficulty_hard_discovery = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_discovery
+		has_global_flag = scaling_difficulty_hard_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_discovery
+		has_global_flag = scaling_difficulty_hard_flag
+	}
+	land_forcelimit_modifier = 0.10
+	naval_forcelimit_modifier = 0.10
+	land_maintenance_modifier = -0.05
+	
+	war_taxes_cost_modifier = -1
+	build_cost = -0.05
+	all_power_cost = -0.05
+	advisor_cost = -0.1
+}
+scaling_difficulty_hard_reformation = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_reformation
+		has_global_flag = scaling_difficulty_hard_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_reformation
+		has_global_flag = scaling_difficulty_hard_flag
+	}
 	land_forcelimit_modifier = 0.15
 	naval_forcelimit_modifier = 0.15
+	land_maintenance_modifier = -0.1
+
 	war_taxes_cost_modifier = -1
+	free_mil_policy = 1
+	build_cost = -0.1
+	all_power_cost = -0.075
+	advisor_cost = -0.15
 }
+scaling_difficulty_hard_absolutism = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_absolutism
+		has_global_flag = scaling_difficulty_hard_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_absolutism
+		has_global_flag = scaling_difficulty_hard_flag
+	}
+	land_forcelimit_modifier = 0.20
+	naval_forcelimit_modifier = 0.20
+	land_maintenance_modifier = -0.125
+
+	war_taxes_cost_modifier = -1
+	free_mil_policy = 1
+	build_cost = -0.1
+	all_power_cost = -0.1
+	advisor_cost = -0.2
+}
+scaling_difficulty_hard_revolutions = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_revolutions
+		has_global_flag = scaling_difficulty_hard_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_revolutions
+		has_global_flag = scaling_difficulty_hard_flag
+	}
+	land_forcelimit_modifier = 0.25
+	naval_forcelimit_modifier = 0.25
+	land_maintenance_modifier = -0.15
+
+	war_taxes_cost_modifier = -1
+	free_mil_policy = 2
+	build_cost = -0.1
+	all_power_cost = -0.1
+	advisor_cost = -0.25
+}
+
+
+scaling_difficulty_nightmare_discovery = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_discovery
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_discovery
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+	land_forcelimit_modifier = 0.15
+	naval_forcelimit_modifier = 0.15
+	land_maintenance_modifier = -0.10
+	
+	war_taxes_cost_modifier = -1
+	build_cost = -0.05
+	all_power_cost = -0.1
+	advisor_cost = -0.1
+}
+scaling_difficulty_nightmare_reformation = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_reformation
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_reformation
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+	land_forcelimit_modifier = 0.25
+	naval_forcelimit_modifier = 0.25
+	land_maintenance_modifier = -0.15
+
+	war_taxes_cost_modifier = -1
+	free_mil_policy = 1
+	build_cost = -0.1
+	all_power_cost = -0.1
+	advisor_cost = -0.15
+}
+scaling_difficulty_nightmare_absolutism = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_absolutism
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_absolutism
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+	land_forcelimit_modifier = 0.35
+	naval_forcelimit_modifier = 0.35
+	land_maintenance_modifier = -0.2
+
+	war_taxes_cost_modifier = -1
+	free_mil_policy = 1
+	build_cost = -0.1
+	all_power_cost = -0.1
+	advisor_cost = -0.2
+}
+scaling_difficulty_nightmare_revolutions = {
+	potential = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_revolutions
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+	trigger = {
+		ai_regional_power_trigger = yes
+		current_age = age_of_revolutions
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+	land_forcelimit_modifier = 0.45
+	naval_forcelimit_modifier = 0.45
+	land_maintenance_modifier = -0.2
+
+	war_taxes_cost_modifier = -1
+	free_mil_policy = 2
+	build_cost = -0.1
+	all_power_cost = -0.1
+	advisor_cost = -0.25
+}
+
+
+
+scaling_difficulty_celestial_empire = {
+	potential = {
+		ai = yes
+		is_emperor_of_china = yes
+		scaling_dificlty_trigger = yes
+	}
+	trigger = {
+		NOT = { tag = MNG }
+	}
+	imperial_mandate = 0.05
+	land_forcelimit_modifier = 0.1
+
+	global_regiment_cost = -0.1
+}
+
+scaling_difficulty_hre_emperor = {
+	potential = {
+		ai = yes
+		is_emperor = yes
+		scaling_dificlty_trigger = yes
+	}
+	trigger = {
+		ai = yes
+		is_emperor = yes
+	}
+	imperial_authority = 0.05
+	land_forcelimit_modifier = 0.1
+}
+
+scaling_difficulty_feudal_theocracy = {
+	potential = {
+		ai = yes
+		has_reform = feudal_theocracy
+		scaling_dificlty_trigger = yes
+	}
+	trigger = {
+		has_reform = feudal_theocracy
+	}
+
+	build_cost = -0.05
+	development_cost = -0.05
+}
+
+

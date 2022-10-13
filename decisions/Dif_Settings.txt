@@ -1,9 +1,9 @@
 country_decisions = {
-	dif_settings_on = {
+	dif_settings_dif_moderate = {
 		major = yes
 		
 		potential = {
-			has_global_flag = scaling_difficulty_flag	
+			has_global_flag = scaling_difficulty_moderate_flag
 		}
 
 		allow = {
@@ -12,26 +12,56 @@ country_decisions = {
 		}
 		
 		effect = {
-			if = {
-				limit = {
-					has_global_flag = scaling_difficulty_flag
-				}
-				country_event = { id = dif_settings.2 }
-			}
-			else = {
-				country_event = { id = dif_settings.1 }
-			}
+			country_event = { id = dif_settings.1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	dif_settings_dif_hard = {
+		major = yes
+		
+		potential = {
+			has_global_flag = scaling_difficulty_hard_flag	
+		}
+
+		allow = {
+			ai = no
+			NOT = { has_global_flag = locked_settings_flag }
+		}
+		
+		effect = {
+			country_event = { id = dif_settings.1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	dif_settings_dif_nightmare = {
+		major = yes
+		
+		potential = {
+			has_global_flag = scaling_difficulty_nightmare_flag
+		}
+
+		allow = {
+			ai = no
+			NOT = { has_global_flag = locked_settings_flag }
+		}
+		
+		effect = {
+			country_event = { id = dif_settings.1 }
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
 	
-	dif_settings_off = {
+	dif_settings_dif_off = {
 		major = yes
 		
 		potential = {
-			NOT = { has_global_flag = scaling_difficulty_flag }
+			scaling_dificlty_trigger = no	
 		}
 
 		allow = {
@@ -40,15 +70,7 @@ country_decisions = {
 		}
 		
 		effect = {
-			if = {
-				limit = {
-					has_global_flag = scaling_difficulty_flag
-				}
-				country_event = { id = dif_settings.2 }
-			}
-			else = {
-				country_event = { id = dif_settings.1 }
-			}
+			country_event = { id = dif_settings.1 }
 		}
 		ai_will_do = {
 			factor = 0

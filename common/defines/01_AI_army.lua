@@ -1,8 +1,9 @@
-
-	NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.1 --AI wants this advantage to enter battles typically. (There are some exceptions, e.g. offensives.)
-    NDefines.NAI.ACCEPTABLE_BALANCE_MULT_FRIEND_IN_COMBAT = 0.75
+       
+    NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.05 --AI wants this advantage to enter battles typically. (There are some exceptions, e.g. offensives.)
+    NDefines.NAI.ACCEPTABLE_BALANCE_MULT_FRIEND_IN_COMBAT = 0.70
     --NDefines.NAI.ACCEPTABLE_BALANCE_MULT_OFFENSIVE = 0.85 -- Unless friend in combat is already applied
-    
+    --NDefines.NAI.ACCEPTABLE_BALANCE_THREAT_WEIGHT = 1.0
+
     NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 6 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
     NDefines.NAI.IMPORANT_PROVINCE_THRESHOLD = 0.05 --AI will try to defend provinces under threat worth more than this percentage of total development
     

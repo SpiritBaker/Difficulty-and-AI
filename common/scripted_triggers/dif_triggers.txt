@@ -164,3 +164,109 @@ naval_power_nation_trigger = {
 		tag = MSA
 	}
 }
+
+farm_estate_privilege_trigger = {
+	OR = {
+		has_estate_privilege = estate_nomadic_aristocracy_landowners
+		has_estate_privilege = estate_mamluks_landowners
+	}
+}
+
+strategic_location_for_a_fort_trigger = {
+	OR = {
+		has_great_project = {
+			type = ambras_castle
+			tier = 1
+		}
+		has_great_project = {
+			type = malbork_castle
+			tier = 1
+		}
+		has_great_project = {
+			type = bam_citadel
+			tier = 1
+		}
+		has_great_project = {
+			type = mehrangarh_fort
+			tier = 1
+		}
+		has_great_project = {
+			type = himeji_castle
+			tier = 1
+		}
+		has_great_project = {
+			type = ait_benhaddou
+			tier = 1
+		}
+		has_great_project = {
+			type = khami_ruins
+			tier = 1
+		}
+		has_great_project = {
+			type = kronborg
+			tier = 1
+		}
+		has_great_project = {
+			type = tower_of_london
+			tier = 1
+		}
+		AND = {
+			owner = {
+				culture_group = east_slavic
+			}
+			has_great_project = {
+				type = kremlin
+				tier = 1
+			}
+		}
+		AND = {
+			owner = {
+				culture_group = carpathian
+			}
+			has_great_project = {
+				type = bran_castle
+				tier = 1
+			}
+		}
+		AND = {
+			owner = {
+				religion_group = pagan
+			}
+			has_great_project = {
+				type = walls_benin
+				tier = 1
+			}
+		}
+		AND = {
+			owner = {
+				culture_group = east_asian
+			}
+			has_great_project = {
+				type = the_great_wall_of_china
+				tier = 1
+			}
+			OR = {
+				province_id = 2180
+				province_id = 2181
+				province_id = 2183
+			}
+		}
+		province_id = 365
+	}
+} 
+
+scaling_dificlty_trigger = {
+	OR = {
+		has_global_flag = scaling_difficulty_moderate_flag
+		has_global_flag = scaling_difficulty_hard_flag
+		has_global_flag = scaling_difficulty_nightmare_flag
+	}
+}
+
+ai_regional_power_trigger = {
+	is_free_or_tributary_trigger = yes
+	is_primitive = no
+	num_of_cities = 10
+	ai = yes
+}
+

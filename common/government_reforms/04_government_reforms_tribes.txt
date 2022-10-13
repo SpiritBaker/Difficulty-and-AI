@@ -127,7 +127,6 @@ tribal_despotism = {
 	nation_designer_cost = 0
 	modifiers = {
 		core_creation = -0.1
-		reform_progress_growth = -0.1
 	}
 	legacy_equivalent = tribal_despotism_legacy
 	ai = {

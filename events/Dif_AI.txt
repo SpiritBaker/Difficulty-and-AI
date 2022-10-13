@@ -138,7 +138,7 @@ country_event = { # Autonomy decreased
 		is_bankrupt = no
 		num_of_cities = 8
 		manpower_percentage = 0.2
-		army_size = 15
+		army_size = 10
 		NOT = { overextension_percentage = 0.1 }
 		NOT = { num_of_rebel_armies = 1 }
 		NOT = { num_of_rebel_controlled_provinces = 1 }

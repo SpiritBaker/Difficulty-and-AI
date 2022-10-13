@@ -1657,13 +1657,16 @@ country_event = {
 			name = "valladolid_sepulveda_motherland"
 			duration = 3650
 		}
-		every_subject_country = {
-			limit = {
-				is_colonial_nation_of = ROOT
-			}
-			add_country_modifier = {
-				name = "valladolid_sepulveda"
-				duration = 3650
+		custom_tooltip = flavor_spa.2.a.tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+				}
+				add_country_modifier = {
+					name = "valladolid_sepulveda"
+					duration = 3650
+				}
 			}
 		}
 	}
@@ -2635,32 +2638,36 @@ country_event = {
 		}
 		custom_tooltip = flavor_spa.15.tt
 		hidden_effect = {
+			low_countries_region = {
+				limit = {
+					owner = {
+						OR = {
+							tag = HAB
+							is_subject_of = HAB
+						}
+						ai = yes
+					}
+				}
+				add_core = ROOT
+				remove_core = HAB
+				cede_province = ROOT
+			}
+			picardy_area = {
+				limit = {
+					owner = {
+						OR = {
+							tag = HAB
+							is_subject_of = HAB
+						}
+						ai = yes
+					}
+				}
+				add_core = ROOT
+				remove_core = HAB
+				cede_province = ROOT
+			}
 			HAB = {
 				country_event = { id = flavor_spa.14 }
-				every_owned_province = {
-					limit = {
-						OR = {
-							region = low_countries_region
-							area = picardy_area
-						}
-					}
-					add_core = ROOT
-					remove_core = HAB
-					cede_province = ROOT
-				}
-				every_subject_country = {
-					every_owned_province = {
-						limit = {
-							OR = {
-								region = low_countries_region
-								area = picardy_area
-							}
-						}
-						add_core = ROOT
-						remove_core = HAB
-						cede_province = ROOT
-					}
-				}
 			}
 		}
 	}

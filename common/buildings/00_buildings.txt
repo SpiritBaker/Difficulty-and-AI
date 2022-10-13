@@ -364,7 +364,9 @@ shipyard = {
 	}
 	modifier = {
 		naval_forcelimit = 2
+		ship_recruit_speed = -0.25
 		local_ship_repair = 0.25
+		local_ship_cost = -0.05
 	}
 	on_built = {
 		add_development_from_building = {
@@ -619,8 +621,8 @@ fort_15th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 2.5
-			province_id = 365
+			factor = 5
+			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
 			factor = 0.6
@@ -1145,8 +1147,8 @@ fort_16th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 2.5
-			province_id = 365
+			factor = 5
+			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
 			factor = 0.6
@@ -1654,8 +1656,9 @@ grand_shipyard = {
 	}
 	modifier = {
 		naval_forcelimit = 4
-		ship_recruit_speed = -0.5
+		ship_recruit_speed = -0.50
 		local_ship_repair = 0.5
+		local_ship_cost = -0.1
 	}
 
 	on_built = {
@@ -2001,8 +2004,8 @@ fort_17th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 2.5
-			province_id = 365
+			factor = 5
+			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
 			factor = 0.6
@@ -2664,8 +2667,8 @@ fort_18th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 2.5
-			province_id = 365
+			factor = 5
+			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
 			factor = 0.6
@@ -3097,6 +3100,10 @@ farm_estate = {
 			factor = 0.35
 			FROM = { adm_tech = 15 }
 		}
+		modifier = {
+			factor = 1.5
+			farm_estate_privilege_trigger = yes
+		}
 	}
 }
 
@@ -3402,7 +3409,7 @@ impressment_offices = {
 
 	modifier = {
 		local_sailors = 250
-		ship_recruit_speed = -0.1
+		ship_recruit_speed = -0.25
 		local_ship_cost = -0.05
 	}
 	bonus_modifier = {
