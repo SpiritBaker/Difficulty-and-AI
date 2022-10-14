@@ -964,7 +964,7 @@ army_organiser = {
 	}
 	
 	ai_will_do = {
-		factor = 0.5
+		factor = 2
 		modifier = {
 			factor = 0
 			is_at_war = yes
@@ -1049,7 +1049,7 @@ quartermaster = {
 	}
 	
 	ai_will_do = {
-		factor = 0.5
+		factor = 2
 		modifier = {
 			factor = 0
 			is_at_war = yes
@@ -1095,7 +1095,7 @@ recruitmaster = {
 	}
 	
 	ai_will_do = {
-		factor = 0.5
+		factor = 1
 		modifier = {
 			factor = 2
 			is_at_war = no
@@ -1141,7 +1141,7 @@ fortification_expert = {
 	}
 	
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 }
 
@@ -1184,9 +1184,9 @@ grand_captain = {
 	}
 	
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
-			factor = 2
+			factor = 1.5
 			is_at_war = no
 		}
 		modifier = {
