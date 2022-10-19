@@ -338,10 +338,6 @@ spawn_institution = {
 			limit = {
 				NOT = { $institution$ = 100 }
 			}
-			set_base_value0 = {
-				which = baseCost
-			}
-			
 			if = {
 				limit = {
 					development = 15
@@ -374,6 +370,10 @@ spawn_institution = {
 					name = infrastructure_45
 					duration = -1
 				}
+			}
+			
+			set_base_value0 = {
+				which = baseCost
 			}
 			
 			export_to_variable = { variable_name = admPower 	value = trigger_value:adm_power 	who = PREV }
