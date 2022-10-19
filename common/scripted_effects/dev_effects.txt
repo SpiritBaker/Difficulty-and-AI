@@ -342,6 +342,40 @@ spawn_institution = {
 				which = baseCost
 			}
 			
+			if = {
+				limit = {
+					development = 15
+					NOT = { has_province_modifier = infrastructure_15 }
+				}
+				owner = { add_adm_power = -50 }
+				add_province_modifier = {
+					name = infrastructure_15
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					development = 30
+					NOT = { has_province_modifier = infrastructure_30 }
+				}
+				owner = { add_adm_power = -50 }
+				add_province_modifier = {
+					name = infrastructure_30
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					development = 45
+					NOT = { has_province_modifier = infrastructure_45 }
+				}
+				owner = { add_adm_power = -50 }
+				add_province_modifier = {
+					name = infrastructure_45
+					duration = -1
+				}
+			}
+			
 			export_to_variable = { variable_name = admPower 	value = trigger_value:adm_power 	who = PREV }
 			export_to_variable = { variable_name = dipPower 	value = trigger_value:dip_power 	who = PREV }
 			export_to_variable = { variable_name = milPower 	value = trigger_value:mil_power 	who = PREV }
