@@ -659,7 +659,7 @@ country_event = {
 		ai = yes
 		primitives = no
 		#always = no
-		
+		is_at_war = no
 		NOT = { num_of_loans = 1 }
 		treasury = 1000
 		is_in_deficit = no
@@ -750,6 +750,135 @@ country_event = {
 			remove_building = farm_estate
 			log = "[This.GetName] delete farm estate"
 		}	
+	}
+	option = {
+	}
+}
+
+country_event = {
+	# expand infrastructure
+	id = build_events.5
+	title = build_events.5.t
+	desc = build_events.5.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		#always = no
+		ai = yes
+		primitives = no
+		is_at_war = no
+		adm_power = 600
+		NOT = { governing_capacity_percentage = 1 }
+		
+		any_owned_province = {
+			is_state_core = ROOT
+			OR = {
+				province_has_center_of_trade_of_level = 2
+				area_for_scope_province = {
+					is_capital_of = ROOT
+				}
+			}
+			OR = {
+				AND = {
+					development = 15
+					NOT = { has_province_modifier = infrastructure_15 }
+					NOT = { has_province_modifier = infrastructure_30 }
+					NOT = { has_province_modifier = infrastructure_45 }
+				}
+				AND = {
+					development = 30
+					NOT = { has_province_modifier = infrastructure_30 }
+					NOT = { has_province_modifier = infrastructure_45 }
+				}
+				AND = {
+					development = 45
+					NOT = { has_province_modifier = infrastructure_45 }
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		add_adm_power = -50
+		random_owned_province = {
+			limit = {
+				is_state_core = ROOT
+				OR = {
+					province_has_center_of_trade_of_level = 2
+					area_for_scope_province = {
+						is_capital_of = ROOT
+					}
+				}
+				OR = {
+					AND = {
+						development = 15
+						NOT = { has_province_modifier = infrastructure_15 }
+						NOT = { has_province_modifier = infrastructure_30 }
+						NOT = { has_province_modifier = infrastructure_45 }
+					}
+					AND = {
+						development = 30
+						NOT = { has_province_modifier = infrastructure_30 }
+						NOT = { has_province_modifier = infrastructure_45 }
+					}
+					AND = {
+						development = 45
+						NOT = { has_province_modifier = infrastructure_45 }
+					}
+				}
+			}
+			PREV = {
+				export_to_variable = {
+					which = var_governing_capacity
+					value = modifier:governing_capacity
+				}
+				export_to_variable = {
+					which = var_governing_capacity_percentage 
+					value = trigger_value:governing_capacity_percentage 
+				}
+				set_variable = {
+					which = var_remaining_capacity
+					value = 1
+				}
+				subtract_variable = {
+					which = var_remaining_capacity
+					which = var_governing_capacity_percentage
+				}
+				multiply_variable = {
+					which = var_remaining_capacity
+					which = var_governing_capacity
+				}
+				log = "on_expanded_infrastructure	[This.GetName]	[Prev.GetName]	[This.var_remaining_capacity.GetValue]"
+			}
+			if = {
+				limit = {
+					NOT = { has_province_modifier = infrastructure_15 }
+					NOT = { has_province_modifier = infrastructure_30 }
+				}
+				add_province_modifier = {
+					name = infrastructure_15
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_province_modifier = infrastructure_30 }
+				}
+				add_province_modifier = {
+					name = infrastructure_30
+					duration = -1
+				}
+				remove_province_modifier = infrastructure_15
+			}
+			else = {
+				add_province_modifier = {
+					name = infrastructure_45
+					duration = -1
+				}
+				remove_province_modifier = infrastructure_30
+			}
+		}
 	}
 	option = {
 	}

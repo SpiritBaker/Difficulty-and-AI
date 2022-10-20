@@ -295,6 +295,9 @@
  fort_barracks_manpower_tt:0 "§G+25% Local Manpower§! modifier is added upon construction of §YFort§! buildings."
  dock_trade_power_tt:0 "§G+25% Local Trade Power§! modifier is added upon construction of §YDock§! or §YDrydock§! buildings."
  marketplace_bonus_tt:0 "§G+25% Local Production Efficiency§! modifier is added upon construction of §YMarketplace§!, §YTrade Depot§! or §YStock Exchange§! buildings in province with §YCenter of Trade§!."
+ infrastructure_15: "Expanded Infrastructure (15)"
+ infrastructure_30: "Expanded Infrastructure (30)"
+ infrastructure_45: "Expanded Infrastructure (45)"
 
 
  #Dif_Formables

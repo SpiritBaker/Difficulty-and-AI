@@ -338,6 +338,45 @@ spawn_institution = {
 			limit = {
 				NOT = { $institution$ = 100 }
 			}
+			if = {
+				limit = {
+					development = 15
+					NOT = { has_province_modifier = infrastructure_15 }
+					NOT = { has_province_modifier = infrastructure_30 }
+					NOT = { has_province_modifier = infrastructure_45 }
+				}
+				owner = { add_adm_power = -50 }
+				add_province_modifier = {
+					name = infrastructure_15
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					development = 30
+					NOT = { has_province_modifier = infrastructure_30 }
+					NOT = { has_province_modifier = infrastructure_45 }
+				}
+				owner = { add_adm_power = -50 }
+				add_province_modifier = {
+					name = infrastructure_30
+					duration = -1
+				}
+				remove_province_modifier = infrastructure_15
+			}
+			if = {
+				limit = {
+					development = 45
+					NOT = { has_province_modifier = infrastructure_45 }
+				}
+				owner = { add_adm_power = -50 }
+				add_province_modifier = {
+					name = infrastructure_45
+					duration = -1
+				}
+				remove_province_modifier = infrastructure_30
+			}
+			
 			set_base_value0 = {
 				which = baseCost
 			}
