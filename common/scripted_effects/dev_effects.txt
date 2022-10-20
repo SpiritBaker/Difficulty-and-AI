@@ -342,6 +342,8 @@ spawn_institution = {
 				limit = {
 					development = 15
 					NOT = { has_province_modifier = infrastructure_15 }
+					NOT = { has_province_modifier = infrastructure_30 }
+					NOT = { has_province_modifier = infrastructure_45 }
 				}
 				owner = { add_adm_power = -50 }
 				add_province_modifier = {
@@ -353,12 +355,14 @@ spawn_institution = {
 				limit = {
 					development = 30
 					NOT = { has_province_modifier = infrastructure_30 }
+					NOT = { has_province_modifier = infrastructure_45 }
 				}
 				owner = { add_adm_power = -50 }
 				add_province_modifier = {
 					name = infrastructure_30
 					duration = -1
 				}
+				remove_province_modifier = infrastructure_15
 			}
 			if = {
 				limit = {
@@ -370,6 +374,7 @@ spawn_institution = {
 					name = infrastructure_45
 					duration = -1
 				}
+				remove_province_modifier = infrastructure_30
 			}
 			
 			set_base_value0 = {

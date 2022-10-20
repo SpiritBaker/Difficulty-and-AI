@@ -774,7 +774,7 @@ country_event = {
 		any_owned_province = {
 			is_state_core = ROOT
 			OR = {
-				province_has_center_of_trade_of_level = 1
+				province_has_center_of_trade_of_level = 2
 				area_for_scope_province = {
 					is_capital_of = ROOT
 				}
@@ -805,7 +805,7 @@ country_event = {
 			limit = {
 				is_state_core = ROOT
 				OR = {
-					province_has_center_of_trade_of_level = 1
+					province_has_center_of_trade_of_level = 2
 					area_for_scope_province = {
 						is_capital_of = ROOT
 					}
