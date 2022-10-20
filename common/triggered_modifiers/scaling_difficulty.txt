@@ -1,11 +1,17 @@
 scaling_difficulty_moderate_discovery = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_discovery
 		has_global_flag = scaling_difficulty_moderate_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_discovery
 		has_global_flag = scaling_difficulty_moderate_flag
 	}
@@ -18,12 +24,18 @@ scaling_difficulty_moderate_discovery = {
 }
 scaling_difficulty_moderate_reformation = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_reformation
 		has_global_flag = scaling_difficulty_moderate_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_reformation
 		has_global_flag = scaling_difficulty_moderate_flag
 	}
@@ -36,15 +48,23 @@ scaling_difficulty_moderate_reformation = {
 	build_cost = -0.075
 	all_power_cost = -0.05
 	advisor_cost = -0.15
+	administrative_efficiency = 0.025
+	governing_capacity_modifier = 0.025
 }
 scaling_difficulty_moderate_absolutism = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_absolutism
 		has_global_flag = scaling_difficulty_moderate_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_absolutism
 		has_global_flag = scaling_difficulty_moderate_flag
 	}
@@ -57,15 +77,23 @@ scaling_difficulty_moderate_absolutism = {
 	build_cost = -0.1
 	all_power_cost = -0.075
 	advisor_cost = -0.2
+	administrative_efficiency = 0.05
+	governing_capacity_modifier = 0.05
 }
 scaling_difficulty_moderate_revolutions = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_revolutions
 		has_global_flag = scaling_difficulty_moderate_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_revolutions
 		has_global_flag = scaling_difficulty_moderate_flag
 	}
@@ -78,17 +106,25 @@ scaling_difficulty_moderate_revolutions = {
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.25
+	administrative_efficiency = 0.075
+	governing_capacity_modifier = 0.075
 }
 
 
 scaling_difficulty_hard_discovery = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_discovery
 		has_global_flag = scaling_difficulty_hard_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_discovery
 		has_global_flag = scaling_difficulty_hard_flag
 	}
@@ -100,15 +136,23 @@ scaling_difficulty_hard_discovery = {
 	build_cost = -0.05
 	all_power_cost = -0.05
 	advisor_cost = -0.1
+	administrative_efficiency = 0.025
+	governing_capacity_modifier = 0.025
 }
 scaling_difficulty_hard_reformation = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_reformation
 		has_global_flag = scaling_difficulty_hard_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_reformation
 		has_global_flag = scaling_difficulty_hard_flag
 	}
@@ -121,15 +165,23 @@ scaling_difficulty_hard_reformation = {
 	build_cost = -0.1
 	all_power_cost = -0.075
 	advisor_cost = -0.15
+	administrative_efficiency = 0.05
+	governing_capacity_modifier = 0.05
 }
 scaling_difficulty_hard_absolutism = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_absolutism
 		has_global_flag = scaling_difficulty_hard_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_absolutism
 		has_global_flag = scaling_difficulty_hard_flag
 	}
@@ -142,15 +194,23 @@ scaling_difficulty_hard_absolutism = {
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.2
+	administrative_efficiency = 0.075
+	governing_capacity_modifier = 0.075
 }
 scaling_difficulty_hard_revolutions = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_revolutions
 		has_global_flag = scaling_difficulty_hard_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_revolutions
 		has_global_flag = scaling_difficulty_hard_flag
 	}
@@ -163,17 +223,25 @@ scaling_difficulty_hard_revolutions = {
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.25
+	administrative_efficiency = 0.10
+	governing_capacity_modifier = 0.10
 }
 
 
 scaling_difficulty_nightmare_discovery = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_discovery
 		has_global_flag = scaling_difficulty_nightmare_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_discovery
 		has_global_flag = scaling_difficulty_nightmare_flag
 	}
@@ -185,15 +253,23 @@ scaling_difficulty_nightmare_discovery = {
 	build_cost = -0.05
 	all_power_cost = -0.1
 	advisor_cost = -0.1
+	administrative_efficiency = 0.05
+	governing_capacity_modifier = 0.05
 }
 scaling_difficulty_nightmare_reformation = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_reformation
 		has_global_flag = scaling_difficulty_nightmare_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_reformation
 		has_global_flag = scaling_difficulty_nightmare_flag
 	}
@@ -206,15 +282,23 @@ scaling_difficulty_nightmare_reformation = {
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.15
+	administrative_efficiency = 0.075
+	governing_capacity_modifier = 0.10
 }
 scaling_difficulty_nightmare_absolutism = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_absolutism
 		has_global_flag = scaling_difficulty_nightmare_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_absolutism
 		has_global_flag = scaling_difficulty_nightmare_flag
 	}
@@ -227,15 +311,23 @@ scaling_difficulty_nightmare_absolutism = {
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.2
+	administrative_efficiency = 0.10
+	governing_capacity_modifier = 0.15
 }
 scaling_difficulty_nightmare_revolutions = {
 	potential = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_revolutions
 		has_global_flag = scaling_difficulty_nightmare_flag
 	}
 	trigger = {
-		ai_regional_power_trigger = yes
+		OR = {
+			ai_regional_power_trigger = yes
+			scaling_difficulty_ming_trigger = yes
+		}
 		current_age = age_of_revolutions
 		has_global_flag = scaling_difficulty_nightmare_flag
 	}
@@ -248,6 +340,8 @@ scaling_difficulty_nightmare_revolutions = {
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.25
+	administrative_efficiency = 0.075
+	governing_capacity_modifier = 0.20
 }
 
 
@@ -265,6 +359,26 @@ scaling_difficulty_celestial_empire = {
 	land_forcelimit_modifier = 0.1
 
 	global_regiment_cost = -0.1
+}
+
+scaling_difficulty_horde_bordering_ming = {
+	potential = {
+		exists = MNG
+		MNG = {
+			is_emperor_of_china = yes
+		}
+		ai = yes
+		is_nomad = yes
+		scaling_dificlty_trigger = yes
+	}
+	trigger = {
+		any_neighbor_country = {
+			tag = MNG
+		}
+	}
+	global_manpower_modifier = 0.15
+	cavalry_cost = -0.1
+	land_forcelimit_modifier = 0.1
 }
 
 scaling_difficulty_hre_emperor = {

@@ -162,7 +162,10 @@ interaction = {
     trigger = {
         NOT = { has_any_active_estate_agenda = yes }
 		hidden_trigger = { has_any_estates = yes }
-		NOT = { has_government_attribute = blocked_call_diet }
+		OR = {
+			ai = yes
+			NOT = { has_government_attribute = blocked_call_diet }
+		}
     }
 
     effect = {

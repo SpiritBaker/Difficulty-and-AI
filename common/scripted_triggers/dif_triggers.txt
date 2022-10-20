@@ -268,5 +268,11 @@ ai_regional_power_trigger = {
 	is_primitive = no
 	num_of_cities = 10
 	ai = yes
+	NOT = { tag = MNG }
+}
+
+scaling_difficulty_ming_trigger = {
+	tag = MNG
+	has_any_disaster = no
 }
 

@@ -81,14 +81,28 @@
  removingPolynesianEnabled:0 "§RRemoved§!"
  removingPolynesianDisabled:0 "§GKept§!"
 
- scaling_difficulty_AoDis:0 "Scaling Difficulty"
- scaling_difficulty_AoRef:0 "Scaling Difficulty"
- scaling_difficulty_AoAbs:0 "Scaling Difficulty"
- scaling_difficulty_AoRev:0 "Scaling Difficulty"
+
 
  dif_settings.8.t:0 "Scaling Difficulty"
  dif_settings.8.d:0 "Scaling AI bonuses that will increase with every subsequent Age. Limited to AI's that have at least 10 provinces. Primarily gives Monarch point related bonuses. Does Not contain any direct combat bonuses.\n\n§GModerate§! - Small initial AI bonuses. No initial Force Limit bonuses.\n\n§GHard§! - Notable initial AI bonuses. Small initial Force Limit bonuses.\n\n§GNightmare§! - Significant initial AI bonuses. Notable initial Force Limit bonuses."
  opt.scaling_difficulty.moderate:0 "Difficulty: [This.ScalingDifficultyModerate]"
  opt.scaling_difficulty.hard:0 "Difficulty: [This.ScalingDifficultyHard]"
  opt.scaling_difficulty.nightmare:0 "Difficulty: [This.ScalingDifficultyNightmare]"
- 
+
+ scaling_difficulty_moderate_discovery:0 "Scaling Difficulty Age of Discovery"
+ scaling_difficulty_moderate_reformation:0 "Scaling Difficulty Age of Reformation"
+ scaling_difficulty_moderate_absolutism:0 "Scaling Difficulty Age of Absolutism"
+ scaling_difficulty_moderate_revolutions:0 "Scaling Difficulty Age of Revolutions"
+ scaling_difficulty_hard_discovery:0 "Scaling Difficulty Age of Discovery"
+ scaling_difficulty_hard_reformation:0 "Scaling Difficulty Age of Reformation"
+ scaling_difficulty_hard_absolutism:0 "Scaling Difficulty Age of Absolutism"
+ scaling_difficulty_hard_revolutions:0 "Scaling Difficulty Age of Revolutions"
+ scaling_difficulty_nightmare_discovery:0 "Scaling Difficulty Age of Discovery"
+ scaling_difficulty_nightmare_reformation:0 "Scaling Difficulty Age of Reformation"
+ scaling_difficulty_nightmare_absolutism:0 "Scaling Difficulty Age of Absolutism"
+ scaling_difficulty_nightmare_revolutions:0 "Scaling Difficulty Age of Revolutions"
+
+ scaling_difficulty_celestial_empire:0 "Scaling Difficulty Rising Celestial Empire" 
+ scaling_difficulty_horde_bordering_ming:0 "Scaling Difficulty Horde on a Border with Celestial Empire"
+ scaling_difficulty_hre_emperor:0 "Scaling Difficulty HRE Emperor"
+ scaling_difficulty_feudal_theocracy:0 "Scaling Difficulty Feudal Theocracy"
