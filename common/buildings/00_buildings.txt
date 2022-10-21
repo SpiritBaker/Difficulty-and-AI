@@ -3615,3 +3615,65 @@ state_house = {
 	}
 }
 
+forcelimit_mod50 = { #from regimental_camp
+	cost = 200
+	time = 12
+	modifier = {
+		forcelimit_influence_modifier = 0.5 #fake modifier, needs loc
+	}
+
+	on_built = {
+		add_development_from_building = {
+			building = forcelimit_per1
+			type = manpower
+			value = 1
+		}
+		update_forcelimit_mod = yes
+	}
+	on_destroyed = {
+		remove_development_from_building = {
+			building = forcelimit_per1
+			type = manpower
+			value = 1
+		}
+		#delete_forcelimit_mod = yes
+	}
+	on_obsolete = {
+	}
+
+	ai_will_do = {
+		factor = 1.1
+		modifier = {
+			factor = 1.2
+			NOT = { development = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			development = 30
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { has_owner_accepted_culture = yes }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = {
+				has_idea_group = offensive_ideas
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				has_idea_group = quantity_ideas
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { is_state = yes }
+		}
+		modifier = {
+			factor = 0
+			building_slot_for_manufactory_trigger = yes
+		}
+	}
+}

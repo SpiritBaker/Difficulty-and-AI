@@ -298,6 +298,17 @@
  infrastructure_15: "Expanded Infrastructure (15)"
  infrastructure_30: "Expanded Infrastructure (30)"
  infrastructure_45: "Expanded Infrastructure (45)"
+ forcelimit_mod_disp: "Land Force Limit"
+ desc_forcelimit_mod_disp: "Land Force Limit Modifier: §G+[This.forcelimit_mod_disp.GetValue]§!"
+ forcelimit_mod_0.01: "Land Force Limit"
+ forcelimit_mod_0.02: "Land Force Limit"
+ forcelimit_mod_0.04: "Land Force Limit"
+ forcelimit_mod_0.08: "Land Force Limit"
+ forcelimit_mod_0.16: "Land Force Limit"
+ forcelimit_mod_0.32: "Land Force Limit"
+ forcelimit_mod_0.64: "Land Force Limit"
+ forcelimit_mod_1.28: "Land Force Limit"
+ forcelimit_mod_2.56: "Land Force Limit"
 
 
  #Dif_Formables

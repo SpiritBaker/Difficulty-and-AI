@@ -101,3 +101,67 @@ value_check = {
 		save_event_target_as = build_target
 	}
 }
+
+update_mod = { #mod #var #scope
+    if = {
+        limit = {
+            OR = {
+                check_variable = { which = $var$ value = 0.01 }
+                has_$scope$_modifier = $mod$_disp
+            }
+        }
+        if = {
+            limit = {
+                check_variable = { which = $var$ value = 0.01 }
+            }
+            set_variable = { which = $mod$_disp which = $var$ }
+            add_$scope$_modifier = {
+                name = $mod$_disp
+                duration = -1
+            }
+        }
+        else = {
+            remove_$scope$_modifier = $mod$_disp
+            set_variable = { which = $mod$_disp value = 0 }
+        }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=2.56 }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=1.28 }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=0.64 }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=0.32 }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=0.16 }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=0.08 }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=0.04 }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=0.02 }
+        update_mod_helper = { mod=$mod$ var=$var$ scope=$scope$ num=0.01 }
+    }
+}
+
+update_mod_helper = {
+    if = {
+        limit = {
+            check_variable = { which = $var$ value = $num$ }
+        }
+        subtract_variable = { which = $var$ value = $num$ }
+        add_$scope$_modifier = {
+            name = $mod$_$num$
+            duration = -1
+            hidden = yes
+        }
+    }
+    else = {
+        remove_$scope$_modifier = $mod$_$num$
+    }
+}
+
+update_forcelimit_mod = {
+	export_to_variable = { which = forcelimit_variable value = development }
+	multiply_variable = { which = forcelimit_variable value = 0.1 }
+	if = {
+		limit = {
+			has_building = forcelimit_mod50
+		}
+		multiply_variable = { which = forcelimit_variable value = 0.5 }
+	}
+	update_mod = { mod=forcelimit_mod var=forcelimit_variable scope=province }
+}
+
