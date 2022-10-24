@@ -73,6 +73,8 @@ marketplace_bonus_m = {
 	local_production_efficiency = 0.25
 }
 forcelimit_mod_disp = { }
+forcelimit_mod_disp1 = { local_land_forcelimit_modifier = 0.5 }
+forcelimit_mod_disp2 = { local_land_forcelimit_modifier = 1 }
 forcelimit_mod_0.01 = { land_forcelimit = 0.01 }
 forcelimit_mod_0.02 = { land_forcelimit = 0.02 }
 forcelimit_mod_0.04 = { land_forcelimit = 0.04 }

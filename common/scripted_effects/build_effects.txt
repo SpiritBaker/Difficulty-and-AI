@@ -158,10 +158,57 @@ update_forcelimit_mod = {
 	multiply_variable = { which = forcelimit_variable value = 0.1 }
 	if = {
 		limit = {
-			has_building = forcelimit_mod50
+			has_building = regimental_camp
 		}
 		multiply_variable = { which = forcelimit_variable value = 0.5 }
 	}
+	else_if = {
+		limit = {
+			NOT = { has_building = conscription_center }
+		}
+		multiply_variable = { which = forcelimit_variable value = 0 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_province_modifier = forcelimit_mod_disp1
+				has_province_modifier = forcelimit_mod_disp2
+			}
+		}
+		remove_province_modifier = forcelimit_mod_disp1
+		remove_province_modifier = forcelimit_mod_disp2
+		add_province_modifier = {
+			name = forcelimit_mod_disp
+			duration = -1
+		}
+	}
+	
 	update_mod = { mod=forcelimit_mod var=forcelimit_variable scope=province }
+	
+	if = {
+		limit = {
+			has_province_modifier = forcelimit_mod_disp
+		}
+		if = {
+			limit = {
+				has_building = regimental_camp
+			}
+			remove_province_modifier = forcelimit_mod_disp
+			add_province_modifier = {
+                name = forcelimit_mod_disp1
+                duration = -1
+            }
+		}
+		else_if = {
+			limit = {
+				has_building = conscription_center
+			}
+			remove_province_modifier = forcelimit_mod_disp
+			add_province_modifier = {
+                name = forcelimit_mod_disp2
+                duration = -1
+            }
+		}
+	}
 }
 

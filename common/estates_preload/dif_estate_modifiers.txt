@@ -13,6 +13,15 @@ nomadic_aristocracy = {
 			has_estate = nomadic_aristocracy
 		}
 	}
+	
+	#fake modifiers
+	modifier_definition = { #forcelimit modifier
+		type = loyalty
+		key = local_land_forcelimit_modifier
+		trigger = {
+			always = yes
+		}
+	}
 }
 sedentary_subdjects = {
 	modifier_definition = {
