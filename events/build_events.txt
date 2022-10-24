@@ -770,6 +770,7 @@ country_event = {
 		is_at_war = no
 		adm_power = 600
 		NOT = { governing_capacity_percentage = 1 }
+		num_of_cities = 3
 		
 		any_owned_province = {
 			is_state_core = ROOT
