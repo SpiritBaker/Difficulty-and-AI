@@ -154,6 +154,7 @@ update_mod_helper = {
 }
 
 update_forcelimit_mod = {
+	export_to_variable = { which = forcelimit_check value = development }
 	export_to_variable = { which = forcelimit_variable value = development }
 	multiply_variable = { which = forcelimit_variable value = 0.1 }
 	if = {

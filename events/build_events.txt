@@ -884,3 +884,35 @@ country_event = {
 	option = {
 	}
 }
+
+province_event = {
+	# land force limit modifier
+	id = build_events.6
+	title = build_events.6.t
+	desc = build_events.6.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		OR = {
+			has_building = regimental_camp
+			has_building = conscription_center
+		}
+		variable_arithmetic_trigger = {
+			export_to_variable = { which = forcelimit_temp value = development }
+			NOT = {
+				is_variable_equal = {
+					which = forcelimit_check
+					which = forcelimit_temp
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		log = "[This.GetName] land force limit modifier event"
+		update_forcelimit_mod = yes
+	}
+	option = {
+	}
+}
