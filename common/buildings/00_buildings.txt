@@ -1535,9 +1535,48 @@ university = {
 	ai_will_do = {
 		factor = 420 	# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
 		modifier = {
+			factor = 0.8
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { development = 10 }
+		}
+		modifier = {
 			factor = 1.2
 			development = 20
-			is_state = yes
+		}
+		modifier = {
+			factor = 1.2
+			development = 25
+		}
+		modifier = {
+			factor = 1.2
+			development = 30
+		}
+		modifier = {
+			factor = 1.2
+			development = 35
+		}
+		modifier = {
+			factor = 1.2
+			development = 40
+		}
+		modifier = {
+			factor = 1.2
+			development = 45
+		}
+		modifier = {
+			factor = 1.2
+			development = 50
+		}
+		modifier = {
+			factor = 1.2
+			development = 55
+		}
+		modifier = {
+			factor = 1.2
+			development = 60
 		}
 		modifier = {
 			factor = 1.5

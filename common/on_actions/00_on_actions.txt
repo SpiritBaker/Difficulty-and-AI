@@ -624,6 +624,17 @@ on_war_won = {
 			id = flavor_swe.121
 		}
 	}
+
+	if = {
+		limit = {
+			is_nomad = yes
+			ai = yes
+			overextension_percentage = 0.2
+		}
+		country_event = {
+			id = dif_ai.6
+		}
+	}
 }
 
 # country

@@ -765,6 +765,7 @@ country_event = {
 
 	trigger = {
 		#always = no
+		has_dlc = "Leviathan"
 		ai = yes
 		primitives = no
 		is_at_war = no
