@@ -72,3 +72,15 @@ fort_barracks_manpower_m = {
 marketplace_bonus_m = {
 	local_production_efficiency = 0.25
 }
+forcelimit_mod_disp = { }
+forcelimit_mod_disp1 = { local_land_forcelimit_modifier = 0.5 }
+forcelimit_mod_disp2 = { local_land_forcelimit_modifier = 1 }
+forcelimit_mod_0.01 = { land_forcelimit = 0.01 }
+forcelimit_mod_0.02 = { land_forcelimit = 0.02 }
+forcelimit_mod_0.04 = { land_forcelimit = 0.04 }
+forcelimit_mod_0.08 = { land_forcelimit = 0.08 }
+forcelimit_mod_0.16 = { land_forcelimit = 0.16 }
+forcelimit_mod_0.32 = { land_forcelimit = 0.32 }
+forcelimit_mod_0.64 = { land_forcelimit = 0.64 }
+forcelimit_mod_1.28 = { land_forcelimit = 1.28 }
+forcelimit_mod_2.56 = { land_forcelimit = 2.56 }

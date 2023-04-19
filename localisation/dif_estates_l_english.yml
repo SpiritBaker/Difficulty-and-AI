@@ -211,7 +211,7 @@
  estate_nomadic_aristocracy_share_of_tribute:0 "Share of Tribute"
  estate_nomadic_aristocracy_share_of_tribute_desc:0 "By letting noble families collect the tribute in the name of the Khan we can insure their loyalty and support in times of war."
  estate_nomadic_aristocracy_landowners:0 "Land Privileges"
- desc_estate_nomadic_aristocracy_landowners:0 ""
+ estate_nomadic_aristocracy_landowners_desc:0 ""
  sedentary_subdjects:0 "City States"
  sedentary_subdjects_desc:0 "This estate represents City States and Farming communities that are nominally ruled by our Khan."
  sedentary_subdjects_influence_modifier:0 "City States Influence"

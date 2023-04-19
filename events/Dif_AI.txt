@@ -182,3 +182,33 @@ country_event = { # Autonomy decreased
 	option = {
 	}
 }
+
+country_event = { # Autonomy decreased
+	id = dif_ai.6
+	title = "dif_ai.EVTNAME5"
+	desc = "dif_ai.EVTDESC5"
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = nomad_should_raze_flag }
+			}
+			horde_unity = -80
+			set_country_flag = nomad_should_raze_flag
+		}
+		else = {
+			horde_unity = 80
+			clr_country_flag = nomad_should_raze_flag
+		}
+	}	
+	option = {
+		hidden_effect = {
+			country_event = { id = dif_ai.6 days = 30 }
+		}
+	}
+}

@@ -166,9 +166,11 @@ naval_power_nation_trigger = {
 }
 
 farm_estate_privilege_trigger = {
-	OR = {
-		has_estate_privilege = estate_nomadic_aristocracy_landowners
-		has_estate_privilege = estate_mamluks_landowners
+	FROM = {
+		OR = {
+			has_estate_privilege = estate_nomadic_aristocracy_landowners
+			has_estate_privilege = estate_mamluks_landowners
+		}
 	}
 }
 
@@ -276,3 +278,10 @@ scaling_difficulty_ming_trigger = {
 	has_any_disaster = no
 }
 
+province_infrastructure_trigger = {
+	OR = {
+		has_province_modifier = infrastructure_15
+		has_province_modifier = infrastructure_30
+		has_province_modifier = infrastructure_45
+	}	
+}

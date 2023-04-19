@@ -31,6 +31,7 @@ country_decisions = {
 				culture_group = iranian
 				primary_culture = azerbaijani
 				tag = AKK
+				tag = TRS
 			}
 			is_colonial_nation = no
 			OR = {

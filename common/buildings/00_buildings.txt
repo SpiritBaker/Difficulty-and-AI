@@ -934,7 +934,7 @@ regimental_camp = {
 	cost = 200
 	time = 12
 	modifier = {
-		land_forcelimit = 1
+		local_land_forcelimit_modifier = 0.5
 	}
 
 	on_built = {
@@ -943,6 +943,7 @@ regimental_camp = {
 			type = manpower
 			value = 1
 		}
+		hidden_effect = { update_forcelimit_mod = yes }
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -950,15 +951,56 @@ regimental_camp = {
 			type = manpower
 			value = 1
 		}
+		hidden_effect = { update_forcelimit_mod = yes }
 	}
 	on_obsolete = {
 	}
 
 	ai_will_do = {
-		factor = 1.1
+		factor = 420
+		modifier = {
+			factor = 0.75
+			local_autonomy = 25
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 35
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 45
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 55
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 65
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 85
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { development = 10 }
+		}
 		modifier = {
 			factor = 1.2
-			NOT = { development = 10 }
+			development = 20
+		}
+		modifier = {
+			factor = 1.2
+			development = 25
 		}
 		modifier = {
 			factor = 1.2
@@ -966,16 +1008,36 @@ regimental_camp = {
 		}
 		modifier = {
 			factor = 1.2
-			NOT = { has_owner_accepted_culture = yes }
+			development = 35
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
+			development = 40
+		}
+		modifier = {
+			factor = 1.2
+			development = 45
+		}
+		modifier = {
+			factor = 1.2
+			development = 50
+		}
+		modifier = {
+			factor = 1.2
+			development = 55
+		}
+		modifier = {
+			factor = 1.2
+			development = 60
+		}
+		modifier = {
+			factor = 1.2
 			FROM = {
 				has_idea_group = offensive_ideas
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			FROM = {
 				has_idea_group = quantity_ideas
 			}
@@ -1473,9 +1535,52 @@ university = {
 	ai_will_do = {
 		factor = 420 	# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
 		modifier = {
+			factor = 0.8
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { development = 10 }
+		}
+		modifier = {
 			factor = 1.2
 			development = 20
-			is_state = yes
+		}
+		modifier = {
+			factor = 1.2
+			development = 25
+		}
+		modifier = {
+			factor = 1.2
+			development = 30
+		}
+		modifier = {
+			factor = 1.2
+			development = 35
+		}
+		modifier = {
+			factor = 1.2
+			development = 40
+		}
+		modifier = {
+			factor = 1.2
+			development = 45
+		}
+		modifier = {
+			factor = 1.2
+			development = 50
+		}
+		modifier = {
+			factor = 1.2
+			development = 55
+		}
+		modifier = {
+			factor = 1.2
+			development = 60
+		}
+		modifier = {
+			factor = 1.5
+			province_infrastructure_trigger = yes
 		}
 		modifier = {
 			factor = 0.1
@@ -2447,7 +2552,7 @@ conscription_center = {
 	make_obsolete = regimental_camp
 
 	modifier = {
-		land_forcelimit = 2
+		local_land_forcelimit_modifier = 1
 	}
 	on_built = {
 		add_development_from_upgrading_or_building = {
@@ -2457,6 +2562,7 @@ conscription_center = {
 			value = 2
 			upgrade_value = 1
 		}
+		hidden_effect = { update_forcelimit_mod = yes }
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -2464,15 +2570,56 @@ conscription_center = {
 			type = manpower
 			value = 2
 		}
+		hidden_effect = { update_forcelimit_mod = yes }
 	}
 	on_obsolete = {
 	}
 
 	ai_will_do = {
-		factor = 1.1
+		factor = 420
+		modifier = {
+			factor = 0.75
+			local_autonomy = 25
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 35
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 45
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 55
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 65
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 75
+		}
+		modifier = {
+			factor = 0.75
+			local_autonomy = 85
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.3
+			NOT = { development = 10 }
+		}
 		modifier = {
 			factor = 1.2
-			NOT = { development = 10 }
+			development = 20
+		}
+		modifier = {
+			factor = 1.2
+			development = 25
 		}
 		modifier = {
 			factor = 1.2
@@ -2480,7 +2627,27 @@ conscription_center = {
 		}
 		modifier = {
 			factor = 1.2
-			NOT = { has_owner_accepted_culture = yes }
+			development = 35
+		}
+		modifier = {
+			factor = 1.2
+			development = 40
+		}
+		modifier = {
+			factor = 1.2
+			development = 45
+		}
+		modifier = {
+			factor = 1.2
+			development = 50
+		}
+		modifier = {
+			factor = 1.2
+			development = 55
+		}
+		modifier = {
+			factor = 1.2
+			development = 60
 		}
 		modifier = {
 			factor = 1.2
@@ -3614,4 +3781,3 @@ state_house = {
 		}
 	}
 }
-
