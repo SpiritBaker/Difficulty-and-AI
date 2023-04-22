@@ -547,7 +547,7 @@ estate_cossacks_prime_herding_rights = {
 		modifier = { monthly_russian_modernization = -0.01 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
 	}
 }
 

@@ -183,6 +183,14 @@ estate_brahmins_land_rights = {
 			factor = 0.75
 			has_estate_privilege = estate_rajput_land_rights
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
+		}
 	}
 }
 
@@ -285,6 +293,14 @@ estate_brahmins_legitimacy_to_rule = {
 			factor = 0.75
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
+		}
 	}
 }
 
@@ -312,6 +328,14 @@ estate_brahmins_brahmin_leadership = {
 		modifier = {
 			factor = 3
 			uses_meritocracy = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
 		}
 	}
 }
@@ -366,6 +390,14 @@ estate_brahmins_loyalty_privilege = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
 		}
 	}
 }
@@ -543,6 +575,7 @@ estate_brahmins_monopoly_of_incense = {
 		NOT = { has_estate = estate_church }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -634,7 +667,30 @@ estate_brahmins_monopoly_of_incense = {
 		country_event = { id = monopoly_privileges.8 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_brahmins_monopoly_of_incense
+				has_estate_privilege = estate_brahmins_monopoly_of_wool
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 14
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -654,6 +710,7 @@ estate_brahmins_monopoly_of_wool = {
 		NOT = { has_estate = estate_church }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -745,7 +802,30 @@ estate_brahmins_monopoly_of_wool = {
 		country_event = { id = monopoly_privileges.9 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_brahmins_monopoly_of_incense
+				#has_estate_privilege = estate_brahmins_monopoly_of_wool
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
+			factor = 0.75
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -1041,6 +1121,14 @@ estate_brahmins_one_faith_one_culture = {
 			factor = 0.1
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
+		}
 	}
 }
 
@@ -1235,6 +1323,14 @@ estate_brahmins_clerical_education = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
+		}
 	}
 }
 estate_brahmins_legitimacy_of_rule = {
@@ -1294,6 +1390,14 @@ estate_brahmins_institutionalized_brahimns = {
 		modifier = {
 			factor = 0.1
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
 		}
 	}
 }
@@ -1359,6 +1463,14 @@ estate_brahmins_donation_right = {
 		modifier = {
 			factor = 0.1
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
 		}
 	}
 }

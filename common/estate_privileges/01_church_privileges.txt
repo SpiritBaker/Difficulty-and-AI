@@ -200,6 +200,14 @@ estate_church_land_rights = {
 			factor = 0.75
 			has_estate_privilege = estate_rajput_land_rights
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
+		}
 	}
 }
 
@@ -210,6 +218,21 @@ estate_church_religious_state = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = -0.05
 	can_select = {
+		OR = {
+			is_nomad = no
+			has_reform = horde_tribal_unity_reform
+		}	
+	}
+	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+			NOT = {
+				capital_scope = {
+					continent = europe
+				}
+			}
+		}
 	}
 	on_granted = {
 	}
@@ -290,6 +313,14 @@ estate_church_independent_inquisition = {
 		modifier = {
 			factor = 3
 			uses_meritocracy = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
 		}
 	}
 }
@@ -422,6 +453,14 @@ estate_church_papal_emissary = {
 					who = PAP
 					value = 50
 				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
 			}
 		}
 	}
@@ -618,6 +657,14 @@ estate_church_clerical_ministers = {
 			religion = orthodox
 			has_dlc = "Third Rome"
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
+		}
 	}
 }
 
@@ -666,6 +713,14 @@ estate_church_freedom_of_interpretation = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
+		}
 	}
 }
 
@@ -692,6 +747,14 @@ estate_church_clerical_oversight = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
 		}
 	}
 }
@@ -872,6 +935,7 @@ estate_church_monopoly_of_incense = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -963,7 +1027,32 @@ estate_church_monopoly_of_incense = {
 		country_event = { id = monopoly_privileges.8 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_church_monopoly_of_incense
+				has_estate_privilege = estate_church_monopoly_of_wool
+				has_estate_privilege = estate_church_monopoly_of_wine
+				has_estate_privilege = estate_church_monopoly_of_slaves
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 14
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -982,6 +1071,7 @@ estate_church_monopoly_of_wool = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -1073,7 +1163,32 @@ estate_church_monopoly_of_wool = {
 		country_event = { id = monopoly_privileges.9 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_church_monopoly_of_incense
+				#has_estate_privilege = estate_church_monopoly_of_wool
+				has_estate_privilege = estate_church_monopoly_of_wine
+				has_estate_privilege = estate_church_monopoly_of_slaves
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
+			factor = 0.75
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -1093,6 +1208,7 @@ estate_church_monopoly_of_wine = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -1184,7 +1300,28 @@ estate_church_monopoly_of_wine = {
 		country_event = { id = monopoly_privileges.10 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_church_monopoly_of_incense
+				has_estate_privilege = estate_church_monopoly_of_wool
+				#has_estate_privilege = estate_church_monopoly_of_wine
+				has_estate_privilege = estate_church_monopoly_of_slaves
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -1204,6 +1341,7 @@ estate_church_monopoly_of_slaves = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -1295,7 +1433,32 @@ estate_church_monopoly_of_slaves = {
 		country_event = { id = monopoly_privileges.11 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_church_monopoly_of_incense
+				has_estate_privilege = estate_church_monopoly_of_wool
+				has_estate_privilege = estate_church_monopoly_of_wine
+				#has_estate_privilege = estate_church_monopoly_of_slaves
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 14
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -1621,6 +1784,14 @@ estate_church_influence_temples = {
 	#}
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
+		}
 	}
 }
 
@@ -1903,6 +2074,14 @@ estate_church_one_faith_one_culture = {
 			factor = 0.1
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
+		}
 	}
 }
 
@@ -1955,6 +2134,14 @@ estate_church_heir_shrine = {
 		modifier = {
 			factor = 0
 			has_mission = zim_cults
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
 		}
 	}
 }
@@ -2084,6 +2271,14 @@ estate_church_scholar_connections = {
 			factor = 0
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2126,6 +2321,14 @@ estate_church_integrated_school = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
 		}
 	}
 }
@@ -2174,6 +2377,14 @@ estate_church_yakobs_churches = {
 			factor = 1000
 			has_mission = eth_reform_the_negusa_government
 			NOT = { mission_completed = eth_reform_the_negusa_government }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
 		}
 	}
 }
@@ -2634,6 +2845,14 @@ estate_church_clerical_education = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
+		}
 	}
 }
 estate_church_religious_delegation = {
@@ -2674,6 +2893,14 @@ estate_church_religious_delegation = {
 			factor = 0.1
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
+		}
 	}
 }
 estate_church_institutionalized_clergy = {
@@ -2713,6 +2940,14 @@ estate_church_institutionalized_clergy = {
 		modifier = {
 			factor = 0.1
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
 		}
 	}
 }
@@ -2771,6 +3006,14 @@ estate_church_donation_right = {
 		modifier = {
 			factor = 0.1
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_church_religious_state }
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 5
+			}
 		}
 	}
 }

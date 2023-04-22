@@ -183,6 +183,14 @@ estate_jains_land_rights = {
 			factor = 0.75
 			has_estate_privilege = estate_rajput_land_rights
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+			num_of_estate_privileges = {
+				estate = estate_jains
+				value = 5
+			}
+		}
 	}
 }
 
@@ -256,7 +264,19 @@ estate_jains_clerical_class = {
 		development_cost = -0.05
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
+		modifier = {
+			factor = 0.75
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+			num_of_estate_privileges = {
+				estate = estate_jains
+				value = 5
+			}
+		}
 	}
 }
 
@@ -353,6 +373,14 @@ estate_jains_grant_liberties = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+			num_of_estate_privileges = {
+				estate = estate_jains
+				value = 5
+			}
+		}
 	}
 }
 
@@ -384,7 +412,15 @@ estate_jains_land_trade_rights = {
 	}
 	cooldown_years = 25
 	ai_will_do = {
-		factor = 0
+		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+			num_of_estate_privileges = {
+				estate = estate_jains
+				value = 5
+			}
+		}
 	}
 }
 
@@ -410,6 +446,7 @@ estate_jains_monopoly_of_textiles = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -511,7 +548,32 @@ estate_jains_monopoly_of_textiles = {
 		country_event = { id = monopoly_privileges.1 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_jains_monopoly_of_textiles
+				has_estate_privilege = estate_jains_monopoly_of_dyes
+				has_estate_privilege = estate_jains_monopoly_of_glass
+				has_estate_privilege = estate_jains_monopoly_of_paper
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -532,6 +594,7 @@ estate_jains_monopoly_of_dyes = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -624,7 +687,32 @@ estate_jains_monopoly_of_dyes = {
 		country_event = { id = monopoly_privileges.2 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_jains_monopoly_of_textiles
+				#has_estate_privilege = estate_jains_monopoly_of_dyes
+				has_estate_privilege = estate_jains_monopoly_of_glass
+				has_estate_privilege = estate_jains_monopoly_of_paper
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -645,6 +733,7 @@ estate_jains_monopoly_of_glass = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -737,7 +826,32 @@ estate_jains_monopoly_of_glass = {
 		country_event = { id = monopoly_privileges.3 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_jains_monopoly_of_textiles
+				has_estate_privilege = estate_jains_monopoly_of_dyes
+				#has_estate_privilege = estate_jains_monopoly_of_glass
+				has_estate_privilege = estate_jains_monopoly_of_paper
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -758,6 +872,7 @@ estate_jains_monopoly_of_paper = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -850,7 +965,32 @@ estate_jains_monopoly_of_paper = {
 		country_event = { id = monopoly_privileges.4 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_jains_monopoly_of_textiles
+				has_estate_privilege = estate_jains_monopoly_of_dyes
+				has_estate_privilege = estate_jains_monopoly_of_glass
+				#has_estate_privilege = estate_jains_monopoly_of_paper
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -962,6 +1102,14 @@ estate_jains_control_over_monetary_policy = {
 			factor = 0
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+			num_of_estate_privileges = {
+				estate = estate_jains
+				value = 5
+			}
+		}
 	}
 }
 
@@ -995,6 +1143,14 @@ estate_jains_private_trade_fleets = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+			num_of_estate_privileges = {
+				estate = estate_jains
+				value = 5
+			}
 		}
 	}
 }
@@ -1198,6 +1354,14 @@ estate_jains_patronize_jain_familiy = {
 		modifier = {
 			factor = 0.1
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+			num_of_estate_privileges = {
+				estate = estate_jains
+				value = 5
+			}
 		}
 	}
 }

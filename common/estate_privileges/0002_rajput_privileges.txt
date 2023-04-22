@@ -183,6 +183,14 @@ estate_rajput_land_rights = {
 			factor = 0.75
 			has_estate_privilege = estate_jains_land_rights
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
+		}
 	}
 }
 
@@ -210,6 +218,14 @@ estate_rajput_rajput_regiments = {
 	}
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
+		}
 	}
 }
 
@@ -300,6 +316,14 @@ estate_rajput_advisor = {
 			factor = 3
 			uses_meritocracy = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_rajput_military }
+			num_of_estate_privileges = {
+				estate = estate_rajput
+				value = 5
+			}
+		}
 	}
 }
 
@@ -318,6 +342,14 @@ estate_rajput_loyalty_privilege = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_rajput_military }
+			num_of_estate_privileges = {
+				estate = estate_rajput
+				value = 5
+			}
 		}
 	}
 }
@@ -348,6 +380,14 @@ estate_rajput_officer_corp = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_rajput_military }
+			num_of_estate_privileges = {
+				estate = estate_rajput
+				value = 5
+			}
 		}
 	}
 }
@@ -417,6 +457,14 @@ estate_rajput_look_up_purbias = {
 			}
 			NOT = { has_estate_privilege = estate_rajput_look_up_purbias }
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_rajput_military }
+			num_of_estate_privileges = {
+				estate = estate_rajput
+				value = 5
+			}
+		}
 	}
 }
 
@@ -441,6 +489,7 @@ estate_rajput_monopoly_of_metals = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -542,7 +591,31 @@ estate_rajput_monopoly_of_metals = {
 		country_event = { id = monopoly_privileges.5 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_rajput_monopoly_of_metals
+				has_estate_privilege = estate_rajput_monopoly_of_livestock
+				has_estate_privilege = estate_rajput_monopoly_of_gems
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -562,6 +635,7 @@ estate_rajput_monopoly_of_livestock = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -654,7 +728,27 @@ estate_rajput_monopoly_of_livestock = {
 		country_event = { id = monopoly_privileges.6 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_rajput_monopoly_of_metals
+				#has_estate_privilege = estate_rajput_monopoly_of_livestock
+				has_estate_privilege = estate_rajput_monopoly_of_gems
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -674,6 +768,7 @@ estate_rajput_monopoly_of_gems = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -766,7 +861,31 @@ estate_rajput_monopoly_of_gems = {
 		country_event = { id = monopoly_privileges.7 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_rajput_monopoly_of_metals
+				has_estate_privilege = estate_rajput_monopoly_of_livestock
+				#has_estate_privilege = estate_rajput_monopoly_of_gems
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -843,6 +962,14 @@ estate_rajput_subject_rights = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
+		}
 	}
 }
 
@@ -884,6 +1011,14 @@ estate_rajput_better_integration = {
 	cooldown_years = 10
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			num_of_estate_privileges = {
+				estate = estate_brahmins
+				value = 5
+			}
+		}
 	}
 }
 

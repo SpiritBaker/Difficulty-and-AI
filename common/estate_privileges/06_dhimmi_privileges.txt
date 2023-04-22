@@ -259,7 +259,11 @@ estate_dhimmi_lighter_dhimmi_taxes = {
 	#	modifier = { monthly_ottoman_decadence = 0.02 }
 	#}
 	ai_will_do = {
-		factor = 0
+		factor = 10
+		modifier = {
+			factor = 0.75
+			is_absolutism_active = yes
+		}
 	}
 }
 
@@ -285,7 +289,45 @@ estate_dhimmi_dhimmi_nobles = {
 	#	modifier = { monthly_ottoman_decadence = 0.02 }
 	#}
 	ai_will_do = {
-		factor = 0
+		factor = 10
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 35
+					}
+				}
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 35
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 30
+					}
+				}
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 30
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_absolutism_active = yes
+		}
 	}
 }
 

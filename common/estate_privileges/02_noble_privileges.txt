@@ -197,6 +197,14 @@ estate_nobles_land_rights = {
 			factor = 0.75
 			has_estate_privilege = estate_rajput_land_rights
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -211,6 +219,17 @@ estate_nobles_nobility_primacy = {
 			tooltip = no_other_mil_privilege
 			NOT = { has_estate_privilege = estate_rajput_military }
 			NOT = { has_estate_privilege = estate_maratha_military }
+		}
+	}
+	is_valid = {
+		OR = {
+			ai = no
+			num_of_cities = 2
+			NOT = {
+				capital_scope = {
+					continent = europe
+				}
+			}
 		}
 	}
 	on_granted = {
@@ -406,6 +425,14 @@ estate_nobles_levies = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -443,6 +470,14 @@ estate_nobles_advisors = {
 			factor = 3
 			uses_meritocracy = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -469,6 +504,14 @@ estate_nobles_right_of_counsel = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
 		}
 	}
 }
@@ -557,6 +600,14 @@ estate_nobles_french_strong_duchies = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -619,6 +670,14 @@ estate_nobles_supremacy_over_crown = {
 	#}
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -640,6 +699,7 @@ estate_nobles_monopoly_of_metals = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -741,7 +801,31 @@ estate_nobles_monopoly_of_metals = {
 		country_event = { id = monopoly_privileges.5 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				#has_estate_privilege = estate_nobles_monopoly_of_metals
+				has_estate_privilege = estate_nobles_monopoly_of_livestock
+				has_estate_privilege = estate_nobles_monopoly_of_gems
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 11
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -760,6 +844,7 @@ estate_nobles_monopoly_of_livestock = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -851,7 +936,31 @@ estate_nobles_monopoly_of_livestock = {
 		country_event = { id = monopoly_privileges.6 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_nobles_monopoly_of_metals
+				#has_estate_privilege = estate_nobles_monopoly_of_livestock
+				has_estate_privilege = estate_nobles_monopoly_of_gems
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 0.75
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -870,6 +979,7 @@ estate_nobles_monopoly_of_gems = {
 		}
 	}
 	can_select = {
+		num_of_cities = 2
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
 			NOT = { has_disaster = revolution }
@@ -962,7 +1072,31 @@ estate_nobles_monopoly_of_gems = {
 		country_event = { id = monopoly_privileges.7 }
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_estate_privilege = estate_nobles_monopoly_of_metals
+				has_estate_privilege = estate_nobles_monopoly_of_livestock
+				#has_estate_privilege = estate_nobles_monopoly_of_gems
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.75
+			adm_tech = 16
+		}
+		modifier = {
+			factor = 0.5
+			production_income_percentage = 0.25
+		} 
 	}
 }
 
@@ -997,6 +1131,14 @@ estate_nobles_junker_primacy = {
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
 		}
 	}
 }
@@ -1086,6 +1228,14 @@ estate_nobles_strong_duchies = {
 						is_vassal = yes
 					}
 				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
 			}
 		}
 	}
@@ -1373,6 +1523,14 @@ estate_nobles_better_integration = {
 	#}
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -1489,6 +1647,14 @@ estate_nobles_cawa_peace_keepers = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -1553,6 +1719,14 @@ estate_nobles_cawa_offensive_fighters = {
 			factor = 0.5
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -1596,6 +1770,14 @@ estate_nobles_grant_power_to_the_bashorun = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
 		}
 	}
 }
@@ -1658,6 +1840,14 @@ estate_nobles_carolean_march = {
 			factor = 0
 			NOT = { num_of_carolean = 10 }
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -1719,6 +1909,14 @@ estate_nobles_carolean_charge = {
 			factor = 0
 			NOT = { num_of_carolean = 10 }
 		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -1749,6 +1947,14 @@ estate_nobles_leidang_conscription = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
 		}
 	}
 }
@@ -1954,6 +2160,14 @@ estate_nobles_religious_conscription = {
 	}
 	ai_will_do = {
 		factor = 10
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2205,6 +2419,14 @@ estate_nobles_sponsor_hussars = {
 	cooldown_years = 50
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2229,6 +2451,14 @@ estate_nobles_mansabdari_cav_maintenance = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2252,6 +2482,14 @@ estate_nobles_mansabdari_military_service = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2267,6 +2505,14 @@ estate_nobles_mansabdari_royal_rule = {
 	mechanics = {  }
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2294,6 +2540,14 @@ estate_nobles_rynda = {
 	mechanics = {  }
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2319,6 +2573,14 @@ estate_nobles_landed_army = {
 	mechanics = {  }
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2436,6 +2698,14 @@ estate_nobles_early_serfdom = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2497,6 +2767,14 @@ estate_nobles_legalized_serfdom = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2558,6 +2836,14 @@ estate_nobles_total_serfdom = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2619,6 +2905,14 @@ estate_nobles_restricted_serfdom = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2681,6 +2975,14 @@ estate_nobles_devastating_serfdom = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2745,6 +3047,14 @@ estate_nobles_increased_peasant_freedom = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2802,6 +3112,14 @@ estate_nobles_peasant_liberation = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2852,6 +3170,14 @@ estate_nobles_factionalist_nobility = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}#TODO
 }
 estate_nobles_consolidated_noble_contracts = {
@@ -2889,6 +3215,14 @@ estate_nobles_consolidated_noble_contracts = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2927,6 +3261,14 @@ estate_nobles_english_villeinage = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -2960,6 +3302,14 @@ estate_nobles_english_copyhold_tenure = {
 	}
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
+		}
 	}
 }
 
@@ -3207,6 +3557,14 @@ estate_nobles_diet_right = {
 		modifier = {
 			factor = 0.1
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			num_of_estate_privileges = {
+				estate = estate_nobles
+				value = 5
+			}
 		}
 	}
 }
