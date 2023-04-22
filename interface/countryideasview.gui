@@ -641,7 +641,7 @@ guiTypes = {
 			quadTextureSprite= "GFX_ideas_view_unlockideabg"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-			clicksound = click #DOESNT WORK
+			clicksound = click
 		}
 		
 		iconType =
@@ -650,7 +650,7 @@ guiTypes = {
 			spriteType = "GFX_idea_empty"
 			position = { x= 9 y = 11 }
 			Orientation = "UPPER_LEFT"
-
+			alwaystransparent = yes
 		}		
 		
 		iconType =
@@ -671,6 +671,7 @@ guiTypes = {
 			maxWidth = 280
 			maxHeight = 32
 			format = centre
+			alwaystransparent = yes
 		}	
 
 		iconType =

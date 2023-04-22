@@ -1,7 +1,7 @@
 
 #This one or the next one will always be valid
 estate_brahmins_hire_advisor = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = {
 			employed_advisor = {
@@ -13,34 +13,46 @@ estate_brahmins_hire_advisor = {
 		factor = 1
 	}
 	task_requirements = {
-		employed_advisor = {
-			category = ADM
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			employed_advisor = {
+				category = ADM
+			}
 		}
 		is_in_deficit = no
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 estate_brahmins_fire_advisor = {
-	can_select = {
+		can_select = {
 		ai = no
 		employed_advisor = {
 			category = ADM
@@ -79,12 +91,27 @@ estate_brahmins_fire_advisor = {
 		clr_country_flag = need_to_fire_adm_advisor
 	}
 	task_requirements = {
-		custom_trigger_tooltip = {
-			tooltip = fire_adm_advisor_tooltip
-			has_country_flag = just_fired_adm_advisor
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = fire_adm_advisor_tooltip
+				has_country_flag = just_fired_adm_advisor
+			}
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -101,24 +128,21 @@ estate_brahmins_fire_advisor = {
 		NOT = { has_country_flag = just_fired_adm_advisor }
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		clr_country_flag = need_to_fire_adm_advisor
     }
 }
 
 #Convert a province
 estate_brahmins_convert_province_x = {
-	can_select = {
+		can_select = {
 		ai = no
 		religion = hinduism
 		num_of_missionaries = 1
@@ -232,11 +256,26 @@ estate_brahmins_convert_province_x = {
 		}
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			religion = root
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				religion = root
+			}
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		hidden_effect = {
 			event_target:agenda_province = {
 				if = {
@@ -261,29 +300,26 @@ estate_brahmins_convert_province_x = {
 		}
     }
     failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
 		event_target:agenda_province = {
 			if = {
 				limit = { has_province_modifier = agenda_conversion_zeal }
 				remove_province_modifier = agenda_conversion_zeal
 			}
 		}
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Stop Converting a province
 estate_brahmins_stop_converting_province_x = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { religion = hinduism }
 		num_of_missionaries = 1
@@ -319,12 +355,27 @@ estate_brahmins_stop_converting_province_x = {
 		}
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			has_missionary = no
-			religion = hinduism
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				has_missionary = no
+				religion = hinduism
+			}
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 15
@@ -337,23 +388,20 @@ estate_brahmins_stop_converting_province_x = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Reduce War Exhaustion
 estate_brahmins_reduce_war_exhaustion = {
-	can_select = {
+		can_select = {
 		ai = no
 		war_exhaustion = 5
 		is_at_war = no
@@ -374,9 +422,24 @@ estate_brahmins_reduce_war_exhaustion = {
 		is_at_war = yes
 	}
 	task_requirements = {
-		NOT = { war_exhaustion = 1 }
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			NOT = { war_exhaustion = 1 }
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -387,23 +450,20 @@ estate_brahmins_reduce_war_exhaustion = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Stabilise Country
 estate_brahmins_recover_stability = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { stability = 0 }
 	}
@@ -415,9 +475,24 @@ estate_brahmins_recover_stability = {
 		}
 	}
 	task_requirements = {
-		stability = 1
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			stability = 1
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -425,23 +500,20 @@ estate_brahmins_recover_stability = {
 		add_prestige = 10
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Stabilise Country II
 estate_brahmins_increase_stability = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { stability = 2 }
 		stability = 1
@@ -453,9 +525,24 @@ estate_brahmins_increase_stability = {
 		NOT = { stability = 0 }
 	}
 	task_requirements = {
-		stability = 3
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			stability = 3
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -463,23 +550,20 @@ estate_brahmins_increase_stability = {
 		add_prestige = 10
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Reduce overextension
 estate_brahmins_reduce_overextension = {
-	can_select = {
+		can_select = {
 		ai = no
 		overextension_percentage = 0.50
 	}
@@ -499,9 +583,24 @@ estate_brahmins_reduce_overextension = {
 		NOT = { is_core = root }
 	}
 	task_requirements = {
-		NOT = { overextension_percentage = 0.01 }
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			NOT = { overextension_percentage = 0.01 }
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -509,23 +608,20 @@ estate_brahmins_reduce_overextension = {
 		add_adm_power = 50
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Restore devotion
 estate_brahmins_restore_devotion = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { legitimacy_equivalent = 65 }
 		government = theocracy
@@ -547,9 +643,24 @@ estate_brahmins_restore_devotion = {
 		NOT = { government = theocracy }
 	}
 	task_requirements = {
-		legitimacy_equivalent = 90
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			legitimacy_equivalent = 90
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -561,24 +672,21 @@ estate_brahmins_restore_devotion = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 
 #Crush Revolts (heretics)
 estate_brahmins_crush_religious_revolts = {
-	can_select = {
+		can_select = {
 		ai = no
 		num_of_rebel_armies = 1
 		OR = {
@@ -610,34 +718,46 @@ estate_brahmins_crush_religious_revolts = {
 		has_country_modifier = just_lost_to_rebels
 	}
 	task_requirements = {
-		NOT = { num_of_rebel_controlled_provinces = 1 }
-		NOT = { num_of_rebel_armies = 1 }
-		hidden_trigger = { NOT = { has_country_modifier = just_lost_to_rebels } }
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			NOT = { num_of_rebel_armies = 1 }
+			hidden_trigger = { NOT = { has_country_modifier = just_lost_to_rebels } }
+		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 15
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Get allies
 estate_brahmins_get_allies = {
-	can_select = {
+		can_select = {
 		ai = no
 		religion = hinduism
 		NOT = { num_of_allies = 3 }
@@ -691,18 +811,33 @@ estate_brahmins_get_allies = {
 	task_requirements = {
 		if = {
 			limit = {
-				check_variable = {
-					which = estate_brahmins_get_allies_variable
-					value = 2
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
 				}
 			}
-			num_of_allies = 3
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
 		}
 		else = {
-			num_of_allies = 2
+			if = {
+				limit = {
+					check_variable = {
+						which = estate_brahmins_get_allies_variable
+						value = 2
+					}
+				}
+				num_of_allies = 3
+			}
+			else = {
+				num_of_allies = 2
+			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -713,24 +848,21 @@ estate_brahmins_get_allies = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 
 #Befriend Rival of Rival
 estate_brahmins_befriend_rival_of_rival = {
-	can_select = {
+		can_select = {
 		ai = no
 		religion = hinduism
 		any_rival_country = {
@@ -890,14 +1022,29 @@ estate_brahmins_befriend_rival_of_rival = {
 		is_capital_of = event_target:agenda_country
 	}
 	task_requirements = {
-		event_target:agenda_country = {
-			has_opinion = {
-				who = root
-				value = 100
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			event_target:agenda_country = {
+				has_opinion = {
+					who = root
+					value = 100
+				}
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -909,23 +1056,20 @@ estate_brahmins_befriend_rival_of_rival = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Improve Relations with X
 estate_brahmins_relations_with_X = {
-	can_select = {
+		can_select = {
 		ai = no
 		any_known_country = {
 			NOT = { is_rival = root }
@@ -1083,45 +1227,57 @@ estate_brahmins_relations_with_X = {
 	task_requirements = {
 		if = {
 			limit = {
-				check_variable = {
-					which = estate_brahmins_relations_with_X
-					value = 2
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
 				}
 			}
-			event_target:agenda_country = {
-				has_opinion = {
-					who = root
-					value = 100
-				}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
 			}
 		}
 		else = {
-			event_target:agenda_country = {
-				has_opinion = {
-					who = root
-					value = 50
+			if = {
+				limit = {
+					check_variable = {
+						which = estate_brahmins_relations_with_X
+						value = 2
+					}
+				}
+				event_target:agenda_country = {
+					has_opinion = {
+						who = root
+						value = 100
+					}
+				}
+			}
+			else = {
+				event_target:agenda_country = {
+					has_opinion = {
+						who = root
+						value = 50
+					}
 				}
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 15
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
@@ -1129,7 +1285,7 @@ estate_brahmins_relations_with_X = {
 
 #Get AE down (if there is a coalition) 
 estate_brahmins_break_coalition = {
-	can_select = {
+		can_select = {
 		ai = no
 		religion = hinduism
 		any_country = {
@@ -1194,28 +1350,40 @@ estate_brahmins_break_coalition = {
 		has_country_modifier = just_lost_war_timer
 	}
 	task_requirements = {
-		OR = {
-			custom_trigger_tooltip = {
-				tooltip = no_coalition_against_us_tooltip
-				NOT = {
-					any_country = {
-						coalition_target = root
-					}
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
 				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = no_one_has_15_ae_on_us_tooltip
-				NOT = {
-					any_country = {
-						has_opinion_modifier = {
-							who = root
-							modifier = aggressive_expansion
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = no_coalition_against_us_tooltip
+					NOT = {
+						any_country = {
+							coalition_target = root
 						}
-						NOT = {
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = no_one_has_15_ae_on_us_tooltip
+					NOT = {
+						any_country = {
 							has_opinion_modifier = {
 								who = root
 								modifier = aggressive_expansion
-								value = -15
+							}
+							NOT = {
+								has_opinion_modifier = {
+									who = root
+									modifier = aggressive_expansion
+									value = -15
+								}
 							}
 						}
 					}
@@ -1223,7 +1391,10 @@ estate_brahmins_break_coalition = {
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -1231,23 +1402,20 @@ estate_brahmins_break_coalition = {
 		add_dip_power = 50
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Protect Brethren in X (religion)
 estate_brahmins_protect_brethren = {
-	can_select = {
+		can_select = {
 		ai = no
 		religion = hinduism
 		is_free_or_tributary_trigger = yes
@@ -1407,14 +1575,26 @@ estate_brahmins_protect_brethren = {
 		province_id = event_target:agenda_province
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			custom_trigger_tooltip = {
-				tooltip = owned_by_country_of_root_religion
-				owner = {
-					religion = root
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
 				}
 			}
-			hidden_trigger = { religion = root }
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				custom_trigger_tooltip = {
+					tooltip = owned_by_country_of_root_religion
+					owner = {
+						religion = root
+					}
+				}
+				hidden_trigger = { religion = root }
+			}
 		}
 	}
 	fail_if = {
@@ -1422,7 +1602,10 @@ estate_brahmins_protect_brethren = {
 			NOT = { religion = root }
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		if = {
 			limit = {
 				event_target:agenda_province = {
@@ -1442,17 +1625,14 @@ estate_brahmins_protect_brethren = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		event_target:agenda_province = {
 			if = {
 				limit = {
@@ -1478,7 +1658,7 @@ estate_brahmins_protect_brethren = {
 
 #Restore legitimacy
 estate_brahmins_restore_legitimacy = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { legitimacy_equivalent = 65 }
 		government = monarchy
@@ -1502,9 +1682,24 @@ estate_brahmins_restore_legitimacy = {
 		}
 	}
 	task_requirements = {
-		legitimacy_equivalent = 90
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_brahmins
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_brahmins
+			}
+		}
+		else = {
+			legitimacy_equivalent = 90
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_brahmins
+		}
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -1523,17 +1718,14 @@ estate_brahmins_restore_legitimacy = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = {
-				ai = no
-			}
-			add_estate_loyalty_modifier = {
-				estate = estate_brahmins
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 

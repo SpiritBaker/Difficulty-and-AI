@@ -102,6 +102,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SPA
+			on_change_tag_effect = yes
 			restore_country_name = yes
 			if = {
 				limit = {
@@ -279,6 +280,7 @@ country_decisions = {
 				inherit = CAS
 			}
 			change_tag = SPA
+			on_change_tag_effect = yes
 			restore_country_name = yes
 			if = {
 				limit = {

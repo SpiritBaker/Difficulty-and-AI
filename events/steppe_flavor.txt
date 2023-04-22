@@ -685,7 +685,7 @@ country_event = {
 			}
 		}
 		add_prestige = 15
-		add_yearly_manpower = 1
+		add_yearly_manpower = 0.1
 	}
 }
 

@@ -299,7 +299,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "amount"
-			position = { x = 5 y = 22 }
+			position = { x = 60 y = 22 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = ""
@@ -1258,7 +1258,7 @@ guiTypes = {
 			name = "province_button"
 			position = { x = 14 y = 0 }
 			quadTextureSprite ="GFX_building_list_button"
-#			buttonFont = "vic_18"
+			buttonFont = "vic_18"
 		}
 		
 		instantTextBoxType = {

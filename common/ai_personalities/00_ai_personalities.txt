@@ -196,7 +196,14 @@ ai_diplomat = {
 		modifier = {
 			factor = 5
 			has_reform = free_city
-		}		
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				tag = POL
+				tag = PLC
+			}
+		}
 	}
 	icon = 3
 }
@@ -430,6 +437,13 @@ ai_colonialist = {
 		modifier = {
 			factor = 2
 			tag = SPA
+		}
+		modifier = {
+			factor = 0.2
+			OR = {
+				tag = POL
+				tag = PLC
+			}
 		}
 	}
 	icon = 5

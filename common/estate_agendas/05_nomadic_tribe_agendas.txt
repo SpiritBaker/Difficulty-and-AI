@@ -1,12 +1,132 @@
 
 #This one or the next one will always be valid
-#
+estate_nomadic_tribes_hire_advisor = {
+		can_select = {
+		ai = no
+		NOT = {
+			employed_advisor = {
+				category = MIL
+			}
+		}
+	}
+	selection_weight = {
+		factor = 1
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			employed_advisor = {
+				category = MIL
+			}
+			is_in_deficit = no
+		}
+	}
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+    }
+    failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+estate_nomadic_tribes_fire_advisor = {
+		can_select = {
+		ai = no
+		employed_advisor = {
+			category = MIL
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	immediate_effect = {
+		hidden_effect = {
+			set_country_flag = need_to_fire_mil_advisor
+		}
+	}
+	on_invalid = {
+		clr_country_flag = need_to_fire_adm_advisor
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = fire_mil_advisor_tooltip
+				has_country_flag = just_fired_mil_advisor
+			}
+		}
+	}
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+		clr_country_flag = just_fired_mil_advisor
+		clr_country_flag = need_to_fire_mil_advisor
+	}
+	invalid_trigger = {
+		NOT = {
+			employed_advisor = {
+				category = MIL
+			}
+		}
+		NOT = { has_country_flag = just_fired_mil_advisor }
+	}
+    failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+		clr_country_flag = need_to_fire_mil_advisor
+    }
+}
 
 #Raze a province
 estate_nomadic_tribes_raze_a_province = {
-	can_select = {
+		can_select = {
 		ai = no
-		is_nomad = yes
 		OR = {
 			has_reform = great_mongol_state_reform
 			has_reform = steppe_horde
@@ -260,185 +380,197 @@ estate_nomadic_tribes_raze_a_province = {
 	task_requirements = {
 		if = {
 			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 8
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
 				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_200_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -199
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 7
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_175_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -174
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 6
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_150_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -149
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 5
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_125_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -124
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 4
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_100_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -99
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 3
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_75_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -74
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_raze_a_province_var
-					value = 2
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = someone_has_50_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
-					}
-					NOT = {
-						has_opinion_modifier = {
-							who = root
-							modifier = razed_province
-							value = -49
-						}
-					}
-				}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
 			}
 		}
 		else = {
-			custom_trigger_tooltip = {
-				tooltip = someone_has_25_looted_province
-				any_country = {
-					has_opinion_modifier = {
-						who = root
-						modifier = razed_province
+			if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_raze_a_province_var
+						value = 8
 					}
-					NOT = {
+				}
+				custom_trigger_tooltip = {
+					tooltip = someone_has_200_looted_province
+					any_country = {
 						has_opinion_modifier = {
 							who = root
 							modifier = razed_province
-							value = -24
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -199
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_raze_a_province_var
+						value = 7
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = someone_has_175_looted_province
+					any_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -174
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_raze_a_province_var
+						value = 6
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = someone_has_150_looted_province
+					any_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -149
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_raze_a_province_var
+						value = 5
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = someone_has_125_looted_province
+					any_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -124
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_raze_a_province_var
+						value = 4
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = someone_has_100_looted_province
+					any_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -99
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_raze_a_province_var
+						value = 3
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = someone_has_75_looted_province
+					any_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -74
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_raze_a_province_var
+						value = 2
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = someone_has_50_looted_province
+					any_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -49
+							}
+						}
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = someone_has_25_looted_province
+					any_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -24
+							}
 						}
 					}
 				}
@@ -446,6 +578,9 @@ estate_nomadic_tribes_raze_a_province = {
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -456,21 +591,20 @@ estate_nomadic_tribes_raze_a_province = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Restore horde unity
 estate_nomadic_tribes_restore_horde_unity = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { horde_unity = 65 }
 		is_nomad = yes
@@ -491,9 +625,24 @@ estate_nomadic_tribes_restore_horde_unity = {
 		is_nomad = no
 	}
 	task_requirements = {
-		horde_unity = 90
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			horde_unity = 90
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -503,21 +652,20 @@ estate_nomadic_tribes_restore_horde_unity = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Befriend Rival of Rival
 estate_nomadic_tribes_befriend_rival_of_rival = {
-	can_select = {
+		can_select = {
 		ai = no
 		any_rival_country = {
 			any_rival_country = {
@@ -670,14 +818,29 @@ estate_nomadic_tribes_befriend_rival_of_rival = {
 		is_capital_of = event_target:agenda_country
 	}
 	task_requirements = {
-		event_target:agenda_country = {
-			has_opinion = {
-				who = root
-				value = 100
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			event_target:agenda_country = {
+				has_opinion = {
+					who = root
+					value = 100
+				}
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -689,21 +852,20 @@ estate_nomadic_tribes_befriend_rival_of_rival = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Improve Relations with X tribe
 estate_nomadic_tribes_relations_with_X = {
-	can_select = {
+		can_select = {
 		ai = no
 		any_known_country = {
 			is_nomad = yes
@@ -864,49 +1026,63 @@ estate_nomadic_tribes_relations_with_X = {
 	task_requirements = {
 		if = {
 			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_relations_with_X
-					value = 2
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
 				}
 			}
-			event_target:agenda_country = {
-				has_opinion = {
-					who = root
-					value = 100
-				}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
 			}
 		}
 		else = {
-			event_target:agenda_country = {
-				has_opinion = {
-					who = root
-					value = 50
+			if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_relations_with_X
+						value = 2
+					}
+				}
+				event_target:agenda_country = {
+					has_opinion = {
+						who = root
+						value = 100
+					}
+				}
+			}
+			else = {
+				event_target:agenda_country = {
+					has_opinion = {
+						who = root
+						value = 50
+					}
 				}
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 15
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Retake Core
 estate_nomadic_tribes_retake_core = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		OR = {
@@ -1016,11 +1192,26 @@ estate_nomadic_tribes_retake_core = {
 		province_id = event_target:agenda_province
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			owned_by = root
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				owned_by = root
+			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -1031,21 +1222,20 @@ estate_nomadic_tribes_retake_core = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Crush Revolts
 estate_nomadic_tribes_crush_revolts = {
-	can_select = {
+		can_select = {
 		ai = no
 		num_of_rebel_armies = 1
 		NOT = { has_spawned_rebels = tribal_rebels }
@@ -1069,11 +1259,26 @@ estate_nomadic_tribes_crush_revolts = {
 		has_country_modifier = just_lost_to_rebels
 	}
 	task_requirements = {
-		NOT = { num_of_rebel_controlled_provinces = 1 }
-		NOT = { num_of_rebel_armies = 1 }
-		hidden_trigger = { NOT = { has_country_modifier = just_lost_to_rebels } }
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			NOT = { num_of_rebel_armies = 1 }
+			hidden_trigger = { NOT = { has_country_modifier = just_lost_to_rebels } }
+		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -1081,22 +1286,21 @@ estate_nomadic_tribes_crush_revolts = {
 		add_prestige = 10
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 
 #Regain liberty
 estate_nomadic_tribes_regain_liberty = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_subject = yes
 		is_at_war = no
@@ -1120,15 +1324,30 @@ estate_nomadic_tribes_regain_liberty = {
 		}
 	}
 	task_requirements = {
-		is_subject = no
-		NOT = {
-			is_in_war = {
-				casus_belli = cb_independence_war
-				attacker_leader = root
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			is_subject = no
+			NOT = {
+				is_in_war = {
+					casus_belli = cb_independence_war
+					attacker_leader = root
+				}
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -1139,21 +1358,20 @@ estate_nomadic_tribes_regain_liberty = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Convert province culture
 estate_nomadic_tribes_convert_province_culture = {
-	can_select = {
+		can_select = {
 		ai = no
 		any_owned_province = {
 			NOT = { culture = root }
@@ -1223,23 +1441,38 @@ estate_nomadic_tribes_convert_province_culture = {
 	task_requirements = {
 		if = {
 			limit = {
-				NOT = {
-					event_target:agenda_province = {
-						has_owner_accepted_culture = yes
-					}
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
 				}
 			}
-			event_target:agenda_province = {
-				culture = root
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
 			}
 		}
-		else = { #don't want to show this in most cases, but don't want it to count as a fail if you do this.
-			event_target:agenda_province = {
-				has_owner_accepted_culture = yes
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						event_target:agenda_province = {
+							has_owner_accepted_culture = yes
+						}
+					}
+				}
+				event_target:agenda_province = {
+					culture = root
+				}
+			}
+			else = { #don't want to show this in most cases, but don't want it to count as a fail if you do this.
+				event_target:agenda_province = {
+					has_owner_accepted_culture = yes
+				}
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -1249,15 +1482,14 @@ estate_nomadic_tribes_convert_province_culture = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		event_target:agenda_province = {
 			clear_random_development_bonus_flags_effect = yes
 			if = {
@@ -1272,7 +1504,7 @@ estate_nomadic_tribes_convert_province_culture = {
 
 #Protect our Culture in X
 estate_nomadic_tribes_protect_our_culture = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1446,11 +1678,23 @@ estate_nomadic_tribes_protect_our_culture = {
 		province_id = event_target:agenda_province
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			owner = {
-				primary_culture = root
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
 			}
-			hidden_trigger = { culture = root }
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				owner = {
+					primary_culture = root
+				}
+				hidden_trigger = { culture = root }
+			}
 		}
 	}
 	fail_if = {
@@ -1458,7 +1702,10 @@ estate_nomadic_tribes_protect_our_culture = {
 			NOT = { culture = root }
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		if = {
 			limit = {
 				event_target:agenda_province = {
@@ -1476,15 +1723,14 @@ estate_nomadic_tribes_protect_our_culture = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		event_target:agenda_province = {
 			if = {
 				limit = {
@@ -1510,7 +1756,7 @@ estate_nomadic_tribes_protect_our_culture = {
 
 #Vassalise X country (less than 3 provinces, you have at least 12)
 estate_nomadic_tribes_vassalise_vulnerable_country = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1647,9 +1893,21 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 		is_capital_of = event_target:agenda_country
 	}
 	task_requirements = {
-		event_target:agenda_country = {
-			is_subject_of = root
-			NOT = { is_subject_of_type = tributary_state }
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			event_target:agenda_country = {
+				is_subject_of = root
+				NOT = { is_subject_of_type = tributary_state }
+			}
 		}
 	}
 	fail_if = {
@@ -1660,7 +1918,10 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -1677,14 +1938,13 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
 		}
 		if = {
 			limit = {
@@ -1704,7 +1964,7 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 
 #Conquer X area from country you don't have great relations with
 estate_nomadic_tribes_expand_into_x = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1893,9 +2153,21 @@ estate_nomadic_tribes_expand_into_x = {
 		}
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			area_for_scope_province = {
-				owned_by = root
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				area_for_scope_province = {
+					owned_by = root
+				}
 			}
 		}
 	}
@@ -1909,7 +2181,10 @@ estate_nomadic_tribes_expand_into_x = {
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 15
@@ -1917,15 +2192,14 @@ estate_nomadic_tribes_expand_into_x = {
 		add_adm_power = 50
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		if = {
 			limit = {
 				event_target:agenda_province = {
@@ -1950,7 +2224,7 @@ estate_nomadic_tribes_expand_into_x = {
 
 #Complete conquest of X area from country you don't have great relations with
 estate_nomadic_tribes_complete_conquest_of_x = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -2163,10 +2437,22 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 		NOT = { owned_by = root }
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			area_for_scope_province = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				area_for_scope_province = {
+					type = all
+					country_or_non_sovereign_subject_holds = root
+				}
 			}
 		}
 	}
@@ -2180,7 +2466,10 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 15
@@ -2188,15 +2477,14 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 		add_adm_power = 50
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		if = {
 			limit = {
 				event_target:agenda_province = {
@@ -2222,7 +2510,7 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 
 #Annex vassal
 estate_nomadic_tribes_annex_subject = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_at_war = no
 		diplomatic_reputation = 0
@@ -2288,11 +2576,23 @@ estate_nomadic_tribes_annex_subject = {
 		}
 	}
 	task_requirements = {
-		event_target:agenda_country = {
-			NOT = { num_of_cities = 1 }
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
 		}
-		event_target:agenda_province = {
-			owned_by = root
+		else = {
+			event_target:agenda_country = {
+				NOT = { num_of_cities = 1 }
+			}
+			event_target:agenda_province = {
+				owned_by = root
+			}
 		}
 	}
 	fail_if = {
@@ -2313,7 +2613,10 @@ estate_nomadic_tribes_annex_subject = {
 			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -2321,15 +2624,14 @@ estate_nomadic_tribes_annex_subject = {
 		custom_tooltip = no_penalties_annexing_tt
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		hidden_effect = {
 			event_target:agenda_country = {
 				remove_country_modifier = to_be_agenda_annexed_timer
@@ -2341,7 +2643,7 @@ estate_nomadic_tribes_annex_subject = {
 
 #Bigger Army
 estate_nomadic_tribes_build_an_army = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 0.5 }
@@ -2386,15 +2688,30 @@ estate_nomadic_tribes_build_an_army = {
 	task_requirements = {
 		if = {
 			limit = {
-				is_emperor = yes
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
 			}
-			army_size_percentage = 0.65
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
 		}
 		else = {
-			army_size_percentage = 0.75
+			if = {
+				limit = {
+					is_emperor = yes
+				}
+				army_size_percentage = 0.65
+			}
+			else = {
+				army_size_percentage = 0.75
+			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -2405,22 +2722,21 @@ estate_nomadic_tribes_build_an_army = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 
 #Bigger Army than Rival
 estate_nomadic_tribes_bigger_army_than_rival = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 1 }
@@ -2466,14 +2782,29 @@ estate_nomadic_tribes_bigger_army_than_rival = {
 	}
 	task_requirements = {
 		if = {
-			limit = { event_target:agenda_country = { num_of_cities = 1 } }
-			army_size = event_target:agenda_country
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
 		}
 		else = {
-			always = yes
+			if = {
+				limit = { event_target:agenda_country = { num_of_cities = 1 } }
+				army_size = event_target:agenda_country
+			}
+			else = {
+				always = yes
+			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -2484,21 +2815,20 @@ estate_nomadic_tribes_bigger_army_than_rival = {
 		}
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Manpower reserves
 estate_nomadic_tribes_build_up_manpower_reserves = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_at_war = no
 		NOT = { manpower_percentage = 0.40 }
@@ -2567,27 +2897,42 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 	task_requirements = {
 		if = {
 			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_build_up_manpower_reserves_variable
-					value = 3
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
 				}
 			}
-			manpower_percentage = 0.9
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_build_up_manpower_reserves_variable
-					value = 2
-				}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
 			}
-			manpower_percentage = 0.75
 		}
 		else = {
-			manpower_percentage = 0.5
+			if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_build_up_manpower_reserves_variable
+						value = 3
+					}
+				}
+				manpower_percentage = 0.9
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_build_up_manpower_reserves_variable
+						value = 2
+					}
+				}
+				manpower_percentage = 0.75
+			}
+			else = {
+				manpower_percentage = 0.5
+			}
 		}
 	}
-	task_completed_effect = {
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -2599,22 +2944,21 @@ estate_nomadic_tribes_build_up_manpower_reserves = {
 		clear_random_military_advisor_generation_flags = yes
 	}
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
 		clear_random_military_advisor_generation_flags = yes
     }
 }
 
 #Give us 3 privileges
 estate_nomadic_tribes_three_privileges = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = {
 			num_of_estate_privileges = {
@@ -2653,45 +2997,59 @@ estate_nomadic_tribes_three_privileges = {
 	task_requirements = {
 		if = {
 			limit = {
-				check_variable = {
-					which = estate_nomadic_tribes_three_privileges_var
-					value = 2
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
 				}
 			}
-			num_of_estate_privileges = {
+			has_estate_agenda_auto_completion = {
 				estate = estate_nomadic_tribes
-				value = 3
 			}
 		}
 		else = {
-			num_of_estate_privileges = {
-				estate = estate_nomadic_tribes
-				value = 2
+			if = {
+				limit = {
+					check_variable = {
+						which = estate_nomadic_tribes_three_privileges_var
+						value = 2
+					}
+				}
+				num_of_estate_privileges = {
+					estate = estate_nomadic_tribes
+					value = 3
+				}
+			}
+			else = {
+				num_of_estate_privileges = {
+					estate = estate_nomadic_tribes
+					value = 2
+				}
 			}
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 20
 		}
     }
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Stabilise Country
 estate_nomadic_tribes_recover_stability = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { stability = 0 }
 	}
@@ -2703,9 +3061,24 @@ estate_nomadic_tribes_recover_stability = {
 		}
 	}
 	task_requirements = {
-		stability = 1
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			stability = 1
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -2713,21 +3086,20 @@ estate_nomadic_tribes_recover_stability = {
 		add_prestige = 10
     }
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 #Stabilise Country II
 estate_nomadic_tribes_increase_stability = {
-	can_select = {
+		can_select = {
 		ai = no
 		NOT = { stability = 2 }
 		stability = 1
@@ -2739,9 +3111,24 @@ estate_nomadic_tribes_increase_stability = {
 		NOT = { stability = 0 }
 	}
 	task_requirements = {
-		stability = 3
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			stability = 3
+		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -2749,22 +3136,21 @@ estate_nomadic_tribes_increase_stability = {
 		add_prestige = 10
     }
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }
 
 
 #Loot X province with at least 12 development ("Despoil X")
 estate_nomadic_tribes_despoil_x = {
-	can_select = {
+		can_select = {
 		ai = no
 		is_at_war = yes
 		NOT = {
@@ -2850,10 +3236,22 @@ estate_nomadic_tribes_despoil_x = {
 		province_id = event_target:agenda_province
 	}
 	task_requirements = {
-		event_target:agenda_province = {
-			area_for_scope_province = {
-				type = all
-				is_looted = yes
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				area_for_scope_province = {
+					type = all
+					is_looted = yes
+				}
 			}
 		}
 	}
@@ -2867,6 +3265,9 @@ estate_nomadic_tribes_despoil_x = {
 		}
 	}
     task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
 		add_estate_loyalty = {
 			estate = estate_nomadic_tribes
 			loyalty = 10
@@ -2877,14 +3278,13 @@ estate_nomadic_tribes_despoil_x = {
 		}
     }
     failing_effect = {
-		if = {
-			limit = { ai = no }
-			add_estate_loyalty_modifier = {
-				estate = estate_nomadic_tribes
-				desc = EST_VAL_AGENDA_DENIED
-				loyalty = -5
-				duration = 7300
-			}
-		}
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
     }
 }

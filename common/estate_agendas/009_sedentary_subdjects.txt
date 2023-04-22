@@ -3,7 +3,8 @@
 #Generic ones
 
 sedentary_subdjects_build_trade_building_in_y = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		dip_tech = 4
 		any_owned_province = {
@@ -336,7 +337,8 @@ sedentary_subdjects_build_trade_building_in_y = {
 }
 
 sedentary_subdjects_build_port_building_in_y = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		dip_tech = 6
 		any_owned_province = {
@@ -655,7 +657,8 @@ sedentary_subdjects_build_port_building_in_y = {
 }
 
 sedentary_subdjects_build_production_building_in_y = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		adm_tech = 6
 		any_owned_province = {
@@ -917,7 +920,8 @@ sedentary_subdjects_build_production_building_in_y = {
 }
 
 sedentary_subdjects_build_manufactory_in_y = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -1102,7 +1106,8 @@ sedentary_subdjects_build_manufactory_in_y = {
 }
 
 sedentary_subdjects_build_university_in_y = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		government = republic
 		adm_tech = 17
@@ -1223,7 +1228,8 @@ sedentary_subdjects_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -1357,7 +1363,8 @@ sedentary_subdjects_develop_x = {
 #Rest
 
 sedentary_subdjects_hire_advisor = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		NOT = {
 			employed_advisor = {
@@ -1394,7 +1401,8 @@ sedentary_subdjects_hire_advisor = {
 }
 
 sedentary_subdjects_fire_advisor = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		employed_advisor = {
 			category = DIP
@@ -1453,7 +1461,8 @@ sedentary_subdjects_fire_advisor = {
 
 #Pay off loans
 sedentary_subdjects_pay_off_loans = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		num_of_loans = 5
 		is_bankrupt = no
@@ -1513,7 +1522,8 @@ sedentary_subdjects_pay_off_loans = {
 
 #Reduce Inflation
 sedentary_subdjects_restore_currency = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		inflation = 10
 		NOT = {
@@ -1559,7 +1569,8 @@ sedentary_subdjects_restore_currency = {
 
 #Recover Abysmal Inflation
 sedentary_subdjects_recovery_from_hyperinflation = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		inflation = 30
 	}
@@ -1593,7 +1604,8 @@ sedentary_subdjects_recovery_from_hyperinflation = {
 
 #Improve trade power in node X
 sedentary_subdjects_increase_trade_power_in_X = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		any_active_trade_node = {
 			trade_share = {
@@ -1874,7 +1886,8 @@ sedentary_subdjects_increase_trade_power_in_X = {
 
 #Access to the Sea
 sedentary_subdjects_access_sea = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		is_free_or_tributary_trigger = yes
 		NOT = {
@@ -2036,7 +2049,8 @@ sedentary_subdjects_access_sea = {
 
 #Improve dip rep
 sedentary_subdjects_improve_dip_rep = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		NOT = { diplomatic_reputation = -2 }
 	}
@@ -2069,7 +2083,8 @@ sedentary_subdjects_improve_dip_rep = {
 
 #Get a treasury
 sedentary_subdjects_get_cash = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		NOT = { years_of_income = 0.5 }
 		NOT = { num_of_loans = 1 }
@@ -2123,7 +2138,8 @@ sedentary_subdjects_get_cash = {
 
 #Get 3 silk provinces
 sedentary_subdjects_silk_trade = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2192,7 +2208,8 @@ sedentary_subdjects_silk_trade = {
 
 #Get 5 spice provinces
 sedentary_subdjects_spice_trade = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2260,7 +2277,8 @@ sedentary_subdjects_spice_trade = {
 
 #Get 3 tea provinces
 sedentary_subdjects_tea_trade = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2333,7 +2351,8 @@ sedentary_subdjects_tea_trade = {
 
 #Reduce corruption
 sedentary_subdjects_reduce_corruption = {
-	can_select = {
+		can_select = {
+		ai = no
 		ai = no
 		corruption = 5
 		is_bankrupt = no

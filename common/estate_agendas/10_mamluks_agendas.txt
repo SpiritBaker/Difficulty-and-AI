@@ -1,7 +1,8 @@
 
 #This one or the next one will always be valid
 estate_mamluks_hire_advisor = {
-	can_select = {
+		can_select = {
+		ai = no
 	    ai = no
 		NOT = {
 			employed_advisor = {
@@ -35,7 +36,8 @@ estate_mamluks_hire_advisor = {
 }
 
 estate_mamluks_fire_advisor = {
-	can_select = {
+		can_select = {
+		ai = no
 	    ai = no
 		employed_advisor = {
 			category = MIL
@@ -90,7 +92,8 @@ estate_mamluks_fire_advisor = {
 }
 
 estate_mamluks_build_army_building_in_y = {
-	can_select = {
+		can_select = {
+		ai = no
 	    ai = no
 		mil_tech = 6
 		any_owned_province = {
@@ -480,7 +483,8 @@ estate_mamluks_build_army_building_in_y = {
 }
 
 estate_mamluks_build_fort_building_in_y = {
-	can_select = {
+		can_select = {
+		ai = no
 	    ai = no
 		any_owned_province = {
 			OR = {
@@ -1103,7 +1107,8 @@ estate_mamluks_build_fort_building_in_y = {
 
 #Bigger Army
 estate_mamluks_build_an_army = {
-	can_select = {
+		can_select = {
+		ai = no
 	    ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 0.5 }
@@ -1177,7 +1182,8 @@ estate_mamluks_build_an_army = {
 
 #Bigger Army than Rival
 estate_mamluks_bigger_army_than_rival = {
-	can_select = {
+		can_select = {
+		ai = no
 	    ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 1 }
@@ -1252,7 +1258,8 @@ estate_mamluks_bigger_army_than_rival = {
 
 #Conquer X area from country you don't have great relations with
 estate_mamluks_expand_into_x = {
-	can_select = {
+		can_select = {
+		ai = no
 	    ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1492,7 +1499,8 @@ estate_mamluks_expand_into_x = {
 
 #Complete conquest of X area from country you don't have great relations with
 estate_mamluks_complete_conquest_of_x = {
-	can_select = {
+		can_select = {
+		ai = no
 	    ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no

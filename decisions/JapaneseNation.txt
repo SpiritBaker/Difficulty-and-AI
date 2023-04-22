@@ -4,12 +4,15 @@ country_decisions = {
 	unite_japan = {
 		major = yes
 		potential = {
-			is_revolutionary = no
 			NOT = { tag = JAP }
 			NOT = { has_country_flag = formed_japan_flag }
 			NOT = { has_country_flag = formed_united_shogunate_flag }
 			was_never_end_game_tag_trigger = yes
 			has_reform = shogunate
+			any_country = {
+				vassal_of = ROOT
+				has_reform = daimyo
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -86,6 +89,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = JAP
+			on_change_tag_effect = yes
 			restore_country_name_effect = yes
 			remove_government_reform = shogunate
 			#remove_government_reform = united_shogunate
@@ -97,10 +101,34 @@ country_decisions = {
 			add_dip_power = 100
 			add_mil_power = 100
 			swap_non_generic_missions = yes
+			if = { 
+				limit = { 
+					japan_region = { NOT = { country_or_non_sovereign_subject_holds = ROOT } } 
+				}
+				japan_region = {
+					limit = {
+						NOT = { is_core = ROOT } 
+						NOT = { owned_by = ROOT } 
+					}
+					add_permanent_claim = ROOT 
+				}
+			}
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			if = { 
+				limit = { has_dlc = "Domination" }
+				add_country_modifier = {
+					name = jap_grant_samurai_modifier
+					duration = -1 
+				}
+			}
+			if = {
+				limit = { ai = no }
+				on_change_tag_effect = yes
+			}
+			change_japan_formable_color = yes 
 		}
 		ai_will_do = {
 			factor = 1
@@ -145,6 +173,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = JAP
+			on_change_tag_effect = yes
 			restore_country_name_effect = yes
 			set_country_flag = formed_japan_flag
 			remove_non_electors_emperors_from_empire_effect = yes
@@ -161,6 +190,18 @@ country_decisions = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+			if = { 
+				limit = { has_dlc = "Domination" }
+				add_country_modifier = {
+					name = jap_grant_samurai_modifier
+					duration = -1 
+				}
+			}
+			if = {
+				limit = { ai = no }
+				on_change_tag_effect = yes
+			}
+			change_japan_formable_color = yes 
 		}
 		ai_will_do = {
 			factor = 1

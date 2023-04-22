@@ -1,46 +1,41 @@
 janissary_decadence = {
 	potential = {
+		NOT = { has_dlc = "Domination" }
 		normal_or_historical_nations = yes
 		has_reform = ottoman_government
 		NOT = { has_country_flag = had_janissary_decadence }
+		NOT = { has_country_flag = tur_had_janissary_coup }
+		NOT = { has_disaster = tur_disaster_ottoman_power_struggle }
 	}
 
 	can_start = {
 		has_any_disaster = no
-		OR = {
-			estate_influence = {
-				estate = estate_janissaries
-				influence = 100
-			}
-			AND = {
-				NOT = { stability = 0 }
-				if = {
-					limit = { has_dlc = "Cradle of Civilization" }
-					if = {
-						limit = {
-							janissary_percentage = 0.15
-							num_of_janissaries = 20
-						}
-						janissary_percentage = 0.2
-						else = {
-							custom_trigger_tooltip = {
-								tooltip = twenty_percent_janissaries
-								janissary_percentage = 0.2
-							}
-						}
-					}
+		NOT = { current_age = age_of_discovery }
+		NOT = { stability = 0 }
+		if = {
+			limit = { has_dlc = "Cradle of Civilization" }
+			if = {
+				limit = {
+					janissary_percentage = 0.15
 					num_of_janissaries = 20
 				}
-				if = {
-					limit = { NOT = { has_dlc = "Cradle of Civilization" } }
-					has_country_modifier = tur_janissary
-					NOT = { adm = 5 }
-					NOT = { dip = 5 }
-					NOT = { mil = 5 }
+				janissary_percentage = 0.2
+				else = {
+					custom_trigger_tooltip = {
+						tooltip = twenty_percent_janissaries
+						janissary_percentage = 0.2
+					}
 				}
 			}
+			num_of_janissaries = 20
 		}
-
+		if = {
+			limit = { NOT = { has_dlc = "Cradle of Civilization" } }
+			has_country_modifier = tur_janissary
+			NOT = { adm = 5 }
+			NOT = { dip = 5 }
+			NOT = { mil = 5 }
+		}
 	}
 	
 	can_stop = {
@@ -149,6 +144,7 @@ janissary_decadence = {
 		legitimacy = -1
 		technology_cost = 0.25
 		idea_cost = 0.25
+		janissaries_influence_modifier = 0.3
 	}
 
 	on_start = janissary_decadence.1
@@ -169,4 +165,3 @@ janissary_decadence = {
 		}
 	}
 }
-
