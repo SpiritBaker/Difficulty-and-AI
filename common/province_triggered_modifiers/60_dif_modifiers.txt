@@ -45,7 +45,7 @@ important_chinese_city = {
 		}
 	}
 	
-	imperial_mandate = 0.02
+	imperial_mandate = 0.01
 	#Province scope
 	on_activation = {
 	

@@ -2,13 +2,11 @@
 
 NDefines.NMilitary.SUPPLYLIMIT_BASE_MULTIPLIER = 8.0
 
-NDefines.NMilitary.CREATE_JANISSARIES_MIL_COST = 5				-- Cost to create janissaries (per unit)	
 NDefines.NMilitary.NOMAD_PLAINS_SHOCK_BONUS = 0.10	
 NDefines.NMilitary.NOMAD_NON_PLAINS_SHOCK_PENALTY =	0.10
 --NDefines.NMilitary.ARMY_ATTRITION_AT_COAST = 1					-- How many percent attrition units take while loaded onto ships along the coast
 NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 5					-- How many percent attrition units take while loaded onto ships traveling open sea
 --NDefines.NMilitary.MERCENARY_COMPANY_MAX_REGIMENTS = 50	-- Maximum regiments
-NDefines.NMilitary.CREATE_JANISSARIES_MIL_COST = 5
 
 NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in percent for leader to gain a trait after combat (modified by tradition gained).
 NDefines.NMilitary.SUPPLY_DEPOT_DURATION_MONTHS = 120		-- Time until supply depot is removed.
@@ -226,7 +224,7 @@ NDefines.NCountry.REVOLUTION_EMBRACE_MIN_DEV = 300	                    -- Minimu
 
 NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.1   -- Minimum of crownland when distributing land at start
 NDefines.NCountry.PS_SET_PRIMARY_CULTURE = 300
-NDefines.NCountry.RAZE_PROVINCE_DEVELOPMENT_DECREASE = 0.25	
+--NDefines.NCountry.RAZE_PROVINCE_DEVELOPMENT_DECREASE = 0.25	
 --NDefines.NCountry.RAZE_PROVINCE_POWER_PER_DEVELOPMENT = 25.0
 
 --NDefines.NCountry.POWER_MAX = 1199
@@ -238,12 +236,12 @@ NDefines.NCountry.COUNTRY_DEVELOPMENT_SCALE = 1000 --The amount of development t
 NDefines.NCountry.CORRUPTION_FROM_BANNERS = 2.5
 
 --Natives
-NDefines.NCountry.COHESION_NEIGHBOURING_COLONIZER = 1
-NDefines.NCountry.COHESION_FEDERATION_ADVANCEMENT = -0.05
+--NDefines.NCountry.COHESION_NEIGHBOURING_COLONIZER = 1
+--NDefines.NCountry.COHESION_FEDERATION_ADVANCEMENT = -0.05
 
-NDefines.NCountry.ANCESTOR_PERSONALITY_LEVEL_1 = 6				-- Roof of first level of ancestor personality
-NDefines.NCountry.ANCESTOR_PERSONALITY_LEVEL_2 = 12				-- Roof of second level of ancestor personality
-NDefines.NCountry.ANCESTOR_COST = 300							-- Cost to integrate an ancestor into the faith.
+--NDefines.NCountry.ANCESTOR_PERSONALITY_LEVEL_1 = 6				-- Roof of first level of ancestor personality
+--NDefines.NCountry.ANCESTOR_PERSONALITY_LEVEL_2 = 12				-- Roof of second level of ancestor personality
+--NDefines.NCountry.ANCESTOR_COST = 300							-- Cost to integrate an ancestor into the faith.
 --NDefines.NCountry.EXPAND_INFRASTRUCTURE_DEV_LIMIT = 20 
 
 --NDiplomacy

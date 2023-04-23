@@ -366,6 +366,7 @@ scaling_difficulty_horde_bordering_ming = {
 		exists = MNG
 		MNG = {
 			is_emperor_of_china = yes
+			is_subject = no
 		}
 		ai = yes
 		is_nomad = yes
@@ -376,9 +377,9 @@ scaling_difficulty_horde_bordering_ming = {
 			tag = MNG
 		}
 	}
-	global_manpower_modifier = 0.15
-	cavalry_cost = -0.1
-	land_forcelimit_modifier = 0.1
+	embracement_cost = -0.15
+	land_maintenance_modifier = -0.1
+	mil_tech_cost_modifier = -0.05
 }
 
 scaling_difficulty_hre_emperor = {

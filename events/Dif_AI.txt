@@ -208,7 +208,10 @@ country_event = { # Autonomy decreased
 	}	
 	option = {
 		hidden_effect = {
-			country_event = { id = dif_ai.6 days = 30 }
+			if = {
+				limit = { has_country_flag = nomad_should_raze_flag }
+				country_event = { id = dif_ai.6 days = 30 }
+			}
 		}
 	}
 }

@@ -10,6 +10,13 @@ country_event = {
 		trigger = {
 			NOT = { has_ruler_flag = leader_has_been_pushed_out }
 			NOT = { has_country_flag = caretaker_revolutionary_government }
+			OR = {
+				NOT = { has_government_attribute = has_limited_terms }
+				check_variable = {
+					which = max_election_term
+					which = election_term
+				}
+			}
 		}
 		desc = EVTDESC700
 	}
@@ -21,6 +28,20 @@ country_event = {
 	desc = {
 		trigger = { has_country_flag = caretaker_revolutionary_government }
 		desc = elections.700.caretaker
+	}
+	desc = {
+		trigger = {
+			NOT = { has_ruler_flag = leader_has_been_pushed_out }
+			NOT = { has_country_flag = caretaker_revolutionary_government }
+			has_government_attribute = has_limited_terms
+			NOT = {
+				check_variable = {
+					which = max_election_term
+					which = election_term
+				}
+			}
+		}
+		desc = elections.700.limitedterm
 	}
 	
 	is_triggered_only = yes
@@ -40,11 +61,17 @@ country_event = {
 			republican_tradition = 50
 		}
 	}
-	
+
 	immediate = {
 		hidden_effect = {
-			random_ruler = yes
-			
+			pre_select_possible_ruler_focus = yes
+			if = {
+				limit = { has_government_attribute = has_limited_terms }
+				export_to_variable = {
+					which = max_election_term
+					value = modifier:max_terms
+				}
+			}
 			clr_country_flag = adm_flag
 			clr_country_flag = dip_flag
 			clr_country_flag = mil_flag
@@ -92,6 +119,7 @@ country_event = {
 
 	after = {
 		clr_country_flag = caretaker_revolutionary_government
+		post_ruler_focus_clearance = yes
 	}
 
 	option = {
@@ -99,6 +127,13 @@ country_event = {
 		trigger = {
 			has_regency = no
 			NOT = { has_ruler_flag = leader_has_been_pushed_out }
+			OR = {
+				NOT = { has_government_attribute = has_limited_terms }
+				check_variable = {
+					which = max_election_term
+					which = election_term
+				}
+			}
 		}
 		ai_chance = { 
 			factor = 120
@@ -197,7 +232,10 @@ country_event = {
 			}
 		}
 		custom_tooltip = remains_ruler
-		
+		if = {
+			limit = { has_government_attribute = has_limited_terms }
+			custom_tooltip = current_term_tt
+		}
 		if = {
 			limit = {
 				NOT = { adm = 6 }
@@ -276,12 +314,6 @@ country_event = {
 			add_dip_power = 15
 			change_mil = 1
 		}
-		else = {
-			add_adm_power = 15
-			add_dip_power = 15
-			add_mil_power = 15
-		}
-		
 		if = {
 			limit = {
 				is_tribal = no 
@@ -299,7 +331,7 @@ country_event = {
 				NOT = { republican_tradition = 20 }	
 				is_revolutionary_republic_trigger = yes
 			}
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			add_government_reform = revolutionary_empire_reform
 		}
 		if = {
@@ -310,7 +342,7 @@ country_event = {
 				NOT = { has_dlc = "Res Publica" }
 				NOT = { has_government_attribute = cannot_become_dictatorship }
 			}
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			#set_legacy_government = despotic_monarchy
 		}
 		if = {
@@ -321,17 +353,47 @@ country_event = {
 			clr_country_flag = strengthened_signoria_flag
 		}
 		else = {
-				 if = { limit = { months_of_ruling = 600 } add_scaled_republican_tradition = -20 }
-			else_if = { limit = { months_of_ruling = 540 } add_scaled_republican_tradition = -19 }
-			else_if = { limit = { months_of_ruling = 480 } add_scaled_republican_tradition = -18 }
-			else_if = { limit = { months_of_ruling = 420 } add_scaled_republican_tradition = -17 }
-			else_if = { limit = { months_of_ruling = 360 } add_scaled_republican_tradition = -16 }
-			else_if = { limit = { months_of_ruling = 300 } add_scaled_republican_tradition = -15 }
-			else_if = { limit = { months_of_ruling = 240 } add_scaled_republican_tradition = -14 }
-			else_if = { limit = { months_of_ruling = 180 } add_scaled_republican_tradition = -13 }
-			else_if = { limit = { months_of_ruling = 120 } add_scaled_republican_tradition = -12 }
-			else_if = { limit = { months_of_ruling =  60 } add_scaled_republican_tradition = -11 }
-			else	= {									   add_scaled_republican_tradition = -10 }
+			if = {
+				limit = {
+					has_country_flag = increased_election_cost
+				}
+					if = { limit = { months_of_ruling = 600 } add_scaled_republican_tradition = -25 }
+				else_if = { limit = { months_of_ruling = 540 } add_scaled_republican_tradition = -22 }
+				else_if = { limit = { months_of_ruling = 480 } add_scaled_republican_tradition = -20 }
+				else_if = { limit = { months_of_ruling = 420 } add_scaled_republican_tradition = -18 }
+				else_if = { limit = { months_of_ruling = 360 } add_scaled_republican_tradition = -16 }
+				else_if = { limit = { months_of_ruling = 300 } add_scaled_republican_tradition = -15 }
+				else_if = { limit = { months_of_ruling = 240 } add_scaled_republican_tradition = -14 }
+				else_if = { limit = { months_of_ruling = 180 } add_scaled_republican_tradition = -13 }
+				else_if = { limit = { months_of_ruling = 120 } add_scaled_republican_tradition = -12 }
+				else_if = { limit = { months_of_ruling =  60 } add_scaled_republican_tradition = -11 }
+				else	= {									   add_scaled_republican_tradition = -10 }
+				clr_country_flag = increased_election_cost
+			}
+			else = {
+					 if = { limit = { months_of_ruling = 600 } add_scaled_republican_tradition = -20 }
+				else_if = { limit = { months_of_ruling = 540 } add_scaled_republican_tradition = -18 }
+				else_if = { limit = { months_of_ruling = 480 } add_scaled_republican_tradition = -17 }
+				else_if = { limit = { months_of_ruling = 420 } add_scaled_republican_tradition = -16 }
+				else_if = { limit = { months_of_ruling = 360 } add_scaled_republican_tradition = -15 }
+				else_if = { limit = { months_of_ruling = 300 } add_scaled_republican_tradition = -14 }
+				else_if = { limit = { months_of_ruling = 240 } add_scaled_republican_tradition = -13 }
+				else_if = { limit = { months_of_ruling = 180 } add_scaled_republican_tradition = -12 }
+				else_if = { limit = { months_of_ruling = 120 } add_scaled_republican_tradition = -11 }
+				else_if = { limit = { months_of_ruling =  60 } add_scaled_republican_tradition = -10 }
+				else	= {									   add_scaled_republican_tradition = -10 }
+			}
+		}
+		random_list = {
+			10 = {
+				add_adm_power = 50
+			}
+			10 = {
+				add_dip_power = 50
+			}
+			10 = {
+				add_mil_power = 50
+			}
 		}
 		if = {
 			limit = {
@@ -379,8 +441,18 @@ country_event = {
 			}
 		}
 		add_karma = -5
-		
 		set_ruler_flag = ruler_reelected
+		if = {
+			limit = {
+				has_government_attribute = has_limited_terms
+			}
+			hidden_effect = {
+				change_variable = {
+					which = election_term
+					value = 1
+				}
+			}
+		}
 	}
 	option = {
 		name = "EVTOPTB700"	# An administrator type
@@ -412,6 +484,23 @@ country_event = {
 				loyalty = 10
 			}
 		}
+		if = {
+			limit = {
+				has_government_attribute = has_limited_terms
+			}
+			hidden_effect = {
+				set_variable = {
+					which = election_term
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = adm
+			}
+		}
 	}
 	option = {
 		name = "EVTOPTC700"	# A diplomat
@@ -430,11 +519,34 @@ country_event = {
 		else = {
 			dip_ruler = yes
 		}
+		if = {
+			limit = { has_government_attribute = elections_increase_factions_influence }
+			add_influence_to_dip_faction = {
+				influence = 20
+			}
+		}
 		add_karma = 10
 		if = {
 			limit = { has_government_attribute = elections_influence_estates }
 			add_estate_loyalty_by_class_dip = {
 				loyalty = 10
+			}
+		}
+		if = {
+			limit = {
+				has_government_attribute = has_limited_terms
+			}
+			hidden_effect = {
+				set_variable = {
+					which = election_term
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = dip
 			}
 		}
 	}
@@ -466,6 +578,23 @@ country_event = {
 			limit = { has_government_attribute = elections_influence_estates }
 			add_estate_loyalty_by_class_mil = {
 				loyalty = 10
+			}
+		}
+		if = {
+			limit = {
+				has_government_attribute = has_limited_terms
+			}
+			hidden_effect = {
+				set_variable = {
+					which = election_term
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = mil
 			}
 		}
 	}
@@ -554,6 +683,23 @@ country_event = {
 				loyalty = 10
 			}
 		}
+		if = {
+			limit = {
+				has_government_attribute = has_limited_terms
+			}
+			hidden_effect = {
+				set_variable = {
+					which = election_term
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = rng
+			}
+		}
 	}
 }
 
@@ -583,11 +729,14 @@ country_event = {
 			republican_tradition = 50
 		}
 	}
-	
+
 	immediate = {
 		hidden_effect = {
-			random_ruler = yes
+			pre_select_possible_ruler_focus = yes
 		}
+	}
+	after = {
+		post_ruler_focus_clearance = yes
 	}
 	
 	option = {
@@ -612,6 +761,12 @@ country_event = {
 				loyalty = 10
 			}
 		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = adm
+			}
+		}
 	}
 	option = {
 		name = "EVTOPTC700"	# A diplomat
@@ -634,7 +789,13 @@ country_event = {
 			add_estate_loyalty_by_class_dip = {
 				loyalty = 10
 			}
-		}		
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = dip
+			}
+		}
 	}
 	option = {
 		name = "EVTOPTD700"	# A military man
@@ -656,6 +817,12 @@ country_event = {
 			limit = { has_government_attribute = elections_influence_estates }
 			add_estate_loyalty_by_class_mil = {
 				loyalty = 10
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = mil
 			}
 		}
 	}
@@ -737,6 +904,12 @@ country_event = {
 			add_estate_loyalty = {
 				estate = all
 				loyalty = 10
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = rng
 			}
 		}
 	}
@@ -838,7 +1011,9 @@ country_event = {
 	id = elections.720
 	title = elections.720.t
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_government_attribute = has_dutch_election
+		}
 		desc = elections.720.da
 	}
 	
@@ -853,7 +1028,11 @@ country_event = {
 	}
 	
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = { 
+			NOT = {
+				has_government_attribute = has_dutch_election
+			} 
+		}
 		desc = elections.720.db
 	}
 	picture = ELECTION_REPUBLICAN_eventPicture
@@ -905,7 +1084,9 @@ country_event = {
 	}
 	
 	option = {
-		trigger = { has_reform = dutch_republic }
+		trigger = { 
+			has_government_attribute = has_dutch_election
+		}
 		name = elections.720.b
 		define_ruler = {
 			dynasty = "van Oranje"
@@ -916,10 +1097,10 @@ country_event = {
 	option = {
 		trigger = { 
 			NOT = { 
-				OR = { 
-					has_reform = dutch_republic 
-					has_reform = monastic_elections_reform 
-				} 
+				OR = {
+					has_government_attribute = has_dutch_election
+					has_reform = monastic_elections_reform
+				}
 			} 
 		}
 		name = elections.720.c
@@ -978,7 +1159,9 @@ country_event = {
 	id = elections.721
 	title = elections.720.t
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_government_attribute = has_dutch_election
+		}
 		desc = elections.721.da
 	}
 	
@@ -993,7 +1176,11 @@ country_event = {
 	}
 	
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_government_attribute = has_dutch_election
+			}
+		}
 		desc = elections.721.db
 	}
 	picture = ELECTION_REPUBLICAN_eventPicture
@@ -1045,7 +1232,9 @@ country_event = {
 	}
 	
 	option = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_government_attribute = has_dutch_election
+		}
 		name = elections.720.b
 		define_ruler = {
 			dynasty = "van Oranje"
@@ -1057,7 +1246,7 @@ country_event = {
 		trigger = { 
 			NOT = { 
 				OR = { 
-					has_reform = dutch_republic 
+					has_government_attribute = has_dutch_election
 					has_reform = monastic_elections_reform 
 				} 
 			} 

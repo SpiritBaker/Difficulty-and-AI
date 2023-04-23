@@ -743,6 +743,7 @@ on_war_won = {
 			is_nomad = yes
 			ai = yes
 			overextension_percentage = 0.2
+			NOT = { has_reform = horde_tribal_unity_reform }
 		}
 		country_event = {
 			id = dif_ai.6

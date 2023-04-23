@@ -259,7 +259,7 @@ guiTypes = {
 				name = "adm_ideaunlockgroups_listbox"
 				backGround = ""
 				position = { x=26 y=63 }
-				size = { x=313 y=525 }
+				size = { x=313 y=600 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 1.5
@@ -270,7 +270,7 @@ guiTypes = {
 				name = "dip_ideaunlockgroups_listbox"
 				backGround = ""
 				position = { x=344 y=63 }
-				size = { x=313 y=525 }
+				size = { x=313 y=600 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 1.5
@@ -281,7 +281,7 @@ guiTypes = {
 				name = "mil_ideaunlockgroups_listbox"
 				backGround = ""
 				position = { x=663 y=63 }
-				size = { x=313 y=525 }
+				size = { x=313 y=600 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 1.5
