@@ -132,7 +132,7 @@ militarization_of_nomad_society = {
 		}
 	}
 	modifiers = {
-		cavalry_power = 0.10
+		cavalry_power = 0.05
 		cav_to_inf_ratio = 0.10
 		nomadic_tribes_influence_modifier = 0.1 
 	}

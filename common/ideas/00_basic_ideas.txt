@@ -787,6 +787,7 @@ defensive_ideas = {
 		}
 		modifier = {
 			factor = 1.5
+			is_nomad = no
 			capital_scope = {
 				OR = {
 					region = persia_region
@@ -810,6 +811,7 @@ defensive_ideas = {
 
 		modifier = {
 			factor = 1.5
+			is_nomad = no
 			capital_scope = { 
 				OR = {
 					has_terrain = mountain
@@ -821,6 +823,7 @@ defensive_ideas = {
 		}
 		modifier = {
 			factor = 1.5
+			is_nomad = no
 			OR = {
 				culture_group = central_indic
 				culture_group = caucasian
