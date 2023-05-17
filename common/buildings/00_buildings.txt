@@ -23,12 +23,14 @@
 # AI will consider each building to be worth 0.01 ducats per year as a base, so making ai_will_do above cost will have them build it at some point.
 # It will still check whether it can afford a building before doing so though, but may save up to it.
 
+
 ################################################
 # Tier 1, 15th Century Buildings
 ################################################
 marketplace = {
 	cost = 100
 	time = 12
+
 	modifier = {
 		province_trade_power_modifier = 0.5
 	}
@@ -189,7 +191,6 @@ temple = {
 	cost = 100
 	time = 12
 	modifier = {
-		#local_governing_cost = -0.05
 		local_tax_modifier = 0.45
 	}
 	on_built = {
@@ -1148,7 +1149,7 @@ fort_16th = {
 	on_built = {
 		if = {
 			limit = {
-				FROM = { NOT = { mil_tech = 14 } has_government_attribute = on_fort_built_nobles_loyalty }
+				FROM = { NOT = { mil_tech = 19 } has_government_attribute = on_fort_built_nobles_loyalty }
 			}
 			FROM = {
 				if = {
@@ -1233,6 +1234,12 @@ fort_16th = {
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_mod
+		}
 		if = {
 			limit = { has_province_modifier = fort_barracks_manpower_m }
 			remove_province_modifier = fort_barracks_manpower_m
@@ -3483,7 +3490,7 @@ farm_estate = {
 		}
 	}
 	on_destroyed = {
-		add_dev_from_building = {
+		remove_development_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1 
@@ -3496,11 +3503,6 @@ farm_estate = {
 		if = {
 			limit = { has_province_modifier = farm_estate_manpower_m }
 			remove_province_modifier = farm_estate_manpower_m
-		}
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
 		}
 	}
 	on_obsolete = {

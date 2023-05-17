@@ -499,6 +499,7 @@ ikko_ikki_reform = {
 	}
 	trigger = {
 		religion_group = eastern
+		is_not_blocked_by_estate_privilege = { estate = estate_nobles }
 	}
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
@@ -1457,11 +1458,17 @@ theocratic_democracy_reform = {
 	trigger = {
 		NOT = { has_government_attribute = monastic_order }
 		if = {
-			limit = { has_dlc = "Common Sense" }
+			limit = { 
+				OR = {
+					has_dlc = "Common Sense"
+					has_dlc = "Domination"
+				}
+			}
 			OR = {
 				NOT = { has_estate = estate_nobles }
 				crown_stronger_than_estate = { estate = estate_nobles }
 			}
+			is_not_blocked_by_estate_privilege = { estate = estate_nobles }
 		}
 	}
 
@@ -1538,11 +1545,17 @@ regionally_elected_commanders = {
 			tag = KOJ
 		}
 		if = {
-			limit = { has_dlc = "Common Sense" }
+			limit = {
+				OR = {
+					has_dlc = "Common Sense"
+					has_dlc = "Domination"
+				}
+			}
 			OR = {
 				NOT = { has_estate = estate_nobles }
 				crown_stronger_than_estate = { estate = estate_nobles }
 			}
+			is_not_blocked_by_estate_privilege = { estate = estate_nobles }
 		}
 	}
 

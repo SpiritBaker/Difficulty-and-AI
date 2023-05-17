@@ -1828,8 +1828,10 @@ gbr_naval_dominance = {	#Permanent
 }
 
 gbr_religious_stability = {
+	tolerance_own = 0.5
 	monthly_fervor_increase = 0.5
 	papal_influence = 1
+	yearly_patriarch_authority = 0.005
 	religion = yes
 }
 
@@ -8640,8 +8642,8 @@ haijin_policy_modifier = {
 	burghers_loyalty_modifier = 0.05
 }
 mng_reform_haijin_policy_modifier = {
-	local_governing_cost = -0.25
-	province_trade_power_modifier = 0.2
+	state_governing_cost = -0.1
+	global_prov_trade_power_modifier = 0.2
 }
 mng_great_market_of_china_modifier = {
 	global_institution_spread = 0.25 
@@ -8708,12 +8710,13 @@ mng_great_engineer_modifier = {
 	build_time = -0.5
 }
 mng_yellow_river_dykes_modifier = {
-	local_tax_modifier = 0.25 
+	local_tax_modifier = 0.25
+	local_monthly_devastation = -0.25
+	local_development_cost = -0.05
 }
 mng_silver_house_of_china_modifier = {
-	trade_goods_size = 2 
-	inflation_reduction = -0.1
-	local_gold_depletion_chance_modifier = -0.5
+	trade_goods_size = 1.5
+	local_gold_depletion_chance_modifier = -0.25
 }
 mng_silver_trade_china_modifier = {
 	trade_efficiency = 0.1
@@ -9543,6 +9546,12 @@ fra_victory_against_the_english_modifier = {
 	war_exhaustion = -0.03
 }
 
+fra_close_ties_modifier = {
+	diplomatic_reputation = 1 
+	diplomats = 1 
+}
+	
+
 jap_exchange_ideas_modifier = { 
 	technology_cost = -0.1
 	innovativeness_gain = 0.25
@@ -9646,7 +9655,7 @@ jap_shinto_warriors_modifier = {
 	manpower_in_true_faith_provinces = 0.1
 	enforce_religion_cost = -0.5
 	missionaries = 1 
-	land_morale_constant = 0.1
+	land_morale = 0.15
 	religion = yes
 }
 
@@ -9956,6 +9965,11 @@ ara_governmental_restructuring_modifier = {
 	country_admin_power = 1 
 }
 
+ara_victory_over_provence_modifier = {
+	war_exhaustion = -0.05
+	land_morale = 0.15
+}
+
 ara_crushed_the_catalan_estates_modifier = {
 	harsh_treatment_cost = -0.25
 	all_estate_loyalty_equilibrium = 0.1
@@ -10004,7 +10018,7 @@ por_center_of_portuguese_trade_modifier = {
 }
 
 por_struggle_for_iberia_modifier = {
-	land_morale_constant = 0.15
+	land_morale = 0.1
 }
 
 spa_employ_galleon_modifier = {

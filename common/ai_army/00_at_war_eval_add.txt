@@ -1,0 +1,97 @@
+province = {
+    war = {
+        active = {
+            is_at_war = yes
+        }
+		eval_add = {
+			factor = 2000
+			modifier = {
+				factor = 0.25
+				fort_level = 1
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { fort_level = 1 }
+				any_neighbor_province = {
+					fort_level = 1
+				}
+			}
+			modifier = {
+				factor = 0.8
+				OR = {
+					has_terrain = farmlands
+					has_terrain = grasslands
+					has_terrain = drylands
+					has_terrain = floodplains
+				}
+			}
+			modifier = {
+				factor = 0.8
+				trade_goods = gold
+			}
+			modifier = {
+				factor = 0.8
+				development = 15
+			}
+			modifier = {
+				factor = 0.8
+				development = 20
+			}
+			modifier = {
+				factor = 0.8
+				development = 25
+			}
+			modifier = {
+				factor = 0.8
+				development = 30
+			}
+			modifier = {
+				factor = 0.8
+				development = 35
+			}
+			modifier = {
+				factor = 0.8
+				development = 40
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { development = 3 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { development = 6 }
+			}
+			modifier = {
+				factor = 2
+				is_city = no
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					has_terrain = hills
+					has_terrain = highlands
+					has_terrain = desert_highlands
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_terrain = mountain
+					has_terrain = himalayas
+					has_terrain = desert_mountains
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_winter = severe_winter
+					has_climate = arid
+					has_climate = tropical
+					has_climate = arctic
+					has_terrain = glacier
+					has_terrain = desert
+				}
+            }
+		}
+    }
+}

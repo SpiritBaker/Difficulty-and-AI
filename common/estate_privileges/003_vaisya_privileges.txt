@@ -183,7 +183,6 @@ estate_vaisyas_land_rights = {
 			factor = 0.75
 			has_estate_privilege = estate_rajput_land_rights
 		}
-
 	}
 }
 
@@ -203,7 +202,6 @@ estate_vaisyas_loyalty_privilege = {
 			factor = 0
 			is_absolutism_active = yes
 		}
-
 	}
 }
 
@@ -229,7 +227,6 @@ estate_vaisyas_advisor = {
 			factor = 3
 			uses_meritocracy = yes
 		}
-
 	}
 }
 
@@ -252,7 +249,6 @@ estate_vaisyas_wartaxes = {
 			factor = 0
 			is_absolutism_active = yes
 		}
-
 	}
 }
 
@@ -966,7 +962,7 @@ estate_vaisyas_exclusive_trade_rights = {
 }
 
 estate_vaisyas_control_over_monetary_policy = {
-	icon = privilege_give_money
+	icon = privilege_monopoly
 	max_absolutism = -10
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	influence = 0.05
@@ -1004,7 +1000,6 @@ estate_vaisyas_control_over_monetary_policy = {
 			factor = 0
 			is_absolutism_active = yes
 		}
-
 	}
 }
 
@@ -1038,7 +1033,6 @@ estate_vaisyas_private_trade_fleets = {
 			factor = 0
 			is_absolutism_active = yes
 		}
-
 	}
 }
 
@@ -1303,7 +1297,6 @@ estate_vaisyas_expanded_guild_rights = {
 			factor = 0.1
 			is_absolutism_active = yes
 		}
-
 	}
 }
 estate_vaisyas_force_impressment = {

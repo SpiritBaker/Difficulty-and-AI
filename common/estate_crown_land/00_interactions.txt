@@ -66,6 +66,7 @@ interaction = {
 			clr_country_flag = recent_land_distribution
 		}
 		set_country_flag = recent_land_distribution
+		on_sale_of_titles_effect = yes
     }
 	ai_will_do = {
 		factor = 25
@@ -223,6 +224,7 @@ interaction = {
 			}
 			add_scaled_republican_tradition = 2
 		}
+		on_summon_the_diet_effect = yes
     }
 	ai_will_do = {
 		factor = 50 # AI won't do agendas
@@ -413,6 +415,7 @@ interaction = {
 			}
 			clr_country_flag = sell_and_revoke_flag
 		}
+		on_seize_land_effect = yes
 	}
 	ai_will_do = {
 		factor = 25

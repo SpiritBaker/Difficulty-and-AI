@@ -127,7 +127,7 @@ country_event = {
 		}
 		custom_tooltip = shogunate_mechanic_explanation
 		add_country_modifier = {
-			name = jap_sengoku_jidai_shogun
+			name = jap_sengoku_jidai
 			duration = 10950
 		}
 		add_legitimacy = -20
@@ -3622,7 +3622,6 @@ country_event = {
 			change_dip = 3
 			change_mil = 3
 		}
-		
 		add_government_reform = japanese_divine_empire 
 	}
 }
