@@ -2871,11 +2871,13 @@ take_capital_eyalet_war = {
 		
 		required_treaty_to_take_provinces = {
 			po_establish_eyalet
+			#po_force_border_changes
 		}
 
 		peace_options = {
 			po_demand_provinces
 			po_establish_eyalet
+			#po_force_border_changes
 		}
 	}
 	

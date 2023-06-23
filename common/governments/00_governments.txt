@@ -108,9 +108,7 @@ monarchy = {
 				courts_of_navarra
 				league_of_lezhe_reform
 				tibetan_dual_government_reform
-				sisterhood_of_jeanne_darc_reform
-				
-								
+
 				#Dif&AI 
 				khanate_monarchy
 				nomad_empire
@@ -592,6 +590,7 @@ republic = {
 				parliamentary_republic_reform
 				absolute_shogunate_reform
 				japanese_divine_empire
+				land_christian_sun_reform
 			}
 		}
 		republican_virtues = {
@@ -1130,6 +1129,7 @@ theocracy = {
 				absolute_shogunate_reform
 				japanese_divine_empire
 				sisterhood_of_jeanne_darc_reform
+				land_christian_sun_reform
 			}
 		}
 		internal_vs_external_mission = {

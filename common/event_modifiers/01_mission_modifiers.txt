@@ -2555,13 +2555,12 @@ rus_steppe_conversion = {
 }
 
 rus_west_slavic_union = {	#Permanent, gets lost when either West Slavic culture gets demoted
-	manpower_in_accepted_culture_provinces = 0.1
-	num_accepted_cultures = 4
+	num_accepted_cultures = 5
 }
 
 rus_carpathian_union = {	#Permanent, gets lost when either Carpathian culture gets demoted
 	manpower_in_true_faith_provinces = 0.1
-	num_accepted_cultures = 4
+	num_accepted_cultures = 3
 }
 
 rus_south_slavic_union = {	#Permanent, gets lost when either South Slavic culture gets demoted
@@ -5475,6 +5474,9 @@ pru_german_confederation = {
 
 empowered_junkers = {
 	monthly_militarized_society = 0.02
+	monthly_prussian_militarized_society_1 = 0.02
+	monthly_prussian_militarized_society_2 = 0.03
+	monthly_prussian_militarized_society_3 = 0.04
 	army_tradition_decay = -0.01
 }
 
@@ -9647,8 +9649,7 @@ jap_20_years_devving_tax_yields_twice_bonus_1_burgher_loyalt_modifier = { } #Emp
 	
 jap_protectors_east_catholicism = {
 	curia_powers_cost = -0.25
-	papal_influence = 2 
-	religion = yes
+	papal_influence = 2
 }
 
 jap_shinto_warriors_modifier = {

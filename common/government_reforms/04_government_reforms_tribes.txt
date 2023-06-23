@@ -708,6 +708,16 @@ tribe_becomes_monarchy_reform = {
 			change_unit_type = chinese
 		}
 		change_government = monarchy
+		if = {
+			limit = {
+				tag = AVE
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_gbr.20
+				}
+			}
+		}
 	}
 	ai = {
 		factor = 0

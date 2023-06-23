@@ -1425,7 +1425,6 @@ cb_chinese_unification = {
 			NOT = { has_country_modifier = the_mandate_of_heaven }
 			is_emperor_of_china = no
 		}
-		is_neighbor_of = FROM
 	}
 
 	attacker_disabled_po = {
@@ -1543,16 +1542,18 @@ cb_hundred_years_union = {
 cb_force_join_hre = {
 	valid_for_subject = no
 
-	prerequisites = {
+	prerequisites_self = {
 		has_dlc = "Emperor"
-		ROOT = {
-			is_emperor = yes
-			hre_reform_passed = emperor_reichsstabilitaet
+		is_emperor = yes
+		hre_reform_passed = emperor_reichsstabilitaet
+	}
+
+	prerequisites = {
+		can_use_peace_treaty = {
+			who = FROM
+			treaty = po_join_empire
 		}
 		FROM = {
-		    is_subject = no 		
-			NOT = { num_of_cities = 7 }
-								
 			religion_group = ROOT
 			capital_scope = {
 				same_continent = ROOT

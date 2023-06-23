@@ -807,6 +807,7 @@ english_monarchy = {
 			have_had_reform = english_monarchy
 			tag = ENG
 			was_tag = ENG
+			tag = GBR
 		}
 	}
 	lock_level_when_selected = yes
@@ -4800,6 +4801,7 @@ separation_of_boyars_from_court_reform = {
 	modifiers = {
 		yearly_government_power = 1.25
 		nobles_influence_modifier = -0.1
+		global_tax_modifier = 0.05
 		maratha_exclusive_influence_modifier = -0.1
 		rajput_exclusive_influence_modifier = -0.1
 	}
@@ -6413,6 +6415,7 @@ qng_grand_council_reform = {
 absolute_shogunate_reform = {
 	icon = "absolute_shogunate_reform"
 	allow_normal_conversion = no
+	lock_level_when_selected = yes
 	potential = {
 		OR = {
 			AND = {
@@ -6441,6 +6444,7 @@ absolute_shogunate_reform = {
 japanese_divine_empire = {
 	icon = "japanese_divine_empire"
 	allow_normal_conversion = no
+	lock_level_when_selected = yes
 	potential = {
 		OR = { 
 			AND = {
@@ -6453,29 +6457,29 @@ japanese_divine_empire = {
 		}
 		NOT = { has_reform = absolute_shogunate_reform }
 	}
-	trigger = {
-		if = { 
-			limit = { has_estate = estate_nobles }
-			num_of_estate_privileges = {
-				estate = estate_nobles 
-				value = 6 
-			}
-		}
-		if = { 
-			limit = { has_estate = estate_burghers }
-			num_of_estate_privileges = {
-				estate = estate_burghers 
-				value = 6 
-			}
-		}
-		if = { 
-			limit = { has_estate = estate_church }
-			num_of_estate_privileges = {
-				estate = estate_church 
-				value = 6 
-			}
-		}
-	}
+	#trigger = {
+	#	if = { 
+	#		limit = { has_estate = estate_nobles }
+	#		num_of_estate_privileges = {
+	#			estate = estate_nobles 
+	#			value = 6 
+	#		}
+	#	}
+	#	if = { 
+	#		limit = { has_estate = estate_burghers }
+	#		num_of_estate_privileges = {
+	#			estate = estate_burghers 
+	#			value = 6 
+	#		}
+	#	}
+	#	if = { 
+	#		limit = { has_estate = estate_church }
+	#		num_of_estate_privileges = {
+	#			estate = estate_church 
+	#			value = 6 
+	#		}
+	#	}
+	#}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
 	nation_designer_trigger = {
