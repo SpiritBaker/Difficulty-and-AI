@@ -4186,10 +4186,10 @@ re_add_loyalty_from_seized_land = {
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_janissaries } }	add_estate_loyalty = { estate = estate_janissaries		 loyalty = 15 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_eunuchs } }		add_estate_loyalty = { estate = estate_eunuchs			 loyalty = 15 } }
 			
-			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = sedentary_subdjects } }	add_estate_loyalty = { estate = sedentary_subdjects		 loyalty = 15 } }
-			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = nomadic_aristocracy } }	add_estate_loyalty = { estate = nomadic_aristocracy		 loyalty = 15 } }
-			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_ghilman } }		add_estate_loyalty = { estate = estate_ghilman	 		 loyalty = 15 } }
-			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_mamluks } }		add_estate_loyalty = { estate = estate_mamluks			 loyalty = 15 } }
+			#if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = sedentary_subdjects } }	add_estate_loyalty = { estate = sedentary_subdjects		 loyalty = 15 } }
+			#if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = nomadic_aristocracy } }	add_estate_loyalty = { estate = nomadic_aristocracy		 loyalty = 15 } }
+			#if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_ghilman } }		add_estate_loyalty = { estate = estate_ghilman	 		 loyalty = 15 } }
+			#if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_mamluks } }		add_estate_loyalty = { estate = estate_mamluks			 loyalty = 15 } }
 
 		}
 		else = {
@@ -4207,10 +4207,10 @@ re_add_loyalty_from_seized_land = {
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_janissaries } }	add_estate_loyalty = { estate = estate_janissaries		 loyalty = 20 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_eunuchs } }		add_estate_loyalty = { estate = estate_eunuchs			 loyalty = 20 } }
 
-			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = sedentary_subdjects } }	add_estate_loyalty = { estate = sedentary_subdjects		 loyalty = 20 } }
-			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = nomadic_aristocracy } }	add_estate_loyalty = { estate = nomadic_aristocracy		 loyalty = 20 } }
-			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_ghilman } }		add_estate_loyalty = { estate = estate_ghilman	 		 loyalty = 20 } }
-			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_mamluks } }		add_estate_loyalty = { estate = estate_mamluks			 loyalty = 20 } }
+			#if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = sedentary_subdjects } }	add_estate_loyalty = { estate = sedentary_subdjects		 loyalty = 20 } }
+			#if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = nomadic_aristocracy } }	add_estate_loyalty = { estate = nomadic_aristocracy		 loyalty = 20 } }
+			#if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_ghilman } }		add_estate_loyalty = { estate = estate_ghilman	 		 loyalty = 20 } }
+			#if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_mamluks } }		add_estate_loyalty = { estate = estate_mamluks			 loyalty = 20 } }
 		}
 	}
 }
