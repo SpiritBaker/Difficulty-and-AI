@@ -181,7 +181,7 @@ workshop = {
 			NOT = { num_free_building_slots = 2 }
 			#NOT = { trade_goods = gold }
 			NOT = {
-				has_building = manufactory
+				has_manufactory_trigger = yes
 			}
 		}
 	}
@@ -2493,7 +2493,7 @@ counting_house = {
 			#NOT = { trade_goods = gold }
 			NOT = { has_building = workshop }
 			NOT = {
-				has_building = manufactory
+				has_manufactory_trigger = yes
 			}
 		}
 	}
