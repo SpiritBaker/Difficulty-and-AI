@@ -78,6 +78,7 @@ country_decisions = {
 			if = {
 				limit = { has_global_flag = empire_of_china_dismantled }
 				clr_global_flag = empire_of_china_dismantled
+				dismantle_empire_of_china = no #this actually works! it re-forms the Empire of China.
 			}
 			set_government_rank = 3
 			if = {
@@ -141,6 +142,7 @@ country_decisions = {
 				}
 			}
 			set_emperor_of_china = ROOT
+			add_government_reform = celestial_empire
 			add_prestige = 25
 		}
 		ai_will_do = {
