@@ -27,7 +27,7 @@
 
  #decision
  unite_japan_title:0 "Unite the Realm"
- unite_japan_desc:0 "The time has come to strengthen the power of Shogun. All damio must pledge their loyalty to our clan."
+ unite_japan_desc:0 "The time has come to strengthen the power of Shogun. All daimyo must pledge their loyalty to our clan."
 
  #Simple Peace terms
  PEACE_OFFER_POWER_PROJECTION_POS:0 "$TAG$ gains §G$VAL$§! Power Projection. \n"

@@ -252,7 +252,7 @@ united_shogunate = {
 	allow_normal_conversion = yes
 	potential = {
 		has_country_flag = formed_united_shogunate_flag
-		#NOT = { has_country_flag = formed_japan_flag }
+		NOT = { has_country_flag = formed_japan_flag }
 		OR = {
 			culture_group = japanese_g
 			AND = {
@@ -266,9 +266,14 @@ united_shogunate = {
 	legacy_equivalent = shogunate_legacy
 	#fixed_rank = 2
 	maintain_dynasty = yes
-	allow_vassal_war = no
+	#allow_vassal_war = no
 	#allow_vassal_alliance = no
 	lock_level_when_selected = yes
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		government_abilities = { shogunate_mechanic }
+	}
 
 	modifiers = {
 		diplomatic_upkeep = -1
@@ -276,6 +281,8 @@ united_shogunate = {
 		#global_autonomy = -0.025
 		monarch_military_power = 1
 		max_absolutism = 10
+		amount_of_samurai = 10
+		has_samurai = yes
 	}
 
 	custom_attributes = {
