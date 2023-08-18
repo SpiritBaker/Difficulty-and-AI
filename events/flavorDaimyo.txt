@@ -67,7 +67,10 @@ country_event = {
 				add_core = CSK
 			}
 		}
-		vassalize = CSK
+		create_subject = {
+			subject_type = daimyo_vassal
+			subject = CSK
+		}
 		CSK = {
 			add_opinion = {
 				who = ROOT
@@ -148,7 +151,10 @@ country_event = {
 				add_core = HJO
 			}
 		}
-		vassalize = HJO
+		create_subject = {
+			subject_type = daimyo_vassal
+			subject = HJO
+		}
 		HJO = {
 			add_opinion = {
 				who = ROOT
@@ -235,7 +241,10 @@ country_event = {
 				add_core = MRI
 			}
 		}
-		vassalize = MRI
+		create_subject = {
+			subject_type = daimyo_vassal
+			subject = MRI
+		}
 		MRI = {
 			add_opinion = {
 				who = ROOT
@@ -669,7 +678,10 @@ country_event = {
 				add_core = AKM
 			}
 		}
-		vassalize = AKM
+		create_subject = {
+			subject_type = daimyo_vassal
+			subject = AKM
+		}
 		AKM = {
 			add_opinion = {
 				who = ROOT
