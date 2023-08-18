@@ -252,7 +252,7 @@ united_shogunate = {
 	allow_normal_conversion = yes
 	potential = {
 		has_country_flag = formed_united_shogunate_flag
-		#NOT = { has_country_flag = formed_japan_flag }
+		NOT = { has_country_flag = formed_japan_flag }
 		OR = {
 			culture_group = japanese_g
 			AND = {
