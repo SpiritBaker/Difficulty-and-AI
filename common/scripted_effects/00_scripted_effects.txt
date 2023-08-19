@@ -1285,6 +1285,13 @@ restore_country_name_effect = {
 			restore_country_name = yes
 			clr_country_flag = is_hanseatic_league_flag
 		}
+		if = {
+			limit = {
+				has_country_flag = formed_united_shogunate_flag
+			}
+			restore_country_name = yes
+			#deliberately NOT clearing the formed_united_shogunate_flag here. The reason for that is that the formed_united_shogunate_flag affects more than just the name; clearing a flag with mechanical effects as part of a name cleanup effect would be counterintuitive and likely lead to a lot of bugs.
+		}
 	}
 }
 
@@ -2418,7 +2425,7 @@ add_legitimacy_equivalent = {
 ##########################################################
 # When adding new privileges then make sure that a unlock_privilege_$estate_privilege$_tt is defined in the localization
 # For checking if an estate privilege is unlocked already, use has_unlocked_estate_privilege = { estate_privilege = $estate_privilege$ }
-# For localization write the following: "Enable the [Root.<Estate Name>] privilege '§Y<Privilege Name>§!'."
+# For localization write the following: "Enable the [Root.<Estate Name>] privilege 'Â§Y<Privilege Name>Â§!'."
 unlock_estate_privilege = {
 	custom_tooltip = unlock_privilege_$estate_privilege$_tt
 	hidden_effect = {
@@ -2445,7 +2452,7 @@ unlock_estate_privilege = {
 ##########################################################
 # When adding a new merc company then make sure that a unlock_$merc_company$_tt is defined in the localization
 # For checking if a merc company is unlocked already, use has_unlocked_merc_company = { merc_company = $merc_company$ }
-# For localization write the following: "Unlock the mercenary company §Y<Merc Company>§! to recruit."
+# For localization write the following: "Unlock the mercenary company Â§Y<Merc Company>Â§! to recruit."
 unlock_merc_company = {
 	custom_tooltip = unlock_$merc_company$_tt
 	hidden_effect = {
@@ -2528,7 +2535,7 @@ unlock_church_aspect = {
 ##########################################################
 # When adding a new government reform then make sure that a unlock_$government_reform$_tt is defined in the localization
 # For checking if a government reform is unlocked already, use has_unlocked_government_reform = { government_reform = $government_reform$ }
-# For localization write the following: "Unlock the government reform §Y<Government Reform>§!."
+# For localization write the following: "Unlock the government reform Â§Y<Government Reform>Â§!."
 unlock_government_reform = {
 	custom_tooltip = unlock_$government_reform$_tt
 	hidden_effect = {
@@ -2555,7 +2562,7 @@ unlock_government_reform = {
 ##########################################################
 # When adding a new estate then make sure that a unlock_$estate$_tt is defined in the localization
 # For checking if an Estate is unlocked already, use has_unlocked_estate = { estate = $estate$ }
-# For localization write the following: "Unlock the §Y<Estate>§! Estate."
+# For localization write the following: "Unlock the Â§Y<Estate>Â§! Estate."
 # Important: this way of unlocking an estate does not give you permanent access to the estate - hence the show_conditions.
 # For granting permanent access, use "enable_estate_effect"
 unlock_estate = {
@@ -2721,7 +2728,7 @@ add_increase_opinion_of_fetishists = {
 	}
 }
 
-#Country effect - make sure to add an own custom tooltip in form of: "Every §Y$religion$§! country will have their opinion of [Root.GetName] increased by §G+50§!."
+#Country effect - make sure to add an own custom tooltip in form of: "Every Â§Y$religion$Â§! country will have their opinion of [Root.GetName] increased by Â§G+50Â§!."
 add_opinion_of_religion = {
 	hidden_effect = {
 		set_country_flag = has_improve_opinion_flag
@@ -2748,7 +2755,7 @@ add_opinion_of_religion = {
 	}
 }
 
-#Country effect - make sure to add a custom localization like: "Remove the opinion bonus of $religion$ countries for §Y[Root.GetName]§!."
+#Country effect - make sure to add a custom localization like: "Remove the opinion bonus of $religion$ countries for Â§Y[Root.GetName]Â§!."
 remove_religious_opinion_for_scope = {
 	hidden_effect = {
 		clr_country_flag = has_improve_opinion_flag
@@ -2801,7 +2808,7 @@ allow_baseline_invite_scholar = {
 #Country effect
 #Make sure to make your own custom tooltip for it because parameters can't be given as input. Sadly.
 transfer_treasury = {
-	#custom_tooltip = transfer_treasury_tt	#Transfer §Y[$giver$.$variable$.GetValue]§! Ducats to $Y[$taker$.GetName]§!.
+	#custom_tooltip = transfer_treasury_tt	#Transfer Â§Y[$giver$.$variable$.GetValue]Â§! Ducats to $Y[$taker$.GetName]Â§!.
 	hidden_effect = {
 		$giver$ = {
 			while = {
@@ -3403,7 +3410,7 @@ upgrade_building = {
 	]
 }
 
-#Country effect - Make sure to make an own custom tooltip for it when using it "Gain §G$years$ years§! worth of Trade Income."
+#Country effect - Make sure to make an own custom tooltip for it when using it "Gain Â§G$years$ yearsÂ§! worth of Trade Income."
 add_years_of_trade_income = {
 	hidden_effect = {
 		set_variable = {
@@ -4485,7 +4492,7 @@ for_variable_amount = {
 # <unit name> 
 ##########################################################
 #Country effect
-# For tooltip use the following scheme: "§Y<amount>§! of §Y<unit_type>§! will be created in §Y[<province>.GetName]§! for §Y[This.GetName]§!."
+# For tooltip use the following scheme: "Â§Y<amount>Â§! of Â§Y<unit_type>Â§! will be created in Â§Y[<province>.GetName]Â§! for Â§Y[This.GetName]Â§!."
 create_units_of_type = {
 	[[custom_tooltip]
 		custom_tooltip = $custom_tooltip$
@@ -4501,7 +4508,7 @@ create_units_of_type = {
 }
 
 #Province effect
-# For tooltip use the following scheme: "§Y<amount>§! of §Y<unit_type>§! will be created in §Y[This.GetName]§! for §Y[<who>.GetName]§!."
+# For tooltip use the following scheme: "Â§Y<amount>Â§! of Â§Y<unit_type>Â§! will be created in Â§Y[This.GetName]Â§! for Â§Y[<who>.GetName]Â§!."
 create_units_of_type_in_province = {
 	[[custom_tooltip]
 		custom_tooltip = $custom_tooltip$
@@ -4559,7 +4566,7 @@ add_accepted_culture_or_dip_power = {
 	tooltip = {
 		add_accepted_culture = $culture$
 	}
-	custom_tooltip = ADD_ACCEPTED_CULTURE_TT # "If the §YCulture§! is already an §YAccepted Culture§!, or if there are not enough §YSlots§!, gain §G100§! Diplomatic Power instead."
+	custom_tooltip = ADD_ACCEPTED_CULTURE_TT # "If the Â§YCultureÂ§! is already an Â§YAccepted CultureÂ§!, or if there are not enough Â§YSlotsÂ§!, gain Â§G100Â§! Diplomatic Power instead."
 	hidden_effect = {
 		if = {
 			limit = {
@@ -5213,7 +5220,7 @@ add_revolutionary_zeal_or_absolutism = {
 #		set_country_flag = grand_crusader_war_monger_flag
 #	}
 #}
-#enable_grand_crusade_tt: "Enables the §YGrand Crusade§! casus belli against all §YHeathen§! nations which have at least §Y300§! total development.\nThis casus belli enables a decision for every independent §YCatholic§! nation to join the Grand Crusade.\n\nTo join the Grand Crusade the Catholic nation must fulfil the following conditions:\nHas at least §Y100§! opinion of us or vice versa\nIs NOT allied with the §YGrand Crusade Target§! target\nHas NOT a truce with the §YGrand Crusade Target§!\nIs not at war\nDid NOT complete the §YHumanist§! idea group\n\n§RNations of the religion group of the §YGrand Crusade Target§! can join the defender's side.§!"
+#enable_grand_crusade_tt: "Enables the Â§YGrand CrusadeÂ§! casus belli against all Â§YHeathenÂ§! nations which have at least Â§Y300Â§! total development.\nThis casus belli enables a decision for every independent Â§YCatholicÂ§! nation to join the Grand Crusade.\n\nTo join the Grand Crusade the Catholic nation must fulfil the following conditions:\nHas at least Â§Y100Â§! opinion of us or vice versa\nIs NOT allied with the Â§YGrand Crusade TargetÂ§! target\nHas NOT a truce with the Â§YGrand Crusade TargetÂ§!\nIs not at war\nDid NOT complete the Â§YHumanistÂ§! idea group\n\nÂ§RNations of the religion group of the Â§YGrand Crusade TargetÂ§! can join the defender's side.Â§!"
 
 add_humiliation_reward = {
 	if = {
