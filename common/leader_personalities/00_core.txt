@@ -92,13 +92,13 @@ cannoneer_personality = {
 }
 
 dragon_tiger_general_personality = {
-  # Unique once-per-game mission reward for Manchu, applying to Nurhaci himself, when made a general.
-  # This should be significantly better than a generic trait like cuirassier_leader_personality. Buffed here.
+	# Unique once-per-game mission reward for Manchu, applying to Nurhaci himself, when made a general.
+	# This should be significantly better than a generic trait like cuirassier_leader_personality. Buffed here.
 	allow = {
 		always = no 
 	}
-  discipline = 0.1 # cavalry_power = 0.1 in Vanilla. Manchu armies are largely cav, so not as huge a buff compared to Vanilla as it might seem at first glance, but this is a decent buff nevertheless.
-  movement_speed = 0.2 # 0.1 in Vanilla. Doubled here.
+	discipline = 0.1 # cavalry_power = 0.1 in Vanilla. Manchu armies are largely cav, so not as huge a buff compared to Vanilla as it might seem at first glance, but this is a decent buff nevertheless.
+	movement_speed = 0.2 # 0.1 in Vanilla. Doubled here.
 }
 
 cuirassier_leader_personality = {
