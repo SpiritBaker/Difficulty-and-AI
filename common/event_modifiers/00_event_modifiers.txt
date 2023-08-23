@@ -11453,12 +11453,14 @@ warriors_do_not_read_books = {
 #EoC Rebalance
 
 new_mandate_holder = {
-	imperial_mandate = 0.05
+	# It takes 50 (!) warscore to take the Mandate, AND it has potential drawbacks, with low Mandate wrecking both army morale and the economy.
+	# This means that the temporary bonus that comes with taking the Mandate needs to be a LOT better than annexing multiple high-dev provinces (which you could otherwise spend your 50 warscore on).
+	imperial_mandate = 0.20 # 0.05 in Vanilla. Increased significantly, both as a general buff, and to compensate for more cities needing to be controlled in the mod, which is especially troublesome for a new Mandate-holder (and even more so for AI)
 	land_maintenance_modifier = -0.1
 	land_forcelimit = 20
 	manpower_recovery_speed = 0.15
-	global_tax_income = 60
-	global_monthly_devastation = -0.1
+	global_tax_income = 120 # 60 in Vanilla. This is yearly! The Vanilla 5 ducats per month roughly corresponds to the overall income from one single high-dev Chinese city around 1500. Doesn't quite cut it, for a temporary bonus for achieving something significant. Doubled here.
+	global_monthly_devastation = -0.20 # -0.1 in Vanilla. Doubled here. Keep in mind that the entire modifier is temporary and will expire, that the new Mandate-holder is going to have to wage a lot of devastating wars to capture the important cities, and that this particular effect is still less than a quarter of that of a fort.
 }
 
 
