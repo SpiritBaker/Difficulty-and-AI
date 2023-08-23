@@ -252,9 +252,11 @@ cunning_navigator_personality = {
 }
 
 great_explorer_personality = {
+	# Unique once-per-game reward, applying to Magellan himself.
+	# This should be significantly better than a generic trait like ironside_personality. Buffed here.
 	allow = {
 		always = no 
 	}
-	ship_durability = 0.05
-	naval_attrition = -0.1
+	ship_durability = 0.10 # 0.05 in Vanilla. Doubled here.
+	naval_attrition = -0.2 # -0.1 in Vanilla. Doubled here.
 }
