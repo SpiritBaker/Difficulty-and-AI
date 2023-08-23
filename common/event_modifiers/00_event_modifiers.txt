@@ -1671,7 +1671,7 @@ tripitaka_koreana = {
 	harmonization_speed = 0.1
 	yearly_karma_decay = 0.01
 	monthly_splendor = 1
-	institution_growth = 3
+	church_loyalty_modifier = 0.1 #changed from Vanilla institution_growth = 3 #so that it will not just develop institutions like Colonization completely on its own
 }
 
 tripitaka_koreana_defenses = {
