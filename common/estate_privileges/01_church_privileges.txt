@@ -205,7 +205,18 @@ estate_church_land_rights = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -319,7 +330,18 @@ estate_church_independent_inquisition = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -460,7 +482,18 @@ estate_church_papal_emissary = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -662,7 +695,18 @@ estate_church_clerical_ministers = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -718,7 +762,18 @@ estate_church_freedom_of_interpretation = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -753,7 +808,18 @@ estate_church_clerical_oversight = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -1789,7 +1855,18 @@ estate_church_influence_temples = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -2079,7 +2156,18 @@ estate_church_one_faith_one_culture = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -2140,7 +2228,18 @@ estate_church_heir_shrine = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -2276,7 +2375,18 @@ estate_church_scholar_connections = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -2327,7 +2437,18 @@ estate_church_integrated_school = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -2383,7 +2504,18 @@ estate_church_yakobs_churches = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -2651,7 +2783,7 @@ estate_church_development_of_temples = {
 			limit = {
 				OR = {
 					has_owner_religion = yes
-					has_owner_harmonized_religion = yes
+					has_owner_harmonized_religion_fixed = yes
 					has_owner_secondary_religion = yes
 				}
 				has_tax_building_trigger = yes
@@ -2850,7 +2982,18 @@ estate_church_clerical_education = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -2898,7 +3041,18 @@ estate_church_religious_delegation = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -2946,7 +3100,18 @@ estate_church_institutionalized_clergy = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
@@ -3012,7 +3177,18 @@ estate_church_donation_right = {
 			NOT = { has_estate_privilege = estate_church_religious_state }
 			num_of_estate_privileges = {
 				estate = estate_church
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_church
+			    loyalty = 50
 			}
 		}
 	}
