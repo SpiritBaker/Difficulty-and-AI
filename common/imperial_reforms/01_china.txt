@@ -15,17 +15,30 @@ establish_gaituguiliu_decision = {
 			NOT = { corruption = 1 } 
 		}
 	}
-	member = { advisor_pool = 1 }
+	#flavor: replacement of local officials in remote prefectures with central gov appointed ones
 	emperor = {
-		meritocracy = 0.5
+		years_of_nationalism = -5   # meritocracy = 0.5 in Vanilla moved to Promote Bureaucrats reform
+		reduced_liberty_desire = 5   #added
+	}
+	member = { 
+		global_autonomy = -0.05   #added
+		advisor_pool = 1
 	}
 }
 
 seaban_decision = {
 	empire = celestial_empire
+	trigger = {
+		num_of_ports = 10
+	}
+	#flavor: reformed maritime trade regulations bringing in wealth and innovation
 	emperor = {
-		diplomats = 1
-		trade_efficiency = 0.1
+		merchants = 1   # diplomats = 1 in Vanilla
+		global_institution_spread = 0.1   # trade_efficiency = 0.1 in Vanilla
+	}
+	member = {
+		trade_efficiency = 0.05   #added
+		trade_range_modifier = 0.25   #added
 	}
 }
 
@@ -41,11 +54,15 @@ reform_land_tax_decision = {
 			}
 		}
 	}
-	member = { state_maintenance_modifier = -0.25 } 
+	#flavor: empowered viceroys help govern vast territories
 	emperor = {
+		stability_cost_modifier = -0.1   #added
 		global_autonomy = -0.05
 	}
-	
+	member = {
+		state_maintenance_modifier = -0.25
+		improve_relation_modifier = 0.1   #added
+	}
 }
 
 military_governors_decision = {
@@ -57,28 +74,46 @@ military_governors_decision = {
 			mil = 6
 		}
 	}
-	member = { autonomy_change_time = -0.2 }
+	#flavor: an office in charge of dealing with distant subjects
 	emperor = {
-		nobles_loyalty_modifier = 0.1 
 		core_creation = -0.1
+		nobles_loyalty_modifier = 0.1 
 	}
-	
+	member = {
+		autonomy_change_time = -0.2
+		advisor_cost = -0.05   #added
+	}
 }
 
 centralizing_top_government_decision = {
 	empire = celestial_empire
-	trigger = { crown_land_share = 65 } 
-	member = { all_estate_influence_modifier = -0.05 }
-	emperor = { monarch_admin_power = 1 }
-	
+	trigger = {
+		crown_land_share = 65
+	}
+	#flavor: reshape bureaucracy to concentrate power
+	emperor = {
+		country_admin_power = 1   # monarch_admin_power = 1 in Vanilla, which makes less sense: this is about overhaulting the bureaucratic structure of the country, rather than improving the administrative skill of the monarch
+		state_governing_cost = -0.1   #added
+	}
+	member = {
+		stability_cost_modifier = -0.05   #added
+		all_estate_influence_modifier = -0.05
+	}
 }
 
 vassalize_tributaries_decision = {
 	empire = celestial_empire
-	trigger = { empire_of_china_num_reforms_passed = 8 }
+	trigger = {
+		empire_of_china_num_reforms_passed = 8
+	}
+	#flavor: elevating worthy subjects
 	emperor = {
 		imperial_mandate = 0.05
 		liberty_desire_from_subject_development = -0.33
+	}
+	member = {
+		diplomatic_reputation = 1   #added
+		monthly_favor_modifier = 0.1   #added. flavor: tributary states enjoying the favor of the Chinese Empire are held in greater respect by their allies
 	}
 	on_effect = {
 		custom_tooltip = vassalize_tributaries_decision_tt
@@ -88,7 +123,6 @@ vassalize_tributaries_decision = {
 		custom_tooltip = vassalize_tributaries_decision_ct
 		clr_global_flag = eoc_vassalize_tributaries
 	}
-	
 }
 
 #### 1.35 #### Content for EoC
@@ -103,12 +137,15 @@ codify_single_whip_law_decision = {
 			reform_level = 7
 		}
 	}
-	member = { yearly_corruption = -0.05 } 
+	#flavor: simplified taxation system reducing bureaucratic burden
 	emperor = {
-		vassal_income = 0.25 
 		global_tax_modifier = 0.1
+		vassal_income = 0.25 
 	}
-	
+	member = {
+		reform_progress_growth = 0.05   #added
+		state_governing_cost = -0.05   # yearly_corruption = -0.05 in Vanilla moved to Keju reform
+	}
 }
 
 reign_in_estates_decision = {
@@ -119,14 +156,34 @@ reign_in_estates_decision = {
 			absolutism = 75 
 		}
 	}
-	member = { max_absolutism = 5 }
-	emperor = { administrative_efficiency = 0.025 all_estate_influence_modifier = -0.05 }
+	#flavor: reducing the influence of various factions to strengthen the central gov
+	emperor = {
+		administrative_efficiency = 0.025
+		all_estate_influence_modifier = -0.05
+	}
+	member = {
+		max_absolutism = 5
+		legitimacy = 0.5   #added. horde unity, devotion, and republic tradition are deliberately not included here for reasons of flavor
+	}
 }
 
 reform_civil_registration_decision = {
 	empire = celestial_empire
-	member = { global_tax_modifier = 0.1 }
-	emperor = { development_cost = -0.05 autonomy_change_time = -0.2 }
+	trigger = {   #added
+		OR = {
+			stability = 3
+			harmony = 80
+		}
+	}
+	# flavor: increased standard of living through increased bureaucracy
+	emperor = {
+		development_cost = -0.05
+		global_unrest = -1   # autonomy_change_time = -0.2 in Vanilla
+	}
+	member = {
+		global_tax_modifier = 0.1
+		prestige_decay = -0.005   #added
+	}
 }
 
 establish_silver_standard_decision = {
@@ -141,10 +198,14 @@ establish_silver_standard_decision = {
 		is_in_deficit = no 
 		empire_of_china_reform_passed = codify_single_whip_law_decision
 	}
-	member = { interest = -0.25 } 
+	#flavor: adapting economic policy to combat inflation
 	emperor = { 
-		monthly_gold_inflation_modifier = -0.1 
+		monthly_gold_inflation_modifier = -0.2    # -0.1 in Vanilla. doubled here
 		inflation_reduction = 0.05
+	}
+	member = {
+		inflation_action_cost = -0.2   #added
+		interest = -0.25
 	}
 }
 
@@ -158,11 +219,16 @@ kanhe_certificate_decision = {
 			national_focus = DIP 
 		}
 	}
-	member = { trade_efficiency = 0.05 } 
+	#flavor: empowering merchants through an imperial decree
 	emperor = { 
-		merchants = 1 
+		global_trade_power = 0.1   # merchants = 1 in Vanilla moved to Seaban reform
 		placed_merchant_power = 10 
 	}
+	member = {
+		burghers_loyalty_modifier = 0.05   #added
+		mercantilism_cost = -0.1   # trade_efficiency = 0.05 in Vanilla moved to Seaban reform
+	} 
+	
 }
 
 new_keju_formats_decision = {
@@ -177,10 +243,14 @@ new_keju_formats_decision = {
 			monthly_adm = 9 
 		}
 	}
-	member = { governing_capacity_modifier = 0.05 } 
+	#flavor: reformed examination system leads to better administrators
 	emperor = { 
 		reform_progress_growth = 0.1
 		imperial_mandate = 0.03
+	}
+	member = {
+		governing_capacity_modifier = 0.05
+		yearly_corruption = -0.05   #added
 	}
 }
 
@@ -190,14 +260,18 @@ inclusive_monarchy_decision = {
 		OR = { 
 			full_idea_group = humanist_ideas 
 			harmony = 80 
-			theologian = 2 
+			theologian = 2
 		}
 		stability = 1 
 	}
-	member = { tolerance_heathen = 1 } 
+	#flavor: tolerance and compassion
 	emperor = { 
 		tolerance_of_heathens_capacity = 1 
 		tolerance_heathen = 1 
+	}
+	member = {
+		tolerance_heathen = 1
+		religious_unity = 0.05   #added
 	}
 }
 
@@ -206,13 +280,15 @@ promote_bureaucratic_faction_decision = {
 	trigger = { 
 		NOT = { empire_of_china_reform_passed = promote_military_faction_decision }
 	}
-	member = {
-		church_loyalty_modifier = 0.05
-	} 
+	#flavor: favoring bureaucrats over generals promotes internal stability
 	emperor = { 
 		church_loyalty_modifier = 0.1
-		tolerance_own = 1 
+		meritocracy = 0.5   # tolerance_own = 1 in Vanilla
 	}
+	member = {
+		church_loyalty_modifier = 0.05
+		tolerance_own = 1   #added
+	} 
 }
 
 promote_military_faction_decision = {
@@ -220,12 +296,14 @@ promote_military_faction_decision = {
 	trigger = { 
 		NOT = { empire_of_china_reform_passed = promote_bureaucratic_faction_decision } 
 	}
-	member = {
-		nobles_loyalty_modifier = 0.05 
-	} 
+	#flavor: favor bravery over red tape
 	emperor = { 
 		nobles_loyalty_modifier = 0.1 
 		army_tradition = 0.5 
+	}
+	member = {
+		nobles_loyalty_modifier = 0.05
+		army_tradition = 0.25   #added
 	}
 }
 
@@ -249,13 +327,15 @@ unifed_trade_market_decision = {
 			}
 		}
 	}
-	member = {
-		global_trade_power = 0.1
-	} 
+	#flavor: unified market regulations leads to increased revenue as well as political influence
 	emperor = { 
 		merchants = 1 
-		global_trade_goods_size_modifier = 0.05
+		global_own_trade_power = 0.2   # global_trade_goods_size_modifier = 0.05 in Vanilla
 	}
+	member = {
+		center_of_trade_upgrade_cost = -0.1   # global_trade_power = 0.1 in Vanilla, which makes little sense, as it would reduce the relative power of the Emperor
+		reduced_trade_penalty_on_non_main_tradenode = 0.25   #added
+	} 
 }
 
 reform_the_military_branch_decision = {
@@ -275,13 +355,15 @@ reform_the_military_branch_decision = {
 		}
 		monthly_mil = 10 
 	}
+	#flavor: army reform
+	emperor = { 
+		discipline = 0.025   # movement_speed = 0.1 in Vanilla
+		drill_decay_modifier = -0.25
+	}
 	member = {
 		yearly_army_professionalism = 0.0025
+		drill_gain_modifier = 0.10   #added
 	} 
-	emperor = { 
-		movement_speed = 0.1
-		drill_decay_modifier = -0.25 
-	}
 }
 
 modernize_the_banners_decision = {
@@ -295,10 +377,15 @@ modernize_the_banners_decision = {
 			}
 		}
 	}
+	#flavor: reform Banners cavalry
+	emperor = {
+		cavalry_power = 0.05
+		cavalry_cost = -0.1   # cav_to_inf_ratio = 0.1 in Vanilla
+	}
 	member = {
-		cavalry_cost = -0.1
-	} 
-	emperor = { cav_to_inf_ratio = 0.1 cavalry_power = 0.05 }
+		cav_to_inf_ratio = 0.1   #added
+		cavalry_cost = -0.05   # -0.10 in Vanilla
+	}
 }
 
 study_foreign_ship_designs_decision = {
@@ -311,11 +398,14 @@ study_foreign_ship_designs_decision = {
 			full_idea_group = quality_ideas 
 		}
 	}
-	member = {
-		global_ship_cost = -0.05
-	} 
+	#flavor: study foreign ships
 	emperor = { 
 		heavy_ship_power = 0.1
+		dip_tech_cost_modifier = -0.1    #added
+	}
+	member = {
+		heavy_ship_power = 0.05   #added
+		global_ship_cost = -0.05
 	}
 }
 
@@ -338,13 +428,15 @@ tributary_embassies_decision = {
 			dip = 5
 		}
 	}
+	#flavor: establish embassies in sphere of influence
+	emperor = { 
+		diplomatic_reputation = 1
+		monthly_favor_modifier = 0.25
+	}
 	member = {
 		diplomatic_upkeep = 1
+		ae_impact = -0.1   #added
 	} 
-	emperor = { 
-		monthly_favor_modifier = 0.25 
-		diplomatic_reputation = 1 
-	}
 }
 
 new_world_discovery_decision = {
@@ -353,10 +445,13 @@ new_world_discovery_decision = {
 		num_of_explorers = 1 
 		num_of_light_ship = 50 
 	}
-	member = {
-		global_colonial_growth = 10 
-	} 
+	#flavor: promoting exploration of the new world
 	emperor = { 
-		colonists = 1 
+		colonists = 1
+		naval_forcelimit_modifier = 0.1   #added
 	}
+	member = {
+		global_colonial_growth = 10
+		naval_forcelimit_modifier = 0.05   #added
+	} 
 }
