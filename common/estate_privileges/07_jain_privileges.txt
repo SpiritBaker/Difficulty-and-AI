@@ -188,7 +188,18 @@ estate_jains_land_rights = {
 			NOT = { has_estate_privilege = estate_jains_diplomacy }
 			num_of_estate_privileges = {
 				estate = estate_jains
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_jains
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_jains
+			    loyalty = 50
 			}
 		}
 	}
@@ -274,7 +285,18 @@ estate_jains_clerical_class = {
 			NOT = { has_estate_privilege = estate_jains_diplomacy }
 			num_of_estate_privileges = {
 				estate = estate_jains
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_jains
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_jains
+			    loyalty = 50
 			}
 		}
 	}
@@ -378,7 +400,18 @@ estate_jains_grant_liberties = {
 			NOT = { has_estate_privilege = estate_jains_diplomacy }
 			num_of_estate_privileges = {
 				estate = estate_jains
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_jains
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_jains
+			    loyalty = 50
 			}
 		}
 	}
@@ -418,7 +451,18 @@ estate_jains_land_trade_rights = {
 			NOT = { has_estate_privilege = estate_jains_diplomacy }
 			num_of_estate_privileges = {
 				estate = estate_jains
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_jains
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_jains
+			    loyalty = 50
 			}
 		}
 	}
@@ -1107,7 +1151,18 @@ estate_jains_control_over_monetary_policy = {
 			NOT = { has_estate_privilege = estate_jains_diplomacy }
 			num_of_estate_privileges = {
 				estate = estate_jains
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_jains
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_jains
+			    loyalty = 50
 			}
 		}
 	}
@@ -1149,7 +1204,18 @@ estate_jains_private_trade_fleets = {
 			NOT = { has_estate_privilege = estate_jains_diplomacy }
 			num_of_estate_privileges = {
 				estate = estate_jains
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_jains
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_jains
+			    loyalty = 50
 			}
 		}
 	}
@@ -1360,7 +1426,18 @@ estate_jains_patronize_jain_familiy = {
 			NOT = { has_estate_privilege = estate_jains_diplomacy }
 			num_of_estate_privileges = {
 				estate = estate_jains
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_jains
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_jains
+			    loyalty = 50
 			}
 		}
 	}
