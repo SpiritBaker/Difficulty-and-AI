@@ -202,7 +202,18 @@ estate_nobles_land_rights = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -430,7 +441,18 @@ estate_nobles_levies = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -475,7 +497,18 @@ estate_nobles_advisors = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -510,7 +543,18 @@ estate_nobles_right_of_counsel = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -605,7 +649,18 @@ estate_nobles_french_strong_duchies = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -675,7 +730,18 @@ estate_nobles_supremacy_over_crown = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1137,7 +1203,18 @@ estate_nobles_junker_primacy = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1229,7 +1306,18 @@ estate_nobles_strong_duchies = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1512,7 +1600,18 @@ estate_nobles_better_integration = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1636,7 +1735,18 @@ estate_nobles_cawa_peace_keepers = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1708,7 +1818,18 @@ estate_nobles_cawa_offensive_fighters = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1760,7 +1881,18 @@ estate_nobles_grant_power_to_the_bashorun = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1829,7 +1961,18 @@ estate_nobles_carolean_march = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1898,7 +2041,18 @@ estate_nobles_carolean_charge = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -1937,7 +2091,18 @@ estate_nobles_leidang_conscription = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2149,7 +2314,18 @@ estate_nobles_religious_conscription = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2408,7 +2584,18 @@ estate_nobles_sponsor_hussars = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2440,7 +2627,18 @@ estate_nobles_mansabdari_cav_maintenance = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2471,7 +2669,18 @@ estate_nobles_mansabdari_military_service = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2494,7 +2703,18 @@ estate_nobles_mansabdari_royal_rule = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2529,7 +2749,18 @@ estate_nobles_rynda = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2562,7 +2793,18 @@ estate_nobles_landed_army = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2705,7 +2947,18 @@ estate_nobles_early_serfdom = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2792,7 +3045,18 @@ estate_nobles_legalized_serfdom = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2878,7 +3142,18 @@ estate_nobles_total_serfdom = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -2960,7 +3235,18 @@ estate_nobles_restricted_serfdom = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -3043,7 +3329,18 @@ estate_nobles_devastating_serfdom = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -3131,7 +3428,18 @@ estate_nobles_increased_peasant_freedom = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -3212,7 +3520,18 @@ estate_nobles_peasant_liberation = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -3270,7 +3589,18 @@ estate_nobles_factionalist_nobility = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}#TODO
@@ -3315,7 +3645,18 @@ estate_nobles_consolidated_noble_contracts = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -3361,7 +3702,18 @@ estate_nobles_english_villeinage = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -3402,7 +3754,18 @@ estate_nobles_english_copyhold_tenure = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
@@ -3493,6 +3856,7 @@ estate_nobles_development_of_castles = {
 		factor = 0
 	}
 }
+
 estate_nobles_statesman_servitude = {
 	icon = privilege_diplomat
 	loyalty = 0.0
@@ -3531,6 +3895,7 @@ estate_nobles_statesman_servitude = {
 		factor = 0
 	}
 }
+
 estate_nobles_royal_court_tasks = {
 	icon = privilege_build_jain_temple
 	loyalty = 0.0
@@ -3613,6 +3978,7 @@ estate_nobles_royal_court_tasks = {
 		factor = 0
 	}
 }
+
 estate_nobles_diet_right = {
 	icon = privilege_government
 	loyalty = 0.0
@@ -3658,11 +4024,23 @@ estate_nobles_diet_right = {
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 			num_of_estate_privileges = {
 				estate = estate_nobles
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_nobles
+			    loyalty = 50
 			}
 		}
 	}
 }
+
 estate_nobles_force_conscription = {
 	icon = privilege_land_force_limit
 	loyalty = 0
@@ -3699,6 +4077,7 @@ estate_nobles_force_conscription = {
 		factor = 0
 	}
 }
+
 estate_nobles_noble_officer_right = {
 	icon = privilege_army_tradition
 	loyalty = 0.0
@@ -3745,6 +4124,7 @@ estate_nobles_noble_officer_right = {
 		factor = 0
 	}
 }
+
 estate_nobles_expedition_rights = {
 	icon = privilege_conquistador
 	loyalty = 0.0

@@ -202,7 +202,18 @@ estate_burghers_land_rights = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -388,7 +399,18 @@ estate_burghers_commercial_board_of_advice = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -485,7 +507,18 @@ estate_burghers_new_world_charter = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -592,7 +625,18 @@ estate_burghers_free_enterprise = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -1496,7 +1540,18 @@ estate_burghers_private_trade_fleets = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -1547,7 +1602,18 @@ estate_burghers_prussian_confederation = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -1770,7 +1836,18 @@ estate_burghers_orang_laut_alliances = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -1883,7 +1960,18 @@ estate_burghers_hydraulic_rights = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -1980,7 +2068,18 @@ estate_burghers_control_over_the_mint = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -2066,7 +2165,18 @@ estate_burghers_forest_expansion = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -2165,7 +2275,18 @@ estate_burghers_mountain_expansion = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -2695,7 +2816,18 @@ estate_burghers_expanded_monopoly_rights = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}
@@ -2873,7 +3005,18 @@ estate_burghers_promote_burgher_bookkeeping = {
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
 			num_of_estate_privileges = {
 				estate = estate_burghers
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_burghers
+			    loyalty = 50
 			}
 		}
 	}

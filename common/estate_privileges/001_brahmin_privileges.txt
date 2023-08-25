@@ -188,7 +188,18 @@ estate_brahmins_land_rights = {
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 			num_of_estate_privileges = {
 				estate = estate_brahmins
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_brahmins
+			    loyalty = 50
 			}
 		}
 	}
@@ -298,7 +309,18 @@ estate_brahmins_legitimacy_to_rule = {
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 			num_of_estate_privileges = {
 				estate = estate_brahmins
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_brahmins
+			    loyalty = 50
 			}
 		}
 	}
@@ -334,7 +356,18 @@ estate_brahmins_brahmin_leadership = {
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 			num_of_estate_privileges = {
 				estate = estate_brahmins
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_brahmins
+			    loyalty = 50
 			}
 		}
 	}
@@ -396,7 +429,18 @@ estate_brahmins_loyalty_privilege = {
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 			num_of_estate_privileges = {
 				estate = estate_brahmins
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_brahmins
+			    loyalty = 50
 			}
 		}
 	}
@@ -1126,7 +1170,18 @@ estate_brahmins_one_faith_one_culture = {
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 			num_of_estate_privileges = {
 				estate = estate_brahmins
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_brahmins
+			    loyalty = 50
 			}
 		}
 	}
@@ -1328,7 +1383,18 @@ estate_brahmins_clerical_education = {
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 			num_of_estate_privileges = {
 				estate = estate_brahmins
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_brahmins
+			    loyalty = 50
 			}
 		}
 	}
@@ -1397,7 +1463,18 @@ estate_brahmins_institutionalized_brahimns = {
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 			num_of_estate_privileges = {
 				estate = estate_brahmins
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_brahmins
+			    loyalty = 50
 			}
 		}
 	}
@@ -1470,7 +1547,18 @@ estate_brahmins_donation_right = {
 			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
 			num_of_estate_privileges = {
 				estate = estate_brahmins
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_brahmins
+			    loyalty = 50
 			}
 		}
 	}

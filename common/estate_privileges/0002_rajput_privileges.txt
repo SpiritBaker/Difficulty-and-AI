@@ -185,10 +185,21 @@ estate_rajput_land_rights = {
 		}
 		modifier = {
 			factor = 0.25
-			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			NOT = { has_estate_privilege = estate_rajput_military }
 			num_of_estate_privileges = {
-				estate = estate_brahmins
-				value = 5
+				estate = estate_rajput
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_rajput
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_rajput
+			    loyalty = 50
 			}
 		}
 	}
@@ -220,10 +231,21 @@ estate_rajput_rajput_regiments = {
 		factor = 10
 		modifier = {
 			factor = 0.25
-			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			NOT = { has_estate_privilege = estate_rajput_military }
 			num_of_estate_privileges = {
-				estate = estate_brahmins
-				value = 5
+				estate = estate_rajput
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_rajput
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_rajput
+			    loyalty = 50
 			}
 		}
 	}
@@ -321,7 +343,18 @@ estate_rajput_advisor = {
 			NOT = { has_estate_privilege = estate_rajput_military }
 			num_of_estate_privileges = {
 				estate = estate_rajput
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_rajput
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_rajput
+			    loyalty = 50
 			}
 		}
 	}
@@ -348,7 +381,18 @@ estate_rajput_loyalty_privilege = {
 			NOT = { has_estate_privilege = estate_rajput_military }
 			num_of_estate_privileges = {
 				estate = estate_rajput
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_rajput
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_rajput
+			    loyalty = 50
 			}
 		}
 	}
@@ -386,7 +430,18 @@ estate_rajput_officer_corp = {
 			NOT = { has_estate_privilege = estate_rajput_military }
 			num_of_estate_privileges = {
 				estate = estate_rajput
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_rajput
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_rajput
+			    loyalty = 50
 			}
 		}
 	}
@@ -462,7 +517,18 @@ estate_rajput_look_up_purbias = {
 			NOT = { has_estate_privilege = estate_rajput_military }
 			num_of_estate_privileges = {
 				estate = estate_rajput
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_rajput
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_rajput
+			    loyalty = 50
 			}
 		}
 	}
@@ -964,10 +1030,21 @@ estate_rajput_subject_rights = {
 		}
 		modifier = {
 			factor = 0.25
-			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			NOT = { has_estate_privilege = estate_rajput_military }
 			num_of_estate_privileges = {
-				estate = estate_brahmins
-				value = 5
+				estate = estate_rajput
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_rajput
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_rajput
+			    loyalty = 50
 			}
 		}
 	}
@@ -1013,10 +1090,21 @@ estate_rajput_better_integration = {
 		factor = 10
 		modifier = {
 			factor = 0.25
-			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+			NOT = { has_estate_privilege = estate_rajput_military }
 			num_of_estate_privileges = {
-				estate = estate_brahmins
-				value = 5
+				estate = estate_rajput
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_rajput
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_rajput
+			    loyalty = 50
 			}
 		}
 	}

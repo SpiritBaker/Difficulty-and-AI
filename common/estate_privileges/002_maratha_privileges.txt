@@ -188,7 +188,18 @@ estate_maratha_land_rights = {
 			NOT = { has_estate_privilege = estate_maratha_military }
 			num_of_estate_privileges = {
 				estate = estate_maratha
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_maratha
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_maratha
+			    loyalty = 50
 			}
 		}
 	}
@@ -285,7 +296,18 @@ estate_maratha_advisor = {
 			NOT = { has_estate_privilege = estate_maratha_military }
 			num_of_estate_privileges = {
 				estate = estate_maratha
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_maratha
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_maratha
+			    loyalty = 50
 			}
 		}
 	}
@@ -312,7 +334,18 @@ estate_maratha_loyalty_privilege = {
 			NOT = { has_estate_privilege = estate_maratha_military }
 			num_of_estate_privileges = {
 				estate = estate_maratha
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_maratha
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_maratha
+			    loyalty = 50
 			}
 		}
 	}
@@ -434,7 +467,18 @@ estate_maratha_levies = {
 			NOT = { has_estate_privilege = estate_maratha_military }
 			num_of_estate_privileges = {
 				estate = estate_maratha
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_maratha
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_maratha
+			    loyalty = 50
 			}
 		}
 	}
@@ -532,7 +576,18 @@ estate_maratha_special_privilege = {
 			NOT = { has_estate_privilege = estate_maratha_military }
 			num_of_estate_privileges = {
 				estate = estate_maratha
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_maratha
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_maratha
+			    loyalty = 50
 			}
 		}
 	}
@@ -1077,7 +1132,18 @@ estate_maratha_better_integration = {
 			NOT = { has_estate_privilege = estate_maratha_military }
 			num_of_estate_privileges = {
 				estate = estate_maratha
-				value = 5
+				value = 6
+			}
+			crown_land_share = 30
+			NOT = {
+				estate_influence = {
+					estate = estate_maratha
+					influence = 95
+				}
+			}
+			estate_loyalty = {
+			    estate = estate_maratha
+			    loyalty = 50
 			}
 		}
 	}
