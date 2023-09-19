@@ -340,7 +340,7 @@ scaling_difficulty_nightmare_revolutions = {
 	build_cost = -0.1
 	all_power_cost = -0.1
 	advisor_cost = -0.25
-	administrative_efficiency = 0.075
+	administrative_efficiency = 0.125
 	governing_capacity_modifier = 0.20
 }
 
