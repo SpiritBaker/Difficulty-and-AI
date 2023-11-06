@@ -1,0 +1,6 @@
+has_owner_harmonized_religion_fixed = {
+	# Heretic religions are harmonized individually, while heathen ones are harmonized in groups.
+	# Which means that the vanilla trigger fails for example for Sunni, because Sunni specifically can never be harmonized; it's the the Muslim group that can be.
+	# This simple alternative avoids the vanilla issue.
+	owner = { has_harmonized_with = PREV }
+}
