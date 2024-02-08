@@ -288,7 +288,7 @@ estate_eunuchs_monthly_adm_agenda = {
 			else = { 
 				NOT = { monthly_adm = 7 } 
 			}
-			has_unembraced_institution = yes 
+			
 		}	
 	}
 	task_requirements = {
@@ -305,10 +305,9 @@ estate_eunuchs_monthly_adm_agenda = {
 		else = {
 			if = { 
 				limit = { has_dlc = "Cradle of Civilization" } 
-				monthly_adm = 13
+				monthly_adm = 12
 			}
-			else = { monthly_adm = 9 } 
-			has_unembraced_institution = no 
+			else = { monthly_adm = 8 }
 		} 
 	}
     task_completed_effect = {
@@ -1057,7 +1056,7 @@ estate_eunuchs_porcelain_tower_agenda = {
 			add_dip_power = 50
 			add_mil_power = 50
 			change_ruler_stat = {
-				stat = adm
+				type = adm
 				amount = 1
 			}
 		}

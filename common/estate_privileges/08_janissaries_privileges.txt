@@ -71,7 +71,7 @@ estate_janissary_recruited_by_merit = {
 	on_invalid_province = {}
 	on_cooldown_expires = {}
 	modifier_by_land_ownership = {
-		infantry_power = 0.2
+		infantry_power = 0.1
 		is_janissary_modifier = yes
 	}
 	#conditional_modifier = {

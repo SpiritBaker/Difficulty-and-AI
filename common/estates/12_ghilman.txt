@@ -3,6 +3,7 @@ estate_ghilman = {
 	icon = 14
 	
 	trigger = {
+		always = no
 		government_rank = 3
 		religion_group = muslim
 		OR = {

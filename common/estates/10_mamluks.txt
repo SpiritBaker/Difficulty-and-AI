@@ -3,6 +3,7 @@ estate_mamluks = {
 	icon = 14
 	
 	trigger = {
+		always = no
 		has_reform = mamluk_government
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = cossacks_reform }

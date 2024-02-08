@@ -371,6 +371,9 @@ estate_cossacks_establish_the_cossack_regiments = {
 			NOT = { has_estate_privilege = estate_cossacks_establish_the_cossack_regiments }
 		}
 	}
+	additional_description = {
+		cossacks_regiment
+	}
 }
 
 estate_cossacks_expand_the_cossack_regiments = {

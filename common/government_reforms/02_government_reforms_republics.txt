@@ -68,8 +68,6 @@ signoria_reform = {
 	modifiers = {
 		global_tax_modifier = 0.15
 		max_absolutism = 10
-		
-		candidate_random_bonus = 1
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -524,6 +522,7 @@ noble_elite_reform = {
 presidential_despot_reform = {
 	allow_normal_conversion = no
 	dictatorship = yes
+	is_eligible_for_hre_emperor = no
 	lock_level_when_selected = yes
 	icon = "parliament_hall"
 	potential = {
@@ -593,6 +592,7 @@ revolutionary_republic_reform = {
 		max_revolutionary_zeal = 50
 		max_absolutism = 40
 		papal_influence = -100
+		allowed_rev_guard_fraction = 0.2	
 	}
 	fixed_rank = 3
 	effect = {
@@ -657,6 +657,16 @@ revolutionary_republic_reform = {
 				override_country_name = GURKANI_EMPIRE_STRING
 				set_country_flag = is_gurkani_flag
 			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_iran_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_iran_flag
+				restore_country_name = yes
+				override_country_name = IRAN_STRING
+				set_country_flag = is_iran_flag
+			}
 		}
 	}
 }
@@ -685,6 +695,7 @@ junior_revolutionary_republic_reform = {
 		max_revolutionary_zeal = 25
 		max_absolutism = 40
 		papal_influence = -100
+		allowed_rev_guard_fraction = 0.2
 	}
 	fixed_rank = 2
 	effect = {
@@ -738,6 +749,16 @@ junior_revolutionary_republic_reform = {
 				restore_country_name = yes
 				override_country_name = GURKANI_EMPIRE_STRING
 				set_country_flag = is_gurkani_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_iran_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_iran_flag
+				restore_country_name = yes
+				override_country_name = IRAN_STRING
+				set_country_flag = is_iran_flag
 			}
 		}
 	}
@@ -1722,6 +1743,12 @@ roman_republic_government = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
 	duration = 5
 }
 
@@ -2513,6 +2540,7 @@ consolidate_power_in_cities_reform = {
 		global_foreign_trade_power = 0.1
 	}
 	has_term_election = yes
+	is_eligible_for_hre_emperor = no
 	duration = 4
 	ai = {
 		factor = 10
@@ -2944,6 +2972,7 @@ feuillant_reform = {
 		allow = { has_dlc = "Res Publica" }
 		duration = 4
 		has_term_election = yes
+		is_eligible_for_hre_emperor = no
 		states_general_mechanic = {
 			revolutionaries = {
 				land_morale = 0.1
