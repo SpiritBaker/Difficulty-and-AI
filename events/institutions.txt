@@ -75,6 +75,9 @@ country_event = {
 				name = "birthplace_of_the_renaissance"
 				duration = -1
 			}
+			hidden_effect = {
+				save_global_event_target_as = birthplace_of_the_renaissance
+			}
 		}
 		hidden_effect = {
 			every_country = {
@@ -546,6 +549,22 @@ country_event = {
 			}
 		}
 	}
+
+	after = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = yua_guaranteed_printing_press
+				}
+				capital_scope = {
+					add_institution_embracement = {
+						which = printing_press
+						value = 100
+					}
+				}
+			}
+		}
+	}
 }
 
 country_event = {
@@ -617,6 +636,17 @@ country_event = {
 				add_institution_embracement = {
 					which = "printing_press"
 					value = 25
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = yua_guaranteed_printing_press
+			}
+			capital_scope = {
+				add_institution_embracement = {
+					which = "printing_press"
+					value = 100
 				}
 			}
 		}

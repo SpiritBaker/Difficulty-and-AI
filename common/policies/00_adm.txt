@@ -142,6 +142,8 @@ agricultural_cultivations = {
 	development_cost = -0.05
 	land_forcelimit_modifier = 0.1
 
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 5
 		modifier = {

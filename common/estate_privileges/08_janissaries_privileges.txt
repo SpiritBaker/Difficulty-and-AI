@@ -23,7 +23,6 @@ estate_janissary_sultans_aghas = {
 	on_granted = {}
 	on_granted_province = {}
 	benefits = {
-		army_tradition = 0.3
 		leader_land_shock = 1
 	}
 	on_revoked = {}

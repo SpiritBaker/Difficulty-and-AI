@@ -83,16 +83,16 @@ country_decisions = {
 				has_reform = nomad_empire
 				has_reform = khanate_monarchy
 			}
-			owns_core_province = 284 #Crimea
-			owns_core_province = 302 #Tambov
-			owns_core_province = 464 #Astrakhan
-			owns_core_province = 465 #Nogai
-			owns_core_province = 466 #Sarai
-			owns_core_province = 476 #Kypchak
-			owns_core_province = 1075 #Chimgi-Tura
-			owns_core_province = 1082 #Kazan
-			owns_core_province = 1778 #Qasim
-			owns_core_province = 2411 #Mansur
+			owns_or_non_sovereign_subject_of = 284 #Crimea
+			owns_or_non_sovereign_subject_of = 302 #Tambov
+			owns_or_non_sovereign_subject_of = 464 #Astrakhan
+			owns_or_non_sovereign_subject_of = 465 #Nogai
+			owns_or_non_sovereign_subject_of = 466 #Sarai
+			owns_or_non_sovereign_subject_of = 476 #Kypchak
+			owns_or_non_sovereign_subject_of = 1075 #Chimgi-Tura
+			owns_or_non_sovereign_subject_of = 1082 #Kazan
+			owns_or_non_sovereign_subject_of = 1778 #Qasim
+			owns_or_non_sovereign_subject_of = 2411 #Mansur
 			294 = { #Tver
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -118,7 +118,22 @@ country_decisions = {
 		effect = {
 			change_tag = GLH
 			on_change_tag_effect = yes
-			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_dlc = "Winds of Change"
+							NOT = {
+								was_tatar_nation = yes
+								was_mongol_nation = yes
+								was_moghulistan_nation = yes
+							}
+						}
+						NOT = { has_dlc = "Winds of Change" }
+					}
+				}
+				swap_non_generic_missions = yes
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 3 } }
@@ -172,6 +187,10 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 25 }
+			}
 		}
 		ai_importance = 400
 	}

@@ -951,6 +951,47 @@ unified_army_command = {
 	}
 }
 
+#trade_kontor_network
+
+deserteur_act = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = spy_ideas
+		has_idea_group = quality_ideas
+	}
+	
+	allow = {
+		full_idea_group = spy_ideas
+		full_idea_group = quality_ideas
+	}
+
+	army_tradition_decay = -0.005
+	reinforce_speed = 0.15
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.75
+		modifier = {
+			factor = 0
+			NOT = { army_tradition = 2 }
+		}			
+		modifier = {
+			factor = 1.5
+			army_tradition = 30
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 50
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 80
+		}
+	}
+}
+
 war_horses_policy = { 
 	monarch_power = MIL
 
@@ -1204,13 +1245,7 @@ psychological_warfare_policy = {
 	}
 }
 
-# kharash_policy kharash_policy = {) 
-
-
-
-
-
-#######
+#kharash_policy
 
 my_word_is_my_bond_policy = { 
 	monarch_power = MIL
@@ -1666,44 +1701,6 @@ hired_expeditions_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 0			
-	}
-}
-
-deserteur_act = {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = spy_ideas
-		has_idea_group = quality_ideas
-	}
-	
-	allow = {
-		full_idea_group = spy_ideas
-		full_idea_group = quality_ideas
-	}
-
-	army_tradition_decay = -0.005
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.75
-		modifier = {
-			factor = 0
-			NOT = { army_tradition = 2 }
-		}			
-		modifier = {
-			factor = 1.5
-			army_tradition = 30
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 50
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 80
-		}
 	}
 }
 

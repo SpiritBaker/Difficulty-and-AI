@@ -943,6 +943,18 @@ estate_eunuchs_porcelain_tower_agenda = {
 					}
 				}
 			}
+			1821 = { 
+				has_great_project = {
+					type = porcelain_tower_nanjing
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = porcelain_tower_nanjing
+						tier = 3
+					}
+				}
+			}
 		}
 		else = { 
 			1821 = { 
@@ -964,74 +976,26 @@ estate_eunuchs_porcelain_tower_agenda = {
 				estate = estate_eunuchs
 			}
 		}
-		else = {
-			if = { 
-				limit = { 
-					has_dlc = "Leviathan" 
-					1821 = { 
-						NOT = { 
-							has_great_project = {
-								type = porcelain_tower_nanjing
-								tier = 1 
-							}
-						}
-					}
-				}
-				1821 = {
-					has_great_project = {
-						type = porcelain_tower_nanjing 
-						tier = 1 
-					}
+		else_if = {
+			limit = { 
+				has_dlc = "Leviathan"
+			}
+			1821 = {
+				has_great_project = {
+					type = porcelain_tower_nanjing
+					tier = 3 
 				}
 			}
-			else_if = {
-				limit = { 
-					has_dlc = "Leviathan" 
-					1821 = { 
-						NOT = { 
-							has_great_project = {
-								type = porcelain_tower_nanjing
-								tier = 2
-							}
-						}
-					}
-				}
-				1821 = {
-					has_great_project = {
-						type = porcelain_tower_nanjing 
-						tier = 2
-					}
-				}
-			}
-			else_if = {
-				limit = { 
-					has_dlc = "Leviathan" 
-					1821 = { 
-						NOT = { 
-							has_great_project = {
-								type = porcelain_tower_nanjing
-								tier = 3
-							}
-						}
-					}
-				}
-				1821 = {
-					has_great_project = {
-						type = porcelain_tower_nanjing 
-						tier = 3
-					}
-				}
-			}
-			else = { 
-				1821 = { 
-					OR = {
-						NOT = { has_building = university } 
-						NOT = { development = 40 }
-					}
-				}
-			}
-			is_at_war = no 
 		}
+		else = { 
+			1821 = { 
+				OR = {
+					NOT = { has_building = university } 
+					NOT = { development = 40 }
+				}
+			}
+		}
+		is_at_war = no 
 	}
     task_completed_effect = {
 		on_completed_agenda_effect = {

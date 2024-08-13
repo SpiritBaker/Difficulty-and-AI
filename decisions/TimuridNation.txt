@@ -83,6 +83,7 @@ country_decisions = {
 			define_heir = {
 				dynasty = "Timurid"
 			}
+			set_country_flag = enthroned_a_timurid_prince
 		}
 		ai_will_do = {
 			factor = 1
@@ -92,6 +93,14 @@ country_decisions = {
 					primary_culture = uzbehk
 					primary_culture = turkmeni
 				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = MUG }	#Mughals should appear instead first
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = PER }	#Same goes for Persia
 			}
 		}
 	}
@@ -184,6 +193,13 @@ country_decisions = {
 					NOT = { government_rank = 3 }
 				}
 				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = iqta
 			}
 			add_prestige = 25
 			add_country_modifier = {

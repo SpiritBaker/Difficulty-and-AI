@@ -1053,7 +1053,28 @@ country_event = {
 			NOT = { has_reform = monastic_elections_reform }
 			NOT = { has_reform = feuillant_reform }
 		}
-		define_ruler = {
+		if = {
+			limit = {
+				has_government_attribute = republican_virtues
+			}
+			define_ruler = {
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
+		}
+		else = {
+			define_ruler = {
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = ned_buff_statists_candidates_flag
+			}
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 5
+			}
 		}
 		change_statists_vs_orangists = -0.33
 	
@@ -1088,10 +1109,26 @@ country_event = {
 			has_government_attribute = has_dutch_election
 		}
 		name = elections.720.b
-		define_ruler = {
-			dynasty = "van Oranje"
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ned_buff_orangist_candidates_flag
+				}
+			}
+			define_ruler = {
+				dynasty = "van Oranje"
+			}
+		}
+		else = {
+			define_ruler = {
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+				dynasty = "van Oranje"
+			}
 		}
 		change_statists_vs_orangists = 0.33
+		set_ruler_flag = ned_orangist_ruler_flag
 	}
 
 	option = {
@@ -1201,7 +1238,28 @@ country_event = {
 			NOT = { has_reform = monastic_elections_reform }
 			NOT = { has_reform = feuillant_reform }
 		}
-		define_ruler = {
+		if = {
+			limit = {
+				has_government_attribute = republican_virtues
+			}
+			define_ruler = {
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
+		}
+		else = {
+			define_ruler = {
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = ned_buff_statists_candidates_flag
+			}
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 5
+			}
 		}
 		change_statists_vs_orangists = -0.33
 	
@@ -1236,10 +1294,26 @@ country_event = {
 			has_government_attribute = has_dutch_election
 		}
 		name = elections.720.b
-		define_ruler = {
-			dynasty = "van Oranje"
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = ned_buff_orangist_candidates_flag
+				}
+			}
+			define_ruler = {
+				dynasty = "van Oranje"
+			}
+		}
+		else = {
+			define_ruler = {
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+				dynasty = "van Oranje"
+			}
 		}
 		change_statists_vs_orangists = 0.33
+		set_ruler_flag = ned_orangist_ruler_flag
 	}
 
 	option = {
@@ -1330,11 +1404,8 @@ country_event = {
 					min_age = 50
 					max_age = 75
 					change_adm = 2
-					change_dip = 1
-					change_mil = 1
-					max_random_adm = 6
-					max_random_dip = 5
-					max_random_mil = 5
+					change_dip = -1
+					change_mil = -1
 					option = 0
 				}
 			}
@@ -1349,11 +1420,8 @@ country_event = {
 					min_age = 50
 					max_age = 75
 					change_adm = 3
-					change_dip = 1
-					change_mil = 1
-					max_random_adm = 6
-					max_random_dip = 5
-					max_random_mil = 5
+					change_dip = -1
+					change_mil = -1
 					option = 0
 				}
 			}
@@ -1367,11 +1435,8 @@ country_event = {
 					min_age = 50
 					max_age = 75
 					change_adm = 3
-					change_dip = 1
-					change_mil = 1
-					max_random_adm = 6
-					max_random_dip = 5
-					max_random_mil = 5
+					change_dip = -1
+					change_mil = -1
 					option = 0
 				}
 			}
@@ -1381,11 +1446,8 @@ country_event = {
 					min_age = 50
 					max_age = 75
 					change_adm = 2
-					change_dip = 1
-					change_mil = 1
-					max_random_adm = 6
-					max_random_dip = 5
-					max_random_mil = 5
+					change_dip = -1
+					change_mil = -1
 					option = 0
 				}
 			}
@@ -1399,12 +1461,9 @@ country_event = {
 					exiled_as = lottery_candidate_b_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = 1
+					change_adm = -1
 					change_dip = 2
-					change_mil = 1
-					max_random_adm = 5
-					max_random_dip = 6
-					max_random_mil = 5
+					change_mil = -1
 					random_gender = yes
 					option = 1
 				}
@@ -1419,12 +1478,9 @@ country_event = {
 					random_gender = yes
 					min_age = 50
 					max_age = 75
-					change_adm = 1
+					change_adm = -1
 					change_dip = 3
-					change_mil = 1
-					max_random_adm = 5
-					max_random_dip = 6
-					max_random_mil = 5
+					change_mil = -1
 					option = 0
 				}
 			}
@@ -1437,12 +1493,9 @@ country_event = {
 					exiled_as = lottery_candidate_b_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = 1
+					change_adm = -1
 					change_dip = 3
-					change_mil = 1
-					max_random_adm = 5
-					max_random_dip = 6
-					max_random_mil = 5
+					change_mil = -1
 					option = 0
 				}
 			}
@@ -1451,12 +1504,9 @@ country_event = {
 					exiled_as = lottery_candidate_b_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = 1
+					change_adm = -1
 					change_dip = 2
-					change_mil = 1
-					max_random_adm = 5
-					max_random_dip = 6
-					max_random_mil = 5
+					change_mil = -1
 					option = 1
 				}
 			}
@@ -1470,12 +1520,9 @@ country_event = {
 					exiled_as = lottery_candidate_c_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = 1
-					change_dip = 1
+					change_adm = -1
+					change_dip = -1
 					change_mil = 2
-					max_random_adm = 5
-					max_random_dip = 5
-					max_random_mil = 6
 					random_gender = yes
 					option = 2
 				}
@@ -1490,12 +1537,9 @@ country_event = {
 					random_gender = yes
 					min_age = 50
 					max_age = 75
-					change_adm = 1
-					change_dip = 1
+					change_adm = -1
+					change_dip = -1
 					change_mil = 3
-					max_random_adm = 5
-					max_random_dip = 5
-					max_random_mil = 6
 					option = 0
 				}
 			}
@@ -1508,12 +1552,9 @@ country_event = {
 					exiled_as = lottery_candidate_c_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = 1
-					change_dip = 1
+					change_adm = -1
+					change_dip = -1
 					change_mil = 3
-					max_random_adm = 5
-					max_random_dip = 5
-					max_random_mil = 6
 					option = 0
 				}
 			}
@@ -1522,12 +1563,9 @@ country_event = {
 					exiled_as = lottery_candidate_c_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = 1
-					change_dip = 1
+					change_adm = -1
+					change_dip = -1
 					change_mil = 2
-					max_random_adm = 5
-					max_random_dip = 5
-					max_random_mil = 6
 					option = 2
 				}
 			}

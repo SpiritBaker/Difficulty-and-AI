@@ -89,6 +89,7 @@ country_decisions = {
 					NOT = { has_reform = reorganized_ottoman_government }
 					NOT = { has_reform = caliphate_reform }
 					NOT = { has_reform = caliphate_theocracy_reform }
+					NOT = { has_reform = egyptian_government_reform }
 				}
 				if = {
 					limit = {

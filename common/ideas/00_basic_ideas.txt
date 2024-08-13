@@ -2014,6 +2014,7 @@ court_ideas = {
 		meritocracy = 0.25 
 		imperial_mandate = 0.1
 		imperial_authority = 0.05
+		monthly_cultural_unity = 0.5
 	}
 	
 	long_echo = {
