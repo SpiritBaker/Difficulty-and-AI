@@ -310,14 +310,14 @@ estate_burghers_land_of_commerce = {
 		modifier = { monthly_russian_modernization = -0.03 }
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 25
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { crown_land_share = 30 }
+				NOT = { crown_land_share = 20 }
 				estate_influence = {
 					estate = estate_burghers
-					influence = 95
+					influence = 85
 				}
 			}
 			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }

@@ -137,15 +137,15 @@ defined_text = {
 	random = no
 	text = {
         trigger = {
-			has_global_flag = ai_dev_click
+			has_global_flag = ai_dev_click_disabled_flag
         }
-        localisation_key = devclEnabled
+        localisation_key = devclDisabled
 	}
 	text = {
 		trigger = {
-			NOT = { has_global_flag = ai_dev_click }
+			NOT = { has_global_flag = ai_dev_click_disabled_flag }
 		}
-		localisation_key = devclDisabled
+		localisation_key = devclEnabled
 	}
 }
 defined_text = {

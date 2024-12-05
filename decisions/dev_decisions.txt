@@ -44,7 +44,7 @@ country_decisions = {
 	spawn_click = {
 		major = yes
 		potential = {
-			has_global_flag = ai_dev_click
+			NOT = { has_global_flag = ai_dev_click_disabled_flag }
 			ai = yes
 			OR = {
 				had_country_flag = { flag = institution_flag	days = 365 }
@@ -198,7 +198,7 @@ country_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1000
+			factor = 1
 		}
 	}
 }

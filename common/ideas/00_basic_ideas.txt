@@ -55,15 +55,14 @@ aristocracy_ideas = {
 	
 
 	ai_will_do = {
-		factor = 10
+		factor = 8
 		modifier = {
-			factor = 2
-			mil = 4
+			factor = 1.1
+			monthly_mil = 8
 		}
 		modifier = {
-			factor = 1.5
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
 		}
 		modifier = {
 			factor = 0.5
@@ -181,15 +180,14 @@ plutocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 25
+		factor = 15
 		modifier = {
-			factor = 1.5
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
+			factor = 1.1
+			monthly_mil = 8
 		}
 		modifier = {
-			factor = 1.5
-			mil = 4
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
 		}
 	}
 }
@@ -231,15 +229,14 @@ horde_gov_ideas = {
 	}
 	
 	ai_will_do = {
-		factor = 30
+		factor = 15
 		modifier = {
-			factor = 1.5
-			mil = 4
+			factor = 1.1
+			monthly_mil = 8
 		}
 		modifier = {
-			factor = 1.5
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
 		}
 	}
 }
@@ -284,15 +281,14 @@ theocracy_gov_ideas = {
 		prestige_from_land = 0.5
 	}
 	ai_will_do = {
-		factor = 25
+		factor = 15
 		modifier = {
-			factor = 1.5
-			mil = 4
+			factor = 1.1
+			monthly_mil = 8
 		}
 		modifier = {
-			factor = 1.5
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
 		}
 	}
 }
@@ -332,15 +328,14 @@ indigenous_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 25
+		factor = 15
 		modifier = {
-			factor = 1.5
-			mil = 4
+			factor = 1.1
+			monthly_mil = 8
 		}
 		modifier = {
-			factor = 1.5
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
 		}
 	}
 }
@@ -379,7 +374,15 @@ innovativeness_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 1.5
+			factor = 1.1
+			monthly_adm = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_adm = 8 }
+		}
+		modifier = {
+			factor = 1.25
 			OR = {
 				religion = anglican
 				religion = protestant
@@ -454,6 +457,14 @@ religious_ideas = {
 
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 1.1
+			monthly_adm = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_adm = 8 }
+		}
 		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
@@ -572,6 +583,14 @@ spy_ideas = {
 	ai_will_do = {
 		factor = 0.5
 		modifier = {
+			factor = 1.1
+			monthly_dip = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_dip = 8 }
+		}
+		modifier = {
 			factor = 3
 			has_idea_group = aristocracy_ideas
 		}
@@ -618,13 +637,21 @@ diplomatic_ideas = {
 	ai_will_do = {
 		factor = 0.5
 		modifier = {
+			factor = 1.1
+			monthly_dip = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_dip = 8 }
+		}
+		modifier = {
 			factor = 0.5
 			NOT = { is_emperor = yes }
-			NOT = { num_of_subjects = 1 }
 		}
 		modifier = {
 			factor = 0.5
 			NOT = { adm_tech = 15 }
+			NOT = { is_emperor = yes }
 		}
 		modifier = {
 			factor = 1.5
@@ -681,15 +708,14 @@ offensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 10
+		factor = 8
 		modifier = {
-			factor = 2
-			mil = 4
+			factor = 1.1
+			monthly_mil = 8
 		}
 		modifier = {
-			factor = 1.5
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
 		}
 		modifier = {
 			factor = 1.5
@@ -761,15 +787,22 @@ defensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 10
+		factor = 8
 		modifier = {
-			factor = 2
-			mil = 4
+			factor = 1.1
+			monthly_mil = 8
 		}
 		modifier = {
-			factor = 1.5
-			adm_tech = 4
-			NOT = { adm_tech = 5 }
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
+		}
+		modifier = {
+			factor = 0.8
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 1.2
+			monthly_mil = 8
 		}
 		#modifier = {
 		#	factor = 1.5
@@ -814,7 +847,6 @@ defensive_ideas = {
 				}
 			}
 		}
-
 		modifier = {
 			factor = 1.5
 			is_nomad = no
@@ -898,6 +930,14 @@ trade_ideas = {
 
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 1.1
+			monthly_dip = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_dip = 8 }
+		}
 		modifier = {
 			factor = 0
 			NOT = { num_of_cities = 6 }
@@ -983,6 +1023,14 @@ economic_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
+			factor = 1.1
+			monthly_adm = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_adm = 8 }
+		}
+		modifier = {
 			factor = 1.2
 			num_of_cities = 25
 		}
@@ -1060,6 +1108,14 @@ exploration_ideas = {
 	}
 
 	ai_will_do = {
+		modifier = {
+			factor = 1.1
+			monthly_dip = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_dip = 8 }
+		}
 		factor = 0.75
 		modifier = {
 			factor = 0
@@ -1273,6 +1329,14 @@ maritime_ideas = {
 	ai_will_do = {
 		factor = 0.5
 		modifier = {
+			factor = 1.1
+			monthly_dip = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_dip = 8 }
+		}
+		modifier = {
 			factor = 0
 			is_tribal = yes
 		}
@@ -1368,10 +1432,14 @@ quality_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 10
+		factor = 8
 		modifier = {
-			factor = 2
-			mil = 4
+			factor = 1.1
+			monthly_mil = 8
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
 		}
 		modifier = {
 			factor = 1.5
@@ -1451,10 +1519,14 @@ quantity_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 10
+		factor = 8
 		modifier = {
-			factor = 2
-			mil = 4
+			factor = 1.1
+			monthly_mil = 8
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { monthly_mil = 8 }
 		}
 		modifier = {
 			factor = 1.2
@@ -1525,6 +1597,14 @@ expansion_ideas = {
 
 	ai_will_do = {
 		factor = 0.5
+		modifier = {
+			factor = 1.1
+			monthly_adm = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_adm = 8 }
+		}
 		modifier = {
 			factor = 10
 			OR = {
@@ -1639,6 +1719,14 @@ administrative_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
+			factor = 1.1
+			monthly_adm = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_adm = 8 }
+		}
+		modifier = {
 			factor = 2.5
 			governing_capacity_percentage = 1
 		}
@@ -1709,6 +1797,14 @@ humanist_ideas = {
 
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 1.1
+			monthly_adm = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_adm = 8 }
+		}
 		modifier = {
 			factor = 0
 			has_idea_group = religious_ideas
@@ -1816,6 +1912,14 @@ influence_ideas = {
 	ai_will_do = {
 		factor = 0.5
 		modifier = {
+			factor = 1.1
+			monthly_dip= 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_dip = 8 }
+		}
+		modifier = {
 			factor = 0.5
 			NOT = { is_emperor = yes }
 			NOT = { num_of_subjects = 1 }
@@ -1899,7 +2003,15 @@ naval_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 6
+		factor = 5
+		modifier = {
+			factor = 1.1
+			monthly_mil = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_mil = 8 }
+		}
 		modifier = {
 			factor = 0
 			is_tribal = yes
@@ -2047,6 +2159,14 @@ court_ideas = {
 	ai_will_do = {
 		factor = 0.5
 		modifier = {
+			factor = 1.1
+			monthly_dip = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_dip = 8 }
+		}
+		modifier = {
 			factor = 1.25
 			num_of_powerful_estates = 3 
 		}
@@ -2055,12 +2175,16 @@ court_ideas = {
 			personality = ai_diplomat
 		}
 		modifier = {
-			factor = 1.1 
-			national_focus = DIP 
+			factor = 1.5
+			is_emperor = yes
 		}
 		modifier = {
-			factor = 0.75
-			NOT = { monthly_dip = 8 } 
+			factor = 1.5
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
 		}
 	}
 }
@@ -2099,7 +2223,27 @@ mercenary_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0
+		factor = 6
+		modifier = {
+			factor = 1.1
+			monthly_mil = 8
+		}
+		modifier = { 
+			factor = 0.75 
+			NOT = { monthly_mil = 8 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { government = republic }
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = plutocracy_ideas
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = mercenary_ideas
+		}
 	}
 }
 
@@ -2137,7 +2281,7 @@ infrastructure_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.7
+		factor = 1
 		modifier = {
 			factor = 1.1 
 			personality = ai_capitalist
@@ -2145,6 +2289,10 @@ infrastructure_ideas = {
 		modifier = {
 			factor = 1.1
 			national_focus = ADM 
+		}
+		modifier = {
+			factor = 1.1
+			monthly_adm = 8
 		}
 		modifier = { 
 			factor = 0.75 
@@ -2156,6 +2304,25 @@ infrastructure_ideas = {
 				has_idea_group = trade_ideas
 				has_idea_group = naval_ideas
 			}
+		}
+		modifier = {
+			factor = 0.8
+			capital_scope = {
+				NOT = { continent = europe }
+			}
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				religion = hussite
+				religion = reformed
+				religion = protestant
+				religion = anglican
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = mercenary_ideas
 		}
 	}
 }

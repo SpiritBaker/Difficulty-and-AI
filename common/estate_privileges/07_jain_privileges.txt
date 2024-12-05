@@ -235,14 +235,14 @@ estate_jains_diplomacy = {
 		country_diplomatic_power = 1
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 25
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { crown_land_share = 30 }
+				NOT = { crown_land_share = 20 }
 				estate_influence = {
 					estate = estate_jains
-					influence = 95
+					influence = 85
 				}
 			}
 			NOT = { has_estate_privilege = estate_jains_diplomacy }

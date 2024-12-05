@@ -12,7 +12,7 @@ country_event = {
 		OR = {
 			AND = {
 				ai = yes
-				has_global_flag = ai_dev_click
+				NOT = { has_global_flag = ai_dev_click_disabled_flag }
 			}
 			AND = {
 				NOT = { ai = yes }
@@ -111,7 +111,7 @@ country_event = {
 		OR = {
 			AND = {
 				ai = yes
-				has_global_flag = ai_dev_click
+				NOT = { has_global_flag = ai_dev_click_disabled_flag }
 			}
 			AND = {
 				NOT = { ai = yes }
@@ -200,7 +200,7 @@ country_event = {
 		OR = {
 			AND = {
 				ai = yes
-				has_global_flag = ai_dev_click
+				NOT = { has_global_flag = ai_dev_click_disabled_flag }
 			}
 			AND = {
 				NOT = { ai = yes }

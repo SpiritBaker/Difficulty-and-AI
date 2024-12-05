@@ -275,14 +275,14 @@ estate_nobles_nobility_primacy = {
 		modifier = { monarch_power_tribute = 1 }
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 50
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { crown_land_share = 30 }
+				NOT = { crown_land_share = 20 }
 				estate_influence = {
 					estate = estate_nobles
-					influence = 95
+					influence = 85
 				}
 			}
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }

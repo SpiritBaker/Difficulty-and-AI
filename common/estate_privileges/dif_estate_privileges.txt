@@ -23,7 +23,7 @@ estate_nomadic_aristocracy_primacy = {
 		country_military_power = 1
 	}
 	ai_will_do = {
-		factor = 25
+		factor = 50
 		modifier = {
 			factor = 0
 			OR = {
@@ -170,7 +170,7 @@ sedentary_subdjects_land_of_commerce = {
 		country_diplomatic_power = 1
 	}
 	ai_will_do = {
-		factor = 20
+		factor = 30
 		modifier = {
 			factor = 0
 			OR = {

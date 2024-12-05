@@ -62,15 +62,15 @@ country_event = {
 	name = "opt.dif_settings.devclick"
 	    if = {
 			limit = {
-				NOT = { has_global_flag = ai_dev_click }
+				has_global_flag = ai_dev_click_disabled_flag
 			}
-			set_global_flag = ai_dev_click
+			clr_global_flag = ai_dev_click_disabled_flag
 		}
 		else_if = {
 			limit = {
-				has_global_flag = ai_dev_click
+				NOT = { has_global_flag = ai_dev_click_disabled_flag }
 			}
-			clr_global_flag = ai_dev_click
+			set_global_flag = ai_dev_click_disabled_flag
 		}
 		country_event = { id = dif_settings.2 }
 	}
@@ -169,17 +169,17 @@ country_event = {
 	}
 	option = { #dev-click
 	name = "opt.dif_settings.devclick"
-	    if = {
+		if = {
 			limit = {
-				NOT = { has_global_flag = ai_dev_click }
+				has_global_flag = ai_dev_click_disabled_flag
 			}
-			set_global_flag = ai_dev_click
+			clr_global_flag = ai_dev_click_disabled_flag
 		}
 		else_if = {
 			limit = {
-				has_global_flag = ai_dev_click
+				NOT = { has_global_flag = ai_dev_click_disabled_flag }
 			}
-			clr_global_flag = ai_dev_click
+			set_global_flag = ai_dev_click_disabled_flag
 		}
 		country_event = { id = dif_settings.1 }
 	}
