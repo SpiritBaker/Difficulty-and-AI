@@ -215,3 +215,53 @@ country_event = { # Autonomy decreased
 		}
 	}
 }
+
+country_event = { # Force change National Focus to Mil
+	id = dif_ai.7
+	title = "dif_ai.EVTNAME5"
+	desc = "dif_ai.EVTDESC5"
+	picture = LAND_MILITARY_eventPicture
+	
+	#is_triggered_only = yes
+	trigger = {
+		ai = yes
+		num_of_cities = 5
+		NOT = { has_country_modifier = ai_mill_focus }
+		NOT = { national_focus = mil }
+		military_idea_taken = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_modifier = ai_mill_focus } }
+			change_national_focus = MIL
+			if = {
+				limit = { government_rank = 1 NOT = { government_rank = 2 } }
+				add_country_modifier = { 
+					name = ai_mill_focus
+					duration = 9125 
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = { government_rank = 2 NOT = { government_rank = 3 } }
+				add_country_modifier = { 
+					name = ai_mill_focus
+					duration = 7300 
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = { government_rank = 2 NOT = { government_rank = 3 } }
+				add_country_modifier = { 
+					name = ai_mill_focus
+					duration = 5475  
+					hidden = yes
+				}
+			}
+			log = "[This.GetName] National Focus changed"
+		}
+	}	
+	option = {
+	}
+}

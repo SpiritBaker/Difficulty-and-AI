@@ -285,3 +285,48 @@ province_infrastructure_trigger = {
 		has_province_modifier = infrastructure_45
 	}	
 }
+
+military_idea_taken = {
+	OR = {
+		AND= {
+			aristocracy_ideas = 0
+			NOT = { aristocracy_ideas = 6 }
+		}
+		AND= {
+			plutocracy_ideas = 0
+			NOT = { plutocracy_ideas = 6 }
+		}
+		AND= {
+			horde_gov_ideas = 0
+			NOT = { horde_gov_ideas = 6 }
+		}
+		AND= {
+			theocracy_gov_ideas = 0
+			NOT = { theocracy_gov_ideas = 6 }
+		}
+		AND= {
+			offensive_ideas = 0
+			NOT = { offensive_ideas = 6 }
+		}
+		AND= {
+			defensive_ideas = 0
+			NOT = { defensive_ideas = 6 }
+		}
+		AND= {
+			quality_ideas = 0
+			NOT = { quality_ideas = 6 }
+		}
+		AND= {
+			quantity_ideas = 0
+			NOT = { quantity_ideas = 6 }
+		}
+		AND= {
+			naval_ideas = 0
+			NOT = { naval_ideas = 6 }
+		}
+		AND= {
+			mercenary_ideas = 0
+			NOT = { mercenary_ideas = 6 }
+		}
+	}
+}

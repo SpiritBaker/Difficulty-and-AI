@@ -61,6 +61,10 @@ aristocracy_ideas = {
 			monthly_mil = 8
 		}
 		modifier = {
+			factor = 1.1
+			monthly_mil = 10
+		}
+		modifier = {
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
 		}
@@ -186,6 +190,10 @@ plutocracy_ideas = {
 			monthly_mil = 8
 		}
 		modifier = {
+			factor = 1.1
+			monthly_mil = 10
+		}
+		modifier = {
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
 		}
@@ -233,6 +241,10 @@ horde_gov_ideas = {
 		modifier = {
 			factor = 1.1
 			monthly_mil = 8
+		}
+		modifier = {
+			factor = 1.1
+			monthly_mil = 10
 		}
 		modifier = {
 			factor = 0.75
@@ -287,6 +299,10 @@ theocracy_gov_ideas = {
 			monthly_mil = 8
 		}
 		modifier = {
+			factor = 1.1
+			monthly_mil = 10
+		}
+		modifier = {
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
 		}
@@ -332,6 +348,10 @@ indigenous_ideas = {
 		modifier = {
 			factor = 1.1
 			monthly_mil = 8
+		}
+		modifier = {
+			factor = 1.1
+			monthly_mil = 10
 		}
 		modifier = {
 			factor = 0.75
@@ -635,7 +655,7 @@ diplomatic_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
+		factor = 0.75
 		modifier = {
 			factor = 1.1
 			monthly_dip = 8
@@ -654,7 +674,7 @@ diplomatic_ideas = {
 			NOT = { is_emperor = yes }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			is_emperor = yes
 		}
 		modifier = {
@@ -712,6 +732,10 @@ offensive_ideas = {
 		modifier = {
 			factor = 1.1
 			monthly_mil = 8
+		}
+		modifier = {
+			factor = 1.1
+			monthly_mil = 10
 		}
 		modifier = {
 			factor = 0.75
@@ -793,16 +817,16 @@ defensive_ideas = {
 			monthly_mil = 8
 		}
 		modifier = {
+			factor = 1.1
+			monthly_mil = 10
+		}
+		modifier = {
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
 		}
 		modifier = {
 			factor = 0.8
 			is_tribal = yes
-		}
-		modifier = {
-			factor = 1.2
-			monthly_mil = 8
 		}
 		#modifier = {
 		#	factor = 1.5
@@ -825,7 +849,7 @@ defensive_ideas = {
 			has_idea_group = innovativeness_ideas
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			is_nomad = no
 			capital_scope = {
 				OR = {
@@ -848,7 +872,7 @@ defensive_ideas = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			is_nomad = no
 			capital_scope = { 
 				OR = {
@@ -860,7 +884,7 @@ defensive_ideas = {
 			}  
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			is_nomad = no
 			OR = {
 				culture_group = central_indic
@@ -1438,6 +1462,10 @@ quality_ideas = {
 			monthly_mil = 8
 		}
 		modifier = {
+			factor = 1.1
+			monthly_mil = 10
+		}
+		modifier = {
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
 		}
@@ -1523,6 +1551,10 @@ quantity_ideas = {
 		modifier = {
 			factor = 1.1
 			monthly_mil = 8
+		}
+		modifier = {
+			factor = 1.1
+			monthly_mil = 10
 		}
 		modifier = {
 			factor = 0.75
@@ -2008,6 +2040,10 @@ naval_ideas = {
 			factor = 1.1
 			monthly_mil = 8
 		}
+		modifier = {
+			factor = 1.1
+			monthly_mil = 10
+		}
 		modifier = { 
 			factor = 0.75 
 			NOT = { monthly_mil = 8 }
@@ -2032,6 +2068,10 @@ naval_ideas = {
 		modifier = {
 			factor = 0.75
 			num_of_cities = 50
+		}
+		modifier = {
+			factor = 0.33
+			NOT = { adm_tech = 5 }
 		}
 		modifier = {
 			factor = 0.33
@@ -2062,7 +2102,7 @@ naval_ideas = {
 			naval_forcelimit = 300
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			capital_scope = { island = yes }
 		}
 		modifier = {
@@ -2157,7 +2197,7 @@ court_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.5
+		factor = 0.75
 		modifier = {
 			factor = 1.1
 			monthly_dip = 8
@@ -2175,7 +2215,7 @@ court_ideas = {
 			personality = ai_diplomat
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			is_emperor = yes
 		}
 		modifier = {
@@ -2227,6 +2267,10 @@ mercenary_ideas = {
 		modifier = {
 			factor = 1.1
 			monthly_mil = 8
+		}
+		modifier = {
+			factor = 1.1
+			monthly_mil = 10
 		}
 		modifier = { 
 			factor = 0.75 

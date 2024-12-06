@@ -12,5 +12,5 @@ tags={
 name="Difficulty & AI Dev(1.37)"
 picture="thumbnail.png"
 supported_version="1.37.*"
-path="mod/Difficulty-and-A"
+path="mod/Difficulty-and-AI"
 remote_file_id="2453967654"

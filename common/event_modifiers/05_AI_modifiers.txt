@@ -85,4 +85,6 @@ infrastructure_45 = {
 	local_governing_cost = 0.3
 	local_great_project_upgrade_cost = -0.15
 }
-
+ai_mill_focus = {
+	regiment_recruit_speed = -0.01
+}
