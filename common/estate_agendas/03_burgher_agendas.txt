@@ -1,6 +1,6 @@
 #This one or the next one will always be valid
 estate_burghers_hire_advisor = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = {
 			employed_advisor = {
@@ -51,7 +51,7 @@ estate_burghers_hire_advisor = {
 }
 
 estate_burghers_fire_advisor = {
-		can_select = {
+	can_select = {
 		ai = no
 		employed_advisor = {
 			category = DIP
@@ -124,7 +124,7 @@ estate_burghers_fire_advisor = {
 
 #Pay off loans
 estate_burghers_pay_off_loans = {
-		can_select = {
+	can_select = {
 		ai = no
 		num_of_loans = 5
 		is_bankrupt = no
@@ -197,7 +197,7 @@ estate_burghers_pay_off_loans = {
 
 #Restore republican tradition
 estate_burghers_restore_republican_tradition = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { republican_tradition = 65 }
 		republican_tradition = 20
@@ -264,7 +264,7 @@ estate_burghers_restore_republican_tradition = {
 
 #Reduce Inflation
 estate_burghers_restore_currency = {
-		can_select = {
+	can_select = {
 		ai = no
 		inflation = 10
 		NOT = {
@@ -324,7 +324,7 @@ estate_burghers_restore_currency = {
 
 #Recover Abysmal Inflation
 estate_burghers_recovery_from_hyperinflation = {
-		can_select = {
+	can_select = {
 		ai = no
 		inflation = 30
 	}
@@ -372,7 +372,7 @@ estate_burghers_recovery_from_hyperinflation = {
 
 #Improve trade power in node X
 estate_burghers_increase_trade_power_in_X = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_active_trade_node = {
 			trade_share = {
@@ -667,7 +667,7 @@ estate_burghers_increase_trade_power_in_X = {
 
 #Access to the Sea
 estate_burghers_access_sea = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		NOT = {
@@ -842,7 +842,7 @@ estate_burghers_access_sea = {
 
 #Bigger Fleet
 estate_burghers_build_a_fleet = {
-		can_select = {
+	can_select = {
 		ai = no
 		primitives = no
 		any_owned_province = {
@@ -938,7 +938,7 @@ estate_burghers_build_a_fleet = {
 
 #Bigger Fleet than Rival
 estate_burghers_bigger_fleet_than_rival = {
-		can_select = {
+	can_select = {
 		ai = no
 		primitives = no
 		any_owned_province = {
@@ -1046,7 +1046,7 @@ estate_burghers_bigger_fleet_than_rival = {
 
 #Improve dip rep
 estate_burghers_improve_dip_rep = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { diplomatic_reputation = -2 }
 	}
@@ -1093,7 +1093,7 @@ estate_burghers_improve_dip_rep = {
 
 #Get a treasury
 estate_burghers_get_cash = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { years_of_income = 0.5 }
 		NOT = { num_of_loans = 1 }
@@ -1165,7 +1165,7 @@ estate_burghers_get_cash = {
 
 #Discover X in America
 estate_burghers_discover_X_in_america = {
-		can_select = {
+	can_select = {
 		ai = no
 		OR = {
 			num_of_conquistadors = 1
@@ -1299,7 +1299,7 @@ estate_burghers_discover_X_in_america = {
 
 #Colonise something in X area
 estate_burghers_colonise_X = {
-		can_select = {
+	can_select = {
 		ai = no
 		num_of_colonists = 1
 		num_of_ports = 1
@@ -1514,7 +1514,7 @@ estate_burghers_colonise_X = {
 
 #Colonise more in X area
 estate_burghers_colonise_more_X = {
-		can_select = {
+	can_select = {
 		ai = no
 		num_of_colonists = 1
 		num_of_ports = 1
@@ -1703,7 +1703,7 @@ estate_burghers_colonise_more_X = {
 
 #Get a Colonial Nation in X colonial region
 estate_burghers_colonial_nation = {
-		can_select = {
+	can_select = {
 		ai = no
 		num_of_colonists = 1
 		num_of_ports = 1
@@ -1854,7 +1854,7 @@ estate_burghers_colonial_nation = {
 
 #Get X provinces in a trade company in X region
 estate_burghers_expand_trade_company = {
-		can_select = {
+	can_select = {
 		ai = no
 		num_of_ports = 1
 		any_owned_province = {
@@ -2000,7 +2000,7 @@ estate_burghers_expand_trade_company = {
 
 #Trade post in India
 estate_burghers_trade_post_in_india = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2119,7 +2119,7 @@ estate_burghers_trade_post_in_india = {
 
 #Trade post in Malacca
 estate_burghers_trade_post_in_malacca = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2238,7 +2238,7 @@ estate_burghers_trade_post_in_malacca = {
 
 #Trade post in China
 estate_burghers_trade_post_in_china = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2351,7 +2351,7 @@ estate_burghers_trade_post_in_china = {
 
 #Get 3 silk provinces
 estate_burghers_silk_trade = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2434,7 +2434,7 @@ estate_burghers_silk_trade = {
 
 #Get 5 spice provinces
 estate_burghers_spice_trade = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2516,7 +2516,7 @@ estate_burghers_spice_trade = {
 
 #Get 3 tea provinces
 estate_burghers_tea_trade = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		capital_scope = {
@@ -2603,7 +2603,7 @@ estate_burghers_tea_trade = {
 
 #Reduce corruption
 estate_burghers_reduce_corruption = {
-		can_select = {
+	can_select = {
 		ai = no
 		corruption = 5
 		is_bankrupt = no
@@ -2725,7 +2725,7 @@ estate_burghers_reduce_corruption = {
 
 #Protect against Piracy
 estate_burghers_protect_against_piracy = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_active_trade_node = {
 			trade_share = {

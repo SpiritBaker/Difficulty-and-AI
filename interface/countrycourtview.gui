@@ -7,13 +7,14 @@ guiTypes = {
 		show_position = { x = 0 y = 140 }
 		hide_position = { x = -600 y = 140 }
 		animation_type = "decelerated"
-		animation_time = 300
-		size = { x = 1024 y = 100 }
+		animation_time = 300	
+		size = { x=1024 y=100 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"
 		upsound = tab_court
 		
-		iconType = {
+		iconType =
+		{
 			name ="background"
 			if_resolution = {						max_height = 867
 				spriteType = "GFX_court_view_bg"
@@ -539,10 +540,12 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonFont = "vic_18"
+			
 			clicksound = back_click
-		}
+		}			
 		
-		iconType = {
+		iconType = 
+		{
 			name ="icon_ADM"
 			if_resolution = {						max_height = 867
 				position = { x = 448 y = 320 }
@@ -577,10 +580,12 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonFont = "vic_18"
+			
 			clicksound = back_click
-		}
+		}			
 		
-		iconType = {
+		iconType = 
+		{
 			name ="icon_DIP"
 			if_resolution = {						max_height = 867
 				position = { x = 448 y = 407 }
@@ -615,10 +620,12 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			buttonFont = "vic_18"
+			
 			clicksound = back_click
-		}
+		}		
 		
-		iconType = {
+		iconType = 
+		{
 			name ="icon_MIL"
 			if_resolution = {						max_height = 867
 				position = { x = 448 y = 494 }
@@ -636,55 +643,63 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			hint_tag = "hint_mil"
 		}
-		
+
+
 		### SELECT ADVISOR
 		windowType = {
 			name = "court_select"
 			backGround=""
-			position = { x = -7 y = 0 }
-			size = { x = 1024 y = 100 }
+			position = { x=-7 y=0 }	
+			size = { x=1024 y=100 }
 			moveable = 0
 			dontRender = ""
 			horizontalBorder= ""
 			verticalBorder= ""
-			fullScreen = yes
+			fullScreen = yes	
+	
 			
-			iconType = {
+			iconType =
+			{
 				name ="domesticpanel_overlay"
 				spriteType = "GFX_court_view_select_advisor_bg"
-				position = { x = 0 y = -10 }
+				position = { x= 0 y = -10 }
 				Orientation = "UPPER_LEFT"
+				
 			}
 			
 			instantTextBoxType = {
 				name = "description"
-				position = { x = 70 y = 139 }
+				position = { x = 70 y =139 }
 				format = centre
 				font = "vic_22"
 				maxWidth = 420
-				maxHeight = 32
+				maxHeight = 32	
 				Orientation = "UPPER_LEFT"
 				text = "SELECT_ADVISOR"
 				format = center
 			}
 			
+			
+			
 			instantTextBoxType = {
 				name = "no_advisors_label"
-				position = { x = 132 y = 284 }
+				position = { x = 132 y =284 }
 				format = left
 				textureFile = ""
 				font = "vic_22"
-				borderSize = { x = 0 y = 0 }
-				text = "NO_ADVISORS"
+				borderSize = {x = 0 y = 0}
+				text = "NO_ADVISORS"	
 				maxWidth = 300
-				maxHeight = 32
+				maxHeight = 32	
 				Orientation = "UPPER_LEFT"
 				format = center
+				
 			}
 			
-			listboxType = {
+			listboxType = 
+			{
 				name ="court_select_slider"
-				position = { x = 86 y = 170 }
+				position = { x=86 y =170}
 				backGround=""
 				# size = { x = 382 y = 350 }
 				size = { x = 400 y = 350 }
@@ -692,22 +707,22 @@ guiTypes = {
 				horizontal = 0
 				spacing = 2
 				scrollbartype = "standardlistbox_slider"
-				borderSize = { x = 10 y = 10 }
+				borderSize = {x = 10 y = 10}
 			}
 			
 			guiButtonType = {
 				name = "back_button"
-				position = { x = 240 y = 531 }
-				quadTextureSprite ="GFX_standard_button_71"
+				position = { x=240 y =531}
+				quadTextureSprite ="GFX_standard_button_71"	
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "DOMESTIC_BACK"
 				buttonFont = "vic_18"
-				shortcut = "z"
+				shortcut = "z"			
 				extra_shortcut = "ESCAPE"
 				clicksound = back_click
-			}
+			}		
 		}
 	}
 
@@ -796,7 +811,7 @@ guiTypes = {
 			horizontal = 0
 			spacing = 1
 			scrollbartype = "standardlistbox_slider"
-			borderSize = { x = 0 y = 0 }
+			borderSize = {x = 0 y = 0}
 		}
 		
 		instantTextBoxType = {
@@ -812,13 +827,13 @@ guiTypes = {
 			}
 			textureFile = ""
 			font = "vic_18"
-			borderSize = { x = 4 y = 4 }
-			text = ""
+			borderSize = {x = 4 y = 4}	
+			text = ""	
 			maxWidth = 152
 			maxHeight = 30
 			format = left
-		}
-		
+		}		
+
 		instantTextBoxType = {
 			name = "advisor_activefor"
 			if_resolution = {						max_height = 867
@@ -839,7 +854,8 @@ guiTypes = {
 			text = ""
 			maxWidth = 65
 			maxHeight = 30
-		}
+			format = right
+		}		
 		
 		guiButtonType =
 		{
@@ -851,7 +867,10 @@ guiTypes = {
 			tooltipText =""
 			delayedTooltipText = ""
 			hint_tag = "hint_advisor"
-		}
+		}		
+		
+
+
 
 		iconType ={
 			name ="advisor_indicator_religion"
@@ -876,7 +895,11 @@ guiTypes = {
 			position = { x = -18 y = 46 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
-		}
+		}		
+		
+
+
+		
 		
 		guiButtonType = {
 			name = "advisor_sack"
@@ -935,15 +958,16 @@ guiTypes = {
 			}
 			textureFile = ""
 			font = "vic_36"
-			borderSize = { x = 4 y = 4 }
-			text = "7"
+			borderSize = {x = 4 y = 4}	
+			text = "7"	
 			maxWidth = 55
 			maxHeight = 32
 			format = center
 			Orientation = "UPPER_LEFT"
 		}
 
-		iconType = {
+		iconType =
+		{
 			name ="power_progress"
 			spriteType = "GFX_default_progressbar"
 			if_resolution = {						max_height = 867
@@ -979,7 +1003,8 @@ guiTypes = {
 			alwaystransparent = yes
 		}	
 
-		guiButtonType = {
+		guiButtonType = 
+		{
 			name ="progress_bar_frame"
 			if_resolution = {						max_height = 867
 				position = { x = 371 y = 51 }
@@ -1017,8 +1042,8 @@ guiTypes = {
 			position = { x = 25 y = 5 }
 			textureFile = ""
 			font = "vic_18"
-			borderSize = { x = 4 y = 4 }
-			text = ""
+			borderSize = {x = 4 y = 4}	
+			text = ""	
 			maxWidth = 260
 			maxHeight = 25
 			format = left

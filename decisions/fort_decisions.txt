@@ -3,6 +3,7 @@ country_decisions = {
 		major = yes
 		
 		potential = {
+			always = no
 			ai = yes
 			primitives = no
 			is_at_war = no

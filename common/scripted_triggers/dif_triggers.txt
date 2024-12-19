@@ -330,3 +330,69 @@ military_idea_taken = {
 		}
 	}
 }
+
+diplomatic_idea_taken = {
+	OR = {
+		AND= {
+			spy_ideas = 0
+			NOT = { spy_ideas = 6 }
+		}
+		AND= {
+			diplomatic_ideas = 0
+			NOT = { diplomatic_ideas = 6 }
+		}
+		AND= {
+			trade_ideas = 0
+			NOT = { trade_ideas = 6 }
+		}
+		AND= {
+			exploration_ideas = 0
+			NOT = { exploration_ideas = 6 }
+		}
+		AND= {
+			maritime_ideas = 0
+			NOT = { maritime_ideas = 6 }
+		}
+		AND= {
+			influence_ideas = 0
+			NOT = { influence_ideas = 6 }
+		}
+		AND= {
+			court_ideas = 0
+			NOT = { court_ideas = 6 }
+		}
+	}
+}
+
+administrative_idea_taken = {
+	OR = {
+		AND= {
+			innovativeness_ideas = 0
+			NOT = { innovativeness_ideas = 6 }
+		}
+		AND= {
+			religious_ideas = 0
+			NOT = { religious_ideas = 6 }
+		}
+		AND= {
+			economic_ideas = 0
+			NOT = { economic_ideas = 6 }
+		}
+		AND= {
+			expansion_ideas = 0
+			NOT = { expansion_ideas = 6 }
+		}
+		AND= {
+			administrative_ideas = 0
+			NOT = { administrative_ideas = 6 }
+		}
+		AND= {
+			humanist_ideas = 0
+			NOT = { humanist_ideas = 6 }
+		}
+		AND= {
+			infrastructure_ideas = 0
+			NOT = { infrastructure_ideas = 6 }
+		}
+	}
+}

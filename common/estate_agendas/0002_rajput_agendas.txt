@@ -1,7 +1,7 @@
 
 #This one or the next one will always be valid
 estate_rajput_hire_advisor = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = {
 			employed_advisor = {
@@ -52,7 +52,7 @@ estate_rajput_hire_advisor = {
 }
 
 estate_rajput_fire_advisor = {
-		can_select = {
+	can_select = {
 		ai = no
 		employed_advisor = {
 			category = MIL
@@ -125,7 +125,7 @@ estate_rajput_fire_advisor = {
 
 #Condottieri against rival (with Mare Nostrum)
 estate_rajput_condottieri_rivals = {
-		can_select = {
+	can_select = {
 		ai = no
 		has_dlc = "Mare Nostrum"
 		is_at_war = no
@@ -287,7 +287,7 @@ estate_rajput_condottieri_rivals = {
 
 #Support independence of X (subject of rival)
 estate_rajput_support_independence = {
-		can_select = {
+	can_select = {
 		ai = no
 		OR = {
 			has_dlc = "Conquest of Paradise"
@@ -404,7 +404,7 @@ estate_rajput_support_independence = {
 
 #Retake Core
 estate_rajput_retake_core = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		OR = {
@@ -557,7 +557,7 @@ estate_rajput_retake_core = {
 
 #Crush Revolts (not heretics)
 estate_rajput_crush_revolts = {
-		can_select = {
+	can_select = {
 		ai = no
 		num_of_rebel_armies = 1
 		NOT = {
@@ -630,7 +630,7 @@ estate_rajput_crush_revolts = {
 
 #Regain liberty
 estate_rajput_regain_liberty = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_subject = yes
 		is_at_war = no
@@ -709,7 +709,7 @@ estate_rajput_regain_liberty = {
 
 #Convert province culture
 estate_rajput_convert_province_culture = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { has_estate = estate_nobles }
 		any_owned_province = {
@@ -854,7 +854,7 @@ estate_rajput_convert_province_culture = {
 
 #Protect our Culture in X
 estate_rajput_protect_our_culture = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { has_estate = estate_nobles }
 		is_free_or_tributary_trigger = yes
@@ -1092,7 +1092,7 @@ estate_rajput_protect_our_culture = {
 
 #Vassalise X country (less than 3 provinces, you have at least 12)
 estate_rajput_vassalise_vulnerable_country = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1300,7 +1300,7 @@ estate_rajput_vassalise_vulnerable_country = {
 
 #Conquer X area from country you don't have great relations with
 estate_rajput_expand_into_x = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1560,7 +1560,7 @@ estate_rajput_expand_into_x = {
 
 #Complete conquest of X area from country you don't have great relations with
 estate_rajput_complete_conquest_of_x = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1851,7 +1851,7 @@ estate_rajput_complete_conquest_of_x = {
 
 #Annex vassal
 estate_rajput_annex_subject = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		diplomatic_reputation = 0
@@ -1984,7 +1984,7 @@ estate_rajput_annex_subject = {
 
 #Bigger Army
 estate_rajput_build_an_army = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 0.5 }
@@ -2077,7 +2077,7 @@ estate_rajput_build_an_army = {
 
 #Bigger Army than Rival
 estate_rajput_bigger_army_than_rival = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 1 }
@@ -2169,7 +2169,7 @@ estate_rajput_bigger_army_than_rival = {
 
 #Manpower reserves
 estate_rajput_build_up_manpower_reserves = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		NOT = { manpower_percentage = 0.40 }
@@ -2300,7 +2300,7 @@ estate_rajput_build_up_manpower_reserves = {
 
 #Recover bad prestige
 estate_rajput_recover_abysmal_prestige = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { prestige = -30 }
 	}
@@ -2382,7 +2382,7 @@ estate_rajput_recover_abysmal_prestige = {
 #Get good prestige
 
 estate_rajput_improve_prestige = {
-		can_select = {
+	can_select = {
 		ai = no
 		prestige = -30
 		NOT = { prestige = 20 }

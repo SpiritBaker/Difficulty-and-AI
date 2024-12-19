@@ -56,6 +56,11 @@
  ALL_MANCHU_PROVS:0 "Provinces in Manchuria Region"
  cb_horde_invasion:0 "Invasion"
  cb_horde_invasion_desc:0 ""
+ cb_horde_vs_civ_ai:0 "Tribal Conquest"
+ cb_horde_vs_civ_ai_desc:0 "There can be no peace between tribes and settlers!"
+ cb_tribal_feud_ai:0 "Tribal Feud"
+ cb_tribal_feud_ai_desc:0 "Our Tribe is mightier than their Tribe!"
+
  #AI cb's
  cb_horde_vs_civ_ai:0 "Tribal Conquest"
  cb_horde_vs_civ_ai_desc:0 "There can be no peace between tribes and settlers!"

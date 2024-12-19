@@ -2,7 +2,7 @@
 
 #This one or the next one will always be valid
 estate_janissaries_hire_advisor = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = {
 			employed_advisor = {
@@ -53,7 +53,7 @@ estate_janissaries_hire_advisor = {
 }
 
 estate_janissaries_fire_advisor = {
-		can_select = {
+	can_select = {
 		ai = no
 		employed_advisor = {
 			category = MIL
@@ -126,7 +126,7 @@ estate_janissaries_fire_advisor = {
 
 #Give us three privileges
 estate_janissaries_three_privileges = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = {
 			num_of_estate_privileges = {
@@ -217,7 +217,7 @@ estate_janissaries_three_privileges = {
 
 #Reduce War Exhaustion
 estate_janissaries_reduce_war_exhaustion = {
-		can_select = {
+	can_select = {
 		ai = no
 		war_exhaustion = 5
 		is_at_war = no
@@ -279,7 +279,7 @@ estate_janissaries_reduce_war_exhaustion = {
 
 #Increase Monthly Military Power
 estate_janissaries_increase_monthly_military_power = {
-		can_select = {
+	can_select = {
 		ai = no
 		if = {
 			limit = {
@@ -369,7 +369,7 @@ estate_janissaries_increase_monthly_military_power = {
 
 #Retake Core
 estate_janissaries_retake_core = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		OR = {
@@ -522,7 +522,7 @@ estate_janissaries_retake_core = {
 
 #Support independence of X (subject of rival)
 estate_janissaries_support_independence = {
-		can_select = {
+	can_select = {
 		ai = no
 		OR = {
 			has_dlc = "Conquest of Paradise"
@@ -638,7 +638,7 @@ estate_janissaries_support_independence = {
 
 #Gain corruption
 estate_janissaries_gain_corruption = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { corruption = 5 }
 		is_bankrupt = no
@@ -700,7 +700,7 @@ estate_janissaries_gain_corruption = {
 
 #Protect minority rights
 estate_janissaries_stop_converting_province_x = {
-		can_select = {
+	can_select = {
 		ai = no
 		num_of_missionaries = 1
 		any_owned_province = {
@@ -784,7 +784,7 @@ estate_janissaries_stop_converting_province_x = {
 #Military Agendas - become less and less frequent the more softer the Janissaries
 #Bigger Army
 estate_janissaries_build_an_army = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 0.5 }
@@ -877,7 +877,7 @@ estate_janissaries_build_an_army = {
 
 #Recruit Janissaries
 estate_janissaries_recruit_janissaries = {
-		can_select = {
+	can_select = {
 		ai = no
 		if = {
 			limit = { NOT = { land_forcelimit = 200 } }
@@ -939,7 +939,7 @@ estate_janissaries_recruit_janissaries = {
 
 #Humiliate Rival
 estate_janissaries_humiliate_rival = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_rival_country = {
 			NOT = { truce_with = ROOT }
@@ -1014,7 +1014,7 @@ estate_janissaries_humiliate_rival = {
 
 #Build army building
 estate_janissaries_build_army_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		mil_tech = 6
 		any_owned_province = {
@@ -1430,7 +1430,7 @@ estate_janissaries_build_army_building_in_y = {
 
 #Build soldier household
 estate_janissaries_build_soldier_household = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			NOT = { religion_group = ROOT }
@@ -1548,7 +1548,7 @@ estate_janissaries_build_soldier_household = {
 
 #Crush Revolts (not heretics)
 estate_janissaries_crush_revolts = {
-		can_select = {
+	can_select = {
 		ai = no
 		num_of_rebel_armies = 1
 		NOT = {
@@ -1615,7 +1615,7 @@ estate_janissaries_crush_revolts = {
 
 #Conquer X area from heathen country you don't have great relations with
 estate_janissaries_expand_into_x = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -1878,7 +1878,7 @@ estate_janissaries_expand_into_x = {
 
 #Condottieri against rival (with Mare Nostrum)
 estate_janissaries_condottieri_rivals = {
-		can_select = {
+	can_select = {
 		ai = no
 		has_dlc = "Mare Nostrum"
 		is_at_war = no
@@ -2040,7 +2040,7 @@ estate_janissaries_condottieri_rivals = {
 
 #Bigger Army than Rival
 estate_janissaries_bigger_army_than_rival = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 1 }
@@ -2133,7 +2133,7 @@ estate_janissaries_bigger_army_than_rival = {
 
 #Manpower reserves
 estate_janissaries_build_up_manpower_reserves = {
-		can_select = {
+	can_select = {
 		ai = no
 		is_at_war = no
 		NOT = { manpower_percentage = 0.40 }
@@ -2267,7 +2267,7 @@ estate_janissaries_build_up_manpower_reserves = {
 #Commercial Agendas - become more and more frequent the softer the Janissaries become
 #Develop heathen Production
 estate_janissaries_develop_heathen_x = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			NOT = { religion_group = ROOT }
@@ -2422,7 +2422,7 @@ estate_janissaries_develop_heathen_x = {
 
 #Construct Market building
 estate_janissaries_build_trade_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		dip_tech = 4
 		any_owned_province = {
@@ -2772,7 +2772,7 @@ estate_janissaries_build_trade_building_in_y = {
 
 #Improve trade power in node X
 estate_janissaries_increase_trade_power_in_X = {
-		can_select = {
+	can_select = {
 		ai = no
 		has_estate_privilege = estate_janissary_allow_other_professions
 		any_active_trade_node = {
@@ -3067,7 +3067,7 @@ estate_janissaries_increase_trade_power_in_X = {
 
 #Reduce Inflation
 estate_janissaries_restore_currency = {
-		can_select = {
+	can_select = {
 		ai = no
 		has_estate_privilege = estate_janissary_allow_other_professions
 		inflation = 10
@@ -3128,7 +3128,7 @@ estate_janissaries_restore_currency = {
 
 #Get a treasury
 estate_janissaries_get_cash = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { years_of_income = 0.5 }
 		NOT = { num_of_loans = 1 }
@@ -3195,7 +3195,7 @@ estate_janissaries_get_cash = {
 }
 
 estate_janissaries_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		adm_tech = 17
 		any_owned_province = {
@@ -3327,7 +3327,7 @@ estate_janissaries_build_university_in_y = {
 }
 
 estate_janissaries_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -3537,7 +3537,7 @@ estate_janissaries_build_manufactory_in_y = {
 }
 
 estate_janissaries_build_production_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		adm_tech = 6
 		any_owned_province = {
@@ -3816,7 +3816,7 @@ estate_janissaries_build_production_building_in_y = {
 
 #Gain Mercantilism
 estate_janissaries_gain_mercantilism = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { mercantilism = 100 }
 		has_estate_privilege = estate_janissary_allow_other_professions

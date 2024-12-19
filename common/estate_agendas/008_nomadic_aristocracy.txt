@@ -3,8 +3,7 @@
 #Generic ones
 
 nomadic_aristocracy_build_army_building_in_y = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		mil_tech = 6
 		any_owned_province = {
@@ -396,8 +395,7 @@ nomadic_aristocracy_build_army_building_in_y = {
 }
 
 nomadic_aristocracy_build_fort_building_in_y = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		any_owned_province = {
 			OR = {
@@ -1022,8 +1020,7 @@ nomadic_aristocracy_build_fort_building_in_y = {
 }
 
 nomadic_aristocracy_build_manufactory_in_y = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -1208,8 +1205,7 @@ nomadic_aristocracy_build_manufactory_in_y = {
 }
 
 nomadic_aristocracy_build_university_in_y = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		government = monarchy
 		adm_tech = 17
@@ -1330,8 +1326,7 @@ nomadic_aristocracy_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -1464,8 +1459,7 @@ nomadic_aristocracy_develop_x = {
 #Rest
 
 nomadic_aristocracy_hire_advisor = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		NOT = {
 			employed_advisor = {
@@ -1502,8 +1496,7 @@ nomadic_aristocracy_hire_advisor = {
 }
 
 nomadic_aristocracy_fire_advisor = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		employed_advisor = {
 			category = MIL
@@ -1565,8 +1558,7 @@ nomadic_aristocracy_fire_advisor = {
 
 #Befriend Rival of Rival
 nomadic_aristocracy_befriend_rival_of_rival = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		any_rival_country = {
 			any_rival_country = {
@@ -1752,8 +1744,7 @@ nomadic_aristocracy_befriend_rival_of_rival = {
 
 #Restore legitimacy
 nomadic_aristocracy_restore_legitimacy = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		NOT = { legitimacy_equivalent = 65 }
 		government = monarchy
@@ -1814,8 +1805,7 @@ nomadic_aristocracy_restore_legitimacy = {
 
 #Get AE down (if there is a coalition) 
 nomadic_aristocracy_break_coalition = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		any_country = {
 			coalition_target = root
@@ -1931,8 +1921,7 @@ nomadic_aristocracy_break_coalition = {
 
 #Condottieri against rival (with Mare Nostrum)
 nomadic_aristocracy_condottieri_rivals = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		has_dlc = "Mare Nostrum"
 		is_at_war = no
@@ -2090,8 +2079,7 @@ nomadic_aristocracy_condottieri_rivals = {
 
 #Support independence of X (subject of rival)
 nomadic_aristocracy_support_independence = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		OR = {
 			has_dlc = "Conquest of Paradise"
@@ -2194,8 +2182,7 @@ nomadic_aristocracy_support_independence = {
 
 #Retake Core
 nomadic_aristocracy_retake_core = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		OR = {
@@ -2334,8 +2321,7 @@ nomadic_aristocracy_retake_core = {
 
 #Crush Revolts (not heretics)
 nomadic_aristocracy_crush_revolts = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		num_of_rebel_armies = 1
 		NOT = {
@@ -2394,8 +2380,7 @@ nomadic_aristocracy_crush_revolts = {
 
 #Regain liberty
 nomadic_aristocracy_regain_liberty = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		is_subject = yes
 		is_at_war = no
@@ -2460,8 +2445,7 @@ nomadic_aristocracy_regain_liberty = {
 
 #Convert province culture
 nomadic_aristocracy_convert_province_culture = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		any_owned_province = {
 			NOT = { culture = root }
@@ -2590,8 +2574,7 @@ nomadic_aristocracy_convert_province_culture = {
 
 #Protect our Culture in X
 nomadic_aristocracy_protect_our_culture = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -2814,8 +2797,7 @@ nomadic_aristocracy_protect_our_culture = {
 
 #Vassalise X country (less than 3 provinces, you have at least 12)
 nomadic_aristocracy_vassalise_vulnerable_country = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -3009,8 +2991,7 @@ nomadic_aristocracy_vassalise_vulnerable_country = {
 
 #Conquer X area from country you don't have great relations with
 nomadic_aristocracy_expand_into_x = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -3253,8 +3234,7 @@ nomadic_aristocracy_expand_into_x = {
 
 #Complete conquest of X area from country you don't have great relations with
 nomadic_aristocracy_complete_conquest_of_x = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
@@ -3526,8 +3506,7 @@ nomadic_aristocracy_complete_conquest_of_x = {
 
 #Annex vassal
 nomadic_aristocracy_annex_subject = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		is_at_war = no
 		diplomatic_reputation = 0
@@ -3646,8 +3625,7 @@ nomadic_aristocracy_annex_subject = {
 
 #Bigger Army
 nomadic_aristocracy_build_an_army = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 0.5 }
@@ -3725,8 +3703,7 @@ nomadic_aristocracy_build_an_army = {
 
 #Bigger Army than Rival
 nomadic_aristocracy_bigger_army_than_rival = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		NOT = { has_country_modifier = thriving_arms_industry }
 		NOT = { army_size_percentage = 1 }
@@ -3804,8 +3781,7 @@ nomadic_aristocracy_bigger_army_than_rival = {
 
 #Manpower reserves
 nomadic_aristocracy_build_up_manpower_reserves = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		is_at_war = no
 		NOT = { manpower_percentage = 0.40 }
@@ -3922,8 +3898,7 @@ nomadic_aristocracy_build_up_manpower_reserves = {
 
 #Recover bad prestige
 nomadic_aristocracy_recover_abysmal_prestige = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		NOT = { prestige = -30 }
 	}
@@ -3991,8 +3966,7 @@ nomadic_aristocracy_recover_abysmal_prestige = {
 #Get good prestige
 
 nomadic_aristocracy_improve_prestige = {
-		can_select = {
-		ai = no
+	can_select = {
 		ai = no
 		prestige = -30
 		NOT = { prestige = 20 }

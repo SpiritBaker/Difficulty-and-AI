@@ -1,7 +1,7 @@
 
 #Triggers: any province has the basic conditions, country has adm tech 4
 estate_church_build_temple_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		adm_tech = 4
 		any_owned_province = {
@@ -234,7 +234,7 @@ estate_church_build_temple_in_y = {
 }
 
 estate_brahmins_build_temple_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		adm_tech = 4
 		if = {
@@ -520,7 +520,7 @@ estate_brahmins_build_temple_in_y = {
 }
 
 estate_nobles_build_army_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		mil_tech = 6
 		any_owned_province = {
@@ -928,7 +928,7 @@ estate_nobles_build_army_building_in_y = {
 }
 
 estate_rajput_build_army_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		mil_tech = 6
 		any_owned_province = {
@@ -1335,7 +1335,7 @@ estate_rajput_build_army_building_in_y = {
 }
 
 estate_maratha_build_army_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		mil_tech = 6
 		any_owned_province = {
@@ -2541,7 +2541,7 @@ estate_ghulams_build_army_building_in_y = {
 }
 
 estate_nobles_build_fort_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			OR = {
@@ -3180,7 +3180,7 @@ estate_nobles_build_fort_building_in_y = {
 }
 
 estate_rajput_build_fort_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			OR = {
@@ -3819,7 +3819,7 @@ estate_rajput_build_fort_building_in_y = {
 }
 
 estate_maratha_build_fort_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			OR = {
@@ -5735,7 +5735,7 @@ estate_ghulams_build_fort_building_in_y = {
 }
 
 estate_burghers_build_trade_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		dip_tech = 4
 		any_owned_province = {
@@ -6084,7 +6084,7 @@ estate_burghers_build_trade_building_in_y = {
 
 
 estate_burghers_build_port_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		dip_tech = 6
 		any_owned_province = {
@@ -6418,7 +6418,7 @@ estate_burghers_build_port_building_in_y = {
 }
 
 estate_burghers_build_production_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		adm_tech = 6
 		any_owned_province = {
@@ -6696,7 +6696,7 @@ estate_burghers_build_production_building_in_y = {
 
 
 estate_vaisyas_build_trade_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		dip_tech = 4
 		any_owned_province = {
@@ -7045,7 +7045,7 @@ estate_vaisyas_build_trade_building_in_y = {
 
 
 estate_vaisyas_build_port_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		dip_tech = 6
 		any_owned_province = {
@@ -7379,7 +7379,7 @@ estate_vaisyas_build_port_building_in_y = {
 }
 
 estate_vaisyas_build_production_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		adm_tech = 6
 		any_owned_province = {
@@ -7657,7 +7657,7 @@ estate_vaisyas_build_production_building_in_y = {
 
 
 estate_jains_build_trade_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		dip_tech = 4
 		any_owned_province = {
@@ -8005,7 +8005,7 @@ estate_jains_build_trade_building_in_y = {
 }
 
 estate_jains_build_port_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		dip_tech = 6
 		any_owned_province = {
@@ -8339,7 +8339,7 @@ estate_jains_build_port_building_in_y = {
 }
 
 estate_jains_build_production_building_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		adm_tech = 6
 		any_owned_province = {
@@ -8617,7 +8617,7 @@ estate_jains_build_production_building_in_y = {
 
 
 estate_nobles_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -8822,7 +8822,7 @@ estate_nobles_build_manufactory_in_y = {
 }
 
 estate_rajput_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -9027,7 +9027,7 @@ estate_rajput_build_manufactory_in_y = {
 }
 
 estate_maratha_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -9233,7 +9233,7 @@ estate_maratha_build_manufactory_in_y = {
 
 #should be 2x as likely
 estate_burghers_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -9438,7 +9438,7 @@ estate_burghers_build_manufactory_in_y = {
 }
 
 estate_vaisyas_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -9643,7 +9643,7 @@ estate_vaisyas_build_manufactory_in_y = {
 }
 
 estate_jains_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -9848,7 +9848,7 @@ estate_jains_build_manufactory_in_y = {
 }
 
 estate_church_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -10057,7 +10057,7 @@ estate_church_build_manufactory_in_y = {
 }
 
 estate_brahmins_build_manufactory_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root
@@ -10270,7 +10270,7 @@ estate_brahmins_build_manufactory_in_y = {
 #Universities
 
 estate_church_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		government = theocracy
 		adm_tech = 17
@@ -10402,7 +10402,7 @@ estate_church_build_university_in_y = {
 }
 
 estate_brahmins_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		government = theocracy
 		adm_tech = 17
@@ -10535,7 +10535,7 @@ estate_brahmins_build_university_in_y = {
 
 
 estate_nobles_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		government = monarchy
 		adm_tech = 17
@@ -10667,7 +10667,7 @@ estate_nobles_build_university_in_y = {
 }
 
 estate_maratha_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		government = monarchy
 		adm_tech = 17
@@ -10799,7 +10799,7 @@ estate_maratha_build_university_in_y = {
 }
 
 estate_rajput_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		government = monarchy
 		adm_tech = 17
@@ -10931,7 +10931,7 @@ estate_rajput_build_university_in_y = {
 }
 
 estate_burghers_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		government = republic
 		adm_tech = 17
@@ -11063,7 +11063,7 @@ estate_burghers_build_university_in_y = {
 }
 
 estate_vaisyas_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		government = republic
 		adm_tech = 17
@@ -11195,7 +11195,7 @@ estate_vaisyas_build_university_in_y = {
 }
 
 estate_jains_build_university_in_y = {
-		can_select = {
+	can_select = {
 		ai = no
 		government = republic
 		adm_tech = 17
@@ -11335,7 +11335,7 @@ estate_church_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -11480,7 +11480,7 @@ estate_church_develop_x = {
 }
 
 estate_brahmins_develop_x = {
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -11666,7 +11666,7 @@ estate_nobles_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -11814,7 +11814,7 @@ estate_rajput_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -11962,7 +11962,7 @@ estate_maratha_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -12110,7 +12110,7 @@ estate_burghers_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -12258,7 +12258,7 @@ estate_vaisyas_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -12406,7 +12406,7 @@ estate_jains_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -12554,7 +12554,7 @@ estate_nomadic_tribes_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -13173,7 +13173,7 @@ estate_cossacks_develop_x = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		any_owned_province = {
 			is_state_core = root

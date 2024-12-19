@@ -1098,6 +1098,7 @@ cb_horde_vs_civ = {
 	valid_for_subject = no
 
 	prerequisites_self = {
+		ai = no
 		is_nomad = yes
 		is_revolutionary = no
 	}
@@ -1117,6 +1118,7 @@ cb_tribal_feud = {
 	valid_for_subject = no
 
 	prerequisites_self = {
+		ai = no
 		is_nomad = yes
 		is_revolutionary = no
 	}

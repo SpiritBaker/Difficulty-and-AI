@@ -134,7 +134,7 @@ NDefines.NAI.PEACE_ALLY_WAR_DIRECTION_MULT = 0.5 -- Multiplies PEACE_WAR_DIRECTI
 --NDefines.NAI.PEACE_ALLY_WARGOAL_MULT = 0.25 -- Multiplies PEACE_WARGOAL_FACTOR for allies in a war
 --NDefines.NAI.PEACE_FORCE_BALANCE_FACTOR = 0.2 -- AI willingness to peace based on strength estimation of both sides
 
-NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 5.0 --Max AI desire for humiliating its enemy.
+NDefines.NAI.PEACE_TERMS_HUMILIATE_VALUE_MAX = 10.0 --Max AI desire for humiliating its enemy.
 NDefines.NAI.PEACE_TERMS_HUMILIATE_RIVAL_BASE_MULT = 3.0
 NDefines.NAI.PEACE_TERMS_RELEASE_VASSALS_BASE_MULT = 1.25	
 NDefines.NAI.PEACE_TERMS_TRANSFER_VASSALS_BASE_MULT	= 1.5

@@ -130,6 +130,10 @@ philosopher = {
 	
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 1.5
+			administrative_idea_taken = yes
+		}
 	}
 }
 
@@ -264,6 +268,10 @@ natural_scientist = {
 		modifier = {
 			factor = 6
 			production_income_percentage = 0.6
+		}
+		modifier = {
+			factor = 1.5
+			administrative_idea_taken = yes
 		}
 	}
 }
@@ -407,6 +415,10 @@ artist = {
 		modifier = {
 			factor = 4
 			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			administrative_idea_taken = yes
 		}
 	}
 }
@@ -553,6 +565,10 @@ treasurer = {
 		modifier = {
 			factor = 2
 			tax_income_percentage = 0.6
+		}
+		modifier = {
+			factor = 1.5
+			administrative_idea_taken = yes
 		}
 	}
 }
@@ -712,6 +728,10 @@ theologian = {
 				value = 0
 			}
 		}
+		modifier = {
+			factor = 1.5
+			administrative_idea_taken = yes
+		}
 	}
 }
 
@@ -848,6 +868,10 @@ master_of_mint = {
 		modifier = {
 			factor = 0.5
 			NOT = { inflation = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			administrative_idea_taken = yes
 		}
 	}
 }
@@ -1016,6 +1040,10 @@ inquisitor = {
 				NOT = { tolerance_to_this = 0 }
 			}
 		}
+		modifier = {
+			factor = 1.5
+			administrative_idea_taken = yes
+		}
 	}
 }
 
@@ -1155,6 +1183,10 @@ statesman = {
 				is_emperor = yes
 			}
 		}
+		modifier = {
+			factor = 1.5
+			diplomatic_idea_taken = yes
+		}
 	}
 }
 
@@ -1262,6 +1294,10 @@ naval_reformer = {
 		modifier = {
 			factor = 5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 1.5
+			diplomatic_idea_taken = yes
 		}
 	}
 }
@@ -1404,6 +1440,10 @@ trader = {
 			factor = 6
 			trade_income_percentage = 0.6
 		}
+		modifier = {
+			factor = 1.5
+			diplomatic_idea_taken = yes
+		}
 	}
 }
 
@@ -1482,6 +1522,10 @@ spymaster = {
 	
 	ai_will_do = {
 		factor = 0.8
+		modifier = {
+			factor = 1.5
+			diplomatic_idea_taken = yes
+		}
 	}
 }
 
@@ -1568,6 +1612,10 @@ colonial_governor = {
 	
 	ai_will_do = {
 		factor = 0.5
+		modifier = {
+			factor = 1.5
+			diplomatic_idea_taken = yes
+		}
 	}
 }
 
@@ -1676,6 +1724,10 @@ diplomat = {
 				is_emperor = yes
 			}
 		}
+		modifier = {
+			factor = 1.5
+			diplomatic_idea_taken = yes
+		}
 	}
 }
 
@@ -1763,6 +1815,10 @@ navigator = {
 			num_of_colonists = 1
 			NOT = { num_of_colonies = 1 }
 		}
+		modifier = {
+			factor = 1.5
+			diplomatic_idea_taken = yes
+		}
 	}
 }
 
@@ -1848,6 +1904,10 @@ army_reformer = {
 		modifier = {
 			factor = 20 
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			military_idea_taken = yes
 		}
 	}
 }
@@ -1956,6 +2016,10 @@ army_organiser = {
 			factor = 0
 			is_at_war = yes
 		}
+		modifier = {
+			factor = 2
+			military_idea_taken = yes
+		}
 	}
 }
 
@@ -2041,6 +2105,10 @@ commandant = {
 			factor = 2
 			is_year = 1600
 		}
+		modifier = {
+			factor = 2
+			military_idea_taken = yes
+		}
 	}
 }
 
@@ -2120,6 +2188,10 @@ quartermaster = {
 		modifier = {
 			factor = 1.4
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			military_idea_taken = yes
 		}
 	}
 }
@@ -2211,6 +2283,10 @@ recruitmaster = {
 			factor = 0
 			is_at_war = yes
 		}
+		modifier = {
+			factor = 2
+			military_idea_taken = yes
+		}
 	}
 }
 
@@ -2288,6 +2364,10 @@ fortification_expert = {
 	
 	ai_will_do = {
 		factor = 2
+		modifier = {
+			factor = 2
+			military_idea_taken = yes
+		}
 	}
 }
 
@@ -2368,6 +2448,10 @@ grand_captain = {
 		modifier = {
 			factor = 0
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			military_idea_taken = yes
 		}
 	}
 }

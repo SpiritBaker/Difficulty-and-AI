@@ -2197,7 +2197,7 @@ court_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.75
+		factor = 0.85
 		modifier = {
 			factor = 1.1
 			monthly_dip = 8
@@ -2325,7 +2325,7 @@ infrastructure_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.2
 		modifier = {
 			factor = 1.1 
 			personality = ai_capitalist
@@ -2350,18 +2350,22 @@ infrastructure_ideas = {
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.85
 			capital_scope = {
 				NOT = { continent = europe }
 			}
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.25
 			OR = {
 				religion = hussite
 				religion = reformed
 				religion = protestant
 				religion = anglican
+				religion = confucianism
+				religion = shinto
+				religion = buddhism
+				religion = mahayana
 			}
 		}
 		modifier = {

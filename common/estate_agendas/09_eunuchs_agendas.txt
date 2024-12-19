@@ -2,7 +2,7 @@ estate_eunuchs_develop_x_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		capital_scope = {
 			is_state_core = root
@@ -150,7 +150,7 @@ estate_eunuchs_gather_x_gov_reform_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		reform_level = 3 
 		NOT = { has_reform = examination_system_reform }
@@ -207,7 +207,7 @@ estate_eunuchs_have_x_decree_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = { meritocracy = 50 }  
 		is_emperor_of_china = yes 
@@ -277,7 +277,7 @@ estate_eunuchs_monthly_adm_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		is_emperor_of_china = yes 
 		OR = { 
@@ -342,7 +342,7 @@ estate_eunuchs_monthly_adm_agenda = {
 
 estate_eunuchs_recover_meritocracy_agenda = {
 	selection_weight = { factor = 1 }
-		can_select = {
+	can_select = {
 		ai = no
 		is_emperor_of_china = yes 
 		has_dlc = "Mandate of Heaven" 
@@ -394,7 +394,7 @@ estate_eunuchs_recover_meritocracy_agenda = {
 
 estate_eunuchs_improve_imperial_mandate_agenda = {
 	selection_weight = { factor = 1 }
-		can_select = {
+	can_select = {
 		ai = no
 		is_emperor_of_china = yes 
 		has_dlc = "Mandate of Heaven" 
@@ -448,7 +448,7 @@ estate_eunuchs_hire_advisor_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = {
 			employed_advisor = {
@@ -505,7 +505,7 @@ estate_eunuchs_fire_advisor_agenda = {
 			always = yes
 		}
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		employed_advisor = {
 			category = DIP
@@ -573,7 +573,7 @@ estate_eunuchs_harmonization_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		has_dlc = "Mandate of Heaven" 
 		religion = confucianism
@@ -637,7 +637,7 @@ estate_eunuchs_harmonization_agenda = {
 }
 
 estate_eunuchs_four_privileges_agenda = {
-		can_select = {
+	can_select = {
 		ai = no
 		NOT = {
 			num_of_estate_privileges = {
@@ -735,7 +735,7 @@ estate_eunuchs_subject_gifts_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		calc_true_if = {
 			all_subject_country = {
@@ -832,7 +832,7 @@ estate_eunuchs_forbidden_city_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		owns = 1816 
 		if = { 
@@ -930,7 +930,7 @@ estate_eunuchs_porcelain_tower_agenda = {
 	selection_weight = {
 		factor = 1
 	}
-		can_select = {
+	can_select = {
 		ai = no
 		owns = 1821
 		if = {
@@ -1039,7 +1039,7 @@ estate_eunuchs_porcelain_tower_agenda = {
 }
 
 estate_eunuchs_subsidize_subjects_agenda = {
-		can_select = {
+	can_select = {
 		ai = no
 		calc_true_if = {
 			all_subject_country = {
