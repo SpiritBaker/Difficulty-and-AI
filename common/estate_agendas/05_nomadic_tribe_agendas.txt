@@ -1,127 +1,76 @@
 
 #This one or the next one will always be valid
-estate_nomadic_tribes_hire_advisor = {
-	can_select = {
-		ai = no
-		NOT = {
-			employed_advisor = {
-				category = MIL
-			}
-		}
-	}
-	selection_weight = {
-		factor = 1
-	}
-	task_requirements = {
-		if = {
-			limit = {
-				has_estate_agenda_auto_completion = {
-					estate = estate_nomadic_tribes
-				}
-			}
-			has_estate_agenda_auto_completion = {
-				estate = estate_nomadic_tribes
-			}
-		}
-		else = {
-			employed_advisor = {
-				category = MIL
-			}
-			is_in_deficit = no
-		}
-	}
-    task_completed_effect = {
-		on_completed_agenda_effect = {
-			estate = estate_nomadic_tribes
-		}
-		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
-			loyalty = 10
-		}
-    }
-    failing_effect = {
-		on_failed_agenda_effect = yes
-		clr_auto_complete_flag = yes
-        add_estate_loyalty_modifier = {
-            estate = estate_nomadic_tribes
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
-    }
-}
-
-estate_nomadic_tribes_fire_advisor = {
-	can_select = {
-		ai = no
-		employed_advisor = {
-			category = MIL
-		}
-	}
-	selection_weight = {
-		factor = 1
-		modifier = {
-			factor = 0.5
-			always = yes
-		}
-	}
-	immediate_effect = {
-		hidden_effect = {
-			set_country_flag = need_to_fire_mil_advisor
-		}
-	}
-	on_invalid = {
-		clr_country_flag = need_to_fire_adm_advisor
-	}
-	task_requirements = {
-		if = {
-			limit = {
-				has_estate_agenda_auto_completion = {
-					estate = estate_nomadic_tribes
-				}
-			}
-			has_estate_agenda_auto_completion = {
-				estate = estate_nomadic_tribes
-			}
-		}
-		else = {
-			custom_trigger_tooltip = {
-				tooltip = fire_mil_advisor_tooltip
-				has_country_flag = just_fired_mil_advisor
-			}
-		}
-	}
-    task_completed_effect = {
-		on_completed_agenda_effect = {
-			estate = estate_nomadic_tribes
-		}
-		add_estate_loyalty = {
-			estate = estate_nomadic_tribes
-			loyalty = 10
-		}
-		clr_country_flag = just_fired_mil_advisor
-		clr_country_flag = need_to_fire_mil_advisor
-	}
-	invalid_trigger = {
-		NOT = {
-			employed_advisor = {
-				category = MIL
-			}
-		}
-		NOT = { has_country_flag = just_fired_mil_advisor }
-	}
-    failing_effect = {
-		on_failed_agenda_effect = yes
-		clr_auto_complete_flag = yes
-        add_estate_loyalty_modifier = {
-            estate = estate_nomadic_tribes
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
-		clr_country_flag = need_to_fire_mil_advisor
-    }
-}
+# estate_nomadic_tribes_fire_advisor = {
+# 	can_select = {
+# 		ai = no
+# 		employed_advisor = {
+# 			category = MIL
+# 		}
+# 	}
+# 	selection_weight = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0.5
+# 			always = yes
+# 		}
+# 	}
+# 	immediate_effect = {
+# 		hidden_effect = {
+# 			set_country_flag = need_to_fire_mil_advisor
+# 		}
+# 	}
+# 	on_invalid = {
+# 		clr_country_flag = need_to_fire_adm_advisor
+# 	}
+# 	task_requirements = {
+# 		if = {
+# 			limit = {
+# 				has_estate_agenda_auto_completion = {
+# 					estate = estate_nomadic_tribes
+# 				}
+# 			}
+# 			has_estate_agenda_auto_completion = {
+# 				estate = estate_nomadic_tribes
+# 			}
+# 		}
+# 		else = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = fire_mil_advisor_tooltip
+# 				has_country_flag = just_fired_mil_advisor
+# 			}
+# 		}
+# 	}
+#     task_completed_effect = {
+# 		on_completed_agenda_effect = {
+# 			estate = estate_nomadic_tribes
+# 		}
+# 		add_estate_loyalty = {
+# 			estate = estate_nomadic_tribes
+# 			loyalty = 10
+# 		}
+# 		clr_country_flag = just_fired_mil_advisor
+# 		clr_country_flag = need_to_fire_mil_advisor
+# 	}
+# 	invalid_trigger = {
+# 		NOT = {
+# 			employed_advisor = {
+# 				category = MIL
+# 			}
+# 		}
+# 		NOT = { has_country_flag = just_fired_mil_advisor }
+# 	}
+#     failing_effect = {
+# 		on_failed_agenda_effect = yes
+# 		clr_auto_complete_flag = yes
+#         add_estate_loyalty_modifier = {
+#             estate = estate_nomadic_tribes
+# 			desc = EST_VAL_AGENDA_DENIED
+# 			loyalty = -5
+# 			duration = 7300
+#         }
+# 		clr_country_flag = need_to_fire_mil_advisor
+#     }
+# }
 
 #Raze a province
 estate_nomadic_tribes_raze_a_province = {

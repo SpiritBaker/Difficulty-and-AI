@@ -922,29 +922,29 @@ estate_jains_dock_trade_power = {
 	}
 }
 
-estate_nobles_obligated_to_serve = {
-	icon = privilege_promote_purbias
-	#land_share = 0
-	max_absolutism = 5
-	influence = 0.05
-	loyalty = -0.1
-	is_valid = {
-		has_idea_group = aristocracy_ideas
-	}
-	can_select = {
-		has_idea_group = aristocracy_ideas
-	}
-	on_granted = {
-		#custom_tooltip = estate_nobles_command_of_the_military_tt
-	}
-	penalties = {
-		leader_cost = 0.2
-	}
-	benefits = {
-		cavalry_power = 0.05
-		governing_capacity = 50
-	}
-	ai_will_do = {
-		factor = 10
-	}
-}
+# estate_nobles_obligated_to_serve = {
+# 	icon = privilege_promote_purbias
+# 	#land_share = 0
+# 	max_absolutism = 5
+# 	influence = 0.05
+# 	loyalty = -0.1
+# 	is_valid = {
+# 		has_idea_group = aristocracy_ideas
+# 	}
+# 	can_select = {
+# 		has_idea_group = aristocracy_ideas
+# 	}
+# 	on_granted = {
+# 		#custom_tooltip = estate_nobles_command_of_the_military_tt
+# 	}
+# 	penalties = {
+# 		leader_cost = 0.2
+# 	}
+# 	benefits = {
+# 		cavalry_power = 0.05
+# 		governing_capacity = 50
+# 	}
+# 	ai_will_do = {
+# 		factor = 10
+# 	}
+# }

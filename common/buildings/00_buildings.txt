@@ -885,7 +885,7 @@ fort_15th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 6
 			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
@@ -1601,7 +1601,7 @@ fort_16th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 6
 			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
@@ -2695,7 +2695,7 @@ fort_17th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 6
 			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
@@ -3552,7 +3552,7 @@ fort_18th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 5
+			factor = 6
 			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {

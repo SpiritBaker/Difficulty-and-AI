@@ -254,6 +254,7 @@ strategic_location_for_a_fort_trigger = {
 			}
 		}
 		province_id = 365
+		province_id = 2323
 	}
 } 
 

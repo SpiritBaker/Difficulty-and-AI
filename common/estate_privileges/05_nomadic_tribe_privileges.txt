@@ -242,27 +242,41 @@ estate_nomadic_tribes_chieftains_autonomy = {
 	}
 }
 
-#estate_nomadic_tribes_guaranteed_leadgership_in_host = {
-#	icon = privilege_conscript_cossack_elite
-#	max_absolutism = -5
-#	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-#	influence = 0.05
-#	can_select = {
-#		army_tradition = 30
-#	}
-#	on_granted = {
-#		add_army_tradition = -5
-#	}
-#	penalties = {
-#	}
-#	benefits = {
-#		general_cost = -0.1
-#		army_tradition_decay = -0.005
-#	}
-#	ai_will_do = {
-#		factor = 0
-#	}
-#}
+estate_nomadic_tribes_guaranteed_leadgership_in_host = {
+	icon = privilege_conscript_cossack_elite
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	is_valid = {
+		always = no
+	}
+	can_select = {
+		always = no
+		if = {
+			limit = {
+				NOT = { has_country_flag = hordes_no_at_for_guaranteed_leadership_flag }
+			}
+			army_tradition = 30
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = hordes_no_at_for_guaranteed_leadership_flag }
+			}
+			add_army_tradition = -5
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		general_cost = -0.1
+		army_tradition_decay = -0.005
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 
 estate_nomadic_tribes_tribal_host = {
 	icon = privilege_raise_host
