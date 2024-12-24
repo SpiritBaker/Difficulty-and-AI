@@ -1,0 +1,1489 @@
+namespace = multiple_wars
+
+country_event = {
+	# attack
+	id = multiple_wars.1
+	title = multiple_wars.1.t
+	desc = multiple_wars.1.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		is_at_war = yes
+		is_free_or_tributary_trigger = yes
+		
+		#Not low on manpower
+		manpower_percentage = 0.5
+		
+		#Max 5 loans
+		NOT = { num_of_loans = 6 }
+		
+		#Positive war score in current war.
+		all_war_enemy_countries = {
+			ROOT = {
+				war_score_against = {
+					who = PREV
+					value = 10
+				}
+			}
+		}
+		
+		#Current war is easy war.
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				which = enemy_army_strength
+				value = 0
+			}
+			all_war_enemy_countries = {
+				OR = {
+					AND = {
+						army_strength = { who = ROOT value = 0.08 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.12 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.14 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.15 }
+												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 15 } } }
+											}
+											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 14 } } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.13 }
+										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 13 } } }
+									}
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 12 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.1 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.11 }
+										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 11 } } }
+									}
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 10 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.09 }
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 9 } } }
+							}
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 8 } } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.04 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.06 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.07 }
+										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 7 } } }
+									}
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 6 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.05 }
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 5 } } }
+							}
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 4 } } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.02 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.03 }
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 3 } } }
+							}
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 2 } } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.01 }
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 1 } } }
+					}
+					ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 0 } } }
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = enemy_army_strength
+					value = 15
+				}
+			}
+		}
+		
+		#find a country
+		any_known_country = {
+			#Small size
+			NOT = { num_of_cities = 10 }
+			NOT = { total_development = 100 }
+			#no allies
+			NOT = { num_of_allies = 1 }
+			#independent/not a tributary
+			NOT = { is_subject = yes }
+			#no guarantee
+			any_known_country = { has_guaranteed = PREV }
+			#no trade league
+			NOT = { is_in_trade_league = yes }
+			#no federation
+			NOT = { federation_size = 2 }
+			#HRE check
+			OR = {
+				NOT = { hre_size = 2 }
+				NOT = { is_part_of_hre = yes }
+			}
+			#Defender of the Faith check
+			NOT = {
+				AND = { #christian
+					dominant_religion = catholic
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = catholic
+					}
+				}
+				AND = {
+					dominant_religion = anglican
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = anglican
+					}
+				}
+				AND = {
+					dominant_religion = hussite
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = hussite
+					}
+				}
+				AND = {
+					dominant_religion = protestant
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = protestant
+					}
+				}
+				AND = {
+					dominant_religion = reformed
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = reformed
+					}
+				}
+				AND = {
+					dominant_religion = orthodox
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = orthodox
+					}
+				}
+				AND = {
+					dominant_religion = coptic
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = coptic
+					}
+				}
+				AND = { #muslim
+					dominant_religion = sunni
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = sunni
+					}
+				}
+				AND = {
+					dominant_religion = shiite
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = shiite
+					}
+				}
+				AND = {
+					dominant_religion = ibadi
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = ibadi
+					}
+				}
+				AND = { #jewish
+					dominant_religion = jewish
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = jewish
+					}
+				}
+				AND = { #zoroastrian
+					dominant_religion = zoroastrian
+					any_known_country = {
+						is_defender_of_faith = yes
+						dominant_religion = zoroastrian
+					}
+				}
+			}
+			#Not a Pope
+			OR = {
+				NOT = { papacy_active = yes }
+				NOT = { TAG = PAP }
+			}
+			#Opinion check may be
+			NOT = {
+				reverse_has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+			ROOT = {
+				#attitude
+				OR = {
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_neutral
+					}
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_rivalry
+					}
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_threatened
+					}
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_domineering
+					}
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_neutral
+					}
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_neutral
+					}
+					ai_attitude = {
+						who = PREV
+						attitude = attitude_neutral
+					}
+				}
+				#Same continent as current war. 
+				all_war_enemy_countries = {
+					same_continent = PREV
+				}
+				#has CB
+				NOT = { truce_with = PREV }
+				OR = {
+					has_casus_belli = {
+						type = cb_chinese_unification
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_core
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_nationalist
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_colonial
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_imperial
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_excommunication
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_imperial_ban
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_maya_expansion
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_flower_wars
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_sword_of_islam
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_external_perfectionism
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_heretic
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_crusade
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_horde_vs_civ_ai
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_tribal_feud_ai
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_liberate_elector
+						target = PREV
+					}
+					has_casus_belli = {
+						type = cb_conquest
+						target = PREV
+					}
+				}
+			}
+			#alliance strength
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					which = alliance_army_strength
+					value = 0
+				}
+				#country strength
+				OR = {
+					AND = {
+						army_strength = { who = ROOT value = 0.16 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.24 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.28 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.3 }
+												OR = {
+													AND = {
+														army_strength = { who = ROOT value = 0.31 }
+														variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 31 } }
+													}
+													variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 30 } }
+												}
+											}
+											AND = {
+												army_strength = { who = ROOT value = 0.29 }
+												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 29 } }
+											}
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 28 } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.26 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.27 }
+												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 27 } }
+											}
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 26 } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.25 }
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 25 } }
+									}
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 24 } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.2 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.22 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.23 }
+												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 23 } }
+											}
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 22 } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.21 }
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 21 } }
+									}
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 20 } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.18 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.19 }
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 19 } }
+									}
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 18 } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.17 }
+								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 17 } }
+							}
+							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 16 } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.08 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.12 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.14 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.15 }
+												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 15 } }
+											}
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 14 } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.13 }
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 13 } }
+									}
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 12 } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.1 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.11 }
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 11 } }
+									}
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 10 } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.09 }
+								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 9 } }
+							}
+							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 8 } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.04 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.06 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.07 }
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 7 } }
+									}
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 6 } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.05 }
+								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 5 } }
+							}
+							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 4 } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.02 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.03 }
+								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 3 } }
+							}
+							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 2 } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.01 }
+						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 1 } }
+					}
+					variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 0 } }
+				}
+				#subject strength
+				OR = {
+					NOT = { num_of_subjects = 1 }
+					all_subject_country = {
+						OR = {
+							NOT = { is_subject_other_than_tributary_trigger = yes }
+							AND = {
+								army_strength = { who = ROOT value = 0.16 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.24 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.28 }
+												OR = {
+													AND = {
+														army_strength = { who = ROOT value = 0.3 }
+														OR = {
+															AND = {
+																army_strength = { who = ROOT value = 0.31 }
+																PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 31 } } }
+															}
+															PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 30 } } }
+														}
+													}
+													AND = {
+														army_strength = { who = ROOT value = 0.29 }
+														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 29 } } }
+													}
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 28 } } }
+												}
+											}
+											AND = {
+												army_strength = { who = ROOT value = 0.26 }
+												OR = {
+													AND = {
+														army_strength = { who = ROOT value = 0.27 }
+														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 27 } } }
+													}
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 26 } } }
+												}
+											}
+											AND = {
+												army_strength = { who = ROOT value = 0.25 }
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 25 } } }
+											}
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 24 } } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.2 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.22 }
+												OR = {
+													AND = {
+														army_strength = { who = ROOT value = 0.23 }
+														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 23 } } }
+													}
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 22 } } }
+												}
+											}
+											AND = {
+												army_strength = { who = ROOT value = 0.21 }
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 21 } } }
+											}
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 20 } } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.18 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.19 }
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 19 } } }
+											}
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 18 } } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.17 }
+										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 17 } } }
+									}
+									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 16 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.08 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.12 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.14 }
+												OR = {
+													AND = {
+														army_strength = { who = ROOT value = 0.15 }
+														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 15 } } }
+													}
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 14 } } }
+												}
+											}
+											AND = {
+												army_strength = { who = ROOT value = 0.13 }
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 13 } } }
+											}
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 12 } } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.1 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.11 }
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 11 } } }
+											}
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 10 } } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.09 }
+										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 9 } } }
+									}
+									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 8 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.04 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.06 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.07 }
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 7 } } }
+											}
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 6 } } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.05 }
+										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 5 } } }
+									}
+									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 4 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.02 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.03 }
+										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 3 } } }
+									}
+									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 2 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.01 }
+								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 1 } } }
+							}
+							PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 0 } } }
+						}
+					}
+				}
+				NOT = {
+					check_variable = {
+						which = alliance_army_strength
+						value = 31
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "=========[This.GetName] DECLARES WAR==========="
+		random_known_country = {
+			limit = {
+				#Small size
+				NOT = { num_of_cities = 10 }
+				NOT = { total_development = 100 }
+				#no allies
+				NOT = { num_of_allies = 1 }
+				#independent/not a tributary
+				NOT = { is_subject = yes }
+				#no guarantee
+				any_known_country = { has_guaranteed = PREV }
+				#no trade league
+				NOT = { is_in_trade_league = yes }
+				#no federation
+				NOT = { federation_size = 2 }
+				#HRE check
+				OR = {
+					NOT = { hre_size = 2 }
+					NOT = { is_part_of_hre = yes }
+				}
+				#Defender of the Faith check
+				NOT = {
+					AND = { #christian
+						dominant_religion = catholic
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = catholic
+						}
+					}
+					AND = {
+						dominant_religion = anglican
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = anglican
+						}
+					}
+					AND = {
+						dominant_religion = hussite
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = hussite
+						}
+					}
+					AND = {
+						dominant_religion = protestant
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = protestant
+						}
+					}
+					AND = {
+						dominant_religion = reformed
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = reformed
+						}
+					}
+					AND = {
+						dominant_religion = orthodox
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = orthodox
+						}
+					}
+					AND = {
+						dominant_religion = coptic
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = coptic
+						}
+					}
+					AND = { #muslim
+						dominant_religion = sunni
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = sunni
+						}
+					}
+					AND = {
+						dominant_religion = shiite
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = shiite
+						}
+					}
+					AND = {
+						dominant_religion = ibadi
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = ibadi
+						}
+					}
+					AND = { #jewish
+						dominant_religion = jewish
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = jewish
+						}
+					}
+					AND = { #zoroastrian
+						dominant_religion = zoroastrian
+						any_known_country = {
+							is_defender_of_faith = yes
+							dominant_religion = zoroastrian
+						}
+					}
+				}
+				#Not a Pope
+				OR = {
+					NOT = { papacy_active = yes }
+					NOT = { TAG = PAP }
+				}
+				#Opinion check may be
+				NOT = {
+					reverse_has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				ROOT = {
+					#attitude
+					OR = {
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_neutral
+						}
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_rivalry
+						}
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_hostile
+						}
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_threatened
+						}
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_outraged
+						}
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_domineering
+						}
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_neutral
+						}
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_neutral
+						}
+						ai_attitude = {
+							who = PREV
+							attitude = attitude_neutral
+						}
+					}
+					#Same continent as current war. 
+					all_war_enemy_countries = {
+						same_continent = PREV
+					}
+					#has CB
+					NOT = { truce_with = PREV }
+					OR = {
+						has_casus_belli = {
+							type = cb_chinese_unification
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_core
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_nationalist
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_colonial
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_imperial
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_excommunication
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_imperial_ban
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_maya_expansion
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_flower_wars
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_sword_of_islam
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_external_perfectionism
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_heretic
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_crusade
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_horde_vs_civ_ai
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_tribal_feud_ai
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_liberate_elector
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_conquest
+							target = PREV
+						}
+					}
+				}
+				#alliance strength
+				variable_arithmetic_trigger = {
+					export_to_variable = {
+						which = alliance_army_strength
+						value = 0
+					}
+					#country strength
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.16 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.24 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.28 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.3 }
+													OR = {
+														AND = {
+															army_strength = { who = ROOT value = 0.31 }
+															variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 31 } }
+														}
+														variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 30 } }
+													}
+												}
+												AND = {
+													army_strength = { who = ROOT value = 0.29 }
+													variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 29 } }
+												}
+												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 28 } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.26 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.27 }
+													variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 27 } }
+												}
+												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 26 } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.25 }
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 25 } }
+										}
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 24 } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.2 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.22 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.23 }
+													variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 23 } }
+												}
+												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 22 } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.21 }
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 21 } }
+										}
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 20 } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.18 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.19 }
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 19 } }
+										}
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 18 } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.17 }
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 17 } }
+								}
+								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 16 } }
+							}
+						}
+						AND = {
+							army_strength = { who = ROOT value = 0.08 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.12 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.14 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.15 }
+													variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 15 } }
+												}
+												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 14 } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.13 }
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 13 } }
+										}
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 12 } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.1 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.11 }
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 11 } }
+										}
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 10 } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.09 }
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 9 } }
+								}
+								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 8 } }
+							}
+						}
+						AND = {
+							army_strength = { who = ROOT value = 0.04 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.06 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.07 }
+											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 7 } }
+										}
+										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 6 } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.05 }
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 5 } }
+								}
+								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 4 } }
+							}
+						}
+						AND = {
+							army_strength = { who = ROOT value = 0.02 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.03 }
+									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 3 } }
+								}
+								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 2 } }
+							}
+						}
+						AND = {
+							army_strength = { who = ROOT value = 0.01 }
+							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 1 } }
+						}
+						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 0 } }
+					}
+					#subject strength
+					OR = {
+						NOT = { num_of_subjects = 1 }
+						all_subject_country = {
+							OR = {
+								NOT = { is_subject_other_than_tributary_trigger = yes }
+								AND = {
+									army_strength = { who = ROOT value = 0.16 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.24 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.28 }
+													OR = {
+														AND = {
+															army_strength = { who = ROOT value = 0.3 }
+															OR = {
+																AND = {
+																	army_strength = { who = ROOT value = 0.31 }
+																	PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 31 } } }
+																}
+																PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 30 } } }
+															}
+														}
+														AND = {
+															army_strength = { who = ROOT value = 0.29 }
+															PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 29 } } }
+														}
+														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 28 } } }
+													}
+												}
+												AND = {
+													army_strength = { who = ROOT value = 0.26 }
+													OR = {
+														AND = {
+															army_strength = { who = ROOT value = 0.27 }
+															PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 27 } } }
+														}
+														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 26 } } }
+													}
+												}
+												AND = {
+													army_strength = { who = ROOT value = 0.25 }
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 25 } } }
+												}
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 24 } } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.2 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.22 }
+													OR = {
+														AND = {
+															army_strength = { who = ROOT value = 0.23 }
+															PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 23 } } }
+														}
+														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 22 } } }
+													}
+												}
+												AND = {
+													army_strength = { who = ROOT value = 0.21 }
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 21 } } }
+												}
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 20 } } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.18 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.19 }
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 19 } } }
+												}
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 18 } } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.17 }
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 17 } } }
+										}
+										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 16 } } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.08 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.12 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.14 }
+													OR = {
+														AND = {
+															army_strength = { who = ROOT value = 0.15 }
+															PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 15 } } }
+														}
+														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 14 } } }
+													}
+												}
+												AND = {
+													army_strength = { who = ROOT value = 0.13 }
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 13 } } }
+												}
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 12 } } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.1 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.11 }
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 11 } } }
+												}
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 10 } } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.09 }
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 9 } } }
+										}
+										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 8 } } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.04 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.06 }
+											OR = {
+												AND = {
+													army_strength = { who = ROOT value = 0.07 }
+													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 7 } } }
+												}
+												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 6 } } }
+											}
+										}
+										AND = {
+											army_strength = { who = ROOT value = 0.05 }
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 5 } } }
+										}
+										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 4 } } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.02 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.03 }
+											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 3 } } }
+										}
+										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 2 } } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.01 }
+									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 1 } } }
+								}
+								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 0 } } }
+							}
+						}
+					}
+					NOT = {
+						check_variable = {
+							which = alliance_army_strength
+							value = 31
+						}
+					}
+				}
+			}
+			#declare war
+			ROOT = {
+				if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_chinese_unification
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_chinese_unification
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_core
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_core
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_nationalist
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_nationalist
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_colonial
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_colonial
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_imperial
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_imperial
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_excommunication
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_excommunication
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_imperial_ban
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_imperial_ban
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_maya_expansion
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_maya_expansion
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_flower_wars
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_flower_wars
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_sword_of_islam
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_sword_of_islam
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_external_perfectionism
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_external_perfectionism
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_heretic
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_heretic
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_crusade
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_crusade
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_horde_vs_civ_ai
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_horde_vs_civ_ai
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_tribal_feud_ai
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_tribal_feud_ai
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_liberate_elector
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_liberate_elector
+					}
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_conquest
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_conquest
+					}
+				}
+				else = {
+					log = "ERROR: NO CB FOUND"
+				}
+			}
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
