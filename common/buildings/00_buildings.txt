@@ -838,7 +838,7 @@ fort_15th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 		modifier = {
 			factor = 5
 			is_capital = yes
@@ -885,7 +885,7 @@ fort_15th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 6
+			factor = 10
 			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
@@ -934,6 +934,10 @@ fort_15th = {
 		modifier = {
 			factor = 1.25
 			FROM = { is_emperor_of_china = yes }
+		}
+		modifier = {
+			factor = 1.2
+			province_has_center_of_trade_of_level = 1
 		}
 	} 
 } 
@@ -1554,7 +1558,7 @@ fort_16th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 		modifier = {
 			factor = 5
 			is_capital = yes
@@ -1601,7 +1605,7 @@ fort_16th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 6
+			factor = 10
 			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
@@ -1647,6 +1651,14 @@ fort_16th = {
 				has_province_modifier = tropical
 			}
 		}
+		modifier = {
+			factor = 1.25
+			FROM = { is_emperor_of_china = yes }
+		}
+		modifier = {
+			factor = 1.2
+			province_has_center_of_trade_of_level = 1
+		}		
 	} 
 }
 
@@ -2648,7 +2660,7 @@ fort_17th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 		modifier = {
 			factor = 5
 			is_capital = yes
@@ -2695,7 +2707,7 @@ fort_17th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 6
+			factor = 10
 			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
@@ -2741,6 +2753,14 @@ fort_17th = {
 				has_province_modifier = tropical
 			}
 		}
+		modifier = {
+			factor = 1.25
+			FROM = { is_emperor_of_china = yes }
+		}
+		modifier = {
+			factor = 1.2
+			province_has_center_of_trade_of_level = 1
+		}		
 	} 
 }
 
@@ -3505,7 +3525,7 @@ fort_18th = {
 	influencing_fort = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 		modifier = {
 			factor = 5
 			is_capital = yes
@@ -3552,7 +3572,7 @@ fort_18th = {
 			NOT = { is_capital = yes }
 		}
 		modifier = {
-			factor = 6
+			factor = 10
 			strategic_location_for_a_fort_trigger = yes
 		}
 		modifier = {
@@ -3598,6 +3618,14 @@ fort_18th = {
 				has_province_modifier = tropical
 			}
 		}
+		modifier = {
+			factor = 1.25
+			FROM = { is_emperor_of_china = yes }
+		}
+		modifier = {
+			factor = 1.2
+			province_has_center_of_trade_of_level = 1
+		}		
 	} 
 }
 
@@ -4246,7 +4274,7 @@ ramparts = {
 		}
 	}
 	ai_will_do = {
-		factor = 4
+		factor = 5
 		modifier = {
 			factor = 1.667
 			OR = {

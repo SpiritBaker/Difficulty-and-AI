@@ -165,6 +165,38 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = ScriptedWarsEventLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = scripted_war_dec_disabled_flag
+        }
+        localisation_key = scriptedwarsDisabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = scripted_war_dec_disabled_flag }
+		}
+		localisation_key = scriptedwarsEnabled
+	}
+}
+defined_text = {
+	name = NationalFocusEventLoc
+	random = no
+	text = {
+        trigger = {
+			has_global_flag = national_focus_disabled_flag
+        }
+        localisation_key = natfocusDisabled
+	}
+	text = {
+		trigger = {
+			NOT = { has_global_flag = national_focus_disabled_flag }
+		}
+		localisation_key = natfocusEnabled
+	}
+}
+defined_text = {
 	name = ScalingDifficultyLoc
 	random = no
 	text = {

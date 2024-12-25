@@ -178,74 +178,127 @@ strategic_location_for_a_fort_trigger = {
 	OR = {
 		has_great_project = {
 			type = ambras_castle
-			tier = 1
+			tier = 0
 		}
 		has_great_project = {
 			type = malbork_castle
-			tier = 1
+			tier = 0
 		}
 		has_great_project = {
 			type = bam_citadel
-			tier = 1
+			tier = 0
 		}
 		has_great_project = {
 			type = mehrangarh_fort
-			tier = 1
+			tier = 0
 		}
 		has_great_project = {
 			type = himeji_castle
-			tier = 1
+			tier = 0
 		}
 		has_great_project = {
 			type = ait_benhaddou
-			tier = 1
+			tier = 0
 		}
 		has_great_project = {
 			type = khami_ruins
-			tier = 1
+			tier = 0
 		}
 		has_great_project = {
 			type = kronborg
-			tier = 1
+			tier = 0
 		}
 		has_great_project = {
 			type = tower_of_london
-			tier = 1
+			tier = 0
+		}
+		has_great_project = {
+			type = cartagena_de_indias
+			tier = 0
+		}
+		has_great_project = {
+			type = chan_chan_citadel
+			tier = 0
+		}
+		has_great_project = {
+			type = fuerte_del_morro
+			tier = 0
+		}
+		has_great_project = {
+			type = malta_forts
+			tier = 0
+		}
+		has_great_project = {
+			type = tortuga_island
+			tier = 0
+		}
+		has_great_project = {
+			type = narikala_fortress
+			tier = 0
+		}
+		has_great_project = {
+			type = citadel_of_aleppo
+			tier = 0
 		}
 		AND = {
-			owner = {
+			OR = {
 				culture_group = east_slavic
+				culture_group = slavic
+				culture = roman
 			}
+			province_is_or_accepts_culture = yes
 			has_great_project = {
 				type = kremlin
-				tier = 1
+				tier = 0
 			}
 		}
 		AND = {
-			owner = {
-				culture_group = carpathian
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_country_flag = teu_can_utilize_bran_castle }
+					}
+				}
+				OR = {
+					AND = {
+						culture_group = carpathian
+						province_is_or_accepts_culture = yes
+					}
+					AND = {
+						culture = roman
+						province_is_or_accepts_culture = yes
+					}
+				}
 			}
 			has_great_project = {
 				type = bran_castle
-				tier = 1
+				tier = 0
 			}
 		}
 		AND = {
-			owner = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
 			}
 			has_great_project = {
 				type = walls_benin
-				tier = 1
+				tier = 0
 			}
 		}
 		AND = {
-			owner = {
-				culture_group = east_asian
+			OR = { 
+				AND = {
+					culture_group = east_asian
+					province_is_or_accepts_culture = yes
+				}
+				owner = { is_emperor_of_china = yes }
+				custom_trigger_tooltip = {
+					tooltip = COMPLETED_SPECIAL_MISSION_THAT_UNLOCKS_GREAT_PROJECT
+					owner = { has_country_flag = hordes_unlocked_wall_of_china }
+				}
 			}
 			has_great_project = {
 				type = the_great_wall_of_china
-				tier = 1
+				tier = 0
 			}
 			OR = {
 				province_id = 2180
@@ -253,8 +306,28 @@ strategic_location_for_a_fort_trigger = {
 				province_id = 2183
 			}
 		}
-		province_id = 365
-		province_id = 2323
+		AND = {
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = roman
+				}
+				province_is_or_accepts_culture = yes
+			}
+			has_great_project = {
+				type = dutch_polders
+				tier = 0
+			}
+		}
+		
+		province_id = 365 #Sinai
+		province_id = 2323 #Random province in lower Nubia
+		
+		#Persia
+		province_id = 414 
+		province_id = 4331
 	}
 } 
 
