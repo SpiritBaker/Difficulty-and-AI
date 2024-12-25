@@ -572,10 +572,10 @@ find_weak_target = {
 				type = cb_core
 				target = PREV
 			}
-		#	has_casus_belli = {
-		#		type = cb_nationalist
-		#		target = PREV
-		#	}
+			has_casus_belli = {
+				type = cb_nationalist
+				target = PREV
+			}
 		#	has_casus_belli = {
 		#		type = cb_colonial
 		#		target = PREV
