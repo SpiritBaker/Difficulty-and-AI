@@ -132,7 +132,7 @@ country_event = {
 			#independent/not a tributary
 			NOT = { is_subject = yes }
 			#no guarantee
-			any_known_country = { has_guaranteed = PREV }
+			all_known_country = { NOT = { has_guaranteed = PREV } }
 			#no trade league
 			NOT = { is_in_trade_league = yes }
 			#no federation
@@ -241,6 +241,8 @@ country_event = {
 					value = 100
 				}
 			}
+			#not at war with us
+			NOT = { war_with = ROOT }
 			ROOT = {
 				#attitude
 				OR = {
@@ -296,26 +298,26 @@ country_event = {
 						type = cb_core
 						target = PREV
 					}
-					has_casus_belli = {
-						type = cb_nationalist
-						target = PREV
-					}
-					has_casus_belli = {
-						type = cb_colonial
-						target = PREV
-					}
+				#	has_casus_belli = {
+				#		type = cb_nationalist
+				#		target = PREV
+				#	}
+				#	has_casus_belli = {
+				#		type = cb_colonial
+				#		target = PREV
+				#	}
 					has_casus_belli = {
 						type = cb_imperial
 						target = PREV
 					}
-					has_casus_belli = {
-						type = cb_excommunication
-						target = PREV
-					}
-					has_casus_belli = {
-						type = cb_imperial_ban
-						target = PREV
-					}
+				#	has_casus_belli = {
+				#		type = cb_excommunication
+				#		target = PREV
+				#	}
+				#	has_casus_belli = {
+				#		type = cb_imperial_ban
+				#		target = PREV
+				#	}
 					has_casus_belli = {
 						type = cb_maya_expansion
 						target = PREV
@@ -344,18 +346,18 @@ country_event = {
 						type = cb_horde_vs_civ_ai
 						target = PREV
 					}
-					has_casus_belli = {
-						type = cb_tribal_feud_ai
-						target = PREV
-					}
+				#	has_casus_belli = {
+				#		type = cb_tribal_feud_ai
+				#		target = PREV
+				#	}
 					has_casus_belli = {
 						type = cb_liberate_elector
 						target = PREV
 					}
-					has_casus_belli = {
-						type = cb_conquest
-						target = PREV
-					}
+				#	has_casus_belli = {
+				#		type = cb_conquest
+				#		target = PREV
+				#	}
 				}
 			}
 			#alliance strength
@@ -697,7 +699,6 @@ country_event = {
 	}
 
 	immediate = {
-		log = "=========[This.GetName] DECLARES WAR==========="
 		random_known_country = {
 			limit = {
 				#Small size
@@ -708,7 +709,7 @@ country_event = {
 				#independent/not a tributary
 				NOT = { is_subject = yes }
 				#no guarantee
-				any_known_country = { has_guaranteed = PREV }
+				all_known_country = { NOT = { has_guaranteed = PREV } }
 				#no trade league
 				NOT = { is_in_trade_league = yes }
 				#no federation
@@ -817,6 +818,8 @@ country_event = {
 						value = 100
 					}
 				}
+				#not at war with us
+				NOT = { war_with = ROOT }
 				ROOT = {
 					#attitude
 					OR = {
@@ -872,26 +875,26 @@ country_event = {
 							type = cb_core
 							target = PREV
 						}
-						has_casus_belli = {
-							type = cb_nationalist
-							target = PREV
-						}
-						has_casus_belli = {
-							type = cb_colonial
-							target = PREV
-						}
+					#	has_casus_belli = {
+					#		type = cb_nationalist
+					#		target = PREV
+					#	}
+					#	has_casus_belli = {
+					#		type = cb_colonial
+					#		target = PREV
+					#	}
 						has_casus_belli = {
 							type = cb_imperial
 							target = PREV
 						}
-						has_casus_belli = {
-							type = cb_excommunication
-							target = PREV
-						}
-						has_casus_belli = {
-							type = cb_imperial_ban
-							target = PREV
-						}
+					#	has_casus_belli = {
+					#		type = cb_excommunication
+					#		target = PREV
+					#	}
+					#	has_casus_belli = {
+					#		type = cb_imperial_ban
+					#		target = PREV
+					#	}
 						has_casus_belli = {
 							type = cb_maya_expansion
 							target = PREV
@@ -920,18 +923,18 @@ country_event = {
 							type = cb_horde_vs_civ_ai
 							target = PREV
 						}
-						has_casus_belli = {
-							type = cb_tribal_feud_ai
-							target = PREV
-						}
+					#	has_casus_belli = {
+					#		type = cb_tribal_feud_ai
+					#		target = PREV
+					#	}
 						has_casus_belli = {
 							type = cb_liberate_elector
 							target = PREV
 						}
-						has_casus_belli = {
-							type = cb_conquest
-							target = PREV
-						}
+					#	has_casus_belli = {
+					#		type = cb_conquest
+					#		target = PREV
+					#	}
 					}
 				}
 				#alliance strength
@@ -1271,6 +1274,7 @@ country_event = {
 				}
 			}
 			#declare war
+			log = "=========[Root.GetName] DECLARES WAR ON [This.GetName]==========="
 			ROOT = {
 				if = {
 					limit = {
@@ -1283,6 +1287,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_chinese_unification
 					}
+					log = "cb_chinese_unification"
 				}
 				else_if = {
 					limit = {
@@ -1291,10 +1296,8 @@ country_event = {
 							target = PREV
 						}
 					}
-					declare_war_with_cb = {
-						who = PREV
-						casus_belli = cb_core
-					}
+					declare_war_with_cb_core = { who = PREV }
+					log = "cb_core"
 				}
 				else_if = {
 					limit = {
@@ -1302,11 +1305,10 @@ country_event = {
 							type = cb_nationalist
 							target = PREV
 						}
+						always = no
 					}
-					declare_war_with_cb = {
-						who = PREV
-						casus_belli = cb_nationalist
-					}
+					#declare_war_with_cb_nationalist = { who = PREV }
+					log = "cb_nationalist"
 				}
 				else_if = {
 					limit = {
@@ -1314,11 +1316,10 @@ country_event = {
 							type = cb_colonial
 							target = PREV
 						}
+						always = no
 					}
-					declare_war_with_cb = {
-						who = PREV
-						casus_belli = cb_colonial
-					}
+					#declare_war_with_cb_colonial = { who = PREV }
+					log = "cb_colonial"
 				}
 				else_if = {
 					limit = {
@@ -1331,6 +1332,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_imperial
 					}
+					log = "cb_imperial"
 				}
 				else_if = {
 					limit = {
@@ -1338,11 +1340,10 @@ country_event = {
 							type = cb_excommunication
 							target = PREV
 						}
+						always = no
 					}
-					declare_war_with_cb = {
-						who = PREV
-						casus_belli = cb_excommunication
-					}
+					#declare_war_with_cb_excommunication = { who = PREV }
+					log = "cb_excommunication"
 				}
 				else_if = {
 					limit = {
@@ -1350,11 +1351,10 @@ country_event = {
 							type = cb_imperial_ban
 							target = PREV
 						}
+						always = no
 					}
-					declare_war_with_cb = {
-						who = PREV
-						casus_belli = cb_imperial_ban
-					}
+					#declare_war_with_cb_imperial_ban = { who = PREV }
+					log = "cb_imperial_ban"
 				}
 				else_if = {
 					limit = {
@@ -1367,6 +1367,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_maya_expansion
 					}
+					log = "cb_maya_expansion"
 				}
 				else_if = {
 					limit = {
@@ -1379,6 +1380,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_flower_wars
 					}
+					log = "cb_flower_wars"
 				}
 				else_if = {
 					limit = {
@@ -1391,6 +1393,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_sword_of_islam
 					}
+					log = "cb_sword_of_islam"
 				}
 				else_if = {
 					limit = {
@@ -1403,6 +1406,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_external_perfectionism
 					}
+					log = "cb_external_perfectionism"
 				}
 				else_if = {
 					limit = {
@@ -1415,6 +1419,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_heretic
 					}
+					log = "cb_heretic"
 				}
 				else_if = {
 					limit = {
@@ -1427,6 +1432,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_crusade
 					}
+					log = "cb_crusade"
 				}
 				else_if = {
 					limit = {
@@ -1439,6 +1445,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_horde_vs_civ_ai
 					}
+					log = "cb_horde_vs_civ_ai"
 				}
 				else_if = {
 					limit = {
@@ -1446,11 +1453,10 @@ country_event = {
 							type = cb_tribal_feud_ai
 							target = PREV
 						}
+						always = no
 					}
-					declare_war_with_cb = {
-						who = PREV
-						casus_belli = cb_tribal_feud_ai
-					}
+					#declare_war_with_cb_tribal_feud_ai = { who = PREV }
+					log = "cb_tribal_feud_ai"
 				}
 				else_if = {
 					limit = {
@@ -1463,6 +1469,7 @@ country_event = {
 						who = PREV
 						casus_belli = cb_liberate_elector
 					}
+					log = "cb_liberate_elector"
 				}
 				else_if = {
 					limit = {
@@ -1470,11 +1477,10 @@ country_event = {
 							type = cb_conquest
 							target = PREV
 						}
+						always = no
 					}
-					declare_war_with_cb = {
-						who = PREV
-						casus_belli = cb_conquest
-					}
+					#declare_war_with_cb_conquest = { who = PREV }
+					log = "cb_conquest"
 				}
 				else = {
 					log = "ERROR: NO CB FOUND"

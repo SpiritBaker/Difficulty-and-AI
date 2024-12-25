@@ -35,6 +35,11 @@ on_startup = {
 	on_startup_dlc_cleanup_effect = yes
 	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
 	if = {
+		limit = { NOT = { has_global_flag = province_id_set } }
+		set_province_id = yes
+		set_global_flag = province_id_set
+	}
+	if = {
 		limit = {
 			check_variable = {
 				which = admClicks
