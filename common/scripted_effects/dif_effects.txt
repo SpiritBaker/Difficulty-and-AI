@@ -24877,6 +24877,234 @@ declare_war_with_cb_colonial = {
     }
 }
 
+declare_war_with_cb_excommunication = {
+    $who$ = {
+        set_variable = {
+            which = cb_excommunication_province
+            value = 0
+        }
+        every_owned_province = {
+            limit = {
+				OR = {
+					is_core = ROOT
+					is_claim = ROOT
+					any_neighbor_province = {
+						owned_by = ROOT
+					}
+				}
+			}
+            export_to_variable = {
+                which = cb_excommunication_province
+                value = development
+            }
+            if = {
+                limit = { is_neighbor_of = ROOT }
+                multiply_variable = {
+                    which = cb_excommunication_province
+                    value = 2
+                }
+            }
+            if = {
+                limit = { fort_level = 1 }
+                multiply_variable = {
+                    which = cb_excommunication_province
+                    value = 0.5
+                }
+            }
+            if = {
+                limit = {
+                    PREV = {
+                        NOT = {
+                            check_variable = {
+                                which = cb_excommunication_province
+                                which = PREV
+                            }
+                        }
+                    }
+                }
+                PREV = {
+                    set_variable = {
+                        which = cb_excommunication_province
+                        which = PREV
+                    }
+                }
+                save_event_target_as = cb_excommunication_province
+            }
+        }
+    }
+    declare_war_with_target = {
+        who = $who$
+        casus_belli = cb_excommunication
+        target_province = cb_excommunication_province
+    }
+}
+
+declare_war_with_cb_imperial_ban = {
+    $who$ = {
+        set_variable = {
+            which = cb_imperial_ban_province
+            value = 0
+        }
+        every_owned_province = {
+            limit = { is_part_of_hre = yes }
+            export_to_variable = {
+                which = cb_imperial_ban_province
+                value = development
+            }
+            if = {
+                limit = { is_neighbor_of = ROOT }
+                multiply_variable = {
+                    which = cb_imperial_ban_province
+                    value = 2
+                }
+            }
+            if = {
+                limit = { fort_level = 1 }
+                multiply_variable = {
+                    which = cb_imperial_ban_province
+                    value = 0.5
+                }
+            }
+            if = {
+                limit = {
+                    PREV = {
+                        NOT = {
+                            check_variable = {
+                                which = cb_imperial_ban_province
+                                which = PREV
+                            }
+                        }
+                    }
+                }
+                PREV = {
+                    set_variable = {
+                        which = cb_imperial_ban_province
+                        which = PREV
+                    }
+                }
+                save_event_target_as = cb_imperial_ban_province
+            }
+        }
+    }
+    declare_war_with_target = {
+        who = $who$
+        casus_belli = cb_imperial_ban
+        target_province = cb_imperial_ban_province
+    }
+}
+
+declare_war_with_cb_tribal_feud_ai = {
+    $who$ = {
+        set_variable = {
+            which = cb_tribal_feud_ai_province
+            value = 0
+        }
+        every_owned_province = {
+            export_to_variable = {
+                which = cb_tribal_feud_ai_province
+                value = development
+            }
+            if = {
+                limit = { is_neighbor_of = ROOT }
+                multiply_variable = {
+                    which = cb_tribal_feud_ai_province
+                    value = 2
+                }
+            }
+            if = {
+                limit = { fort_level = 1 }
+                multiply_variable = {
+                    which = cb_tribal_feud_ai_province
+                    value = 0.5
+                }
+            }
+            if = {
+                limit = {
+                    PREV = {
+                        NOT = {
+                            check_variable = {
+                                which = cb_tribal_feud_ai_province
+                                which = PREV
+                            }
+                        }
+                    }
+                }
+                PREV = {
+                    set_variable = {
+                        which = cb_tribal_feud_ai_province
+                        which = PREV
+                    }
+                }
+                save_event_target_as = cb_tribal_feud_ai_province
+            }
+        }
+    }
+    declare_war_with_target = {
+        who = $who$
+        casus_belli = cb_tribal_feud_ai
+        target_province = cb_tribal_feud_ai_province
+    }
+}
+
+declare_war_with_cb_conquest = {
+    $who$ = {
+        set_variable = {
+            which = cb_conquest_province
+            value = 0
+        }
+        every_owned_province = {
+            limit = {
+				OR = {
+					is_claim = ROOT
+					is_core = ROOT
+				}
+			}
+            export_to_variable = {
+                which = cb_conquest_province
+                value = development
+            }
+            if = {
+                limit = { is_neighbor_of = ROOT }
+                multiply_variable = {
+                    which = cb_conquest_province
+                    value = 2
+                }
+            }
+            if = {
+                limit = { fort_level = 1 }
+                multiply_variable = {
+                    which = cb_conquest_province
+                    value = 0.5
+                }
+            }
+            if = {
+                limit = {
+                    PREV = {
+                        NOT = {
+                            check_variable = {
+                                which = cb_conquest_province
+                                which = PREV
+                            }
+                        }
+                    }
+                }
+                PREV = {
+                    set_variable = {
+                        which = cb_conquest_province
+                        which = PREV
+                    }
+                }
+                save_event_target_as = cb_conquest_province
+            }
+        }
+    }
+    declare_war_with_target = {
+        who = $who$
+        casus_belli = cb_conquest
+        target_province = cb_conquest_province
+    }
+}
+
 set_province_id = {
 	1 = { set_variable = { which = province_id_value value = 1 } }
 	2 = { set_variable = { which = province_id_value value = 2 } }

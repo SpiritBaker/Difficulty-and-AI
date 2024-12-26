@@ -198,9 +198,8 @@ country_event = {
 							type = cb_excommunication
 							target = PREV
 						}
-						always = no
 					}
-					#declare_war_with_cb_excommunication = { who = PREV }
+					declare_war_with_cb_excommunication = { who = PREV }
 					log = "cb_excommunication"
 				}
 				else_if = {
@@ -209,9 +208,8 @@ country_event = {
 							type = cb_imperial_ban
 							target = PREV
 						}
-						always = no
 					}
-					#declare_war_with_cb_imperial_ban = { who = PREV }
+					declare_war_with_cb_imperial_ban = { who = PREV }
 					log = "cb_imperial_ban"
 				}
 				else_if = {
@@ -311,9 +309,8 @@ country_event = {
 							type = cb_tribal_feud_ai
 							target = PREV
 						}
-						always = no
 					}
-					#declare_war_with_cb_tribal_feud_ai = { who = PREV }
+					declare_war_with_cb_tribal_feud_ai = { who = PREV }
 					log = "cb_tribal_feud_ai"
 				}
 				else_if = {
@@ -335,9 +332,8 @@ country_event = {
 							type = cb_conquest
 							target = PREV
 						}
-						always = no
 					}
-					#declare_war_with_cb_conquest = { who = PREV }
+					declare_war_with_cb_conquest = { who = PREV }
 					log = "cb_conquest"
 				}
 				else = {

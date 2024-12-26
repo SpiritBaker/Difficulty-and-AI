@@ -667,14 +667,14 @@ find_weak_target = {
 				type = cb_imperial
 				target = PREV
 			}
-		#	has_casus_belli = {
-		#		type = cb_excommunication
-		#		target = PREV
-		#	}
-		#	has_casus_belli = {
-		#		type = cb_imperial_ban
-		#		target = PREV
-		#	}
+			has_casus_belli = {
+				type = cb_excommunication
+				target = PREV
+			}
+			has_casus_belli = {
+				type = cb_imperial_ban
+				target = PREV
+			}
 			has_casus_belli = {
 				type = cb_maya_expansion
 				target = PREV
@@ -703,18 +703,18 @@ find_weak_target = {
 				type = cb_horde_vs_civ_ai
 				target = PREV
 			}
-		#	has_casus_belli = {
-		#		type = cb_tribal_feud_ai
-		#		target = PREV
-		#	}
+			has_casus_belli = {
+				type = cb_tribal_feud_ai
+				target = PREV
+			}
 			has_casus_belli = {
 				type = cb_liberate_elector
 				target = PREV
 			}
-		#	has_casus_belli = {
-		#		type = cb_conquest
-		#		target = PREV
-		#	}
+			has_casus_belli = {
+				type = cb_conquest
+				target = PREV
+			}
 		}
 	}
 	#alliance strength
