@@ -1,0 +1,349 @@
+namespace = multiple_wars
+
+country_event = {
+	# attack
+	id = multiple_wars.1
+	title = multiple_wars.1.t
+	desc = multiple_wars.1.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		is_at_war = yes
+		is_free_or_tributary_trigger = yes
+		
+		#Not low on manpower
+		manpower_percentage = 0.5
+		
+		#Max 5 loans
+		NOT = { num_of_loans = 6 }
+		
+		#Positive war score in current war.
+		all_war_enemy_countries = {
+			ROOT = {
+				war_score_against = {
+					who = PREV
+					value = 10
+				}
+			}
+		}
+		
+		#Current war is easy war.
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				which = enemy_army_strength
+				value = 0
+			}
+			all_war_enemy_countries = {
+				OR = {
+					AND = {
+						army_strength = { who = ROOT value = 0.08 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.12 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.14 }
+										OR = {
+											AND = {
+												army_strength = { who = ROOT value = 0.15 }
+												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 15 } } }
+											}
+											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 14 } } }
+										}
+									}
+									AND = {
+										army_strength = { who = ROOT value = 0.13 }
+										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 13 } } }
+									}
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 12 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.1 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.11 }
+										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 11 } } }
+									}
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 10 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.09 }
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 9 } } }
+							}
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 8 } } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.04 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.06 }
+								OR = {
+									AND = {
+										army_strength = { who = ROOT value = 0.07 }
+										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 7 } } }
+									}
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 6 } } }
+								}
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.05 }
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 5 } } }
+							}
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 4 } } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.02 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.03 }
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 3 } } }
+							}
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 2 } } }
+						}
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.01 }
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 1 } } }
+					}
+					ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 0 } } }
+				}
+			}
+			NOT = {
+				check_variable = {
+					which = enemy_army_strength
+					value = 15
+				}
+			}
+		}
+		
+		#find a country
+		any_known_country = {
+			find_weak_target = yes
+		}
+	}
+
+	immediate = {
+		random_known_country = {
+			limit = {
+				find_weak_target = yes
+			}
+			#declare war
+			log = "=========[Root.GetName] DECLARES WAR ON [This.GetName]==========="
+			ROOT = {
+				if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_chinese_unification
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_chinese_unification
+					}
+					log = "cb_chinese_unification"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_core
+							target = PREV
+						}
+					}
+					declare_war_with_cb_core = { who = PREV }
+					log = "cb_core"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_nationalist
+							target = PREV
+						}
+					}
+					declare_war_with_cb_nationalist = { who = PREV }
+					log = "cb_nationalist"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_colonial
+							target = PREV
+						}
+					}
+					declare_war_with_cb_colonial = { who = PREV }
+					log = "cb_colonial"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_imperial
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_imperial
+					}
+					log = "cb_imperial"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_excommunication
+							target = PREV
+						}
+					}
+					declare_war_with_cb_excommunication = { who = PREV }
+					log = "cb_excommunication"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_imperial_ban
+							target = PREV
+						}
+					}
+					declare_war_with_cb_imperial_ban = { who = PREV }
+					log = "cb_imperial_ban"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_maya_expansion
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_maya_expansion
+					}
+					log = "cb_maya_expansion"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_flower_wars
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_flower_wars
+					}
+					log = "cb_flower_wars"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_sword_of_islam
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_sword_of_islam
+					}
+					log = "cb_sword_of_islam"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_external_perfectionism
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_external_perfectionism
+					}
+					log = "cb_external_perfectionism"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_heretic
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_heretic
+					}
+					log = "cb_heretic"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_crusade
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_crusade
+					}
+					log = "cb_crusade"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_horde_vs_civ_ai
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_horde_vs_civ_ai
+					}
+					log = "cb_horde_vs_civ_ai"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_tribal_feud_ai
+							target = PREV
+						}
+					}
+					declare_war_with_cb_tribal_feud_ai = { who = PREV }
+					log = "cb_tribal_feud_ai"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_liberate_elector
+							target = PREV
+						}
+					}
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_liberate_elector
+					}
+					log = "cb_liberate_elector"
+				}
+				else_if = {
+					limit = {
+						has_casus_belli = {
+							type = cb_conquest
+							target = PREV
+						}
+					}
+					declare_war_with_cb_conquest = { who = PREV }
+					log = "cb_conquest"
+				}
+				else = {
+					log = "ERROR: NO CB FOUND"
+				}
+			}
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
