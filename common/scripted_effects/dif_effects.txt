@@ -24823,6 +24823,60 @@ declare_war_with_cb_nationalist = {
     }
 }
 
+declare_war_with_cb_colonial = {
+    $who$ = {
+        set_variable = {
+            which = cb_colonial_province
+            value = 0
+        }
+        every_owned_province = {
+            limit = { colony_claim = ROOT }
+            export_to_variable = {
+                which = cb_colonial_province
+                value = development
+            }
+            if = {
+                limit = { is_neighbor_of = ROOT }
+                multiply_variable = {
+                    which = cb_colonial_province
+                    value = 2
+                }
+            }
+            if = {
+                limit = { fort_level = 1 }
+                multiply_variable = {
+                    which = cb_colonial_province
+                    value = 0.5
+                }
+            }
+            if = {
+                limit = {
+                    PREV = {
+                        NOT = {
+                            check_variable = {
+                                which = cb_colonial_province
+                                which = PREV
+                            }
+                        }
+                    }
+                }
+                PREV = {
+                    set_variable = {
+                        which = cb_colonial_province
+                        which = PREV
+                    }
+                }
+                save_event_target_as = cb_colonial_province
+            }
+        }
+    }
+    declare_war_with_target = {
+        who = $who$
+        casus_belli = cb_colonial
+        target_province = cb_colonial_province
+    }
+}
+
 set_province_id = {
 	1 = { set_variable = { which = province_id_value value = 1 } }
 	2 = { set_variable = { which = province_id_value value = 2 } }

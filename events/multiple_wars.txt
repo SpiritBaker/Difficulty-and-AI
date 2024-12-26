@@ -175,9 +175,8 @@ country_event = {
 							type = cb_colonial
 							target = PREV
 						}
-						always = no
 					}
-					#declare_war_with_cb_colonial = { who = PREV }
+					declare_war_with_cb_colonial = { who = PREV }
 					log = "cb_colonial"
 				}
 				else_if = {
