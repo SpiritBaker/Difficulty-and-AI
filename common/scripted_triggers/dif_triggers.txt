@@ -246,7 +246,10 @@ strategic_location_for_a_fort_trigger = {
 				culture_group = slavic
 				culture = roman
 			}
-			province_is_or_accepts_culture = yes
+			OR = {
+				has_owner_culture = yes
+				has_owner_accepted_culture = yes
+			}
 			has_great_project = {
 				type = kremlin
 				tier = 0
@@ -262,11 +265,17 @@ strategic_location_for_a_fort_trigger = {
 				OR = {
 					AND = {
 						culture_group = carpathian
-						province_is_or_accepts_culture = yes
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
 					}
 					AND = {
 						culture = roman
-						province_is_or_accepts_culture = yes
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
 					}
 				}
 			}
@@ -288,7 +297,10 @@ strategic_location_for_a_fort_trigger = {
 			OR = { 
 				AND = {
 					culture_group = east_asian
-					province_is_or_accepts_culture = yes
+						OR = {
+							has_owner_culture = yes
+							has_owner_accepted_culture = yes
+						}
 				}
 				owner = { is_emperor_of_china = yes }
 				custom_trigger_tooltip = {
@@ -314,7 +326,10 @@ strategic_location_for_a_fort_trigger = {
 					culture = frisian
 					culture = roman
 				}
-				province_is_or_accepts_culture = yes
+			}
+			OR = {
+				has_owner_culture = yes
+				has_owner_accepted_culture = yes
 			}
 			has_great_project = {
 				type = dutch_polders

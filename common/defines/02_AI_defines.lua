@@ -44,7 +44,7 @@ NDefines.NAI.AI_FORT_PER_DEV_RATIO = 65 -- How much development the AI wants per
 --NDefines.NAI.FORT_NEXT_TO_FORT_MULT = 0.75 -- 
 --NDefines.NAI.FORT_MAINTENANCE_CHEAT = 0 -- Set to 1 to enable AI fort maintenance cheating. Was once active in vanilla, but no longer
 NDefines.NAI.FORT_MOTHBALL_SAFETY_DISTANCE = 2 -- How far from the border AI will mothball forts
---NDefines.NAI.FORT_CAPITAL_DESIRE = 0.5 -- How much does the AI want a fort in its capital? (adds to regular reasons)
+NDefines.NAI.FORT_CAPITAL_DESIRE = 0.75 -- How much does the AI want a fort in its capital? (adds to regular reasons)
 
 --State
 NDefines.NAI.REVOLUTION_EMBRACE_MAX_ABSOLUTISM = 35 -- AI will not consider embracing the revolution (unless a disaster happens) if their absolutism if over this value

@@ -66,7 +66,6 @@ Gameplay and Balance changes:
 - Small touch to Muslim faith, reworking old convert decisions and enabling it for AI.
 - Increasing duration of Muslim Schools bonuses by 10 years.
 - Buff to Marines, marines will have -10% shock damage received.
-- Changing naval doctrines a bit.
 - Small changes to trade regions, Bordeaux is an end node, White sea flows into Novgorod.
 - Nerf to trade propagation, from 20% to 10%. It makes Inland trade nodes much more viable.
 - Naval attrition is reduced to 5%, as it’s currently bugged and ticks 2 times per month.

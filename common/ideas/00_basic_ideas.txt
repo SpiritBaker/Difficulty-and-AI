@@ -484,6 +484,7 @@ religious_ideas = {
 		modifier = { 
 			factor = 0.75 
 			NOT = { monthly_adm = 8 }
+			NOT = { government = theocracy }
 		}
 		modifier = {
 			factor = 0
@@ -492,6 +493,7 @@ religious_ideas = {
 		modifier = {
 			factor = 0.75
 			NOT = { has_border_with_religious_enemy = yes }
+			NOT = { government = theocracy }
 		}
 		modifier = {
 			factor = 0.75
@@ -500,10 +502,12 @@ religious_ideas = {
 		modifier = {
 			factor = 0.25
 			religious_unity = 1
+			NOT = { government = theocracy }
 		}
 		modifier = {
 			factor = 0.75
 			religious_unity = 0.85
+			NOT = { government = theocracy }
 		}
 		modifier = {
 			factor = 1.1
@@ -543,7 +547,7 @@ religious_ideas = {
 			tag = PAP
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			government = theocracy
 		}
 		modifier = {
