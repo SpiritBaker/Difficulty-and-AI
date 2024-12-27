@@ -800,6 +800,20 @@ find_weak_target = {
 		#country strength
 		OR = {
 			AND = {
+				army_strength = { who = ROOT value = 0.32 }
+				OR = {
+					AND = {
+						army_strength = { who = ROOT value = 0.34 }
+						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 34 } }
+					}
+					AND = {
+						army_strength = { who = ROOT value = 0.33 }
+						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 33 } }
+					}
+					variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 32 } }
+				}
+			}
+			AND = {
 				army_strength = { who = ROOT value = 0.16 }
 				OR = {
 					AND = {
@@ -962,6 +976,20 @@ find_weak_target = {
 				OR = {
 					NOT = { is_subject_other_than_tributary_trigger = yes }
 					AND = {
+						army_strength = { who = ROOT value = 0.32 }
+						OR = {
+							AND = {
+								army_strength = { who = ROOT value = 0.34 }
+								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 34 } } }
+							}
+							AND = {
+								army_strength = { who = ROOT value = 0.33 }
+								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 33 } } }
+							}
+							PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 32 } } }
+						}
+					}
+					AND = {
 						army_strength = { who = ROOT value = 0.16 }
 						OR = {
 							AND = {
@@ -1122,7 +1150,7 @@ find_weak_target = {
 		NOT = {
 			check_variable = {
 				which = alliance_army_strength
-				value = 31
+				value = 34
 			}
 		}
 	}

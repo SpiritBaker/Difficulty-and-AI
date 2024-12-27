@@ -14,7 +14,7 @@ country_event = {
 		is_free_or_tributary_trigger = yes
 		
 		#Not low on manpower
-		manpower_percentage = 0.5
+		manpower_percentage = 0.33
 		
 		#Max 5 loans
 		NOT = { num_of_loans = 6 }
