@@ -161,7 +161,7 @@ AI_expansion_protect_culture = {
 				}
 			}
 		}
-		log = "[This.GetName] AItask protect culture"
+		# log = "[This.GetName] AItask protect culture"
 	}
 	on_invalid = {
 	}
@@ -349,7 +349,7 @@ AI_expansion_area = {
 				}
 			}
 		}
-		log = "[This.GetName] AItask area"
+		# log = "[This.GetName] AItask area"
 	}
 	on_invalid = {
 		if = {
@@ -578,7 +578,7 @@ AI_expansion_finish_area = {
 				}
 			}
 		}
-		log = "[This.GetName] AItask finish area"
+		# log = "[This.GetName] AItask finish area"
 	}
 	on_invalid = {
 	}
@@ -762,7 +762,7 @@ AI_expansion_protect_brethren = {
 				}
 			}
 		}
-		log = "[This.GetName] AItask protect brethren"
+		# log = "[This.GetName] AItask protect brethren"
 	}
 	on_invalid = {
 	}
@@ -963,7 +963,7 @@ AI_expansion_religion = {
 					add_claim = root
 				}
 			}
-			log = "[This.GetName] AItask religion"
+			# log = "[This.GetName] AItask religion"
 		}
 	}
 	on_invalid = {
@@ -1120,7 +1120,7 @@ AI_expansion_sea_access = {
 				add_claim = root
 			}
 		}
-		log = "[This.GetName] AItask sea access"
+		# log = "[This.GetName] AItask sea access"
 	}
 	on_invalid = {
 	}
@@ -1297,7 +1297,7 @@ AI_expansion_trade_interest = {
 				}
 			}
 		}
-		log = "[This.GetName] AItask trade interest"
+		# log = "[This.GetName] AItask trade interest"
 	}
 	on_invalid = {
 		if = {
@@ -1521,7 +1521,7 @@ AI_expansion_trade_company = {
 				}
 			}
 		}
-		log = "[This.GetName] AItask trade company"
+		# log = "[This.GetName] AItask trade company"
 	}
 	on_invalid = {
 		if = {
@@ -1693,7 +1693,7 @@ AI_expansion_gold = {
 				add_claim = root
 			}
 		}
-		log = "[This.GetName] AItask gold"
+		# log = "[This.GetName] AItask gold"
 	}
 	on_invalid = {
 	}
