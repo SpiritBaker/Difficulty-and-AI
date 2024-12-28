@@ -831,9 +831,13 @@ noble_loyalty_act = {
 		modifier = {
 			factor = 0
 			NOT = { cavalry_fraction = 0.1 }
+		}
+		modifier = {
+			factor = 1.5
+			cav_nation_trigger = yes
 		}		
 		modifier = {
-			factor = 2
+			factor = 1.5
 			is_at_war = yes
 		}	
 	}
@@ -1241,6 +1245,10 @@ psychological_warfare_policy = {
 		modifier = {
 			factor = 5
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 5
+			cav_nation_trigger = yes
 		}
 	}
 }
@@ -1731,6 +1739,10 @@ the_witchcraft_act = {
 		modifier = {
 			factor = 10
 			is_in_important_war = yes
+		}
+		modifier = {
+			factor = 2
+			cav_nation_trigger = yes
 		}
 	}
 }

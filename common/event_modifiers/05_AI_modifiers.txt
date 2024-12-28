@@ -88,3 +88,5 @@ infrastructure_45 = {
 ai_mill_focus = {
 	regiment_recruit_speed = -0.01
 }
+ai_multiple_wars_debug = {
+}

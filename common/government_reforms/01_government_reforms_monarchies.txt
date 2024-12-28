@@ -34,6 +34,10 @@ feudalism_reform = {
 	}
 	ai = {
 		factor = 0.5 #generic
+		modifier = {
+			factor = 2
+			cav_nation_trigger = yes
+		}
 	}
 }
 
@@ -4891,6 +4895,10 @@ grant_military_command_reform = {
 	}
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 2
+			cav_nation_trigger = yes
+		}
 	}
 }
 

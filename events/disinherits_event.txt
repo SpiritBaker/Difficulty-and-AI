@@ -68,6 +68,6 @@ country_event = {
 		
 		log = "[This.GetName] disinherits"
 		add_prestige = -50
-		remove_heir = yes
+		remove_heir = {}
 	}
 }

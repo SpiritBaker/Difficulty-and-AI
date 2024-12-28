@@ -5,10 +5,12 @@ country_decisions = {
 		potential = {
 			has_global_flag = scaling_difficulty_moderate_flag
 		}
-
+		provinces_to_highlight = {
+			has_province_modifier = ai_multiple_wars_debug
+		}
 		allow = {
 			ai = no
-			NOT = { has_global_flag = locked_settings_flag }
+			# NOT = { has_global_flag = locked_settings_flag }
 		}
 		
 		effect = {
@@ -24,10 +26,12 @@ country_decisions = {
 		potential = {
 			has_global_flag = scaling_difficulty_hard_flag	
 		}
-
+		provinces_to_highlight = {
+			has_province_modifier = ai_multiple_wars_debug
+		}
 		allow = {
 			ai = no
-			NOT = { has_global_flag = locked_settings_flag }
+			# NOT = { has_global_flag = locked_settings_flag }
 		}
 		
 		effect = {
@@ -43,10 +47,12 @@ country_decisions = {
 		potential = {
 			has_global_flag = scaling_difficulty_nightmare_flag
 		}
-
+		provinces_to_highlight = {
+			has_province_modifier = ai_multiple_wars_debug
+		}
 		allow = {
 			ai = no
-			NOT = { has_global_flag = locked_settings_flag }
+			# NOT = { has_global_flag = locked_settings_flag }
 		}
 		
 		effect = {
@@ -63,10 +69,12 @@ country_decisions = {
 		potential = {
 			scaling_dificlty_trigger = no	
 		}
-
+		provinces_to_highlight = {
+			has_province_modifier = ai_multiple_wars_debug
+		}
 		allow = {
 			ai = no
-			NOT = { has_global_flag = locked_settings_flag }
+			# NOT = { has_global_flag = locked_settings_flag }
 		}
 		
 		effect = {

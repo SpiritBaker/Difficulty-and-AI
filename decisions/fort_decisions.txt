@@ -3,11 +3,40 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			always = no
 			ai = yes
 			primitives = no
 			is_at_war = no
 			
+			any_owned_province = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				
+				is_capital = no
+				NOT = { province_group = strait_provinces }
+				NOT = { has_province_flag = removed_fort }
+				NOT = { nationalism = 1 }
+				
+				any_neighbor_province = {
+					owned_by = ROOT
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					NOT = { has_province_flag = removed_fort }
+					NOT = { nationalism = 1 }
+				}
+			}
+		}
+		allow = {
+			ai = yes
+			primitives = no
+			is_at_war = no
 			any_owned_province = {
 				OR = {
 					has_building = fort_15th

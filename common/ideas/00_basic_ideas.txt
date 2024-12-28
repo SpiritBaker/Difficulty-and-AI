@@ -65,7 +65,7 @@ aristocracy_ideas = {
 			monthly_mil = 10
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.85
 			NOT = { monthly_mil = 8 }
 		}
 		modifier = {
@@ -520,7 +520,11 @@ religious_ideas = {
 		modifier = {
 			factor = 1.5
 			has_idea_group = defensive_ideas
-		}		
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = aristocracy_ideas
+		}	
 		modifier = {
 			factor = 1.5
 			NOT = { religious_unity = 0.5 }
@@ -1759,7 +1763,7 @@ administrative_ideas = {
 			monthly_adm = 8
 		}
 		modifier = { 
-			factor = 0.75 
+			factor = 0.9 
 			NOT = { monthly_adm = 8 }
 		}
 		modifier = {
@@ -1776,7 +1780,7 @@ administrative_ideas = {
 				tag = RUS
 				tag = TUR
 			}
-		}		
+		}	
 		modifier = {
 			factor = 0.66
 			NOT = { adm_tech = 15 }
@@ -1792,6 +1796,10 @@ administrative_ideas = {
 		modifier = {
 			factor = 1.5
 			has_idea_group = quality_ideas
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = aristocracy_ideas
 		}				
 	}
 }

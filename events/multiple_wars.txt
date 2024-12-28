@@ -728,6 +728,13 @@ country_event = {
 				else = {
 					log = "ERROR: NO CB FOUND"
 				}
+				capital_scope = {
+					add_province_modifier = {
+						name = ai_multiple_wars_debug
+						hidden = yes
+						duration = 1825
+					}
+				}
 			}
 		}
 	}
