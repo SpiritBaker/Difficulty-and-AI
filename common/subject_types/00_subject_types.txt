@@ -421,16 +421,6 @@ daimyo_vassal = {
 	modifier_overlord = {
 		modifier = daimyo_subject
 	}
-	#modifier_overlord = {
-	#	modifier = daimyo_subject
-	#}
-	
-	modifier_overlord = {
-		modifier = overlord_sword_hunt
-		trigger = {
-			has_country_modifier = subject_sword_hunt
-		}
-	}
 }
 
 appanage = {

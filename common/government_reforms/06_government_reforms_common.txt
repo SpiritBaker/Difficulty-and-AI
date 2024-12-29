@@ -1742,6 +1742,10 @@ organized_military_staff_reform = {
 	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 1.5
+			has_idea_group = quantity_ideas
+		}
 	}
 }
 
@@ -1764,6 +1768,13 @@ military_engineering_reform = {
 	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_idea_group = quality_ideas
+				has_idea_group = offensive_ideas
+			}
+		}
 	}
 }
 
@@ -1796,6 +1807,10 @@ defensive_stance_reform = {
 	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 1.5
+			has_idea_group = defensive_ideas
+		}
 	}
 }
 
@@ -1819,6 +1834,13 @@ sustained_discipline_reform = {
 	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+			}
+		}
 	}
 }
 
@@ -1912,6 +1934,10 @@ amphibious_specialization_reform = {
 			factor = 0
 			NOT = { max_sailors = 50000 }
 		}
+		modifier = {
+			factor = 0
+			always = no
+		}
 	}
 }
 
@@ -1949,6 +1975,10 @@ mercenary_leadership_reform = {
 					value = 0.05
 				}
 			}
+		}
+		modifier = {
+			factor = 0
+			always = no
 		}
 	}
 }
@@ -2018,9 +2048,11 @@ maritime_military_reform = {
 		factor = 1
 		modifier = {
 			factor = 0
-			capital_scope = {
-				is_island = no
-			}
+			naval_power_nation_trigger = no
+		}
+		modifier = {
+			factor = 2
+			naval_power_nation_trigger = yes
 		}
 	}
 }
@@ -3201,7 +3233,7 @@ expanded_black_army_reform = {
 		}
 	}
 	ai = {
-		factor = 1000
+		factor = 1
 	}
 }
 
@@ -3314,6 +3346,10 @@ professional_navy_reform = {
 	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 2
+			naval_power_nation_trigger = yes
+		}
 	}
 }
 
@@ -3664,7 +3700,7 @@ streltsy_reform = {
 	}
 	
 	ai = {
-		factor = 1000
+		factor = 1
 	}
 }
 
@@ -3974,6 +4010,10 @@ thalassocracy_reform = {
 	}
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 2
+			naval_power_nation_trigger = yes
+		}
 	}
 }
 
@@ -5330,7 +5370,7 @@ cuman_lancers_reform = {
 	ai = {
 		factor = 1
 		modifier = {
-			factor = 2
+			factor = 3
 			cav_nation_trigger = yes
 		}
 	}

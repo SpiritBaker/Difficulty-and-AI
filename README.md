@@ -34,13 +34,13 @@ Asia:
 - Decision to reform Shogunate to simulate centralized nature of Tokugawa Shogunate a bit better.
 
 Middle East:
-- New Estates for Major powers in the region. Mamluks, Janissaries, Ghulam's.
 - Tribal Governments and Ardabil are getting access to Tribe estate.
 - Reducing requirements for Unite Islam decision, turning it on for AI with  exceptions of Ottomans and Mamluks.    
 
 
 
 Buildings:
+- Regimental Camp and Conscription Center no longer give a flat amount of force limit, now it's +50%, +100% to local force limit. Meaning they give more benefit in high development provinces.
 - Ramparts and State House are no longer considered as manufactories. Both have a limit per state and no special bonus from trade goods.
 - Ramparts gives 1 fort level and 15% for defense. Defence edict was nerfed a bit to compensate.    
 - Reducing flat manpower from Soldiers Households from 750 to 600.
@@ -59,7 +59,6 @@ Gameplay and Balance changes:
 - Light tweaks to Basic Government reforms.
 - Effect of corruption was reduced to 1/5 of original game values, and AI is less willing to use debase currency.
 - Increased base supply limit by 2, AI tends to have more troops with this mod.
-- Adds leaders without upkeep from various sources.
 - Custom Ruler traits. Restricting Ruler traits distribution, rulers with high stats are less likely to get negative traits.
 - Reducing the price of Coal, getting Coal in a province should automatically delete existing outdated manufactory.
 - Fixes and tweaks to Hegemon’s. Preventing AI from claiming Eco hegemon after getting some cash in a peace deal.
@@ -69,7 +68,7 @@ Gameplay and Balance changes:
 - Small changes to trade regions, Bordeaux is an end node, White sea flows into Novgorod.
 - Nerf to trade propagation, from 20% to 10%. It makes Inland trade nodes much more viable.
 - Naval attrition is reduced to 5%, as it’s currently bugged and ticks 2 times per month.
-- Small Adjustments to Monuments.
+- Removing build cost and build time reduction from Expand infrastructure.
 - Various small exploits and bug fixes. If we know about it, it can be fixed.
 
 
@@ -82,10 +81,11 @@ Everything AI:
 - Stopping AI from debasing currency.
 - Restricting AI army movements a bit, AI should behave more defensively.
 - Improved AI building logic, AI should build manufactory in every province.
+- Adding Script that gives AI the ability to Expand infrastructure. 
 - More aggressive AI logic for new Estates, the bottom line for AI is 10% crown land.
 - Making sure that AI will take all possible Privileges that give monarch points.
-- Added AI events that disbands Mercenary Companies. ( Temporary workaround )
-- Added AI scripting that upgrades Forts and deletes redundant Forts. ( Disabled for Now )
+- Added AI events that disbands Mercenary Companies.
+- Added AI scripting that upgrades Forts and deletes redundant Forts.
 - Fix for logic behind Religious interaction. Orthodox Icons and Anglican aspects.
 - Adding ability for some AI personalities to dev push institutions. Only works if AI Auto Dev is On.
 - Increased AI budget fraction for missionary maintenance.
@@ -99,6 +99,7 @@ Everything AI:
 - AI Pope can now use the Investigate Heresy button, with 10 years cd on it.
 - AI will get less Army professionalism from hiring generals.
 - Increased Autonomy and Harsh treatment interactions are disabled for AI.
+- Random events that generate Generals with high army tradition would have lower outcomes for AI.
 - Various small AI fixes.
 
 

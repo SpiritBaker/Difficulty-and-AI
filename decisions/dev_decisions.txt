@@ -64,6 +64,10 @@ country_decisions = {
 				ruler_has_personality = scholar_personality
 				ruler_has_personality = entrepreneur_personality
 				ruler_has_personality = industrious_personality
+				ruler_has_personality = reformist_personality
+				ruler_has_personality = well_connected_personality
+				ruler_has_personality = well_advised_personality
+				ruler_has_personality = midas_touched_personality
 			}
 			
 			all_owned_province = {
@@ -83,6 +87,27 @@ country_decisions = {
 			}
 		}
 		allow = {
+			NOT = { has_global_flag = ai_dev_click_disabled_flag }
+			ai = yes
+			OR = {
+				had_country_flag = { flag = institution_flag	days = 365 }
+				NOT = { has_country_flag = institution_flag }
+			}
+			is_lacking_institutions = yes
+			is_at_war = no
+			primitives = no
+			OR = {
+				is_subject_of_type = tributary_state
+				is_subject = no
+			}
+			num_of_cities = 5
+			OR = {
+				NOT = { has_dlc = "Rights of Man" }
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = scholar_personality
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = industrious_personality
+			}
 			variable_arithmetic_trigger = {
 				export_to_variable = { variable_name = admPower 	value = trigger_value:adm_power }
 				export_to_variable = { variable_name = dipPower 	value = trigger_value:dip_power }

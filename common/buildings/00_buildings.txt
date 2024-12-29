@@ -385,6 +385,10 @@ temple = {
 			is_in_capital_area = yes
 		}
 		modifier = {
+			factor = 1.25
+			FROM = { has_government_attribute = temples_modifier }
+		}
+		modifier = {
 			factor = 0
 			building_slot_for_manufactory_trigger = yes
 		}
@@ -1914,6 +1918,10 @@ cathedral = {
 		modifier = {
 			factor = 1.1
 			is_in_capital_area = yes
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { has_government_attribute = temples_modifier }
 		}
 		modifier = {
 			factor = 0
