@@ -584,6 +584,10 @@ country_event = {
 							type = cb_imperial
 							target = PREV
 						}
+						has_casus_belli = {
+							type = cb_conquest
+							target = PREV
+						}
 					}
 					declare_war_with_cb = {
 						who = PREV

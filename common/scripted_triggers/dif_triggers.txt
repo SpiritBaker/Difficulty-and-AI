@@ -752,9 +752,15 @@ find_weak_target = {
 				type = cb_colonial
 				target = PREV
 			}
-			has_casus_belli = {
-				type = cb_imperial
-				target = PREV
+			AND = {
+				has_casus_belli = {
+					type = cb_imperial
+					target = PREV
+				}
+				has_casus_belli = {
+					type = cb_conquest
+					target = PREV
+				}
 			}
 			has_casus_belli = {
 				type = cb_excommunication
