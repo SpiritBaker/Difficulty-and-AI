@@ -68,7 +68,10 @@ Gameplay and Balance changes:
 - Small changes to trade regions, Bordeaux is an end node, White sea flows into Novgorod.
 - Nerf to trade propagation, from 20% to 10%. It makes Inland trade nodes much more viable.
 - Naval attrition is reduced to 5%, as it’s currently bugged and ticks 2 times per month.
+- Land and naval maintenance increase from technology is nearly 3 times higher in the mod. This is done for balance reasons, as AI is much better at managing its economy and it affects the game world as a whole. More income can be made from trade etc.
 - Removing build cost and build time reduction from Expand infrastructure.
+- Halving the cost of Supply Depot interaction and doubling its duration.
+- Reducing prestige hit from changing secondary religion from -50 to -25. 
 - Various small exploits and bug fixes. If we know about it, it can be fixed.
 
 
@@ -84,6 +87,7 @@ Everything AI:
 - Adding Script that gives AI the ability to Expand infrastructure. 
 - More aggressive AI logic for new Estates, the bottom line for AI is 10% crown land.
 - Making sure that AI will take all possible Privileges that give monarch points.
+- Monarch point Privileges are disabled for AI OPM's for balance reasons.  
 - Added AI events that disbands Mercenary Companies.
 - Added AI scripting that upgrades Forts and deletes redundant Forts.
 - Fix for logic behind Religious interaction. Orthodox Icons and Anglican aspects.
@@ -92,12 +96,12 @@ Everything AI:
 - Lowering early game cannons ratio for AI.
 - Lowering AI transport ship ratio.
 - AI should use guarantees less often.
+- Humiliate option in peace offer is more desirable for AI.  
 - Changed AI reasons for giving subsidies, AI will prioritize sending it to Allies in debt.
 - Increasing AI score for accepting cultures.
 - Enabling various decisions for AI.
 - Reducing bonuses for Lucky nations, mainly 25% manpower recovery was changed to 10%.
 - AI Pope can now use the Investigate Heresy button, with 10 years cd on it.
-- AI will get less Army professionalism from hiring generals.
 - Increased Autonomy and Harsh treatment interactions are disabled for AI.
 - Random events that generate Generals with high army tradition would have lower outcomes for AI.
 - Various small AI fixes.

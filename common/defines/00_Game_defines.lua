@@ -48,7 +48,7 @@ NDefines.NCountry.IDEA_TO_TECH = -0.015
 NDefines.NCountry.PS_BUY_IDEA = 380
 NDefines.NCountry.HORDE_UNITY_PER_LOOT = 0.35 --Horde unity gained per ducat looted.
 NDefines.NCountry.COUNTRY_DEVELOPMENT_SCALE = 1000 --The amount of development that causes the maximum horde unity loss from development.
-NDefines.NCountry.CORRUPTION_FROM_BANNERS = 2.5
+--NDefines.NCountry.CORRUPTION_FROM_BANNERS = 0.1
 
 --Natives
 --NDefines.NCountry.COHESION_NEIGHBOURING_COLONIZER = 1
@@ -98,9 +98,9 @@ NDefines.NEconomy.CARAVAN_FACTOR = 6.0
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1
 NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER =  10   
 --NDefines.NEconomy.TRADE_PROPAGATE_THRESHOLD  =  2
-NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.05	--% each tech increases it. 96% increase at tech 32
+NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.05	--% each tech increases it. 160% increase at tech 32
 NDefines.NEconomy.NAVAL_TECH_MAINTENANCE_IMPACT = 0.05			-- % each tech increases it.
-NDefines.NEconomy.LAND_TECH_MERC_MAINTENANCE_IMPACT = 0.06
+--NDefines.NEconomy.LAND_TECH_MERC_MAINTENANCE_IMPACT = 0.06
 
 
 --NDefines.NMilitary.HEAVY_SHIP_COST = 80				-- _MDEF_HEAVY_SHIP_COST = 10,
