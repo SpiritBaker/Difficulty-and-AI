@@ -19,6 +19,16 @@ country_event = {
 		#Max 5 loans
 		NOT = { num_of_loans = 6 }
 		
+		#not warned
+		all_known_country = {
+			NOT = {
+				reverse_has_opinion_modifier = {
+					who = ROOT
+					modifier = warned
+				}
+			}
+		}
+		
 		#Current war is easy war.
 		variable_arithmetic_trigger = {
 			export_to_variable = {
@@ -572,6 +582,10 @@ country_event = {
 					limit = {
 						has_casus_belli = {
 							type = cb_imperial
+							target = PREV
+						}
+						has_casus_belli = {
+							type = cb_conquest
 							target = PREV
 						}
 					}
