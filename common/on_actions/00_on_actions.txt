@@ -5945,11 +5945,9 @@ on_loan_repaid = {
 	on_loan_repaid_estate_privileges_effect = yes
 	if = {
 		limit = { 
-			THIS = {
-				economic_ideas = 4 
-			}
+			economic_ideas = 4 
 		}
-		THIS = { add_inflation = -0.05 }
+		add_inflation = -0.05
 	}
 	hidden_effect = {
 		change_variable = {
