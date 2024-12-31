@@ -6,31 +6,14 @@ country_event = {
 	desc = "dif_ai.EVTDESC1"
 	picture = LAND_MILITARY_eventPicture
 	
-	
+	is_triggered_only = yes
 	trigger = {
-		NOT = { has_country_flag = merchants_reset_flag }
-		ai = yes
-		OR = {
-			tag = QNG
-			tag = MUG
-		}
 	}
-
-	#mean_time_to_happen = {
-	#	months = 1
-	#}
-	
 	option = {
-		name = "dif_ai.EVTOPTA1"
-		add_country_modifier = {
-			name = "ai_reset_merchants"
-			duration = 30
-		}
-		set_country_flag = merchants_reset_flag
 	}
 }
 
-country_event = { # Can't find a better way to do it, set_ai_attitude is buged  
+country_event = { # Can't find a better way to do it, set_ai_attitude is bugged  
 	id = dif_ai.2
 	title = "dif_ai.EVTNAME2"
 	desc = "dif_ai.EVTDESC2"
@@ -179,7 +162,7 @@ country_event = { # Autonomy decreased
 	}
 }
 
-country_event = { # Autonomy decreased
+country_event = { # AI Horde can only raze if horde unity is low.
 	id = dif_ai.6
 	title = "dif_ai.EVTNAME5"
 	desc = "dif_ai.EVTDESC5"
@@ -255,7 +238,7 @@ country_event = { # Force change National Focus to Mil
 					hidden = yes
 				}
 			}
-			log = "[This.GetName] National Focus changed"
+			# log = "[This.GetName] National Focus changed"
 		}
 	}	
 	option = {

@@ -2337,9 +2337,9 @@ infrastructure_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.2
+		factor = 1.5
 		modifier = {
-			factor = 1.1 
+			factor = 1.25 
 			personality = ai_capitalist
 		}
 		modifier = {
@@ -2350,12 +2350,12 @@ infrastructure_ideas = {
 			factor = 1.1
 			monthly_adm = 8
 		}
-		modifier = { 
-			factor = 0.75 
-			NOT = { monthly_adm = 8 }
-		}
+		# modifier = { 
+		# 	factor = 0.75 
+		# 	NOT = { monthly_adm = 8 }
+		# }
 		modifier = {
-			factor = 1.15
+			factor = 1.25
 			OR = {
 				has_idea_group = trade_ideas
 				has_idea_group = naval_ideas
@@ -2368,7 +2368,7 @@ infrastructure_ideas = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.35
 			OR = {
 				religion = hussite
 				religion = reformed

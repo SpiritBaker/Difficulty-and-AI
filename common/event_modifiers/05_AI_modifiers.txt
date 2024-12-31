@@ -5,7 +5,7 @@ state_edict_cost = {
 	local_state_maintenance_modifier = 0.5
 }
 ai_reset_merchants = {
-	merchants = -10
+	merchants = -25
 }
 great_unifier = {
 	land_forcelimit_modifier = 0.15

@@ -59,6 +59,7 @@ dif_university_dev_cost = {
 }
 block_slave_raid_area_m = {
 	block_slave_raid = yes
+	hostile_disembark_speed = 0.25
 }
 farm_estate_manpower_m = {
 	local_manpower_modifier = 0.25

@@ -2073,7 +2073,7 @@ merc_tonkinese_army = {
 }
 
 merc_mongol_mercenaries = {
-    regiments_per_development = 0.035
+    regiments_per_development = 0.02
     cavalry_weight = 1
     #artillery_weight = 0.1
 	#cavalry_cap = 6
@@ -2358,7 +2358,7 @@ merc_novgorod_company = {
 }
 
 merc_crimean_company = {
-    regiments_per_development = 0.05
+    regiments_per_development = 0.02
     home_province = 284 # Crimea
 	cavalry_weight = 1
 	#cost_modifier = 1.2
@@ -2985,7 +2985,7 @@ merc_independent_cossack_host = {
 }
 
 merc_kazakh_company = {
-    regiments_per_development = 0.035
+    regiments_per_development = 0.02
     home_province = 478 # Argyn
 	cavalry_weight = 1
 	artillery_weight = 0
@@ -3593,7 +3593,7 @@ merc_aju_mamluk_soldiers = {
 }
 
 merc_oyo_cavalry = {
-	regiments_per_development = 0.04
+	regiments_per_development = 0.025
 	cost_modifier = 0.25
 	cavalry_weight = 1
 	home_province = 1144
@@ -3724,7 +3724,7 @@ merc_prussian_volunteer_army = {
 }
 
 merc_tatar_vanguard = {
-    regiments_per_development = 0.05
+    regiments_per_development = 0.045
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	cost_modifier = 0.25
 	cavalry_weight = 1

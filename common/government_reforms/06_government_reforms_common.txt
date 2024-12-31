@@ -2763,7 +2763,7 @@ ghazi_reform = {
 	}
 	
 	ai = {
-		factor = 1000
+		factor = 1
 	}
 }
 
@@ -3315,7 +3315,7 @@ royal_marines_reform = {
 	}
 	
 	ai = {
-		factor = 1000
+		factor = 1
 	}
 }
 

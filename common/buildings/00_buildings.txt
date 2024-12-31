@@ -960,7 +960,7 @@ coastal_defence = {
 	}
 	modifier = {
 		blockade_force_required = 0.5
-		hostile_disembark_speed = 1.0
+		hostile_disembark_speed = 0.5
 		local_defensiveness = 0.10
 	}
 	on_built = {
@@ -1680,7 +1680,7 @@ naval_battery = {
 	}
 	modifier = {
 		blockade_force_required = 1.0
-		hostile_disembark_speed = 2.0
+		hostile_disembark_speed = 1.0
 		hostile_fleet_attrition = 5
 		local_defensiveness = 0.15
 	}

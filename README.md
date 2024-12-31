@@ -70,7 +70,7 @@ Gameplay and Balance changes:
 - Naval attrition is reduced to 5%, as it’s currently bugged and ticks 2 times per month.
 - Land and naval maintenance increase from technology is nearly 3 times higher in the mod. This is done for balance reasons, as AI is much better at managing its economy and it affects the game world as a whole. More income can be made from trade etc.
 - Removing build cost and build time reduction from Expand infrastructure.
-- Halving the cost of Supply Depot interaction and doubling its duration.
+- Doubling duration of Supply Depot interaction.
 - Reducing prestige hit from changing secondary religion from -50 to -25.
 - Aggressive Expansion, Removing Province from HRE, Annex Vassal opinion penalty is capped at 100.
 - Various small exploits and bug fixes. If we know about it, it can be fixed.

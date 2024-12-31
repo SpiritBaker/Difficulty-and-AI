@@ -10,7 +10,7 @@ NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 5					-- How many percent attrition u
 
 NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 22.0 --Base chance in percent for leader to gain a trait after combat (modified by tradition gained).
 NDefines.NMilitary.SUPPLY_DEPOT_DURATION_MONTHS = 120		-- Time until supply depot is removed.
-NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 10				-- Mil power cost to build a supply depot in an area.
+--NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 10				-- Mil power cost to build a supply depot in an area.
 --NDefines.NMilitary.COMBAT_DICE_SIDE = 6 
 --NDefines.NMilitary.LEADER_MAX_PIPS = 5	--Max general/admiral pips (per skill).
 --NDefines.NMilitary.REGULAR_LEADER_POWER	= 0.8	--Used for generals & admirals (affects total pips).

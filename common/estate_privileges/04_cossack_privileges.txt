@@ -310,6 +310,7 @@ estate_cossacks_exploration_expedition = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+			NOT = { cavalry_fraction = 0.3 }
 		}
 	}
 }
@@ -360,6 +361,7 @@ estate_cossacks_cossack_self_governance = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+			NOT = { cavalry_fraction = 0.3 }
 		}
 	}
 }
@@ -524,6 +526,7 @@ estate_cossacks_recruit_cossack_generals = {
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
+			NOT = { cavalry_fraction = 0.3 }
 		}
 	}
 }

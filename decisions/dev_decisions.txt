@@ -63,11 +63,11 @@ country_decisions = {
 				ruler_has_personality = free_thinker_personality
 				ruler_has_personality = scholar_personality
 				ruler_has_personality = entrepreneur_personality
-				ruler_has_personality = industrious_personality
+				#ruler_has_personality = industrious_personality
 				ruler_has_personality = reformist_personality
 				ruler_has_personality = well_connected_personality
 				ruler_has_personality = well_advised_personality
-				ruler_has_personality = midas_touched_personality
+				#ruler_has_personality = midas_touched_personality
 			}
 			
 			all_owned_province = {
