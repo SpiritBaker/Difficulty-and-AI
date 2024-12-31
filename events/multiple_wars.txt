@@ -12,12 +12,13 @@ country_event = {
 		ai = yes
 		is_at_war = yes
 		is_free_or_tributary_trigger = yes
+		NOT = { has_global_flag = scripted_war_dec_disabled_flag }
 		
 		#Not low on manpower
-		manpower_percentage = 0.33
+		manpower_percentage = 0.25
 		
 		#Max 5 loans
-		NOT = { num_of_loans = 6 }
+		NOT = { num_of_loans = 8 }
 		
 		#not warned
 		all_known_country = {

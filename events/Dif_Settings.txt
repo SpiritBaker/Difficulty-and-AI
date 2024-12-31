@@ -39,56 +39,11 @@ country_event = {
 
 	option = { #Scaling Difficulty
 	name = "opt.dif_settings.Scaling"
-
 		country_event = { id = dif_settings.8 }
 	}
-	option = { #expansion planer
-	name = "opt.dif_settings.expansion"
-		if = {
-			limit = {
-				NOT = { has_global_flag = expansion_planer_disabled_flag }
-			}
-			set_global_flag = expansion_planer_disabled_flag
-		}
-		else_if = {
-			limit = {
-				has_global_flag = expansion_planer_disabled_flag
-			}
-			clr_global_flag = expansion_planer_disabled_flag
-		}
-		country_event = { id = dif_settings.2 }
-	}
-	option = { #dev-click
-	name = "opt.dif_settings.devclick"
-	    if = {
-			limit = {
-				has_global_flag = ai_dev_click_disabled_flag
-			}
-			clr_global_flag = ai_dev_click_disabled_flag
-		}
-		else_if = {
-			limit = {
-				NOT = { has_global_flag = ai_dev_click_disabled_flag }
-			}
-			set_global_flag = ai_dev_click_disabled_flag
-		}
-		country_event = { id = dif_settings.2 }
-	}
-	option = { #build event
-	name = "opt.dif_settings.build"
-		if = {
-			limit = {
-				NOT = { has_global_flag = build_event_disabled_flag }
-			}
-			set_global_flag = build_event_disabled_flag
-		}
-		else_if = {
-			limit = {
-				has_global_flag = build_event_disabled_flag
-			}
-			clr_global_flag = build_event_disabled_flag
-		}
-		country_event = { id = dif_settings.2 }
+	option = { #AI scripting
+	name = "opt.dif_settings.scripting"
+		country_event = { id = dif_settings.10 }
 	}
 	option = { #Native Settings
 	name = "opt.native_settings"
@@ -151,53 +106,9 @@ country_event = {
 	name = "opt.dif_settings.Scaling"
 		country_event = { id = dif_settings.8 }
 	}
-	option = { #expansion planer
-	name = "opt.dif_settings.expansion"
-		if = {
-			limit = {
-				NOT = { has_global_flag = expansion_planer_disabled_flag }
-			}
-			set_global_flag = expansion_planer_disabled_flag
-		}
-		else_if = {
-			limit = {
-				has_global_flag = expansion_planer_disabled_flag
-			}
-			clr_global_flag = expansion_planer_disabled_flag
-		}
-		country_event = { id = dif_settings.1 }
-	}
-	option = { #dev-click
-	name = "opt.dif_settings.devclick"
-		if = {
-			limit = {
-				has_global_flag = ai_dev_click_disabled_flag
-			}
-			clr_global_flag = ai_dev_click_disabled_flag
-		}
-		else_if = {
-			limit = {
-				NOT = { has_global_flag = ai_dev_click_disabled_flag }
-			}
-			set_global_flag = ai_dev_click_disabled_flag
-		}
-		country_event = { id = dif_settings.1 }
-	}
-	option = { #build event
-	name = "opt.dif_settings.build"
-		if = {
-			limit = {
-				NOT = { has_global_flag = build_event_disabled_flag }
-			}
-			set_global_flag = build_event_disabled_flag
-		}
-		else_if = {
-			limit = {
-				has_global_flag = build_event_disabled_flag
-			}
-			clr_global_flag = build_event_disabled_flag
-		}
-		country_event = { id = dif_settings.1 }
+	option = { #AI scripting
+	name = "opt.dif_settings.scripting"
+		country_event = { id = dif_settings.10 }
 	}
 	option = { #Native Settings
 	name = "opt.native_settings"
@@ -669,5 +580,207 @@ country_event = {
 	}
 	option = { #Exit
 	name = "opt.dif_settings.exit"
+	}
+}
+
+country_event = { 
+	id = dif_settings.10
+	title = "dif_settings.10.t"
+	desc = "dif_settings.10.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	trigger = {
+	}
+
+
+	option = { #expansion planer
+	name = "opt.dif_settings.expansion"
+		if = {
+			limit = {
+				NOT = { has_global_flag = expansion_planer_disabled_flag }
+			}
+			set_global_flag = expansion_planer_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = expansion_planer_disabled_flag
+			}
+			clr_global_flag = expansion_planer_disabled_flag
+		}
+		country_event = { id = dif_settings.11 }
+	}
+	option = { #dev-click
+	name = "opt.dif_settings.devclick"
+	    if = {
+			limit = {
+				has_global_flag = ai_dev_click_disabled_flag
+			}
+			clr_global_flag = ai_dev_click_disabled_flag
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = ai_dev_click_disabled_flag }
+			}
+			set_global_flag = ai_dev_click_disabled_flag
+		}
+		country_event = { id = dif_settings.11 }
+	}
+	option = { #build event
+	name = "opt.dif_settings.build"
+		if = {
+			limit = {
+				NOT = { has_global_flag = build_event_disabled_flag }
+			}
+			set_global_flag = build_event_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = build_event_disabled_flag
+			}
+			clr_global_flag = build_event_disabled_flag
+		}
+		country_event = { id = dif_settings.11 }
+	}
+	option = { #Scripted AI war dec
+	name = "opt.dif_settings.scripted_war_dec"
+		if = {
+			limit = {
+				NOT = { has_global_flag = scripted_war_dec_disabled_flag }
+			}
+			set_global_flag = scripted_war_dec_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = scripted_war_dec_disabled_flag
+			}
+			clr_global_flag = scripted_war_dec_disabled_flag
+		}
+		country_event = { id = dif_settings.11 }
+	}
+	# option = { #Scripted national focus
+	# name = "opt.dif_settings.national_focus"
+	# 	if = {
+	# 		limit = {
+	# 			NOT = { has_global_flag = national_focus_disabled_flag }
+	# 		}
+	# 		set_global_flag = national_focus_disabled_flag
+	# 	}
+	# 	else_if = {
+	# 		limit = {
+	# 			has_global_flag = national_focus_disabled_flag
+	# 		}
+	# 		clr_global_flag = national_focus_disabled_flag
+	# 	}
+	# 	country_event = { id = dif_settings.11 }
+	# }
+
+
+
+	option = { #Back
+	name = "opt.dif_settings.back"
+	country_event = { id = dif_settings.1 }
+	}
+}
+
+country_event = { 
+	id = dif_settings.11
+	title = "dif_settings.10.t"
+	desc = "dif_settings.10.d"
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	trigger = {
+	}
+
+
+	option = { #expansion planer
+	name = "opt.dif_settings.expansion"
+		if = {
+			limit = {
+				NOT = { has_global_flag = expansion_planer_disabled_flag }
+			}
+			set_global_flag = expansion_planer_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = expansion_planer_disabled_flag
+			}
+			clr_global_flag = expansion_planer_disabled_flag
+		}
+		country_event = { id = dif_settings.10 }
+	}
+	option = { #dev-click
+	name = "opt.dif_settings.devclick"
+	    if = {
+			limit = {
+				has_global_flag = ai_dev_click_disabled_flag
+			}
+			clr_global_flag = ai_dev_click_disabled_flag
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = ai_dev_click_disabled_flag }
+			}
+			set_global_flag = ai_dev_click_disabled_flag
+		}
+		country_event = { id = dif_settings.10 }
+	}
+	option = { #build event
+	name = "opt.dif_settings.build"
+		if = {
+			limit = {
+				NOT = { has_global_flag = build_event_disabled_flag }
+			}
+			set_global_flag = build_event_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = build_event_disabled_flag
+			}
+			clr_global_flag = build_event_disabled_flag
+		}
+		country_event = { id = dif_settings.10 }
+	}
+	option = { #Scripted AI war dec
+	name = "opt.dif_settings.scripted_war_dec"
+		if = {
+			limit = {
+				NOT = { has_global_flag = scripted_war_dec_disabled_flag }
+			}
+			set_global_flag = scripted_war_dec_disabled_flag
+		}
+		else_if = {
+			limit = {
+				has_global_flag = scripted_war_dec_disabled_flag
+			}
+			clr_global_flag = scripted_war_dec_disabled_flag
+		}
+		country_event = { id = dif_settings.10 }
+	}
+	# option = { #Scripted national focus
+	# name = "opt.dif_settings.national_focus"
+	# 	if = {
+	# 		limit = {
+	# 			NOT = { has_global_flag = national_focus_disabled_flag }
+	# 		}
+	# 		set_global_flag = national_focus_disabled_flag
+	# 	}
+	# 	else_if = {
+	# 		limit = {
+	# 			has_global_flag = national_focus_disabled_flag
+	# 		}
+	# 		clr_global_flag = national_focus_disabled_flag
+	# 	}
+	# 	country_event = { id = dif_settings.10 }
+	# }
+
+
+
+	option = { #Back
+	name = "opt.dif_settings.back"
+	country_event = { id = dif_settings.1 }
 	}
 }

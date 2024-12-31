@@ -17,16 +17,19 @@
  bankruptcyNumLocKey:0 "§R[This.bankruptcyNum.GetValue]§!"
   
  dif_settings.1.t:0 "Dificulty&AI Settings"
- dif_settings.1.d:0 "The AI is fundamentally bad at certain areas of the game. To compensate for that mod introduces several AI scripts.\n\n§GExpansion Planner§! - Generates Claims for AI, creating more logical routs for AI Expansion. AI will seek to Unify culture, controle Trade nodes, finish conquering states and more. It will not generate claims on allies or friendly countries.\n\n§GAutodev for AI§! - Same auto dev functionality but for AI.\n\n§GAI Building§! - Ensures that AI will continuously build buildings throughout the game. Bypassing pdx building AI weaknesses and bugs.\n\n§GNative Setting§! - Allows you to remove a selected group of natives from the game. Incases where you would want more performance or just dont like having natives in the game.\n\nTotal Army Size in the Game: §G[REB.difTotalArmySize.GetValue]§!\nTotal development in the Game: §G[REB.devTotalvar.GetValue]§!\nTotal development gained: §G[REB.devsumClicks.GetValue]§!\nFrom Auto Dev: §G[REB.autoDev.GetValue]§!"
+ dif_settings.1.d:0 "§GAI Scripting§! - The AI is fundamentally bad at certain areas of the game. To compensate for that Dif&AI adds many AI scripts to replace missing AI logic. Generally we recommend leaving them On, unless there is a noticeable issue.\n\n§GNative Setting§! - Allows you to remove a selected group of natives from the game. Incases where you would want more performance or just dont like having natives in the game.\n\nTotal Army Size in the Game: §G[REB.difTotalArmySize.GetValue]§!\nTotal development in the Game: §G[REB.devTotalvar.GetValue]§!\nTotal development gained: §G[REB.devsumClicks.GetValue]§!\nFrom Auto Dev: §G[REB.autoDev.GetValue]§!"
  opt.dif_settings.enable:0 "§GEnable Scaling Difficulty§!"
  opt.dif_settings.disable:0 "§RDisable Scaling Difficulty§!"
  opt.dif_settings.lock:0 "§RLock Settings§!"
  opt.dif_settings.exit:0 "Close"
  opt.dif_settings.back:0 "Back"
  opt.dif_settings.confirm:0 "§RConfirm§!"
+ opt.dif_settings.scripting:0 "AI Scripting"
  dif_settings.4.t:0 "Make the changes permanent"
  dif_settings.4.d:0 ""
-
+ dif_settings.10.t:0 "AI Scripting"
+ dif_settings.10.d:0 "§GExpansion Planner§! - Generates Claims for AI, creating more logical routs for AI Expansion. AI will seek to Unify culture, controle Trade nodes, finish conquering states and more. It will not generate claims on allies or friendly countries.\n\n§GAutodev for AI§! - Same auto dev functionality but for AI.\n\n§GAI Building§! - Ensures that AI will continuously build buildings throughout the game. Bypassing pdx building AI weaknesses and bugs.\n\n§GAI War Declaration§! - Gives the AI ability to declare multiple wars against weak opponents."
+ #\n\n§GAI National Focus§!
 
  opt.dif_settings.Scaling:0 "Scaling Difficulty ([This.ScalingDifficultyLoc])"
  opt.dif_settings.expansion:0 "AI Expansion Planer ([This.ExpansionPlaner])"
@@ -43,6 +46,8 @@
  opt.dif_settings.devclick:0 "Auto Dev for AI ([This.DevClickLoc])"
  opt.dif_settings.enable.dev:0 "§GEnabled by Default§! (Recommended)"
  opt.dif_settings.disable.dev:0 "§RDisable§!"
+ opt.dif_settings.scripted_war_dec:0 "AI War Declaration ([This.ScriptedWarsEventLoc])"
+ opt.dif_settings.national_focus:0 "AI National Focus ([This.NationalFocusEventLoc])"
  
  scadifModerateDisabled:0 "§YModerate§!"
  scadifModerateEnabled:0 "§GModerate§!"
@@ -56,6 +61,10 @@
  devclEnabled:0 "§GEnabled§!"
  bevDisabled:0 "§RDisabled§!"
  bevEnabled:0 "§GEnabled§!"
+ scriptedwarsDisabled:0 "§RDisabled§!"
+ scriptedwarsEnabled:0 "§GEnabled§!"
+ natfocusDisabled:0 "§RDisabled§!"
+ natfocusEnabled:0 "§GEnabled§!"
 
  scadifDisabled:0 "§RDisabled§!"
  scadifModerate:0 "§GModerate§!"
