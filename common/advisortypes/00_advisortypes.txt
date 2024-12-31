@@ -132,7 +132,7 @@ philosopher = {
 		factor = 1
 		modifier = {
 			factor = 1.5
-			administrative_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { adm_ideas = yes }
 		}
 	}
 }
@@ -271,7 +271,7 @@ natural_scientist = {
 		}
 		modifier = {
 			factor = 1.5
-			administrative_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { adm_ideas = yes }
 		}
 	}
 }
@@ -418,7 +418,7 @@ artist = {
 		}
 		modifier = {
 			factor = 1.5
-			administrative_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { adm_ideas = yes }
 		}
 	}
 }
@@ -568,7 +568,7 @@ treasurer = {
 		}
 		modifier = {
 			factor = 1.5
-			administrative_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { adm_ideas = yes }
 		}
 	}
 }
@@ -730,7 +730,7 @@ theologian = {
 		}
 		modifier = {
 			factor = 1.5
-			administrative_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { adm_ideas = yes }
 		}
 	}
 }
@@ -871,7 +871,7 @@ master_of_mint = {
 		}
 		modifier = {
 			factor = 1.5
-			administrative_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { adm_ideas = yes }
 		}
 	}
 }
@@ -1042,7 +1042,7 @@ inquisitor = {
 		}
 		modifier = {
 			factor = 1.5
-			administrative_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { adm_ideas = yes }
 		}
 	}
 }
@@ -1185,7 +1185,7 @@ statesman = {
 		}
 		modifier = {
 			factor = 1.5
-			diplomatic_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { dip_ideas = yes }
 		}
 	}
 }
@@ -1297,7 +1297,7 @@ naval_reformer = {
 		}
 		modifier = {
 			factor = 1.5
-			diplomatic_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { dip_ideas = yes }
 		}
 	}
 }
@@ -1442,7 +1442,7 @@ trader = {
 		}
 		modifier = {
 			factor = 1.5
-			diplomatic_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { dip_ideas = yes }
 		}
 	}
 }
@@ -1524,7 +1524,7 @@ spymaster = {
 		factor = 0.8
 		modifier = {
 			factor = 1.5
-			diplomatic_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { dip_ideas = yes }
 		}
 	}
 }
@@ -1614,7 +1614,7 @@ colonial_governor = {
 		factor = 0.5
 		modifier = {
 			factor = 1.5
-			diplomatic_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { dip_ideas = yes }
 		}
 	}
 }
@@ -1726,7 +1726,7 @@ diplomat = {
 		}
 		modifier = {
 			factor = 1.5
-			diplomatic_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { dip_ideas = yes }
 		}
 	}
 }
@@ -1817,7 +1817,7 @@ navigator = {
 		}
 		modifier = {
 			factor = 1.5
-			diplomatic_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { dip_ideas = yes }
 		}
 	}
 }
@@ -1907,7 +1907,7 @@ army_reformer = {
 		}
 		modifier = {
 			factor = 2
-			military_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { mil_ideas = yes }
 		}
 	}
 }
@@ -2018,7 +2018,7 @@ army_organiser = {
 		}
 		modifier = {
 			factor = 2
-			military_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { mil_ideas = yes }
 		}
 	}
 }
@@ -2107,7 +2107,7 @@ commandant = {
 		}
 		modifier = {
 			factor = 2
-			military_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { mil_ideas = yes }
 		}
 	}
 }
@@ -2191,7 +2191,7 @@ quartermaster = {
 		}
 		modifier = {
 			factor = 2
-			military_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { mil_ideas = yes }
 		}
 	}
 }
@@ -2285,7 +2285,7 @@ recruitmaster = {
 		}
 		modifier = {
 			factor = 2
-			military_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { mil_ideas = yes }
 		}
 	}
 }
@@ -2366,7 +2366,7 @@ fortification_expert = {
 		factor = 2
 		modifier = {
 			factor = 2
-			military_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { mil_ideas = yes }
 		}
 	}
 }
@@ -2451,7 +2451,7 @@ grand_captain = {
 		}
 		modifier = {
 			factor = 2
-			military_idea_taken = yes
+			has_any_active_incomplete_idea_group_of_category = { mil_ideas = yes }
 		}
 	}
 }

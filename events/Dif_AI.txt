@@ -224,7 +224,7 @@ country_event = { # Force change National Focus to Mil
 		num_of_cities = 5
 		NOT = { has_country_modifier = ai_mill_focus }
 		NOT = { national_focus = mil }
-		military_idea_taken = yes
+		has_any_active_incomplete_idea_group_of_category = { mil_ideas = yes }
 	}
 
 	immediate = {
