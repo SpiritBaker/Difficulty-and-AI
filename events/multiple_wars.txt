@@ -294,7 +294,6 @@ country_event = {
 			which = alliance_strength_e
 			value = 0
 		}
-		log = "===[Root.GetName] DECLARES WAR ON"
 		every_known_country = {
 			limit = {
 				find_weak_target = yes
@@ -307,7 +306,7 @@ country_event = {
 		}
 		event_target:weak_target = {
 			#declare war
-			log = "[This.GetName]==="
+			log = "===[Root.GetName] DECLARES WAR ON [This.GetName]==="
 			ROOT = {
 				if = {
 					limit = {
