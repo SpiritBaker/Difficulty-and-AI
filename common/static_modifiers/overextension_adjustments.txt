@@ -1,0 +1,12 @@
+over_extension = {
+	global_foreign_trade_power = -1.0
+	stability_cost_modifier = 0.5
+	mercenary_cost = 0.5
+	diplomatic_reputation = -3         # -2 in vanilla (+50% here)
+	improve_relation_modifier = -0.5
+	global_unrest = 10                 # 5 in vanilla (+100% here)
+	bureaucrats_influence = 0.5
+	mr_guilds_influence = 0.5
+	yearly_corruption = 0.5            # not changed here. could be higher in principle, but AIs are not as good at managing corruption as human players are, so a higher value here would probably just make things easier for the player
+	ottoman_decadence_gain_modifier = 0.25
+}
