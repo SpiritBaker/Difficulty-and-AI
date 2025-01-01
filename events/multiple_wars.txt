@@ -18,7 +18,7 @@ country_event = {
 		manpower_percentage = 0.25
 		
 		#Max 5 loans
-		NOT = { num_of_loans = 8 }
+		#NOT = { num_of_loans = 6 }
 		
 		#not warned
 		all_known_country = {
