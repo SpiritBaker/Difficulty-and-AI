@@ -1,0 +1,32 @@
+take_capital_take_mandate_ai = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+
+		peace_options = {
+			po_demand_provinces
+			po_take_mandate
+		}
+
+		country_desc = CHINESE_EMPIRE_COUNTRY
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_PROVS
+	}
+	
+	war_name = CELESTIAL_EMPIRE_WAR_NAME
+}

@@ -1072,7 +1072,7 @@ on_province_religion_converted_estate_privileges_effect = {
 				has_tax_building_trigger = yes
 				OR = {
 					has_owner_religion = yes
-					has_owner_harmonized_religion = yes
+					has_owner_harmonized_religion_fixed = yes
 					has_owner_secondary_religion = yes
 				}
 			}
@@ -2150,7 +2150,7 @@ on_province_owner_change_estate_privileges_effect = {
 				has_tax_building_trigger = yes
 				OR = {
 					has_owner_religion = yes
-					has_owner_harmonized_religion = yes
+					has_owner_harmonized_religion_fixed = yes
 					has_owner_secondary_religion = yes
 				}
 			}
@@ -2672,7 +2672,7 @@ on_province_tax_building_built_estate_privileges_effect = {
 			owner = { has_estate_privilege = estate_church_development_of_temples }
 			OR = {
 				has_owner_religion = yes
-				has_owner_harmonized_religion = yes
+				has_owner_harmonized_religion_fixed = yes
 				has_owner_secondary_religion = yes
 			}
 		}
