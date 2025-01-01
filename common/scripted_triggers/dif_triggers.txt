@@ -377,10 +377,10 @@ province_infrastructure_trigger = {
 
 find_weak_target = {
 	#Small size
-	NOT = { num_of_cities = 10 }
-	NOT = { total_development = 100 }
+	#NOT = { num_of_cities = 10 }
+	#NOT = { total_development = 100 }
 	#no allies
-	NOT = { num_of_allies = 1 }
+	#NOT = { num_of_allies = 1 }
 	#independent/not a tributary
 	NOT = { is_subject = yes }
 	#no guarantee
@@ -701,366 +701,305 @@ find_weak_target = {
 			}
 		}
 	}
-	#alliance strength
-	variable_arithmetic_trigger = {
-		export_to_variable = {
-			which = alliance_army_strength
-			value = 0
+}
+
+change_strength_variable_t = { #strength up to 50%
+	OR = {
+		AND = {
+			army_strength = { who = ROOT value = 0.32 }
+			OR = {
+				AND = {
+					army_strength = { who = ROOT value = 0.48 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.5 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 50 } } }
+						}
+						AND = {
+							army_strength = { who = ROOT value = 0.49 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 49 } } }
+						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 48 } } }
+					}
+				}
+				AND = {
+					army_strength = { who = ROOT value = 0.4 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.44 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.46 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.47 }
+											ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 47 } } }
+										}
+										ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 46 } } }
+									}
+								}
+								AND = {
+									army_strength = { who = ROOT value = 0.45 }
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 45 } } }
+								}
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 44 } } }
+							}
+						}
+						AND = {
+							army_strength = { who = ROOT value = 0.42 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.43 }
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 43 } } }
+								}
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 42 } } }
+							}
+						}
+						AND = {
+							army_strength = { who = ROOT value = 0.41 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 41 } } }
+						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 40 } } }
+					}
+				}
+				AND = {
+					army_strength = { who = ROOT value = 0.36 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.38 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.39 }
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 39 } } }
+								}
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 38 } } }
+							}
+						}
+						AND = {
+							army_strength = { who = ROOT value = 0.37 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 37 } } }
+						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 36 } } }
+					}
+				}
+				AND = {
+					army_strength = { who = ROOT value = 0.34 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.35 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 35 } } }
+						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 34 } } }
+					}
+				}
+				AND = {
+					army_strength = { who = ROOT value = 0.33 }
+					ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 33 } } }
+				}
+				ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 32 } } }
+			}
 		}
-		#country strength
-		OR = {
-			AND = {
-				army_strength = { who = ROOT value = 0.32 }
-				OR = {
-					AND = {
-						army_strength = { who = ROOT value = 0.34 }
-						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 34 } }
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.33 }
-						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 33 } }
-					}
-					variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 32 } }
-				}
-			}
-			AND = {
-				army_strength = { who = ROOT value = 0.16 }
-				OR = {
-					AND = {
-						army_strength = { who = ROOT value = 0.24 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.28 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.3 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.31 }
-												variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 31 } }
-											}
-											variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 30 } }
+		AND = {
+			army_strength = { who = ROOT value = 0.16 }
+			OR = {
+				AND = {
+					army_strength = { who = ROOT value = 0.24 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.28 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.3 }
+									OR = {
+										AND = {
+											army_strength = { who = ROOT value = 0.31 }
+											ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 31 } } }
 										}
+										ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 30 } } }
 									}
-									AND = {
-										army_strength = { who = ROOT value = 0.29 }
-										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 29 } }
-									}
-									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 28 } }
 								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.26 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.27 }
-										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 27 } }
-									}
-									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 26 } }
+								AND = {
+									army_strength = { who = ROOT value = 0.29 }
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 29 } } }
 								}
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 28 } } }
 							}
-							AND = {
-								army_strength = { who = ROOT value = 0.25 }
-								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 25 } }
-							}
-							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 24 } }
 						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.2 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.22 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.23 }
-										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 23 } }
-									}
-									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 22 } }
+						AND = {
+							army_strength = { who = ROOT value = 0.26 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.27 }
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 27 } } }
 								}
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 26 } } }
 							}
-							AND = {
-								army_strength = { who = ROOT value = 0.21 }
-								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 21 } }
-							}
-							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 20 } }
 						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.18 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.19 }
-								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 19 } }
-							}
-							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 18 } }
+						AND = {
+							army_strength = { who = ROOT value = 0.25 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 25 } } }
 						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 24 } } }
 					}
-					AND = {
-						army_strength = { who = ROOT value = 0.17 }
-						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 17 } }
-					}
-					variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 16 } }
 				}
-			}
-			AND = {
-				army_strength = { who = ROOT value = 0.08 }
-				OR = {
-					AND = {
-						army_strength = { who = ROOT value = 0.12 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.14 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.15 }
-										variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 15 } }
-									}
-									variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 14 } }
+				AND = {
+					army_strength = { who = ROOT value = 0.2 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.22 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.23 }
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 23 } } }
 								}
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 22 } } }
 							}
-							AND = {
-								army_strength = { who = ROOT value = 0.13 }
-								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 13 } }
-							}
-							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 12 } }
 						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.1 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.11 }
-								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 11 } }
-							}
-							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 10 } }
+						AND = {
+							army_strength = { who = ROOT value = 0.21 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 21 } } }
 						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 20 } } }
 					}
-					AND = {
-						army_strength = { who = ROOT value = 0.09 }
-						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 9 } }
-					}
-					variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 8 } }
 				}
-			}
-			AND = {
-				army_strength = { who = ROOT value = 0.04 }
-				OR = {
-					AND = {
-						army_strength = { who = ROOT value = 0.06 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.07 }
-								variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 7 } }
-							}
-							variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 6 } }
+				AND = {
+					army_strength = { who = ROOT value = 0.18 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.19 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 19 } } }
 						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 18 } } }
 					}
-					AND = {
-						army_strength = { who = ROOT value = 0.05 }
-						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 5 } }
-					}
-					variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 4 } }
 				}
-			}
-			AND = {
-				army_strength = { who = ROOT value = 0.02 }
-				OR = {
-					AND = {
-						army_strength = { who = ROOT value = 0.03 }
-						variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 3 } }
-					}
-					variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 2 } }
+				AND = {
+					army_strength = { who = ROOT value = 0.17 }
+					ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 17 } } }
 				}
+				ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 16 } } }
 			}
-			AND = {
-				army_strength = { who = ROOT value = 0.01 }
-				variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 1 } }
-			}
-			variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 0 } }
 		}
-		#subject strength
-		OR = {
-			NOT = { num_of_subjects = 1 }
-			all_subject_country = {
-				OR = {
-					NOT = { is_subject_other_than_tributary_trigger = yes }
-					AND = {
-						army_strength = { who = ROOT value = 0.32 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.34 }
-								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 34 } } }
+		AND = {
+			army_strength = { who = ROOT value = 0.08 }
+			OR = {
+				AND = {
+					army_strength = { who = ROOT value = 0.12 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.14 }
+							OR = {
+								AND = {
+									army_strength = { who = ROOT value = 0.15 }
+									ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 15 } } }
+								}
+								ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 14 } } }
 							}
-							AND = {
-								army_strength = { who = ROOT value = 0.33 }
-								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 33 } } }
-							}
-							PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 32 } } }
 						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.16 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.24 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.28 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.3 }
-												OR = {
-													AND = {
-														army_strength = { who = ROOT value = 0.31 }
-														PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 31 } } }
-													}
-													PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 30 } } }
-												}
-											}
-											AND = {
-												army_strength = { who = ROOT value = 0.29 }
-												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 29 } } }
-											}
-											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 28 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.26 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.27 }
-												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 27 } } }
-											}
-											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 26 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.25 }
-										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 25 } } }
-									}
-									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 24 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.2 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.22 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.23 }
-												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 23 } } }
-											}
-											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 22 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.21 }
-										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 21 } } }
-									}
-									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 20 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.18 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.19 }
-										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 19 } } }
-									}
-									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 18 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.17 }
-								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 17 } } }
-							}
-							PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 16 } } }
+						AND = {
+							army_strength = { who = ROOT value = 0.13 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 13 } } }
 						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 12 } } }
 					}
-					AND = {
-						army_strength = { who = ROOT value = 0.08 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.12 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.14 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.15 }
-												PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 15 } } }
-											}
-											PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 14 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.13 }
-										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 13 } } }
-									}
-									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 12 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.1 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.11 }
-										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 11 } } }
-									}
-									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 10 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.09 }
-								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 9 } } }
-							}
-							PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 8 } } }
+				}
+				AND = {
+					army_strength = { who = ROOT value = 0.1 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.11 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 11 } } }
 						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 10 } } }
 					}
-					AND = {
-						army_strength = { who = ROOT value = 0.04 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.06 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.07 }
-										PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 7 } } }
-									}
-									PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 6 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.05 }
-								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 5 } } }
-							}
-							PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 4 } } }
+				}
+				AND = {
+					army_strength = { who = ROOT value = 0.09 }
+					ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 9 } } }
+				}
+				ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 8 } } }
+			}
+		}
+		AND = {
+			army_strength = { who = ROOT value = 0.04 }
+			OR = {
+				AND = {
+					army_strength = { who = ROOT value = 0.06 }
+					OR = {
+						AND = {
+							army_strength = { who = ROOT value = 0.07 }
+							ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 7 } } }
 						}
+						ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 6 } } }
 					}
-					AND = {
-						army_strength = { who = ROOT value = 0.02 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.03 }
-								PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 3 } } }
-							}
-							PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 2 } } }
-						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.01 }
-						PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 1 } } }
-					}
-					PREV = { variable_arithmetic_trigger = { change_variable = { which = alliance_army_strength value = 0 } } }
+				}
+				AND = {
+					army_strength = { who = ROOT value = 0.05 }
+					ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 5 } } }
+				}
+				ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 4 } } }
+			}
+		}
+		AND = {
+			army_strength = { who = ROOT value = 0.02 }
+			OR = {
+				AND = {
+					army_strength = { who = ROOT value = 0.03 }
+					ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 3 } } }
+				}
+				ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 2 } } }
+			}
+		}
+		AND = {
+			army_strength = { who = ROOT value = 0.01 }
+			ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 1 } } }
+		}
+		ROOT = { variable_arithmetic_trigger = { change_variable = { which = $which$ value = 0 } } }
+	}
+}
+
+target_strength_trigger = { #$value$ max 50
+	#country strength
+	change_strength_variable_t = {
+		which = $which$
+	}
+	#subject strength
+	OR = {
+		NOT = { num_of_subjects = 1 }
+		all_subject_country = {
+			OR = {
+				NOT = { is_subject_other_than_tributary_trigger = yes }
+				change_strength_variable_t = {
+					which = $which$
 				}
 			}
 		}
+	}
+	#ally strength
+	OR = {
+		NOT = { num_of_allies = 1 }
+		all_ally = {
+			change_strength_variable_t = {
+				which = $which$
+			}
+			#subject strength
+			OR = {
+				NOT = { num_of_subjects = 1 }
+				all_subject_country = {
+					OR = {
+						NOT = { is_subject_other_than_tributary_trigger = yes }
+						change_strength_variable_t = {
+							which = $which$
+						}
+					}
+				}
+			}
+		}
+	}
+	ROOT = {
 		NOT = {
 			check_variable = {
-				which = alliance_army_strength
-				value = 34
+				which = $which$
+				value = $value$
 			}
 		}
 	}

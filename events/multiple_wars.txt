@@ -17,7 +17,7 @@ country_event = {
 		manpower_percentage = 0.33
 		
 		#Max 5 loans
-		NOT = { num_of_loans = 6 }
+		#NOT = { num_of_loans = 6 }
 		
 		#not warned
 		all_known_country = {
@@ -38,256 +38,8 @@ country_event = {
 			
 			#strength
 			all_war_enemy_countries = {
-				OR = {
-					AND = {
-						army_strength = { who = ROOT value = 0.32 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.48 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.5 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 50 } } }
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.49 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 49 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 48 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.4 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.44 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.46 }
-												OR = {
-													AND = {
-														army_strength = { who = ROOT value = 0.47 }
-														ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 47 } } }
-													}
-													ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 46 } } }
-												}
-											}
-											AND = {
-												army_strength = { who = ROOT value = 0.45 }
-												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 45 } } }
-											}
-											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 44 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.42 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.43 }
-												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 43 } } }
-											}
-											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 42 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.41 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 41 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 40 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.36 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.38 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.39 }
-												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 39 } } }
-											}
-											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 38 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.37 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 37 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 36 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.34 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.35 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 35 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 34 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.33 }
-								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 33 } } }
-							}
-							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 32 } } }
-						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.16 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.24 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.28 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.3 }
-												OR = {
-													AND = {
-														army_strength = { who = ROOT value = 0.31 }
-														ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 31 } } }
-													}
-													ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 30 } } }
-												}
-											}
-											AND = {
-												army_strength = { who = ROOT value = 0.29 }
-												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 29 } } }
-											}
-											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 28 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.26 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.27 }
-												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 27 } } }
-											}
-											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 26 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.25 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 25 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 24 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.2 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.22 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.23 }
-												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 23 } } }
-											}
-											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 22 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.21 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 21 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 20 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.18 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.19 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 19 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 18 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.17 }
-								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 17 } } }
-							}
-							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 16 } } }
-						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.08 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.12 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.14 }
-										OR = {
-											AND = {
-												army_strength = { who = ROOT value = 0.15 }
-												ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 15 } } }
-											}
-											ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 14 } } }
-										}
-									}
-									AND = {
-										army_strength = { who = ROOT value = 0.13 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 13 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 12 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.1 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.11 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 11 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 10 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.09 }
-								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 9 } } }
-							}
-							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 8 } } }
-						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.04 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.06 }
-								OR = {
-									AND = {
-										army_strength = { who = ROOT value = 0.07 }
-										ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 7 } } }
-									}
-									ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 6 } } }
-								}
-							}
-							AND = {
-								army_strength = { who = ROOT value = 0.05 }
-								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 5 } } }
-							}
-							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 4 } } }
-						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.02 }
-						OR = {
-							AND = {
-								army_strength = { who = ROOT value = 0.03 }
-								ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 3 } } }
-							}
-							ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 2 } } }
-						}
-					}
-					AND = {
-						army_strength = { who = ROOT value = 0.01 }
-						ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 1 } } }
-					}
-					ROOT = { variable_arithmetic_trigger = { change_variable = { which = enemy_army_strength value = 0 } } }
+				change_strength_variable_t = {
+					which = enemy_army_strength
 				}
 			}
 			
@@ -522,18 +274,40 @@ country_event = {
 		}
 		
 		#find a country
-		any_known_country = {
-			find_weak_target = yes
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				which = alliance_strength_t
+				value = 0
+			}
+			any_known_country = {
+				find_weak_target = yes
+				target_strength_trigger = {
+					which = alliance_strength_t
+					value = 34
+				}
+			}
 		}
 	}
 
 	immediate = {
-		random_known_country = {
+		set_variable = {
+			which = alliance_strength_e
+			value = 0
+		}
+		log = "===[Root.GetName] DECLARES WAR ON"
+		every_known_country = {
 			limit = {
 				find_weak_target = yes
 			}
+			target_strength_effect = {
+				which = alliance_strength_e
+				value = 34
+				target = weak_target
+			}
+		}
+		event_target:weak_target = {
 			#declare war
-			log = "=========[Root.GetName] DECLARES WAR ON [This.GetName]==========="
+			log = "[This.GetName]==="
 			ROOT = {
 				if = {
 					limit = {
