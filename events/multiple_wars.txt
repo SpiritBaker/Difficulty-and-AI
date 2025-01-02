@@ -297,6 +297,7 @@ country_event = {
 		}
 		every_known_country = {
 			limit = {
+				NOT = { has_saved_event_target = weak_target }
 				find_weak_target = yes
 			}
 			target_strength_effect = {

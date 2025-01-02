@@ -258,22 +258,22 @@ target_strength_effect = { #$value$ max 50
 		which = $which$
 	}
 	#subject strength
-	if = { limit = { num_of_subjects = 1 }
-		every_subject_country = { limit = { is_subject_other_than_tributary_trigger = yes }
+	if = { limit = { ROOT = { NOT = { check_variable = { which = $which$ value = $value$ } } } num_of_subjects = 1 }
+		every_subject_country = { limit = { ROOT = { NOT = { check_variable = { which = $which$ value = $value$ } } } is_subject_other_than_tributary_trigger = yes }
 			change_strength_variable_e = {
 				which = $which$
 			}
 		}
 	}
 	#ally strength
-	if = { limit = { num_of_allies = 1 }
-		every_ally = {
+	if = { limit = { ROOT = { NOT = { check_variable = { which = $which$ value = $value$ } } } num_of_allies = 1 }
+		every_ally = { limit = { ROOT = { NOT = { check_variable = { which = $which$ value = $value$ } } } }
 			change_strength_variable_e = {
 				which = $which$
 			}
 			#subject strength
-			if = { limit = { num_of_subjects = 1 }
-				every_subject_country = { limit = { is_subject_other_than_tributary_trigger = yes }
+			if = { limit = { ROOT = { NOT = { check_variable = { which = $which$ value = $value$ } } } num_of_subjects = 1 }
+				every_subject_country = { limit = { ROOT = { NOT = { check_variable = { which = $which$ value = $value$ } } } is_subject_other_than_tributary_trigger = yes }
 					change_strength_variable_e = {
 						which = $which$
 					}
