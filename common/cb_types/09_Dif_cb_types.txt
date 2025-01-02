@@ -106,6 +106,30 @@ cb_tribal_feud_ai = {
 	}
 	war_goal = take_province_tribal_feud
 }
+cb_tribal_feud_ai_x = {
+	is_triggered_only = yes
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		ai = yes
+		is_nomad = yes
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		FROM = {
+			is_nomad = yes
+		}
+		is_neighbor_of = FROM
+	}
+	
+	attacker_disabled_po = {
+		po_become_tributary_state
+		po_subjugate_tributary_state
+	}
+	
+	war_goal = take_province_tribal_feud_x
+}
 
 # Take the Mandate of Heaven
 cb_take_mandate_ai = {

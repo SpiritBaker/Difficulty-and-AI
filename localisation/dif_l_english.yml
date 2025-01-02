@@ -56,10 +56,6 @@
  ALL_MANCHU_PROVS:0 "Provinces in Manchuria Region"
  cb_horde_invasion:0 "Invasion"
  cb_horde_invasion_desc:0 ""
- cb_horde_vs_civ_ai:0 "Tribal Conquest"
- cb_horde_vs_civ_ai_desc:0 "There can be no peace between tribes and settlers!"
- cb_tribal_feud_ai:0 "Tribal Feud"
- cb_tribal_feud_ai_desc:0 "Our Tribe is mightier than their Tribe!"
 
  #AI cb's
  cb_horde_vs_civ_ai:0 "Tribal Conquest"
@@ -70,6 +66,44 @@
  cb_take_mandate_ai_desc:0 "We must prove to the world we are deserving of the Mandate of Heaven."
  take_capital_take_mandate_ai:0 "Take Capital"
  take_capital_take_mandate_ai_desc:0 "War goal is to take the capital."
+ 
+ cb_core_x:0 "Reconquest"
+ cb_core_x_desc:0 "They hold provinces that are rightfully ours."
+ take_core_x:0 "Take a core province"
+ take_core_x_desc:0 "War goal is to take a core province from the target."
+ CORE_WAR_NAME_X:0 "$ORDER$$FIRST$ Reconquest of their Cores"
+
+ cb_nationalist_x:0 "Nationalism"
+ cb_nationalist_x_desc:0 "They hold provinces of our culture group."
+ take_province_nationalist_x:0 "Take a province"
+ take_province_nationalist_x_desc:0 "War goal is to take a province."
+
+ cb_colonial_x:0 "Colonialism"
+ cb_colonial_x_desc:0 "They have colonies close to ours."
+ take_colony_x:0 "Take a colony"
+ take_colony_x_desc:0 "War goal is to take a province in a colony."
+
+ cb_excommunication_x:0 "Excommunicated Ruler"
+ cb_excommunication_x_desc:0 "Their ruler has been excommunicated."
+ take_province_excommunication_x:0 "Take a province"
+ take_province_excommunication_x_desc:0 "War goal is to take a province."
+
+ cb_imperial_ban_x:0 "Imperial Ban"
+ cb_imperial_ban_x_desc:0 "They hold Imperial provinces."
+ take_province_ban_x:0 "Take a province"
+ take_province_ban_x_desc:0 "War goal is to take a province."
+ BAN_WAR_NAME_X:0 "$ORDER$Holy Roman Reclamation of Imperial Provinces"
+
+ cb_tribal_feud_ai_x:0 "Tribal Feud"
+ cb_tribal_feud_ai_x_desc:0 "Our Tribe is mightier than their Tribe!"
+ take_province_tribal_feud_x:0 "Take a province"
+ take_province_tribal_feud_x_desc:0 "War goal is to take a province."
+
+ cb_conquest_x:0 "Conquest"
+ cb_conquest_x_desc:0 "They hold provinces that we have claims on."
+ take_claim_x:0 "Take a claim"
+ take_claim_x_desc:0 "War goal is to take a province you have claim on from the target."
+ CLAIM_WAR_NAME_X:0 "$ORDER$$FIRST$ Conquest of their Claims"
 
  #Culture
  anatolian:0 "Anatolian"
@@ -421,4 +455,3 @@
  merc_yemen_company:0 "Yemen Company"
  merc_baluchi_auxiliaries:0 "Baluchi Auxiliaries"
  merc_ghilman_royal_guard:0 "Ghilman Royal Guard"
-

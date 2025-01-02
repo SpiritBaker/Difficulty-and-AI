@@ -413,6 +413,15 @@ cb_conquest = {
 
 	war_goal = take_claim
 }
+cb_conquest_x = {
+	is_triggered_only = yes
+	
+	prerequisites = {
+		claim = FROM
+	}
+	
+	war_goal = take_claim_x
+}
 
 # We can take core provinces at no badboy
 cb_core = {
@@ -422,6 +431,15 @@ cb_core = {
 	}
 
 	war_goal = take_core
+}
+cb_core_x = {
+	is_triggered_only = yes
+	
+	prerequisites = {
+		core_claim = FROM
+	}
+	
+	war_goal = take_core_x
 }
 
 # Independence War
@@ -497,6 +515,21 @@ cb_nationalist = {
 	}
 
 	war_goal = take_province_nationalist
+}
+cb_nationalist_x = {
+	is_triggered_only = yes
+	
+	prerequisites_self = {
+		dip_tech = 23
+		is_free_or_tributary_trigger = yes
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		culture_group_claim = FROM
+	}
+	
+	war_goal = take_province_nationalist_x
 }
 
 # Napoleonic era imperialism
@@ -742,6 +775,19 @@ cb_colonial = {
 
 	war_goal = take_colony
 }
+cb_colonial_x = {
+	is_triggered_only = yes
+	
+	prerequisites_self = {
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		colony_claim = FROM
+	}
+	
+	war_goal = take_colony_x
+}
 
 # Liberation CB
 cb_liberation = {
@@ -928,6 +974,42 @@ cb_excommunication = {
 
 	war_goal = take_province_excommunication
 }
+cb_excommunication_x = {
+	is_triggered_only = yes
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		religion = catholic
+		is_excommunicated = no
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		FROM = {
+			is_excommunicated = yes
+			religion = catholic
+		}
+		FROM = {
+			is_neighbor_of = ROOT
+			any_owned_province = {
+				OR = {
+					is_core = ROOT
+					is_claim = ROOT
+					any_neighbor_province = {
+						owned_by = ROOT
+					}
+				}
+			}
+		}
+		OR = {
+			hre_religion_treaty = no
+			capital_scope = { is_part_of_hre = no }
+			FROM = { capital_scope = { is_part_of_hre = no } }
+		}
+	}
+	
+	war_goal = take_province_excommunication_x
+}
 
 # Trade War
 cb_trade_war = {
@@ -1017,6 +1099,27 @@ cb_imperial_ban = {
 	}
 
 	war_goal = take_province_ban
+}
+cb_imperial_ban_x = {
+	is_triggered_only = yes
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		is_emperor = yes
+		is_imperial_ban_allowed = yes
+		is_revolutionary = no
+	}
+	
+	prerequisites = {
+		FROM = {
+			capital_scope = { is_part_of_hre = no }
+			any_owned_province = {
+				is_part_of_hre = yes
+			}
+		}
+	}
+	
+	war_goal = take_province_ban_x
 }
 
 cb_imperial_ban_incident = {
