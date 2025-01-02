@@ -330,8 +330,11 @@ country_event = {
 							target = PREV
 						}
 					}
-					declare_war_with_cb_core = { who = PREV }
-					log = "cb_core"
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_core_x
+					}
+					log = "cb_core_x"
 				}
 				else_if = {
 					limit = {
@@ -340,8 +343,11 @@ country_event = {
 							target = PREV
 						}
 					}
-					declare_war_with_cb_nationalist = { who = PREV }
-					log = "cb_nationalist"
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_nationalist_x
+					}
+					log = "cb_nationalist_x"
 				}
 				else_if = {
 					limit = {
@@ -350,8 +356,11 @@ country_event = {
 							target = PREV
 						}
 					}
-					declare_war_with_cb_colonial = { who = PREV }
-					log = "cb_colonial"
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_colonial_x
+					}
+					log = "cb_colonial_x"
 				}
 				else_if = {
 					limit = {
@@ -377,8 +386,11 @@ country_event = {
 							target = PREV
 						}
 					}
-					declare_war_with_cb_excommunication = { who = PREV }
-					log = "cb_excommunication"
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_excommunication_x
+					}
+					log = "cb_excommunication_x"
 				}
 				else_if = {
 					limit = {
@@ -387,8 +399,11 @@ country_event = {
 							target = PREV
 						}
 					}
-					declare_war_with_cb_imperial_ban = { who = PREV }
-					log = "cb_imperial_ban"
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_imperial_ban_x
+					}
+					log = "cb_imperial_ban_x"
 				}
 				else_if = {
 					limit = {
@@ -488,8 +503,11 @@ country_event = {
 							target = PREV
 						}
 					}
-					declare_war_with_cb_tribal_feud_ai = { who = PREV }
-					log = "cb_tribal_feud_ai"
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_tribal_feud_ai_x
+					}
+					log = "cb_tribal_feud_ai_x"
 				}
 				else_if = {
 					limit = {
@@ -511,8 +529,11 @@ country_event = {
 							target = PREV
 						}
 					}
-					declare_war_with_cb_conquest = { who = PREV }
-					log = "cb_conquest"
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_conquest_x
+					}
+					log = "cb_conquest_x"
 				}
 				else = {
 					log = "ERROR: NO CB FOUND"
