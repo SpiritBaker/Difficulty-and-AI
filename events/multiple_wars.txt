@@ -57,9 +57,9 @@ country_event = {
 									OR = {
 										AND = {
 											NOT = { check_variable = { which = enemy_army_strength value = 6 } }
-											all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 10 } } }
+											all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 10 } } } }
 										}
-										all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 12 } } }
+										all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 12 } } } }
 									}
 								}
 								AND = {
@@ -67,16 +67,16 @@ country_event = {
 									OR = {
 										AND = {
 											NOT = { check_variable = { which = enemy_army_strength value = 8 } }
-											all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 14 } } }
+											all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 14 } } } }
 										}
-										all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 16 } } }
+										all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 16 } } } }
 									}
 								}
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 10 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 18 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 18 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 20 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 20 } } } }
 							}
 						}
 						AND = {
@@ -87,16 +87,16 @@ country_event = {
 									OR = {
 										AND = {
 											NOT = { check_variable = { which = enemy_army_strength value = 12 } }
-											all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 22 } } }
+											all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 22 } } } }
 										}
-										all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 24 } } }
+										all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 24 } } } }
 									}
 								}
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 14 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 26 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 26 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 28 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 28 } } } }
 							}
 						}
 						AND = {
@@ -104,16 +104,16 @@ country_event = {
 							OR = {
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 16 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 30 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 30 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 32 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 32 } } } }
 							}
 						}
 						AND = {
 							NOT = { check_variable = { which = enemy_army_strength value = 18 } }
-							all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 34 } } }
+							all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 34 } } } }
 						}
-						all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 36 } } }
+						all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 36 } } } }
 					}
 				}
 				AND = {
@@ -130,16 +130,16 @@ country_event = {
 											OR = {
 												AND = {
 													NOT = { check_variable = { which = enemy_army_strength value = 20 } }
-													all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 38 } } }
+													all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 38 } } } }
 												}
-												all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 40 } } }
+												all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 40 } } } }
 											}
 										}
 										AND = {
 											NOT = { check_variable = { which = enemy_army_strength value = 22 } }
-											all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 42 } } }
+											all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 42 } } } }
 										}
-										all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 44 } } }
+										all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 44 } } } }
 									}
 								}
 								AND = {
@@ -147,16 +147,16 @@ country_event = {
 									OR = {
 										AND = {
 											NOT = { check_variable = { which = enemy_army_strength value = 24 } }
-											all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 46 } } }
+											all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 46 } } } }
 										}
-										all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 48 } } }
+										all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 48 } } } }
 									}
 								}
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 26 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 50 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 50 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 52 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 52 } } } }
 							}
 						}
 						AND = {
@@ -167,16 +167,16 @@ country_event = {
 									OR = {
 										AND = {
 											NOT = { check_variable = { which = enemy_army_strength value = 28 } }
-											all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 54 } } }
+											all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 54 } } } }
 										}
-										all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 56 } } }
+										all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 56 } } } }
 									}
 								}
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 30 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 58 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 58 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 60 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 60 } } } }
 							}
 						}
 						AND = {
@@ -184,16 +184,16 @@ country_event = {
 							OR = {
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 32 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 62 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 62 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 64 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 64 } } } }
 							}
 						}
 						AND = {
 							NOT = { check_variable = { which = enemy_army_strength value = 34 } }
-							all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 66 } } }
+							all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 66 } } } }
 						}
-						all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 68 } } }
+						all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 68 } } } }
 					}
 				}
 				AND = {
@@ -207,16 +207,16 @@ country_event = {
 									OR = {
 										AND = {
 											NOT = { check_variable = { which = enemy_army_strength value = 36 } }
-											all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 70 } } }
+											all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 70 } } } }
 										}
-										all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 72 } } }
+										all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 72 } } } }
 									}
 								}
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 38 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 74 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 74 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 76 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 76 } } } }
 							}
 						}
 						AND = {
@@ -224,16 +224,16 @@ country_event = {
 							OR = {
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 40 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 78 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 78 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 80 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 80 } } } }
 							}
 						}
 						AND = {
 							NOT = { check_variable = { which = enemy_army_strength value = 42 } }
-							all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 82 } } }
+							all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 82 } } } }
 						}
-						all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 84 } } }
+						all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 84 } } } }
 					}
 				}
 				AND = {
@@ -244,16 +244,16 @@ country_event = {
 							OR = {
 								AND = {
 									NOT = { check_variable = { which = enemy_army_strength value = 44 } }
-									all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 86 } } }
+									all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 86 } } } }
 								}
-								all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 88 } } }
+								all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 88 } } } }
 							}
 						}
 						AND = {
 							NOT = { check_variable = { which = enemy_army_strength value = 46 } }
-							all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 90 } } }
+							all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 90 } } } }
 						}
-						all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 92 } } }
+						all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 92 } } } }
 					}
 				}
 				AND = {
@@ -261,16 +261,16 @@ country_event = {
 					OR = {
 						AND = {
 							NOT = { check_variable = { which = enemy_army_strength value = 48 } }
-							all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 94 } } }
+							all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 94 } } } }
 						}
-						all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 96 } } }
+						all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 96 } } } }
 					}
 				}
 				AND = {
 					NOT = { check_variable = { which = enemy_army_strength value = 50 } }
-					all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 98 } } }
+					all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 98 } } } }
 				}
-				all_war_enemy_countries = { ROOT = { war_score_against = { who = PREV value = 100 } } }
+				all_war_enemy_countries = { ROOT = { OR = { AND = { NOT = { is_in_war = { attacker_leader = PREV } } NOT = { is_in_war = { defender_leader = PREV } } } war_score_against = { who = PREV value = 100 } } } }
 			}
 		}
 		
@@ -297,6 +297,7 @@ country_event = {
 		}
 		every_known_country = {
 			limit = {
+				NOT = { has_saved_event_target = weak_target }
 				find_weak_target = yes
 			}
 			target_strength_effect = {

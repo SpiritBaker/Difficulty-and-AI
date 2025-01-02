@@ -964,9 +964,11 @@ target_strength_trigger = { #$value$ max 50
 	}
 	#subject strength
 	OR = {
+		ROOT = { check_variable = { which = $which$ value = $value$ } }
 		NOT = { num_of_subjects = 1 }
 		all_subject_country = {
 			OR = {
+				ROOT = { check_variable = { which = $which$ value = $value$ } }
 				NOT = { is_subject_other_than_tributary_trigger = yes }
 				change_strength_variable_t = {
 					which = $which$
@@ -976,16 +978,22 @@ target_strength_trigger = { #$value$ max 50
 	}
 	#ally strength
 	OR = {
+		ROOT = { check_variable = { which = $which$ value = $value$ } }
 		NOT = { num_of_allies = 1 }
 		all_ally = {
-			change_strength_variable_t = {
-				which = $which$
+			OR = {
+				ROOT = { check_variable = { which = $which$ value = $value$ } }
+				change_strength_variable_t = {
+					which = $which$
+				}
 			}
 			#subject strength
 			OR = {
+				ROOT = { check_variable = { which = $which$ value = $value$ } }
 				NOT = { num_of_subjects = 1 }
 				all_subject_country = {
 					OR = {
+						ROOT = { check_variable = { which = $which$ value = $value$ } }
 						NOT = { is_subject_other_than_tributary_trigger = yes }
 						change_strength_variable_t = {
 							which = $which$
@@ -995,12 +1003,5 @@ target_strength_trigger = { #$value$ max 50
 			}
 		}
 	}
-	ROOT = {
-		NOT = {
-			check_variable = {
-				which = $which$
-				value = $value$
-			}
-		}
-	}
+	ROOT = { NOT = { check_variable = { which = $which$ value = $value$ } } }
 }
