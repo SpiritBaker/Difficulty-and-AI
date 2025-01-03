@@ -1870,15 +1870,15 @@ on_integrate = {
 # Nation annexed.
 # FROM is the nation being annexed
 on_annexed = {
-	events = {
-		celestial_empire_events.1 # Empire dismantled
-	}
 	on_annexed_estate_privileges_effect = yes
 	FROM = {
 		if = {
 			limit = { is_emperor_of_china = yes }
 			dismantle_empire_of_china = yes
 			set_global_flag = empire_of_china_dismantled
+			ROOT = {	
+				country_event = { id = celestial_empire_events.1 } # Empire dismantled
+			}
 		}
 		if = {
 			limit = { has_country_modifier = legatus_natus }

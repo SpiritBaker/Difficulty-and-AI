@@ -1,4 +1,8 @@
 version="2.4.2"
+dependencies={
+	"Dificulty & AI  (UI module)"
+	"Dificulty & AI Limited Idea Groups"
+}
 tags={
 	"Balance"
 	"Gameplay"
@@ -13,5 +17,4 @@ name="Difficulty & AI Dev(1.37)"
 picture="thumbnail.png"
 supported_version="1.37.*"
 path="mod/Difficulty-and-AI"
-dependencies={"Dificulty & AI  (UI module)"}
 remote_file_id="2453967654"
