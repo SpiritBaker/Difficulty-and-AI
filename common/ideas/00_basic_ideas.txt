@@ -1335,7 +1335,7 @@ maritime_ideas = {
 	}
 	merchant_marine = {
 		global_sailors_modifier = 0.33
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.1
 	}
 	sheltered_ports = {
 		global_ship_repair = 0.1
@@ -2035,7 +2035,7 @@ naval_ideas = {
 	}
 	press_gangs = {
 		sailors_recovery_speed = 0.25
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.1
 	}
 	oak_forests_for_ships = {
 		heavy_ship_power = 0.20

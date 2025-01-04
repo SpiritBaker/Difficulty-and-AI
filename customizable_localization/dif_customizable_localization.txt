@@ -169,31 +169,31 @@ defined_text = {
 	random = no
 	text = {
         trigger = {
-			has_global_flag = scripted_war_dec_disabled_flag
+			has_global_flag = scripted_multiwar_dec_disabled_flag
         }
         localisation_key = scriptedwarsDisabled
 	}
 	text = {
 		trigger = {
-			NOT = { has_global_flag = scripted_war_dec_disabled_flag }
+			NOT = { has_global_flag = scripted_multiwar_dec_disabled_flag }
 		}
 		localisation_key = scriptedwarsEnabled
 	}
 }
 defined_text = {
-	name = NationalFocusEventLoc
+	name = ScriptedCarnageWarsEventLoc
 	random = no
 	text = {
         trigger = {
-			has_global_flag = national_focus_disabled_flag
+			has_global_flag = scripted_carnagewar_dec_disabled_flag
         }
-        localisation_key = natfocusDisabled
+        localisation_key = carnageDisabled
 	}
 	text = {
 		trigger = {
-			NOT = { has_global_flag = national_focus_disabled_flag }
+			NOT = { has_global_flag = scripted_carnagewar_dec_disabled_flag }
 		}
-		localisation_key = natfocusEnabled
+		localisation_key = carnageEnabled
 	}
 }
 defined_text = {

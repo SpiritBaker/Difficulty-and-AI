@@ -75,17 +75,28 @@ country_event = {
 	desc = "dif_ai.EVTDESC4"
 	picture = LAND_MILITARY_eventPicture
 	
-	#fire_only_once = yes
+	fire_only_once = yes
 	hidden = yes
 	
 	trigger = {
+		tag = REB
 		is_year = 1444
 		NOT = { is_year = 1445 }
-		NOT = { manpower_percentage = 0.5 }
+		NOT = { has_global_flag = dif_start_up_flag }
+		any_country = {
+			NOT = { manpower_percentage = 0.5 }
+		}
 	}
 
 	immediate = {
-		add_yearly_manpower = 1
+		every_country = {
+			limit = {
+				NOT = { manpower_percentage = 0.5 }
+			}
+			add_yearly_manpower = 1
+		}
+		set_global_flag = dif_start_up_flag
+		set_global_flag = scripted_carnagewar_dec_disabled_flag
 	}
 
 	

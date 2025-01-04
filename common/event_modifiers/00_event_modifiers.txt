@@ -4680,7 +4680,7 @@ ven_recover_from_plague = {
 }
 
 ven_arsenal_marines = {
-	allowed_marine_fraction = 0.10
+	allowed_marine_fraction = 0.1
 }
 
 venice_ghetto = {
@@ -13051,7 +13051,7 @@ liv_merc_focus = {
 	mercenary_manpower = 0.25
 }
 liv_marine_focus = {
-	allowed_marine_fraction = 0.15
+	allowed_marine_fraction = 0.1
 	global_sailors_modifier = 0.2
 }
 liv_the_administrator = {

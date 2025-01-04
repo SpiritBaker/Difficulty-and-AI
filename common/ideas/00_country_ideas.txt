@@ -164,7 +164,7 @@ ENG_ideas = {
 	}
 	eng_red_coats = {
 		fire_damage = 0.1
-		allowed_marine_fraction = 0.15
+		allowed_marine_fraction = 0.1
 	}
 	sick_and_hurt_board = {
 		sailors_recovery_speed = 0.10
@@ -218,7 +218,7 @@ GBR_ideas = {
 	britanna_rules_the_waves = {
 		leader_naval_manuever = 1
 		blockade_efficiency = 0.33
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.15
 	}
 }
 
@@ -4105,7 +4105,7 @@ TUS_ideas = {
 USA_ideas = {
 	start = {
 		merchants = 1
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.15
 	}
 	
 	bonus = {
@@ -5206,7 +5206,7 @@ NAV_ideas = {
 		inflation_reduction = 0.1
 	}
 	people_of_the_sea = {
-		allowed_marine_fraction = 0.2
+		allowed_marine_fraction = 0.15
 		global_sailors_modifier = 0.25
 	}
 	royal_basque_society = {
@@ -15546,7 +15546,7 @@ AUS_ideas = {
 	}
 	AUS_sandpaper_and_cheating = {
 		infantry_power = 0.1
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.15
 	}
 	AUS_royal_navy = {
 		global_ship_cost = -0.1

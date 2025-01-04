@@ -435,7 +435,7 @@ pirate_republic_reform = {
 		capture_ship_chance = 0.33
 		state_governing_cost = 0.75
 		may_perform_slave_raid_on_same_religion = yes
-		allowed_marine_fraction = 0.5
+		allowed_marine_fraction = 0.25
 	}
 	trigger = {
 		OR = {
@@ -3082,7 +3082,7 @@ power_to_the_raiders_reform = {
 	}
 	modifiers = {
 		pr_buccaneers_influence = 0.1
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.15
 		global_sailors_modifier = 0.25
 	}
 	ai = {

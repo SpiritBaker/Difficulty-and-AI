@@ -3922,7 +3922,7 @@ livonian_naval_monarchy = {
 
 	modifiers = {
 		development_cost = -0.1
-		allowed_marine_fraction = 0.5
+		allowed_marine_fraction = 0.25
 		monarch_diplomatic_power = 2
 		burghers_loyalty_modifier = 0.1		
 	}
@@ -4364,7 +4364,7 @@ livonian_admiral_monarchy = {
 	nation_designer_cost = 25
 
 	modifiers = {
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.15
 		governing_capacity_modifier = -0.25
 		naval_forcelimit_modifier = 0.33
 		global_sailors_modifier = 0.25

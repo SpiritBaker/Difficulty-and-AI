@@ -851,7 +851,7 @@ country_event = {
 					which = var_remaining_capacity
 					which = var_governing_capacity
 				}
-				log = "on_expanded_infrastructure	[This.GetName]	[Prev.GetName]	[This.var_remaining_capacity.GetValue]"
+				# log = "on_expanded_infrastructure	[This.GetName]	[Prev.GetName]	[This.var_remaining_capacity.GetValue]"
 			}
 			if = {
 				limit = {

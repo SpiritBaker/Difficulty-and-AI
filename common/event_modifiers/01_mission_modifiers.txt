@@ -972,7 +972,7 @@ dan_exploiting_norwegians = {
 }
 
 dan_norwegian_marines = {
-	allowed_marine_fraction = 0.25
+	allowed_marine_fraction = 0.1
 	sailors_recovery_speed = 0.25
 }
 
@@ -7748,7 +7748,7 @@ pol_efficienct_development_modifier = {
 	build_cost = -0.05
 }
 pol_global_maritime_empire_modifier = {	
-	allowed_marine_fraction = 0.15
+	allowed_marine_fraction = 0.1
 	global_ship_trade_power = 0.33
 	global_trade_power = 0.25
 }
@@ -12196,7 +12196,7 @@ oma_nizwa_fort_modifier = {
 }
 
 oma_omani_marines = {
-    allowed_marine_fraction = 0.15
+    allowed_marine_fraction = 0.1
 }
 
 oma_strengthen_omani_marines = {
@@ -12842,7 +12842,7 @@ ned_staatse_vloot = {
 }
 
 ned_elite_naval_infantry = {
-	allowed_marine_fraction = 0.2
+	allowed_marine_fraction = 0.1
 }
 
 ned_black_devils_modifier = {

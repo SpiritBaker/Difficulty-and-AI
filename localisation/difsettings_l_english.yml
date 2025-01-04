@@ -28,8 +28,8 @@
  dif_settings.4.t:0 "Make the changes permanent"
  dif_settings.4.d:0 ""
  dif_settings.10.t:0 "AI Scripting"
- dif_settings.10.d:0 "§GExpansion Planner§! - Generates Claims for AI, creating more logical routs for AI Expansion. AI will seek to Unify culture, controle Trade nodes, finish conquering states and more. It will not generate claims on allies or friendly countries.\n\n§GAutodev for AI§! - Same auto dev functionality but for AI.\n\n§GAI Building§! - Ensures that AI will continuously build buildings throughout the game. Bypassing pdx building AI weaknesses and bugs.\n\n§GAI War Declaration§! - Gives the AI ability to declare multiple wars against weak opponents."
- #\n\n§GAI National Focus§!
+ dif_settings.10.d:0 "§GExpansion Planner§! - Generates Claims for AI, creating more logical routs for AI Expansion. AI will seek to Unify culture, controle Trade nodes, finish conquering states and more. It will not generate claims on allies or friendly countries.\n\n§GAutodev for AI§! - Same auto dev functionality but for AI.\n\n§GAI Building§! - Ensures that AI will continuously build buildings throughout the game. Bypassing pdx building AI weaknesses and bugs.\n\n§GAI Multiple War Dec§! - Gives the AI ability to declare multiple wars against weak opponents.\n\n§GAI Scripted War Dec§! Forces the AI to declare wars against weak opponents. Not recommended."
+
 
  opt.dif_settings.Scaling:0 "Scaling Difficulty ([This.ScalingDifficultyLoc])"
  opt.dif_settings.expansion:0 "AI Expansion Planer ([This.ExpansionPlaner])"
@@ -46,8 +46,8 @@
  opt.dif_settings.devclick:0 "Auto Dev for AI ([This.DevClickLoc])"
  opt.dif_settings.enable.dev:0 "§GEnabled by Default§! (Recommended)"
  opt.dif_settings.disable.dev:0 "§RDisable§!"
- opt.dif_settings.scripted_war_dec:0 "AI War Declaration ([This.ScriptedWarsEventLoc])"
- opt.dif_settings.national_focus:0 "AI National Focus ([This.NationalFocusEventLoc])"
+ opt.dif_settings.scripted_multiwar_dec:0 "AI Multiple War Dec ([This.ScriptedWarsEventLoc])"
+ opt.dif_settings.scripted_war_dec:0 "AI Scripted War Dec ([This.ScriptedCarnageWarsEventLoc])"
  
  scadifModerateDisabled:0 "§YModerate§!"
  scadifModerateEnabled:0 "§GModerate§!"
@@ -63,8 +63,8 @@
  bevEnabled:0 "§GEnabled§!"
  scriptedwarsDisabled:0 "§RDisabled§!"
  scriptedwarsEnabled:0 "§GEnabled§!"
- natfocusDisabled:0 "§RDisabled§!"
- natfocusEnabled:0 "§GEnabled§!"
+ carnageDisabled:0 "§RDisabled§!"
+ carnageEnabled:0 "§GEnabled§!"
 
  scadifDisabled:0 "§RDisabled§!"
  scadifModerate:0 "§GModerate§!"

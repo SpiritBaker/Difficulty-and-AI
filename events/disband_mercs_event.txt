@@ -64,7 +64,7 @@ country_event = { # Disbands Merc companies one at time, if AI went over the for
 				disband_mercenary_company = THIS
 			}
 			add_yearly_manpower = 0.25
-			log = "[This.GetName] disband_mercs.2"
+			# log = "[This.GetName] disband_mercs.2"
 		}
 	}
 	
@@ -202,7 +202,7 @@ province_event = { # To prevent Endless wars. Nasty bug caused by rebels.
 		owner = {
 			
 			add_prestige = -5
-			log = "[This.GetName] rebels [Prev.GetName]"
+			# log = "[This.GetName] rebels [Prev.GetName]"
 		}
 		add_local_autonomy = 15
 
