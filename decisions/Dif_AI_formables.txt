@@ -1,141 +1,145 @@
-country_decisions = { 
-	ai_can_form_prussia = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_prussia_flag }
-			ai = yes
-			NOT = { has_reform = celestial_empire } 
-			OR = {
-				tag = BRA
-				tag = TEU
-				primary_culture = pommeranian
-				primary_culture = saxon
-				primary_culture = prussian
-			}
-			religion = catholic
-			NOT = { exists = PRU }
-			OR = {
-				is_religion_enabled = protestant
-				is_religion_enabled = reformed
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 41	# Königsberg
-				AND = {
-					province_id = 43	# Danzig
-					ROOT = { NOT = { owns_core_province = 2995 } }
-				}
-				AND = {
-					province_id = 2995
-					ROOT = { NOT = { owns_core_province = 2995 } }
-				}
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = PRU }
-			adm_tech = 10
-			religion = catholic
+# country_decisions = { 
+# 	ai_can_form_prussia = {
+# 		major = yes
+# 		potential = {
+# 			always = no
+# 			normal_or_historical_nations = yes
+# 			was_never_end_game_tag_trigger = yes
+# 			NOT = { has_country_flag = formed_prussia_flag }
+# 			ai = yes
+# 			NOT = { has_reform = celestial_empire } 
+# 			OR = {
+# 				tag = BRA
+# 				tag = TEU
+# 				primary_culture = pommeranian
+# 				primary_culture = saxon
+# 				primary_culture = prussian
+# 			}
+# 			religion = catholic
+# 			NOT = { exists = PRU }
+# 			OR = {
+# 				is_religion_enabled = protestant
+# 				is_religion_enabled = reformed
+# 			}
+# 		}
+# 		provinces_to_highlight = {
+# 			always = no
+# 			OR = {
+# 				province_id = 41	# Königsberg
+# 				AND = {
+# 					province_id = 43	# Danzig
+# 					ROOT = { NOT = { owns_core_province = 2995 } }
+# 				}
+# 				AND = {
+# 					province_id = 2995
+# 					ROOT = { NOT = { owns_core_province = 2995 } }
+# 				}
+# 			}
+# 			OR = {
+# 				NOT = { owned_by = ROOT }
+# 				NOT = { is_core = ROOT }
+# 			}
+# 		}
+# 		allow = {
+# 			NOT = { exists = PRU }
+# 			adm_tech = 10
+# 			religion = catholic
 
-			owns_core_province = 41			# Königsberg
-			OR = {
-				owns_core_province = 43		# Danzig
-				owns_core_province = 2995	# Stolp
-			}
-			is_at_war = no
-		}
-		effect = {
-			add_prestige = -50
-			change_religion = protestant
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_emperor = yes
-			}
-		}
-	}
-	ai_can_form_hindustan = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_india_flag }
-			ai = yes
-			#NOT = { exists = BHA }
-			NOT = { exists = HIN }
-			NOT = { tag = MUG }
-			OR = {
-				culture_group = dravidian
-				culture_group = western_aryan
-				culture_group = hindusthani
-				culture_group = eastern_aryan
-				culture_group = central_indic
-			}
-			religion_group = muslim
-			NOT = { stability = 3 }
+# 			owns_core_province = 41			# Königsberg
+# 			OR = {
+# 				owns_core_province = 43		# Danzig
+# 				owns_core_province = 2995	# Stolp
+# 			}
+# 			is_at_war = no
+# 		}
+# 		effect = {
+# 			add_prestige = -50
+# 			change_religion = protestant
+# 		}
+# 		ai_will_do = {
+# 			factor = 1
+# 			modifier = {
+# 				factor = 0
+# 				is_emperor = yes
+# 			}
+# 		}
+# 	}
+# 	ai_can_form_hindustan = {
+# 		major = yes
+# 		potential = {
+# 			always = no
+# 			normal_or_historical_nations = yes
+# 			was_never_end_game_tag_trigger = yes
+# 			NOT = { has_country_flag = formed_india_flag }
+# 			ai = yes
+# 			#NOT = { exists = BHA }
+# 			NOT = { exists = HIN }
+# 			NOT = { tag = MUG }
+# 			OR = {
+# 				culture_group = dravidian
+# 				culture_group = western_aryan
+# 				culture_group = hindusthani
+# 				culture_group = eastern_aryan
+# 				culture_group = central_indic
+# 			}
+# 			religion_group = muslim
+# 			NOT = { stability = 3 }
 
-			NOT = { has_reform = steppe_horde }
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 506 #Multan
-				province_id = 517 #Surat
-				province_id = 524 #Mathura
-				province_id = 536 #Madurai
-				province_id = 539 #Tondainadu
-				province_id = 541 #Vijayanagar
-				province_id = 545 #Daulatabad
-				province_id = 552 #Cuttack
-				province_id = 558 #Pataliputra
-				province_id = 1948 #Bidar
-				province_id = 2052 #Halar
-				province_id = 2099 #Kandy
-				province_id = 4410 #Kumari
-				province_id = 4421 #Seringapatam
-				province_id = 4461 #Ujjain
-				province_id = 4503 #Mansura
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			has_institution = feudalism
-			owns_core_province = 506 #Multan
-			owns_core_province = 517 #Surat
-			owns_core_province = 524 #Mathura
-			owns_core_province = 536 #Madurai
-			owns_core_province = 539 #Tondainadu
-			owns_core_province = 541 #Vijayanagar
-			owns_core_province = 545 #Daulatabad
-			owns_core_province = 552 #Cuttack
-			owns_core_province = 558 #Pataliputra
-			owns_core_province = 1948 #Bidar
-			owns_core_province = 2052 #Halar
-			owns_core_province = 2099 #Kandy
-			owns_core_province = 4410 #Kumari
-			owns_core_province = 4421 #Seringapatam
-			owns_core_province = 4461 #Ujjain
-			owns_core_province = 4503 #Mansura
-		}
-		effect = {
-			add_stability = 1
-			add_adm_power = -100
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-}
+# 			NOT = { has_reform = steppe_horde }
+# 		}
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				province_id = 506 #Multan
+# 				province_id = 517 #Surat
+# 				province_id = 524 #Mathura
+# 				province_id = 536 #Madurai
+# 				province_id = 539 #Tondainadu
+# 				province_id = 541 #Vijayanagar
+# 				province_id = 545 #Daulatabad
+# 				province_id = 552 #Cuttack
+# 				province_id = 558 #Pataliputra
+# 				province_id = 1948 #Bidar
+# 				province_id = 2052 #Halar
+# 				province_id = 2099 #Kandy
+# 				province_id = 4410 #Kumari
+# 				province_id = 4421 #Seringapatam
+# 				province_id = 4461 #Ujjain
+# 				province_id = 4503 #Mansura
+# 			}
+# 			OR = {
+# 				NOT = { owned_by = ROOT }
+# 				NOT = { is_core = ROOT }
+# 			}
+# 		}
+# 		allow = {
+# 			always = no
+# 			is_free_or_tributary_trigger = yes
+# 			is_nomad = no
+# 			is_at_war = no
+# 			has_institution = feudalism
+# 			owns_core_province = 506 #Multan
+# 			owns_core_province = 517 #Surat
+# 			owns_core_province = 524 #Mathura
+# 			owns_core_province = 536 #Madurai
+# 			owns_core_province = 539 #Tondainadu
+# 			owns_core_province = 541 #Vijayanagar
+# 			owns_core_province = 545 #Daulatabad
+# 			owns_core_province = 552 #Cuttack
+# 			owns_core_province = 558 #Pataliputra
+# 			owns_core_province = 1948 #Bidar
+# 			owns_core_province = 2052 #Halar
+# 			owns_core_province = 2099 #Kandy
+# 			owns_core_province = 4410 #Kumari
+# 			owns_core_province = 4421 #Seringapatam
+# 			owns_core_province = 4461 #Ujjain
+# 			owns_core_province = 4503 #Mansura
+# 		}
+# 		effect = {
+# 			add_stability = 1
+# 			add_adm_power = -100
+# 		}
+# 		ai_will_do = {
+# 			factor = 1
+# 		}
+# 	}
+# }

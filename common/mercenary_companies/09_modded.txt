@@ -44,7 +44,7 @@ merc_nogai_company = {
     regiments_per_development = 0.035
     home_province = 465 
 	cavalry_weight = 1
-	#cost_modifier = 1.2
+	cost_modifier = 0.85
 	sprites = { dlc047_cri_sprite_pack muslimgfx_sprite_pack }
 	trigger = {
 		OR = {
@@ -74,9 +74,10 @@ merc_nogai_company = {
 
 merc_khorasani_company = {
     regiments_per_development = 0.035
+	artillery_weight = 0.1
     home_province = 2221 # Lahijan
 	sprites = { dlc079_tab_sprite_pack muslimgfx_sprite_pack }
-	cost_modifier = 1.1
+	cost_modifier = 0.95
 	trigger = {
 		capital_scope = { 
 			OR = {
@@ -138,7 +139,7 @@ merc_yemen_company = {
     artillery_weight = 0
 	cavalry_cap = 4
     home_province = 4280
-	cost_modifier = 1.1
+	cost_modifier = 0.9
 	sprites = { dlc080_shm_sprite_pack muslimgfx_sprite_pack }
 	trigger = {
 		capital_scope = {
@@ -173,7 +174,7 @@ merc_baluchi_auxiliaries = {
     artillery_weight = 0
 	cavalry_cap = 6
     home_province = 576 # Tabuk
-	cost_modifier = 0.8
+	cost_modifier = 0.85
 	sprites = { dlc080_shm_sprite_pack muslimgfx_sprite_pack }
 	trigger = {
 		capital_scope = {
@@ -202,7 +203,7 @@ merc_baluchi_auxiliaries = {
 		}
 	}
     modifier = {
-		attrition = -0.15
+		land_attrition = -0.25
 	}
 }
 

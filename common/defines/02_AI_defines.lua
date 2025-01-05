@@ -160,7 +160,7 @@ NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 6
 --NDefines.NAI.UPGRADE_CENTER_OF_TRADE_AI_POWER_DESIRE = 5				-- AI scoring for upgrade centers of trade, division on the amount of trade power AI has in node
 
 --NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1 -- How many times the cost of the investment must be in the treasury to consider buying it
-NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
+NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 15	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
 --NDefines.NAI.DEFENDER_OF_FAITH_BASE_AI_DESIRE = 100	-- AI scoring for becoming defender of faith, multiplied by budget/cost
 
@@ -171,22 +171,22 @@ NDefines.NAIEconomy.REBEL_THREAT_MILITARIZE_THRESHOLD = 0.9					-- Above what re
 --NDefines.NAIEconomy.MILITARY_FOCUS_DEFAULT = 1.0
 --NDefines.NAIEconomy.MILITARY_FOCUS_LOWER_BOUND = 0.25
 --NDefines.NAIEconomy.MILITARY_FOCUS_UPPER_BOUND = 1.75
-NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.6
+NDefines.NAIEconomy.ARMY_FRACTION_MILITARIZE = 1.65
 NDefines.NAIEconomy.ARMY_FRACTION_PEACEFUL = 1.0
 NDefines.NAIEconomy.ARMY_FRACTION_MILITARIST = 1.3
 
-NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1
+NDefines.NAIEconomy.NAVY_FRACTION_PEACEFUL = 1.0
 NDefines.NAIEconomy.NAVY_FRACTION_CAPITALIST = 1.25
 
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIZE = 1.33
 NDefines.NAIEconomy.FORT_FRACTION_MILITARIST = 1.25
-NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.5
+NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.8
 --MISSIONARY_FRACTION = 0.15
 NDefines.NAIEconomy.STATE_MAINTENANCE_FRACTION = 0.25
 NDefines.NAIEconomy.BASE_SAVINGS_PRIORITY = 0.5
 NDefines.NAIEconomy.BASE_SAVINGS_PRIORITY_WARTIME = 0.0
 NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY = 1.0		    -- Per loan
-NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY_WARTIME = 0.5	-- Per loan
+NDefines.NAIEconomy.LOAN_REPAYMENT_SAVINGS_PRIORITY_WARTIME = 0.2	-- Per loan
 --SUBSIDY_PRIORITY_CONSIDERATION_THRESHOLD = 50.0
 --SUBSIDY_DESIRE_TO_PRIORITY_RATIO = 0.05
 --SUBSIDY_MAX_BUDGET_FRACTION = 0.05

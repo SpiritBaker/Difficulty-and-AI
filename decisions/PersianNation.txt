@@ -146,6 +146,10 @@ country_decisions = {
 			}
 		}
 		effect = {
+			if = {
+				limit = { ai = yes }
+				country_event = { id = dif_ai.1 } #Random Outcome
+			}
 			change_tag = PER
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -243,7 +247,7 @@ country_decisions = {
 	}
 	rename_to_iran = {
 		potential = {
-			or = {
+			OR = {
 				tag = ERS
 				tag = PER
 			}
@@ -251,6 +255,12 @@ country_decisions = {
 			NOT = { has_country_flag = is_revolutionary_iran_flag }
 		}
 		allow = {
+			OR = {
+				tag = ERS
+				tag = PER
+			}
+			is_revolutionary = yes
+			NOT = { has_country_flag = is_revolutionary_iran_flag }
 			is_at_war = no
 		}
 		effect = {
@@ -259,13 +269,21 @@ country_decisions = {
 			set_country_flag = is_revolutionary_iran_flag
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 1
+				has_country_flag = positive_outcome_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = negative_outcome_flag
+			}
 		}
-		ai_importance = 0
+		ai_importance = 100
 	}
 	rename_to_iran_non_rev = {
 		potential = {
-			or = {
+			OR = {
 				tag = ERS
 				tag = PER
 			}
@@ -273,6 +291,12 @@ country_decisions = {
 			NOT = { has_country_flag = is_iran_flag }
 		}
 		allow = {
+			OR = {
+				tag = ERS
+				tag = PER
+			}
+			is_revolutionary = no
+			NOT = { has_country_flag = is_iran_flag }
 			is_at_war = no
 		}
 		effect = {
@@ -281,8 +305,16 @@ country_decisions = {
 			set_country_flag = is_iran_flag
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 1
+				has_country_flag = positive_outcome_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = negative_outcome_flag
+			}
 		}
-		ai_importance = 0
+		ai_importance = 100
 	}
 }

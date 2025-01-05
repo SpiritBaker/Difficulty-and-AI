@@ -3,9 +3,8 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			ai = yes
 			OR = {
-				any_country = { is_emperor_of_china = yes }
+				ai = yes
 				has_global_flag = empire_of_china_dismantled
 			}
 			is_emperor_of_china = no
@@ -36,7 +35,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			ai = yes
 			is_emperor_of_china = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no

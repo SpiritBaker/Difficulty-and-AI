@@ -2054,6 +2054,13 @@ maritime_military_reform = {
 			factor = 2
 			naval_power_nation_trigger = yes
 		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_idea_group = naval_ideas
+				has_idea_group = maritime_ideas
+			}
+		}
 	}
 }
 

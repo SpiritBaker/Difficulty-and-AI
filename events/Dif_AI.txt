@@ -7,9 +7,17 @@ country_event = {
 	picture = LAND_MILITARY_eventPicture
 	
 	is_triggered_only = yes
+	hidden = yes
 	trigger = {
+
 	}
 	option = {
+		ai_chance = { factor = 50 }
+		set_country_flag = positive_outcome_flag
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		set_country_flag = negative_outcome_flag
 	}
 }
 

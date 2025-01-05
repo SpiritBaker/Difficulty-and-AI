@@ -1,6 +1,7 @@
 version="1.0"
 dependencies={
 	"Difficulty & AI Dev(1.37)"
+	"Difficulty & AI(1.37)"
 }
 tags={
 	"Balance"

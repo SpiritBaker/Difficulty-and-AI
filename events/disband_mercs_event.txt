@@ -11,6 +11,8 @@ country_event = { # Disbands Mercs during peacetime
 	trigger = {
 		ai = yes
 		is_at_war = no
+		army_size_percentage = 0.8
+		manpower_percentage = 0.2
 		any_hired_mercenary_company = {
 			hired_for_months = 18
 		}
@@ -51,7 +53,28 @@ country_event = { # Disbands Merc companies one at time, if AI went over the for
 	trigger = {
 		ai = yes
 		is_at_war = yes
-		army_size_percentage = 1.25
+		OR = {
+			AND = {
+				NOT = { land_forcelimit = 20 }
+				army_size_percentage = 1.5
+			}
+			AND = {
+				NOT = { land_forcelimit = 40 }
+				army_size_percentage = 1.4
+			}
+			AND = {
+				NOT = { land_forcelimit = 60 }
+				army_size_percentage = 1.35
+			}
+			AND = {
+				NOT = { land_forcelimit = 80 }
+				army_size_percentage = 1.3
+			}
+			AND = {
+				land_forcelimit = 80
+				army_size_percentage = 1.25
+			}
+		}
 		num_of_hired_mercenary_companies = 2
 	}
 	
@@ -64,7 +87,7 @@ country_event = { # Disbands Merc companies one at time, if AI went over the for
 				disband_mercenary_company = THIS
 			}
 			add_yearly_manpower = 0.25
-			# log = "[This.GetName] disband_mercs.2"
+			log = "[This.GetName] disband_mercs.2"
 		}
 	}
 	
