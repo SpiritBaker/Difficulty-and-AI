@@ -74,7 +74,7 @@ Gameplay and Balance changes:
 - Aggressive Expansion, Removing Province from HRE, Annex Vassal opinion penalty is capped at 100.
 - Capital bonuses for governing costs are reduced from -100% to -25%. 
 - Bigger penalties from Overextension and not accepted cultures. Mainly unrest.
-- Gentler terms that the victor doesn't directly benefit from are changed to have a significantly lower cost here.
+- Gentler terms that the victor doesn't directly benefit from are changed to have a significantly lower cost.
 - Various small exploits and bug fixes. If we know about it, it can be fixed.
 
 
