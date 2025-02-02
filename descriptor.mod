@@ -1,4 +1,4 @@
-version="2.4.3"
+version="2.4.4"
 dependencies={
 	"Dificulty & AI  (UI module)"
 	"Dificulty & AI Limited Idea Groups"

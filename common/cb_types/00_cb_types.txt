@@ -1538,7 +1538,6 @@ cb_take_mandate = {
 
 	prerequisites_self = {
 		has_dlc = "Mandate of Heaven"
-		ai = no
 		is_subject = no
 		NOT = { has_reform = shogunate }
 		is_revolutionary = no
@@ -1547,6 +1546,14 @@ cb_take_mandate = {
 			religion_group = eastern
 		}
 		OR = {
+			ai = no
+			AND = {
+				ai = yes
+				OR = {
+					culture = manchu
+					culture_group = altaic
+				}
+			}
 			culture_group = east_asian
 			any_owned_province = {
 				culture_group = east_asian
