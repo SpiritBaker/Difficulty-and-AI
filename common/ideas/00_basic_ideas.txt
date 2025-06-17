@@ -160,7 +160,7 @@ plutocracy_ideas = {
 
 	tradition_of_payment = {
 		mercenary_cost = -0.2
-		mercenary_discipline = 0.05
+		mercenary_discipline = 0.03
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
@@ -2245,7 +2245,7 @@ mercenary_ideas = {
 	category = MIL 
 
 	bonus = {
-		mercenary_discipline = 0.05
+		mercenary_discipline = 0.03
 		possible_condottieri = 1 
 	}
 

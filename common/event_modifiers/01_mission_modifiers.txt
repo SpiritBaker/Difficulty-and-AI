@@ -1181,7 +1181,7 @@ dan_sca_refocus_on_personal_armies = {	#Permanent
 }
 
 dan_sca_standing_professional_merc_army = {	#Permanent
-	mercenary_discipline = 0.1
+	mercenary_discipline = 0.05
 }
 
 dan_sca_scandinavian_india = {
@@ -4538,7 +4538,7 @@ mlo_dealt_with_republicanism = {
 
 # Provence Missions
 pro_king_of_hungary = {
-	mercenary_discipline = 0.1
+	mercenary_discipline = 0.75
 }
 
 pro_king_of_kings = {
@@ -5715,7 +5715,7 @@ bohemian_commonwealth = {
 	diplomatic_annexation_cost = -0.15
 }
 pap_papal_swiss_guard = {
-	mercenary_discipline = 0.1
+	mercenary_discipline = 0.75
 }
 
 pap_papal_mission = {
