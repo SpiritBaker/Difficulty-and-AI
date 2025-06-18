@@ -424,8 +424,7 @@ age_of_reformation = {
 				on_age_ability_taken = { age = age_of_reformation }
 			}
 			modifier = {
-				mercenary_cost = -0.25
-				mercenary_discipline = 0.03
+				mercenary_discipline = 0.04
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {

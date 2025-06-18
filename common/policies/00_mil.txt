@@ -1495,8 +1495,7 @@ mercenary_tactical_movement_act = {
 		full_idea_group = mercenary_ideas 
 	}
 	
-	mercenary_cost = -0.15
-	mercenary_discipline = 0.03
+	mercenary_discipline = 0.04
 
 	effect = {}
 	removed_effect = {}
