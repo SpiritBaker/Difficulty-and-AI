@@ -1110,6 +1110,7 @@ exploration_ideas = {
 	important = yes
 
 	bonus = {
+		max_flagships = 1
 		cb_on_primitives = yes
 	}
 
@@ -1122,6 +1123,7 @@ exploration_ideas = {
 		effect = { remove_temporary_colonist = yes }
 	}
 	overseas_exploration = {
+		flagship_cost = -0.25
 		range = 0.5
 	}
 	land_of_opportunity = {
@@ -1132,6 +1134,7 @@ exploration_ideas = {
 		trade_company_investment_cost = -0.1
 	}
 	free_colonies = {
+		auto_explore_adjacent_to_colony = yes
 		colonist_placement_chance = 0.1
 	}
 	global_empire = {

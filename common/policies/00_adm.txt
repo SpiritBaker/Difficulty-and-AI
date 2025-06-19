@@ -1869,12 +1869,12 @@ aristocratic_rule_act = {
 	}
 	
 	governing_capacity_modifier = 0.1
-	global_autonomy = -0.05
+	development_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1		
 	}
 }
 

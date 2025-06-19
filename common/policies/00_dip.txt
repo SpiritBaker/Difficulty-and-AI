@@ -788,7 +788,7 @@ colonial_companies_act = {
 	}
 	
 	range = 0.20
-	global_colonial_growth = 10
+	global_colonial_growth = 15
 
 	effect = {}
 	removed_effect = {}
@@ -899,7 +899,7 @@ native_assimilation_act = {
 		full_idea_group = exploration_ideas
 	}	
 	
-	global_colonial_growth = 10
+	global_colonial_growth = 15
 	native_assimilation = 0.5
 	
 	effect = {}
@@ -998,20 +998,17 @@ skilled_cartographers = {
 		full_idea_group = exploration_ideas
 	}	
 	
-	global_naval_engagement_modifier = 0.2
+	number_of_cannons_flagship_modifier = 0.5
+	global_naval_engagement_modifier = 0.1
 	
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 0.6
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.6
-			NOT = { num_of_colonies = 1 }
-		}
+			NOT = { navy_size = 20 }
+		}	
 	}
 }
 
@@ -1166,7 +1163,7 @@ colonial_administration_act = {
 		full_idea_group = exploration_ideas
 	}
 	
-	global_colonial_growth = 10
+	global_colonial_growth = 15
 	colonist_placement_chance = 0.05
 
 	
@@ -2057,7 +2054,7 @@ colonial_boost_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1			
 	}
 }
 
@@ -2213,13 +2210,13 @@ transportation_act = {
 		full_idea_group = exploration_ideas 
 	}
 	
-	privateer_efficiency = 0.5
-	transport_attrition = -0.5
+	number_of_cannons_modifier = 0.1
+	transport_attrition = -0.25
 	
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0			
+		factor = 1			
 	}
 }
 
