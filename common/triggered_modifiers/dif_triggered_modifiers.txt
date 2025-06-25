@@ -1,0 +1,10 @@
+theocracy_war_with_religious_enemy = {
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+	}
+	trigger = {
+		has_idea = flesh_is_weak
+		at_war_with_religious_enemy = yes
+	}
+	land_morale = 0.1
+}

@@ -311,8 +311,6 @@ restrictions_for_colonies = {
 		full_idea_group = religious_ideas
 	}
 
-
-
 	global_missionary_strength = 0.02
 	liberty_desire_from_subject_development = -0.15
 
@@ -1778,7 +1776,7 @@ indirect_approach_policy = {
 	}
 	
 	movement_speed = 0.1
-	land_attrition = -0.1
+	land_attrition = -0.2
 
 	effect = {}
 	removed_effect = {}
@@ -1827,8 +1825,8 @@ commercial_tribes_policy = {
 		full_idea_group = trade_ideas
 	}
 	
-	trade_range_modifier = 0.15
-	range = 0.25
+	trade_range_modifier = 0.25
+	global_trade_power = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -2280,7 +2278,7 @@ native_emissaries_act = {
 	}
 	
 	monthly_federation_favor_growth = 0.2
-	ae_impact = -0.1
+	ae_impact = -0.15
 	
 
 	ai_will_do = {

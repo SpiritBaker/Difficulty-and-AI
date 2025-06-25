@@ -266,6 +266,7 @@
  dock_trade_power_m:0 "Local Docks"
  fort_barracks_manpower_m:0 "Fort Barracks"
  marketplace_bonus_m:0 "Local Artisans"
+ theocracy_war_with_religious_enemy:0 "At war with religious enemies"
 
  #Mission
  mongols_unity_through_faith_title:0 "Unity Through Faith"

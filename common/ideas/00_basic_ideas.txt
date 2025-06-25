@@ -279,7 +279,7 @@ theocracy_gov_ideas = {
 		war_exhaustion_cost = -0.33
 	}
 	flesh_is_weak = {
-		morale_damage_received = -0.1
+		manpower_in_true_faith_provinces = 0.15
 	}
 	alpha_and_omega = {
 		enforce_religion_cost = -0.3
@@ -289,7 +289,7 @@ theocracy_gov_ideas = {
 		global_unrest = -2
 	}
 	martyrs = {
-		manpower_in_true_faith_provinces = 0.15
+		leader_land_shock = 1
 		prestige_from_land = 0.5
 	}
 	ai_will_do = {
@@ -326,6 +326,7 @@ indigenous_ideas = {
 	}
 	indigenous_irregular_warfare = {
 		hostile_attrition = 1
+		max_hostile_attrition = 1
 	}
 	indigenous_constitution = {
 		monthly_reform_progress_modifier = 0.25
@@ -335,6 +336,7 @@ indigenous_ideas = {
 	}
 	indigenous_controlled_burns = {
 		global_manpower_modifier = 0.15
+		land_maintenance_modifier = -0.1
 	}
 	indigenous_trade_with_foreigners = {
 		idea_cost = -0.1
@@ -1439,6 +1441,7 @@ quality_ideas = {
 
 	bonus = {
 		discipline = 0.03
+		land_maintenance_modifier = 0.10
 		janissaries_loyalty_modifier = 0.1
 		ghulams_loyalty_modifier = 0.1
 	}
@@ -1947,6 +1950,7 @@ influence_ideas = {
 	}
 	diplomatic_influence = {
 		diplomatic_reputation = 2
+		rival_change_cost = -0.5
 	}
 	postal_service = {
 		envoy_travel_time = -0.25
@@ -2174,14 +2178,7 @@ court_ideas = {
 
 
 	bonus = {
-		legitimacy = 0.5 
-		republican_tradition = 0.2
-		devotion = 0.5 
-		horde_unity = 0.5
-		meritocracy = 0.25 
-		imperial_mandate = 0.1
-		imperial_authority = 0.05
-		monthly_cultural_unity = 0.5
+		administrative_efficiency = 0.05
 	}
 	
 	long_echo = {
@@ -2197,10 +2194,18 @@ court_ideas = {
 		monthly_persian_influence = 0.1
 	}
 	tranquil_coordination = {
+		legitimacy = 0.5 
+		republican_tradition = 0.2
+		devotion = 0.5 
+		horde_unity = 0.5
+		meritocracy = 0.25 
 		reform_progress_growth = 0.2
 	}
 	respected_authority = {
 		all_estate_possible_privileges = 1
+		imperial_mandate = 0.1
+		imperial_authority = 0.05
+		monthly_cultural_unity = 0.5
 	}
 	palace_of_splendor = {
 		monthly_splendor = 2 

@@ -1089,7 +1089,7 @@ wielders_of_the_flaming_sword_policy = {
 	}
 
 	#land_morale = 0.05
-	shock_damage = 0.1
+	morale_damage = 0.1
 	
 	effect = {}
 	removed_effect = {}
@@ -1295,8 +1295,8 @@ render_unto_caesar_policy = {
 		full_idea_group = exploration_ideas
 	}
 
-	global_manpower_modifier = 0.1
-	land_forcelimit_modifier = 0.05
+	manpower_in_true_faith_provinces = 0.15
+	land_forcelimit_modifier = 0.1
 
 	effect = {}
 	removed_effect = {}

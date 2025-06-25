@@ -78,9 +78,12 @@
  PERSONAL_UNION_WITH:0 "Personal Union with §Y$OTHER$§W"
 
 #Naval doctrines
- portuguese_marines:0 "Marines"
- portuguese_marines_desc:0 "To establish a truly global empire we must be skilled at launching assaults on enemy forts from the sea."
+ #portuguese_marines:0 "Marines"
+ #ortuguese_marines_desc:0 "To establish a truly global empire we must be skilled at launching assaults on enemy forts from the sea."
 
  #Gov reforms
  horde_tribal_unity_reform:0 "Unified Horde Identity"
  horde_tribal_unity_reform_desc:0 "We must put aside old tribal allegiances in the name of the Horde. We are one people under one Khan.\n§MUnlocks additional Estate Privileges§!"
+
+ #Ideas
+ flesh_is_weak_desc:0 "The flesh is weak, the soul is not. Our armies have learned to fight as if they shared the same soul, and thus their morale shall never be broken.\nMorale of Armies: §G+10.0%§! §YWhile at war with religious enemies.§!"
