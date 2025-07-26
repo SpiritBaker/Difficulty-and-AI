@@ -1425,7 +1425,7 @@ handpicked_recruits_act = {
 		full_idea_group = quality_ideas 
 	}
 	
-	discipline = 0.2
+	discipline = 0.02
 	yearly_army_professionalism = 0.0025
 
 	effect = {}
