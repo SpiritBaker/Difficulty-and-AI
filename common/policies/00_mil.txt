@@ -1402,7 +1402,7 @@ bolstered_defence_act = {
 		full_idea_group = defensive_ideas 
 	}
 	
-	defensiveness = 0.1
+	defensiveness = 0.15
 	garrison_size = 0.25
 
 	effect = {}
@@ -1425,8 +1425,8 @@ handpicked_recruits_act = {
 		full_idea_group = quality_ideas 
 	}
 	
-	discipline = 0.02
-	yearly_army_professionalism = 0.0025
+	reinforce_speed = 0.15
+	yearly_army_professionalism = 0.002
 
 	effect = {}
 	removed_effect = {}
